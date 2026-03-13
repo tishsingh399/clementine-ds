@@ -1,0 +1,112 @@
+{
+  "color": {
+    "blue": {
+      "0":  { "$value": "#eff4ff", "$type": "color" },
+      "1":  { "$value": "#dbeafe", "$type": "color" },
+      "2":  { "$value": "#bfdbfe", "$type": "color" },
+      "3":  { "$value": "#93c5fd", "$type": "color" },
+      "4":  { "$value": "#60a5fa", "$type": "color" },
+      "5":  { "$value": "#3b82f6", "$type": "color" },
+      "6":  { "$value": "#2563eb", "$type": "color" },
+      "7":  { "$value": "#1d4ed8", "$type": "color" },
+      "8":  { "$value": "#1e40af", "$type": "color" },
+      "9":  { "$value": "#1e3a8a", "$type": "color" }
+    },
+    "red": {
+      "0":  { "$value": "#fef2f2", "$type": "color" },
+      "1":  { "$value": "#fee2e2", "$type": "color" },
+      "2":  { "$value": "#fecaca", "$type": "color" },
+      "3":  { "$value": "#fca5a5", "$type": "color" },
+      "4":  { "$value": "#f87171", "$type": "color" },
+      "5":  { "$value": "#ef4444", "$type": "color" },
+      "6":  { "$value": "#dc2626", "$type": "color" },
+      "7":  { "$value": "#b91c1c", "$type": "color" },
+      "8":  { "$value": "#991b1b", "$type": "color" },
+      "9":  { "$value": "#7f1d1d", "$type": "color" }
+    },
+    "gray": {
+      "0":  { "$value": "#fafaf8", "$type": "color" },
+      "1":  { "$value": "#f3f3f0", "$type": "color" },
+      "2":  { "$value": "#e5e5e0", "$type": "color" },
+      "3":  { "$value": "#d4d4cf", "$type": "color" },
+      "4":  { "$value": "#a3a39e", "$type": "color" },
+      "5":  { "$value": "#737370", "$type": "color" },
+      "6":  { "$value": "#6b6b66", "$type": "color" },
+      "7":  { "$value": "#52524e", "$type": "color" },
+      "8":  { "$value": "#3a3a37", "$type": "color" },
+      "9":  { "$value": "#1a1a18", "$type": "color" }
+    },
+    "green": {
+      "0":  { "$value": "#f0fdf4", "$type": "color" },
+      "1":  { "$value": "#dcfce7", "$type": "color" },
+      "2":  { "$value": "#bbf7d0", "$type": "color" },
+      "3":  { "$value": "#86efac", "$type": "color" },
+      "4":  { "$value": "#4ade80", "$type": "color" },
+      "5":  { "$value": "#22c55e", "$type": "color" },
+      "6":  { "$value": "#16a34a", "$type": "color" },
+      "7":  { "$value": "#15803d", "$type": "color" },
+      "8":  { "$value": "#166534", "$type": "color" },
+      "9":  { "$value": "#14532d", "$type": "color" }
+    },
+    "orange": {
+      "0":  { "$value": "#fff7ed", "$type": "color" },
+      "1":  { "$value": "#ffedd5", "$type": "color" },
+      "2":  { "$value": "#fed7aa", "$type": "color" },
+      "3":  { "$value": "#fdba74", "$type": "color" },
+      "4":  { "$value": "#fb923c", "$type": "color" },
+      "5":  { "$value": "#f97316", "$type": "color" },
+      "6":  { "$value": "#ea580c", "$type": "color" },
+      "7":  { "$value": "#c2410c", "$type": "color" },
+      "8":  { "$value": "#9a3412", "$type": "color" },
+      "9":  { "$value": "#7c2d12", "$type": "color" }
+    },
+    "white":  { "$value": "#ffffff", "$type": "color" },
+    "black":  { "$value": "#0a0a09", "$type": "color" }
+  },
+  "spacing": {
+    "xs": { "$value": "4px",  "$type": "dimension" },
+    "sm": { "$value": "8px",  "$type": "dimension" },
+    "md": { "$value": "16px", "$type": "dimension" },
+    "lg": { "$value": "24px", "$type": "dimension" },
+    "xl": { "$value": "32px", "$type": "dimension" }
+  },
+  "radius": {
+    "xs": { "$value": "2px",  "$type": "dimension" },
+    "sm": { "$value": "4px",  "$type": "dimension" },
+    "md": { "$value": "6px",  "$type": "dimension" },
+    "lg": { "$value": "8px",  "$type": "dimension" },
+    "xl": { "$value": "99px", "$type": "dimension" }
+  },
+  "shadow": {
+    "xs": { "$value": "0 1px 2px rgba(0,0,0,0.05)", "$type": "shadow" },
+    "sm": { "$value": "0 1px 3px rgba(0,0,0,0.08)", "$type": "shadow" },
+    "md": { "$value": "0 4px 12px rgba(0,0,0,0.12)", "$type": "shadow" },
+    "lg": { "$value": "0 8px 24px rgba(0,0,0,0.16)", "$type": "shadow" },
+    "xl": { "$value": "0 16px 48px rgba(0,0,0,0.2)", "$type": "shadow" }
+  },
+  "typography": {
+    "font-family": {
+      "sans": { "$value": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", "$type": "fontFamily" },
+      "mono": { "$value": "'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', monospace", "$type": "fontFamily" }
+    },
+    "font-size": {
+      "xs": { "$value": "12px", "$type": "dimension" },
+      "sm": { "$value": "14px", "$type": "dimension" },
+      "md": { "$value": "16px", "$type": "dimension" },
+      "lg": { "$value": "18px", "$type": "dimension" },
+      "xl": { "$value": "20px", "$type": "dimension" }
+    },
+    "line-height": {
+      "xs": { "$value": "1.4",  "$type": "number" },
+      "sm": { "$value": "1.45", "$type": "number" },
+      "md": { "$value": "1.55", "$type": "number" },
+      "lg": { "$value": "1.6",  "$type": "number" },
+      "xl": { "$value": "1.65", "$type": "number" }
+    }
+  },
+  "motion": {
+    "duration-fast":   { "$value": "100ms", "$type": "duration" },
+    "duration-normal": { "$value": "200ms", "$type": "duration" },
+    "duration-slow":   { "$value": "300ms", "$type": "duration" }
+  }
+}

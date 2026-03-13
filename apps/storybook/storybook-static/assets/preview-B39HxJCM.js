@@ -1,0 +1,1 @@
+import{j as r}from"./index-jyNdYUlS.js";import{T as t}from"./Modal-Bqfdu9jx.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-DVyBTwwr.js";import"./index-ZH-6pyQh.js";const p={decorators:[o=>r.jsx(t,{children:r.jsx(o,{})})],parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}}}};export{p as default};

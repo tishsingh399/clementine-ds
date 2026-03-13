@@ -1,0 +1,28 @@
+{
+  "name": "storybook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build"
+  },
+  "dependencies": {
+    "@tina-ds/ui": "workspace:*",
+    "@tina-ds/tokens": "workspace:*",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8",
+    "@storybook/react-vite": "^8",
+    "@storybook/addon-essentials": "^8",
+    "@storybook/addon-a11y": "^8",
+    "@storybook/blocks": "^8",
+    "storybook": "^8",
+    "vite": "^6",
+    "typescript": "^5.7",
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
+  }
+}

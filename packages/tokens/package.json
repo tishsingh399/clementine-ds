@@ -1,0 +1,23 @@
+{
+  "name": "@tina-ds/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/primitives.js",
+  "types": "./dist/primitives.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/primitives.js",
+      "types": "./dist/primitives.d.ts"
+    },
+    "./semantic-light": "./src/semantic-light.json",
+    "./semantic-dark": "./src/semantic-dark.json"
+  },
+  "scripts": {
+    "build": "style-dictionary build --config sd.config.ts"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4",
+    "@tokens-studio/sd-transforms": "^1"
+  }
+}

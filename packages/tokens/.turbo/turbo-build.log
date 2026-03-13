@@ -1,0 +1,8 @@
+
+> @tina-ds/tokens@0.1.0 build /Users/tinasingh/Desktop/tina-ds/packages/tokens
+> style-dictionary build --config sd.config.ts
+
+
+ts
+✔︎ dist/primitives.js
+✔︎ dist/primitives.d.ts

@@ -1,0 +1,48 @@
+{
+  "action": {
+    "primary":        { "$value": "{color.blue.4}", "$type": "color" },
+    "primary-hover":  { "$value": "{color.blue.3}", "$type": "color" },
+    "primary-active": { "$value": "{color.blue.5}", "$type": "color" },
+    "destructive":       { "$value": "{color.red.4}", "$type": "color" },
+    "destructive-hover": { "$value": "{color.red.3}", "$type": "color" }
+  },
+  "surface": {
+    "default":  { "$value": "#1a2735", "$type": "color" },
+    "elevated": { "$value": "#243447", "$type": "color" },
+    "subtle":   { "$value": "#15202e", "$type": "color" },
+    "overlay":  { "$value": "rgba(0,0,0,0.6)", "$type": "color" }
+  },
+  "text": {
+    "primary":   { "$value": "#f0f4f8", "$type": "color" },
+    "secondary": { "$value": "#a0aec0", "$type": "color" },
+    "tertiary":  { "$value": "#718096", "$type": "color" },
+    "on-action": { "$value": "{color.white}",  "$type": "color" },
+    "link":      { "$value": "{color.blue.4}", "$type": "color" }
+  },
+  "border": {
+    "default": { "$value": "#4a5568", "$type": "color" },
+    "strong":  { "$value": "#718096", "$type": "color" },
+    "focus":   { "$value": "{color.blue.4}", "$type": "color" }
+  },
+  "focus": {
+    "ring": { "$value": "#ff8040", "$type": "color" }
+  },
+  "feedback": {
+    "error":          { "$value": "{color.red.4}",    "$type": "color" },
+    "error-subtle":   { "$value": "#3b1515",          "$type": "color" },
+    "success":        { "$value": "{color.green.4}",   "$type": "color" },
+    "success-subtle": { "$value": "#15302b",           "$type": "color" },
+    "warning":        { "$value": "{color.orange.4}",  "$type": "color" },
+    "warning-subtle": { "$value": "#302015",           "$type": "color" }
+  },
+  "risk": {
+    "critical":        { "$value": "{color.red.4}",    "$type": "color" },
+    "critical-subtle": { "$value": "#3b1515",          "$type": "color" },
+    "high":            { "$value": "{color.orange.4}",  "$type": "color" },
+    "high-subtle":     { "$value": "#302015",           "$type": "color" },
+    "medium":          { "$value": "{color.orange.3}",  "$type": "color" },
+    "medium-subtle":   { "$value": "#2a1d10",           "$type": "color" },
+    "low":             { "$value": "{color.green.4}",   "$type": "color" },
+    "low-subtle":      { "$value": "#15302b",           "$type": "color" }
+  }
+}
