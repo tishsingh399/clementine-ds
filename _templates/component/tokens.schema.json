@@ -7,7 +7,7 @@
   "properties": {
     "component": { "type": "string", "description": "kebab-case component name; must match the spec's frontmatter `component` field" },
     "source": { "type": "string", "format": "uri", "description": "Upstream token repo URL" },
-    "version": { "type": "string", "description": "Pinned token version, e.g. tina-ds@HEAD or tina-ds@v1.2.0" },
+    "version": { "type": "string", "description": "Pinned token version, e.g. clementine-ds@HEAD or clementine-ds@v1.2.0" },
     "verified": { "type": "string", "format": "date" },
     "fork_model": { "type": "string", "description": "How tokens reference each other in this DS" },
     "notes": { "type": "array", "items": { "type": "string" } },

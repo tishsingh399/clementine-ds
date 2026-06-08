@@ -8,8 +8,8 @@
     "build": "storybook build"
   },
   "dependencies": {
-    "@tina-ds/ui": "workspace:*",
-    "@tina-ds/tokens": "workspace:*",
+    "@clementine-ds/ui": "workspace:*",
+    "@clementine-ds/tokens": "workspace:*",
     "react": "^19",
     "react-dom": "^19"
   },

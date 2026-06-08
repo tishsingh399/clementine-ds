@@ -1,5 +1,5 @@
 {
-  "name": "tina-ds",
+  "name": "clementine-ds",
   "private": true,
   "scripts": {
     "build": "turbo run build",

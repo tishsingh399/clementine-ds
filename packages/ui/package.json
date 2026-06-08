@@ -1,5 +1,5 @@
 {
-  "name": "@tina-ds/ui",
+  "name": "@clementine-ds/ui",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@mantine/core": "^8",
     "@mantine/hooks": "^8",
-    "@tina-ds/tokens": "workspace:*",
+    "@clementine-ds/tokens": "workspace:*",
     "react": "^19",
     "react-dom": "^19"
   },

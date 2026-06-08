@@ -1,13 +1,13 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import { TinaDSProvider } from '@tina-ds/ui';
+import { ClementineDSProvider } from '@clementine-ds/ui';
 
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <TinaDSProvider>
+      <ClementineDSProvider>
         <Story />
-      </TinaDSProvider>
+      </ClementineDSProvider>
     ),
   ],
   parameters: {

@@ -1,19 +1,19 @@
 import { MantineProvider, type MantineProviderProps } from '@mantine/core';
-import { tinaTheme, cssVariablesResolver } from './theme/tina-theme';
+import { clementineTheme, cssVariablesResolver } from './theme/clementine-theme';
 import '@mantine/core/styles.css';
 
-export interface TinaDSProviderProps {
+export interface ClementineDSProviderProps {
   children: React.ReactNode;
   colorScheme?: MantineProviderProps['defaultColorScheme'];
 }
 
-export function TinaDSProvider({
+export function ClementineDSProvider({
   children,
   colorScheme = 'light',
-}: TinaDSProviderProps) {
+}: ClementineDSProviderProps) {
   return (
     <MantineProvider
-      theme={tinaTheme}
+      theme={clementineTheme}
       cssVariablesResolver={cssVariablesResolver}
       defaultColorScheme={colorScheme}
     >

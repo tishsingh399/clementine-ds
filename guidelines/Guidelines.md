@@ -1,25 +1,25 @@
-# Tina DS — Design System Guidelines for Figma Make
+# Clementine DS — Design System Guidelines for Figma Make
 
 ## Package
 
-Install `@tina-ds/ui` from npm. All components must be wrapped in `<TinaDSProvider>`.
+Install `@clementine-ds/ui` from npm. All components must be wrapped in `<ClementineDSProvider>`.
 
 ## Import pattern
 
 ```tsx
-import { Button, TextInput, Select, Badge, Modal, Stack, Group, Text } from '@tina-ds/ui';
+import { Button, TextInput, Select, Badge, Modal, Stack, Group, Text } from '@clementine-ds/ui';
 ```
 
 ## Provider setup
 
 ```tsx
-import { TinaDSProvider } from '@tina-ds/ui';
+import { ClementineDSProvider } from '@clementine-ds/ui';
 
 function App() {
   return (
-    <TinaDSProvider>
+    <ClementineDSProvider>
       {/* All content here */}
-    </TinaDSProvider>
+    </ClementineDSProvider>
   );
 }
 ```
@@ -70,12 +70,12 @@ function App() {
 
 - Never hardcode colors — all colors come from the theme
 - Use Mantine's `color` prop for semantic meaning
-- Use CSS variables `--tds-*` for semantic tokens in custom styles
-- Available semantic vars: `--tds-action-primary`, `--tds-surface-default`, `--tds-text-primary`, `--tds-border-default`, `--tds-risk-critical`, etc.
+- Use CSS variables `--cds-*` for semantic tokens in custom styles
+- Available semantic vars: `--cds-action-primary`, `--cds-surface-default`, `--cds-text-primary`, `--cds-border-default`, `--cds-risk-critical`, etc.
 
 ## Never
 
-- Never use raw HTML elements when a Tina DS component exists
+- Never use raw HTML elements when a Clementine DS component exists
 - Never hardcode colors — use theme tokens
 - Never create new button variants — use the existing `variant` prop
 - Never skip labels on form inputs

@@ -1,8 +1,8 @@
 // Provider
-export { TinaDSProvider, type TinaDSProviderProps } from './TinaDSProvider';
+export { ClementineDSProvider, type ClementineDSProviderProps } from './ClementineDSProvider';
 
 // Theme
-export { tinaTheme, cssVariablesResolver } from './theme/tina-theme';
+export { clementineTheme, cssVariablesResolver } from './theme/clementine-theme';
 
 // Components
 export { Button, type ButtonProps } from './components/Button';

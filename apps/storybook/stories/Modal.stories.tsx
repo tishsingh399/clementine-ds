@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Modal, Button, Text, Stack, TextInput } from '@tina-ds/ui';
+import { Modal, Button, Text, Stack, TextInput } from '@clementine-ds/ui';
 
 const meta: Meta<typeof Modal> = {
   title: 'Components/Modal',

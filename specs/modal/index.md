@@ -1,6 +1,6 @@
 ---
 component: modal
-ds_version: tina-ds@HEAD (2026-06-08 verified)
+ds_version: clementine-ds@HEAD (2026-06-08 verified)
 status: Draft
 last_verified: 2026-06-08
 

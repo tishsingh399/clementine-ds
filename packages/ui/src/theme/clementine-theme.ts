@@ -1,7 +1,7 @@
 import { createTheme, type CSSVariablesResolver } from '@mantine/core';
-import * as p from '@tina-ds/tokens';
-import lightTokens from '@tina-ds/tokens/semantic-light';
-import darkTokens from '@tina-ds/tokens/semantic-dark';
+import * as p from '@clementine-ds/tokens';
+import lightTokens from '@clementine-ds/tokens/semantic-light';
+import darkTokens from '@clementine-ds/tokens/semantic-dark';
 
 // Resolve DTCG references like "{color.blue.6}" to actual hex values
 const primitiveMap: Record<string, string> = {
@@ -56,13 +56,13 @@ function flattenSemanticTokens(
 
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
   variables: {
-    '--tds-focus-ring': resolve(lightTokens.focus.ring),
+    '--cds-focus-ring': resolve(lightTokens.focus.ring),
   },
   light: flattenSemanticTokens(lightTokens as Record<string, TokenGroup>, '--tds'),
   dark: flattenSemanticTokens(darkTokens as Record<string, TokenGroup>, '--tds'),
 });
 
-export const tinaTheme = createTheme({
+export const clementineTheme = createTheme({
   primaryColor: 'blue',
   fontFamily: p.typographyFontFamilySans,
   fontFamilyMonospace: p.typographyFontFamilyMono,

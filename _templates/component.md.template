@@ -1,6 +1,6 @@
 ---
 component: <kebab-case-name>
-ds_version: tina-ds@HEAD (YYYY-MM-DD verified)
+ds_version: clementine-ds@HEAD (YYYY-MM-DD verified)
 status: AI-Ready | In progress | Draft
 last_verified: YYYY-MM-DD
 
@@ -19,7 +19,7 @@ token_contract:
   - surface.default
   - text.primary
   - border.focus
-  # ... canonical tina-ds semantic tokens only
+  # ... canonical clementine-ds semantic tokens only
 
 interaction_states: [default, hover, focus, active, disabled, loading]
 

@@ -1,4 +1,4 @@
-# tina-ds — an agentic design system
+# clementine-ds — an agentic design system
 
 ![Hero — spec → tokens → agent → code pipeline](./docs/hero.png)
 
