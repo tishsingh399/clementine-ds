@@ -1,0 +1,30 @@
+{
+  "button": {
+    "bg": {
+      "default":     { "$value": "{action.primary}",         "$type": "color" },
+      "hover":       { "$value": "{action.primary-hover}",   "$type": "color" },
+      "active":      { "$value": "{action.primary-active}",  "$type": "color" },
+      "disabled":    { "$value": "{surface.subtle}",         "$type": "color" }
+    },
+    "bg-destructive": {
+      "default":     { "$value": "{action.destructive}",       "$type": "color" },
+      "hover":       { "$value": "{action.destructive-hover}", "$type": "color" }
+    },
+    "bg-outline": {
+      "default":     { "$value": "{surface.elevated}", "$type": "color" },
+      "hover":       { "$value": "{surface.subtle}",   "$type": "color" }
+    },
+    "fg": {
+      "on-filled":   { "$value": "{text.on-action}", "$type": "color" },
+      "on-outline":  { "$value": "{text.primary}",   "$type": "color" },
+      "on-subtle":   { "$value": "{text.primary}",   "$type": "color" },
+      "disabled":    { "$value": "{text.tertiary}",  "$type": "color" }
+    },
+    "border": {
+      "default":     { "$value": "{border.strong}",     "$type": "color" },
+      "hover":       { "$value": "{action.primary}",    "$type": "color" },
+      "focus":       { "$value": "{focus.ring}",        "$type": "color" }
+    },
+    "radius":        { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

@@ -1,8 +1,49 @@
-# AGENTS.md — Agentic Design System
+# AGENTS.md — Clementine DS
 
-This is a design system built for AI agents to read, extend, and operate on safely.
+Clementine is a design system built for AI agents to read, extend, and operate on safely.
 
-Most design systems ship as a component library plus a Storybook. Code, design, and documentation drift apart the moment the first PR lands. This one ships a third artifact: **machine-readable specs** (`/specs/<component>/`) that an AI agent can load, validate against, and use to generate or modify code without inventing tokens or breaking the contract.
+It ships three things instead of the usual two:
+
+1. **Component library** — React + Mantine, in `packages/ui/`
+2. **Storybook** — live sandbox, in `apps/storybook/`
+3. **Machine-readable specs** — `specs/<component>/` with a closed token contract that AI agents (Claude, Cursor, MCP servers) load *before* writing code
+
+And it organizes tokens in three tiers — the rule that makes the whole agentic story work.
+
+## The 3-tier token cascade
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  PRIMITIVES   color.blue.6 = "#2563eb"      radius.md = "8px"   │   tier 1: raw values
+│                                                                  │
+│      ▲                                                           │
+│      │ references                                                │
+│                                                                  │
+│  SEMANTIC     action.primary = "{color.blue.6}"                  │   tier 2: intent
+│               focus.ring = "#ff8040"                             │
+│                                                                  │
+│      ▲                                                           │
+│      │ references                                                │
+│                                                                  │
+│  COMPONENT    button.bg.default = "{action.primary}"             │   tier 3: per-component
+│               button.border.focus = "{focus.ring}"               │   bindings
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**The cascade rule is one-way.** Each tier references only the tier above it. Components never reference primitives directly; semantics never reference components; primitives reference nothing.
+
+| Tier | File | What it holds |
+|---|---|---|
+| Primitive | `packages/tokens/src/primitives.json` | Raw scales (`color.blue.6`, `radius.md`, `spacing.sm`) |
+| Semantic | `packages/tokens/src/semantic-{light,dark}.json` | Intent (`action.primary`, `surface.elevated`, `feedback.error`) |
+| Component | `packages/tokens/src/components/<name>.json` | Per-component bindings (`button.bg.default`, `badge.bg.success`) |
+
+**Why this matters for agents:** when a spec says `token_contract: [button.bg.default]`, the validator can check three things mechanically:
+1. Does `button.bg.default` exist in `packages/tokens/src/components/button.json`?
+2. Does the semantic it references exist?
+3. Does the primitive that resolves through?
+
+If any tier breaks, drift is caught at the lint step — not at runtime.
 
 ## How an agent should read this repo
 
@@ -10,37 +51,46 @@ Most design systems ship as a component library plus a Storybook. Code, design, 
 
 2. **Verify, then edit.** Before changing a component, check the spec's `checks:` block. If `tokens_valid: false`, the lint will block you. If `states_complete: false`, the spec is telling you a state is missing in code; add it or update the spec — don't paper over the gap.
 
-3. **Token contracts are closed.** Every value a component uses must appear in `specs/<component>/tokens.json`. If you need a value that isn't there, the workflow is: extend `packages/tokens/src/semantic-*.json` → re-resolve → add the entry to `tokens.json` → bump `last_verified`. Never inline a hex.
+3. **Token contracts are closed.** Every value a component uses must appear as a component-tier token (`button.bg.default`, not `action.primary` and not `#2563eb`). If you need a value that isn't there, the workflow is: extend `packages/tokens/src/components/<name>.json` (and if needed, the semantic tier underneath) → add the entry to `specs/<name>/tokens.json` → bump `last_verified`. Never inline a hex. Never reference a primitive from a component file.
 
 4. **Stay in the part model.** Each spec lists `semantic_parts:` (e.g. `root`, `label`, `icon-leading`). Every token must target a part. Tokens that don't belong to a declared part are dangling and will fail review.
+
+5. **Respect the cascade rule.** If you're tempted to bind a component token directly to a primitive (`button.bg.default → {color.blue.6}`), stop. Find or create the semantic token first (`action.primary`) and bind through it. The whole 3-tier story falls apart at the first shortcut.
 
 ## Repo layout
 
 ```
-design-system-ANT/
+clementine-ds/
 ├── packages/
-│   ├── tokens/                  Style Dictionary source (primitives → semantic)
+│   ├── tokens/                       Style Dictionary source
 │   │   └── src/
-│   │       ├── primitives.json        Raw scale (color.blue.6, etc.)
-│   │       ├── semantic-light.json    Light-mode bindings
-│   │       └── semantic-dark.json     Dark-mode bindings
+│   │       ├── primitives.json             tier 1 — raw scales
+│   │       ├── semantic-light.json         tier 2 — intent (light)
+│   │       ├── semantic-dark.json          tier 2 — intent (dark)
+│   │       └── components/                 tier 3 — per-component
+│   │           ├── button.json
+│   │           ├── badge.json
+│   │           └── text-input.json
 │   └── ui/
-│       └── src/components/      React components (Mantine-backed)
+│       └── src/components/           React components (Mantine-backed)
 │
 ├── apps/
-│   └── storybook/               Live component sandbox
+│   └── storybook/                    Live component sandbox
 │
-├── specs/                       ⭐ THE AGENTIC LAYER
+├── specs/                            ⭐ THE AGENTIC LAYER
 │   └── <component>/
-│       ├── index.md             Frontmatter contract + human-readable doc
-│       └── tokens.json          Closed token list for this component
+│       ├── index.md                  Frontmatter contract + human prose
+│       └── tokens.json               Closed token list (component-tier only)
 │
-├── _templates/                  Spec scaffolding
+├── _templates/                       Spec scaffolding
 │   ├── component.md.template
 │   └── component/tokens.schema.json
 │
-├── guidelines/                  Cross-cutting design principles
-└── AGENTS.md                    ← you are here
+├── docs/                             Hero image + reference docs
+│   └── hero.html / hero.png
+│
+├── guidelines/                       Cross-cutting design principles
+└── AGENTS.md                         ← you are here
 ```
 
 ## Spec frontmatter — what each field means

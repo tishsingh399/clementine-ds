@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hero",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8748", "--directory", "docs"],
+      "port": 8748
+    }
+  ]
+}
