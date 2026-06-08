@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>tina-ds hero</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --ink: #1a1a18;
+    --ink-2: #52524e;
+    --ink-3: #a3a39e;
+    --line: #e5e5e0;
+    --line-strong: #d4d4cf;
+    --paper: #ffffff;
+    --accent: #2563eb;
+    --accent-soft: #eff4ff;
+    --warn: #ff8040;
+    --code-bg: #f3f3f0;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); }
+  body {
+    width: 1600px; height: 840px;
+    padding: 64px 80px;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+
+  .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 56px;
+  }
+  .brand {
+    font-family: var(--mono); font-size: 14px; letter-spacing: 0.04em;
+    color: var(--ink-2); text-transform: uppercase;
+  }
+  .brand .dot { color: var(--accent); }
+  .tagline { font-family: var(--mono); font-size: 13px; color: var(--ink-3); }
+
+  .hed {
+    font-size: 64px; line-height: 1.04; letter-spacing: -0.02em;
+    font-weight: 600; max-width: 1180px;
+    margin-bottom: 18px;
+  }
+  .hed em { font-style: normal; color: var(--accent); }
+  .deck {
+    font-size: 20px; line-height: 1.45; color: var(--ink-2);
+    max-width: 920px; margin-bottom: 48px;
+  }
+
+  .pipeline {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch; gap: 0;
+    flex: 1;
+  }
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 22px 20px;
+    display: flex; flex-direction: column;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card .step {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3);
+    margin-bottom: 12px;
+  }
+  .card h3 {
+    font-size: 20px; line-height: 1.2; font-weight: 600;
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .card .meta {
+    font-size: 13px; color: var(--ink-2); line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .arrow {
+    align-self: center; justify-self: center;
+    width: 48px; height: 1px;
+    background: var(--line-strong);
+    position: relative;
+  }
+  .arrow::after {
+    content: ""; position: absolute; right: -1px; top: -4px;
+    border-left: 6px solid var(--line-strong);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }
+
+  /* spec card */
+  .spec-frame {
+    background: var(--code-bg); border-radius: 8px;
+    padding: 12px 14px; font-family: var(--mono); font-size: 11px;
+    line-height: 1.55; color: var(--ink-2); flex: 1;
+  }
+  .spec-frame .k { color: var(--ink); }
+  .spec-frame .v { color: var(--accent); }
+  .spec-frame .c { color: var(--ink-3); }
+
+  /* tokens card */
+  .swatches { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .sw { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+  .sw .chip { width: 18px; height: 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .sw .name { color: var(--ink); }
+  .sw .hex { color: var(--ink-3); margin-left: auto; }
+
+  /* agent card */
+  .agent-frame {
+    background: #0e0e0d; color: #e5e5e0; border-radius: 8px;
+    padding: 12px 14px; font-family: var(--mono); font-size: 11px;
+    line-height: 1.55; flex: 1;
+  }
+  .agent-frame .prompt { color: #a3a39e; }
+  .agent-frame .ok { color: #4ade80; }
+  .agent-frame .warn { color: #fb923c; }
+  .agent-frame .ref { color: #60a5fa; }
+
+  /* code card */
+  .code-frame {
+    background: var(--ink); color: #f3f3f0; border-radius: 8px;
+    padding: 12px 14px; font-family: var(--mono); font-size: 11px;
+    line-height: 1.55; flex: 1; white-space: pre; overflow: hidden;
+  }
+  .code-frame .kw { color: #f0abfc; }
+  .code-frame .str { color: #fb923c; }
+  .code-frame .tag { color: #93c5fd; }
+  .code-frame .attr { color: #fde047; }
+  .code-frame .comm { color: #6b6b66; }
+
+  .foot {
+    margin-top: 36px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 12px; color: var(--ink-3);
+    letter-spacing: 0.04em;
+  }
+  .foot .badges { display: flex; gap: 14px; }
+  .badge {
+    border: 1px solid var(--line-strong); border-radius: 999px;
+    padding: 6px 12px; color: var(--ink-2);
+  }
+  .badge.strong { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="brand">tina<span class="dot">·</span>ds <span style="color: var(--ink-3); margin-left: 12px;">/ agentic design system</span></div>
+    <div class="tagline">v0 · 10 components · machine-readable specs</div>
+  </div>
+
+  <h1 class="hed">A design system that <em>an AI agent can read</em>, validate against, and extend.</h1>
+  <p class="deck">Every component ships with a closed token contract, named semantic parts, and source pointers — so Claude, Cursor, or an MCP server stops hallucinating tokens on the first prompt.</p>
+
+  <div class="pipeline">
+    <!-- 1: SPEC -->
+    <div class="card">
+      <div class="step">01 · spec</div>
+      <h3>specs/button/index.md</h3>
+      <div class="meta">YAML frontmatter declares contract.</div>
+      <div class="spec-frame">
+<span class="c">---</span>
+<span class="k">component:</span> <span class="v">button</span>
+<span class="k">status:</span> <span class="v">AI-Ready</span>
+<span class="k">required_aria:</span>
+&nbsp;&nbsp;[aria-label, aria-disabled,
+&nbsp;&nbsp;&nbsp;aria-busy]
+<span class="k">semantic_parts:</span>
+&nbsp;&nbsp;root, label, icon-leading,
+&nbsp;&nbsp;icon-trailing, spinner
+<span class="k">interaction_states:</span>
+&nbsp;&nbsp;[default, hover, focus,
+&nbsp;&nbsp;&nbsp;active, disabled, loading]
+<span class="c">---</span>
+      </div>
+    </div>
+
+    <div class="arrow"></div>
+
+    <!-- 2: TOKENS -->
+    <div class="card">
+      <div class="step">02 · tokens</div>
+      <h3>specs/button/tokens.json</h3>
+      <div class="meta">Closed list — 13 semantic tokens.</div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#2563eb"></span><span class="name">action.primary</span><span class="hex">#2563eb</span></div>
+        <div class="sw"><span class="chip" style="background:#1d4ed8"></span><span class="name">action.primary-hover</span><span class="hex">#1d4ed8</span></div>
+        <div class="sw"><span class="chip" style="background:#1e40af"></span><span class="name">action.primary-active</span><span class="hex">#1e40af</span></div>
+        <div class="sw"><span class="chip" style="background:#dc2626"></span><span class="name">action.destructive</span><span class="hex">#dc2626</span></div>
+        <div class="sw"><span class="chip" style="background:#ffffff;border:1px solid #d4d4cf"></span><span class="name">surface.elevated</span><span class="hex">#ffffff</span></div>
+        <div class="sw"><span class="chip" style="background:#d4d4cf"></span><span class="name">border.strong</span><span class="hex">#d4d4cf</span></div>
+        <div class="sw"><span class="chip" style="background:#ff8040"></span><span class="name">focus.ring</span><span class="hex">#ff8040</span></div>
+        <div class="sw"><span class="chip" style="background:#1a1a18"></span><span class="name">text.primary</span><span class="hex">#1a1a18</span></div>
+      </div>
+    </div>
+
+    <div class="arrow"></div>
+
+    <!-- 3: AGENT -->
+    <div class="card">
+      <div class="step">03 · agent</div>
+      <h3>Claude reads the spec</h3>
+      <div class="meta">Loads contract before writing code.</div>
+      <div class="agent-frame">
+<span class="prompt">&gt;</span> Build a destructive button.
+
+<span class="ref">[spec]</span> loaded specs/button/index.md
+<span class="ok">✓</span> token in contract:
+&nbsp;&nbsp;action.destructive
+<span class="ok">✓</span> aria-label provided
+<span class="ok">✓</span> focus.ring bound
+<span class="warn">!</span> loading state needs
+&nbsp;&nbsp;aria-busy="true"
+
+Writing TSX against
+Mantine ButtonProps...
+      </div>
+    </div>
+
+    <div class="arrow"></div>
+
+    <!-- 4: CODE -->
+    <div class="card">
+      <div class="step">04 · code</div>
+      <h3>packages/ui/Button.tsx</h3>
+      <div class="meta">Output respects the contract.</div>
+      <div class="code-frame"><span class="comm">// generated against spec</span>
+<span class="tag">&lt;Button</span>
+&nbsp;&nbsp;<span class="attr">intent</span>=<span class="str">"destructive"</span>
+&nbsp;&nbsp;<span class="attr">aria-label</span>=<span class="str">"Revoke"</span>
+&nbsp;&nbsp;<span class="attr">aria-busy</span>={loading}
+&nbsp;&nbsp;<span class="attr">onClick</span>={revoke}
+<span class="tag">&gt;</span>
+&nbsp;&nbsp;Revoke session
+<span class="tag">&lt;/Button&gt;</span>
+
+<span class="comm">// tokens resolved:</span>
+<span class="comm">// bg: action.destructive</span>
+<span class="comm">// ring: focus.ring</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>github.com/tishsingh399/design-system-ANT</div>
+    <div class="badges">
+      <span class="badge">React + Mantine</span>
+      <span class="badge">Style Dictionary</span>
+      <span class="badge strong">Spec-first · MCP-ready</span>
+    </div>
+  </div>
+</body>
+</html>

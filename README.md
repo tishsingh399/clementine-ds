@@ -1,5 +1,7 @@
 # tina-ds — an agentic design system
 
+![Hero — spec → tokens → agent → code pipeline](./docs/hero.png)
+
 A small, opinionated React design system that ships with **machine-readable specs** for every component. Built so AI agents (Claude, Cursor, Copilot, MCP servers) can read the contract, validate against it, and extend the system without hallucinating tokens or breaking accessibility.
 
 > Most design systems ship code + Storybook and hope documentation keeps up. This one ships a third artifact — `/specs/<component>/` — that an agent can load and treat as the source of truth. See [AGENTS.md](./AGENTS.md) for the full architecture.
