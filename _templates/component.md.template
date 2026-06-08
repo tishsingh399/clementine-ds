@@ -1,0 +1,117 @@
+---
+component: <kebab-case-name>
+ds_version: tina-ds@HEAD (YYYY-MM-DD verified)
+status: AI-Ready | In progress | Draft
+last_verified: YYYY-MM-DD
+
+# Machine-readable metadata — keep all fields, even when empty.
+category: Component | Pattern | Page
+required_aria: [role, aria-selected, aria-controls, ...]
+
+# Named internal regions every token must target. The lint catches dangling tokens.
+semantic_parts:
+  root:    The outer element — owns interactive state, focus ring, padding
+  label:   Text content
+  icon:    Optional leading/trailing icon slot
+
+token_contract:
+  - action.primary
+  - surface.default
+  - text.primary
+  - border.focus
+  # ... canonical tina-ds semantic tokens only
+
+interaction_states: [default, hover, focus, active, disabled, loading]
+
+checks:
+  aria_correct: true | false
+  structure_correct: true | false
+  states_complete: true | false
+  tokens_valid: true | false
+  no_invented_styles: true | false
+
+# Source traceability — where this component lives in code.
+sources:
+  react:
+    path: packages/ui/src/components/<Name>.tsx
+    underlying_library: mantine
+    exports: [<ComponentName>, <ComponentName>Props]
+  storybook:
+    path: apps/storybook/stories/<Name>.stories.tsx
+  tokens:
+    primitives: packages/tokens/src/primitives.json
+    semantic_light: packages/tokens/src/semantic-light.json
+    semantic_dark: packages/tokens/src/semantic-dark.json
+
+patterns_used_in: []
+pages_used_in: []
+---
+
+# AGENTIC DOCUMENTATION: <COMPONENT NAME>
+
+> **Implementation:** [`packages/ui/src/components/<Name>.tsx`](../../packages/ui/src/components/<Name>.tsx) — React wrapper over Mantine. Stories at [`apps/storybook/stories/<Name>.stories.tsx`](../../apps/storybook/stories/<Name>.stories.tsx).
+
+## 1. Purpose & Intent
+
+<One short paragraph: what the component does, in plain language.>
+
+**<Component> must:**
+- requirement 1
+- requirement 2
+- requirement 3
+
+## 2. Required Contract
+
+### 2.1 Required ARIA
+
+| Attribute | Value | Notes |
+|---|---|---|
+| `role` | implicit from native element | Don't override |
+| `aria-label` | when icon-only | Required for AT |
+
+### 2.2 Required HTML Structure
+
+```html
+<button class="...">
+  <span class="label">...</span>
+</button>
+```
+
+### 2.3 Required Token Bindings
+
+| Semantic part | State | Token | Resolves to |
+|---|---|---|---|
+| root | default bg | `action.primary` | `{color.blue.6}` → `#2563eb` |
+| root | focus ring | `focus.ring` | `#ff8040` |
+
+## 3. Interaction States
+
+| State | Visual change | Tokens |
+|---|---|---|
+| default | base | `action.primary` |
+| hover | darken | `action.primary-hover` |
+| focus | ring | `focus.ring` outline |
+| active | darken further | `action.primary-active` |
+| disabled | reduced opacity + aria-disabled | n/a |
+| loading | spinner replaces icon, aria-busy | n/a |
+
+## 4. Variants & Sizes
+
+<List variants — primary / secondary / danger / outline / text — and sizes.>
+
+## 5. Do / Don't
+
+**Do:**
+- Use the native element (`<button>`, `<input>`)
+- Set `aria-label` when icon-only
+
+**Don't:**
+- Paint roles on `<div>`s
+- Invent new tokens — extend semantic-*.json instead
+
+## 6. Agent Notes
+
+What an AI agent needs to know to safely extend this component:
+- Every token in `token_contract` MUST exist in `packages/tokens/src/semantic-*.json`
+- Don't bypass Mantine's prop API — extend it
+- Storybook story names map 1:1 to `interaction_states`
