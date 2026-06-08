@@ -12,8 +12,10 @@
     --line: #e5e5e0;
     --line-strong: #d4d4cf;
     --paper: #ffffff;
-    --accent: #2563eb;
-    --accent-soft: #eff4ff;
+    --accent: #f97316;
+    --accent-soft: #fff7ed;
+    --accent-deep: #c2410c;
+    --info: #2563eb;
     --warn: #ff8040;
     --code-bg: #f3f3f0;
     --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
@@ -44,7 +46,7 @@
     font-weight: 600; max-width: 1180px;
     margin-bottom: 18px;
   }
-  .hed em { font-style: normal; color: var(--accent); }
+  .hed em { font-style: normal; color: var(--accent-deep); background: var(--accent-soft); padding: 0 8px; border-radius: 6px; }
   .deck {
     font-size: 20px; line-height: 1.45; color: var(--ink-2);
     max-width: 920px; margin-bottom: 48px;
@@ -149,12 +151,12 @@
 </head>
 <body>
   <div class="top">
-    <div class="brand">tina<span class="dot">·</span>ds <span style="color: var(--ink-3); margin-left: 12px;">/ agentic design system</span></div>
-    <div class="tagline">v0 · 10 components · machine-readable specs</div>
+    <div class="brand">clementine<span class="dot">·</span>ds <span style="color: var(--ink-3); margin-left: 12px;">/ agentic design system</span></div>
+    <div class="tagline">v0 · 10 components · 3-tier tokens · machine-readable specs</div>
   </div>
 
   <h1 class="hed">A design system that <em>an AI agent can read</em>, validate against, and extend.</h1>
-  <p class="deck">Every component ships with a closed token contract, named semantic parts, and source pointers — so Claude, Cursor, or an MCP server stops hallucinating tokens on the first prompt.</p>
+  <p class="deck">Three-tier tokens (primitive → semantic → component). Per-component specs that close the contract — so Claude, Cursor, or an MCP server stops hallucinating tokens on the first prompt.</p>
 
   <div class="pipeline">
     <!-- 1: SPEC -->
@@ -185,16 +187,17 @@
     <div class="card">
       <div class="step">02 · tokens</div>
       <h3>specs/button/tokens.json</h3>
-      <div class="meta">Closed list — 13 semantic tokens.</div>
+      <div class="meta">3 tiers, 1 closed contract.</div>
       <div class="swatches">
-        <div class="sw"><span class="chip" style="background:#2563eb"></span><span class="name">action.primary</span><span class="hex">#2563eb</span></div>
-        <div class="sw"><span class="chip" style="background:#1d4ed8"></span><span class="name">action.primary-hover</span><span class="hex">#1d4ed8</span></div>
-        <div class="sw"><span class="chip" style="background:#1e40af"></span><span class="name">action.primary-active</span><span class="hex">#1e40af</span></div>
-        <div class="sw"><span class="chip" style="background:#dc2626"></span><span class="name">action.destructive</span><span class="hex">#dc2626</span></div>
-        <div class="sw"><span class="chip" style="background:#ffffff;border:1px solid #d4d4cf"></span><span class="name">surface.elevated</span><span class="hex">#ffffff</span></div>
-        <div class="sw"><span class="chip" style="background:#d4d4cf"></span><span class="name">border.strong</span><span class="hex">#d4d4cf</span></div>
-        <div class="sw"><span class="chip" style="background:#ff8040"></span><span class="name">focus.ring</span><span class="hex">#ff8040</span></div>
-        <div class="sw"><span class="chip" style="background:#1a1a18"></span><span class="name">text.primary</span><span class="hex">#1a1a18</span></div>
+        <div class="sw"><span class="tier" style="background: var(--accent-soft); color: var(--accent-deep); font-size: 9px; padding: 1px 5px; border-radius: 3px; font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase;">component</span><span class="name" style="font-size: 10px;">button.bg.default</span></div>
+        <div class="sw"><span class="tier" style="background: var(--accent-soft); color: var(--accent-deep); font-size: 9px; padding: 1px 5px; border-radius: 3px; font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase;">component</span><span class="name" style="font-size: 10px;">button.bg.hover</span></div>
+        <div class="sw"><span class="chip" style="background: var(--ink-3); width: 1px; height: 12px; margin-left: 8px;"></span></div>
+        <div class="sw"><span class="tier" style="background: #eff4ff; color: #1e40af; font-size: 9px; padding: 1px 5px; border-radius: 3px; font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase;">semantic</span><span class="name" style="font-size: 10px;">action.primary</span></div>
+        <div class="sw"><span class="tier" style="background: #eff4ff; color: #1e40af; font-size: 9px; padding: 1px 5px; border-radius: 3px; font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase;">semantic</span><span class="name" style="font-size: 10px;">action.primary-hover</span></div>
+        <div class="sw"><span class="chip" style="background: var(--ink-3); width: 1px; height: 12px; margin-left: 8px;"></span></div>
+        <div class="sw"><span class="chip" style="background:#2563eb"></span><span class="name" style="font-size: 10px;">color.blue.6</span><span class="hex">#2563eb</span></div>
+        <div class="sw"><span class="chip" style="background:#1d4ed8"></span><span class="name" style="font-size: 10px;">color.blue.7</span><span class="hex">#1d4ed8</span></div>
+        <div class="sw"><span class="chip" style="background:#ff8040"></span><span class="name" style="font-size: 10px;">color.orange.4</span><span class="hex">#ff8040</span></div>
       </div>
     </div>
 
@@ -246,7 +249,7 @@ Mantine ButtonProps...
   </div>
 
   <div class="foot">
-    <div>github.com/tishsingh399/design-system-ANT</div>
+    <div>github.com/tishsingh399/clementine-ds</div>
     <div class="badges">
       <span class="badge">React + Mantine</span>
       <span class="badge">Style Dictionary</span>
