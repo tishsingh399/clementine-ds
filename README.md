@@ -1,10 +1,26 @@
 # clementine-ds — an agentic design system
 
+[![Notion](https://img.shields.io/badge/Notion-Clementine_DS-fb923c?logo=notion&logoColor=white)](https://www.notion.so/tinasingh/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f)
+[![CLI](https://img.shields.io/badge/CLI-agentic--spec-2563eb)](https://github.com/tishsingh399/agentic-spec)
+[![License](https://img.shields.io/badge/license-MIT-15803d)](./LICENSE)
+
 ![Hero — spec → tokens → agent → code pipeline](./docs/hero.png)
 
 A small, opinionated React design system that ships with **machine-readable specs** for every component. Built so AI agents (Claude, Cursor, Copilot, MCP servers) can read the contract, validate against it, and extend the system without hallucinating tokens or breaking accessibility.
 
 > Most design systems ship code + Storybook and hope documentation keeps up. This one ships a third artifact — `/specs/<component>/` — that an agent can load and treat as the source of truth. See [AGENTS.md](./AGENTS.md) for the full architecture.
+
+## Where this system lives
+
+| Surface | Where | What it holds |
+|---|---|---|
+| 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
+| 📐 Figma | [Tina-DS Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components, spec board |
+| 📓 Notion | [Clementine DS](https://www.notion.so/tinasingh/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
+| 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
+| 📄 ReadMe.io | [`docs/readme/`](./docs/readme) | Paste-ready public docs (push via `scripts/upload-readme-docs.js`) |
+
+All four reference the same closed contract. Drift between them is mechanical to detect.
 
 ## The same system, in Figma
 

@@ -1,5 +1,7 @@
 # AGENTS.md — Clementine DS
 
+> **Companion docs:** [Notion · Clementine DS](https://www.notion.so/tinasingh/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) (Architecture / Tokens / Components / Operations) · [Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) · [agentic-spec CLI](https://github.com/tishsingh399/agentic-spec)
+
 Clementine is a design system built for AI agents to read, extend, and operate on safely.
 
 It ships three things instead of the usual two:
