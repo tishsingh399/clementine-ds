@@ -20,7 +20,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
-    "typescript": "^5.7",
+    "typescript": "^6.0",
     "@types/react": "^19",
     "@types/react-dom": "^19"
   }
