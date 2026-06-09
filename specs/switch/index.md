@@ -14,11 +14,12 @@ semantic_parts:
   label: Optional text label
 
 token_contract:
-  - action.primary
-  - surface.subtle
-  - surface.elevated
-  - focus.ring
-  - text.primary
+  - switch.track.on
+  - switch.track.off
+  - switch.track.disabled
+  - switch.thumb.default
+  - switch.border.focus
+  - switch.fg.label
 
 interaction_states: [off, on, focus, hover, disabled]
 
@@ -40,6 +41,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/switch.json
 
 patterns_used_in: [settings-row, feature-flag]
 pages_used_in: []

@@ -1,0 +1,20 @@
+{
+  "textarea": {
+    "bg": {
+      "default":     { "$value": "{surface.elevated}", "$type": "color" },
+      "disabled":    { "$value": "{surface.subtle}",   "$type": "color" }
+    },
+    "fg": {
+      "value":       { "$value": "{text.primary}",     "$type": "color" },
+      "placeholder": { "$value": "{text.secondary}",   "$type": "color" },
+      "disabled":    { "$value": "{text.tertiary}",    "$type": "color" }
+    },
+    "border": {
+      "default":     { "$value": "{border.strong}",    "$type": "color" },
+      "focus":       { "$value": "{border.focus}",     "$type": "color" },
+      "error":       { "$value": "{feedback.error}",   "$type": "color" }
+    },
+    "ring":          { "$value": "{focus.ring}",       "$type": "color" },
+    "radius":        { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "modal": {
+    "bg":          { "$value": "{surface.elevated}", "$type": "color" },
+    "overlay":     { "$value": "{surface.overlay}",  "$type": "color" },
+    "fg": {
+      "title":     { "$value": "{text.primary}",     "$type": "color" },
+      "body":      { "$value": "{text.primary}",     "$type": "color" },
+      "secondary": { "$value": "{text.secondary}",   "$type": "color" }
+    },
+    "border": {
+      "divider":   { "$value": "{border.default}",   "$type": "color" }
+    },
+    "ring":        { "$value": "{focus.ring}",       "$type": "color" },
+    "radius":      { "$value": "{radius.lg}", "$type": "dimension" }
+  }
+}

@@ -15,13 +15,16 @@ semantic_parts:
   helper:   Helper or error text
 
 token_contract:
-  - surface.elevated
-  - text.primary
-  - text.secondary
-  - border.strong
-  - border.focus
-  - focus.ring
-  - feedback.error
+  - textarea.bg.default
+  - textarea.bg.disabled
+  - textarea.fg.value
+  - textarea.fg.placeholder
+  - textarea.fg.disabled
+  - textarea.border.default
+  - textarea.border.focus
+  - textarea.border.error
+  - textarea.ring
+  - textarea.radius
 
 interaction_states: [default, hover, focus, filled, disabled, error]
 
@@ -43,6 +46,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/textarea.json
 
 patterns_used_in: [form, comment-box, note-editor]
 pages_used_in: []

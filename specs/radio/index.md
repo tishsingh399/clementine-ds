@@ -15,11 +15,13 @@ semantic_parts:
   label:  Text label (clickable)
 
 token_contract:
-  - action.primary
-  - surface.elevated
-  - border.strong
-  - focus.ring
-  - text.primary
+  - radio.bg.unchecked
+  - radio.bg.disabled
+  - radio.dot.checked
+  - radio.border.default
+  - radio.border.checked
+  - radio.border.focus
+  - radio.fg.label
 
 interaction_states: [default, hover, focus, checked, disabled]
 
@@ -41,6 +43,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/radio.json
 
 patterns_used_in: [form, segmented-choice]
 pages_used_in: []

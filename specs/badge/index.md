@@ -12,15 +12,16 @@ semantic_parts:
   label: Text content
 
 token_contract:
-  - surface.subtle
-  - text.primary
-  - feedback.success-subtle
-  - feedback.error-subtle
-  - feedback.warning-subtle
-  - risk.critical-subtle
-  - risk.high-subtle
-  - risk.medium-subtle
-  - risk.low-subtle
+  - badge.bg.neutral
+  - badge.bg.success
+  - badge.bg.error
+  - badge.bg.warning
+  - badge.bg.risk-critical
+  - badge.bg.risk-high
+  - badge.bg.risk-medium
+  - badge.bg.risk-low
+  - badge.fg.default
+  - badge.radius
 
 interaction_states: [default]
 
@@ -42,6 +43,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/badge.json
 
 patterns_used_in: [data-table, status-list, page-header]
 pages_used_in: []

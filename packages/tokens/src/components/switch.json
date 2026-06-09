@@ -1,0 +1,18 @@
+{
+  "switch": {
+    "track": {
+      "on":        { "$value": "{action.primary}",   "$type": "color" },
+      "off":       { "$value": "{surface.subtle}",   "$type": "color" },
+      "disabled":  { "$value": "{surface.subtle}",   "$type": "color" }
+    },
+    "thumb": {
+      "default":   { "$value": "{surface.elevated}", "$type": "color" }
+    },
+    "border": {
+      "focus":     { "$value": "{focus.ring}",       "$type": "color" }
+    },
+    "fg": {
+      "label":     { "$value": "{text.primary}",     "$type": "color" }
+    }
+  }
+}

@@ -15,14 +15,18 @@ semantic_parts:
   description: Optional helper text under the label
 
 token_contract:
-  - action.primary
-  - surface.elevated
-  - border.strong
-  - border.focus
-  - focus.ring
-  - text.primary
-  - text.secondary
-  - feedback.error
+  - checkbox.bg.unchecked
+  - checkbox.bg.checked
+  - checkbox.bg.indeterminate
+  - checkbox.bg.disabled
+  - checkbox.check
+  - checkbox.border.default
+  - checkbox.border.focus
+  - checkbox.border.error
+  - checkbox.fg.label
+  - checkbox.fg.description
+  - checkbox.fg.error
+  - checkbox.radius
 
 interaction_states: [default, hover, focus, checked, indeterminate, disabled, error]
 
@@ -44,6 +48,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/checkbox.json
 
 patterns_used_in: [form, filter-list, settings-row]
 pages_used_in: []

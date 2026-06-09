@@ -1,0 +1,19 @@
+{
+  "radio": {
+    "bg": {
+      "unchecked": { "$value": "{surface.elevated}", "$type": "color" },
+      "disabled":  { "$value": "{surface.subtle}",   "$type": "color" }
+    },
+    "dot": {
+      "checked":   { "$value": "{action.primary}",   "$type": "color" }
+    },
+    "border": {
+      "default":   { "$value": "{border.strong}",    "$type": "color" },
+      "checked":   { "$value": "{action.primary}",   "$type": "color" },
+      "focus":     { "$value": "{focus.ring}",       "$type": "color" }
+    },
+    "fg": {
+      "label":     { "$value": "{text.primary}",     "$type": "color" }
+    }
+  }
+}

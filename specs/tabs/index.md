@@ -14,12 +14,13 @@ semantic_parts:
   panel:     <div role="tabpanel"> revealed by the active tab
 
 token_contract:
-  - action.primary
-  - text.primary
-  - text.secondary
-  - border.default
-  - border.focus
-  - focus.ring
+  - tabs.indicator.active
+  - tabs.fg.active
+  - tabs.fg.inactive
+  - tabs.fg.hover
+  - tabs.fg.disabled
+  - tabs.border.list
+  - tabs.border.focus
 
 interaction_states: [default, hover, focus, selected, disabled]
 
@@ -41,6 +42,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/tabs.json
 
 patterns_used_in: [settings-page, object-details, dashboard]
 pages_used_in: []

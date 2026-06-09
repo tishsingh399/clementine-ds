@@ -1,0 +1,22 @@
+{
+  "checkbox": {
+    "bg": {
+      "unchecked":   { "$value": "{surface.elevated}", "$type": "color" },
+      "checked":     { "$value": "{action.primary}",   "$type": "color" },
+      "indeterminate":{ "$value": "{action.primary}",  "$type": "color" },
+      "disabled":    { "$value": "{surface.subtle}",   "$type": "color" }
+    },
+    "check":         { "$value": "{text.on-action}",   "$type": "color" },
+    "border": {
+      "default":     { "$value": "{border.strong}",    "$type": "color" },
+      "focus":       { "$value": "{focus.ring}",       "$type": "color" },
+      "error":       { "$value": "{feedback.error}",   "$type": "color" }
+    },
+    "fg": {
+      "label":       { "$value": "{text.primary}",     "$type": "color" },
+      "description": { "$value": "{text.secondary}",   "$type": "color" },
+      "error":       { "$value": "{feedback.error}",   "$type": "color" }
+    },
+    "radius":        { "$value": "{radius.sm}", "$type": "dimension" }
+  }
+}

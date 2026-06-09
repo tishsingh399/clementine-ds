@@ -1,0 +1,17 @@
+{
+  "tabs": {
+    "indicator": {
+      "active":    { "$value": "{action.primary}",   "$type": "color" }
+    },
+    "fg": {
+      "active":    { "$value": "{text.primary}",     "$type": "color" },
+      "inactive":  { "$value": "{text.secondary}",   "$type": "color" },
+      "hover":     { "$value": "{text.primary}",     "$type": "color" },
+      "disabled":  { "$value": "{text.tertiary}",    "$type": "color" }
+    },
+    "border": {
+      "list":      { "$value": "{border.default}",   "$type": "color" },
+      "focus":     { "$value": "{focus.ring}",       "$type": "color" }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "select": {
+    "bg": {
+      "trigger":           { "$value": "{surface.elevated}", "$type": "color" },
+      "trigger-disabled":  { "$value": "{surface.subtle}",   "$type": "color" },
+      "popover":           { "$value": "{surface.elevated}", "$type": "color" }
+    },
+    "option": {
+      "bg-default":        { "$value": "{surface.elevated}", "$type": "color" },
+      "bg-hover":          { "$value": "{surface.subtle}",   "$type": "color" },
+      "bg-selected":       { "$value": "{action.primary}",   "$type": "color" },
+      "fg-default":        { "$value": "{text.primary}",     "$type": "color" },
+      "fg-selected":       { "$value": "{text.on-action}",   "$type": "color" }
+    },
+    "fg": {
+      "value":             { "$value": "{text.primary}",     "$type": "color" },
+      "placeholder":       { "$value": "{text.secondary}",   "$type": "color" }
+    },
+    "border": {
+      "default":           { "$value": "{border.strong}",    "$type": "color" },
+      "focus":             { "$value": "{border.focus}",     "$type": "color" },
+      "error":             { "$value": "{feedback.error}",   "$type": "color" }
+    },
+    "ring":                { "$value": "{focus.ring}",       "$type": "color" },
+    "radius":              { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

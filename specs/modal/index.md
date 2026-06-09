@@ -15,12 +15,14 @@ semantic_parts:
   footer:   Action row (typically Buttons)
 
 token_contract:
-  - surface.elevated
-  - surface.overlay
-  - text.primary
-  - text.secondary
-  - border.default
-  - focus.ring
+  - modal.bg
+  - modal.overlay
+  - modal.fg.title
+  - modal.fg.body
+  - modal.fg.secondary
+  - modal.border.divider
+  - modal.ring
+  - modal.radius
 
 interaction_states: [closed, opening, open, closing]
 
@@ -42,6 +44,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/modal.json
 
 patterns_used_in: [confirm-dialog, edit-form, image-viewer]
 pages_used_in: []

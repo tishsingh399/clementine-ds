@@ -16,15 +16,21 @@ semantic_parts:
   empty-state: Shown when no options match
 
 token_contract:
-  - surface.elevated
-  - surface.default
-  - text.primary
-  - text.secondary
-  - border.default
-  - border.strong
-  - border.focus
-  - focus.ring
-  - action.primary
+  - select.bg.trigger
+  - select.bg.trigger-disabled
+  - select.bg.popover
+  - select.option.bg-default
+  - select.option.bg-hover
+  - select.option.bg-selected
+  - select.option.fg-default
+  - select.option.fg-selected
+  - select.fg.value
+  - select.fg.placeholder
+  - select.border.default
+  - select.border.focus
+  - select.border.error
+  - select.ring
+  - select.radius
 
 interaction_states: [default, hover, focus, open, disabled, error]
 
@@ -46,6 +52,7 @@ sources:
     primitives: packages/tokens/src/primitives.json
     semantic_light: packages/tokens/src/semantic-light.json
     semantic_dark: packages/tokens/src/semantic-dark.json
+    component: packages/tokens/src/components/select.json
 
 patterns_used_in: [form, filter-bar, table-row-editor]
 pages_used_in: []
