@@ -1,0 +1,29 @@
+# Vercel build only needs source + built Storybook output.
+# Skip everything that's not needed for Storybook.
+
+.github/
+.git/
+docs/
+specs/
+_templates/
+guidelines/
+examples/
+
+# These are generated locally and re-generated at build
+**/dist/
+**/storybook-static/
+**/.turbo/
+**/.next/
+
+# Editor + OS noise
+.DS_Store
+*.log
+.vscode/
+.cursor/
+.claude/
+
+# Tests
+**/tests/
+**/__tests__/
+*.test.ts
+*.test.tsx
