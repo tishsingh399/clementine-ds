@@ -1,0 +1,112 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Clementine DS",
+  "description": "An agentic React design system. 3-tier tokens, machine-readable specs, built for AI tools to read and validate against.",
+  "colors": {
+    "primary": "#f97316",
+    "light": "#ffedd5",
+    "dark": "#c2410c"
+  },
+  "logo": {
+    "light": "/docs/figma/overview.png",
+    "dark": "/docs/figma/overview.png",
+    "href": "https://github.com/tishsingh399/clementine-ds"
+  },
+  "favicon": "/favicon.svg",
+  "background": {
+    "decoration": "grid"
+  },
+  "navbar": {
+    "links": [
+      { "label": "Storybook", "href": "https://clementine-ds-storybook.vercel.app" },
+      { "label": "Notion", "href": "https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f" }
+    ],
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/tishsingh399/clementine-ds"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/tishsingh399",
+      "linkedin": "https://www.linkedin.com/in/tina-singh-0503/"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "docs/readme/getting-started/intro",
+              "docs/readme/getting-started/install",
+              "docs/readme/getting-started/first-component"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "docs/readme/architecture/3-tier-tokens",
+              "docs/readme/architecture/agentic-specs",
+              "docs/readme/architecture/contract-rules"
+            ]
+          },
+          {
+            "group": "Tokens",
+            "pages": [
+              "docs/readme/tokens/primitives",
+              "docs/readme/tokens/semantic",
+              "docs/readme/tokens/component",
+              "docs/readme/tokens/the-cascade-rule"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "docs/readme/components/button",
+              "docs/readme/components/badge",
+              "docs/readme/components/checkbox",
+              "docs/readme/components/modal",
+              "docs/readme/components/radio",
+              "docs/readme/components/select",
+              "docs/readme/components/switch",
+              "docs/readme/components/tabs",
+              "docs/readme/components/text-input",
+              "docs/readme/components/textarea"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/tishsingh399/clementine-ds",
+          "icon": "github"
+        },
+        {
+          "anchor": "Live Storybook",
+          "href": "https://clementine-ds-storybook.vercel.app",
+          "icon": "book-open"
+        },
+        {
+          "anchor": "Notion docs",
+          "href": "https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f",
+          "icon": "newspaper"
+        },
+        {
+          "anchor": "agentic-spec CLI",
+          "href": "https://github.com/tishsingh399/agentic-spec",
+          "icon": "terminal"
+        }
+      ]
+    }
+  },
+  "redirects": [
+    { "source": "/", "destination": "/docs/readme/getting-started/intro" }
+  ]
+}
