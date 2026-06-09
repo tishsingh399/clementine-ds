@@ -6,6 +6,30 @@ A small, opinionated React design system that ships with **machine-readable spec
 
 > Most design systems ship code + Storybook and hope documentation keeps up. This one ships a third artifact — `/specs/<component>/` — that an agent can load and treat as the source of truth. See [AGENTS.md](./AGENTS.md) for the full architecture.
 
+## The same system, in Figma
+
+Clementine lives in code, in Figma, and as machine-readable specs. The cascade is preserved across all three.
+
+### 3-tier token board
+
+![Figma · 3-tier token cascade](./docs/figma/overview.png)
+
+52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. All three Figma variable collections cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
+
+### Components board
+
+![Figma · 10 components bound to Tier-3 variables](./docs/figma/components.png)
+
+Every paint on every frame is bound to a `Clementine · Components` variable. Hover on the Button → swaps to `button/bg/hover`. Focus ring → `button/border/focus`. The Figma file is the system; it doesn't drift from code.
+
+### Spec board
+
+![Figma · the agentic contract next to the component](./docs/figma/spec.png)
+
+The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.md) sits next to the live component. The `agentic-spec validate` output shows all 5 gates green. This is how the contract works: a human or an agent looks at the spec, looks at the component, and knows in one glance whether they match.
+
+> **Pushed by [`silships/figma-cli`](https://github.com/silships/figma-cli) + a small custom script.** The CLI talks to Figma Desktop via a local plugin; the script creates 3 variable collections, sets up the cascade, and renders all 10 components as Auto Layout frames bound to component-tier variables. See [`docs/figma/`](./docs/figma) for the exported PNGs and the `push-clementine.mjs` source.
+
 ## What's inside
 
 | Package | What |
