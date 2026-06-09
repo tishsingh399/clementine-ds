@@ -15,7 +15,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^8",
+    "@storybook/addon-a11y": "^10",
     "@storybook/addon-essentials": "^8",
     "@storybook/blocks": "^8",
     "@storybook/react": "^8",
