@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "style-dictionary": "^4",
-    "@tokens-studio/sd-transforms": "^1"
+    "@tokens-studio/sd-transforms": "^2"
   }
 }
