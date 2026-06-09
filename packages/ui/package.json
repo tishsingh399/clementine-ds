@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@mantine/core": "^8",
-    "@mantine/hooks": "^8",
+    "@mantine/hooks": "^9",
     "@clementine-ds/tokens": "workspace:*",
     "react": "^19",
     "react-dom": "^19"
