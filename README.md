@@ -1,5 +1,7 @@
 # clementine-ds — an agentic design system
 
+[![CI](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml)
 [![Notion](https://img.shields.io/badge/Notion-Clementine_DS-fb923c?logo=notion&logoColor=white)](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f)
 [![CLI](https://img.shields.io/badge/CLI-agentic--spec-2563eb)](https://github.com/tishsingh399/agentic-spec)
 [![License](https://img.shields.io/badge/license-MIT-15803d)](./LICENSE)
