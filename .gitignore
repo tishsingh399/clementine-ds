@@ -4,3 +4,8 @@ storybook-static/
 .turbo/
 .DS_Store
 *.log
+
+# Secrets — NEVER commit. Use .env.example as the safe template.
+.env
+.env.local
+.env.*.local
