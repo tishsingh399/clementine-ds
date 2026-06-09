@@ -1,6 +1,6 @@
 # clementine-ds — an agentic design system
 
-[![Notion](https://img.shields.io/badge/Notion-Clementine_DS-fb923c?logo=notion&logoColor=white)](https://www.notion.so/tinasingh/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f)
+[![Notion](https://img.shields.io/badge/Notion-Clementine_DS-fb923c?logo=notion&logoColor=white)](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f)
 [![CLI](https://img.shields.io/badge/CLI-agentic--spec-2563eb)](https://github.com/tishsingh399/agentic-spec)
 [![License](https://img.shields.io/badge/license-MIT-15803d)](./LICENSE)
 
@@ -16,7 +16,7 @@ A small, opinionated React design system that ships with **machine-readable spec
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
 | 📐 Figma | [Tina-DS Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components, spec board |
-| 📓 Notion | [Clementine DS](https://www.notion.so/tinasingh/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
+| 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | 📄 ReadMe.io | [`docs/readme/`](./docs/readme) | Paste-ready public docs (push via `scripts/upload-readme-docs.js`) |
 
