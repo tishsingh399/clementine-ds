@@ -5,9 +5,21 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "storybook": "pnpm --filter storybook dev",
-    "build:storybook": "pnpm --filter storybook build"
+    "build:storybook": "pnpm --filter storybook build",
+    "size": "size-limit",
+    "size:why": "size-limit --why"
   },
+  "size-limit": [
+    {
+      "name": "@clementine-ds/tokens — primitives (CJS+ESM)",
+      "path": "packages/tokens/dist/primitives.js",
+      "limit": "10 KB",
+      "gzip": true
+    }
+  ],
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^12.1.0",
+    "size-limit": "^12.1.0",
     "turbo": "^2",
     "typescript": "^5.7"
   },

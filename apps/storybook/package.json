@@ -5,24 +5,31 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build"
+    "build": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
-    "@clementine-ds/ui": "workspace:*",
     "@clementine-ds/tokens": "workspace:*",
+    "@clementine-ds/ui": "workspace:*",
     "react": "^19",
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8",
+    "@storybook/addon-essentials": "^8",
+    "@storybook/blocks": "^8",
     "@storybook/react": "^8",
     "@storybook/react-vite": "^8",
-    "@storybook/addon-essentials": "^8",
-    "@storybook/addon-a11y": "^8",
-    "@storybook/blocks": "^8",
-    "storybook": "^8",
-    "vite": "^6",
-    "typescript": "^5.7",
+    "@storybook/test-runner": "^0.19.1",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "axe-playwright": "^2.0.3",
+    "concurrently": "^9.0.0",
+    "http-server": "^14.1.0",
+    "jest-axe": "^10.0.0",
+    "storybook": "^8",
+    "typescript": "^5.7",
+    "vite": "^6",
+    "wait-on": "^8.0.0"
   }
 }

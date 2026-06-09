@@ -61,3 +61,55 @@ jobs:
       # ui depends on @clementine-ds/tokens dist; build tokens first
       - run: pnpm --filter @clementine-ds/tokens build
       - run: pnpm --filter @clementine-ds/ui exec tsc --noEmit
+
+  size:
+    name: Bundle size budget
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @clementine-ds/tokens build
+      - run: pnpm size
+
+  a11y:
+    name: a11y on Storybook stories
+    # NOTE: non-blocking until more components reach AI-Ready.
+    # Flip 'continue-on-error' to false (or remove the line) when most
+    # specs in /specs/ have aria_correct: true.
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: pnpm --filter storybook exec playwright install --with-deps chromium
+
+      - name: Build Storybook
+        run: pnpm build
+
+      - name: Serve Storybook and run test-runner with axe
+        run: |
+          pnpm --filter storybook exec concurrently -k -s first -n "SB,A11Y" \
+            "npx http-server apps/storybook/storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:6006 && pnpm --filter storybook test-storybook --url http://127.0.0.1:6006"
