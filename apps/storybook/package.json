@@ -29,7 +29,7 @@
     "jest-axe": "^10.0.0",
     "storybook": "^8",
     "typescript": "^5.7",
-    "vite": "^6",
+    "vite": "^8",
     "wait-on": "^8.0.0"
   }
 }
