@@ -76,7 +76,7 @@ Inline status colors.
 
 ### Risk
 
-Four severity tiers, used in PAM and security UI. Each has a strong and a subtle variant.
+Four severity tiers, used wherever a UI ranks risk or impact. Each has a strong and a subtle variant.
 
 | Token | Light | Role |
 |---|---|---|

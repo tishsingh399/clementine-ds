@@ -46,7 +46,7 @@ export const Dot: Story = {
   args: { variant: 'dot' },
 };
 
-// PAM risk level badges
+// Risk-level badges (4 severity tiers)
 export const RiskCritical: Story = {
   args: { risk: 'critical', children: 'Critical' },
 };
