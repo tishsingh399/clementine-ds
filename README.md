@@ -22,9 +22,9 @@ A small, opinionated React design system that ships with **machine-readable spec
 | 📐 Figma | [Tina-DS Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components, spec board |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
-| 📄 ReadMe.io | [`docs/readme/`](./docs/readme) | Paste-ready public docs (push via `scripts/upload-readme-docs.js`) |
+| 📄 Long-form docs | [`docs/readme/`](./docs/readme) | 14 narrative pages covering getting-started, architecture, tokens, and per-component reference. GitHub renders them with TOC + syntax highlighting — no separate docs site needed. |
 
-All four reference the same closed contract. Drift between them is mechanical to detect.
+All five reference the same closed contract. Drift between them is mechanical to detect.
 
 ## The same system, in Figma
 
