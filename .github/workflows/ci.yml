@@ -58,4 +58,6 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+      # ui depends on @clementine-ds/tokens dist; build tokens first
+      - run: pnpm --filter @clementine-ds/tokens build
       - run: pnpm --filter @clementine-ds/ui exec tsc --noEmit
