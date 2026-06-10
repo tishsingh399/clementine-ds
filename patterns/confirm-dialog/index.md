@@ -8,10 +8,10 @@ category: Pattern
 required_aria: [role, aria-modal, aria-labelledby, aria-describedby]
 
 semantic_parts:
-  modal:   The blocking overlay + dialog (Modal component)
-  title:   Short verb phrase naming the consequence
-  body:    Explanation of what will happen + scope
-  actions: ActionBar with Cancel + destructive (or primary) confirm
+  modal:   "The blocking overlay + dialog (Modal component)"
+  title:   "Short verb phrase naming the consequence"
+  body:    "Explanation of what will happen + scope"
+  actions: "ActionBar with Cancel + destructive (or primary) confirm"
 
 components_used:
   - modal

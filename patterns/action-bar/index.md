@@ -8,11 +8,11 @@ category: Pattern
 required_aria: []
 
 semantic_parts:
-  root:      Horizontal flex container holding one or more buttons
-  primary:   The filled-primary button (one max)
-  secondary: Outline buttons that sit next to primary
-  tertiary:  Subtle or text-link buttons for low-emphasis actions
-  spacer:    Optional flex spacer that pushes destructive to the opposite end
+  root:      "Horizontal flex container holding one or more buttons"
+  primary:   "The filled-primary button (one max)"
+  secondary: "Outline buttons that sit next to primary"
+  tertiary:  "Subtle or text-link buttons for low-emphasis actions"
+  spacer:    "Optional flex spacer that pushes destructive to the opposite end"
 
 components_used:
   - button

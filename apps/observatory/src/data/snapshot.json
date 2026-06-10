@@ -1,0 +1,1080 @@
+{
+  "generated_at": "2026-06-10T20:50:23.066Z",
+  "repo": "tishsingh399/clementine-ds",
+  "surfaces": {
+    "storybook": "https://clementine-ds-storybook.vercel.app",
+    "mintlify": "https://clementineds.mintlify.app",
+    "notion": "https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f",
+    "figma": "https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT",
+    "github": "https://github.com/tishsingh399/clementine-ds",
+    "cli": "https://github.com/tishsingh399/agentic-spec"
+  },
+  "totals": {
+    "specs": 12,
+    "ai_ready": 3,
+    "in_progress": 0,
+    "draft": 9,
+    "patterns": 3,
+    "tokens": {
+      "primitives": 82,
+      "semantic": 32,
+      "components": {
+        "alert": 15,
+        "badge": 10,
+        "button": 16,
+        "checkbox": 12,
+        "modal": 8,
+        "radio": 7,
+        "select": 15,
+        "switch": 6,
+        "tabs": 7,
+        "text-input": 11,
+        "textarea": 10,
+        "tooltip": 5
+      }
+    },
+    "avg_health": 64
+  },
+  "specs": [
+    {
+      "name": "button",
+      "component": "button",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label",
+        "aria-disabled",
+        "aria-busy"
+      ],
+      "semantic_parts": {
+        "root": "The native <button> element — owns interactive state, focus ring, padding, sizing",
+        "icon-leading": "Optional leading icon (left of label) — replaces with spinner in loading state",
+        "label": "The text content of the button",
+        "icon-trailing": "Optional trailing icon (right of label)",
+        "spinner": "Loading-state indicator that replaces icon-leading"
+      },
+      "token_contract": [
+        "button.bg.default",
+        "button.bg.hover",
+        "button.bg.active",
+        "button.bg.disabled",
+        "button.bg-destructive.default",
+        "button.bg-destructive.hover",
+        "button.bg-outline.default",
+        "button.bg-outline.hover",
+        "button.fg.on-filled",
+        "button.fg.on-outline",
+        "button.fg.disabled",
+        "button.border.default",
+        "button.border.hover",
+        "button.border.focus",
+        "button.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "active",
+        "disabled",
+        "loading"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Button.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Button",
+            "ButtonProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Button.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "component": "packages/tokens/src/components/button.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "action-bar",
+        "modal-footer",
+        "toolbar"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "settings",
+        "list-view"
+      ],
+      "tokens_count": 15,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 100
+    },
+    {
+      "name": "alert",
+      "component": "alert",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "root": "Container with intent-specific bg + border",
+        "icon": "Lead icon matching the intent",
+        "title": "Optional short heading",
+        "body": "Required descriptive text",
+        "close": "Optional close button (only for dismissible variant)",
+        "actions": "Optional inline ActionBar for primary + dismiss"
+      },
+      "token_contract": [
+        "alert.bg.info",
+        "alert.bg.success",
+        "alert.bg.warning",
+        "alert.bg.error",
+        "alert.border.info",
+        "alert.border.success",
+        "alert.border.warning",
+        "alert.border.error",
+        "alert.fg.title",
+        "alert.fg.body",
+        "alert.icon.info",
+        "alert.icon.success",
+        "alert.icon.warning",
+        "alert.icon.error",
+        "alert.radius"
+      ],
+      "interaction_states": [
+        "visible",
+        "dismissing"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Alert.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Alert",
+            "AlertProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Alert.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/alert.json"
+        }
+      },
+      "patterns_used_in": [
+        "form-field",
+        "page-header"
+      ],
+      "pages_used_in": [
+        "login",
+        "signup",
+        "settings",
+        "billing"
+      ],
+      "tokens_count": 15,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 91
+    },
+    {
+      "name": "tooltip",
+      "component": "tooltip",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-describedby"
+      ],
+      "semantic_parts": {
+        "trigger": "The element the user hovers/focuses (NOT part of the Tooltip component itself; lives in consumer code)",
+        "bubble": "The floating container holding the tip text",
+        "arrow": "Optional pointer arrow connecting bubble to trigger",
+        "label": "Tip text content"
+      },
+      "token_contract": [
+        "tooltip.bg",
+        "tooltip.fg",
+        "tooltip.border",
+        "tooltip.radius",
+        "tooltip.shadow"
+      ],
+      "interaction_states": [
+        "hidden",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Tooltip.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Tooltip",
+            "TooltipProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Tooltip.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/tooltip.json"
+        }
+      },
+      "patterns_used_in": [
+        "action-bar",
+        "page-header"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 87
+    },
+    {
+      "name": "checkbox",
+      "component": "checkbox",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-checked",
+        "aria-disabled",
+        "aria-describedby"
+      ],
+      "semantic_parts": {
+        "root": "Native <input type=\"checkbox\"> wrapper",
+        "box": "The visible square that shows checked/indeterminate/unchecked",
+        "check": "The checkmark glyph",
+        "label": "The text label (clickable target)",
+        "description": "Optional helper text under the label"
+      },
+      "token_contract": [
+        "checkbox.bg.unchecked",
+        "checkbox.bg.checked",
+        "checkbox.bg.indeterminate",
+        "checkbox.bg.disabled",
+        "checkbox.check",
+        "checkbox.border.default",
+        "checkbox.border.focus",
+        "checkbox.border.error",
+        "checkbox.fg.label",
+        "checkbox.fg.description",
+        "checkbox.fg.error",
+        "checkbox.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "checked",
+        "indeterminate",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Checkbox.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Checkbox"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Checkbox.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/checkbox.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "filter-list",
+        "settings-row"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 12,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 57
+    },
+    {
+      "name": "select",
+      "component": "select",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-expanded",
+        "aria-controls",
+        "aria-activedescendant"
+      ],
+      "semantic_parts": {
+        "root": "Trigger button that opens the popover",
+        "value": "Display of the current selection",
+        "caret": "Down chevron icon",
+        "popover": "Floating list of options",
+        "option": "Single option row",
+        "empty-state": "Shown when no options match"
+      },
+      "token_contract": [
+        "select.bg.trigger",
+        "select.bg.trigger-disabled",
+        "select.bg.popover",
+        "select.option.bg-default",
+        "select.option.bg-hover",
+        "select.option.bg-selected",
+        "select.option.fg-default",
+        "select.option.fg-selected",
+        "select.fg.value",
+        "select.fg.placeholder",
+        "select.border.default",
+        "select.border.focus",
+        "select.border.error",
+        "select.ring",
+        "select.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Select.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Select"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Select.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/select.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "filter-bar",
+        "table-row-editor"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 15,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 57
+    },
+    {
+      "name": "text-input",
+      "component": "text-input",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-invalid",
+        "aria-describedby",
+        "aria-required",
+        "aria-disabled"
+      ],
+      "semantic_parts": {
+        "label": "<label> tied to the input via for/id",
+        "root": "Outer wrapper that owns the border + focus ring",
+        "input": "Native <input type=\"text\"> (or email, password, etc.)",
+        "icon-leading": "Optional leading icon",
+        "icon-trailing": "Optional trailing icon (clear button, status indicator)",
+        "helper": "Helper or error text under the input"
+      },
+      "token_contract": [
+        "text-input.bg.default",
+        "text-input.bg.disabled",
+        "text-input.fg.value",
+        "text-input.fg.placeholder",
+        "text-input.fg.disabled",
+        "text-input.border.default",
+        "text-input.border.hover",
+        "text-input.border.focus",
+        "text-input.border.error",
+        "text-input.ring",
+        "text-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "disabled",
+        "error",
+        "loading"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/TextInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "TextInput"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/TextInput.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/text-input.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "search-bar",
+        "filter-bar",
+        "table-row-editor"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 11,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 57
+    },
+    {
+      "name": "textarea",
+      "component": "textarea",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-invalid",
+        "aria-describedby",
+        "aria-required",
+        "aria-disabled"
+      ],
+      "semantic_parts": {
+        "label": "<label> tied to the textarea via for/id",
+        "root": "Outer wrapper that owns border + focus ring",
+        "textarea": "Native <textarea>",
+        "counter": "Optional character counter (bottom right)",
+        "helper": "Helper or error text"
+      },
+      "token_contract": [
+        "textarea.bg.default",
+        "textarea.bg.disabled",
+        "textarea.fg.value",
+        "textarea.fg.placeholder",
+        "textarea.fg.disabled",
+        "textarea.border.default",
+        "textarea.border.focus",
+        "textarea.border.error",
+        "textarea.ring",
+        "textarea.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Textarea.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Textarea"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Textarea.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/textarea.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "comment-box",
+        "note-editor"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 10,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 57
+    },
+    {
+      "name": "badge",
+      "component": "badge",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "Outer <span> — owns padding, radius, fill",
+        "label": "Text content"
+      },
+      "token_contract": [
+        "badge.bg.neutral",
+        "badge.bg.success",
+        "badge.bg.error",
+        "badge.bg.warning",
+        "badge.bg.risk-critical",
+        "badge.bg.risk-high",
+        "badge.bg.risk-medium",
+        "badge.bg.risk-low",
+        "badge.fg.default",
+        "badge.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Badge.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Badge"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Badge.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/badge.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "status-list",
+        "page-header"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 10,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 56
+    },
+    {
+      "name": "radio",
+      "component": "radio",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-checked",
+        "aria-disabled"
+      ],
+      "semantic_parts": {
+        "group": "Outer wrapper that owns the role=\"radiogroup\"",
+        "root": "Native <input type=\"radio\">",
+        "circle": "Visible outer ring",
+        "dot": "Inner filled circle (checked state)",
+        "label": "Text label (clickable)"
+      },
+      "token_contract": [
+        "radio.bg.unchecked",
+        "radio.bg.disabled",
+        "radio.dot.checked",
+        "radio.border.default",
+        "radio.border.checked",
+        "radio.border.focus",
+        "radio.fg.label"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "checked",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Radio.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Radio"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Radio.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/radio.json"
+        }
+      },
+      "patterns_used_in": [
+        "form",
+        "segmented-choice"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 51
+    },
+    {
+      "name": "tabs",
+      "component": "tabs",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-selected",
+        "aria-controls",
+        "aria-labelledby"
+      ],
+      "semantic_parts": {
+        "list": "Outer <div role=\"tablist\">",
+        "tab": "Single <button role=\"tab\">",
+        "indicator": "Active-tab underline / pill",
+        "panel": "<div role=\"tabpanel\"> revealed by the active tab"
+      },
+      "token_contract": [
+        "tabs.indicator.active",
+        "tabs.fg.active",
+        "tabs.fg.inactive",
+        "tabs.fg.hover",
+        "tabs.fg.disabled",
+        "tabs.border.list",
+        "tabs.border.focus"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Tabs.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Tabs"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Tabs.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/tabs.json"
+        }
+      },
+      "patterns_used_in": [
+        "settings-page",
+        "object-details",
+        "dashboard"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 51
+    },
+    {
+      "name": "modal",
+      "component": "modal",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-modal",
+        "aria-labelledby",
+        "aria-describedby"
+      ],
+      "semantic_parts": {
+        "overlay": "Backdrop layer (dims the page underneath)",
+        "dialog": "The modal container — owns elevation, radius, focus trap",
+        "header": "Title row + close button",
+        "body": "Main content",
+        "footer": "Action row (typically Buttons)"
+      },
+      "token_contract": [
+        "modal.bg",
+        "modal.overlay",
+        "modal.fg.title",
+        "modal.fg.body",
+        "modal.fg.secondary",
+        "modal.border.divider",
+        "modal.ring",
+        "modal.radius"
+      ],
+      "interaction_states": [
+        "closed",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Modal.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Modal"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Modal.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/modal.json"
+        }
+      },
+      "patterns_used_in": [
+        "confirm-dialog",
+        "edit-form",
+        "image-viewer"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 50
+    },
+    {
+      "name": "switch",
+      "component": "switch",
+      "status": "Draft",
+      "last_verified": "2026-06-08T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-checked",
+        "aria-disabled"
+      ],
+      "semantic_parts": {
+        "root": "Native <input type=\"checkbox\" role=\"switch\">",
+        "track": "Outer pill that fills when on",
+        "thumb": "Sliding circle",
+        "label": "Optional text label"
+      },
+      "token_contract": [
+        "switch.track.on",
+        "switch.track.off",
+        "switch.track.disabled",
+        "switch.thumb.default",
+        "switch.border.focus",
+        "switch.fg.label"
+      ],
+      "interaction_states": [
+        "off",
+        "on",
+        "focus",
+        "hover",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": false,
+        "structure_correct": true,
+        "states_complete": false,
+        "tokens_valid": false,
+        "no_invented_styles": false
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Switch.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Switch"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Switch.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/switch.json"
+        }
+      },
+      "patterns_used_in": [
+        "settings-row",
+        "feature-flag"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 1,
+      "health_score": 49
+    }
+  ],
+  "patterns": [
+    {
+      "name": "action-bar",
+      "component": "action-bar",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Pattern",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "Horizontal flex container holding one or more buttons",
+        "primary": "The filled-primary button (one max)",
+        "secondary": "Outline buttons that sit next to primary",
+        "tertiary": "Subtle or text-link buttons for low-emphasis actions",
+        "spacer": "Optional flex spacer that pushes destructive to the opposite end"
+      },
+      "token_contract": [
+        "spacing.md",
+        "spacing.lg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "storybook": {
+          "path": "apps/storybook/stories/patterns/ActionBar.stories.tsx"
+        },
+        "tokens": {
+          "semantic_light": "packages/tokens/src/semantic-light.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 0,
+      "components_used": [
+        "button"
+      ],
+      "trust_level": 4,
+      "health_score": 72
+    },
+    {
+      "name": "confirm-dialog",
+      "component": "confirm-dialog",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Pattern",
+      "required_aria": [
+        "role",
+        "aria-modal",
+        "aria-labelledby",
+        "aria-describedby"
+      ],
+      "semantic_parts": {
+        "modal": "The blocking overlay + dialog (Modal component)",
+        "title": "Short verb phrase naming the consequence",
+        "body": "Explanation of what will happen + scope",
+        "actions": "ActionBar with Cancel + destructive (or primary) confirm"
+      },
+      "token_contract": [
+        "spacing.md",
+        "spacing.lg"
+      ],
+      "interaction_states": [
+        "closed",
+        "opening",
+        "open",
+        "confirming",
+        "closing"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "storybook": {
+          "path": "apps/storybook/stories/patterns/ConfirmDialog.stories.tsx"
+        },
+        "tokens": {
+          "semantic_light": "packages/tokens/src/semantic-light.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 0,
+      "components_used": [
+        "modal",
+        "button"
+      ],
+      "trust_level": 4,
+      "health_score": 84
+    },
+    {
+      "name": "form-field",
+      "component": "form-field",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Pattern",
+      "required_aria": [
+        "aria-required",
+        "aria-invalid",
+        "aria-describedby"
+      ],
+      "semantic_parts": {
+        "label": "The <label> for the input",
+        "control": "One of TextInput, Textarea, Select, Checkbox, Radio, Switch",
+        "helper": "Optional explanatory text below the control",
+        "error": "Error message shown when validation fails",
+        "required-mark": "Asterisk or (required) text next to the label"
+      },
+      "token_contract": [
+        "text.primary",
+        "text.secondary",
+        "feedback.error",
+        "spacing.sm",
+        "spacing.md"
+      ],
+      "interaction_states": [
+        "default",
+        "focused",
+        "filled",
+        "error",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "storybook": {
+          "path": "apps/storybook/stories/patterns/FormField.stories.tsx"
+        },
+        "tokens": {
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 0,
+      "components_used": [
+        "text-input | textarea | select | checkbox | radio | switch",
+        "badge"
+      ],
+      "trust_level": 4,
+      "health_score": 90
+    }
+  ]
+}

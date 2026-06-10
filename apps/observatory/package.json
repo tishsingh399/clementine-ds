@@ -1,0 +1,26 @@
+{
+  "name": "observatory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scan": "node scripts/scan-specs.mjs",
+    "dev": "pnpm scan && vite",
+    "build": "pnpm scan && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@clementine-ds/tokens": "workspace:*",
+    "@clementine-ds/ui": "workspace:*",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.4",
+    "js-yaml": "^4.1.0",
+    "typescript": "^5.7",
+    "vite": "^6"
+  }
+}

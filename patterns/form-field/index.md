@@ -8,11 +8,11 @@ category: Pattern
 required_aria: [aria-required, aria-invalid, aria-describedby]
 
 semantic_parts:
-  label:       The <label> for the input
-  control:     One of: TextInput, Textarea, Select, Checkbox, Radio, Switch
-  helper:      Optional explanatory text below the control
-  error:       Error message shown when validation fails
-  required-mark: Asterisk or "(required)" text next to the label
+  label:         "The <label> for the input"
+  control:       "One of TextInput, Textarea, Select, Checkbox, Radio, Switch"
+  helper:        "Optional explanatory text below the control"
+  error:         "Error message shown when validation fails"
+  required-mark: "Asterisk or (required) text next to the label"
 
 components_used:
   - text-input | textarea | select | checkbox | radio | switch
