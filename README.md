@@ -68,6 +68,8 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 | Component | Status | Spec |
 |---|---|---|
+| Alert | AI-Ready | [specs/alert](./specs/alert/index.md) |
+| Tooltip | AI-Ready | [specs/tooltip](./specs/tooltip/index.md) |
 | Button | AI-Ready | [specs/button](./specs/button/index.md) |
 | Badge | Draft | [specs/badge](./specs/badge/index.md) |
 | Checkbox | Draft | [specs/checkbox](./specs/checkbox/index.md) |

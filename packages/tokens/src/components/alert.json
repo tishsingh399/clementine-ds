@@ -1,0 +1,27 @@
+{
+  "alert": {
+    "bg": {
+      "info":     { "$value": "{surface.subtle}",          "$type": "color" },
+      "success":  { "$value": "{feedback.success-subtle}", "$type": "color" },
+      "warning":  { "$value": "{feedback.warning-subtle}", "$type": "color" },
+      "error":    { "$value": "{feedback.error-subtle}",   "$type": "color" }
+    },
+    "border": {
+      "info":     { "$value": "{border.default}",  "$type": "color" },
+      "success":  { "$value": "{feedback.success}", "$type": "color" },
+      "warning":  { "$value": "{feedback.warning}", "$type": "color" },
+      "error":    { "$value": "{feedback.error}",  "$type": "color" }
+    },
+    "fg": {
+      "title":    { "$value": "{text.primary}",   "$type": "color" },
+      "body":     { "$value": "{text.secondary}", "$type": "color" }
+    },
+    "icon": {
+      "info":     { "$value": "{text.secondary}",  "$type": "color" },
+      "success":  { "$value": "{feedback.success}", "$type": "color" },
+      "warning":  { "$value": "{feedback.warning}", "$type": "color" },
+      "error":    { "$value": "{feedback.error}",  "$type": "color" }
+    },
+    "radius":     { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

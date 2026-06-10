@@ -1,0 +1,9 @@
+{
+  "tooltip": {
+    "bg":     { "$value": "{text.primary}",   "$type": "color" },
+    "fg":     { "$value": "{text.on-action}", "$type": "color" },
+    "border": { "$value": "{text.primary}",   "$type": "color" },
+    "radius": { "$value": "{radius.sm}",      "$type": "dimension" },
+    "shadow": { "$value": "{shadow.md}",      "$type": "shadow" }
+  }
+}
