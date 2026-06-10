@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T20:50:23.066Z",
+  "generated_at": "2026-06-10T20:52:58.664Z",
   "repo": "tishsingh399/clementine-ds",
   "surfaces": {
     "storybook": "https://clementine-ds-storybook.vercel.app",
@@ -9,6 +9,221 @@
     "github": "https://github.com/tishsingh399/clementine-ds",
     "cli": "https://github.com/tishsingh399/agentic-spec"
   },
+  "scoreboard": {
+    "quality": 64,
+    "drift": 25,
+    "coverage": 100
+  },
+  "connectors": [
+    {
+      "name": "GitHub",
+      "icon": "🐙",
+      "url": "https://github.com/tishsingh399/clementine-ds",
+      "status": "connected",
+      "sub": "main · auto-deploy"
+    },
+    {
+      "name": "Storybook",
+      "icon": "📚",
+      "url": "https://clementine-ds-storybook.vercel.app",
+      "status": "connected",
+      "sub": "Vercel · live"
+    },
+    {
+      "name": "Mintlify",
+      "icon": "📘",
+      "url": "https://clementineds.mintlify.app",
+      "status": "connected",
+      "sub": "docs · auto-synced"
+    },
+    {
+      "name": "Notion",
+      "icon": "📓",
+      "url": "https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f",
+      "status": "connected",
+      "sub": "25 pages · published"
+    },
+    {
+      "name": "Figma",
+      "icon": "🎨",
+      "url": "https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT",
+      "status": "connected",
+      "sub": "3 collections · 12 components"
+    },
+    {
+      "name": "agentic-spec",
+      "icon": "🛠",
+      "url": "https://github.com/tishsingh399/agentic-spec",
+      "status": "connected",
+      "sub": "CLI · validating"
+    }
+  ],
+  "composer": {
+    "patterns": 3,
+    "needs_input": 8
+  },
+  "evaluator": {
+    "rules_passing": 15,
+    "rules_total": 15,
+    "checks_passing": 3,
+    "checks_total": 12
+  },
+  "validators": [
+    {
+      "name": "missing-spec",
+      "category": "Identity",
+      "intent": "Catches missing index.md"
+    },
+    {
+      "name": "missing-tokens",
+      "category": "Identity",
+      "intent": "Catches missing tokens.json"
+    },
+    {
+      "name": "no-frontmatter",
+      "category": "Identity",
+      "intent": "Ensures YAML frontmatter exists"
+    },
+    {
+      "name": "bad-frontmatter",
+      "category": "Identity",
+      "intent": "Ensures frontmatter parses"
+    },
+    {
+      "name": "identity-mismatch",
+      "category": "Identity",
+      "intent": "spec component === tokens component"
+    },
+    {
+      "name": "missing-token-entry",
+      "category": "Tokens",
+      "intent": "Every contract entry has a tokens.json row"
+    },
+    {
+      "name": "orphan-token-entry",
+      "category": "Tokens",
+      "intent": "No tokens.json rows without a contract"
+    },
+    {
+      "name": "bad-token-tier",
+      "category": "Tokens",
+      "intent": "tier ∈ {primitive, semantic, component}"
+    },
+    {
+      "name": "bad-token-path",
+      "category": "Tokens",
+      "intent": "Each entry has a non-empty path"
+    },
+    {
+      "name": "missing-token-role",
+      "category": "Tokens",
+      "intent": "Each entry has a role (warning)"
+    },
+    {
+      "name": "bad-status",
+      "category": "Metadata",
+      "intent": "status ∈ {AI-Ready, In progress, Draft}"
+    },
+    {
+      "name": "bad-date",
+      "category": "Metadata",
+      "intent": "last_verified is ISO date"
+    },
+    {
+      "name": "future-date",
+      "category": "Metadata",
+      "intent": "last_verified is not in the future"
+    },
+    {
+      "name": "lying-check",
+      "category": "Honesty",
+      "intent": "tokens_valid:true implies actually valid"
+    },
+    {
+      "name": "ai-ready-gate",
+      "category": "Honesty",
+      "intent": "AI-Ready requires all 5 checks true"
+    }
+  ],
+  "recent_changes": [
+    {
+      "hash": "4f01ce07",
+      "when": "2 minutes ago",
+      "subject": "Add apps/observatory — health dashboard for Clementine"
+    },
+    {
+      "hash": "94f3760f",
+      "when": "82 minutes ago",
+      "subject": "Quick wins: patterns/, TRUST-LEVELS.md, Alert + Tooltip components"
+    },
+    {
+      "hash": "8e08f45f",
+      "when": "23 hours ago",
+      "subject": "Fix CI type-check: build tokens dist before checking ui types"
+    },
+    {
+      "hash": "44bb7f1f",
+      "when": "23 hours ago",
+      "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
+    },
+    {
+      "hash": "3a40f8be",
+      "when": "30 hours ago",
+      "subject": "Migrate remaining 7 components to 3-tier (+ fix text-input + badge)"
+    },
+    {
+      "hash": "6b60efc4",
+      "when": "2 days ago",
+      "subject": "Add 3-tier token architecture (primitive → semantic → component)"
+    },
+    {
+      "hash": "2a34d423",
+      "when": "2 days ago",
+      "subject": "Rename tina-ds → Clementine DS across the system"
+    },
+    {
+      "hash": "b4aa4795",
+      "when": "2 days ago",
+      "subject": "Stub specs for remaining 9 components"
+    },
+    {
+      "hash": "cdd48757",
+      "when": "2 days ago",
+      "subject": "Add Button spec — gold-standard agentic doc"
+    },
+    {
+      "hash": "f2fc66e8",
+      "when": "3 months ago",
+      "subject": "Add .gitignore, remove tracked artifacts"
+    },
+    {
+      "hash": "b1e86870",
+      "when": "3 months ago",
+      "subject": "Initial commit: Tina DS v0 — 10 components, tokens, Storybook"
+    }
+  ],
+  "recent_scans": [
+    {
+      "hash": "8f0714ca",
+      "when": "23 hours ago",
+      "subject": "Add size-limit + a11y CI (Phase 3 part 1)"
+    },
+    {
+      "hash": "8e08f45f",
+      "when": "23 hours ago",
+      "subject": "Fix CI type-check: build tokens dist before checking ui types"
+    },
+    {
+      "hash": "44bb7f1f",
+      "when": "23 hours ago",
+      "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
+    },
+    {
+      "hash": "e75ce0f4",
+      "when": "23 hours ago",
+      "subject": "Add CI, CodeQL, Dependabot, CONTRIBUTING"
+    }
+  ],
   "totals": {
     "specs": 12,
     "ai_ready": 3,

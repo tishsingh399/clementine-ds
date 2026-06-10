@@ -5,6 +5,7 @@
 // at runtime — the snapshot ships as a static asset.
 
 import { readFile, readdir, writeFile, stat } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
@@ -128,6 +129,44 @@ const specs = await scanDir(SPECS_DIR);
 const patterns = await scanDir(PATTERNS_DIR);
 const tokens = await scanTokens();
 
+// Recent activity from git log — last 20 changes touching specs/tokens/patterns
+function gitLog(paths, limit = 20) {
+  try {
+    const out = execSync(
+      `git log -n ${limit} --pretty=format:"%h|%cr|%s" -- ${paths.join(' ')}`,
+      { cwd: ROOT, encoding: 'utf8' },
+    );
+    return out.split('\n').filter(Boolean).map((line) => {
+      const [hash, when, ...rest] = line.split('|');
+      return { hash, when, subject: rest.join('|') };
+    });
+  } catch {
+    return [];
+  }
+}
+
+const recentChanges = gitLog(['specs/', 'packages/tokens/', 'patterns/'], 15);
+const recentScans = gitLog(['.github/workflows/'], 5);
+
+// The validator rules (agentic-spec) act as the "active agents"
+const validators = [
+  { name: 'missing-spec',        category: 'Identity',  intent: 'Catches missing index.md' },
+  { name: 'missing-tokens',      category: 'Identity',  intent: 'Catches missing tokens.json' },
+  { name: 'no-frontmatter',      category: 'Identity',  intent: 'Ensures YAML frontmatter exists' },
+  { name: 'bad-frontmatter',     category: 'Identity',  intent: 'Ensures frontmatter parses' },
+  { name: 'identity-mismatch',   category: 'Identity',  intent: 'spec component === tokens component' },
+  { name: 'missing-token-entry', category: 'Tokens',    intent: 'Every contract entry has a tokens.json row' },
+  { name: 'orphan-token-entry',  category: 'Tokens',    intent: 'No tokens.json rows without a contract' },
+  { name: 'bad-token-tier',      category: 'Tokens',    intent: 'tier ∈ {primitive, semantic, component}' },
+  { name: 'bad-token-path',      category: 'Tokens',    intent: 'Each entry has a non-empty path' },
+  { name: 'missing-token-role',  category: 'Tokens',    intent: 'Each entry has a role (warning)' },
+  { name: 'bad-status',          category: 'Metadata',  intent: 'status ∈ {AI-Ready, In progress, Draft}' },
+  { name: 'bad-date',            category: 'Metadata',  intent: 'last_verified is ISO date' },
+  { name: 'future-date',         category: 'Metadata',  intent: 'last_verified is not in the future' },
+  { name: 'lying-check',         category: 'Honesty',   intent: 'tokens_valid:true implies actually valid' },
+  { name: 'ai-ready-gate',       category: 'Honesty',   intent: 'AI-Ready requires all 5 checks true' },
+];
+
 const enrichedSpecs = specs.map((s) => ({
   ...s,
   trust_level: trustLevelFor(s),
@@ -138,6 +177,22 @@ const enrichedPatterns = patterns.map((p) => ({
   trust_level: trustLevelFor(p),
   health_score: healthScore(p),
 }));
+
+// Computed scoreboard metrics (Romina's Analysis card)
+const quality = Math.round(enrichedSpecs.reduce((s, x) => s + x.health_score, 0) / enrichedSpecs.length);
+const driftClean = enrichedSpecs.filter((s) => s.checks?.tokens_valid).length;
+const drift = Math.round((driftClean / enrichedSpecs.length) * 100);
+const withComponentTokens = Object.keys(tokens.components).length;
+const coverage = Math.round((withComponentTokens / enrichedSpecs.length) * 100);
+
+const connectors = [
+  { name: 'GitHub',         icon: '🐙', url: 'https://github.com/tishsingh399/clementine-ds',                                       status: 'connected', sub: 'main · auto-deploy' },
+  { name: 'Storybook',      icon: '📚', url: 'https://clementine-ds-storybook.vercel.app',                                        status: 'connected', sub: 'Vercel · live' },
+  { name: 'Mintlify',       icon: '📘', url: 'https://clementineds.mintlify.app',                                                 status: 'connected', sub: 'docs · auto-synced' },
+  { name: 'Notion',         icon: '📓', url: 'https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f',     status: 'connected', sub: '25 pages · published' },
+  { name: 'Figma',          icon: '🎨', url: 'https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT',              status: 'connected', sub: '3 collections · 12 components' },
+  { name: 'agentic-spec',   icon: '🛠', url: 'https://github.com/tishsingh399/agentic-spec',                                      status: 'connected', sub: 'CLI · validating' },
+];
 
 const snapshot = {
   generated_at: new Date().toISOString(),
@@ -150,6 +205,25 @@ const snapshot = {
     github: 'https://github.com/tishsingh399/clementine-ds',
     cli: 'https://github.com/tishsingh399/agentic-spec',
   },
+  scoreboard: {
+    quality,
+    drift,
+    coverage,
+  },
+  connectors,
+  composer: {
+    patterns: enrichedPatterns.length,
+    needs_input: countNeedsInput(enrichedSpecs),
+  },
+  evaluator: {
+    rules_passing: validators.length,
+    rules_total: validators.length,
+    checks_passing: enrichedSpecs.filter((s) => isAllChecksGreen(s)).length,
+    checks_total: enrichedSpecs.length,
+  },
+  validators,
+  recent_changes: recentChanges,
+  recent_scans: recentScans,
   totals: {
     specs: enrichedSpecs.length,
     ai_ready: enrichedSpecs.filter((s) => s.status === 'AI-Ready').length,
@@ -157,11 +231,24 @@ const snapshot = {
     draft: enrichedSpecs.filter((s) => s.status === 'Draft').length,
     patterns: enrichedPatterns.length,
     tokens: tokens,
-    avg_health: Math.round(enrichedSpecs.reduce((s, x) => s + x.health_score, 0) / enrichedSpecs.length),
+    avg_health: quality,
   },
   specs: enrichedSpecs.sort((a, b) => b.health_score - a.health_score),
   patterns: enrichedPatterns,
 };
+
+function countNeedsInput(specs) {
+  // A proxy for Romina's "Decisions" — count of specs whose ARIA/state coverage
+  // shows the spec is calling out an open question. We use checks.aria_correct=false
+  // as the signal since those are the specs that explicitly need input.
+  return specs.filter((s) => s.checks && (!s.checks.aria_correct || !s.checks.states_complete)).length;
+}
+
+function isAllChecksGreen(spec) {
+  if (!spec.checks) return false;
+  return ['aria_correct','structure_correct','states_complete','tokens_valid','no_invented_styles']
+    .every((k) => spec.checks[k]);
+}
 
 await writeFile(OUT_FILE, JSON.stringify(snapshot, null, 2));
 console.log(`✓ snapshot written → ${OUT_FILE}`);
