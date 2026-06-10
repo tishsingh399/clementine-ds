@@ -1,5 +1,6 @@
 # clementine-ds — an agentic design system
 
+[![Docs](https://img.shields.io/badge/Docs-Mintlify-22d3ee?logo=mintlify&logoColor=white)](https://clementineds.mintlify.app)
 [![Storybook](https://img.shields.io/badge/Storybook-Live-ff4785?logo=storybook&logoColor=white)](https://clementine-ds-storybook.vercel.app)
 [![CI](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml)
@@ -19,6 +20,7 @@ A small, opinionated React design system that ships with **machine-readable spec
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
 | 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 10 components running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
+| 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
 | 📐 Figma | [Tina-DS Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components, spec board |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
