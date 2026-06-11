@@ -1,0 +1,10 @@
+{
+  "artifact": {
+    "bg":        { "$value": "{surface.elevated}", "$type": "color" },
+    "header-bg": { "$value": "{surface.subtle}",   "$type": "color" },
+    "border":    { "$value": "{border.default}",   "$type": "color" },
+    "title":     { "$value": "{text.primary}",     "$type": "color" },
+    "kind":      { "$value": "{text.tertiary}",    "$type": "color" },
+    "radius":    { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

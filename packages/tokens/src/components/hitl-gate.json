@@ -1,0 +1,12 @@
+{
+  "hitl": {
+    "bg":                     { "$value": "{feedback.warning-subtle}", "$type": "color" },
+    "border":                 { "$value": "{feedback.warning}",        "$type": "color" },
+    "title":                  { "$value": "{text.primary}",            "$type": "color" },
+    "body":                   { "$value": "{text.secondary}",          "$type": "color" },
+    "approve-bg":             { "$value": "{action.primary}",          "$type": "color" },
+    "approve-destructive-bg": { "$value": "{action.destructive}",      "$type": "color" },
+    "deny-bg":                { "$value": "{surface.subtle}",          "$type": "color" },
+    "radius":                 { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

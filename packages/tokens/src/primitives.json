@@ -105,8 +105,13 @@
     }
   },
   "motion": {
-    "duration-fast":   { "$value": "100ms", "$type": "duration" },
-    "duration-normal": { "$value": "200ms", "$type": "duration" },
-    "duration-slow":   { "$value": "300ms", "$type": "duration" }
+    "duration-instant": { "$value": "0ms",    "$type": "duration" },
+    "duration-fast":    { "$value": "100ms",  "$type": "duration" },
+    "duration-normal":  { "$value": "200ms",  "$type": "duration" },
+    "duration-slow":    { "$value": "300ms",  "$type": "duration" },
+    "duration-stream":  { "$value": "1200ms", "$type": "duration" },
+    "easing-standard":   { "$value": "cubic-bezier(0.2, 0, 0, 1)", "$type": "cubicBezier" },
+    "easing-decelerate": { "$value": "cubic-bezier(0, 0, 0, 1)",   "$type": "cubicBezier" },
+    "easing-accelerate": { "$value": "cubic-bezier(0.3, 0, 1, 1)", "$type": "cubicBezier" }
   }
 }

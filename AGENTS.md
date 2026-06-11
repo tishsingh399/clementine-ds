@@ -1,8 +1,10 @@
 # AGENTS.md — Clementine DS
 
-> **Companion docs:** [Mintlify](https://clementineds.mintlify.app) · [Live Storybook](https://clementine-ds-storybook.vercel.app) · [Notion · Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) · [Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) · [agentic-spec CLI](https://github.com/tishsingh399/agentic-spec)
+> **Companion docs:** [Mintlify](https://clementineds.mintlify.app) · [Live Storybook](https://clementine-ds-storybook.vercel.app) · [Notion · Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) · [Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) · [agentic-spec CLI](https://github.com/tishsingh399/agentic-spec)
 
 Clementine is a design system built for AI agents to read, extend, and operate on safely.
+
+> **The big picture:** Clementine is organized as **9 trays** (foundations, components, patterns, AI surfaces, behavior/state, content/language, trust/governance, feedback/eval loop, kit governance). See [AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md) for the full map, status per tray, and the build roadmap.
 
 It ships three things instead of the usual two:
 

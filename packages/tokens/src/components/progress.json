@@ -1,0 +1,10 @@
+{
+  "progress": {
+    "track":       { "$value": "{surface.subtle}",    "$type": "color" },
+    "bar":         { "$value": "{action.primary}",    "$type": "color" },
+    "bar-success": { "$value": "{feedback.success}",  "$type": "color" },
+    "bar-warning": { "$value": "{feedback.warning}",  "$type": "color" },
+    "bar-error":   { "$value": "{feedback.error}",    "$type": "color" },
+    "radius":      { "$value": "{radius.xl}", "$type": "dimension" }
+  }
+}

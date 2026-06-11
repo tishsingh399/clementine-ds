@@ -1,0 +1,14 @@
+{
+  "accordion": {
+    "bg":         { "$value": "{surface.default}", "$type": "color" },
+    "bg-hover":   { "$value": "{surface.subtle}",  "$type": "color" },
+    "border":     { "$value": "{border.default}",  "$type": "color" },
+    "fg": {
+      "label":    { "$value": "{text.primary}",   "$type": "color" },
+      "content":  { "$value": "{text.secondary}", "$type": "color" },
+      "chevron":  { "$value": "{text.secondary}", "$type": "color" }
+    },
+    "border-focus": { "$value": "{focus.ring}", "$type": "color" },
+    "radius":     { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

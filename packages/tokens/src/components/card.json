@@ -1,0 +1,13 @@
+{
+  "card": {
+    "bg":        { "$value": "{surface.elevated}", "$type": "color" },
+    "bg-subtle": { "$value": "{surface.subtle}",   "$type": "color" },
+    "border":    { "$value": "{border.default}",   "$type": "color" },
+    "fg": {
+      "title":   { "$value": "{text.primary}",   "$type": "color" },
+      "body":    { "$value": "{text.secondary}", "$type": "color" }
+    },
+    "radius":    { "$value": "{radius.lg}", "$type": "dimension" },
+    "shadow":    { "$value": "{shadow.sm}", "$type": "shadow" }
+  }
+}

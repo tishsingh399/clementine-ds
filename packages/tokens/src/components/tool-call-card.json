@@ -1,0 +1,15 @@
+{
+  "tool-call": {
+    "bg":      { "$value": "{surface.elevated}", "$type": "color" },
+    "border":  { "$value": "{border.default}",   "$type": "color" },
+    "name":    { "$value": "{text.primary}",     "$type": "color" },
+    "args-bg": { "$value": "{surface.subtle}",   "$type": "color" },
+    "status": {
+      "pending": { "$value": "{text.tertiary}",   "$type": "color" },
+      "running": { "$value": "{action.primary}",  "$type": "color" },
+      "success": { "$value": "{feedback.success}","$type": "color" },
+      "error":   { "$value": "{feedback.error}",  "$type": "color" }
+    },
+    "radius":  { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

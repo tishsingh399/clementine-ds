@@ -12,16 +12,16 @@
 
 A small, opinionated React design system that ships with **machine-readable specs** for every component. Built so AI agents (Claude, Cursor, Copilot, MCP servers) can read the contract, validate against it, and extend the system without hallucinating tokens or breaking accessibility.
 
-> Most design systems ship code + Storybook and hope documentation keeps up. This one ships a third artifact — `/specs/<component>/` — that an agent can load and treat as the source of truth. See [AGENTS.md](./AGENTS.md) for the full architecture.
+> Most design systems ship code + Storybook and hope documentation keeps up. This one ships a third artifact — `/specs/<component>/` — that an agent can load and treat as the source of truth. See [AGENTS.md](./AGENTS.md) for the contract, and [AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md) for the 9-tray AI-ready roadmap (foundations → components → AI surfaces → behavior → trust → eval loop).
 
 ## Where this system lives
 
 | Surface | Where | What it holds |
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
-| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 10 components running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
+| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 31 components (UI + AI surfaces) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
 | 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
-| 📐 Figma | [Tina-DS Figma file](https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components, spec board |
+| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) | 3 variable collections (Primitives / Semantic Light+Dark / Components), 10 components rendered — **code has expanded to 31; Figma re-sync is a pending wave** |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | 📄 Long-form docs (GitHub) | [`docs/readme/`](./docs/readme) | 20 source pages — getting-started, architecture, tokens, components. GitHub renders with TOC + syntax highlighting. |
@@ -58,7 +58,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 | Package | What |
 |---|---|
 | [`packages/tokens`](./packages/tokens) | Style Dictionary source: primitives → semantic-light → semantic-dark |
-| [`packages/ui`](./packages/ui) | 10 React components, Mantine-backed |
+| [`packages/ui`](./packages/ui) | 31 React components (UI + AI surfaces) + 3 behavior hooks, Mantine-backed |
 | [`apps/storybook`](./apps/storybook) | Live component sandbox |
 | [`specs/`](./specs) | ⭐ Per-component agentic specs (frontmatter contract + closed token list) |
 | [`_templates/`](./_templates) | Scaffolding for new specs |
@@ -66,22 +66,17 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 ## Components
 
-| Component | Status | Spec |
-|---|---|---|
-| Alert | AI-Ready | [specs/alert](./specs/alert/index.md) |
-| Tooltip | AI-Ready | [specs/tooltip](./specs/tooltip/index.md) |
-| Button | AI-Ready | [specs/button](./specs/button/index.md) |
-| Badge | Draft | [specs/badge](./specs/badge/index.md) |
-| Checkbox | Draft | [specs/checkbox](./specs/checkbox/index.md) |
-| Modal | Draft | [specs/modal](./specs/modal/index.md) |
-| Radio | Draft | [specs/radio](./specs/radio/index.md) |
-| Select | Draft | [specs/select](./specs/select/index.md) |
-| Switch | Draft | [specs/switch](./specs/switch/index.md) |
-| Tabs | Draft | [specs/tabs](./specs/tabs/index.md) |
-| TextInput | Draft | [specs/text-input](./specs/text-input/index.md) |
-| Textarea | Draft | [specs/textarea](./specs/textarea/index.md) |
+**31 components across the trays** — full map + per-tray status in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)**.
 
-`AI-Ready` means: every interaction state has a Storybook story, every visual value comes from a declared token, and the spec has been reconciled with the code on `last_verified`.
+**Tray 2 · Core (21):** Button · Badge · Checkbox · Radio · Select · Switch · Tabs · TextInput · Textarea · Modal · [Alert](./specs/alert/index.md) · [Tooltip](./specs/tooltip/index.md) · [Accordion](./specs/accordion/index.md) · [Avatar](./specs/avatar/index.md) · [Card](./specs/card/index.md) · [Menu](./specs/menu/index.md) · [Drawer](./specs/drawer/index.md) · [Autocomplete](./specs/autocomplete/index.md) · [Pagination](./specs/pagination/index.md) · [Progress](./specs/progress/index.md) · [Skeleton](./specs/skeleton/index.md)
+
+**Tray 4 · AI surfaces (8):** [Message](./specs/ai/message/index.md) · [Composer](./specs/ai/composer/index.md) · [ReasoningTrace](./specs/ai/reasoning-trace/index.md) · [ToolCallCard](./specs/ai/tool-call-card/index.md) · [HITLGate](./specs/ai/hitl-gate/index.md) · [CitationChip](./specs/ai/citation-chip/index.md) · [StreamingText](./specs/ai/streaming-text/index.md) · [ArtifactFrame](./specs/ai/artifact-frame/index.md)
+
+**Tray 7 · Trust (1):** [DisclosureBadge](./specs/trust/disclosure-badge/index.md)   ·   **Tray 8 · Feedback (1):** [FeedbackControl](./specs/feedback/feedback-control/index.md)
+
+**Tray 5 · Behavior hooks (3):** `useStreaming` · `useInterruptible` · `useRetry`
+
+`AI-Ready` means all four artifacts are reconciled on `last_verified`: component-tier tokens, a `specs/<name>/` contract, a Mantine-backed implementation, and a Storybook story per interaction state.
 
 ## Quick start
 
