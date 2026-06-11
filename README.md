@@ -19,9 +19,9 @@ A small, opinionated React design system that ships with **machine-readable spec
 | Surface | Where | What it holds |
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
-| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 104 components (UI + AI surfaces + enterprise) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
+| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 114 components (UI + AI surfaces + enterprise) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
 | 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
-| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) | 3 variable collections; **all 104 components' tokens synced as variables (535 component vars, cascade-aliased, 1:1 with code)** + **all 104 rendered as real components** (original 10 + two **"AI-ready trays"** boards holding 53 and the newest 41 — foundation finishers, AI long-tail, enterprise), every paint bound to a Tier-3 variable. |
+| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) | 3 variable collections; **all 114 components' tokens synced as variables (571 component vars, cascade-aliased, 1:1 with code)** + **all 114 rendered as real components**, organized across 6 category pages — Actions & Inputs · Containers & Navigation · Display & Feedback · AI Surfaces · Enterprise · Trust & Feedback — plus a Cover page (token cascade, core components, spec). Every paint bound to a Tier-3 variable. |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | 📄 Long-form docs (GitHub) | [`docs/readme/`](./docs/readme) | 20 source pages — getting-started, architecture, tokens, components. GitHub renders with TOC + syntax highlighting. |
@@ -37,7 +37,7 @@ Clementine lives in code, in Figma, and as machine-readable specs. The cascade i
 
 ![Figma · 3-tier token cascade](./docs/figma/overview.png)
 
-The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **87 primitives, 32 semantic tokens, and 535 component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
+The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **87 primitives, 32 semantic tokens, and 571 component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
 
 ### Components board
 
@@ -58,7 +58,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 | Package | What |
 |---|---|
 | [`packages/tokens`](./packages/tokens) | Style Dictionary source: primitives → semantic-light → semantic-dark |
-| [`packages/ui`](./packages/ui) | 104 React components (UI + AI surfaces + enterprise) + 3 behavior hooks, Mantine-backed |
+| [`packages/ui`](./packages/ui) | 114 React components (UI + AI surfaces + enterprise) + 3 behavior hooks, Mantine-backed |
 | [`apps/storybook`](./apps/storybook) | Live component sandbox |
 | [`specs/`](./specs) | ⭐ Per-component agentic specs (frontmatter contract + closed token list) |
 | [`_templates/`](./_templates) | Scaffolding for new specs |
@@ -66,12 +66,12 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 ## Components
 
-**104 components across the trays** — full map + per-component specs in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)** and [`specs/`](./specs). Every one ships tokens + spec + story + guidance.
+**114 components across the trays** — full map + per-component specs in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)** and [`specs/`](./specs). Every one ships tokens + spec + story + guidance.
 
-**Tray 2 · Components (60)**
-- *Actions & inputs (24):* Button · TextInput · Textarea · Select · Autocomplete · NumberInput · PasswordInput · PinInput · FileInput · MultiSelect · TagsInput · Checkbox · Radio · Switch · SegmentedControl · Slider · Rating · Fieldset · IconButton · ButtonGroup · SplitButton · ColorInput · SearchField · Fab
+**Tray 2 · Components (70)**
+- *Actions & inputs (28):* Button · TextInput · Textarea · Select · Autocomplete · NumberInput · PasswordInput · PinInput · FileInput · MultiSelect · TagsInput · Checkbox · Radio · Switch · SegmentedControl · Slider · Rating · Fieldset · IconButton · ButtonGroup · SplitButton · ColorInput · SearchField · Fab · FieldLabel · HelperText · ValidationMessage · CharacterCounter
 - *Containers & nav (12):* Card · Accordion · Drawer · Modal · Tabs · Menu · Popover · HoverCard · Breadcrumbs · Pagination · Stepper · Divider
-- *Display & feedback (24):* Badge · Alert · Tooltip · Avatar · Chip · Indicator · Loader · Progress · Skeleton · Notification · Table · Timeline · Spoiler · ThemeIcon · Code · Kbd · Anchor · Pill · List · Tree · Image · StatusDot · Stat · DescriptionList
+- *Display & feedback (30):* Badge · Alert · Tooltip · Avatar · Chip · Indicator · Loader · Progress · Skeleton · Notification · Table · Timeline · Spoiler · ThemeIcon · Code · Kbd · Anchor · Pill · List · Tree · Image · StatusDot · Stat · DescriptionList · EmptyState · ErrorState · SuccessState · LoadingState · InlineMessage · ProgressCircle
 
 **Enterprise layer (14):** BulkActionBar · FacetedFilter · SavedViews · ExportMenu · NotificationCenter · PresenceIndicator · ActivityFeed · CommentThread · Mention · RbacMatrix · AuditLogViewer · SessionDeviceList · RolePicker · MaintenanceBanner
 
