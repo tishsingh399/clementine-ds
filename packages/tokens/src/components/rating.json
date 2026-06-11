@@ -1,0 +1,12 @@
+{
+  "rating": {
+    "symbol-empty": {
+      "$value": "{border.strong}",
+      "$type": "color"
+    },
+    "symbol-filled": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    }
+  }
+}

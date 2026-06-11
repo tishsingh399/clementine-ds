@@ -1,0 +1,36 @@
+{
+  "tags-input": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.strong}",
+      "$type": "color"
+    },
+    "border-focus": {
+      "$value": "{focus.ring}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "placeholder": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "pill-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "pill-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.md}",
+      "$type": "dimension"
+    }
+  }
+}

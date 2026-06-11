@@ -62,5 +62,16 @@ export { ThemeIcon, type ThemeIconProps } from './components/ThemeIcon';
 export { Code, type CodeProps } from './components/Code';
 export { Kbd, type KbdProps } from './components/Kbd';
 
+// Form inputs (Wave B)
+export { NumberInput, type NumberInputProps } from './components/NumberInput';
+export { PasswordInput, type PasswordInputProps } from './components/PasswordInput';
+export { PinInput, type PinInputProps } from './components/PinInput';
+export { FileInput, type FileInputProps } from './components/FileInput';
+export { MultiSelect, type MultiSelectProps } from './components/MultiSelect';
+export { TagsInput, type TagsInputProps } from './components/TagsInput';
+export { Slider, type SliderProps } from './components/Slider';
+export { Rating, type RatingProps } from './components/Rating';
+export { Fieldset, type FieldsetProps } from './components/Fieldset';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';
