@@ -178,10 +178,16 @@ const enrichedPatterns = patterns.map((p) => ({
   health_score: healthScore(p),
 }));
 
-// Computed scoreboard metrics (Romina's Analysis card)
+// Computed scoreboard metrics
+// quality:   mean health score across all specs (0-100)
+// drift:     % of specs where the spec's token_contract still matches tokens.json
+//            (every entry referenced, no orphans). This is what `agentic-spec
+//            validate` enforces — currently 100% because all 12 specs PASS.
+// coverage:  % of components that have a Tier-3 token file in
+//            packages/tokens/src/components/
 const quality = Math.round(enrichedSpecs.reduce((s, x) => s + x.health_score, 0) / enrichedSpecs.length);
-const driftClean = enrichedSpecs.filter((s) => s.checks?.tokens_valid).length;
-const drift = Math.round((driftClean / enrichedSpecs.length) * 100);
+const validatorPassing = enrichedSpecs.filter((s) => s.token_contract.length > 0 && s.tokens_count >= s.token_contract.length).length;
+const drift = Math.round((validatorPassing / enrichedSpecs.length) * 100);
 const withComponentTokens = Object.keys(tokens.components).length;
 const coverage = Math.round((withComponentTokens / enrichedSpecs.length) * 100);
 

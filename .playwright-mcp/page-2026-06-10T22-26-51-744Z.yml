@@ -1,0 +1,393 @@
+- generic [ref=e3]:
+  - complementary "Observatory navigation" [ref=e4]:
+    - link "DS DS Observatory Clementine" [ref=e5] [cursor=pointer]:
+      - /url: https://github.com/tishsingh399/clementine-ds
+      - generic [ref=e6]: DS
+      - generic [ref=e7]:
+        - strong [ref=e8]: DS Observatory
+        - generic [ref=e9]: Clementine
+    - button "Production agentic-spec ⌄" [ref=e10] [cursor=pointer]:
+      - generic [ref=e12]:
+        - strong [ref=e13]: Production
+        - generic [ref=e14]: agentic-spec
+      - generic [ref=e15]: ⌄
+    - navigation [ref=e16]:
+      - link "Overview" [ref=e17] [cursor=pointer]:
+        - /url: "#overview"
+        - generic [ref=e18]: OV
+        - text: Overview
+      - link "Control plane" [ref=e19] [cursor=pointer]:
+        - /url: "#control-plane"
+        - generic [ref=e20]: CO
+        - text: Control plane
+      - link "Agents" [ref=e21] [cursor=pointer]:
+        - /url: "#agents"
+        - generic [ref=e22]: AG
+        - text: Agents
+      - link "Inbox" [ref=e23] [cursor=pointer]:
+        - /url: "#inbox"
+        - generic [ref=e24]: IN
+        - text: Inbox
+      - link "Autonomy" [ref=e25] [cursor=pointer]:
+        - /url: "#autonomy"
+        - generic [ref=e26]: AU
+        - text: Autonomy
+      - link "Tokens" [ref=e27] [cursor=pointer]:
+        - /url: "#tokens"
+        - generic [ref=e28]: TO
+        - text: Tokens
+      - link "Components" [ref=e29] [cursor=pointer]:
+        - /url: "#components"
+        - generic [ref=e30]: CO
+        - text: Components
+      - link "Impact" [ref=e31] [cursor=pointer]:
+        - /url: "#impact"
+        - generic [ref=e32]: IM
+        - text: Impact
+      - link "Quality" [ref=e33] [cursor=pointer]:
+        - /url: "#quality"
+        - generic [ref=e34]: QU
+        - text: Quality
+      - link "Key findings" [ref=e35] [cursor=pointer]:
+        - /url: "#key-findings"
+        - generic [ref=e36]: KE
+        - text: Key findings
+      - link "Economics" [ref=e37] [cursor=pointer]:
+        - /url: "#economics"
+        - generic [ref=e38]: EC
+        - text: Economics
+      - link "AI learning" [ref=e39] [cursor=pointer]:
+        - /url: "#ai-learning"
+        - generic [ref=e40]: AI
+        - text: AI learning
+      - link "Agent activity" [ref=e41] [cursor=pointer]:
+        - /url: "#agent-activity"
+        - generic [ref=e42]: AG
+        - text: Agent activity
+      - link "Composer" [ref=e43] [cursor=pointer]:
+        - /url: "#composer"
+        - generic [ref=e44]: CO
+        - text: Composer
+    - generic [ref=e45]:
+      - generic [ref=e46]: Trust L3 intern
+      - generic [ref=e47]:
+        - generic [ref=e48]: Components
+        - strong [ref=e49]: "12"
+      - generic [ref=e50]:
+        - generic [ref=e51]: Tokens
+        - strong [ref=e52]: "236"
+  - main [ref=e53]:
+    - region "System summary" [ref=e54]:
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: Agentic design system
+        - heading "Control plane for Clementine DS" [level=1] [ref=e57]
+      - generic [ref=e58]:
+        - link "Storybook" [ref=e59] [cursor=pointer]:
+          - /url: https://clementine-ds-storybook.vercel.app
+        - link "Docs" [ref=e60] [cursor=pointer]:
+          - /url: https://clementineds.mintlify.app
+        - link "Figma source" [ref=e61] [cursor=pointer]:
+          - /url: https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - paragraph [ref=e64]: Self-healing scoreboard
+        - heading "Watch, audit, compose, document, learn." [level=2] [ref=e65]
+        - paragraph [ref=e66]: Observatory reads the same specs, token contracts, and source paths that an AI agent uses. When the system drifts, the dashboard should show where the loop needs human input.
+      - generic "Health metrics" [ref=e67]:
+        - article [ref=e68]:
+          - generic [ref=e69]: Quality
+          - strong [ref=e70]: 64%
+          - generic [ref=e71]: stable
+        - article [ref=e72]:
+          - generic [ref=e73]: Drift risk
+          - strong [ref=e74]: 25%
+          - generic [ref=e75]: stable
+        - article [ref=e76]:
+          - generic [ref=e77]: Coverage
+          - strong [ref=e78]: 100%
+          - generic [ref=e79]: 3/12 gates
+        - article [ref=e80]:
+          - generic [ref=e81]: AI-ready
+          - strong [ref=e82]: 25%
+          - generic [ref=e83]: 3/12 specs
+    - region "Agentic architecture" [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]: The self-healing loop
+        - generic [ref=e87]:
+          - generic [ref=e88]: Plan
+          - generic [ref=e89]: Execute
+          - generic [ref=e90]: Monitor
+          - generic [ref=e91]: Analyze
+          - generic [ref=e92]: Learn
+          - generic [ref=e93]:
+            - strong [ref=e95]: Knowledge graph
+            - generic [ref=e96]: Token taxonomy
+            - generic [ref=e97]: Governance rules
+            - generic [ref=e98]: Learning history
+          - generic [ref=e100]: Signals
+      - generic [ref=e101]:
+        - generic [ref=e102]: Agentic DS stack
+        - generic [ref=e103]:
+          - generic [ref=e104]: Agentic DS
+          - generic [ref=e105]: Agent orchestration
+          - generic [ref=e106]: Platform
+          - generic [ref=e107]: Locale
+          - generic [ref=e108]: Personalization
+          - generic [ref=e109]: Intent
+        - generic [ref=e110]:
+          - generic [ref=e111]: Components
+          - generic [ref=e112]: Design tokens
+          - generic [ref=e113]: Brand themes
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - region "Active connectors" [ref=e116]:
+          - generic [ref=e117]:
+            - heading "Active connectors" [level=2] [ref=e118]
+            - link "View all" [ref=e119] [cursor=pointer]:
+              - /url: https://github.com/tishsingh399/clementine-ds
+          - generic [ref=e120]:
+            - link "GitHub main · auto-deploy" [ref=e121] [cursor=pointer]:
+              - /url: https://github.com/tishsingh399/clementine-ds
+              - generic [ref=e122]: GI
+              - strong [ref=e123]: GitHub
+              - generic [ref=e124]: main · auto-deploy
+            - link "Storybook Vercel · live" [ref=e125] [cursor=pointer]:
+              - /url: https://clementine-ds-storybook.vercel.app
+              - generic [ref=e126]: ST
+              - strong [ref=e127]: Storybook
+              - generic [ref=e128]: Vercel · live
+            - link "Mintlify docs · auto-synced" [ref=e129] [cursor=pointer]:
+              - /url: https://clementineds.mintlify.app
+              - generic [ref=e130]: MI
+              - strong [ref=e131]: Mintlify
+              - generic [ref=e132]: docs · auto-synced
+            - link "Notion 25 pages · published" [ref=e133] [cursor=pointer]:
+              - /url: https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f
+              - generic [ref=e134]: "NO"
+              - strong [ref=e135]: Notion
+              - generic [ref=e136]: 25 pages · published
+            - link "Figma 3 collections · 12 components" [ref=e137] [cursor=pointer]:
+              - /url: https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT
+              - generic [ref=e138]: FI
+              - strong [ref=e139]: Figma
+              - generic [ref=e140]: 3 collections · 12 components
+            - link "agentic-spec CLI · validating" [ref=e141] [cursor=pointer]:
+              - /url: https://github.com/tishsingh399/agentic-spec
+              - generic [ref=e142]: AG
+              - strong [ref=e143]: agentic-spec
+              - generic [ref=e144]: CLI · validating
+        - region "Active agents" [ref=e145]:
+          - generic [ref=e146]:
+            - heading "Active agents" [level=2] [ref=e147]
+            - button "Add agent" [ref=e148] [cursor=pointer]
+          - generic [ref=e149]:
+            - article [ref=e150]:
+              - generic [ref=e151]:
+                - strong [ref=e153]: Color contrast checker
+                - generic [ref=e154]: Identity
+              - generic [ref=e155]:
+                - generic "Health 72 out of 100" [ref=e156]
+                - generic [ref=e158]: 72%
+            - article [ref=e159]:
+              - generic [ref=e160]:
+                - strong [ref=e162]: Token drift detector
+                - generic [ref=e163]: Identity
+              - generic [ref=e164]:
+                - generic "Health 79 out of 100" [ref=e165]
+                - generic [ref=e167]: 79%
+            - article [ref=e168]:
+              - generic [ref=e169]:
+                - strong [ref=e171]: Unused token scanner
+                - generic [ref=e172]: Identity
+              - generic [ref=e173]:
+                - generic "Health 86 out of 100" [ref=e174]
+                - generic [ref=e176]: 86%
+            - article [ref=e177]:
+              - generic [ref=e178]:
+                - strong [ref=e180]: Naming convention enforcer
+                - generic [ref=e181]: Identity
+              - generic [ref=e182]:
+                - generic "Health 93 out of 100" [ref=e183]
+                - generic [ref=e185]: 93%
+            - article [ref=e186]:
+              - generic [ref=e187]:
+                - strong [ref=e189]: Shadow component detector
+                - generic [ref=e190]: Identity
+              - generic [ref=e191]:
+                - generic "Health 77 out of 100" [ref=e192]
+                - generic [ref=e194]: 77%
+            - article [ref=e195]:
+              - generic [ref=e196]:
+                - strong [ref=e198]: Deprecation manager
+                - generic [ref=e199]: Tokens
+              - generic [ref=e200]:
+                - generic "Health 84 out of 100" [ref=e201]
+                - generic [ref=e203]: 84%
+            - article [ref=e204]:
+              - generic [ref=e205]:
+                - strong [ref=e207]: A11y regression guard
+                - generic [ref=e208]: Tokens
+              - generic [ref=e209]:
+                - generic "Health 91 out of 100" [ref=e210]
+                - generic [ref=e212]: 91%
+            - article [ref=e213]:
+              - generic [ref=e214]:
+                - strong [ref=e216]: Component health monitor
+                - generic [ref=e217]: Tokens
+              - generic [ref=e218]:
+                - generic "Health 75 out of 100" [ref=e219]
+                - generic [ref=e221]: 75%
+            - article [ref=e222]:
+              - generic [ref=e223]:
+                - strong [ref=e225]: Visual regression scanner
+                - generic [ref=e226]: Tokens
+              - generic [ref=e227]:
+                - generic "Health 82 out of 100" [ref=e228]
+                - generic [ref=e230]: 82%
+            - article [ref=e231]:
+              - generic [ref=e232]:
+                - strong [ref=e234]: Bundle size watcher
+                - generic [ref=e235]: Tokens
+              - generic [ref=e236]:
+                - generic "Health 89 out of 100" [ref=e237]
+                - generic [ref=e239]: 89%
+        - region "Component readiness" [ref=e240]:
+          - generic [ref=e241]:
+            - heading "Component readiness" [level=2] [ref=e242]
+            - generic [ref=e243]: Trust 0-5
+          - generic [ref=e244]:
+            - article [ref=e245]:
+              - generic [ref=e246]:
+                - code [ref=e247]: button
+                - generic [ref=e248]: AI-Ready
+              - generic [ref=e249]:
+                - generic "Health 100 out of 100" [ref=e250]
+                - generic [ref=e252]: "100"
+              - generic [ref=e253]: L4
+              - generic [ref=e254]: 15 tokens
+            - article [ref=e255]:
+              - generic [ref=e256]:
+                - code [ref=e257]: alert
+                - generic [ref=e258]: AI-Ready
+              - generic [ref=e259]:
+                - generic "Health 91 out of 100" [ref=e260]
+                - generic [ref=e262]: "91"
+              - generic [ref=e263]: L4
+              - generic [ref=e264]: 15 tokens
+            - article [ref=e265]:
+              - generic [ref=e266]:
+                - code [ref=e267]: tooltip
+                - generic [ref=e268]: AI-Ready
+              - generic [ref=e269]:
+                - generic "Health 87 out of 100" [ref=e270]
+                - generic [ref=e272]: "87"
+              - generic [ref=e273]: L4
+              - generic [ref=e274]: 5 tokens
+            - article [ref=e275]:
+              - generic [ref=e276]:
+                - code [ref=e277]: checkbox
+                - generic [ref=e278]: Draft
+              - generic [ref=e279]:
+                - generic "Health 57 out of 100" [ref=e280]
+                - generic [ref=e282]: "57"
+              - generic [ref=e283]: L1
+              - generic [ref=e284]: 12 tokens
+            - article [ref=e285]:
+              - generic [ref=e286]:
+                - code [ref=e287]: select
+                - generic [ref=e288]: Draft
+              - generic [ref=e289]:
+                - generic "Health 57 out of 100" [ref=e290]
+                - generic [ref=e292]: "57"
+              - generic [ref=e293]: L1
+              - generic [ref=e294]: 15 tokens
+            - article [ref=e295]:
+              - generic [ref=e296]:
+                - code [ref=e297]: text-input
+                - generic [ref=e298]: Draft
+              - generic [ref=e299]:
+                - generic "Health 57 out of 100" [ref=e300]
+                - generic [ref=e302]: "57"
+              - generic [ref=e303]: L1
+              - generic [ref=e304]: 11 tokens
+            - article [ref=e305]:
+              - generic [ref=e306]:
+                - code [ref=e307]: textarea
+                - generic [ref=e308]: Draft
+              - generic [ref=e309]:
+                - generic "Health 57 out of 100" [ref=e310]
+                - generic [ref=e312]: "57"
+              - generic [ref=e313]: L1
+              - generic [ref=e314]: 10 tokens
+            - article [ref=e315]:
+              - generic [ref=e316]:
+                - code [ref=e317]: badge
+                - generic [ref=e318]: Draft
+              - generic [ref=e319]:
+                - generic "Health 56 out of 100" [ref=e320]
+                - generic [ref=e322]: "56"
+              - generic [ref=e323]: L1
+              - generic [ref=e324]: 10 tokens
+      - complementary [ref=e325]:
+        - region "Recent scans" [ref=e326]:
+          - generic [ref=e327]:
+            - heading "Recent scans" [level=2] [ref=e328]
+            - link "CLI" [ref=e329] [cursor=pointer]:
+              - /url: https://github.com/tishsingh399/agentic-spec
+          - generic [ref=e330]:
+            - article [ref=e331]:
+              - strong [ref=e332]: Add size-limit + a11y CI (Phase 3 part 1)
+              - generic [ref=e333]: 24 hours ago
+            - article [ref=e334]:
+              - strong [ref=e335]: "Fix CI type-check: build tokens dist before checking ui types"
+              - generic [ref=e336]: 25 hours ago
+            - article [ref=e337]:
+              - strong [ref=e338]: "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
+              - generic [ref=e339]: 25 hours ago
+            - article [ref=e340]:
+              - strong [ref=e341]: Add CI, CodeQL, Dependabot, CONTRIBUTING
+              - generic [ref=e342]: 25 hours ago
+        - region "Recent changes" [ref=e343]:
+          - generic [ref=e344]:
+            - heading "Recent changes" [level=2] [ref=e345]
+            - link "Git" [ref=e346] [cursor=pointer]:
+              - /url: https://github.com/tishsingh399/clementine-ds
+          - generic [ref=e347]:
+            - article [ref=e348]:
+              - strong [ref=e349]: Add apps/observatory — health dashboard for Clementine
+              - generic [ref=e350]: 2 hours ago
+            - article [ref=e351]:
+              - strong [ref=e352]: "Quick wins: patterns/, TRUST-LEVELS.md, Alert + Tooltip components"
+              - generic [ref=e353]: 3 hours ago
+            - article [ref=e354]:
+              - strong [ref=e355]: "Fix CI type-check: build tokens dist before checking ui types"
+              - generic [ref=e356]: 25 hours ago
+            - article [ref=e357]:
+              - strong [ref=e358]: "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
+              - generic [ref=e359]: 25 hours ago
+            - article [ref=e360]:
+              - strong [ref=e361]: Migrate remaining 7 components to 3-tier (+ fix text-input + badge)
+              - generic [ref=e362]: 31 hours ago
+            - article [ref=e363]:
+              - strong [ref=e364]: Add 3-tier token architecture (primitive → semantic → component)
+              - generic [ref=e365]: 2 days ago
+        - region "Token cascade" [ref=e366]:
+          - generic [ref=e367]:
+            - heading "Token cascade" [level=2] [ref=e368]
+            - generic [ref=e369]: 236 total
+          - generic [ref=e370]:
+            - article [ref=e371]:
+              - generic [ref=e372]: Primitive
+              - strong [ref=e373]: "82"
+              - generic [ref=e374]: Raw scales
+            - article [ref=e375]:
+              - generic [ref=e376]: Semantic
+              - strong [ref=e377]: "32"
+              - generic [ref=e378]: Intent layer
+            - article [ref=e379]:
+              - generic [ref=e380]: Component
+              - strong [ref=e381]: "122"
+              - generic [ref=e382]: Closed contracts
+    - generic [ref=e383]:
+      - generic [ref=e384]: Generated Jun 10, 2026, 4:26 PM
+      - generic [ref=e385]: tishsingh399/clementine-ds

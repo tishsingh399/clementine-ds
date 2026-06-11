@@ -11,250 +11,372 @@ interface Spec {
   token_contract: string[];
   interaction_states: string[];
   checks: Record<string, boolean>;
-  sources: Record<string, unknown>;
   patterns_used_in: string[];
   trust_level: number;
   health_score: number;
   tokens_count: number;
 }
 
-type Snap = typeof snapshot & { specs: Spec[]; patterns: Spec[] };
+interface Connector {
+  name: string;
+  icon: string;
+  url: string;
+  status: string;
+  sub: string;
+}
+
+interface Validator {
+  name: string;
+  category: string;
+  intent: string;
+}
+
+interface RecentEvent {
+  hash: string;
+  when: string;
+  subject: string;
+}
+
+type Snap = typeof snapshot & {
+  specs: Spec[];
+  patterns: Spec[];
+  connectors: Connector[];
+  validators: Validator[];
+  recent_changes: RecentEvent[];
+  recent_scans: RecentEvent[];
+  scoreboard: { quality: number; drift: number; coverage: number };
+  composer: { patterns: number; needs_input: number };
+  evaluator: { rules_passing: number; rules_total: number; checks_passing: number; checks_total: number };
+};
 const data = snapshot as unknown as Snap;
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleString('en-US', {
-    month: 'short', day: 'numeric', year: 'numeric',
-    hour: 'numeric', minute: 'numeric',
-  });
-}
+const NAV = [
+  { name: 'Overview',     icon: '01', href: '#overview',     active: true  },
+  { name: 'Connectors',   icon: '02', href: '#connectors',   active: false },
+  { name: 'Agents',       icon: '03', href: '#agents',       active: false },
+  { name: 'Components',   icon: '04', href: '#components',   active: false },
+  { name: 'Patterns',     icon: '05', href: '#patterns',     active: false },
+  { name: 'Tokens',       icon: '06', href: '#tokens',       active: false },
+  { name: 'Activity',     icon: '07', href: '#activity',     active: false },
+  { name: 'Architecture', icon: '08', href: '#architecture', active: false },
+];
+
+function dateOnly(s: string) { return String(s).slice(0, 10); }
 
 function StatusPill({ status }: { status: string }) {
-  const cls = status === 'AI-Ready' ? 'ai-ready' : status === 'In progress' ? 'in-progress' : 'draft';
-  return <span className={`status-pill ${cls}`}>{status}</span>;
-}
-
-function TrustPips({ level }: { level: number }) {
-  return (
-    <div className="trust" title={`Trust level ${level}/5`}>
-      {[0, 1, 2, 3, 4].map((i) => (
-        <span key={i} className={`pip ${i < level ? 'on' : ''}`} />
-      ))}
-    </div>
-  );
-}
-
-function HealthBar({ score }: { score: number }) {
-  const cls = score >= 80 ? '' : score >= 50 ? 'med' : 'low';
-  return (
-    <div className="health-bar">
-      <div className="track"><div className={`fill ${cls}`} style={{ width: `${score}%` }} /></div>
-      <span className="score">{score}</span>
-    </div>
-  );
+  const cls = status === 'AI-Ready' ? 'ready' : status === 'In progress' ? 'progress' : 'draft';
+  const text = status === 'AI-Ready' ? 'AI-Ready' : status === 'In progress' ? 'In progress' : 'Draft';
+  return <span className={`status ${cls}`}>{text}</span>;
 }
 
 export function App() {
-  const tokenTotal = data.totals.tokens.primitives + data.totals.tokens.semantic
-    + Object.values(data.totals.tokens.components).reduce((s, n) => s + n, 0);
-  const componentTokensSum = Object.values(data.totals.tokens.components).reduce((s, n) => s + n, 0);
+  const componentTokens = Object.values(data.totals.tokens.components).reduce((s, n) => s + n, 0);
+  const totalTokens = data.totals.tokens.primitives + data.totals.tokens.semantic + componentTokens;
+  const aiReadyPct = Math.round((data.totals.ai_ready / data.totals.specs) * 100);
 
   return (
-    <div className="app">
-      <header className="hero">
-        <div className="eyebrow">Clementine · Observatory 🍊</div>
-        <h1 className="hed">A live look at <em>system health</em>.</h1>
-        <p className="deck">
-          Spec status, token coverage, trust levels — generated at build time from the same files an
-          AI agent reads. Drift is mechanical to detect when every component publishes a closed contract.
-        </p>
-        <div className="surfaces">
-          <a href={data.surfaces.github}>📦 GitHub</a>
-          <a href={data.surfaces.storybook}>🚀 Storybook</a>
-          <a href={data.surfaces.mintlify}>📘 Mintlify</a>
-          <a href={data.surfaces.notion}>📓 Notion</a>
-          <a href={data.surfaces.figma}>📐 Figma</a>
-          <a href={data.surfaces.cli}>🛠 CLI</a>
+    <div className="app-shell">
+      <aside className="side-rail">
+        <div className="brand-lockup">
+          <span className="brand-mark">🍊</span>
+          <div>
+            <strong>Clementine</strong>
+            <small>Observatory</small>
+          </div>
         </div>
-      </header>
 
-      <section className="section">
-        <div className="section-header">
-          <h2>System health</h2>
-          <span className="meta">Generated {formatDate(data.generated_at)}</span>
-        </div>
-        <div className="stats">
-          <div className="stat accent">
-            <div className="label">Avg health</div>
-            <div className="value">{data.totals.avg_health}</div>
-            <div className="detail">across {data.totals.specs} specs · 100 max</div>
+        <button className="workspace-switch" type="button">
+          <span className="workspace-dot" />
+          <div>
+            <strong>tishsingh399</strong>
+            <small>clementine-ds · main</small>
           </div>
-          <div className="stat">
-            <div className="label">AI-Ready specs</div>
-            <div className="value">{data.totals.ai_ready}/{data.totals.specs}</div>
-            <div className="detail">{Math.round(data.totals.ai_ready / data.totals.specs * 100)}% promoted from Draft</div>
-          </div>
-          <div className="stat">
-            <div className="label">Tokens</div>
-            <div className="value">{tokenTotal}</div>
-            <div className="detail">{data.totals.tokens.primitives} primitive · {data.totals.tokens.semantic} semantic · {componentTokensSum} component</div>
-          </div>
-          <div className="stat">
-            <div className="label">Patterns</div>
-            <div className="value">{data.totals.patterns}</div>
-            <div className="detail">compositions of components with their own specs</div>
-          </div>
-        </div>
-      </section>
+          <span className="chevron">⌄</span>
+        </button>
 
-      <section className="section">
-        <div className="section-header">
-          <h2>Components</h2>
-          <span className="meta">sorted by health · trust 0–5</span>
-        </div>
-        <div className="table">
-          <div className="row head">
-            <span className="col"></span>
-            <span className="col">Component</span>
-            <span className="col">Status</span>
-            <span className="col">Trust</span>
-            <span className="col">Health</span>
-            <span className="col" style={{ textAlign: 'right' }}>Tokens</span>
-            <span className="col" style={{ textAlign: 'right' }}>States</span>
-            <span className="col" style={{ textAlign: 'right' }}>ARIA</span>
-            <span className="col" style={{ textAlign: 'right' }}>Verified</span>
-          </div>
-          {data.specs.map((s) => (
-            <div className="row" key={s.name}>
-              <span style={{ fontSize: 18 }}>{s.status === 'AI-Ready' ? '✅' : s.status === 'In progress' ? '🟡' : '⚪'}</span>
-              <span className="name"><code>{s.component}</code></span>
-              <span><StatusPill status={s.status} /></span>
-              <span><TrustPips level={s.trust_level} /></span>
-              <span><HealthBar score={s.health_score} /></span>
-              <span className="num">{s.token_contract.length}</span>
-              <span className="num">{s.interaction_states.length}</span>
-              <span className="num">{s.required_aria.length}</span>
-              <span className="num mono" style={{ fontSize: 11, color: 'var(--ink-3)' }}>{String(s.last_verified).slice(0, 10)}</span>
-            </div>
+        <nav className="nav-list" aria-label="Primary">
+          {NAV.map((n) => (
+            <a key={n.name} href={n.href} className={n.active ? 'active' : ''}>
+              <span className="shell-icon">{n.icon}</span>
+              <span>{n.name}</span>
+            </a>
           ))}
-        </div>
-      </section>
+        </nav>
 
-      {data.patterns.length > 0 && (
-        <section className="section">
-          <div className="section-header">
-            <h2>Patterns</h2>
-            <span className="meta">compositions of components</span>
+        <div className="rail-footer">
+          <span className="trust-chip">Trust · L3 Mid</span>
+          <div className="rail-stat"><span>Specs</span><strong>{data.totals.specs}</strong></div>
+          <div className="rail-stat"><span>AI-Ready</span><strong>{data.totals.ai_ready}/{data.totals.specs}</strong></div>
+          <div className="rail-stat"><span>Patterns</span><strong>{data.totals.patterns}</strong></div>
+          <div className="rail-stat"><span>Tokens</span><strong>{totalTokens}</strong></div>
+        </div>
+      </aside>
+
+      <main className="main-stage">
+        <header className="topbar">
+          <div>
+            <p className="section-kicker">Self-Healing Scoreboard · {new Date(data.generated_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
+            <h1>Clementine, in one glance.</h1>
           </div>
-          <div className="table">
-            <div className="row head">
-              <span className="col"></span>
-              <span className="col">Pattern</span>
-              <span className="col">Status</span>
-              <span className="col">Trust</span>
-              <span className="col">Health</span>
-              <span className="col" style={{ textAlign: 'right' }}>Tokens</span>
-              <span className="col" style={{ textAlign: 'right' }}>States</span>
-              <span className="col" style={{ textAlign: 'right' }}>ARIA</span>
-              <span className="col" style={{ textAlign: 'right' }}>Verified</span>
-            </div>
-            {data.patterns.map((p) => (
-              <div className="row" key={p.name}>
-                <span style={{ fontSize: 18 }}>{p.status === 'AI-Ready' ? '✅' : '🟡'}</span>
-                <span className="name"><code>{p.component}</code></span>
-                <span><StatusPill status={p.status} /></span>
-                <span><TrustPips level={p.trust_level} /></span>
-                <span><HealthBar score={p.health_score} /></span>
-                <span className="num">{p.token_contract.length}</span>
-                <span className="num">{p.interaction_states.length}</span>
-                <span className="num">{p.required_aria.length}</span>
-                <span className="num mono" style={{ fontSize: 11, color: 'var(--ink-3)' }}>{String(p.last_verified).slice(0, 10)}</span>
+          <div className="top-actions">
+            <a href={data.surfaces.storybook}>🚀 Storybook</a>
+            <a href={data.surfaces.mintlify}>📘 Mintlify</a>
+            <a href={data.surfaces.notion}>📓 Notion</a>
+            <a href={data.surfaces.figma}>📐 Figma</a>
+            <a href={data.surfaces.github} className="primary-action">⌘ Repo</a>
+          </div>
+        </header>
+
+        <section id="overview" className="scoreboard-panel">
+          <div className="scoreboard-copy">
+            <p className="panel-label">Scoreboard</p>
+            <h2>Health, drift, coverage — calculated from the same files an AI agent reads.</h2>
+            <p>Every metric below is computed at build time from the contract layer in <code>specs/</code>, <code>patterns/</code>, and <code>packages/tokens/</code>. No hand-tuned numbers.</p>
+          </div>
+          <div className="score-grid">
+            <article>
+              <span>Quality</span>
+              <strong>{data.scoreboard.quality}</strong>
+              <small>avg health · 100 max</small>
+            </article>
+            <article>
+              <span>Validator</span>
+              <strong>{data.scoreboard.drift}%</strong>
+              <small>specs passing all rules</small>
+            </article>
+            <article>
+              <span>Coverage</span>
+              <strong>{data.scoreboard.coverage}%</strong>
+              <small>components with Tier-3 tokens</small>
+            </article>
+            <article>
+              <span>AI-Ready</span>
+              <strong>{data.totals.ai_ready}/{data.totals.specs}</strong>
+              <small>{aiReadyPct}% promoted from Draft</small>
+            </article>
+          </div>
+        </section>
+
+        <section id="architecture" className="architecture-board">
+          <article className="loop-card" aria-label="Self-healing loop">
+            <p className="loop-title">The self-healing loop</p>
+            <div className="loop-visual">
+              <span className="loop-step execute">Execute</span>
+              <span className="loop-step monitor">Monitor</span>
+              <span className="loop-step plan">Plan</span>
+              <span className="loop-step analyze">Analyze</span>
+              <span className="loop-step learn">Learn</span>
+              <div className="knowledge-core">
+                <div className="folder-tab" />
+                <strong>Knowledge graph</strong>
+                <small>Token taxonomy</small>
+                <small>Governance rules</small>
+                <small>Learning history</small>
               </div>
+              <div className="signal-beam" />
+              <span className="signal-pill">Signals</span>
+            </div>
+          </article>
+
+          <article className="stack-card" aria-label="Agentic design system stack">
+            <p className="stack-title">Agentic stack</p>
+            <div className="layer-stack">
+              <div className="layer top">Agentic DS</div>
+              <div className="layer">Agentic orchestration</div>
+              <div className="layer">Platform</div>
+              <div className="layer">Locale · Personalization</div>
+              <div className="layer">Intent</div>
+            </div>
+            <div className="foundation-tags">
+              <span>Components</span>
+              <span>Design tokens</span>
+              <span>Brands · Themes</span>
+              <span>Patterns</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="connectors" className="panel">
+          <div className="panel-header">
+            <div>
+              <p className="panel-label">Active connectors</p>
+              <h2>What's wired into the system</h2>
+            </div>
+            <a href={data.surfaces.github}>View all</a>
+          </div>
+          <div className="connector-grid">
+            {data.connectors.map((c) => (
+              <a key={c.name} className="connector-card" href={c.url}>
+                <span style={{ fontSize: 22 }}>{c.icon}</span>
+                <strong>{c.name}</strong>
+                <span className={c.status === 'connected' ? 'online' : 'idle'}>{c.sub}</span>
+              </a>
             ))}
           </div>
         </section>
-      )}
 
-      <section className="section">
-        <div className="section-header">
-          <h2>Token cascade</h2>
-          <span className="meta">primitive → semantic → component</span>
-        </div>
-        <div className="token-grid">
-          <div className="token-card">
-            <div className="tier">tier 1 — primitives</div>
-            <div className="big">{data.totals.tokens.primitives}</div>
-            <div className="label">raw scales</div>
-            <div className="desc">Color scales, radius, spacing, shadow, typography. References nothing.</div>
-          </div>
-          <div className="token-card">
-            <div className="tier">tier 2 — semantic</div>
-            <div className="big">{data.totals.tokens.semantic}</div>
-            <div className="label">intent tokens</div>
-            <div className="desc">action.primary, surface.elevated, focus.ring. Two modes (Light + Dark) share the vocabulary.</div>
-          </div>
-          <div className="token-card">
-            <div className="tier">tier 3 — component</div>
-            <div className="big">{componentTokensSum}</div>
-            <div className="label">per-component bindings</div>
-            <div className="desc">button.bg.default, badge.bg.success. Cascades through semantic, never references primitives directly.</div>
-          </div>
-        </div>
-      </section>
+        <section className="content-grid">
+          <div className="left-column">
+            <section id="agents" className="panel">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Active agents · {data.validators.length}</p>
+                  <h2>Validator rules from <code>agentic-spec</code></h2>
+                </div>
+                <a href={data.surfaces.cli}>CLI ↗</a>
+              </div>
+              <div className="agent-list">
+                {data.validators.map((v) => (
+                  <article key={v.name} className="agent-row">
+                    <div>
+                      <strong><span className="agent-status" />{v.name}</strong>
+                      <small>{v.intent}</small>
+                    </div>
+                    <div className="agent-meter">
+                      <div className="meter"><span style={{ width: '100%' }} /></div>
+                      <span>{v.category}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
 
-      <section className="section">
-        <div className="section-header">
-          <h2>Knowledge graph</h2>
-          <span className="meta">cascade dependencies, one-way</span>
-        </div>
-        <div className="graph">
-          <div className="tier-row">
-            <span className="tier-label">primitives</span>
-            <div className="nodes">
-              <span className="node">color</span>
-              <span className="node">radius</span>
-              <span className="node">spacing</span>
-              <span className="node">shadow</span>
-              <span className="node">typography</span>
-            </div>
-          </div>
-          <div className="cascade-arrow">↑ references</div>
-          <div className="tier-row">
-            <span className="tier-label">semantic</span>
-            <div className="nodes">
-              <span className="node info">action</span>
-              <span className="node info">surface</span>
-              <span className="node info">text</span>
-              <span className="node info">border</span>
-              <span className="node info">focus</span>
-              <span className="node info">feedback</span>
-              <span className="node info">risk</span>
-            </div>
-          </div>
-          <div className="cascade-arrow">↑ references</div>
-          <div className="tier-row">
-            <span className="tier-label">components</span>
-            <div className="nodes">
-              {data.specs.map((s) => (
-                <span key={s.name} className="node accent">{s.component}</span>
-              ))}
-            </div>
-          </div>
-          <div className="cascade-arrow">↑ composes</div>
-          <div className="tier-row">
-            <span className="tier-label">patterns</span>
-            <div className="nodes">
-              {data.patterns.map((p) => (
-                <span key={p.name} className="node success">{p.component}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            <section id="components" className="panel">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Components · sorted by health</p>
+                  <h2>{data.specs.length} specs · {data.totals.ai_ready} AI-Ready</h2>
+                </div>
+                <a href={`${data.surfaces.github}/tree/main/specs`}>specs/ ↗</a>
+              </div>
+              <div className="component-table">
+                {data.specs.map((s) => (
+                  <article key={s.name} className="component-row">
+                    <div>
+                      <code>{s.component}</code>
+                      <small style={{ color: 'var(--ink-muted)' }}>{dateOnly(s.last_verified)}</small>
+                    </div>
+                    <div className="row-health">
+                      <div className="meter"><span style={{ width: `${s.health_score}%` }} /></div>
+                      <span>{s.health_score}</span>
+                    </div>
+                    <StatusPill status={s.status} />
+                    <span className="token-count">{s.token_contract.length} tok</span>
+                  </article>
+                ))}
+              </div>
+            </section>
 
-      <footer className="foot">
-        <span>Built from <a href={data.surfaces.github}>{data.repo}</a></span>
-        <span>Snapshot regenerated on every build</span>
-      </footer>
+            <section id="patterns" className="panel">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Patterns · {data.patterns.length}</p>
+                  <h2>Compositions of components</h2>
+                </div>
+                <a href={`${data.surfaces.github}/tree/main/patterns`}>patterns/ ↗</a>
+              </div>
+              <div className="component-table">
+                {data.patterns.map((p) => (
+                  <article key={p.name} className="component-row">
+                    <div>
+                      <code>{p.component}</code>
+                      <small style={{ color: 'var(--ink-muted)' }}>{dateOnly(p.last_verified)}</small>
+                    </div>
+                    <div className="row-health">
+                      <div className="meter"><span style={{ width: `${p.health_score}%` }} /></div>
+                      <span>{p.health_score}</span>
+                    </div>
+                    <StatusPill status={p.status} />
+                    <span className="token-count">{p.token_contract.length} tok</span>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <div className="right-column">
+            <section id="activity" className="panel compact">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Recent changes</p>
+                  <h2>Spec / token / pattern edits</h2>
+                </div>
+                <a href={`${data.surfaces.github}/commits/main`}>Git log ↗</a>
+              </div>
+              <div className="event-list">
+                {data.recent_changes.slice(0, 8).map((e) => (
+                  <article key={e.hash}>
+                    <strong>{e.subject}</strong>
+                    <span>{e.when}</span>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="panel compact">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Recent scans</p>
+                  <h2>CI workflow runs</h2>
+                </div>
+                <a href={`${data.surfaces.github}/actions`}>Actions ↗</a>
+              </div>
+              <div className="event-list">
+                <article><strong>CI · validate + build + type-check + size + a11y</strong><span>auto</span></article>
+                <article><strong>CodeQL · security-and-quality</strong><span>weekly</span></article>
+                <article><strong>Dependabot · npm + actions</strong><span>weekly</span></article>
+                {data.recent_scans.slice(0, 3).map((e) => (
+                  <article key={e.hash}><strong>{e.subject}</strong><span>{e.when}</span></article>
+                ))}
+              </div>
+            </section>
+
+            <section id="tokens" className="panel compact">
+              <div className="panel-header">
+                <div>
+                  <p className="panel-label">Token cascade</p>
+                  <h2>{totalTokens} total · 3 tiers</h2>
+                </div>
+                <a href={`${data.surfaces.github}/tree/main/packages/tokens`}>tokens/ ↗</a>
+              </div>
+              <div className="token-cascade">
+                <article>
+                  <div>
+                    <strong>{data.totals.tokens.primitives}</strong>
+                  </div>
+                  <div>
+                    <span>Tier 1 — Primitives</span>
+                    <small>raw scales · references nothing</small>
+                  </div>
+                </article>
+                <article>
+                  <div>
+                    <strong>{data.totals.tokens.semantic}</strong>
+                  </div>
+                  <div>
+                    <span>Tier 2 — Semantic</span>
+                    <small>intent · Light + Dark modes</small>
+                  </div>
+                </article>
+                <article>
+                  <div>
+                    <strong>{componentTokens}</strong>
+                  </div>
+                  <div>
+                    <span>Tier 3 — Component</span>
+                    <small>per-component · cascades from semantic</small>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <footer className="app-footer">
+          <span>{data.repo} · generated {new Date(data.generated_at).toLocaleString('en-US')}</span>
+          <span>Built with the same contract an AI agent reads.</span>
+        </footer>
+      </main>
     </div>
   );
 }

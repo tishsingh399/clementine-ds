@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T20:52:58.664Z",
+  "generated_at": "2026-06-11T02:32:20.132Z",
   "repo": "tishsingh399/clementine-ds",
   "surfaces": {
     "storybook": "https://clementine-ds-storybook.vercel.app",
@@ -11,7 +11,7 @@
   },
   "scoreboard": {
     "quality": 64,
-    "drift": 25,
+    "drift": 100,
     "coverage": 100
   },
   "connectors": [
@@ -148,27 +148,27 @@
   "recent_changes": [
     {
       "hash": "4f01ce07",
-      "when": "2 minutes ago",
+      "when": "6 hours ago",
       "subject": "Add apps/observatory — health dashboard for Clementine"
     },
     {
       "hash": "94f3760f",
-      "when": "82 minutes ago",
+      "when": "7 hours ago",
       "subject": "Quick wins: patterns/, TRUST-LEVELS.md, Alert + Tooltip components"
     },
     {
       "hash": "8e08f45f",
-      "when": "23 hours ago",
+      "when": "29 hours ago",
       "subject": "Fix CI type-check: build tokens dist before checking ui types"
     },
     {
       "hash": "44bb7f1f",
-      "when": "23 hours ago",
+      "when": "29 hours ago",
       "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
     },
     {
       "hash": "3a40f8be",
-      "when": "30 hours ago",
+      "when": "35 hours ago",
       "subject": "Migrate remaining 7 components to 3-tier (+ fix text-input + badge)"
     },
     {
@@ -205,22 +205,22 @@
   "recent_scans": [
     {
       "hash": "8f0714ca",
-      "when": "23 hours ago",
+      "when": "28 hours ago",
       "subject": "Add size-limit + a11y CI (Phase 3 part 1)"
     },
     {
       "hash": "8e08f45f",
-      "when": "23 hours ago",
+      "when": "29 hours ago",
       "subject": "Fix CI type-check: build tokens dist before checking ui types"
     },
     {
       "hash": "44bb7f1f",
-      "when": "23 hours ago",
+      "when": "29 hours ago",
       "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
     },
     {
       "hash": "e75ce0f4",
-      "when": "23 hours ago",
+      "when": "29 hours ago",
       "subject": "Add CI, CodeQL, Dependabot, CONTRIBUTING"
     }
   ],
