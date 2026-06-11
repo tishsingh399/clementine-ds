@@ -4,7 +4,7 @@ Code Connect links each Figma component to its real code component, so Figma **D
 
 ## What's already done (in this repo)
 
-- ✅ All **52 new components** are **real Figma Components** in [Clementine DS](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) (node IDs `6:606`–`6:626` for the first 21, `16:1036`–`16:1066` for the 31 from waves A–D). *(TagsInput shares MultiSelect's render and isn't separately componentized yet.)*
+- ✅ All **53 new components** are **real Figma Components** in [Clementine DS](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) (node IDs `6:606`–`6:626` for the first 21, `16:1036`–`16:1066` for waves A–D, and TagsInput at `16:1075`) — every wave-added component has a 1:1 Figma Component.
 - ✅ A `*.figma.tsx` mapping file sits next to each component (`packages/ui/src/**`), wired to its Figma node URL with an `example` snippet.
 - ✅ `@figma/code-connect` is in `packages/ui` devDependencies; `figma.config.json` at the repo root points the parser at `packages/ui/src/**/*.figma.tsx`.
 - ✅ `*.figma.tsx` is excluded from the component `tsc` build (Figma's CLI parses these, not your app build).
