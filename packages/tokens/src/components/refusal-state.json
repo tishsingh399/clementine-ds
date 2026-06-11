@@ -1,0 +1,20 @@
+{
+  "refusal-state": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "suggestion": {
+      "$value": "{text.link}",
+      "$type": "color"
+    }
+  }
+}

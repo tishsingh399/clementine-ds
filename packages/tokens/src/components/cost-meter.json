@@ -1,0 +1,12 @@
+{
+  "cost-meter": {
+    "label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "value": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

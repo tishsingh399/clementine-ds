@@ -1,0 +1,12 @@
+{
+  "message-actions": {
+    "fg": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "fg-hover": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

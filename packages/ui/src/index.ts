@@ -42,6 +42,21 @@ export { ConfidenceMeter, type ConfidenceMeterProps, type ConfidenceLevel } from
 export { ModelSelector, type ModelSelectorProps } from './components/ai/ModelSelector';
 export { CodeBlock, type CodeBlockProps } from './components/ai/CodeBlock';
 export { AttachmentPill, type AttachmentPillProps } from './components/ai/AttachmentPill';
+// AI surfaces — long tail (Wave F)
+export { ConversationThread, type ConversationThreadProps } from './components/ai/ConversationThread';
+export { MessageActions, type MessageActionsProps } from './components/ai/MessageActions';
+export { ContextMeter, type ContextMeterProps } from './components/ai/ContextMeter';
+export { DiffView, type DiffViewProps, type DiffLine } from './components/ai/DiffView';
+export { AgentStatus, type AgentStatusProps, type AgentState } from './components/ai/AgentStatus';
+export { PlanSteps, type PlanStepsProps, type PlanStep, type PlanStepStatus } from './components/ai/PlanSteps';
+export { PermissionRequest, type PermissionRequestProps } from './components/ai/PermissionRequest';
+export { UndoBar, type UndoBarProps } from './components/ai/UndoBar';
+export { RefusalState, type RefusalStateProps } from './components/ai/RefusalState';
+export { AgentCard, type AgentCardProps } from './components/ai/AgentCard';
+export { AgentPicker, type AgentPickerProps } from './components/ai/AgentPicker';
+export { MemoryPanel, type MemoryPanelProps, type MemoryFact } from './components/ai/MemoryPanel';
+export { SessionList, type SessionListProps, type SessionItem } from './components/ai/SessionList';
+export { CostMeter, type CostMeterProps } from './components/ai/CostMeter';
 
 // Trust & governance (Tray 7)
 export { DisclosureBadge, type DisclosureBadgeProps } from './components/trust/DisclosureBadge';

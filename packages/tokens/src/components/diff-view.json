@@ -1,0 +1,20 @@
+{
+  "diff-view": {
+    "added-bg": {
+      "$value": "{feedback.success-subtle}",
+      "$type": "color"
+    },
+    "removed-bg": {
+      "$value": "{feedback.error-subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "gutter": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  }
+}

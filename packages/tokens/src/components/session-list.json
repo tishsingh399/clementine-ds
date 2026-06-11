@@ -1,0 +1,16 @@
+{
+  "session-list": {
+    "item-bg-hover": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "plan-steps": {
+    "pending": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "active": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "done": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

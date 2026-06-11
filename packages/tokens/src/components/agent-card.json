@@ -1,0 +1,20 @@
+{
+  "agent-card": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "name": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "agent-status": {
+    "idle": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "busy": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "waiting": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "done": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  }
+}

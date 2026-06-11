@@ -1,0 +1,12 @@
+{
+  "conversation-thread": {
+    "bg": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    },
+    "divider": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  }
+}
