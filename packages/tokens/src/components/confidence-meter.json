@@ -1,0 +1,24 @@
+{
+  "confidence-meter": {
+    "track": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "high": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "medium": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "low": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

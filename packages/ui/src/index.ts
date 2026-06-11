@@ -36,6 +36,12 @@ export { HITLGate, type HITLGateProps, type HITLStatus } from './components/ai/H
 export { CitationChip, type CitationChipProps } from './components/ai/CitationChip';
 export { StreamingText, type StreamingTextProps } from './components/ai/StreamingText';
 export { ArtifactFrame, type ArtifactFrameProps } from './components/ai/ArtifactFrame';
+export { PromptSuggestions, type PromptSuggestionsProps } from './components/ai/PromptSuggestions';
+export { SourcesPanel, type SourcesPanelProps, type Source } from './components/ai/SourcesPanel';
+export { ConfidenceMeter, type ConfidenceMeterProps, type ConfidenceLevel } from './components/ai/ConfidenceMeter';
+export { ModelSelector, type ModelSelectorProps } from './components/ai/ModelSelector';
+export { CodeBlock, type CodeBlockProps } from './components/ai/CodeBlock';
+export { AttachmentPill, type AttachmentPillProps } from './components/ai/AttachmentPill';
 
 // Trust & governance (Tray 7)
 export { DisclosureBadge, type DisclosureBadgeProps } from './components/trust/DisclosureBadge';

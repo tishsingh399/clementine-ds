@@ -1,0 +1,24 @@
+{
+  "attachment-pill": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.md}",
+      "$type": "dimension"
+    }
+  }
+}
