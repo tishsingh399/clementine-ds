@@ -48,5 +48,19 @@ export { useStreaming, type UseStreamingResult } from './hooks/useStreaming';
 export { useInterruptible, type UseInterruptibleResult } from './hooks/useInterruptible';
 export { useRetry, type UseRetryResult } from './hooks/useRetry';
 
+// Core staples (Wave A)
+export { Breadcrumbs, type BreadcrumbsProps } from './components/Breadcrumbs';
+export { Divider, type DividerProps } from './components/Divider';
+export { Anchor, type AnchorProps } from './components/Anchor';
+export { Loader, type LoaderProps } from './components/Loader';
+export { Chip, ChipGroup, type ChipProps } from './components/Chip';
+export { Indicator, type IndicatorProps } from './components/Indicator';
+export { Popover, PopoverTarget, PopoverDropdown, type PopoverProps } from './components/Popover';
+export { Stepper, StepperStep, StepperCompleted, type StepperProps } from './components/Stepper';
+export { SegmentedControl, type SegmentedControlProps } from './components/SegmentedControl';
+export { ThemeIcon, type ThemeIconProps } from './components/ThemeIcon';
+export { Code, type CodeProps } from './components/Code';
+export { Kbd, type KbdProps } from './components/Kbd';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';

@@ -1,0 +1,6 @@
+{
+  "indicator": {
+    "bg": { "$value": "{feedback.error}", "$type": "color" },
+    "fg": { "$value": "{text.on-action}", "$type": "color" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "code": {
+    "bg":     { "$value": "{surface.subtle}", "$type": "color" },
+    "fg":     { "$value": "{text.primary}",   "$type": "color" },
+    "radius": { "$value": "{radius.sm}", "$type": "dimension" }
+  }
+}

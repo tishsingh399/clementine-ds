@@ -1,0 +1,7 @@
+{
+  "theme-icon": {
+    "bg":     { "$value": "{action.primary}", "$type": "color" },
+    "fg":     { "$value": "{text.on-action}", "$type": "color" },
+    "radius": { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

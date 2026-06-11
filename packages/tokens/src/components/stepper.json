@@ -1,0 +1,11 @@
+{
+  "stepper": {
+    "bg-completed": { "$value": "{action.primary}", "$type": "color" },
+    "bg-active":    { "$value": "{action.primary}", "$type": "color" },
+    "bg-pending":   { "$value": "{surface.subtle}", "$type": "color" },
+    "fg-active":    { "$value": "{text.primary}",   "$type": "color" },
+    "fg-pending":   { "$value": "{text.tertiary}",  "$type": "color" },
+    "separator":    { "$value": "{border.default}", "$type": "color" },
+    "border-focus": { "$value": "{focus.ring}",     "$type": "color" }
+  }
+}

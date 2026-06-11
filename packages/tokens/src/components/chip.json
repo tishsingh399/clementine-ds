@@ -1,0 +1,11 @@
+{
+  "chip": {
+    "bg":             { "$value": "{surface.subtle}", "$type": "color" },
+    "bg-checked":     { "$value": "{action.primary}", "$type": "color" },
+    "fg":             { "$value": "{text.primary}",   "$type": "color" },
+    "fg-checked":     { "$value": "{text.on-action}", "$type": "color" },
+    "border":         { "$value": "{border.default}", "$type": "color" },
+    "border-checked": { "$value": "{action.primary}", "$type": "color" },
+    "radius":         { "$value": "{radius.xl}", "$type": "dimension" }
+  }
+}

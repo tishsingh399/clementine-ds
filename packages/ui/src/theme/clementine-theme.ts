@@ -148,5 +148,9 @@ export const clementineTheme = createTheme({
     Pagination: { defaultProps: { radius: 'md' } },
     Progress: { defaultProps: { radius: 'xl' } },
     Skeleton: { defaultProps: { radius: 'md' } },
+    Chip: { defaultProps: { radius: 'xl' } },
+    Popover: { defaultProps: { radius: 'md', shadow: 'lg' } },
+    SegmentedControl: { defaultProps: { radius: 'md' } },
+    ThemeIcon: { defaultProps: { radius: 'md' } },
   },
 });
