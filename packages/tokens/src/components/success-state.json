@@ -1,0 +1,24 @@
+{
+  "success-state": {
+    "bg": {
+      "$value": "{feedback.success-subtle}",
+      "$type": "color"
+    },
+    "icon": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "description": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.lg}",
+      "$type": "dimension"
+    }
+  }
+}

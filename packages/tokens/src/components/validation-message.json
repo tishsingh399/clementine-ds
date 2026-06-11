@@ -1,0 +1,20 @@
+{
+  "validation-message": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "success": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    }
+  }
+}

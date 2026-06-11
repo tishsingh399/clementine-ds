@@ -132,5 +132,17 @@ export { SessionDeviceList, type SessionDeviceListProps, type DeviceSession } fr
 export { RolePicker, type RolePickerProps } from './components/RolePicker';
 export { MaintenanceBanner, type MaintenanceBannerProps, type MaintenanceSeverity } from './components/MaintenanceBanner';
 
+// States & form glue (Wave I)
+export { EmptyState, type EmptyStateProps } from './components/EmptyState';
+export { ErrorState, type ErrorStateProps } from './components/ErrorState';
+export { SuccessState, type SuccessStateProps } from './components/SuccessState';
+export { LoadingState, type LoadingStateProps } from './components/LoadingState';
+export { InlineMessage, type InlineMessageProps } from './components/InlineMessage';
+export { ProgressCircle, type ProgressCircleProps } from './components/ProgressCircle';
+export { FieldLabel, type FieldLabelProps } from './components/FieldLabel';
+export { HelperText, type HelperTextProps } from './components/HelperText';
+export { ValidationMessage, type ValidationMessageProps } from './components/ValidationMessage';
+export { CharacterCounter, type CharacterCounterProps } from './components/CharacterCounter';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';

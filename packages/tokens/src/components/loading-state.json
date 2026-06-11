@@ -1,0 +1,16 @@
+{
+  "loading-state": {
+    "spinner": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "bg": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    }
+  }
+}

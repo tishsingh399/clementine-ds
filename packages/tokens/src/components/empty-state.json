@@ -1,0 +1,24 @@
+{
+  "empty-state": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "icon": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "description": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.lg}",
+      "$type": "dimension"
+    }
+  }
+}

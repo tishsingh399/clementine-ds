@@ -1,0 +1,24 @@
+{
+  "inline-message": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "info": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "success": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  }
+}

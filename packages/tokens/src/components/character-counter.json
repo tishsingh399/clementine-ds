@@ -1,0 +1,12 @@
+{
+  "character-counter": {
+    "fg": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "over": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  }
+}
