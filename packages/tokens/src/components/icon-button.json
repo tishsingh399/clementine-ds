@@ -1,0 +1,16 @@
+{
+  "icon-button": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "bg-hover": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border-focus": {
+      "$value": "{focus.ring}",
+      "$type": "color"
+    }
+  }
+}

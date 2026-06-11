@@ -1,0 +1,20 @@
+{
+  "pill": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "remove": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.xl}",
+      "$type": "dimension"
+    }
+  }
+}

@@ -86,5 +86,20 @@ export { Notification, type NotificationProps } from './components/Notification'
 export { Spoiler, type SpoilerProps } from './components/Spoiler';
 export { HoverCard, HoverCardTarget, HoverCardDropdown, type HoverCardProps } from './components/HoverCard';
 
+// Part 1 finishers (Wave E)
+export { IconButton, type IconButtonProps } from './components/IconButton';
+export { ButtonGroup, type ButtonGroupProps } from './components/ButtonGroup';
+export { Pill, PillGroup, type PillProps } from './components/Pill';
+export { List, ListItem, type ListProps } from './components/List';
+export { Tree, type TreeProps } from './components/Tree';
+export { Image, type ImageProps } from './components/Image';
+export { ColorInput, type ColorInputProps } from './components/ColorInput';
+export { SearchField, type SearchFieldProps } from './components/SearchField';
+export { Fab, type FabProps } from './components/Fab';
+export { StatusDot, type StatusDotProps, type StatusKind } from './components/StatusDot';
+export { Stat, type StatProps } from './components/Stat';
+export { DescriptionList, type DescriptionListProps, type DescriptionItem } from './components/DescriptionList';
+export { SplitButton, type SplitButtonProps } from './components/SplitButton';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';

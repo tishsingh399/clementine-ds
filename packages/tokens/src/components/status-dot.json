@@ -1,0 +1,24 @@
+{
+  "status-dot": {
+    "online": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "offline": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "busy": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "away": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

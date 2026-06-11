@@ -1,0 +1,8 @@
+{
+  "button-group": {
+    "divider": {
+      "$value": "{border.strong}",
+      "$type": "color"
+    }
+  }
+}
