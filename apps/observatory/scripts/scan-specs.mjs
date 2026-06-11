@@ -256,6 +256,14 @@ function isAllChecksGreen(spec) {
     .every((k) => spec.checks[k]);
 }
 
+// Safety guard: never overwrite a committed snapshot with broken data.
+// If the scan found nothing (e.g. running from a scoped build context that
+// can't see the parent ../../ specs directory), keep the committed snapshot.
+if (snapshot.totals.specs === 0) {
+  console.warn(`⚠ scan found 0 specs at ${SPECS_DIR} — keeping the committed snapshot intact.`);
+  process.exit(0);
+}
+
 await writeFile(OUT_FILE, JSON.stringify(snapshot, null, 2));
 console.log(`✓ snapshot written → ${OUT_FILE}`);
 console.log(`  ${snapshot.totals.specs} specs (${snapshot.totals.ai_ready} AI-Ready), ${snapshot.totals.patterns} patterns, avg health ${snapshot.totals.avg_health}/100`);

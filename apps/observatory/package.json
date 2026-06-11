@@ -6,7 +6,8 @@
   "scripts": {
     "scan": "node scripts/scan-specs.mjs",
     "dev": "pnpm scan && vite",
-    "build": "pnpm scan && vite build",
+    "build": "vite build",
+    "build:full": "pnpm scan && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -270,11 +270,12 @@ p {
 }
 
 h1 {
-  max-width: 780px;
+  max-width: 720px;
   margin-bottom: 0;
-  font-size: clamp(32px, 5vw, 68px);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  font-size: clamp(24px, 2.4vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 h2 {
@@ -334,18 +335,19 @@ h2 {
 
 .scoreboard-panel {
   display: grid;
-  grid-template-columns: minmax(260px, 0.82fr) 1.18fr;
-  gap: 26px;
+  grid-template-columns: minmax(260px, 0.7fr) 1.3fr;
+  gap: 22px;
   margin-bottom: 22px;
-  padding: 24px;
+  padding: 22px;
 }
 
 .scoreboard-copy h2 {
   max-width: 480px;
   margin-bottom: 10px;
-  font-size: clamp(28px, 4vw, 50px);
-  line-height: 0.96;
-  letter-spacing: -0.04em;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 700;
 }
 
 .scoreboard-copy p:last-child {
@@ -389,10 +391,10 @@ h2 {
 
 .score-grid strong {
   display: block;
-  margin: 18px 0 8px;
-  font-size: clamp(34px, 4vw, 56px);
-  line-height: 0.86;
-  letter-spacing: -0.05em;
+  margin: 16px 0 6px;
+  font-size: clamp(28px, 2.4vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
 }
 
