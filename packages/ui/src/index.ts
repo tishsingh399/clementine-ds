@@ -73,5 +73,12 @@ export { Slider, type SliderProps } from './components/Slider';
 export { Rating, type RatingProps } from './components/Rating';
 export { Fieldset, type FieldsetProps } from './components/Fieldset';
 
+// Data display (Wave C)
+export { Table, TableThead, TableTbody, TableTr, TableTh, TableTd, type TableProps } from './components/Table';
+export { Timeline, TimelineItem, type TimelineProps } from './components/Timeline';
+export { Notification, type NotificationProps } from './components/Notification';
+export { Spoiler, type SpoilerProps } from './components/Spoiler';
+export { HoverCard, HoverCardTarget, HoverCardDropdown, type HoverCardProps } from './components/HoverCard';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';

@@ -1,0 +1,8 @@
+{
+  "spoiler": {
+    "control": {
+      "$value": "{text.link}",
+      "$type": "color"
+    }
+  }
+}
