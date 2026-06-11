@@ -92,6 +92,6 @@ Only **trays 2, 4, and parts of 7** are React components. Trays **5, 6, 8** are 
 | 3 | **Tray 4 — AI surfaces** (Message, Composer, Reasoning trace, Tool-call card, HITL gate, Citation, Streaming text, Artifact) | ✅ done |
 | 4 | **Tray 5 — behavior/state** hooks (`useStreaming`/`useInterruptible`/`useRetry`) + interaction specs (`behaviors/`) | ✅ done |
 | 5 | **Tray 6 — content/language** (`content/`) + **Tray 7 — trust** (DisclosureBadge) + **Tray 8 — feedback** (FeedbackControl + eval loop) | ✅ done |
-| 6 | **Tray 9 — model/prompt registry** ✅ · **Figma sync** — 240 variables (all 31 components, cascade-aliased) + 21 new components rendered as bound swatch groups ✅ · **Code Connect** + full bespoke renders for the 21 | 🟡 variables + swatch board done; Code Connect + bespoke renders pending |
+| 6 | **Tray 9 — model/prompt registry** ✅ · **Figma sync** — 240 variables (cascade-aliased) + all 21 new components rendered as real, variable-bound components ✅ · **Code Connect** (Figma ↔ code) | 🟡 variables + components done; Code Connect pending |
 
 Patterns (Tray 3): action-bar, confirm-dialog, form-field, **data-table, empty-state, wizard** ✅ — search, dashboard remain.
