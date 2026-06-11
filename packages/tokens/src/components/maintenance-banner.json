@@ -1,0 +1,20 @@
+{
+  "maintenance-banner": {
+    "info-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "degraded-bg": {
+      "$value": "{feedback.warning-subtle}",
+      "$type": "color"
+    },
+    "down-bg": {
+      "$value": "{feedback.error-subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

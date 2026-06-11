@@ -1,0 +1,12 @@
+{
+  "export-menu": {
+    "trigger-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "item-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

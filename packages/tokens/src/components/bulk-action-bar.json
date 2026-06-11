@@ -1,0 +1,16 @@
+{
+  "bulk-action-bar": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

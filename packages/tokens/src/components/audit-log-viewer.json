@@ -1,0 +1,24 @@
+{
+  "audit-log-viewer": {
+    "header-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "row-striped": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  }
+}

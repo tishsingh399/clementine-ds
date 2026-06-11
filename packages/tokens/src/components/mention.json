@@ -1,0 +1,12 @@
+{
+  "mention": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.link}",
+      "$type": "color"
+    }
+  }
+}

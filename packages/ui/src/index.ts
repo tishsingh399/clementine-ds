@@ -116,5 +116,21 @@ export { Stat, type StatProps } from './components/Stat';
 export { DescriptionList, type DescriptionListProps, type DescriptionItem } from './components/DescriptionList';
 export { SplitButton, type SplitButtonProps } from './components/SplitButton';
 
+// Enterprise layer (Wave H)
+export { BulkActionBar, type BulkActionBarProps } from './components/BulkActionBar';
+export { FacetedFilter, type FacetedFilterProps, type FacetGroup, type FacetOption } from './components/FacetedFilter';
+export { SavedViews, type SavedViewsProps, type SavedView } from './components/SavedViews';
+export { ExportMenu, type ExportMenuProps } from './components/ExportMenu';
+export { NotificationCenter, type NotificationCenterProps, type NotificationItem } from './components/NotificationCenter';
+export { PresenceIndicator, type PresenceIndicatorProps, type PresenceUser, type Presence } from './components/PresenceIndicator';
+export { ActivityFeed, type ActivityFeedProps, type ActivityItem } from './components/ActivityFeed';
+export { CommentThread, type CommentThreadProps, type Comment } from './components/CommentThread';
+export { Mention, type MentionProps } from './components/Mention';
+export { RbacMatrix, type RbacMatrixProps } from './components/RbacMatrix';
+export { AuditLogViewer, type AuditLogViewerProps, type AuditEntry } from './components/AuditLogViewer';
+export { SessionDeviceList, type SessionDeviceListProps, type DeviceSession } from './components/SessionDeviceList';
+export { RolePicker, type RolePickerProps } from './components/RolePicker';
+export { MaintenanceBanner, type MaintenanceBannerProps, type MaintenanceSeverity } from './components/MaintenanceBanner';
+
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';

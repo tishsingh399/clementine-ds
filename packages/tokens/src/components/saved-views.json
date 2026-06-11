@@ -1,0 +1,12 @@
+{
+  "saved-views": {
+    "active-fg": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

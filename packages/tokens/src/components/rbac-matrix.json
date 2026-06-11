@@ -1,0 +1,20 @@
+{
+  "rbac-matrix": {
+    "header-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "granted": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}
