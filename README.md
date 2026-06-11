@@ -19,9 +19,9 @@ A small, opinionated React design system that ships with **machine-readable spec
 | Surface | Where | What it holds |
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
-| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 31 components (UI + AI surfaces) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
+| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 63 components (UI + AI surfaces) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
 | 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
-| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) | 3 variable collections; **all 31 components' tokens synced as variables (240 component vars, cascade-aliased)** + **all 31 rendered as real components** (original 10 + the **"Components — AI-ready trays"** board with the 21 new), every paint bound to a Tier-3 variable |
+| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) | 3 variable collections; **all 63 components' tokens synced as variables (390 component vars, cascade-aliased)** + **all 63 rendered as real components** (original 10 + the **"Components — AI-ready trays"** board with the 53 new across Feedback / Containers / AI chat / Core staples / Form inputs / Data display / AI surfaces), every paint bound to a Tier-3 variable |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | 📄 Long-form docs (GitHub) | [`docs/readme/`](./docs/readme) | 20 source pages — getting-started, architecture, tokens, components. GitHub renders with TOC + syntax highlighting. |
@@ -58,7 +58,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 | Package | What |
 |---|---|
 | [`packages/tokens`](./packages/tokens) | Style Dictionary source: primitives → semantic-light → semantic-dark |
-| [`packages/ui`](./packages/ui) | 31 React components (UI + AI surfaces) + 3 behavior hooks, Mantine-backed |
+| [`packages/ui`](./packages/ui) | 63 React components (UI + AI surfaces) + 3 behavior hooks, Mantine-backed |
 | [`apps/storybook`](./apps/storybook) | Live component sandbox |
 | [`specs/`](./specs) | ⭐ Per-component agentic specs (frontmatter contract + closed token list) |
 | [`_templates/`](./_templates) | Scaffolding for new specs |
@@ -66,15 +66,16 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 ## Components
 
-**31 components across the trays** — full map + per-tray status in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)**.
+**63 components across the trays** — full map + per-component specs in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)** and [`specs/`](./specs). Every one ships tokens + spec + story + guidance.
 
-**Tray 2 · Core (21):** Button · Badge · Checkbox · Radio · Select · Switch · Tabs · TextInput · Textarea · Modal · [Alert](./specs/alert/index.md) · [Tooltip](./specs/tooltip/index.md) · [Accordion](./specs/accordion/index.md) · [Avatar](./specs/avatar/index.md) · [Card](./specs/card/index.md) · [Menu](./specs/menu/index.md) · [Drawer](./specs/drawer/index.md) · [Autocomplete](./specs/autocomplete/index.md) · [Pagination](./specs/pagination/index.md) · [Progress](./specs/progress/index.md) · [Skeleton](./specs/skeleton/index.md)
+**Tray 2 · Components (47)**
+- *Actions & inputs (18):* Button · TextInput · Textarea · Select · Autocomplete · NumberInput · PasswordInput · PinInput · FileInput · MultiSelect · TagsInput · Checkbox · Radio · Switch · SegmentedControl · Slider · Rating · Fieldset
+- *Containers & nav (12):* Card · Accordion · Drawer · Modal · Tabs · Menu · Popover · HoverCard · Breadcrumbs · Pagination · Stepper · Divider
+- *Display & feedback (17):* Badge · Alert · Tooltip · Avatar · Chip · Indicator · Loader · Progress · Skeleton · Notification · Table · Timeline · Spoiler · ThemeIcon · Code · Kbd · Anchor
 
-**Tray 4 · AI surfaces (8):** [Message](./specs/ai/message/index.md) · [Composer](./specs/ai/composer/index.md) · [ReasoningTrace](./specs/ai/reasoning-trace/index.md) · [ToolCallCard](./specs/ai/tool-call-card/index.md) · [HITLGate](./specs/ai/hitl-gate/index.md) · [CitationChip](./specs/ai/citation-chip/index.md) · [StreamingText](./specs/ai/streaming-text/index.md) · [ArtifactFrame](./specs/ai/artifact-frame/index.md)
+**Tray 4 · AI surfaces (14):** Message · Composer · ReasoningTrace · ToolCallCard · HITLGate · CitationChip · StreamingText · ArtifactFrame · PromptSuggestions · SourcesPanel · ConfidenceMeter · ModelSelector · CodeBlock · AttachmentPill
 
-**Tray 7 · Trust (1):** [DisclosureBadge](./specs/trust/disclosure-badge/index.md)   ·   **Tray 8 · Feedback (1):** [FeedbackControl](./specs/feedback/feedback-control/index.md)
-
-**Tray 5 · Behavior hooks (3):** `useStreaming` · `useInterruptible` · `useRetry`
+**Tray 7 · Trust (1):** DisclosureBadge   ·   **Tray 8 · Feedback (1):** FeedbackControl   ·   **Tray 5 · Behavior hooks (3):** `useStreaming` · `useInterruptible` · `useRetry`
 
 `AI-Ready` means all four artifacts are reconciled on `last_verified`: component-tier tokens, a `specs/<name>/` contract, a Mantine-backed implementation, and a Storybook story per interaction state.
 
