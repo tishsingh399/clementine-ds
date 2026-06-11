@@ -863,6 +863,59 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.pipeline-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr) auto);
+  grid-template-columns: repeat(11, minmax(0, auto));
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.pipeline-flow article {
+  display: grid;
+  gap: 4px;
+  padding: 14px 14px 16px;
+  min-height: 110px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 250, 240, 0.62);
+  align-content: end;
+}
+
+.pipeline-flow article small {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.pipeline-flow article strong {
+  font-size: 30px;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.pipeline-flow article span {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.pipeline-arrow {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+  .pipeline-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .pipeline-arrow { display: none; }
+}
+
 .app-footer {
   display: flex;
   justify-content: space-between;

@@ -157,43 +157,51 @@ export function App() {
           </div>
         </section>
 
-        <section id="architecture" className="architecture-board">
-          <article className="loop-card" aria-label="Self-healing loop">
-            <p className="loop-title">The self-healing loop</p>
-            <div className="loop-visual">
-              <span className="loop-step execute">Execute</span>
-              <span className="loop-step monitor">Monitor</span>
-              <span className="loop-step plan">Plan</span>
-              <span className="loop-step analyze">Analyze</span>
-              <span className="loop-step learn">Learn</span>
-              <div className="knowledge-core">
-                <div className="folder-tab" />
-                <strong>Knowledge graph</strong>
-                <small>Token taxonomy</small>
-                <small>Governance rules</small>
-                <small>Learning history</small>
-              </div>
-              <div className="signal-beam" />
-              <span className="signal-pill">Signals</span>
+        <section id="pipeline" className="panel">
+          <div className="panel-header">
+            <div>
+              <p className="panel-label">How Clementine flows</p>
+              <h2>Tier 1 → Tier 3 → spec → code → live surface</h2>
             </div>
-          </article>
-
-          <article className="stack-card" aria-label="Agentic design system stack">
-            <p className="stack-title">Agentic stack</p>
-            <div className="layer-stack">
-              <div className="layer top">Agentic DS</div>
-              <div className="layer">Agentic orchestration</div>
-              <div className="layer">Platform</div>
-              <div className="layer">Locale · Personalization</div>
-              <div className="layer">Intent</div>
-            </div>
-            <div className="foundation-tags">
-              <span>Components</span>
-              <span>Design tokens</span>
-              <span>Brands · Themes</span>
+            <a href={`${data.surfaces.github}/blob/main/AGENTS.md`}>AGENTS.md ↗</a>
+          </div>
+          <div className="pipeline-flow">
+            <article>
+              <small>tier 1</small>
+              <strong>{data.totals.tokens.primitives}</strong>
+              <span>Primitives</span>
+            </article>
+            <span className="pipeline-arrow">→</span>
+            <article>
+              <small>tier 2</small>
+              <strong>{data.totals.tokens.semantic}</strong>
+              <span>Semantic · Light + Dark</span>
+            </article>
+            <span className="pipeline-arrow">→</span>
+            <article>
+              <small>tier 3</small>
+              <strong>{componentTokens}</strong>
+              <span>Component tokens</span>
+            </article>
+            <span className="pipeline-arrow">→</span>
+            <article>
+              <small>contract</small>
+              <strong>{data.totals.specs}</strong>
+              <span>Spec frontmatter</span>
+            </article>
+            <span className="pipeline-arrow">→</span>
+            <article>
+              <small>composition</small>
+              <strong>{data.totals.patterns}</strong>
               <span>Patterns</span>
-            </div>
-          </article>
+            </article>
+            <span className="pipeline-arrow">→</span>
+            <article>
+              <small>live</small>
+              <strong>5</strong>
+              <span>Surfaces · CI · public</span>
+            </article>
+          </div>
         </section>
 
         <section id="connectors" className="panel">
