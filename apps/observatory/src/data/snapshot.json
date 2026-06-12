@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T03:04:37.034Z",
+  "generated_at": "2026-06-12T03:42:13.040Z",
   "repo": "tishsingh399/clementine-ds",
   "surfaces": {
     "storybook": "https://clementine-ds-storybook.vercel.app",
@@ -65,8 +65,8 @@
   "evaluator": {
     "rules_passing": 15,
     "rules_total": 15,
-    "checks_passing": 105,
-    "checks_total": 114
+    "checks_passing": 112,
+    "checks_total": 121
   },
   "validators": [
     {
@@ -147,13 +147,18 @@
   ],
   "recent_changes": [
     {
+      "hash": "5ff6266f",
+      "when": "21 minutes ago",
+      "subject": "Post-merge verification fixes: nested specs, YAML repair, fresh snapshot"
+    },
+    {
       "hash": "a355f020",
-      "when": "3 hours ago",
+      "when": "4 hours ago",
       "subject": "Wave I — states & form glue (10 components)"
     },
     {
       "hash": "817ea235",
-      "when": "8 hours ago",
+      "when": "9 hours ago",
       "subject": "Wave H — 14 Part 2 enterprise components"
     },
     {
@@ -173,32 +178,32 @@
     },
     {
       "hash": "71e5fe64",
-      "when": "11 hours ago",
+      "when": "12 hours ago",
       "subject": "Wave D (6 AI surfaces) + guidance backfill — 63 components, full parity"
     },
     {
       "hash": "7082f088",
-      "when": "11 hours ago",
+      "when": "12 hours ago",
       "subject": "Wave C — 5 data display components (full pipeline)"
     },
     {
       "hash": "75264537",
-      "when": "11 hours ago",
+      "when": "12 hours ago",
       "subject": "Wave B — 9 form input components (full pipeline)"
     },
     {
       "hash": "bdb1ba8d",
-      "when": "12 hours ago",
+      "when": "13 hours ago",
       "subject": "Wave A — 12 core staple components (full pipeline)"
     },
     {
       "hash": "fb8f7577",
-      "when": "23 hours ago",
+      "when": "24 hours ago",
       "subject": "Build AI-ready design system: 9 trays, 31 components, hooks + system docs"
     },
     {
       "hash": "4f01ce07",
-      "when": "30 hours ago",
+      "when": "31 hours ago",
       "subject": "Add apps/observatory — health dashboard for Clementine"
     },
     {
@@ -215,14 +220,14 @@
       "hash": "44bb7f1f",
       "when": "2 days ago",
       "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
-    },
-    {
-      "hash": "3a40f8be",
-      "when": "3 days ago",
-      "subject": "Migrate remaining 7 components to 3-tier (+ fix text-input + badge)"
     }
   ],
   "recent_scans": [
+    {
+      "hash": "5ff6266f",
+      "when": "21 minutes ago",
+      "subject": "Post-merge verification fixes: nested specs, YAML repair, fresh snapshot"
+    },
     {
       "hash": "8f0714ca",
       "when": "2 days ago",
@@ -245,8 +250,8 @@
     }
   ],
   "totals": {
-    "specs": 114,
-    "ai_ready": 105,
+    "specs": 121,
+    "ai_ready": 112,
     "in_progress": 0,
     "draft": 9,
     "patterns": 22,
@@ -271,8 +276,11 @@
         "bulk-action-bar": 3,
         "button-group": 1,
         "button": 16,
+        "calendar": 7,
         "card": 7,
+        "carousel": 7,
         "character-counter": 2,
+        "chart": 10,
         "checkbox": 12,
         "chip": 7,
         "citation-chip": 4,
@@ -285,6 +293,8 @@
         "context-meter": 4,
         "conversation-thread": 2,
         "cost-meter": 2,
+        "date-input": 9,
+        "date-picker": 11,
         "description-list": 2,
         "diff-view": 4,
         "disclosure-badge": 4,
@@ -348,6 +358,7 @@
         "skeleton": 4,
         "slider": 6,
         "sources-panel": 7,
+        "sparkline": 4,
         "split-button": 4,
         "spoiler": 1,
         "stat": 4,
@@ -363,6 +374,7 @@
         "textarea": 10,
         "theme-icon": 3,
         "timeline": 5,
+        "toast": 9,
         "tool-call-card": 9,
         "tooltip": 5,
         "tree": 4,
@@ -457,6 +469,151 @@
       "components_used": [],
       "trust_level": 4,
       "health_score": 100
+    },
+    {
+      "name": "date-picker",
+      "component": "date-picker",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-selected",
+        "aria-label per day cell"
+      ],
+      "semantic_parts": {
+        "root": "the calendar panel",
+        "header": "month/year label + prev/next controls",
+        "weekday": "weekday column headers",
+        "day": "a selectable day cell",
+        "day-selected": "the chosen day(s)",
+        "day-today": "today's outline"
+      },
+      "token_contract": [
+        "date-picker.bg",
+        "date-picker.fg",
+        "date-picker.header-fg",
+        "date-picker.weekday-fg",
+        "date-picker.day-selected-bg",
+        "date-picker.day-selected-fg",
+        "date-picker.day-in-range-bg",
+        "date-picker.day-today-border",
+        "date-picker.day-muted-fg",
+        "date-picker.ring",
+        "date-picker.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "range",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/DatePicker.tsx",
+          "underlying_library": "mantine-dates",
+          "exports": [
+            "DatePicker",
+            "DatePickerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/DatePicker.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/date-picker.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 11,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 100
+    },
+    {
+      "name": "date-input",
+      "component": "date-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-invalid",
+        "aria-describedby",
+        "aria-expanded on popover trigger"
+      ],
+      "semantic_parts": {
+        "label": "associated <label>",
+        "input": "the text field (free-typed, parsed)",
+        "popover": "the calendar dropdown",
+        "helper": "helper or error text"
+      },
+      "token_contract": [
+        "date-input.bg",
+        "date-input.fg",
+        "date-input.placeholder",
+        "date-input.border",
+        "date-input.border-focus",
+        "date-input.border-error",
+        "date-input.ring",
+        "date-input.popover-bg",
+        "date-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "open",
+        "filled",
+        "error",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/DateInput.tsx",
+          "underlying_library": "mantine-dates",
+          "exports": [
+            "DateInput",
+            "DateInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/DateInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/date-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms",
+        "form-field"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 9,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 98
     },
     {
       "name": "menu",
@@ -915,6 +1072,81 @@
       "health_score": 94
     },
     {
+      "name": "chart",
+      "component": "chart",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "img role or table fallback",
+        "accessible series labels"
+      ],
+      "semantic_parts": {
+        "plot": "the drawing area",
+        "grid": "gridlines",
+        "axis": "x/y axis labels",
+        "series": "a data series (line/area/bar geometry)",
+        "tooltip": "hover detail card",
+        "legend": "series key"
+      },
+      "token_contract": [
+        "chart.grid",
+        "chart.axis-fg",
+        "chart.label-fg",
+        "chart.tooltip-bg",
+        "chart.tooltip-fg",
+        "chart.series-1",
+        "chart.series-2",
+        "chart.series-3",
+        "chart.series-4",
+        "chart.series-5"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "empty"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Chart.tsx",
+          "underlying_library": "mantine-charts (recharts)",
+          "exports": [
+            "AreaChart",
+            "LineChart",
+            "BarChart",
+            "AreaChartProps",
+            "LineChartProps",
+            "BarChartProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Chart.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/chart.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "cost-latency-transparency"
+      ],
+      "pages_used_in": [
+        "dashboard"
+      ],
+      "tokens_count": 10,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 94
+    },
+    {
       "name": "pagination",
       "component": "pagination",
       "status": "AI-Ready",
@@ -1121,6 +1353,75 @@
       "health_score": 92
     },
     {
+      "name": "toast",
+      "component": "toast",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "outlet": "the fixed stack region (mounted once in ClementineDSProvider)",
+        "root": "a single toast card",
+        "icon": "intent icon",
+        "title": "optional bold lead",
+        "description": "message body",
+        "close": "dismiss button"
+      },
+      "token_contract": [
+        "toast.bg",
+        "toast.fg",
+        "toast.description-fg",
+        "toast.border",
+        "toast.icon-success",
+        "toast.icon-error",
+        "toast.icon-warning",
+        "toast.icon-info",
+        "toast.radius"
+      ],
+      "interaction_states": [
+        "entering",
+        "visible",
+        "exiting"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Toast.tsx",
+          "underlying_library": "mantine-notifications",
+          "exports": [
+            "toast",
+            "ToastOptions"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Toast.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/toast.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "optimistic-correctable",
+        "reversibility"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 9,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 92
+    },
+    {
       "name": "alert",
       "component": "alert",
       "status": "AI-Ready",
@@ -1196,6 +1497,70 @@
         "billing"
       ],
       "tokens_count": 15,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 91
+    },
+    {
+      "name": "carousel",
+      "component": "carousel",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role region",
+        "aria-roledescription carousel",
+        "controls labelled"
+      ],
+      "semantic_parts": {
+        "viewport": "the clipping window",
+        "slide": "a single panel",
+        "control": "prev/next buttons",
+        "indicator": "position dots"
+      },
+      "token_contract": [
+        "carousel.control-bg",
+        "carousel.control-fg",
+        "carousel.control-border",
+        "carousel.indicator",
+        "carousel.indicator-active",
+        "carousel.ring",
+        "carousel.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "dragging"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Carousel.tsx",
+          "underlying_library": "mantine-carousel (embla)",
+          "exports": [
+            "Carousel",
+            "CarouselProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Carousel.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/carousel.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 7,
       "components_used": [],
       "trust_level": 4,
       "health_score": 91
@@ -1664,6 +2029,71 @@
       "components_used": [],
       "trust_level": 4,
       "health_score": 89
+    },
+    {
+      "name": "calendar",
+      "component": "calendar",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-label per day cell"
+      ],
+      "semantic_parts": {
+        "root": "the month grid panel",
+        "header": "month/year label + prev/next controls",
+        "weekday": "weekday column headers",
+        "day": "a day cell (render-prop decorated)",
+        "day-today": "today's outline"
+      },
+      "token_contract": [
+        "calendar.bg",
+        "calendar.fg",
+        "calendar.header-fg",
+        "calendar.weekday-fg",
+        "calendar.day-today-border",
+        "calendar.day-muted-fg",
+        "calendar.ring"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Calendar.tsx",
+          "underlying_library": "mantine-dates",
+          "exports": [
+            "Calendar",
+            "CalendarProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Calendar.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/calendar.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [
+        "dashboard"
+      ],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 88
     },
     {
       "name": "card",
@@ -5831,6 +6261,62 @@
       "components_used": [],
       "trust_level": 4,
       "health_score": 72
+    },
+    {
+      "name": "sparkline",
+      "component": "sparkline",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "img role with trend summary label"
+      ],
+      "semantic_parts": {
+        "line": "the trend stroke",
+        "fill": "optional area under the stroke"
+      },
+      "token_contract": [
+        "sparkline.stroke",
+        "sparkline.fill",
+        "sparkline.stroke-trend-up",
+        "sparkline.stroke-trend-down"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Sparkline.tsx",
+          "underlying_library": "mantine-charts (recharts)",
+          "exports": [
+            "Sparkline",
+            "SparklineProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Sparkline.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/sparkline.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [
+        "dashboard"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 71
     },
     {
       "name": "cost-meter",

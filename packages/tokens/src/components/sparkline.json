@@ -1,0 +1,8 @@
+{
+  "sparkline": {
+    "stroke":        { "$value": "{action.primary}",   "$type": "color" },
+    "fill":          { "$value": "{surface.subtle}",   "$type": "color" },
+    "stroke-trend-up":   { "$value": "{feedback.success}", "$type": "color" },
+    "stroke-trend-down": { "$value": "{feedback.error}",   "$type": "color" }
+  }
+}

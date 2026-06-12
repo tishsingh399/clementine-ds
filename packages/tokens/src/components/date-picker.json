@@ -1,0 +1,15 @@
+{
+  "date-picker": {
+    "bg":                 { "$value": "{surface.elevated}",  "$type": "color" },
+    "fg":                 { "$value": "{text.primary}",      "$type": "color" },
+    "header-fg":          { "$value": "{text.primary}",      "$type": "color" },
+    "weekday-fg":         { "$value": "{text.secondary}",    "$type": "color" },
+    "day-selected-bg":    { "$value": "{action.primary}",    "$type": "color" },
+    "day-selected-fg":    { "$value": "{text.on-action}",    "$type": "color" },
+    "day-in-range-bg":    { "$value": "{surface.subtle}",    "$type": "color" },
+    "day-today-border":   { "$value": "{action.primary}",    "$type": "color" },
+    "day-muted-fg":       { "$value": "{text.tertiary}",     "$type": "color" },
+    "ring":               { "$value": "{focus.ring}",        "$type": "color" },
+    "radius":             { "$value": "{radius.md}",         "$type": "dimension" }
+  }
+}

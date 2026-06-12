@@ -1,0 +1,11 @@
+{
+  "calendar": {
+    "bg":               { "$value": "{surface.elevated}", "$type": "color" },
+    "fg":               { "$value": "{text.primary}",     "$type": "color" },
+    "header-fg":        { "$value": "{text.primary}",     "$type": "color" },
+    "weekday-fg":       { "$value": "{text.secondary}",   "$type": "color" },
+    "day-today-border": { "$value": "{action.primary}",   "$type": "color" },
+    "day-muted-fg":     { "$value": "{text.tertiary}",    "$type": "color" },
+    "ring":             { "$value": "{focus.ring}",       "$type": "color" }
+  }
+}

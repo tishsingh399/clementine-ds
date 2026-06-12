@@ -1,0 +1,13 @@
+{
+  "date-input": {
+    "bg":             { "$value": "{surface.elevated}", "$type": "color" },
+    "fg":             { "$value": "{text.primary}",     "$type": "color" },
+    "placeholder":    { "$value": "{text.secondary}",   "$type": "color" },
+    "border":         { "$value": "{border.strong}",    "$type": "color" },
+    "border-focus":   { "$value": "{border.focus}",     "$type": "color" },
+    "border-error":   { "$value": "{feedback.error}",   "$type": "color" },
+    "ring":           { "$value": "{focus.ring}",       "$type": "color" },
+    "popover-bg":     { "$value": "{surface.elevated}", "$type": "color" },
+    "radius":         { "$value": "{radius.md}",        "$type": "dimension" }
+  }
+}

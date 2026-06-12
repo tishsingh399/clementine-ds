@@ -1,0 +1,11 @@
+{
+  "carousel": {
+    "control-bg":       { "$value": "{surface.elevated}", "$type": "color" },
+    "control-fg":       { "$value": "{text.primary}",     "$type": "color" },
+    "control-border":   { "$value": "{border.strong}",    "$type": "color" },
+    "indicator":        { "$value": "{border.strong}",    "$type": "color" },
+    "indicator-active": { "$value": "{action.primary}",   "$type": "color" },
+    "ring":             { "$value": "{focus.ring}",       "$type": "color" },
+    "radius":           { "$value": "{radius.md}",        "$type": "dimension" }
+  }
+}

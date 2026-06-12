@@ -1,0 +1,13 @@
+{
+  "toast": {
+    "bg":            { "$value": "{surface.elevated}",  "$type": "color" },
+    "fg":            { "$value": "{text.primary}",      "$type": "color" },
+    "description-fg":{ "$value": "{text.secondary}",    "$type": "color" },
+    "border":        { "$value": "{border.default}",    "$type": "color" },
+    "icon-success":  { "$value": "{feedback.success}",  "$type": "color" },
+    "icon-error":    { "$value": "{feedback.error}",    "$type": "color" },
+    "icon-warning":  { "$value": "{feedback.warning}",  "$type": "color" },
+    "icon-info":     { "$value": "{action.primary}",    "$type": "color" },
+    "radius":        { "$value": "{radius.md}",         "$type": "dimension" }
+  }
+}

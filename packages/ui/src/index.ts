@@ -146,3 +146,12 @@ export { CharacterCounter, type CharacterCounterProps } from './components/Chara
 
 // Re-export commonly used Mantine layout components
 export { Stack, Group, Text, Title, Flex, Box, Container } from '@mantine/core';
+
+// Dependency-gated components (HANDOFF Step 3): dates, notifications, charts, carousel
+export { DatePicker, type DatePickerProps } from './components/DatePicker';
+export { DateInput, type DateInputProps } from './components/DateInput';
+export { Calendar, type CalendarProps } from './components/Calendar';
+export { toast, type ToastOptions } from './components/Toast';
+export { AreaChart, LineChart, BarChart, type AreaChartProps, type LineChartProps, type BarChartProps } from './components/Chart';
+export { Sparkline, type SparklineProps } from './components/Sparkline';
+export { Carousel, type CarouselProps } from './components/Carousel';

@@ -1,0 +1,14 @@
+{
+  "chart": {
+    "grid":        { "$value": "{border.default}",      "$type": "color" },
+    "axis-fg":     { "$value": "{text.secondary}",      "$type": "color" },
+    "label-fg":    { "$value": "{text.primary}",        "$type": "color" },
+    "tooltip-bg":  { "$value": "{surface.elevated}",    "$type": "color" },
+    "tooltip-fg":  { "$value": "{text.primary}",        "$type": "color" },
+    "series-1":    { "$value": "{action.primary}",      "$type": "color" },
+    "series-2":    { "$value": "{feedback.success}",    "$type": "color" },
+    "series-3":    { "$value": "{feedback.warning}",    "$type": "color" },
+    "series-4":    { "$value": "{feedback.error}",      "$type": "color" },
+    "series-5":    { "$value": "{risk.medium}",         "$type": "color" }
+  }
+}
