@@ -13,3 +13,6 @@ storybook-static/
 # Local tooling artifacts (not part of the system)
 .playwright-mcp/
 *.fig
+
+# Turbo run logs
+.turbo/
