@@ -1,0 +1,12 @@
+{
+  "undo-bar": {
+    "bg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.on-action}",
+      "$type": "color"
+    }
+  }
+}

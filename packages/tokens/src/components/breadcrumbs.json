@@ -1,0 +1,7 @@
+{
+  "breadcrumbs": {
+    "fg":         { "$value": "{text.secondary}", "$type": "color" },
+    "fg-current": { "$value": "{text.primary}",   "$type": "color" },
+    "separator":  { "$value": "{text.tertiary}",  "$type": "color" }
+  }
+}

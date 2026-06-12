@@ -1,0 +1,8 @@
+{
+  "skeleton": {
+    "base":      { "$value": "{surface.subtle}",  "$type": "color" },
+    "highlight": { "$value": "{surface.default}", "$type": "color" },
+    "duration":  { "$value": "{motion.duration-stream}", "$type": "duration" },
+    "radius":    { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

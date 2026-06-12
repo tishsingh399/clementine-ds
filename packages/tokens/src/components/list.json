@@ -1,0 +1,12 @@
+{
+  "list": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "marker": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "activity-feed": {
+    "actor": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "action": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

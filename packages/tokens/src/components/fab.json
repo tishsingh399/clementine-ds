@@ -1,0 +1,20 @@
+{
+  "fab": {
+    "bg": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.on-action}",
+      "$type": "color"
+    },
+    "shadow": {
+      "$value": "{shadow.lg}",
+      "$type": "shadow"
+    },
+    "radius": {
+      "$value": "{radius.xl}",
+      "$type": "dimension"
+    }
+  }
+}

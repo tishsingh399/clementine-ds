@@ -1,0 +1,16 @@
+{
+  "faceted-filter": {
+    "group-label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "count": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

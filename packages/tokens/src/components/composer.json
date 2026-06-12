@@ -1,0 +1,12 @@
+{
+  "composer": {
+    "bg":           { "$value": "{surface.elevated}",   "$type": "color" },
+    "border":       { "$value": "{border.default}",     "$type": "color" },
+    "border-focus": { "$value": "{focus.ring}",         "$type": "color" },
+    "fg":           { "$value": "{text.primary}",       "$type": "color" },
+    "placeholder":  { "$value": "{text.tertiary}",      "$type": "color" },
+    "send-bg":      { "$value": "{action.primary}",     "$type": "color" },
+    "stop-bg":      { "$value": "{action.destructive}", "$type": "color" },
+    "radius":       { "$value": "{radius.lg}", "$type": "dimension" }
+  }
+}

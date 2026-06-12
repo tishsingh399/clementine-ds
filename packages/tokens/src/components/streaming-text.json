@@ -1,0 +1,7 @@
+{
+  "streaming": {
+    "fg":       { "$value": "{text.primary}",   "$type": "color" },
+    "caret":    { "$value": "{action.primary}", "$type": "color" },
+    "duration": { "$value": "{motion.duration-stream}", "$type": "duration" }
+  }
+}

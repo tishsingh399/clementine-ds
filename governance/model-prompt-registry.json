@@ -1,0 +1,16 @@
+{
+  "$comment": "Tray 9 · which model + prompt version each AI surface was built/verified against. Mirrors ds_version for tokens/components. Update when a surface is re-verified against a new model or prompt.",
+  "version": "clementine-ds@HEAD",
+  "updated": "2026-06-10",
+  "models": {
+    "default": "claude-opus-4-8",
+    "fast": "claude-haiku-4-5-20251001"
+  },
+  "surfaces": [
+    { "surface": "chat",           "components": ["Message", "Composer", "StreamingText"], "model_baseline": "claude-opus-4-8", "prompt_version": "chat@2026-06-10",      "verified": "2026-06-10" },
+    { "surface": "reasoning",      "components": ["ReasoningTrace"],                       "model_baseline": "claude-opus-4-8", "prompt_version": "reasoning@2026-06-10", "verified": "2026-06-10" },
+    { "surface": "tool-use",       "components": ["ToolCallCard", "HITLGate"],             "model_baseline": "claude-opus-4-8", "prompt_version": "tools@2026-06-10",     "verified": "2026-06-10" },
+    { "surface": "provenance",     "components": ["CitationChip", "DisclosureBadge"],      "model_baseline": "claude-opus-4-8", "prompt_version": "cite@2026-06-10",      "verified": "2026-06-10" },
+    { "surface": "artifacts",      "components": ["ArtifactFrame"],                        "model_baseline": "claude-opus-4-8", "prompt_version": "artifact@2026-06-10",  "verified": "2026-06-10" }
+  ]
+}

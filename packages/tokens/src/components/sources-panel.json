@@ -1,0 +1,32 @@
+{
+  "sources-panel": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "item-fg": {
+      "$value": "{text.link}",
+      "$type": "color"
+    },
+    "item-meta": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "index-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.md}",
+      "$type": "dimension"
+    }
+  }
+}

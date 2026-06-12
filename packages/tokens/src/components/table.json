@@ -1,0 +1,32 @@
+{
+  "table": {
+    "header-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "header-fg": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "row-bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "row-bg-striped": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    },
+    "row-bg-hover": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

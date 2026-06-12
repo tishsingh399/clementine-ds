@@ -1,0 +1,20 @@
+{
+  "prompt-suggestions": {
+    "bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.xl}",
+      "$type": "dimension"
+    }
+  }
+}

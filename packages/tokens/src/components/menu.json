@@ -1,0 +1,15 @@
+{
+  "menu": {
+    "bg":       { "$value": "{surface.elevated}", "$type": "color" },
+    "border":   { "$value": "{border.default}",   "$type": "color" },
+    "shadow":   { "$value": "{shadow.lg}",         "$type": "shadow" },
+    "radius":   { "$value": "{radius.md}",         "$type": "dimension" },
+    "item": {
+      "fg":        { "$value": "{text.primary}",   "$type": "color" },
+      "fg-danger": { "$value": "{feedback.error}", "$type": "color" },
+      "bg-hover":  { "$value": "{surface.subtle}", "$type": "color" }
+    },
+    "label":    { "$value": "{text.secondary}", "$type": "color" },
+    "divider":  { "$value": "{border.default}", "$type": "color" }
+  }
+}

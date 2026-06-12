@@ -1,0 +1,28 @@
+{
+  "notification": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg-title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "fg-body": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "accent": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.md}",
+      "$type": "dimension"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "timeline": {
+    "line": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "bullet": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "bullet-active": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "fg-title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "fg-body": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

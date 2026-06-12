@@ -1,0 +1,20 @@
+{
+  "tree": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "bg-selected": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "guide": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "chevron": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

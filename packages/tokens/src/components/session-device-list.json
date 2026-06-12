@@ -1,0 +1,24 @@
+{
+  "session-device-list": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "revoke": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  }
+}

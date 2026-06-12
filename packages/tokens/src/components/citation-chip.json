@@ -1,0 +1,8 @@
+{
+  "citation": {
+    "bg":     { "$value": "{surface.subtle}", "$type": "color" },
+    "fg":     { "$value": "{text.secondary}", "$type": "color" },
+    "border": { "$value": "{border.default}", "$type": "color" },
+    "radius": { "$value": "{radius.sm}", "$type": "dimension" }
+  }
+}

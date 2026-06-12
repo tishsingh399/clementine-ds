@@ -1,0 +1,9 @@
+{
+  "avatar": {
+    "bg":        { "$value": "{surface.subtle}", "$type": "color" },
+    "fg":        { "$value": "{text.secondary}", "$type": "color" },
+    "border":    { "$value": "{border.default}", "$type": "color" },
+    "ring":      { "$value": "{focus.ring}",     "$type": "color" },
+    "radius":    { "$value": "{radius.xl}",      "$type": "dimension" }
+  }
+}

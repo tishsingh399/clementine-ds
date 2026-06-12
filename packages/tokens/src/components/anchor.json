@@ -1,0 +1,6 @@
+{
+  "anchor": {
+    "fg":       { "$value": "{text.link}",      "$type": "color" },
+    "fg-hover": { "$value": "{action.primary}", "$type": "color" }
+  }
+}

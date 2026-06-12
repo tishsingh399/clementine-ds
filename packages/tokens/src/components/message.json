@@ -1,0 +1,9 @@
+{
+  "message": {
+    "user":      { "bg": { "$value": "{action.primary}",  "$type": "color" }, "fg": { "$value": "{text.on-action}", "$type": "color" } },
+    "assistant": { "bg": { "$value": "{surface.subtle}",  "$type": "color" }, "fg": { "$value": "{text.primary}",    "$type": "color" } },
+    "system":    { "bg": { "$value": "{surface.default}", "$type": "color" }, "fg": { "$value": "{text.secondary}",  "$type": "color" } },
+    "meta":      { "$value": "{text.tertiary}", "$type": "color" },
+    "radius":    { "$value": "{radius.lg}", "$type": "dimension" }
+  }
+}

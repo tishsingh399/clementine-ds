@@ -1,0 +1,9 @@
+{
+  "segmented-control": {
+    "bg":        { "$value": "{surface.subtle}",   "$type": "color" },
+    "bg-active": { "$value": "{surface.elevated}", "$type": "color" },
+    "fg":        { "$value": "{text.secondary}",   "$type": "color" },
+    "fg-active": { "$value": "{text.primary}",     "$type": "color" },
+    "radius":    { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

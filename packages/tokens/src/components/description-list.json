@@ -1,0 +1,12 @@
+{
+  "description-list": {
+    "term": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "detail": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "autocomplete": {
+    "bg":            { "$value": "{surface.elevated}", "$type": "color" },
+    "border":        { "$value": "{border.default}",   "$type": "color" },
+    "border-focus":  { "$value": "{focus.ring}",       "$type": "color" },
+    "fg":            { "$value": "{text.primary}",     "$type": "color" },
+    "placeholder":   { "$value": "{text.tertiary}",    "$type": "color" },
+    "popover-bg":    { "$value": "{surface.elevated}", "$type": "color" },
+    "option-bg-hover": { "$value": "{surface.subtle}", "$type": "color" },
+    "radius":        { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

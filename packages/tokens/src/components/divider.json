@@ -1,0 +1,6 @@
+{
+  "divider": {
+    "line":  { "$value": "{border.default}", "$type": "color" },
+    "label": { "$value": "{text.tertiary}",  "$type": "color" }
+  }
+}

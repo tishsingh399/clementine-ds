@@ -1,0 +1,12 @@
+{
+  "role-picker": {
+    "pill-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    }
+  }
+}

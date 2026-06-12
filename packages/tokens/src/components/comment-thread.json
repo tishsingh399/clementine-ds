@@ -1,0 +1,16 @@
+{
+  "comment-thread": {
+    "author": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "body": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

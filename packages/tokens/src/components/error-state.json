@@ -1,0 +1,24 @@
+{
+  "error-state": {
+    "bg": {
+      "$value": "{feedback.error-subtle}",
+      "$type": "color"
+    },
+    "icon": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "description": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.lg}",
+      "$type": "dimension"
+    }
+  }
+}

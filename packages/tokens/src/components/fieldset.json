@@ -1,0 +1,20 @@
+{
+  "fieldset": {
+    "bg": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "legend": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "radius": {
+      "$value": "{radius.md}",
+      "$type": "dimension"
+    }
+  }
+}

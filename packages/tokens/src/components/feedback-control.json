@@ -1,0 +1,7 @@
+{
+  "feedback-control": {
+    "idle":     { "$value": "{text.tertiary}",   "$type": "color" },
+    "positive": { "$value": "{feedback.success}", "$type": "color" },
+    "negative": { "$value": "{feedback.error}",   "$type": "color" }
+  }
+}

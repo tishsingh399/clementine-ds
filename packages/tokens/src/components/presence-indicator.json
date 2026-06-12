@@ -1,0 +1,24 @@
+{
+  "presence-indicator": {
+    "online": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "away": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "busy": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "offline": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "ring": {
+      "$value": "{surface.default}",
+      "$type": "color"
+    }
+  }
+}

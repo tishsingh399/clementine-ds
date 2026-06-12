@@ -1,0 +1,13 @@
+{
+  "pagination": {
+    "item": {
+      "fg":        { "$value": "{text.primary}",   "$type": "color" },
+      "bg-active": { "$value": "{action.primary}", "$type": "color" },
+      "fg-active": { "$value": "{text.on-action}", "$type": "color" },
+      "bg-hover":  { "$value": "{surface.subtle}", "$type": "color" }
+    },
+    "border":       { "$value": "{border.default}", "$type": "color" },
+    "border-focus": { "$value": "{focus.ring}",     "$type": "color" },
+    "radius":       { "$value": "{radius.md}", "$type": "dimension" }
+  }
+}

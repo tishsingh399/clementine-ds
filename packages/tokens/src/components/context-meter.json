@@ -1,0 +1,20 @@
+{
+  "context-meter": {
+    "track": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "fill": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "fill-warning": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

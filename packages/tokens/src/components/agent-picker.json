@@ -1,0 +1,20 @@
+{
+  "agent-picker": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "icon": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

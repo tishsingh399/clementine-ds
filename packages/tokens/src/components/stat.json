@@ -1,0 +1,20 @@
+{
+  "stat": {
+    "value": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "delta-up": {
+      "$value": "{feedback.success}",
+      "$type": "color"
+    },
+    "delta-down": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  }
+}

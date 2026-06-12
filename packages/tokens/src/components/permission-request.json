@@ -1,0 +1,20 @@
+{
+  "permission-request": {
+    "bg": {
+      "$value": "{feedback.warning-subtle}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{feedback.warning}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "scope-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    }
+  }
+}

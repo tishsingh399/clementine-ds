@@ -1,0 +1,16 @@
+{
+  "field-label": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "required": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "optional": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

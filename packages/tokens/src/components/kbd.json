@@ -1,0 +1,8 @@
+{
+  "kbd": {
+    "bg":     { "$value": "{surface.subtle}", "$type": "color" },
+    "fg":     { "$value": "{text.primary}",   "$type": "color" },
+    "border": { "$value": "{border.strong}",  "$type": "color" },
+    "radius": { "$value": "{radius.sm}", "$type": "dimension" }
+  }
+}

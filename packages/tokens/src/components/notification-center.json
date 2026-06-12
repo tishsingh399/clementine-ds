@@ -1,0 +1,28 @@
+{
+  "notification-center": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "unread-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "title": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "body": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "dot": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "meta": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    }
+  }
+}

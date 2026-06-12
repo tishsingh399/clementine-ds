@@ -1,0 +1,28 @@
+{
+  "slider": {
+    "track": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "track-filled": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "thumb": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "thumb-border": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "mark": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.on-action}",
+      "$type": "color"
+    }
+  }
+}
