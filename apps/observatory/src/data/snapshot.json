@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T02:47:31.254Z",
+  "generated_at": "2026-06-12T03:04:37.034Z",
   "repo": "tishsingh399/clementine-ds",
   "surfaces": {
     "storybook": "https://clementine-ds-storybook.vercel.app",
@@ -10,7 +10,7 @@
     "cli": "https://github.com/tishsingh399/agentic-spec"
   },
   "scoreboard": {
-    "quality": 64,
+    "quality": 78,
     "drift": 100,
     "coverage": 100
   },
@@ -59,14 +59,14 @@
     }
   ],
   "composer": {
-    "patterns": 3,
+    "patterns": 22,
     "needs_input": 8
   },
   "evaluator": {
     "rules_passing": 15,
     "rules_total": 15,
-    "checks_passing": 3,
-    "checks_total": 12
+    "checks_passing": 105,
+    "checks_total": 114
   },
   "validators": [
     {
@@ -147,108 +147,230 @@
   ],
   "recent_changes": [
     {
+      "hash": "a355f020",
+      "when": "3 hours ago",
+      "subject": "Wave I — states & form glue (10 components)"
+    },
+    {
+      "hash": "817ea235",
+      "when": "8 hours ago",
+      "subject": "Wave H — 14 Part 2 enterprise components"
+    },
+    {
+      "hash": "320c4a3e",
+      "when": "9 hours ago",
+      "subject": "Wave G — 16 Part 4 patterns (agentic + governance)"
+    },
+    {
+      "hash": "bb313e94",
+      "when": "9 hours ago",
+      "subject": "Wave F — 14 Part 3 AI long-tail components"
+    },
+    {
+      "hash": "e0fbac36",
+      "when": "9 hours ago",
+      "subject": "Wave E — 13 Part 1 finishers (foundation ~complete)"
+    },
+    {
+      "hash": "71e5fe64",
+      "when": "11 hours ago",
+      "subject": "Wave D (6 AI surfaces) + guidance backfill — 63 components, full parity"
+    },
+    {
+      "hash": "7082f088",
+      "when": "11 hours ago",
+      "subject": "Wave C — 5 data display components (full pipeline)"
+    },
+    {
+      "hash": "75264537",
+      "when": "11 hours ago",
+      "subject": "Wave B — 9 form input components (full pipeline)"
+    },
+    {
+      "hash": "bdb1ba8d",
+      "when": "12 hours ago",
+      "subject": "Wave A — 12 core staple components (full pipeline)"
+    },
+    {
+      "hash": "fb8f7577",
+      "when": "23 hours ago",
+      "subject": "Build AI-ready design system: 9 trays, 31 components, hooks + system docs"
+    },
+    {
       "hash": "4f01ce07",
-      "when": "6 hours ago",
+      "when": "30 hours ago",
       "subject": "Add apps/observatory — health dashboard for Clementine"
     },
     {
       "hash": "94f3760f",
-      "when": "7 hours ago",
+      "when": "32 hours ago",
       "subject": "Quick wins: patterns/, TRUST-LEVELS.md, Alert + Tooltip components"
     },
     {
       "hash": "8e08f45f",
-      "when": "29 hours ago",
+      "when": "2 days ago",
       "subject": "Fix CI type-check: build tokens dist before checking ui types"
     },
     {
       "hash": "44bb7f1f",
-      "when": "29 hours ago",
+      "when": "2 days ago",
       "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
     },
     {
       "hash": "3a40f8be",
-      "when": "2 days ago",
+      "when": "3 days ago",
       "subject": "Migrate remaining 7 components to 3-tier (+ fix text-input + badge)"
-    },
-    {
-      "hash": "6b60efc4",
-      "when": "2 days ago",
-      "subject": "Add 3-tier token architecture (primitive → semantic → component)"
-    },
-    {
-      "hash": "2a34d423",
-      "when": "2 days ago",
-      "subject": "Rename tina-ds → Clementine DS across the system"
-    },
-    {
-      "hash": "b4aa4795",
-      "when": "2 days ago",
-      "subject": "Stub specs for remaining 9 components"
-    },
-    {
-      "hash": "cdd48757",
-      "when": "2 days ago",
-      "subject": "Add Button spec — gold-standard agentic doc"
-    },
-    {
-      "hash": "f2fc66e8",
-      "when": "3 months ago",
-      "subject": "Add .gitignore, remove tracked artifacts"
-    },
-    {
-      "hash": "b1e86870",
-      "when": "3 months ago",
-      "subject": "Initial commit: Tina DS v0 — 10 components, tokens, Storybook"
     }
   ],
   "recent_scans": [
     {
       "hash": "8f0714ca",
-      "when": "28 hours ago",
+      "when": "2 days ago",
       "subject": "Add size-limit + a11y CI (Phase 3 part 1)"
     },
     {
       "hash": "8e08f45f",
-      "when": "29 hours ago",
+      "when": "2 days ago",
       "subject": "Fix CI type-check: build tokens dist before checking ui types"
     },
     {
       "hash": "44bb7f1f",
-      "when": "29 hours ago",
+      "when": "2 days ago",
       "subject": "Fix CI: regen lockfile, bump Node to 22 for style-dictionary"
     },
     {
       "hash": "e75ce0f4",
-      "when": "29 hours ago",
+      "when": "2 days ago",
       "subject": "Add CI, CodeQL, Dependabot, CONTRIBUTING"
     }
   ],
   "totals": {
-    "specs": 12,
-    "ai_ready": 3,
+    "specs": 114,
+    "ai_ready": 105,
     "in_progress": 0,
     "draft": 9,
-    "patterns": 3,
+    "patterns": 22,
     "tokens": {
-      "primitives": 82,
+      "primitives": 87,
       "semantic": 32,
       "components": {
+        "accordion": 8,
+        "activity-feed": 3,
+        "agent-card": 4,
+        "agent-picker": 4,
+        "agent-status": 5,
         "alert": 15,
+        "anchor": 2,
+        "artifact-frame": 6,
+        "attachment-pill": 5,
+        "audit-log-viewer": 5,
+        "autocomplete": 8,
+        "avatar": 5,
         "badge": 10,
+        "breadcrumbs": 3,
+        "bulk-action-bar": 3,
+        "button-group": 1,
         "button": 16,
+        "card": 7,
+        "character-counter": 2,
         "checkbox": 12,
+        "chip": 7,
+        "citation-chip": 4,
+        "code-block": 6,
+        "code": 3,
+        "color-input": 5,
+        "comment-thread": 3,
+        "composer": 8,
+        "confidence-meter": 5,
+        "context-meter": 4,
+        "conversation-thread": 2,
+        "cost-meter": 2,
+        "description-list": 2,
+        "diff-view": 4,
+        "disclosure-badge": 4,
+        "divider": 2,
+        "drawer": 6,
+        "empty-state": 5,
+        "error-state": 5,
+        "export-menu": 2,
+        "fab": 4,
+        "faceted-filter": 3,
+        "feedback-control": 3,
+        "field-label": 3,
+        "fieldset": 4,
+        "file-input": 6,
+        "helper-text": 1,
+        "hitl-gate": 8,
+        "hover-card": 4,
+        "icon-button": 3,
+        "image": 2,
+        "indicator": 2,
+        "inline-message": 5,
+        "kbd": 4,
+        "list": 2,
+        "loader": 1,
+        "loading-state": 3,
+        "maintenance-banner": 4,
+        "memory-panel": 4,
+        "mention": 2,
+        "menu": 9,
+        "message-actions": 2,
+        "message": 8,
         "modal": 8,
+        "model-selector": 5,
+        "multi-select": 9,
+        "notification-center": 6,
+        "notification": 6,
+        "number-input": 6,
+        "pagination": 7,
+        "password-input": 6,
+        "permission-request": 4,
+        "pill": 4,
+        "pin-input": 5,
+        "plan-steps": 5,
+        "popover": 4,
+        "presence-indicator": 5,
+        "progress-circle": 3,
+        "progress": 6,
+        "prompt-suggestions": 4,
         "radio": 7,
+        "rating": 2,
+        "rbac-matrix": 4,
+        "reasoning-trace": 5,
+        "refusal-state": 4,
+        "role-picker": 2,
+        "saved-views": 2,
+        "search-field": 7,
+        "segmented-control": 5,
         "select": 15,
+        "session-device-list": 5,
+        "session-list": 3,
+        "skeleton": 4,
+        "slider": 6,
+        "sources-panel": 7,
+        "split-button": 4,
+        "spoiler": 1,
+        "stat": 4,
+        "status-dot": 5,
+        "stepper": 7,
+        "streaming-text": 3,
+        "success-state": 5,
         "switch": 6,
+        "table": 7,
         "tabs": 7,
+        "tags-input": 8,
         "text-input": 11,
         "textarea": 10,
-        "tooltip": 5
+        "theme-icon": 3,
+        "timeline": 5,
+        "tool-call-card": 9,
+        "tooltip": 5,
+        "tree": 4,
+        "undo-bar": 2,
+        "validation-message": 4
       }
     },
-    "avg_health": 64
+    "avg_health": 78
   },
   "specs": [
     {
@@ -337,6 +459,668 @@
       "health_score": 100
     },
     {
+      "name": "menu",
+      "component": "menu",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-haspopup",
+        "aria-expanded",
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "The Menu controller — owns open state and positioning",
+        "target": "The trigger element (button) that opens the dropdown",
+        "dropdown": "The floating surface — role=\"menu\"",
+        "item": "An action — role=\"menuitem\"",
+        "label": "A non-interactive group heading inside the dropdown",
+        "divider": "A separator between item groups"
+      },
+      "token_contract": [
+        "menu.bg",
+        "menu.border",
+        "menu.shadow",
+        "menu.radius",
+        "menu.item.fg",
+        "menu.item.fg-danger",
+        "menu.item.bg-hover",
+        "menu.label",
+        "menu.divider"
+      ],
+      "interaction_states": [
+        "closed",
+        "open",
+        "item-hover",
+        "item-focus",
+        "item-disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Menu.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Menu",
+            "MenuTarget",
+            "MenuDropdown",
+            "MenuItem",
+            "MenuLabel",
+            "MenuDivider",
+            "MenuProps",
+            "MenuItemProps",
+            "MenuLabelProps",
+            "MenuDividerProps",
+            "MenuTargetProps",
+            "MenuDropdownProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Menu.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/menu.json"
+        }
+      },
+      "patterns_used_in": [
+        "action-bar",
+        "row-actions",
+        "global-header"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "list-view",
+        "settings"
+      ],
+      "tokens_count": 9,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 98
+    },
+    {
+      "name": "multi-select",
+      "component": "multi-select",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-expanded",
+        "aria-multiselectable"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "pill": "a selected value chip",
+        "popover": "the option list",
+        "option": "a selectable option"
+      },
+      "token_contract": [
+        "multi-select.bg",
+        "multi-select.border",
+        "multi-select.border-focus",
+        "multi-select.fg",
+        "multi-select.placeholder",
+        "multi-select.pill-bg",
+        "multi-select.pill-fg",
+        "multi-select.option-bg-hover",
+        "multi-select.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/MultiSelect.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "MultiSelect",
+            "MultiSelectProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/MultiSelect.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/multi-select.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 9,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 98
+    },
+    {
+      "name": "accordion",
+      "component": "accordion",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-expanded",
+        "aria-controls",
+        "aria-labelledby"
+      ],
+      "semantic_parts": {
+        "root": "The Accordion wrapper — owns variant and spacing",
+        "item": "A single collapsible section",
+        "control": "The header — a native <button> that toggles the panel",
+        "chevron": "The rotation indicator on the control",
+        "panel": "The collapsible region revealed by the control",
+        "label": "The control's text content"
+      },
+      "token_contract": [
+        "accordion.bg",
+        "accordion.bg-hover",
+        "accordion.border",
+        "accordion.fg.label",
+        "accordion.fg.content",
+        "accordion.fg.chevron",
+        "accordion.border-focus",
+        "accordion.radius"
+      ],
+      "interaction_states": [
+        "collapsed",
+        "expanded",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Accordion.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Accordion",
+            "AccordionItem",
+            "AccordionControl",
+            "AccordionPanel",
+            "AccordionProps",
+            "AccordionItemProps",
+            "AccordionControlProps",
+            "AccordionPanelProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Accordion.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/accordion.json"
+        }
+      },
+      "patterns_used_in": [
+        "progressive-disclosure",
+        "faq",
+        "settings-groups"
+      ],
+      "pages_used_in": [
+        "settings",
+        "help",
+        "onboarding"
+      ],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 96
+    },
+    {
+      "name": "autocomplete",
+      "component": "autocomplete",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-expanded",
+        "aria-controls",
+        "aria-activedescendant",
+        "aria-autocomplete"
+      ],
+      "semantic_parts": {
+        "input": "The text field (role=combobox)",
+        "popover": "The suggestion list (role=listbox)",
+        "option": "A suggestion (role=option)",
+        "label": "Field label",
+        "error": "Validation message"
+      },
+      "token_contract": [
+        "autocomplete.bg",
+        "autocomplete.border",
+        "autocomplete.border-focus",
+        "autocomplete.fg",
+        "autocomplete.placeholder",
+        "autocomplete.popover-bg",
+        "autocomplete.option-bg-hover",
+        "autocomplete.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "typing",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Autocomplete.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Autocomplete",
+            "AutocompleteProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Autocomplete.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/autocomplete.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms",
+        "search",
+        "assignee-picker"
+      ],
+      "pages_used_in": [
+        "settings",
+        "list-view"
+      ],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 96
+    },
+    {
+      "name": "tool-call-card",
+      "component": "tool-call-card",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "root": "Bordered card",
+        "header": "Tool name + status badge (toggle)",
+        "args": "Collapsible code block of arguments",
+        "result": "Tool output"
+      },
+      "token_contract": [
+        "tool-call.bg",
+        "tool-call.border",
+        "tool-call.name",
+        "tool-call.args-bg",
+        "tool-call.status.pending",
+        "tool-call.status.running",
+        "tool-call.status.success",
+        "tool-call.status.error",
+        "tool-call.radius"
+      ],
+      "interaction_states": [
+        "pending",
+        "running",
+        "success",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ToolCallCard.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ToolCallCard",
+            "ToolCallCardProps",
+            "ToolCallStatus"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ToolCallCard.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/tool-call-card.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat",
+        "tool-use"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 9,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 95
+    },
+    {
+      "name": "composer",
+      "component": "composer",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "Bordered container",
+        "textarea": "Autosizing prompt input",
+        "send": "Send action (becomes Stop while busy)"
+      },
+      "token_contract": [
+        "composer.bg",
+        "composer.border",
+        "composer.border-focus",
+        "composer.fg",
+        "composer.placeholder",
+        "composer.send-bg",
+        "composer.stop-bg",
+        "composer.radius"
+      ],
+      "interaction_states": [
+        "idle",
+        "focus",
+        "typing",
+        "busy",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/Composer.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Composer",
+            "ComposerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/Composer.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/composer.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat",
+        "empty-state"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 94
+    },
+    {
+      "name": "pagination",
+      "component": "pagination",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label",
+        "aria-current"
+      ],
+      "semantic_parts": {
+        "root": "The navigation landmark",
+        "item": "A page button",
+        "active": "The current page (aria-current)",
+        "ellipsis": "Truncation gap",
+        "control": "Previous / next buttons"
+      },
+      "token_contract": [
+        "pagination.item.fg",
+        "pagination.item.bg-active",
+        "pagination.item.fg-active",
+        "pagination.item.bg-hover",
+        "pagination.border",
+        "pagination.border-focus",
+        "pagination.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "active",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Pagination.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Pagination",
+            "PaginationProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Pagination.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/pagination.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "search-results",
+        "list-view"
+      ],
+      "pages_used_in": [
+        "list-view",
+        "audit-log"
+      ],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 94
+    },
+    {
+      "name": "message",
+      "component": "message",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-busy"
+      ],
+      "semantic_parts": {
+        "root": "The turn row (alignment by role)",
+        "avatar": "Assistant/system identity",
+        "bubble": "The content container",
+        "meta": "Timestamp / status line"
+      },
+      "token_contract": [
+        "message.user.bg",
+        "message.user.fg",
+        "message.assistant.bg",
+        "message.assistant.fg",
+        "message.system.bg",
+        "message.system.fg",
+        "message.meta",
+        "message.radius"
+      ],
+      "interaction_states": [
+        "sending",
+        "streaming",
+        "complete",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/Message.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Message",
+            "MessageProps",
+            "MessageRole",
+            "MessageStatus"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/Message.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/message.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 93
+    },
+    {
+      "name": "chip",
+      "component": "chip",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-checked"
+      ],
+      "semantic_parts": {
+        "root": "the toggle",
+        "label": "chip text",
+        "group": "ChipGroup wrapper (single/multi)"
+      },
+      "token_contract": [
+        "chip.bg",
+        "chip.bg-checked",
+        "chip.fg",
+        "chip.fg-checked",
+        "chip.border",
+        "chip.border-checked",
+        "chip.radius"
+      ],
+      "interaction_states": [
+        "unchecked",
+        "checked",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Chip.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Chip",
+            "ChipGroup",
+            "ChipProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Chip.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/chip.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 92
+    },
+    {
       "name": "alert",
       "component": "alert",
       "status": "AI-Ready",
@@ -417,6 +1201,792 @@
       "health_score": 91
     },
     {
+      "name": "stepper",
+      "component": "stepper",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-current"
+      ],
+      "semantic_parts": {
+        "root": "the step row",
+        "step": "a single step",
+        "completed": "completed-state content",
+        "separator": "connector between steps"
+      },
+      "token_contract": [
+        "stepper.bg-completed",
+        "stepper.bg-active",
+        "stepper.bg-pending",
+        "stepper.fg-active",
+        "stepper.fg-pending",
+        "stepper.separator",
+        "stepper.border-focus"
+      ],
+      "interaction_states": [
+        "pending",
+        "active",
+        "completed",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Stepper.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Stepper",
+            "StepperStep",
+            "StepperCompleted",
+            "StepperProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Stepper.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/stepper.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 91
+    },
+    {
+      "name": "tags-input",
+      "component": "tags-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "pill": "an entered tag",
+        "label": "field label"
+      },
+      "token_contract": [
+        "tags-input.bg",
+        "tags-input.border",
+        "tags-input.border-focus",
+        "tags-input.fg",
+        "tags-input.placeholder",
+        "tags-input.pill-bg",
+        "tags-input.pill-fg",
+        "tags-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/TagsInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "TagsInput",
+            "TagsInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/TagsInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/tags-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 91
+    },
+    {
+      "name": "hitl-gate",
+      "component": "hitl-gate",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "Caution-styled container (role=group)",
+        "title": "What needs approval",
+        "preview": "The action awaiting the decision",
+        "actions": "Approve / Deny / Edit"
+      },
+      "token_contract": [
+        "hitl.bg",
+        "hitl.border",
+        "hitl.title",
+        "hitl.body",
+        "hitl.approve-bg",
+        "hitl.approve-destructive-bg",
+        "hitl.deny-bg",
+        "hitl.radius"
+      ],
+      "interaction_states": [
+        "pending",
+        "approved",
+        "denied"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/HITLGate.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "HITLGate",
+            "HITLGateProps",
+            "HITLStatus"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/HITLGate.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/hitl-gate.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "tool-use",
+        "wizard"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 8,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 90
+    },
+    {
+      "name": "drawer",
+      "component": "drawer",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-modal",
+        "aria-labelledby"
+      ],
+      "semantic_parts": {
+        "overlay": "The scrim behind the panel",
+        "panel": "The sliding container",
+        "header": "Title row with close affordance",
+        "title": "The drawer's accessible name",
+        "body": "Scrollable content region",
+        "close": "Close button (needs aria-label)"
+      },
+      "token_contract": [
+        "drawer.bg",
+        "drawer.overlay",
+        "drawer.border",
+        "drawer.fg.title",
+        "drawer.fg.body",
+        "drawer.radius"
+      ],
+      "interaction_states": [
+        "closed",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Drawer.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Drawer",
+            "DrawerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Drawer.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/drawer.json"
+        }
+      },
+      "patterns_used_in": [
+        "filters",
+        "detail-panel",
+        "create-edit"
+      ],
+      "pages_used_in": [
+        "list-view",
+        "dashboard"
+      ],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 89
+    },
+    {
+      "name": "notification",
+      "component": "notification",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "root": "the card",
+        "accent": "left status stripe",
+        "title": "headline",
+        "body": "message",
+        "close": "dismiss button"
+      },
+      "token_contract": [
+        "notification.bg",
+        "notification.border",
+        "notification.fg-title",
+        "notification.fg-body",
+        "notification.accent",
+        "notification.radius"
+      ],
+      "interaction_states": [
+        "info",
+        "success",
+        "error",
+        "loading"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Notification.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Notification",
+            "NotificationProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Notification.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/notification.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 89
+    },
+    {
+      "name": "search-field",
+      "component": "search-field",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "icon": "search affordance",
+        "clear": "clear button"
+      },
+      "token_contract": [
+        "search-field.bg",
+        "search-field.border",
+        "search-field.border-focus",
+        "search-field.fg",
+        "search-field.placeholder",
+        "search-field.icon",
+        "search-field.radius"
+      ],
+      "interaction_states": [
+        "empty",
+        "typing",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SearchField.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "SearchField",
+            "SearchFieldProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SearchField.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/search-field.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 89
+    },
+    {
+      "name": "slider",
+      "component": "slider",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-valuenow",
+        "aria-valuemin",
+        "aria-valuemax"
+      ],
+      "semantic_parts": {
+        "track": "the rail",
+        "filled": "the filled portion",
+        "thumb": "the draggable handle",
+        "mark": "a tick",
+        "label": "value bubble"
+      },
+      "token_contract": [
+        "slider.track",
+        "slider.track-filled",
+        "slider.thumb",
+        "slider.thumb-border",
+        "slider.mark",
+        "slider.label"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "dragging",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Slider.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Slider",
+            "SliderProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Slider.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/slider.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 89
+    },
+    {
+      "name": "card",
+      "component": "card",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "The surface container — owns border, radius, shadow, and padding",
+        "section": "Full-bleed region (CardSection) — media, headers, footers that ignore root padding",
+        "title": "Optional heading inside the card",
+        "body": "Supporting text / content"
+      },
+      "token_contract": [
+        "card.bg",
+        "card.bg-subtle",
+        "card.border",
+        "card.fg.title",
+        "card.fg.body",
+        "card.radius",
+        "card.shadow"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Card.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Card",
+            "CardSection",
+            "CardProps",
+            "CardSectionProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Card.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/card.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display",
+        "empty-state",
+        "dashboard-tile"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "settings",
+        "list-view"
+      ],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 88
+    },
+    {
+      "name": "table",
+      "component": "table",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "scope"
+      ],
+      "semantic_parts": {
+        "root": "the table",
+        "header": "column headers (th, scope=col)",
+        "row": "a data row",
+        "cell": "a data cell"
+      },
+      "token_contract": [
+        "table.header-bg",
+        "table.header-fg",
+        "table.row-bg",
+        "table.row-bg-striped",
+        "table.row-bg-hover",
+        "table.border",
+        "table.fg"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "striped"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Table.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Table",
+            "TableProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Table.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/table.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 88
+    },
+    {
+      "name": "file-input",
+      "component": "file-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the trigger",
+        "value": "selected file name(s)",
+        "label": "field label"
+      },
+      "token_contract": [
+        "file-input.bg",
+        "file-input.border",
+        "file-input.border-focus",
+        "file-input.fg",
+        "file-input.placeholder",
+        "file-input.radius"
+      ],
+      "interaction_states": [
+        "empty",
+        "selected",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/FileInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "FileInput",
+            "FileInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/FileInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/file-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 87
+    },
+    {
+      "name": "number-input",
+      "component": "number-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-valuenow"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "stepper": "increment/decrement controls",
+        "label": "field label"
+      },
+      "token_contract": [
+        "number-input.bg",
+        "number-input.border",
+        "number-input.border-focus",
+        "number-input.fg",
+        "number-input.placeholder",
+        "number-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/NumberInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "NumberInput",
+            "NumberInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/NumberInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/number-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 87
+    },
+    {
+      "name": "password-input",
+      "component": "password-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "toggle": "show/hide visibility button",
+        "label": "field label"
+      },
+      "token_contract": [
+        "password-input.bg",
+        "password-input.border",
+        "password-input.border-focus",
+        "password-input.fg",
+        "password-input.placeholder",
+        "password-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/PasswordInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "PasswordInput",
+            "PasswordInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/PasswordInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/password-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 87
+    },
+    {
       "name": "tooltip",
       "component": "tooltip",
       "status": "AI-Ready",
@@ -480,6 +2050,4764 @@
       "components_used": [],
       "trust_level": 4,
       "health_score": 87
+    },
+    {
+      "name": "agent-status",
+      "component": "agent-status",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "indicator": "dot or spinner",
+        "label": "state text"
+      },
+      "token_contract": [
+        "agent-status.idle",
+        "agent-status.busy",
+        "agent-status.waiting",
+        "agent-status.done",
+        "agent-status.error"
+      ],
+      "interaction_states": [
+        "idle",
+        "thinking",
+        "tool",
+        "waiting",
+        "done",
+        "error",
+        "refused"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/AgentStatus.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "AgentStatus",
+            "AgentStatusProps",
+            "AgentState"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/AgentStatus.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/agent-status.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 85
+    },
+    {
+      "name": "plan-steps",
+      "component": "plan-steps",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the plan",
+        "step": "a task",
+        "marker": "status glyph"
+      },
+      "token_contract": [
+        "plan.pending",
+        "plan.active",
+        "plan.done",
+        "plan.error",
+        "plan.fg"
+      ],
+      "interaction_states": [
+        "pending",
+        "active",
+        "done",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/PlanSteps.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "PlanSteps",
+            "PlanStepsProps",
+            "PlanStep",
+            "PlanStepStatus"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/PlanSteps.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/plan-steps.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 85
+    },
+    {
+      "name": "inline-message",
+      "component": "inline-message",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the inline row",
+        "icon": "the status glyph (shape differs per status)",
+        "text": "the high-contrast message"
+      },
+      "token_contract": [
+        "inline-message.fg",
+        "inline-message.info",
+        "inline-message.success",
+        "inline-message.warning",
+        "inline-message.error"
+      ],
+      "interaction_states": [
+        "info",
+        "success",
+        "warning",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/InlineMessage.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "InlineMessage",
+            "InlineMessageProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/InlineMessage.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/inline-message.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 85
+    },
+    {
+      "name": "status-dot",
+      "component": "status-dot",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "dot": "the colored dot",
+        "label": "the text status"
+      },
+      "token_contract": [
+        "status-dot.online",
+        "status-dot.offline",
+        "status-dot.busy",
+        "status-dot.away",
+        "status-dot.label"
+      ],
+      "interaction_states": [
+        "online",
+        "offline",
+        "busy",
+        "away",
+        "neutral"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/StatusDot.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "StatusDot",
+            "StatusDotProps",
+            "StatusKind"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/StatusDot.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/status-dot.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 85
+    },
+    {
+      "name": "tree",
+      "component": "tree",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-expanded",
+        "aria-selected"
+      ],
+      "semantic_parts": {
+        "root": "the tree",
+        "node": "a node",
+        "chevron": "expand toggle",
+        "guide": "indent guide"
+      },
+      "token_contract": [
+        "tree.fg",
+        "tree.bg-selected",
+        "tree.guide",
+        "tree.chevron"
+      ],
+      "interaction_states": [
+        "collapsed",
+        "expanded",
+        "selected",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Tree.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Tree",
+            "TreeProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Tree.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/tree.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 85
+    },
+    {
+      "name": "timeline",
+      "component": "timeline",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the rail",
+        "item": "a timeline event",
+        "bullet": "the node marker",
+        "line": "the connector"
+      },
+      "token_contract": [
+        "timeline.line",
+        "timeline.bullet",
+        "timeline.bullet-active",
+        "timeline.fg-title",
+        "timeline.fg-body"
+      ],
+      "interaction_states": [
+        "pending",
+        "active",
+        "complete"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Timeline.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Timeline",
+            "TimelineProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Timeline.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/timeline.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 84
+    },
+    {
+      "name": "code-block",
+      "component": "code-block",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the block",
+        "header": "filename/language + copy",
+        "body": "the code",
+        "copy": "copy button"
+      },
+      "token_contract": [
+        "code-block.bg",
+        "code-block.header-bg",
+        "code-block.border",
+        "code-block.fg",
+        "code-block.filename",
+        "code-block.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "copied"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/CodeBlock.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "CodeBlock",
+            "CodeBlockProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/CodeBlock.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/code-block.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 83
+    },
+    {
+      "name": "confidence-meter",
+      "component": "confidence-meter",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the meter",
+        "bar": "a confidence segment",
+        "label": "the text level"
+      },
+      "token_contract": [
+        "confidence.track",
+        "confidence.high",
+        "confidence.medium",
+        "confidence.low",
+        "confidence.label"
+      ],
+      "interaction_states": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ConfidenceMeter.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ConfidenceMeter",
+            "ConfidenceMeterProps",
+            "ConfidenceLevel"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ConfidenceMeter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/confidence-meter.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "reasoning-trace",
+      "component": "reasoning-trace",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-expanded",
+        "aria-busy"
+      ],
+      "semantic_parts": {
+        "root": "Container (subtle surface)",
+        "toggle": "Disclosure button (aria-expanded)",
+        "body": "Dimmed, collapsible thinking text"
+      },
+      "token_contract": [
+        "reasoning.bg",
+        "reasoning.fg",
+        "reasoning.label",
+        "reasoning.rule",
+        "reasoning.radius"
+      ],
+      "interaction_states": [
+        "collapsed",
+        "expanded",
+        "streaming"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ReasoningTrace.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ReasoningTrace",
+            "ReasoningTraceProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ReasoningTrace.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/reasoning-trace.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "sources-panel",
+      "component": "sources-panel",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the panel",
+        "title": "panel heading",
+        "item": "a source row",
+        "index": "the [n] marker"
+      },
+      "token_contract": [
+        "sources.bg",
+        "sources.border",
+        "sources.title",
+        "sources.item-fg",
+        "sources.item-meta",
+        "sources.index-bg",
+        "sources.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/SourcesPanel.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "SourcesPanel",
+            "SourcesPanelProps",
+            "Source"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/SourcesPanel.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/sources-panel.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 7,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "color-input",
+      "component": "color-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "swatch": "preview swatch",
+        "field": "hex field"
+      },
+      "token_contract": [
+        "color-input.bg",
+        "color-input.border",
+        "color-input.border-focus",
+        "color-input.fg",
+        "color-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ColorInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ColorInput",
+            "ColorInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ColorInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/color-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "pin-input",
+      "component": "pin-input",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the group",
+        "cell": "a single digit field"
+      },
+      "token_contract": [
+        "pin-input.bg",
+        "pin-input.border",
+        "pin-input.border-focus",
+        "pin-input.fg",
+        "pin-input.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "filled",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/PinInput.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "PinInput",
+            "PinInputProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/PinInput.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/pin-input.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "presence-indicator",
+      "component": "presence-indicator",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "avatar": "a member",
+        "dot": "presence dot"
+      },
+      "token_contract": [
+        "presence.online",
+        "presence.away",
+        "presence.busy",
+        "presence.offline",
+        "presence.ring"
+      ],
+      "interaction_states": [
+        "online",
+        "away",
+        "busy",
+        "offline"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/PresenceIndicator.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "PresenceIndicator",
+            "PresenceIndicatorProps",
+            "PresenceUser",
+            "Presence"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/PresenceIndicator.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/presence-indicator.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "segmented-control",
+      "component": "segmented-control",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-checked"
+      ],
+      "semantic_parts": {
+        "root": "the track",
+        "item": "a segment",
+        "indicator": "the sliding active fill"
+      },
+      "token_contract": [
+        "segmented-control.bg",
+        "segmented-control.bg-active",
+        "segmented-control.fg",
+        "segmented-control.fg-active",
+        "segmented-control.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "active",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SegmentedControl.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "SegmentedControl",
+            "SegmentedControlProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SegmentedControl.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/segmented-control.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 82
+    },
+    {
+      "name": "avatar",
+      "component": "avatar",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "alt"
+      ],
+      "semantic_parts": {
+        "root": "The circular container — owns size, radius, background",
+        "image": "The user/entity photo when a src is provided",
+        "placeholder": "Initials or fallback icon when no image",
+        "group": "AvatarGroup wrapper that overlaps members",
+        "group-overflow": "The \"+N\" truncation chip at the end of a group"
+      },
+      "token_contract": [
+        "avatar.bg",
+        "avatar.fg",
+        "avatar.border",
+        "avatar.ring",
+        "avatar.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Avatar.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Avatar",
+            "AvatarGroup",
+            "AvatarProps",
+            "AvatarGroupProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Avatar.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/avatar.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display",
+        "global-header",
+        "comment-thread"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "list-view",
+        "profile"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "empty-state",
+      "component": "empty-state",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=status"
+      ],
+      "semantic_parts": {
+        "root": "the padded, centered container",
+        "icon": "a decorative glyph (aria-hidden)",
+        "title": "the headline",
+        "description": "supporting text",
+        "action": "optional CTA slot"
+      },
+      "token_contract": [
+        "empty-state.bg",
+        "empty-state.icon",
+        "empty-state.title",
+        "empty-state.description",
+        "empty-state.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "with-action"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/EmptyState.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "EmptyState",
+            "EmptyStateProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/EmptyState.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/empty-state.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "error-state",
+      "component": "error-state",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=alert"
+      ],
+      "semantic_parts": {
+        "root": "the padded container on an error-subtle wash",
+        "icon": "the error glyph",
+        "title": "the headline",
+        "description": "what went wrong",
+        "action": "optional retry slot"
+      },
+      "token_contract": [
+        "error-state.bg",
+        "error-state.icon",
+        "error-state.title",
+        "error-state.description",
+        "error-state.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "with-retry"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ErrorState.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "ErrorState",
+            "ErrorStateProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ErrorState.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/error-state.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "notification-center",
+      "component": "notification-center",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the panel",
+        "item": "a notification",
+        "unread": "unread marker"
+      },
+      "token_contract": [
+        "notification-center.bg",
+        "notification-center.unread-bg",
+        "notification-center.title",
+        "notification-center.body",
+        "notification-center.dot",
+        "notification-center.meta"
+      ],
+      "interaction_states": [
+        "read",
+        "unread"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/NotificationCenter.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "NotificationCenter",
+            "NotificationCenterProps",
+            "NotificationItem"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/NotificationCenter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/notification-center.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "progress",
+      "component": "progress",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-valuenow",
+        "aria-valuemin",
+        "aria-valuemax",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "track": "The unfilled background",
+        "bar": "The filled portion",
+        "label": "Optional value/description"
+      },
+      "token_contract": [
+        "progress.track",
+        "progress.bar",
+        "progress.bar-success",
+        "progress.bar-warning",
+        "progress.bar-error",
+        "progress.radius"
+      ],
+      "interaction_states": [
+        "determinate",
+        "complete"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Progress.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Progress",
+            "ProgressProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Progress.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/progress.json"
+        }
+      },
+      "patterns_used_in": [
+        "upload",
+        "import",
+        "quota"
+      ],
+      "pages_used_in": [
+        "settings",
+        "dashboard"
+      ],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "success-state",
+      "component": "success-state",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=status"
+      ],
+      "semantic_parts": {
+        "root": "the padded container on a success-subtle wash",
+        "icon": "the success glyph",
+        "title": "the headline",
+        "description": "confirmation detail",
+        "action": "optional next-step slot"
+      },
+      "token_contract": [
+        "success-state.bg",
+        "success-state.icon",
+        "success-state.title",
+        "success-state.description",
+        "success-state.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "with-action"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SuccessState.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "SuccessState",
+            "SuccessStateProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SuccessState.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/success-state.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 81
+    },
+    {
+      "name": "permission-request",
+      "component": "permission-request",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the request card",
+        "scope": "the requested scope",
+        "actions": "allow/deny"
+      },
+      "token_contract": [
+        "permission.bg",
+        "permission.border",
+        "permission.title",
+        "permission.scope-bg"
+      ],
+      "interaction_states": [
+        "pending",
+        "allowed",
+        "denied"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/PermissionRequest.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "PermissionRequest",
+            "PermissionRequestProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/PermissionRequest.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/permission-request.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "breadcrumbs",
+      "component": "breadcrumbs",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label",
+        "aria-current"
+      ],
+      "semantic_parts": {
+        "root": "nav landmark",
+        "item": "a breadcrumb link",
+        "current": "the current page (aria-current)",
+        "separator": "visual divider"
+      },
+      "token_contract": [
+        "breadcrumbs.fg",
+        "breadcrumbs.fg-current",
+        "breadcrumbs.separator"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "current"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Breadcrumbs.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Breadcrumbs",
+            "BreadcrumbsProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Breadcrumbs.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/breadcrumbs.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "maintenance-banner",
+      "component": "maintenance-banner",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the banner",
+        "icon": "severity icon",
+        "message": "the message"
+      },
+      "token_contract": [
+        "maintenance-banner.info-bg",
+        "maintenance-banner.degraded-bg",
+        "maintenance-banner.down-bg",
+        "maintenance-banner.fg"
+      ],
+      "interaction_states": [
+        "info",
+        "degraded",
+        "down"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/MaintenanceBanner.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "MaintenanceBanner",
+            "MaintenanceBannerProps",
+            "MaintenanceSeverity"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/MaintenanceBanner.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/maintenance-banner.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "progress-circle",
+      "component": "progress-circle",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=progressbar",
+        "aria-valuenow/min/max"
+      ],
+      "semantic_parts": {
+        "root": "the progressbar wrapper",
+        "track": "the unfilled ring",
+        "indicator": "the filled arc",
+        "label": "the center percentage"
+      },
+      "token_contract": [
+        "progress-circle.track",
+        "progress-circle.indicator",
+        "progress-circle.label"
+      ],
+      "interaction_states": [
+        0,
+        50,
+        100
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ProgressCircle.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "ProgressCircle",
+            "ProgressCircleProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ProgressCircle.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/progress-circle.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "stat",
+      "component": "stat",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "label": "metric name",
+        "value": "the number",
+        "delta": "trend change"
+      },
+      "token_contract": [
+        "stat.value",
+        "stat.label",
+        "stat.delta-up",
+        "stat.delta-down"
+      ],
+      "interaction_states": [
+        "default",
+        "up",
+        "down"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Stat.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "Stat",
+            "StatProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Stat.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/stat.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "validation-message",
+      "component": "validation-message",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=alert on error",
+        "id for aria-describedby"
+      ],
+      "semantic_parts": {
+        "root": "the inline row",
+        "icon": "the status glyph (shape per status)",
+        "text": "the high-contrast message"
+      },
+      "token_contract": [
+        "validation-message.fg",
+        "validation-message.error",
+        "validation-message.warning",
+        "validation-message.success"
+      ],
+      "interaction_states": [
+        "error",
+        "warning",
+        "success"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ValidationMessage.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "ValidationMessage",
+            "ValidationMessageProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ValidationMessage.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/validation-message.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 80
+    },
+    {
+      "name": "model-selector",
+      "component": "model-selector",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "trigger": "the current-model control",
+        "dropdown": "model options"
+      },
+      "token_contract": [
+        "model-selector.bg",
+        "model-selector.border",
+        "model-selector.fg",
+        "model-selector.icon",
+        "model-selector.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "open",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ModelSelector.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ModelSelector",
+            "ModelSelectorProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ModelSelector.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/model-selector.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 79
+    },
+    {
+      "name": "session-device-list",
+      "component": "session-device-list",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "item": "a session/device",
+        "current": "the current device badge",
+        "revoke": "revoke action"
+      },
+      "token_contract": [
+        "session-device.bg",
+        "session-device.border",
+        "session-device.fg",
+        "session-device.meta",
+        "session-device.revoke"
+      ],
+      "interaction_states": [
+        "default",
+        "current"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SessionDeviceList.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "SessionDeviceList",
+            "SessionDeviceListProps",
+            "DeviceSession"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SessionDeviceList.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/session-device-list.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 79
+    },
+    {
+      "name": "artifact-frame",
+      "component": "artifact-frame",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "Bordered frame",
+        "header": "Title + kind badge + actions",
+        "body": "The artifact content"
+      },
+      "token_contract": [
+        "artifact.bg",
+        "artifact.header-bg",
+        "artifact.border",
+        "artifact.title",
+        "artifact.kind",
+        "artifact.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ArtifactFrame.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ArtifactFrame",
+            "ArtifactFrameProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ArtifactFrame.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/artifact-frame.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 6,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "attachment-pill",
+      "component": "attachment-pill",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the pill",
+        "name": "file name",
+        "meta": "file size",
+        "remove": "remove button"
+      },
+      "token_contract": [
+        "attachment.bg",
+        "attachment.border",
+        "attachment.fg",
+        "attachment.meta",
+        "attachment.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/AttachmentPill.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "AttachmentPill",
+            "AttachmentPillProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/AttachmentPill.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/attachment-pill.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "session-list",
+      "component": "session-list",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-current"
+      ],
+      "semantic_parts": {
+        "item": "a session row",
+        "title": "conversation title",
+        "meta": "timestamp"
+      },
+      "token_contract": [
+        "session-list.item-bg-hover",
+        "session-list.fg",
+        "session-list.meta"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "active"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/SessionList.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "SessionList",
+            "SessionListProps",
+            "SessionItem"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/SessionList.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/session-list.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "audit-log-viewer",
+      "component": "audit-log-viewer",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "role",
+        "scope"
+      ],
+      "semantic_parts": {
+        "header": "columns",
+        "row": "an audit entry",
+        "actor": "principal",
+        "target": "object"
+      },
+      "token_contract": [
+        "audit-log.header-bg",
+        "audit-log.row-striped",
+        "audit-log.fg",
+        "audit-log.meta",
+        "audit-log.border"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/AuditLogViewer.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "AuditLogViewer",
+            "AuditLogViewerProps",
+            "AuditEntry"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/AuditLogViewer.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/audit-log-viewer.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 5,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "feedback-control",
+      "component": "feedback-control",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Feedback",
+      "required_aria": [
+        "aria-pressed",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "Group of two toggles",
+        "positive": "Thumbs up",
+        "negative": "Thumbs down"
+      },
+      "token_contract": [
+        "feedback-control.idle",
+        "feedback-control.positive",
+        "feedback-control.negative"
+      ],
+      "interaction_states": [
+        "idle",
+        "positive",
+        "negative"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/feedback/FeedbackControl.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "FeedbackControl",
+            "FeedbackControlProps",
+            "FeedbackValue"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/feedback/FeedbackControl.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/feedback-control.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "field-label",
+      "component": "field-label",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "htmlFor association",
+        "visually-hidden (required) text"
+      ],
+      "semantic_parts": {
+        "root": "the label element",
+        "required": "the required asterisk (with SR text)",
+        "optional": "the muted optional marker"
+      },
+      "token_contract": [
+        "field-label.fg",
+        "field-label.required",
+        "field-label.optional"
+      ],
+      "interaction_states": [
+        "default",
+        "required",
+        "optional"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/FieldLabel.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "FieldLabel",
+            "FieldLabelProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/FieldLabel.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/field-label.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "icon-button",
+      "component": "icon-button",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the button",
+        "icon": "the glyph"
+      },
+      "token_contract": [
+        "icon-button.fg",
+        "icon-button.bg-hover",
+        "icon-button.border-focus"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/IconButton.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "IconButton",
+            "IconButtonProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/IconButton.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/icon-button.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 78
+    },
+    {
+      "name": "agent-picker",
+      "component": "agent-picker",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "trigger": "current agent",
+        "dropdown": "agent options"
+      },
+      "token_contract": [
+        "agent-picker.bg",
+        "agent-picker.border",
+        "agent-picker.fg",
+        "agent-picker.icon"
+      ],
+      "interaction_states": [
+        "default",
+        "open",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/AgentPicker.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "AgentPicker",
+            "AgentPickerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/AgentPicker.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/agent-picker.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "citation-chip",
+      "component": "citation-chip",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "chip": "Superscript reference [n]",
+        "tooltip": "Source + snippet on hover/focus"
+      },
+      "token_contract": [
+        "citation.bg",
+        "citation.fg",
+        "citation.border",
+        "citation.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/CitationChip.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "CitationChip",
+            "CitationChipProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/CitationChip.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/citation-chip.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "context-meter",
+      "component": "context-meter",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-valuenow"
+      ],
+      "semantic_parts": {
+        "track": "unfilled budget",
+        "fill": "used budget",
+        "label": "used / total"
+      },
+      "token_contract": [
+        "context-meter.track",
+        "context-meter.fill",
+        "context-meter.fill-warning",
+        "context-meter.label"
+      ],
+      "interaction_states": [
+        "default",
+        "warning"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ContextMeter.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "ContextMeter",
+            "ContextMeterProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ContextMeter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/context-meter.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "diff-view",
+      "component": "diff-view",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "line": "a diff line",
+        "footer": "accept/reject controls"
+      },
+      "token_contract": [
+        "diff.added-bg",
+        "diff.removed-bg",
+        "diff.fg",
+        "diff.gutter"
+      ],
+      "interaction_states": [
+        "added",
+        "removed",
+        "context"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/DiffView.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "DiffView",
+            "DiffViewProps",
+            "DiffLine"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/DiffView.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/diff-view.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "prompt-suggestions",
+      "component": "prompt-suggestions",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the chip row",
+        "chip": "one starter prompt"
+      },
+      "token_contract": [
+        "prompt-suggestions.bg",
+        "prompt-suggestions.border",
+        "prompt-suggestions.fg",
+        "prompt-suggestions.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/PromptSuggestions.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "PromptSuggestions",
+            "PromptSuggestionsProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/PromptSuggestions.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/prompt-suggestions.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "fab",
+      "component": "fab",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the floating button",
+        "icon": "the glyph"
+      },
+      "token_contract": [
+        "fab.bg",
+        "fab.fg",
+        "fab.shadow",
+        "fab.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Fab.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Fab",
+            "FabProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Fab.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/fab.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "fieldset",
+      "component": "fieldset",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the fieldset",
+        "legend": "the group title",
+        "body": "grouped controls"
+      },
+      "token_contract": [
+        "fieldset.bg",
+        "fieldset.border",
+        "fieldset.legend",
+        "fieldset.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Fieldset.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Fieldset",
+            "FieldsetProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Fieldset.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/fieldset.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "pill",
+      "component": "pill",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the pill",
+        "label": "text",
+        "remove": "remove button"
+      },
+      "token_contract": [
+        "pill.bg",
+        "pill.fg",
+        "pill.remove",
+        "pill.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "removable"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Pill.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Pill",
+            "PillGroup",
+            "PillProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Pill.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/pill.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "popover",
+      "component": "popover",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-haspopup",
+        "aria-expanded",
+        "role"
+      ],
+      "semantic_parts": {
+        "target": "the trigger",
+        "dropdown": "the floating panel",
+        "root": "the controller"
+      },
+      "token_contract": [
+        "popover.bg",
+        "popover.border",
+        "popover.shadow",
+        "popover.radius"
+      ],
+      "interaction_states": [
+        "closed",
+        "open"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Popover.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Popover",
+            "PopoverTarget",
+            "PopoverDropdown",
+            "PopoverProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Popover.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/popover.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "rbac-matrix",
+      "component": "rbac-matrix",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "header": "role columns",
+        "row": "a permission",
+        "cell": "a grant checkbox"
+      },
+      "token_contract": [
+        "rbac-matrix.header-bg",
+        "rbac-matrix.border",
+        "rbac-matrix.granted",
+        "rbac-matrix.fg"
+      ],
+      "interaction_states": [
+        "granted",
+        "denied"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/RbacMatrix.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "RbacMatrix",
+            "RbacMatrixProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/RbacMatrix.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/rbac-matrix.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "split-button",
+      "component": "split-button",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-haspopup",
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "primary": "main action button",
+        "trigger": "dropdown toggle",
+        "menu": "secondary actions"
+      },
+      "token_contract": [
+        "split-button.bg",
+        "split-button.fg",
+        "split-button.divider",
+        "split-button.radius"
+      ],
+      "interaction_states": [
+        "default",
+        "open"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SplitButton.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "SplitButton",
+            "SplitButtonProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SplitButton.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/split-button.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 77
+    },
+    {
+      "name": "agent-card",
+      "component": "agent-card",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the card",
+        "name": "agent name",
+        "capabilities": "capability badges",
+        "owner": "owner line"
+      },
+      "token_contract": [
+        "agent-card.bg",
+        "agent-card.border",
+        "agent-card.name",
+        "agent-card.meta"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/AgentCard.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "AgentCard",
+            "AgentCardProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/AgentCard.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/agent-card.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 76
+    },
+    {
+      "name": "anchor",
+      "component": "anchor",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the native <a> element",
+        "label": "link text"
+      },
+      "token_contract": [
+        "anchor.fg",
+        "anchor.fg-hover"
+      ],
+      "interaction_states": [
+        "default",
+        "hover",
+        "focus",
+        "visited"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Anchor.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Anchor",
+            "AnchorProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Anchor.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/anchor.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 76
+    },
+    {
+      "name": "rating",
+      "component": "rating",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the symbol group",
+        "symbol": "one star/unit"
+      },
+      "token_contract": [
+        "rating.symbol-empty",
+        "rating.symbol-filled"
+      ],
+      "interaction_states": [
+        "empty",
+        "hover",
+        "selected",
+        "readonly"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Rating.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Rating",
+            "RatingProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Rating.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/rating.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "forms"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 76
+    },
+    {
+      "name": "faceted-filter",
+      "component": "faceted-filter",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "group": "a facet group",
+        "option": "a checkable facet",
+        "count": "result count"
+      },
+      "token_contract": [
+        "faceted-filter.group-label",
+        "faceted-filter.fg",
+        "faceted-filter.count"
+      ],
+      "interaction_states": [
+        "default",
+        "checked"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/FacetedFilter.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "FacetedFilter",
+            "FacetedFilterProps",
+            "FacetGroup",
+            "FacetOption"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/FacetedFilter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/faceted-filter.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 75
+    },
+    {
+      "name": "activity-feed",
+      "component": "activity-feed",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "item": "an activity",
+        "actor": "who",
+        "action": "what",
+        "meta": "when"
+      },
+      "token_contract": [
+        "activity-feed.actor",
+        "activity-feed.action",
+        "activity-feed.meta"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ActivityFeed.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "ActivityFeed",
+            "ActivityFeedProps",
+            "ActivityItem"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ActivityFeed.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/activity-feed.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 74
+    },
+    {
+      "name": "memory-panel",
+      "component": "memory-panel",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the panel",
+        "fact": "a remembered fact",
+        "remove": "forget button"
+      },
+      "token_contract": [
+        "memory.bg",
+        "memory.border",
+        "memory.fg",
+        "memory.remove"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/MemoryPanel.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "MemoryPanel",
+            "MemoryPanelProps",
+            "MemoryFact"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/MemoryPanel.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/memory-panel.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 74
+    },
+    {
+      "name": "refusal-state",
+      "component": "refusal-state",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the card",
+        "reason": "why",
+        "suggestion": "what to try instead"
+      },
+      "token_contract": [
+        "refusal.bg",
+        "refusal.border",
+        "refusal.fg",
+        "refusal.suggestion"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/RefusalState.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "RefusalState",
+            "RefusalStateProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/RefusalState.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/refusal-state.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 74
+    },
+    {
+      "name": "hover-card",
+      "component": "hover-card",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "target": "the hovered element",
+        "dropdown": "the floating card"
+      },
+      "token_contract": [
+        "hover-card.bg",
+        "hover-card.border",
+        "hover-card.shadow",
+        "hover-card.radius"
+      ],
+      "interaction_states": [
+        "closed",
+        "open"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/HoverCard.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "HoverCard",
+            "HoverCardProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/HoverCard.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/hover-card.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 74
+    },
+    {
+      "name": "character-counter",
+      "component": "character-counter",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-live=polite"
+      ],
+      "semantic_parts": {
+        "root": "the count text",
+        "over": "the over-limit color"
+      },
+      "token_contract": [
+        "character-counter.fg",
+        "character-counter.over"
+      ],
+      "interaction_states": [
+        "default",
+        "near-limit",
+        "over-limit"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/CharacterCounter.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "CharacterCounter",
+            "CharacterCounterProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/CharacterCounter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/character-counter.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 73
+    },
+    {
+      "name": "image",
+      "component": "image",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "alt"
+      ],
+      "semantic_parts": {
+        "root": "the img",
+        "fallback": "placeholder on load error"
+      },
+      "token_contract": [
+        "image.bg",
+        "image.radius"
+      ],
+      "interaction_states": [
+        "loading",
+        "loaded",
+        "error"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Image.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Image",
+            "ImageProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Image.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/image.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 73
+    },
+    {
+      "name": "indicator",
+      "component": "indicator",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the wrapped element",
+        "dot": "the overlay dot/count"
+      },
+      "token_contract": [
+        "indicator.bg",
+        "indicator.fg"
+      ],
+      "interaction_states": [
+        "dot",
+        "count",
+        "processing"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Indicator.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Indicator",
+            "IndicatorProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Indicator.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/indicator.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 73
+    },
+    {
+      "name": "role-picker",
+      "component": "role-picker",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "role",
+        "aria-multiselectable"
+      ],
+      "semantic_parts": {
+        "root": "the input",
+        "pill": "an assigned role"
+      },
+      "token_contract": [
+        "role-picker.pill-bg",
+        "role-picker.fg"
+      ],
+      "interaction_states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/RolePicker.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "RolePicker",
+            "RolePickerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/RolePicker.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/role-picker.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 73
+    },
+    {
+      "name": "saved-views",
+      "component": "saved-views",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "aria-current"
+      ],
+      "semantic_parts": {
+        "view": "a saved view",
+        "active": "the current view",
+        "save": "save-view action"
+      },
+      "token_contract": [
+        "saved-views.active-fg",
+        "saved-views.fg"
+      ],
+      "interaction_states": [
+        "default",
+        "active"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/SavedViews.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "SavedViews",
+            "SavedViewsProps",
+            "SavedView"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/SavedViews.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/saved-views.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 73
+    },
+    {
+      "name": "streaming-text",
+      "component": "streaming-text",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-live",
+        "aria-busy"
+      ],
+      "semantic_parts": {
+        "text": "The revealed output so far",
+        "caret": "Blinking cursor while streaming"
+      },
+      "token_contract": [
+        "streaming.fg",
+        "streaming.caret",
+        "streaming.duration"
+      ],
+      "interaction_states": [
+        "streaming",
+        "done"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/StreamingText.tsx",
+          "underlying_library": "none",
+          "exports": [
+            "StreamingText",
+            "StreamingTextProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/StreamingText.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/streaming-text.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 72
+    },
+    {
+      "name": "bulk-action-bar",
+      "component": "bulk-action-bar",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the bar",
+        "count": "selection count",
+        "actions": "bulk actions"
+      },
+      "token_contract": [
+        "bulk-action-bar.bg",
+        "bulk-action-bar.border",
+        "bulk-action-bar.fg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/BulkActionBar.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "BulkActionBar",
+            "BulkActionBarProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/BulkActionBar.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/bulk-action-bar.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 72
+    },
+    {
+      "name": "loading-state",
+      "component": "loading-state",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role=status",
+        "aria-live=polite"
+      ],
+      "semantic_parts": {
+        "root": "the centered container",
+        "spinner": "the animated indicator",
+        "label": "the status text"
+      },
+      "token_contract": [
+        "loading-state.spinner",
+        "loading-state.label",
+        "loading-state.bg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/LoadingState.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "LoadingState",
+            "LoadingStateProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/LoadingState.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/loading-state.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 72
+    },
+    {
+      "name": "skeleton",
+      "component": "skeleton",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-busy",
+        "aria-hidden"
+      ],
+      "semantic_parts": {
+        "block": "A single placeholder shape (line, circle, rect)"
+      },
+      "token_contract": [
+        "skeleton.base",
+        "skeleton.highlight",
+        "skeleton.duration",
+        "skeleton.radius"
+      ],
+      "interaction_states": [
+        "loading",
+        "loaded"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Skeleton.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Skeleton",
+            "SkeletonProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Skeleton.stories.tsx"
+        },
+        "tokens": {
+          "primitives": "packages/tokens/src/primitives.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json",
+          "component": "packages/tokens/src/components/skeleton.json"
+        }
+      },
+      "patterns_used_in": [
+        "loading",
+        "data-display",
+        "dashboard"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "list-view",
+        "profile"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 72
+    },
+    {
+      "name": "cost-meter",
+      "component": "cost-meter",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the meter",
+        "label": "metric name",
+        "value": "metric value"
+      },
+      "token_contract": [
+        "cost-meter.label",
+        "cost-meter.value"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/CostMeter.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "CostMeter",
+            "CostMeterProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/CostMeter.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/cost-meter.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "message-actions",
+      "component": "message-actions",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the action row",
+        "action": "one icon action"
+      },
+      "token_contract": [
+        "message-actions.fg",
+        "message-actions.fg-hover"
+      ],
+      "interaction_states": [
+        "default",
+        "hover"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/MessageActions.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "MessageActions",
+            "MessageActionsProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/MessageActions.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/message-actions.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "undo-bar",
+      "component": "undo-bar",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "root": "the bar",
+        "message": "what happened",
+        "action": "undo"
+      },
+      "token_contract": [
+        "undo.bg",
+        "undo.fg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/UndoBar.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "UndoBar",
+            "UndoBarProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/UndoBar.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/undo-bar.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "code",
+      "component": "code",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "inline or block monospace"
+      },
+      "token_contract": [
+        "code.bg",
+        "code.fg",
+        "code.radius"
+      ],
+      "interaction_states": [
+        "inline",
+        "block"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Code.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Code",
+            "CodeProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Code.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/code.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "description-list",
+      "component": "description-list",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the dl",
+        "term": "dt",
+        "detail": "dd"
+      },
+      "token_contract": [
+        "description-list.term",
+        "description-list.detail"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/DescriptionList.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "DescriptionList",
+            "DescriptionListProps",
+            "DescriptionItem"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/DescriptionList.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/description-list.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "divider",
+      "component": "divider",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-orientation"
+      ],
+      "semantic_parts": {
+        "line": "the rule",
+        "label": "optional inline label"
+      },
+      "token_contract": [
+        "divider.line",
+        "divider.label"
+      ],
+      "interaction_states": [
+        "default",
+        "labelled"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Divider.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Divider",
+            "DividerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Divider.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/divider.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "export-menu",
+      "component": "export-menu",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [
+        "aria-haspopup",
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "trigger": "export button",
+        "dropdown": "format list"
+      },
+      "token_contract": [
+        "export-menu.trigger-fg",
+        "export-menu.item-fg"
+      ],
+      "interaction_states": [
+        "closed",
+        "open"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ExportMenu.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "ExportMenu",
+            "ExportMenuProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ExportMenu.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/export-menu.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "list",
+      "component": "list",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the list",
+        "item": "a list item",
+        "marker": "bullet/number"
+      },
+      "token_contract": [
+        "list.fg",
+        "list.marker"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/List.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "List",
+            "ListItem",
+            "ListProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/List.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/list.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 70
+    },
+    {
+      "name": "comment-thread",
+      "component": "comment-thread",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "comment": "one comment",
+        "composer": "add-comment input"
+      },
+      "token_contract": [
+        "comment-thread.author",
+        "comment-thread.body",
+        "comment-thread.meta"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/CommentThread.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "CommentThread",
+            "CommentThreadProps",
+            "Comment"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/CommentThread.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/comment-thread.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 69
+    },
+    {
+      "name": "kbd",
+      "component": "kbd",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "a single key cap"
+      },
+      "token_contract": [
+        "kbd.bg",
+        "kbd.fg",
+        "kbd.border",
+        "kbd.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Kbd.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Kbd",
+            "KbdProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Kbd.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/kbd.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 69
+    },
+    {
+      "name": "theme-icon",
+      "component": "theme-icon",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-hidden"
+      ],
+      "semantic_parts": {
+        "root": "the filled container",
+        "icon": "the glyph inside"
+      },
+      "token_contract": [
+        "theme-icon.bg",
+        "theme-icon.fg",
+        "theme-icon.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ThemeIcon.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ThemeIcon",
+            "ThemeIconProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ThemeIcon.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/theme-icon.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 3,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 69
+    },
+    {
+      "name": "disclosure-badge",
+      "component": "disclosure-badge",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Trust",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "The badge"
+      },
+      "token_contract": [
+        "disclosure.bg",
+        "disclosure.fg",
+        "disclosure.border",
+        "disclosure.radius"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/trust/DisclosureBadge.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "DisclosureBadge",
+            "DisclosureBadgeProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/trust/DisclosureBadge.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/disclosure-badge.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat",
+        "data-display"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 4,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 69
+    },
+    {
+      "name": "spoiler",
+      "component": "spoiler",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "aria-expanded"
+      ],
+      "semantic_parts": {
+        "root": "the content region",
+        "control": "show more/less toggle"
+      },
+      "token_contract": [
+        "spoiler.control"
+      ],
+      "interaction_states": [
+        "collapsed",
+        "expanded"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Spoiler.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Spoiler",
+            "SpoilerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Spoiler.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/spoiler.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-display"
+      ],
+      "pages_used_in": [],
+      "tokens_count": 1,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 68
+    },
+    {
+      "name": "conversation-thread",
+      "component": "conversation-thread",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "AI Surface",
+      "required_aria": [
+        "role",
+        "aria-live"
+      ],
+      "semantic_parts": {
+        "root": "the scroll container",
+        "divider": "day/section divider"
+      },
+      "token_contract": [
+        "thread.bg",
+        "thread.divider"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ai/ConversationThread.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "ConversationThread",
+            "ConversationThreadProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ai/ConversationThread.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/conversation-thread.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "chat"
+      ],
+      "pages_used_in": [
+        "assistant"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 67
+    },
+    {
+      "name": "button-group",
+      "component": "button-group",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role"
+      ],
+      "semantic_parts": {
+        "root": "the group",
+        "button": "a member button"
+      },
+      "token_contract": [
+        "button-group.divider"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/ButtonGroup.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "ButtonGroup",
+            "ButtonGroupProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/ButtonGroup.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/button-group.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 1,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 65
+    },
+    {
+      "name": "mention",
+      "component": "mention",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Enterprise",
+      "required_aria": [],
+      "semantic_parts": {
+        "root": "the inline reference"
+      },
+      "token_contract": [
+        "mention.bg",
+        "mention.fg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Mention.tsx",
+          "underlying_library": "custom",
+          "exports": [
+            "Mention",
+            "MentionProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Mention.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/mention.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages_used_in": [
+        "console",
+        "settings"
+      ],
+      "tokens_count": 2,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 65
+    },
+    {
+      "name": "helper-text",
+      "component": "helper-text",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-11T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "id for aria-describedby"
+      ],
+      "semantic_parts": {
+        "root": "the hint paragraph"
+      },
+      "token_contract": [
+        "helper-text.fg"
+      ],
+      "interaction_states": [
+        "default"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/HelperText.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "HelperText",
+            "HelperTextProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/HelperText.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/helper-text.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 1,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 63
+    },
+    {
+      "name": "loader",
+      "component": "loader",
+      "status": "AI-Ready",
+      "last_verified": "2026-06-10T00:00:00.000Z",
+      "category": "Component",
+      "required_aria": [
+        "role",
+        "aria-label"
+      ],
+      "semantic_parts": {
+        "root": "the animated indicator"
+      },
+      "token_contract": [
+        "loader.color"
+      ],
+      "interaction_states": [
+        "spinning"
+      ],
+      "checks": {
+        "aria_correct": true,
+        "structure_correct": true,
+        "states_complete": true,
+        "tokens_valid": true,
+        "no_invented_styles": true
+      },
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/Loader.tsx",
+          "underlying_library": "mantine",
+          "exports": [
+            "Loader",
+            "LoaderProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/Loader.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/loader.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "patterns_used_in": [],
+      "pages_used_in": [],
+      "tokens_count": 1,
+      "components_used": [],
+      "trust_level": 4,
+      "health_score": 63
     },
     {
       "name": "checkbox",

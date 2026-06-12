@@ -5,7 +5,7 @@ status: AI-Ready
 last_verified: 2026-06-11
 
 category: Component
-required_aria: ["htmlFor association", "visually-hidden "(required)""]
+required_aria: ["htmlFor association", "visually-hidden (required) text"]
 
 semantic_parts:
   root: the label element

@@ -52,20 +52,34 @@ async function parseSpec(name, dir) {
   };
 }
 
-async function scanDir(dir) {
+async function scanDir(dir, depth = 0) {
+  // Specs can be flat (specs/button/) or grouped one level (specs/ai/composer/).
+  // A directory without an index.md is treated as a category and recursed into.
+  // Each spec parses independently — one bad frontmatter must not sink the scan.
+  let entries;
   try {
-    const entries = await readdir(dir, { withFileTypes: true });
-    const out = [];
-    for (const e of entries) {
-      if (!e.isDirectory()) continue;
-      const sub = join(dir, e.name);
-      const parsed = await parseSpec(e.name, sub);
-      if (parsed) out.push(parsed);
-    }
-    return out;
+    entries = await readdir(dir, { withFileTypes: true });
   } catch {
     return [];
   }
+  const out = [];
+  for (const e of entries) {
+    if (!e.isDirectory()) continue;
+    const sub = join(dir, e.name);
+    let parsed = null;
+    try {
+      parsed = await parseSpec(e.name, sub);
+    } catch (err) {
+      console.warn(`⚠ skipping ${sub}: ${err.message}`);
+      continue;
+    }
+    if (parsed) {
+      out.push(parsed);
+    } else if (depth === 0) {
+      out.push(...await scanDir(sub, 1));
+    }
+  }
+  return out;
 }
 
 async function scanTokens() {
@@ -128,6 +142,27 @@ function healthScore(spec) {
 const specs = await scanDir(SPECS_DIR);
 const patterns = await scanDir(PATTERNS_DIR);
 const tokens = await scanTokens();
+
+// Prose-only patterns (Tray 3 governance/agentic docs) carry no YAML contract
+// by design — count them separately so the dashboard reflects all of patterns/.
+async function countProsePatterns() {
+  try {
+    const entries = await readdir(PATTERNS_DIR, { withFileTypes: true });
+    const specBacked = new Set(patterns.map((p) => p.name));
+    let n = 0;
+    for (const e of entries) {
+      if (!e.isDirectory() || specBacked.has(e.name)) continue;
+      try {
+        await readFile(join(PATTERNS_DIR, e.name, 'index.md'), 'utf8');
+        n++;
+      } catch {}
+    }
+    return n;
+  } catch {
+    return 0;
+  }
+}
+const prosePatterns = await countProsePatterns();
 
 // Recent activity from git log — last 20 changes touching specs/tokens/patterns
 function gitLog(paths, limit = 20) {
@@ -218,7 +253,7 @@ const snapshot = {
   },
   connectors,
   composer: {
-    patterns: enrichedPatterns.length,
+    patterns: enrichedPatterns.length + prosePatterns,
     needs_input: countNeedsInput(enrichedSpecs),
   },
   evaluator: {
@@ -235,7 +270,7 @@ const snapshot = {
     ai_ready: enrichedSpecs.filter((s) => s.status === 'AI-Ready').length,
     in_progress: enrichedSpecs.filter((s) => s.status === 'In progress').length,
     draft: enrichedSpecs.filter((s) => s.status === 'Draft').length,
-    patterns: enrichedPatterns.length,
+    patterns: enrichedPatterns.length + prosePatterns,
     tokens: tokens,
     avg_health: quality,
   },

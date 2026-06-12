@@ -22,7 +22,7 @@ jobs:
           node-version: 22
 
       - name: Run agentic-spec validate
-        run: npx -y github:tishsingh399/agentic-spec validate specs/*
+        run: npx -y github:tishsingh399/agentic-spec validate $(find specs -name index.md | xargs -n1 dirname)
 
   build:
     name: Build packages
