@@ -3,7 +3,7 @@ import { Menu, MenuTarget, MenuDropdown, MenuItem, MenuLabel, MenuDivider } from
 
 // Figma → code link for the Clementine 'Menu' component.
 // Publish with: npx figma connect publish  (requires FIGMA_ACCESS_TOKEN)
-figma.connect(Menu, 'https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS?node-id=6-614', {
+figma.connect(Menu, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS?node-id=6-614', {
   example: () => (
     <Menu>
           <MenuTarget><button>Actions</button></MenuTarget>

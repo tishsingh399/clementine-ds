@@ -1,6 +1,6 @@
 # AGENTS.md — Clementine DS
 
-> **Companion docs:** [Mintlify](https://clementineds.mintlify.app) · [Live Storybook](https://clementine-ds-storybook.vercel.app) · [Notion · Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) · [Figma file](https://www.figma.com/design/kPBBglpMr7MVjejDjc19hy/Clementine-DS) · [agentic-spec CLI](https://github.com/tishsingh399/agentic-spec)
+> **Companion docs:** [Mintlify](https://clementineds.mintlify.app) · [Live Storybook](https://clementine-ds-storybook.vercel.app) · [Notion · Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) · [Figma file](https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS) · [agentic-spec CLI](https://github.com/tishsingh399/agentic-spec)
 
 Clementine is a design system built for AI agents to read, extend, and operate on safely.
 

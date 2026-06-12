@@ -231,7 +231,7 @@ const connectors = [
   { name: 'Storybook',      icon: '📚', url: 'https://clementine-ds-storybook.vercel.app',                                        status: 'connected', sub: 'Vercel · live' },
   { name: 'Mintlify',       icon: '📘', url: 'https://clementineds.mintlify.app',                                                 status: 'connected', sub: 'docs · auto-synced' },
   { name: 'Notion',         icon: '📓', url: 'https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f',     status: 'connected', sub: '25 pages · published' },
-  { name: 'Figma',          icon: '🎨', url: 'https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT',              status: 'connected', sub: '3 collections · 12 components' },
+  { name: 'Figma',          icon: '🎨', url: 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS',              status: 'connected', sub: '3 collections · 12 components' },
   { name: 'agentic-spec',   icon: '🛠', url: 'https://github.com/tishsingh399/agentic-spec',                                      status: 'connected', sub: 'CLI · validating' },
 ];
 
@@ -242,7 +242,7 @@ const snapshot = {
     storybook: 'https://clementine-ds-storybook.vercel.app',
     mintlify: 'https://clementineds.mintlify.app',
     notion: 'https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f',
-    figma: 'https://www.figma.com/design/MBr4guR2Xtfa92JJXS6472/Tina-DS-file-ANT',
+    figma: 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS',
     github: 'https://github.com/tishsingh399/clementine-ds',
     cli: 'https://github.com/tishsingh399/agentic-spec',
   },
