@@ -279,7 +279,7 @@ const snapshot = {
 };
 
 function countNeedsInput(specs) {
-  // A proxy for Romina's "Decisions" — count of specs whose ARIA/state coverage
+  // A proxy for "open decisions" — count of specs whose ARIA/state coverage
   // shows the spec is calling out an open question. We use checks.aria_correct=false
   // as the signal since those are the specs that explicitly need input.
   return specs.filter((s) => s.checks && (!s.checks.aria_correct || !s.checks.states_complete)).length;

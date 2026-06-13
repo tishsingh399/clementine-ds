@@ -1,6 +1,6 @@
 # Trust levels for agents
 
-> Adapted from Romina Kavcic's agentic design system talk (Into Design Systems 2026). Adapted for Clementine's spec-driven architecture.
+> A trust model for AI agents working against Clementine: autonomy scales with demonstrated competence, enforced by the spec contract and the validator.
 
 When an AI agent operates against Clementine, it earns trust like a new hire earns autonomy. Each action carries a risk × confidence cost, and the agent only gets to take actions that fit its current level.
 
@@ -26,7 +26,7 @@ In `.claude/settings.local.json` or `.claude/settings.json`, the agent's permiss
 
 ## The risk × confidence matrix
 
-Adapted from Romina's talk. Every action sits somewhere on this 2-axis grid:
+Every action an agent could take sits somewhere on this 2-axis grid:
 
 ```
                 LOW CONFIDENCE                     HIGH CONFIDENCE
@@ -84,7 +84,7 @@ A typical workflow for a Level 3 agent handed "add a Tooltip component":
 
 ## Why this matters for Clementine specifically
 
-Romina's framing — agents operate with autonomy proportional to demonstrated competence — fits Clementine's spec-driven model exactly. The spec IS the contract that pins what an agent is allowed to do. The validator IS the enforcer. The trust levels are the dial.
+The core principle — agents operate with autonomy proportional to demonstrated competence — fits Clementine's spec-driven model exactly. The spec IS the contract that pins what an agent is allowed to do. The validator IS the enforcer. The trust levels are the dial.
 
 ## Related
 
