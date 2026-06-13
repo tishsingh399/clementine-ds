@@ -89,6 +89,24 @@ export const clementineTheme = createTheme({
       p.colorOrange0, p.colorOrange1, p.colorOrange2, p.colorOrange3, p.colorOrange4,
       p.colorOrange5, p.colorOrange6, p.colorOrange7, p.colorOrange8, p.colorOrange9,
     ],
+    // Clementine's dark theme. Mantine drives ALL dark-scheme surfaces, text, and
+    // borders from `colors.dark` — without this it silently falls back to its
+    // generic grey dark mode (#242424) and the navy `surface.*` tokens go unused.
+    // Index map (Mantine v7): 0-1 brightest text · 2 dimmed · 3 placeholder ·
+    // 4-5 borders/hover · 6 default surface (Paper/default button) · 7 body ·
+    // 8-9 deepest. Tuned so dimmed text and input borders clear WCAG AA on navy.
+    dark: [
+      '#f0f4f8', // 0  text.primary — brightest
+      '#dbe3ec', // 1
+      '#aab6c6', // 2  dimmed text (≥4.5:1 on navy + colored subtle panels)
+      '#94a1b2', // 3  placeholder — text.tertiary (dark)
+      '#69788d', // 4  default border (≥3:1 input borders, 1.4.11)
+      '#3d4d61', // 5  hover border / control line
+      '#243447', // 6  surface.elevated — Paper / default-variant button bg
+      '#1a2735', // 7  surface.default — body background
+      '#15202e', // 8  surface.subtle — deeper wells
+      '#0f1722', // 9  deepest
+    ],
   },
 
   radius: {
