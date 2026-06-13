@@ -1,48 +1,144 @@
 {
   "action": {
-    "primary":        { "$value": "{color.blue.6}", "$type": "color" },
-    "primary-hover":  { "$value": "{color.blue.7}", "$type": "color" },
-    "primary-active": { "$value": "{color.blue.8}", "$type": "color" },
-    "destructive":       { "$value": "{color.red.6}", "$type": "color" },
-    "destructive-hover": { "$value": "{color.red.7}", "$type": "color" }
+    "primary": {
+      "$value": "{color.blue.6}",
+      "$type": "color"
+    },
+    "primary-hover": {
+      "$value": "{color.blue.7}",
+      "$type": "color"
+    },
+    "primary-active": {
+      "$value": "{color.blue.8}",
+      "$type": "color"
+    },
+    "destructive": {
+      "$value": "{color.red.6}",
+      "$type": "color"
+    },
+    "destructive-hover": {
+      "$value": "{color.red.7}",
+      "$type": "color"
+    }
   },
   "surface": {
-    "default":  { "$value": "{color.gray.0}", "$type": "color" },
-    "elevated": { "$value": "{color.white}",  "$type": "color" },
-    "subtle":   { "$value": "{color.gray.1}", "$type": "color" },
-    "overlay":  { "$value": "rgba(0,0,0,0.4)", "$type": "color" }
+    "default": {
+      "$value": "{color.gray.0}",
+      "$type": "color"
+    },
+    "elevated": {
+      "$value": "{color.white}",
+      "$type": "color"
+    },
+    "subtle": {
+      "$value": "{color.gray.1}",
+      "$type": "color"
+    },
+    "overlay": {
+      "$value": "rgba(0,0,0,0.4)",
+      "$type": "color"
+    }
   },
   "text": {
-    "primary":   { "$value": "{color.gray.9}", "$type": "color" },
-    "secondary": { "$value": "{color.gray.6}", "$type": "color" },
-    "tertiary":  { "$value": "{color.gray.4}", "$type": "color" },
-    "on-action": { "$value": "{color.white}",  "$type": "color" },
-    "link":      { "$value": "{color.blue.6}", "$type": "color" }
+    "primary": {
+      "$value": "{color.gray.9}",
+      "$type": "color"
+    },
+    "secondary": {
+      "$value": "{color.gray.6}",
+      "$type": "color"
+    },
+    "tertiary": {
+      "$value": "{color.gray.5}",
+      "$type": "color"
+    },
+    "on-action": {
+      "$value": "{color.white}",
+      "$type": "color"
+    },
+    "link": {
+      "$value": "{color.blue.6}",
+      "$type": "color"
+    }
   },
   "border": {
-    "default": { "$value": "{color.gray.2}", "$type": "color" },
-    "strong":  { "$value": "{color.gray.3}", "$type": "color" },
-    "focus":   { "$value": "{color.blue.6}", "$type": "color" }
+    "default": {
+      "$value": "{color.gray.2}",
+      "$type": "color"
+    },
+    "strong": {
+      "$value": "{color.gray.5}",
+      "$type": "color"
+    },
+    "focus": {
+      "$value": "{color.blue.6}",
+      "$type": "color"
+    }
   },
   "focus": {
-    "ring": { "$value": "#ff8040", "$type": "color" }
+    "ring": {
+      "$value": "#f5631a",
+      "$type": "color"
+    }
   },
   "feedback": {
-    "error":          { "$value": "{color.red.6}",    "$type": "color" },
-    "error-subtle":   { "$value": "{color.red.0}",    "$type": "color" },
-    "success":        { "$value": "{color.green.6}",   "$type": "color" },
-    "success-subtle": { "$value": "{color.green.0}",   "$type": "color" },
-    "warning":        { "$value": "{color.orange.5}",  "$type": "color" },
-    "warning-subtle": { "$value": "{color.orange.0}",  "$type": "color" }
+    "error": {
+      "$value": "{color.red.6}",
+      "$type": "color"
+    },
+    "error-subtle": {
+      "$value": "{color.red.0}",
+      "$type": "color"
+    },
+    "success": {
+      "$value": "{color.green.6}",
+      "$type": "color"
+    },
+    "success-subtle": {
+      "$value": "{color.green.0}",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "{color.orange.6}",
+      "$type": "color"
+    },
+    "warning-subtle": {
+      "$value": "{color.orange.0}",
+      "$type": "color"
+    }
   },
   "risk": {
-    "critical":        { "$value": "{color.red.9}",    "$type": "color" },
-    "critical-subtle": { "$value": "{color.red.0}",    "$type": "color" },
-    "high":            { "$value": "{color.orange.7}",  "$type": "color" },
-    "high-subtle":     { "$value": "{color.orange.0}",  "$type": "color" },
-    "medium":          { "$value": "{color.orange.5}",  "$type": "color" },
-    "medium-subtle":   { "$value": "{color.orange.1}",  "$type": "color" },
-    "low":             { "$value": "{color.green.6}",   "$type": "color" },
-    "low-subtle":      { "$value": "{color.green.0}",   "$type": "color" }
+    "critical": {
+      "$value": "{color.red.9}",
+      "$type": "color"
+    },
+    "critical-subtle": {
+      "$value": "{color.red.0}",
+      "$type": "color"
+    },
+    "high": {
+      "$value": "{color.orange.7}",
+      "$type": "color"
+    },
+    "high-subtle": {
+      "$value": "{color.orange.0}",
+      "$type": "color"
+    },
+    "medium": {
+      "$value": "{color.orange.6}",
+      "$type": "color"
+    },
+    "medium-subtle": {
+      "$value": "{color.orange.1}",
+      "$type": "color"
+    },
+    "low": {
+      "$value": "{color.green.6}",
+      "$type": "color"
+    },
+    "low-subtle": {
+      "$value": "{color.green.0}",
+      "$type": "color"
+    }
   }
 }
