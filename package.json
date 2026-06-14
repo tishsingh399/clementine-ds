@@ -7,6 +7,7 @@
     "storybook": "pnpm --filter storybook dev",
     "build:storybook": "pnpm --filter storybook build",
     "validate": "npx -y github:tishsingh399/agentic-spec validate specs",
+    "a11y": "pnpm --filter storybook a11y:ci",
     "size": "size-limit",
     "size:why": "size-limit --why"
   },

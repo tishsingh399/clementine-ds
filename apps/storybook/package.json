@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "a11y:ci": "start-server-and-test \"http-server storybook-static --port 6006 -a 127.0.0.1 --silent\" http://127.0.0.1:6006/index.json \"test-storybook --url http://127.0.0.1:6006\""
   },
   "dependencies": {
     "@clementine-ds/tokens": "workspace:*",
@@ -28,6 +29,7 @@
     "http-server": "^14.1.0",
     "jest-axe": "^10.0.0",
     "playwright": "1.60.0",
+    "start-server-and-test": "^2.0.8",
     "storybook": "^8",
     "typescript": "^5.7",
     "vite": "^6",

@@ -108,8 +108,12 @@ jobs:
       - name: Build Storybook
         run: pnpm build
 
-      - name: Serve Storybook and run test-runner with axe
+      - name: Verify Storybook build output
         run: |
-          pnpm --filter storybook exec concurrently -k -s first -n "SB,A11Y" \
-            "npx http-server apps/storybook/storybook-static --port 6006 -a 127.0.0.1 --silent" \
-            "npx wait-on -t 60000 http://127.0.0.1:6006/index.json && pnpm --filter storybook test-storybook --url http://127.0.0.1:6006"
+          ls -la apps/storybook/storybook-static | head
+          test -f apps/storybook/storybook-static/index.json \
+            && echo "index.json present" \
+            || (echo "MISSING index.json — storybook-static not built" && exit 1)
+
+      - name: Serve Storybook and run test-runner with axe
+        run: pnpm a11y
