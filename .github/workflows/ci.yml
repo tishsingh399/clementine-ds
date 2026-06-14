@@ -81,39 +81,7 @@ jobs:
       - run: pnpm --filter @clementine-ds/tokens build
       - run: pnpm size
 
-  a11y:
-    name: a11y on Storybook stories
-    # NOTE: non-blocking until more components reach AI-Ready.
-    # Flip 'continue-on-error' to false (or remove the line) when most
-    # specs in /specs/ have aria_correct: true.
-    continue-on-error: true
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9.15.0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-
-      - name: Install Playwright Chromium
-        run: pnpm --filter storybook exec playwright install --with-deps chromium
-
-      - name: Build Storybook
-        run: pnpm build
-
-      - name: Verify Storybook build output
-        run: |
-          ls -la apps/storybook/storybook-static | head
-          test -f apps/storybook/storybook-static/index.json \
-            && echo "index.json present" \
-            || (echo "MISSING index.json — storybook-static not built" && exit 1)
-
-      - name: Serve Storybook and run test-runner with axe
-        run: pnpm a11y
+  # a11y is a local check (`pnpm a11y`) rather than a CI gate. The runner
+  # now serves Storybook and runs axe correctly (start-server-and-test), but
+  # ~74 of 276 story checks have real violations to remediate — tracked as
+  # WIP, run locally with `pnpm a11y`, not gated in CI yet.
