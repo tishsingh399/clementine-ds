@@ -6,6 +6,7 @@
     "dev": "turbo run dev",
     "storybook": "pnpm --filter storybook dev",
     "build:storybook": "pnpm --filter storybook build",
+    "validate": "npx -y github:tishsingh399/agentic-spec validate specs",
     "size": "size-limit",
     "size:why": "size-limit --why"
   },

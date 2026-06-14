@@ -90,7 +90,26 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 pnpm install
 pnpm storybook         # http://localhost:6006
 pnpm build             # build all packages
+pnpm validate          # validate all 121 spec contracts
 ```
+
+## See the agentic loop in 60 seconds
+
+The point of Clementine is the contract, so start there. Pick one component and follow it end to end:
+
+```bash
+# 1. read the contract an agent reads before writing code
+cat specs/button/index.md          # closed token list, states, named parts
+cat specs/button/tokens.json       # the exact tokens this component may use
+
+# 2. enforce it — the validator fails loudly if the spec and tokens disagree
+npx -y github:tishsingh399/agentic-spec validate specs/button
+
+# 3. see the same contract rendered live
+#    → https://clementine-ds-storybook.vercel.app  (Button)
+```
+
+That same loop holds for all 121 components. `pnpm validate` runs it across the whole system; it's also one of the four CI gates every PR must pass.
 
 ## Why agentic?
 

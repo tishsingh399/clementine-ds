@@ -27,7 +27,7 @@ Each PR is checked by [agentic-spec](https://github.com/tishsingh399/agentic-spe
 You can run the equivalent locally before pushing:
 
 ```bash
-npx -y github:tishsingh399/agentic-spec validate specs/*
+pnpm validate                                            # validates all 121 specs (recursive)
 pnpm --filter @clementine-ds/ui exec tsc --noEmit
 pnpm build
 ```
