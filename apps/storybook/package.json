@@ -33,6 +33,6 @@
     "storybook": "^8",
     "typescript": "^5.7",
     "vite": "^6",
-    "wait-on": "^8.0.0"
+    "wait-on": "^9.0.10"
   }
 }
