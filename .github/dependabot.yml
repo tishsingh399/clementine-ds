@@ -1,5 +1,9 @@
 version: 2
 
+# Dependabot proposes only minor + patch updates. Major version bumps (e.g.
+# Storybook 8 → 10, Mantine 8 → 9) are breaking migrations handled deliberately
+# by hand, not as automated PRs — so they're ignored here.
+
 updates:
   # npm — root + every workspace package
   - package-ecosystem: "npm"
@@ -12,6 +16,9 @@ updates:
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       # Group all minor + patch updates into one PR per workspace
       minor-and-patch:
@@ -26,6 +33,9 @@ updates:
     labels:
       - "dependencies"
       - "ui"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "npm"
     directory: "/packages/tokens"
@@ -35,6 +45,9 @@ updates:
     labels:
       - "dependencies"
       - "tokens"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "npm"
     directory: "/apps/storybook"
@@ -44,6 +57,9 @@ updates:
     labels:
       - "dependencies"
       - "storybook"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
 
   # GitHub Actions themselves
   - package-ecosystem: "github-actions"
