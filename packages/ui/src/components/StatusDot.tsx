@@ -10,11 +10,11 @@ export interface StatusDotProps {
 }
 
 const MAP: Record<StatusKind, { color: string; text: string }> = {
-  online:  { color: 'var(--tds-feedback-success)', text: 'Online' },
-  offline: { color: 'var(--tds-text-tertiary)',    text: 'Offline' },
-  busy:    { color: 'var(--tds-feedback-error)',   text: 'Busy' },
-  away:    { color: 'var(--tds-feedback-warning)', text: 'Away' },
-  neutral: { color: 'var(--tds-text-tertiary)',    text: 'Unknown' },
+  online:  { color: 'var(--cds-feedback-success)', text: 'Online' },
+  offline: { color: 'var(--cds-text-tertiary)',    text: 'Offline' },
+  busy:    { color: 'var(--cds-feedback-error)',   text: 'Busy' },
+  away:    { color: 'var(--cds-feedback-warning)', text: 'Away' },
+  neutral: { color: 'var(--cds-text-tertiary)',    text: 'Unknown' },
 };
 
 /**

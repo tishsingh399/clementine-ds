@@ -12,10 +12,10 @@ export interface InlineMessageProps {
  * Tokens: inline-message.* . Spec: specs/inline-message/index.md
  */
 const IM: Record<InlineMessageStatus, { color: string; glyph: string }> = {
-  info:    { color: 'var(--tds-text-secondary)',  glyph: 'ⓘ' },
-  success: { color: 'var(--tds-feedback-success)', glyph: '✓' },
-  warning: { color: 'var(--tds-feedback-warning)', glyph: '⚠' },
-  error:   { color: 'var(--tds-feedback-error)',   glyph: '⊘' },
+  info:    { color: 'var(--cds-text-secondary)',  glyph: 'ⓘ' },
+  success: { color: 'var(--cds-feedback-success)', glyph: '✓' },
+  warning: { color: 'var(--cds-feedback-warning)', glyph: '⚠' },
+  error:   { color: 'var(--cds-feedback-error)',   glyph: '⊘' },
 };
 export const InlineMessage = forwardRef<HTMLDivElement, InlineMessageProps>(
   ({ status = 'info', children }, ref) => {
@@ -23,7 +23,7 @@ export const InlineMessage = forwardRef<HTMLDivElement, InlineMessageProps>(
     return (
       <Group ref={ref} gap={6} align="flex-start" wrap="nowrap">
         <span aria-hidden style={{ color: m.color, lineHeight: 1.5 }}>{m.glyph}</span>
-        <Text size="sm" style={{ color: 'var(--tds-text-primary)' }}>{children}</Text>
+        <Text size="sm" style={{ color: 'var(--cds-text-primary)' }}>{children}</Text>
       </Group>
     );
   }

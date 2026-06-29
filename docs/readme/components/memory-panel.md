@@ -1,6 +1,6 @@
 # MemoryPanel
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/memory-panel/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/MemoryPanel.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/MemoryPanel.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/memory-panel.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/memory-panel/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/MemoryPanel.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/MemoryPanel.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/memory-panel.json)
 
 ## Overview
 

@@ -12,9 +12,9 @@ export interface LoadingStateProps {
 export const LoadingState = forwardRef<HTMLDivElement, LoadingStateProps>(
   ({ label = 'Loading…' }, ref) => (
     <Stack ref={ref} align="center" gap={10} role="status" aria-live="polite"
-      style={{ background: 'var(--tds-surface-default)', padding: '28px 24px' }}>
-      <Loader color="var(--tds-action-primary)" size="sm" />
-      <Text size="sm" style={{ color: 'var(--tds-text-secondary)' }}>{label}</Text>
+      style={{ background: 'var(--cds-surface-default)', padding: '28px 24px' }}>
+      <Loader color="var(--cds-action-primary)" size="sm" />
+      <Text size="sm" style={{ color: 'var(--cds-text-secondary)' }}>{label}</Text>
     </Stack>
   )
 );

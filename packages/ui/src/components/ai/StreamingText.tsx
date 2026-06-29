@@ -12,8 +12,9 @@ export interface StreamingTextProps {
  * while streaming.
  *
  * `aria-live="polite"` so screen readers announce updates without interrupting; the caret
- * animation is disabled under `prefers-reduced-motion`. Caret = action.primary
- * (token streaming.caret). See specs/ai/streaming-text/index.md.
+ * animation is disabled under `prefers-reduced-motion`. Caret color and blink duration come
+ * from the component-tier tokens `streaming.caret` / `streaming.duration`
+ * (--cds-streaming-*). See specs/streaming-text/index.md.
  */
 export const StreamingText = forwardRef<HTMLSpanElement, StreamingTextProps>(
   ({ children, streaming = false }, ref) => {
@@ -35,8 +36,8 @@ export const StreamingText = forwardRef<HTMLSpanElement, StreamingTextProps>(
                 height: '1em',
                 marginLeft: 2,
                 transform: 'translateY(2px)',
-                background: 'var(--tds-action-primary)',
-                animation: 'cds-caret-blink 1s steps(1) infinite',
+                background: 'var(--cds-streaming-caret)',
+                animation: 'cds-caret-blink var(--cds-streaming-duration) steps(1) infinite',
               }}
             />
           </>

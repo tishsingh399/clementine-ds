@@ -23,7 +23,7 @@ export interface HITLGateProps {
  * consequential action runs (write, delete, send, spend).
  *
  * Caution-styled (feedback.warning) with Approve / Deny / Edit. Destructive actions get a
- * danger-colored Approve AND explicit wording. Tokens: hitl.* . See specs/ai/hitl-gate/index.md.
+ * danger-colored Approve AND explicit wording. Tokens: hitl.* . See specs/hitl-gate/index.md.
  */
 export const HITLGate = forwardRef<HTMLDivElement, HITLGateProps>(
   ({ title, description, children, onApprove, onDeny, onEdit, approveLabel = 'Approve', denyLabel = 'Deny', destructive = false, status = 'pending' }, ref) => {
@@ -36,7 +36,7 @@ export const HITLGate = forwardRef<HTMLDivElement, HITLGateProps>(
         p="md"
         role="group"
         aria-label={title}
-        style={{ background: 'var(--tds-feedback-warning-subtle)', borderColor: 'var(--tds-feedback-warning)' }}
+        style={{ background: 'var(--cds-feedback-warning-subtle)', borderColor: 'var(--cds-feedback-warning)' }}
       >
         <Stack gap="sm">
           <Group justify="space-between" wrap="nowrap">

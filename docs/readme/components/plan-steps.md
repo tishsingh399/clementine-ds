@@ -1,6 +1,6 @@
 # PlanSteps
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/plan-steps/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PlanSteps.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PlanSteps.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/plan-steps.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/plan-steps/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PlanSteps.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PlanSteps.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/plan-steps.json)
 
 ## Overview
 

@@ -11,7 +11,7 @@ export interface MessageActionsProps {
 /**
  * Tray 4 · AI — the hover/focus action row on a Message (copy, edit, regenerate, branch).
  * Only the handlers you pass are rendered. Tokens: message-actions.* .
- * Spec: specs/ai/message-actions/index.md
+ * Spec: specs/message-actions/index.md
  */
 export const MessageActions = forwardRef<HTMLDivElement, MessageActionsProps>(
   ({ onCopy, onEdit, onRegenerate, onBranch }, ref) => {

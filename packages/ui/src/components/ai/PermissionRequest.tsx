@@ -13,12 +13,12 @@ export interface PermissionRequestProps {
 /**
  * Tray 4 · AI — a least-privilege access request: "Agent wants to do X (scope Y)" → Allow /
  * Deny. Central to privileged-access contexts. Tokens: permission.* .
- * Spec: specs/ai/permission-request/index.md
+ * Spec: specs/permission-request/index.md
  */
 export const PermissionRequest = forwardRef<HTMLDivElement, PermissionRequestProps>(
   ({ action, scope, onAllow, onDeny }, ref) => (
     <Paper ref={ref} withBorder radius="md" p="md" role="group" aria-label="Permission request"
-      style={{ background: 'var(--tds-feedback-warning-subtle)', borderColor: 'var(--tds-feedback-warning)' }}>
+      style={{ background: 'var(--cds-feedback-warning-subtle)', borderColor: 'var(--cds-feedback-warning)' }}>
       <Stack gap="sm">
         <Text fw={600} size="sm">Agent requests permission</Text>
         <Text size="sm" c="dimmed">{action}</Text>

@@ -15,7 +15,7 @@ Every *buildable* artifact in Clementine follows the same closed contract — **
 | 1 | **Foundations** | `packages/tokens/` + `packages/ui/src/theme/` | Tokens | ✅ / 🟡 |
 | 2 | **Components** | `packages/ui/` + `specs/` | React | ✅ 16, ongoing |
 | 3 | **Patterns** | `patterns/` | Composition | 🟡 3 of ~8 |
-| 4 | **AI surface components** | `packages/ui/src/components/ai/` + `specs/ai/` | React | 🔲 net-new |
+| 4 | **AI surface components** | `packages/ui/src/components/ai/` + `specs/` | React | 🔲 net-new |
 | 5 | **Behavior & state model** | `behaviors/` + `packages/ui/src/hooks/` | Specs + hooks | 🔲 net-new |
 | 6 | **Content & language** | `content/` | Guidance docs | 🔲 net-new |
 | 7 | **Trust, safety & governance** | `packages/ui/.../trust/` + `governance/` | React + policy | 🔲 net-new |
@@ -43,7 +43,7 @@ Every *buildable* artifact in Clementine follows the same closed contract — **
 - 🔲 Tables, forms (validation + error summary), search, wizards/steppers, dashboards, empty-state.
 
 ### 4 · AI surface components — 🔲 net-new — *the differentiator*
-New home: `packages/ui/src/components/ai/` with specs under `specs/ai/`. The components that make this an *AI* design system:
+New home: `packages/ui/src/components/ai/` with specs under `specs/`. The components that make this an *AI* design system:
 - **Chat thread + Message** (user / assistant / system roles, with timestamps + status)
 - **Composer** (prompt input: multiline, attachments, send/stop, slash-affordances)
 - **Reasoning trace** (collapsible "thinking", streamed, dimmable)
@@ -92,6 +92,6 @@ Only **trays 2, 4, and parts of 7** are React components. Trays **5, 6, 8** are 
 | 3 | **Tray 4 — AI surfaces** (Message, Composer, Reasoning trace, Tool-call card, HITL gate, Citation, Streaming text, Artifact) | ✅ done |
 | 4 | **Tray 5 — behavior/state** hooks (`useStreaming`/`useInterruptible`/`useRetry`) + interaction specs (`behaviors/`) | ✅ done |
 | 5 | **Tray 6 — content/language** (`content/`) + **Tray 7 — trust** (DisclosureBadge) + **Tray 8 — feedback** (FeedbackControl + eval loop) | ✅ done |
-| 6 | **Tray 9 — model/prompt registry** ✅ · **Figma sync** — 240 variables (cascade-aliased) + all 21 new components rendered as real, variable-bound components ✅ · **Code Connect** (Figma ↔ code) | 🟡 variables + components done; Code Connect pending |
+| 6 | **Tray 9 — model/prompt registry** ✅ · **Figma sync** — the full component-token set (now <!-- COUNTS:component-tokens -->628<!-- /COUNTS --> variables, cascade-aliased) + all 21 new components rendered as real, variable-bound components ✅ · **Code Connect** (Figma ↔ code) | 🟡 variables + components done; Code Connect pending |
 
 Patterns (Tray 3): action-bar, confirm-dialog, form-field, **data-table, empty-state, wizard** ✅ — search, dashboard remain.

@@ -1,6 +1,6 @@
 # UndoBar
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/undo-bar/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/UndoBar.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/UndoBar.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/undo-bar.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/undo-bar/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/UndoBar.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/UndoBar.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/undo-bar.json)
 
 ## Overview
 

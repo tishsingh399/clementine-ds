@@ -19,7 +19,7 @@ export interface ComposerProps {
  * Clementine Composer — the prompt input for an AI surface.
  *
  * Autosizing textarea + a Send affordance that becomes Stop while `busy`. Enter submits,
- * Shift+Enter inserts a newline. Tokens: composer.* . See specs/ai/composer/index.md.
+ * Shift+Enter inserts a newline. Tokens: composer.* . See specs/composer/index.md.
  */
 export const Composer = forwardRef<HTMLTextAreaElement, ComposerProps>(
   ({ value = '', onChange, onSubmit, onStop, placeholder = 'Message the assistant…', busy = false, disabled = false, maxRows = 8 }, ref) => {
@@ -31,7 +31,7 @@ export const Composer = forwardRef<HTMLTextAreaElement, ComposerProps>(
       }
     };
     return (
-      <Paper withBorder radius="lg" p={6} style={{ background: 'var(--tds-surface-elevated)' }}>
+      <Paper withBorder radius="lg" p={6} style={{ background: 'var(--cds-surface-elevated)' }}>
         <Group align="flex-end" gap={6} wrap="nowrap">
           <Textarea
             ref={ref}

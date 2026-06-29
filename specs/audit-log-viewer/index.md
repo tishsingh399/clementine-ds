@@ -1,6 +1,6 @@
 ---
 component: audit-log-viewer
-ds_version: clementine-ds@HEAD (2026-06-10 verified)
+ds_version: clementine-ds@0.1.0 (2026-06-10 verified)
 status: AI-Ready
 last_verified: 2026-06-10
 
@@ -14,11 +14,11 @@ semantic_parts:
   target: object
 
 token_contract:
-  - audit-log.header-bg
-  - audit-log.row-striped
-  - audit-log.fg
-  - audit-log.meta
-  - audit-log.border
+  - audit-log-viewer.header-bg
+  - audit-log-viewer.row-striped
+  - audit-log-viewer.fg
+  - audit-log-viewer.meta
+  - audit-log-viewer.border
 
 interaction_states: [default]
 
@@ -53,11 +53,11 @@ A chronological, attributable record of actions — who did what to what, when.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `audit-log.header-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `audit-log.row-striped` | `{surface.default}` | `#fafaf8` |
-| `audit-log.fg` | `{text.primary}` | `#1a1a18` |
-| `audit-log.meta` | `{text.tertiary}` | `#a3a39e` |
-| `audit-log.border` | `{border.default}` | `#e5e5e0` |
+| `audit-log-viewer.header-bg` | `{surface.subtle}` | `#f3f3f0` |
+| `audit-log-viewer.row-striped` | `{surface.default}` | `#fafaf8` |
+| `audit-log-viewer.fg` | `{text.primary}` | `#1a1a18` |
+| `audit-log-viewer.meta` | `{text.tertiary}` | `#a3a39e` |
+| `audit-log-viewer.border` | `{border.default}` | `#e5e5e0` |
 
 **Do:** Attribute every entry to a principal; Make it sortable/filterable + exportable; Keep timestamps precise.
 **Don't:** Allow unattributable entries; Mutate/hide log rows.

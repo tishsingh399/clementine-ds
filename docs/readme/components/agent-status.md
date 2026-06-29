@@ -1,6 +1,6 @@
 # AgentStatus
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/agent-status/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/AgentStatus.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/AgentStatus.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/agent-status.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/agent-status/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/AgentStatus.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/AgentStatus.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/agent-status.json)
 
 ## Overview
 

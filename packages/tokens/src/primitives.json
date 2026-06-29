@@ -61,7 +61,11 @@
       "9":  { "$value": "#7c2d12", "$type": "color" }
     },
     "white":  { "$value": "#ffffff", "$type": "color" },
-    "black":  { "$value": "#0a0a09", "$type": "color" }
+    "black":  { "$value": "#0a0a09", "$type": "color" },
+    "brand": {
+      "clementine": { "$value": "#ff8040", "$type": "color" },
+      "clementine-strong": { "$value": "#f5631a", "$type": "color" }
+    }
   },
   "spacing": {
     "xs": { "$value": "4px",  "$type": "dimension" },

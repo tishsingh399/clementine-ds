@@ -1,15 +1,26 @@
 {
   "name": "clementine-ds",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "storybook": "pnpm --filter storybook dev",
     "build:storybook": "pnpm --filter storybook build",
-    "validate": "npx -y github:tishsingh399/agentic-spec validate specs",
     "a11y": "pnpm --filter storybook a11y:ci",
     "size": "size-limit",
-    "size:why": "size-limit --why"
+    "size:why": "size-limit --why",
+    "tokens:index": "node scripts/build-component-index.mjs",
+    "counts": "node scripts/inject-counts.mjs",
+    "counts:check": "node scripts/inject-counts.mjs --check",
+    "version:pin": "node scripts/pin-ds-version.mjs",
+    "validate:cascade": "node scripts/lint-cascade-direction.mjs",
+    "validate:honesty": "node scripts/check-spec-honesty.mjs",
+    "validate:links": "node scripts/check-spec-links.mjs",
+    "validate:contract": "agentic-spec validate specs/",
+    "validate": "pnpm tokens:index && pnpm validate:contract && pnpm validate:cascade && pnpm validate:honesty && pnpm validate:links && pnpm counts:check",
+    "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
+    "test": "pnpm validate"
   },
   "size-limit": [
     {
@@ -21,6 +32,7 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^12.1.0",
+    "agentic-spec": "0.1.1",
     "size-limit": "^12.1.0",
     "turbo": "^2",
     "typescript": "^5.7"

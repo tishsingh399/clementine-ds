@@ -8,7 +8,7 @@ export interface AgentPickerProps extends Omit<SelectProps, 'data'> {
 
 /**
  * Tray 4 · AI — choose or route between agents. Distinct from ModelSelector (which picks a
- * model). Tokens: agent-picker.* . Spec: specs/ai/agent-picker/index.md
+ * model). Tokens: agent-picker.* . Spec: specs/agent-picker/index.md
  */
 export const AgentPicker = forwardRef<HTMLInputElement, AgentPickerProps>(({ agents, ...props }, ref) => (
   <Select

@@ -15,11 +15,17 @@ semantic_parts:
   icon:    Optional leading/trailing icon slot
 
 token_contract:
-  - action.primary
-  - surface.default
-  - text.primary
-  - border.focus
-  # ... canonical clementine-ds semantic tokens only
+  - <component>.bg.default
+  - <component>.bg.hover
+  - <component>.fg.default
+  - <component>.border.default
+  - <component>.border.focus
+  - <component>.radius
+  # ... component-tier tokens only (one per semantic_part × state).
+  # Each lives in packages/tokens/src/components/<component>.json and binds
+  # through a semantic token to a primitive. NEVER list a semantic token
+  # (action.primary) or a primitive ({color.blue.6}) here — that breaks the
+  # cascade (see scripts/lint-cascade-direction.mjs).
 
 interaction_states: [default, hover, focus, active, disabled, loading]
 
@@ -79,10 +85,12 @@ pages_used_in: []
 
 ### 2.3 Required Token Bindings
 
-| Semantic part | State | Token | Resolves to |
-|---|---|---|---|
-| root | default bg | `action.primary` | `{color.blue.6}` → `#2563eb` |
-| root | focus ring | `focus.ring` | `#ff8040` |
+The contract token is component-tier; it resolves *through* a semantic token to a primitive. Show all three hops so the cascade is legible:
+
+| Semantic part | State | Component token | → Semantic | → Primitive |
+|---|---|---|---|---|
+| root | default bg | `<component>.bg.default` | `action.primary` | `{color.blue.6}` → `#2563eb` |
+| root | focus ring | `<component>.border.focus` | `focus.ring` | `{color.brand.focus}` → `#ff8040` |
 
 ## 3. Interaction States
 
@@ -112,6 +120,6 @@ pages_used_in: []
 ## 6. Agent Notes
 
 What an AI agent needs to know to safely extend this component:
-- Every token in `token_contract` MUST exist in `packages/tokens/src/semantic-*.json`
+- Every token in `token_contract` MUST exist in `packages/tokens/src/components/<component>.json` and resolve through a semantic token (component → semantic → primitive)
 - Don't bypass Mantine's prop API — extend it
 - Storybook story names map 1:1 to `interaction_states`

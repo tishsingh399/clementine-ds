@@ -11,9 +11,12 @@
       "types": "./dist/primitives.d.ts"
     },
     "./semantic-light": "./src/semantic-light.json",
-    "./semantic-dark": "./src/semantic-dark.json"
+    "./semantic-dark": "./src/semantic-dark.json",
+    "./primitives-source": "./src/primitives.json",
+    "./components": "./src/components.generated.json"
   },
   "scripts": {
+    "prebuild": "node ../../scripts/build-component-index.mjs",
     "build": "style-dictionary build --config sd.config.ts"
   },
   "devDependencies": {

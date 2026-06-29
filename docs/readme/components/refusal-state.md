@@ -1,6 +1,6 @@
 # RefusalState
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/refusal-state/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/RefusalState.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/RefusalState.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/refusal-state.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/refusal-state/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/RefusalState.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/RefusalState.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/refusal-state.json)
 
 ## Overview
 

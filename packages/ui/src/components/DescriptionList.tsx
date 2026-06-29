@@ -17,8 +17,8 @@ export const DescriptionList = forwardRef<HTMLDListElement, DescriptionListProps
   <dl ref={ref} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '8px 16px', margin: 0 }}>
     {items.map((it, i) => (
       <Fragment key={i}>
-        <dt style={{ color: 'var(--tds-text-secondary)', fontSize: 13 }}>{it.term}</dt>
-        <dd style={{ margin: 0, color: 'var(--tds-text-primary)', fontSize: 13 }}>{it.detail}</dd>
+        <dt style={{ color: 'var(--cds-text-secondary)', fontSize: 13 }}>{it.term}</dt>
+        <dd style={{ margin: 0, color: 'var(--cds-text-primary)', fontSize: 13 }}>{it.detail}</dd>
       </Fragment>
     ))}
   </dl>

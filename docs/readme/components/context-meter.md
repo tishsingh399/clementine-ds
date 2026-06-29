@@ -1,6 +1,6 @@
 # ContextMeter
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/context-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ContextMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ContextMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/context-meter.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/context-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ContextMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ContextMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/context-meter.json)
 
 ## Overview
 

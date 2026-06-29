@@ -14,10 +14,10 @@ export interface ErrorStateProps {
 export const ErrorState = forwardRef<HTMLDivElement, ErrorStateProps>(
   ({ title = 'Something went wrong', description, action }, ref) => (
     <Stack ref={ref} align="center" gap={8} role="alert"
-      style={{ background: 'var(--tds-feedback-error-subtle)', borderRadius: 8, padding: '32px 24px', textAlign: 'center' }}>
-      <span aria-hidden style={{ color: 'var(--tds-feedback-error)', fontSize: 26, lineHeight: 1 }}>⊘</span>
-      <Text fw={600} style={{ color: 'var(--tds-text-primary)' }}>{title}</Text>
-      {description && <Text size="sm" style={{ color: 'var(--tds-text-secondary)', maxWidth: 380 }}>{description}</Text>}
+      style={{ background: 'var(--cds-feedback-error-subtle)', borderRadius: 8, padding: '32px 24px', textAlign: 'center' }}>
+      <span aria-hidden style={{ color: 'var(--cds-feedback-error)', fontSize: 26, lineHeight: 1 }}>⊘</span>
+      <Text fw={600} style={{ color: 'var(--cds-text-primary)' }}>{title}</Text>
+      {description && <Text size="sm" style={{ color: 'var(--cds-text-secondary)', maxWidth: 380 }}>{description}</Text>}
       {action && <div style={{ marginTop: 4 }}>{action}</div>}
     </Stack>
   )

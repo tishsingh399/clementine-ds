@@ -1,6 +1,6 @@
 # CostMeter
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/cost-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/CostMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/CostMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/cost-meter.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/cost-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/CostMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/CostMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/cost-meter.json)
 
 ## Overview
 

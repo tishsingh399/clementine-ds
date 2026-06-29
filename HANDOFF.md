@@ -15,11 +15,11 @@ Cursor) can execute this directly — commands are copy-pasteable and ordered.
 
 | Layer | State |
 |---|---|
-| Components | **104**, each shipping token + spec + Storybook story + guidance doc + implementation |
+| Components | **<!-- COUNTS:components -->121<!-- /COUNTS -->**, each shipping token + spec + Storybook story + guidance doc + implementation |
 | Patterns | **22** composed flows in [`patterns/`](./patterns) |
-| Tokens | 87 primitives · 32 semantic (light + dark) · **535** component tokens |
-| Figma variables | **535** component variables, cascade-aliased, **1:1 with the code** |
-| Figma render | All **104** drawn as real, token-bound nodes — 94 as Components across 6 category pages, the 10 core on the Cover page |
+| Tokens | <!-- COUNTS:primitives -->89<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->32<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->628<!-- /COUNTS -->** component tokens |
+| Figma variables | **<!-- COUNTS:component-tokens -->628<!-- /COUNTS -->** component variables, cascade-aliased, **1:1 with the code** |
+| Figma render | All **<!-- COUNTS:components -->121<!-- /COUNTS -->** drawn as real, token-bound nodes — across 6 category pages plus the core on the Cover page |
 | Typecheck | `@clementine-ds/ui` and `observatory` both pass `tsc --noEmit` (verified) |
 
 **Not yet verified on the origin machine** (toolchain quirk there — re-confirm here):

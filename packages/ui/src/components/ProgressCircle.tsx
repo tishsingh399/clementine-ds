@@ -17,9 +17,9 @@ export const ProgressCircle = forwardRef<HTMLDivElement, ProgressCircleProps>(
     return (
       <div ref={ref} role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
         <RingProgress size={size} thickness={Math.max(6, Math.round(size / 12))} roundCaps
-          rootColor="var(--tds-surface-subtle)"
-          sections={[{ value: pct, color: 'var(--tds-action-primary)' }]}
-          label={<Center><Text fw={600} size="sm" style={{ color: 'var(--tds-text-primary)' }}>{label ?? (Math.round(pct) + '%')}</Text></Center>} />
+          rootColor="var(--cds-surface-subtle)"
+          sections={[{ value: pct, color: 'var(--cds-action-primary)' }]}
+          label={<Center><Text fw={600} size="sm" style={{ color: 'var(--cds-text-primary)' }}>{label ?? (Math.round(pct) + '%')}</Text></Center>} />
       </div>
     );
   }

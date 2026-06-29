@@ -42,12 +42,13 @@ And it organizes tokens in three tiers — the rule that makes the whole agentic
 | Semantic | `packages/tokens/src/semantic-{light,dark}.json` | Intent (`action.primary`, `surface.elevated`, `feedback.error`) |
 | Component | `packages/tokens/src/components/<name>.json` | Per-component bindings (`button.bg.default`, `badge.bg.success`) |
 
-**Why this matters for agents:** when a spec says `token_contract: [button.bg.default]`, the validator can check three things mechanically:
-1. Does `button.bg.default` exist in `packages/tokens/src/components/button.json`?
-2. Does the semantic it references exist?
-3. Does the primitive that resolves through?
+**Why this matters for agents:** when a spec says `token_contract: [button.bg.default]`, the tooling checks four things mechanically:
+1. Does `button.bg.default` exist in `packages/tokens/src/components/button.json`? (`pnpm validate:honesty`)
+2. Does the semantic it references exist, and does the reference point *up* the cascade, not at a raw primitive? (`pnpm validate:cascade`)
+3. Does the primitive it resolves through exist, so the chain ends in a concrete value? (`scripts/parity-report.mjs`)
+4. Does the runtime actually consume it — i.e. is `--cds-button-bg-default` emitted by the theme and bound to the component? (the Tier-3 bridge in `clementine-theme.ts`)
 
-If any tier breaks, drift is caught at the lint step — not at runtime.
+If any tier breaks, drift is caught at the lint/parity step — not at runtime.
 
 ## How an agent should read this repo
 

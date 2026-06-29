@@ -1,6 +1,6 @@
 # DiffView
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/diff-view/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/DiffView.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/DiffView.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/diff-view.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/diff-view/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/DiffView.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/DiffView.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/diff-view.json)
 
 ## Overview
 

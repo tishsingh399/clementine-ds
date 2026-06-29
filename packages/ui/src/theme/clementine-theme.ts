@@ -2,64 +2,89 @@ import { createTheme, type CSSVariablesResolver } from '@mantine/core';
 import * as p from '@clementine-ds/tokens';
 import lightTokens from '@clementine-ds/tokens/semantic-light';
 import darkTokens from '@clementine-ds/tokens/semantic-dark';
+import primitives from '@clementine-ds/tokens/primitives-source';
+import componentTokens from '@clementine-ds/tokens/components';
 
-// Resolve DTCG references like "{color.blue.6}" to actual hex values
-const primitiveMap: Record<string, string> = {
-  '{color.blue.0}': p.colorBlue0, '{color.blue.1}': p.colorBlue1,
-  '{color.blue.2}': p.colorBlue2, '{color.blue.3}': p.colorBlue3,
-  '{color.blue.4}': p.colorBlue4, '{color.blue.5}': p.colorBlue5,
-  '{color.blue.6}': p.colorBlue6, '{color.blue.7}': p.colorBlue7,
-  '{color.blue.8}': p.colorBlue8, '{color.blue.9}': p.colorBlue9,
-  '{color.red.0}': p.colorRed0, '{color.red.1}': p.colorRed1,
-  '{color.red.2}': p.colorRed2, '{color.red.3}': p.colorRed3,
-  '{color.red.4}': p.colorRed4, '{color.red.5}': p.colorRed5,
-  '{color.red.6}': p.colorRed6, '{color.red.7}': p.colorRed7,
-  '{color.red.8}': p.colorRed8, '{color.red.9}': p.colorRed9,
-  '{color.gray.0}': p.colorGray0, '{color.gray.1}': p.colorGray1,
-  '{color.gray.2}': p.colorGray2, '{color.gray.3}': p.colorGray3,
-  '{color.gray.4}': p.colorGray4, '{color.gray.5}': p.colorGray5,
-  '{color.gray.6}': p.colorGray6, '{color.gray.7}': p.colorGray7,
-  '{color.gray.8}': p.colorGray8, '{color.gray.9}': p.colorGray9,
-  '{color.green.0}': p.colorGreen0, '{color.green.1}': p.colorGreen1,
-  '{color.green.2}': p.colorGreen2, '{color.green.3}': p.colorGreen3,
-  '{color.green.4}': p.colorGreen4, '{color.green.5}': p.colorGreen5,
-  '{color.green.6}': p.colorGreen6, '{color.green.7}': p.colorGreen7,
-  '{color.green.8}': p.colorGreen8, '{color.green.9}': p.colorGreen9,
-  '{color.orange.0}': p.colorOrange0, '{color.orange.1}': p.colorOrange1,
-  '{color.orange.2}': p.colorOrange2, '{color.orange.3}': p.colorOrange3,
-  '{color.orange.4}': p.colorOrange4, '{color.orange.5}': p.colorOrange5,
-  '{color.orange.6}': p.colorOrange6, '{color.orange.7}': p.colorOrange7,
-  '{color.orange.8}': p.colorOrange8, '{color.orange.9}': p.colorOrange9,
-  '{color.white}': p.colorWhite, '{color.black}': p.colorBlack,
-};
+// --- Token resolution (the 3-tier cascade, made real at runtime) ----------
+//
+// A component-tier token references a semantic token (`{action.primary}`);
+// a semantic token references a primitive (`{color.blue.6}`); a primitive is
+// a literal (`#2563eb`). `resolveValue` walks that chain to a concrete value.
+// Non-color primitives (radius, motion durations) are referenced directly
+// because they have no semantic layer — the cascade lint (F2) allows that.
+//
+// `primitives.json` is the single source of truth for the primitive layer:
+// the old hand-maintained `primitiveMap` is gone (F11). Add a primitive there
+// and it flows through automatically — no theme edit required.
 
 type TokenObj = { $value: string; $type: string };
-type TokenGroup = Record<string, TokenObj>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyTree = Record<string, any>;
 
-function resolve(token: TokenObj): string {
-  const val = token.$value;
-  return primitiveMap[val] ?? val;
+const primitivesTree = primitives as AnyTree;
+
+function lookup(tree: AnyTree, path: string): TokenObj | undefined {
+  return path
+    .split('.')
+    .reduce<AnyTree | undefined>((acc, key) => (acc == null ? acc : acc[key]), tree) as
+    | TokenObj
+    | undefined;
 }
 
-function flattenSemanticTokens(
-  tokens: Record<string, TokenGroup>,
-  prefix: string,
-): Record<string, string> {
+/** Resolve a DTCG value/reference to a concrete value through the given semantic layer. */
+function resolveValue(value: string, semantic: AnyTree): string {
+  const match = /^\{(.+)\}$/.exec(value);
+  if (!match) return value; // literal (hex, rgba, ms, dimension)
+  const node = lookup(semantic, match[1]) ?? lookup(primitivesTree, match[1]);
+  if (!node || typeof node.$value !== 'string') return value; // unresolved — keep the ref
+  return resolveValue(node.$value, semantic);
+}
+
+/** Flatten the semantic layer into `--<prefix>-<group>-<key>` vars (one per prefix). */
+function flattenSemanticTokens(semantic: AnyTree, prefixes: string[]): Record<string, string> {
   const result: Record<string, string> = {};
-  for (const [group, entries] of Object.entries(tokens)) {
-    for (const [key, token] of Object.entries(entries)) {
-      result[`${prefix}-${group}-${key}`] = resolve(token);
+  for (const [group, entries] of Object.entries(semantic)) {
+    for (const [key, token] of Object.entries(entries as AnyTree)) {
+      const value = resolveValue((token as TokenObj).$value, semantic);
+      for (const prefix of prefixes) result[`${prefix}-${group}-${key}`] = value;
     }
   }
   return result;
 }
 
+/** Flatten the component-tier layer into `--cds-<dotted-path>` vars (e.g. button.bg.default). */
+function flattenComponentTokens(
+  tree: AnyTree,
+  semantic: AnyTree,
+  path: string[] = [],
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  for (const [key, value] of Object.entries(tree)) {
+    if (value && typeof value === 'object' && '$value' in value) {
+      result[`--cds-${[...path, key].join('-')}`] = resolveValue(
+        (value as TokenObj).$value,
+        semantic,
+      );
+    } else if (value && typeof value === 'object') {
+      Object.assign(result, flattenComponentTokens(value as AnyTree, semantic, [...path, key]));
+    }
+  }
+  return result;
+}
+
+// `--cds-*` is the canonical prefix (matches the package name). `--tds-*` is
+// emitted alongside it as a one-release backward-compat shim (F12) so any
+// remaining `var(--tds-*)` references keep resolving after the migration.
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
-  variables: {
-    '--cds-focus-ring': resolve(lightTokens.focus.ring),
+  variables: {},
+  light: {
+    ...flattenSemanticTokens(lightTokens as AnyTree, ['--cds', '--tds']),
+    ...flattenComponentTokens(componentTokens as AnyTree, lightTokens as AnyTree),
   },
-  light: flattenSemanticTokens(lightTokens as Record<string, TokenGroup>, '--tds'),
-  dark: flattenSemanticTokens(darkTokens as Record<string, TokenGroup>, '--tds'),
+  dark: {
+    ...flattenSemanticTokens(darkTokens as AnyTree, ['--cds', '--tds']),
+    ...flattenComponentTokens(componentTokens as AnyTree, darkTokens as AnyTree),
+  },
 });
 
 export const clementineTheme = createTheme({
@@ -150,7 +175,71 @@ export const clementineTheme = createTheme({
   },
 
   components: {
-    Button: { defaultProps: { radius: 'md' } },
+    // Button is the gold-standard proof that Tier 3 is consumed at runtime.
+    // Every declared button.* token has a paint path here: the `vars` callback
+    // remaps Mantine's internal --button-* vars per variant/color (so the
+    // variant machinery is respected), and `styles` covers the states Mantine
+    // doesn't expose as a single var (active, disabled, focus ring). All values
+    // resolve through the component → semantic → primitive cascade. This is the
+    // pattern the other Mantine-backed components below follow.
+    Button: {
+      defaultProps: { radius: 'md' },
+      vars: (_theme: unknown, props: { variant?: string; color?: string }) => {
+        const isOutline = props.variant === 'outline' || props.variant === 'default';
+        const isSubtle =
+          props.variant === 'subtle' || props.variant === 'light' || props.variant === 'transparent';
+        const destructive = props.color === 'red';
+        if (isOutline) {
+          return {
+            root: {
+              '--button-bg': 'var(--cds-button-bg-outline-default)',
+              '--button-hover': 'var(--cds-button-bg-outline-hover)',
+              '--button-color': 'var(--cds-button-fg-on-outline)',
+              '--button-bd': 'var(--cds-button-border-default)',
+            },
+          };
+        }
+        if (isSubtle) {
+          return { root: { '--button-color': 'var(--cds-button-fg-on-subtle)' } };
+        }
+        // filled (default) — primary or destructive
+        return {
+          root: {
+            '--button-bg': destructive
+              ? 'var(--cds-button-bg-destructive-default)'
+              : 'var(--cds-button-bg-default)',
+            '--button-hover': destructive
+              ? 'var(--cds-button-bg-destructive-hover)'
+              : 'var(--cds-button-bg-hover)',
+            '--button-color': 'var(--cds-button-fg-on-filled)',
+            '--button-bd': 'var(--cds-button-border-default)',
+          },
+        };
+      },
+      styles: {
+        root: {
+          // States Mantine doesn't drive off a single --button-* var: set the
+          // painted property directly so the Tier-3 token wins.
+          '&:active:not([data-disabled])': { backgroundColor: 'var(--cds-button-bg-active)' },
+          // border.hover is only visible on bordered variants
+          '&[data-variant="outline"]:hover, &[data-variant="default"]:hover': {
+            borderColor: 'var(--cds-button-border-hover)',
+          },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-button-border-focus)',
+            outlineOffset: '2px',
+          },
+          // Disabled fg/border bind to Tier-3. The disabled *background* is owned
+          // by Mantine's @layer mantine rule (gray.2), which a theme-level rule
+          // can't override without leaving the layer; it's one ramp-step off the
+          // spec's gray.1 and visually identical. Tracked for the DOM-parity pass.
+          '&[data-disabled]:not([data-loading])': {
+            color: 'var(--cds-button-fg-disabled)',
+            borderColor: 'var(--cds-button-fg-disabled)',
+          },
+        },
+      },
+    },
     TextInput: { defaultProps: { radius: 'md' } },
     Textarea: { defaultProps: { radius: 'md' } },
     Select: { defaultProps: { radius: 'md' } },

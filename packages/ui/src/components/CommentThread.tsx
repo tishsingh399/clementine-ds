@@ -25,10 +25,10 @@ export const CommentThread = forwardRef<HTMLDivElement, CommentThreadProps>(({ c
           <Avatar name={c.author} color="blue" radius="xl" size="sm" />
           <div>
             <Group gap={8} align="baseline">
-              <Text size="sm" fw={600} style={{ color: 'var(--tds-text-primary)' }}>{c.author}</Text>
-              <Text size="xs" style={{ color: 'var(--tds-text-tertiary)' }}>{c.when}</Text>
+              <Text size="sm" fw={600} style={{ color: 'var(--cds-text-primary)' }}>{c.author}</Text>
+              <Text size="xs" style={{ color: 'var(--cds-text-tertiary)' }}>{c.when}</Text>
             </Group>
-            <Text size="sm" style={{ color: 'var(--tds-text-primary)' }}>{c.body}</Text>
+            <Text size="sm" style={{ color: 'var(--cds-text-primary)' }}>{c.body}</Text>
           </div>
         </Group>
       ))}
