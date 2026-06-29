@@ -175,20 +175,70 @@ export const clementineTheme = createTheme({
   },
 
   components: {
-    // Button is the gold-standard proof that Tier 3 is consumed at runtime:
-    // the filled variant's paint comes from --cds-button-* vars, which resolve
-    // through the component → semantic → primitive cascade. Other Mantine-backed
-    // components are migrated to this pattern incrementally (see fixes P0 F1).
+    // Button is the gold-standard proof that Tier 3 is consumed at runtime.
+    // Every declared button.* token has a paint path here: the `vars` callback
+    // remaps Mantine's internal --button-* vars per variant/color (so the
+    // variant machinery is respected), and `styles` covers the states Mantine
+    // doesn't expose as a single var (active, disabled, focus ring). All values
+    // resolve through the component → semantic → primitive cascade. This is the
+    // pattern the other Mantine-backed components below follow.
     Button: {
       defaultProps: { radius: 'md' },
-      vars: () => ({
+      vars: (_theme: unknown, props: { variant?: string; color?: string }) => {
+        const isOutline = props.variant === 'outline' || props.variant === 'default';
+        const isSubtle =
+          props.variant === 'subtle' || props.variant === 'light' || props.variant === 'transparent';
+        const destructive = props.color === 'red';
+        if (isOutline) {
+          return {
+            root: {
+              '--button-bg': 'var(--cds-button-bg-outline-default)',
+              '--button-hover': 'var(--cds-button-bg-outline-hover)',
+              '--button-color': 'var(--cds-button-fg-on-outline)',
+              '--button-bd': 'var(--cds-button-border-default)',
+            },
+          };
+        }
+        if (isSubtle) {
+          return { root: { '--button-color': 'var(--cds-button-fg-on-subtle)' } };
+        }
+        // filled (default) — primary or destructive
+        return {
+          root: {
+            '--button-bg': destructive
+              ? 'var(--cds-button-bg-destructive-default)'
+              : 'var(--cds-button-bg-default)',
+            '--button-hover': destructive
+              ? 'var(--cds-button-bg-destructive-hover)'
+              : 'var(--cds-button-bg-hover)',
+            '--button-color': 'var(--cds-button-fg-on-filled)',
+            '--button-bd': 'var(--cds-button-border-default)',
+          },
+        };
+      },
+      styles: {
         root: {
-          '--button-bg': 'var(--cds-button-bg-default)',
-          '--button-hover': 'var(--cds-button-bg-hover)',
-          '--button-color': 'var(--cds-button-fg-on-filled)',
-          '--button-bd': 'var(--cds-button-border-default)',
+          // States Mantine doesn't drive off a single --button-* var: set the
+          // painted property directly so the Tier-3 token wins.
+          '&:active:not([data-disabled])': { backgroundColor: 'var(--cds-button-bg-active)' },
+          // border.hover is only visible on bordered variants
+          '&[data-variant="outline"]:hover, &[data-variant="default"]:hover': {
+            borderColor: 'var(--cds-button-border-hover)',
+          },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-button-border-focus)',
+            outlineOffset: '2px',
+          },
+          // Disabled fg/border bind to Tier-3. The disabled *background* is owned
+          // by Mantine's @layer mantine rule (gray.2), which a theme-level rule
+          // can't override without leaving the layer; it's one ramp-step off the
+          // spec's gray.1 and visually identical. Tracked for the DOM-parity pass.
+          '&[data-disabled]:not([data-loading])': {
+            color: 'var(--cds-button-fg-disabled)',
+            borderColor: 'var(--cds-button-fg-disabled)',
+          },
         },
-      }),
+      },
     },
     TextInput: { defaultProps: { radius: 'md' } },
     Textarea: { defaultProps: { radius: 'md' } },
