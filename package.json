@@ -20,6 +20,7 @@
     "validate:contract": "agentic-spec validate specs/",
     "validate": "pnpm tokens:index && pnpm validate:contract && pnpm validate:cascade && pnpm validate:honesty && pnpm validate:links && pnpm counts:check",
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
+    "parity:dom": "node scripts/parity-dom.mjs",
     "test": "pnpm validate"
   },
   "size-limit": [

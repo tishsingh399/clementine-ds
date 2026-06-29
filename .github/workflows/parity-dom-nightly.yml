@@ -1,0 +1,49 @@
+name: DOM parity (nightly)
+
+# The painted-DOM parity layer (scripts/parity-dom.mjs) renders every component
+# in a real browser and checks each painted colour against its contract tokens.
+# Too heavy for per-PR (browser + full Storybook), so it runs nightly + on demand.
+on:
+  schedule:
+    - cron: '0 7 * * *' # 07:00 UTC daily
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  parity-dom:
+    name: Painted-DOM parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @clementine-ds/tokens build
+      - run: pnpm build:storybook
+
+      - name: Install Chromium for Playwright
+        run: pnpm --filter storybook exec playwright install --with-deps chromium
+
+      - name: Serve Storybook + run DOM parity
+        run: |
+          npx -y http-server apps/storybook/storybook-static -p 6006 --silent &
+          npx -y wait-on -t 60000 http://localhost:6006/index.json
+          STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parity-dom-report
+          path: apps/observatory/parity-dom-report.json
