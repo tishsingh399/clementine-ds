@@ -240,9 +240,39 @@ export const clementineTheme = createTheme({
         },
       },
     },
-    TextInput: { defaultProps: { radius: 'md' } },
-    Textarea: { defaultProps: { radius: 'md' } },
-    Select: { defaultProps: { radius: 'md' } },
+    TextInput: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-text-input-bg-default)',
+          '--input-color': 'var(--cds-text-input-fg-value)',
+          '--input-bd': 'var(--cds-text-input-border-default)',
+          '--input-placeholder-color': 'var(--cds-text-input-fg-placeholder)',
+        },
+      }),
+    },
+    Textarea: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-textarea-bg-default)',
+          '--input-color': 'var(--cds-textarea-fg-value)',
+          '--input-bd': 'var(--cds-textarea-border-default)',
+          '--input-placeholder-color': 'var(--cds-textarea-fg-placeholder)',
+        },
+      }),
+    },
+    Select: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-select-bg-trigger)',
+          '--input-color': 'var(--cds-select-fg-value)',
+          '--input-bd': 'var(--cds-select-border-default)',
+          '--input-placeholder-color': 'var(--cds-select-fg-placeholder)',
+        },
+      }),
+    },
     Checkbox: { defaultProps: { radius: 'sm' } },
     Modal: { defaultProps: { radius: 'lg' } },
     Card: { defaultProps: { withBorder: true, radius: 'lg', shadow: 'sm', padding: 'lg' } },
@@ -251,7 +281,17 @@ export const clementineTheme = createTheme({
     Menu: { defaultProps: { radius: 'md', shadow: 'lg' } },
     Accordion: { defaultProps: { radius: 'md', variant: 'separated' } },
     Drawer: { defaultProps: { radius: 'lg', position: 'right' } },
-    Autocomplete: { defaultProps: { radius: 'md' } },
+    Autocomplete: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-autocomplete-bg)',
+          '--input-color': 'var(--cds-autocomplete-fg)',
+          '--input-bd': 'var(--cds-autocomplete-border)',
+          '--input-placeholder-color': 'var(--cds-autocomplete-placeholder)',
+        },
+      }),
+    },
     Pagination: { defaultProps: { radius: 'md' } },
     Progress: { defaultProps: { radius: 'xl' } },
     Skeleton: { defaultProps: { radius: 'md' } },
