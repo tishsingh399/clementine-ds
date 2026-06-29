@@ -1,0 +1,62 @@
+name: Contract checks
+
+# Gates the contract layer on every PR so the validators added alongside the
+# Tier-3 runtime bridge can't quietly regress. Runs only when the contract
+# surface (specs, tokens, ui, scripts, config) changes.
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'specs/**'
+      - 'packages/tokens/**'
+      - 'packages/ui/**'
+      - 'scripts/**'
+      - '.agenticspec.config.json'
+      - 'package.json'
+      - '.github/workflows/contract-checks.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    name: Contract gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Regenerates packages/tokens/src/components.generated.json (the file the
+      # theme + every parity/cascade script reads) and builds primitives. Must
+      # run before any gate below.
+      - name: Build tokens (generates component index)
+        run: pnpm --filter @clementine-ds/tokens build
+
+      - name: agentic-spec validate (structural, pinned 0.1.1)
+        run: pnpm validate:contract
+
+      - name: Cascade direction (F2)
+        run: node scripts/lint-cascade-direction.mjs
+
+      - name: Spec honesty — strict (F4/F5)
+        run: node scripts/check-spec-honesty.mjs --strict
+
+      - name: Contract parity — strict (F16)
+        run: node scripts/parity-report.mjs --strict
+
+      - name: Doc counts in sync (F9/F10)
+        run: node scripts/inject-counts.mjs --check
+
+      - name: Spec links resolve (F13)
+        run: node scripts/check-spec-links.mjs
