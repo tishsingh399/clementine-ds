@@ -20,7 +20,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.3.4",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.3.0",
     "typescript": "^5.7",
     "vite": "^6"
   }
