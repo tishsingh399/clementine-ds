@@ -314,9 +314,29 @@ export const clementineTheme = createTheme({
     Pagination: { defaultProps: { radius: 'md' } },
     Progress: { defaultProps: { radius: 'xl' } },
     Skeleton: { defaultProps: { radius: 'md' } },
-    Chip: { defaultProps: { radius: 'xl' } },
+    Chip: {
+      defaultProps: { radius: 'xl' },
+      vars: () => ({
+        root: {
+          '--chip-bg': 'var(--cds-chip-bg)',
+          '--chip-color': 'var(--cds-chip-fg)',
+          '--chip-bd': 'var(--cds-chip-border)',
+        },
+      }),
+    },
     Popover: { defaultProps: { radius: 'md', shadow: 'lg' } },
+    // SegmentedControl deferred: --sc-color drives the active-label color on the
+    // indicator, not the inactive labels measured against segmented-control.fg —
+    // its label/indicator var split needs a styles pass. Next batch.
     SegmentedControl: { defaultProps: { radius: 'md' } },
-    ThemeIcon: { defaultProps: { radius: 'md' } },
+    ThemeIcon: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        root: {
+          '--ti-bg': 'var(--cds-theme-icon-bg)',
+          '--ti-color': 'var(--cds-theme-icon-fg)',
+        },
+      }),
+    },
   },
 });
