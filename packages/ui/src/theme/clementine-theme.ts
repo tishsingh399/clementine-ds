@@ -276,7 +276,26 @@ export const clementineTheme = createTheme({
     Checkbox: { defaultProps: { radius: 'sm' } },
     Modal: { defaultProps: { radius: 'lg' } },
     Card: { defaultProps: { withBorder: true, radius: 'lg', shadow: 'sm', padding: 'lg' } },
-    Alert: { defaultProps: { radius: 'md' } },
+    Alert: {
+      defaultProps: { radius: 'md' },
+      // Per-intent, mirroring the Alert wrapper's intent→color map
+      // (info=gray, success=green, warning=orange, error=red). bg + border come
+      // from the matching alert.bg/border.<intent> tokens; body/title text from
+      // the intent-independent alert.fg tokens.
+      vars: (_theme: unknown, props: { color?: string }) => {
+        const intent =
+          ({ gray: 'info', green: 'success', orange: 'warning', red: 'error' } as Record<string, string>)[
+            props.color ?? 'gray'
+          ] ?? 'info';
+        return {
+          root: {
+            '--alert-bg': `var(--cds-alert-bg-${intent})`,
+            '--alert-bd': `var(--cds-alert-border-${intent})`,
+            '--alert-color': 'var(--cds-alert-fg-body)',
+          },
+        };
+      },
+    },
     Tooltip: { defaultProps: { radius: 'sm' } },
     Menu: { defaultProps: { radius: 'md', shadow: 'lg' } },
     Accordion: { defaultProps: { radius: 'md', variant: 'separated' } },
