@@ -17,9 +17,9 @@ export const Stat = forwardRef<HTMLDivElement, StatProps>(({ label, value, delta
   <Stack ref={ref} gap={2}>
     <Text size="xs" c="dimmed" style={{ textTransform: 'uppercase', letterSpacing: 0.4 }}>{label}</Text>
     <Group gap={8} align="baseline">
-      <Text fw={700} style={{ fontSize: 28, lineHeight: 1.1, color: 'var(--tds-text-primary)' }}>{value}</Text>
+      <Text fw={700} style={{ fontSize: 28, lineHeight: 1.1, color: 'var(--cds-text-primary)' }}>{value}</Text>
       {delta && (
-        <Text size="sm" style={{ color: trend === 'down' ? 'var(--tds-feedback-error)' : 'var(--tds-feedback-success)' }}>
+        <Text size="sm" style={{ color: trend === 'down' ? 'var(--cds-feedback-error)' : 'var(--cds-feedback-success)' }}>
           {trend === 'down' ? '▾' : '▴'} {delta}
         </Text>
       )}

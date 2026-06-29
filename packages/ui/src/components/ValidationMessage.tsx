@@ -13,9 +13,9 @@ export interface ValidationMessageProps {
  * Tokens: validation-message.* . Spec: specs/validation-message/index.md
  */
 const VM: Record<ValidationStatus, { color: string; glyph: string }> = {
-  error:   { color: 'var(--tds-feedback-error)',   glyph: '⊘' },
-  warning: { color: 'var(--tds-feedback-warning)', glyph: '⚠' },
-  success: { color: 'var(--tds-feedback-success)', glyph: '✓' },
+  error:   { color: 'var(--cds-feedback-error)',   glyph: '⊘' },
+  warning: { color: 'var(--cds-feedback-warning)', glyph: '⚠' },
+  success: { color: 'var(--cds-feedback-success)', glyph: '✓' },
 };
 export const ValidationMessage = forwardRef<HTMLDivElement, ValidationMessageProps>(
   ({ status = 'error', children, id }, ref) => {
@@ -23,7 +23,7 @@ export const ValidationMessage = forwardRef<HTMLDivElement, ValidationMessagePro
     return (
       <Group ref={ref} id={id} gap={5} align="center" wrap="nowrap" role={status === 'error' ? 'alert' : undefined} style={{ marginTop: 4 }}>
         <span aria-hidden style={{ color: m.color, fontSize: 12 }}>{m.glyph}</span>
-        <Text size="xs" style={{ color: 'var(--tds-text-primary)' }}>{children}</Text>
+        <Text size="xs" style={{ color: 'var(--cds-text-primary)' }}>{children}</Text>
       </Group>
     );
   }

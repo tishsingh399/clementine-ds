@@ -10,7 +10,7 @@ export interface PromptSuggestionsProps {
 /**
  * Tray 4 · AI — starter-prompt chips for an empty conversation. Each must reflect a real,
  * supported capability (see content/prompt-scaffolding.md). Tokens: prompt-suggestions.* .
- * Spec: specs/ai/prompt-suggestions/index.md
+ * Spec: specs/prompt-suggestions/index.md
  */
 export const PromptSuggestions = forwardRef<HTMLDivElement, PromptSuggestionsProps>(
   ({ suggestions, onSelect }, ref) => (
@@ -23,9 +23,9 @@ export const PromptSuggestions = forwardRef<HTMLDivElement, PromptSuggestionsPro
             padding: '6px 12px',
             borderRadius: 99,
             fontSize: 13,
-            background: 'var(--tds-surface-subtle)',
-            color: 'var(--tds-text-primary)',
-            border: '1px solid var(--tds-border-default)',
+            background: 'var(--cds-surface-subtle)',
+            color: 'var(--cds-text-primary)',
+            border: '1px solid var(--cds-border-default)',
           }}
         >
           {s}

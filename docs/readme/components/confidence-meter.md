@@ -1,6 +1,6 @@
 # ConfidenceMeter
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/confidence-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ConfidenceMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ConfidenceMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/confidence-meter.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/confidence-meter/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ConfidenceMeter.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ConfidenceMeter.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/confidence-meter.json)
 
 ## Overview
 

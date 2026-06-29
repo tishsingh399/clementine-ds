@@ -10,16 +10,16 @@ export interface AgentCardProps {
 
 /**
  * Tray 4 · AI — a profile card for an agent: identity, what it does, its capabilities, and
- * owner. Used in rosters and pickers. Tokens: agent-card.* . Spec: specs/ai/agent-card/index.md
+ * owner. Used in rosters and pickers. Tokens: agent-card.* . Spec: specs/agent-card/index.md
  */
 export const AgentCard = forwardRef<HTMLDivElement, AgentCardProps>(
   ({ name, description, capabilities = [], owner }, ref) => (
-    <Paper ref={ref} withBorder radius="md" p="md" style={{ background: 'var(--tds-surface-elevated)' }}>
+    <Paper ref={ref} withBorder radius="md" p="md" style={{ background: 'var(--cds-surface-elevated)' }}>
       <Stack gap="sm">
         <Group gap="sm" wrap="nowrap">
           <Avatar name={name} color="blue" radius="md" />
           <div>
-            <Text fw={600} size="sm" style={{ color: 'var(--tds-text-primary)' }}>{name}</Text>
+            <Text fw={600} size="sm" style={{ color: 'var(--cds-text-primary)' }}>{name}</Text>
             {owner && <Text size="xs" c="dimmed">{owner}</Text>}
           </div>
         </Group>

@@ -1,12 +1,12 @@
 # ArtifactFrame
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/artifact-frame/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ArtifactFrame.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/artifact-frame.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/artifact-frame/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ArtifactFrame.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/artifact-frame.json)
 
 ## Overview
 
 A titled container for a substantial generated output (document, code, preview) lifted out of the chat stream.
 
-Status: `AI-Ready`. Token contract closed at 6 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/artifact-frame/index.md).
+Status: `AI-Ready`. Token contract closed at 6 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/artifact-frame/index.md).
 
 ## Token contract
 
@@ -29,6 +29,6 @@ import { ArtifactFrame } from '@clementine-ds/ui';
 
 ## Related
 
-- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/artifact-frame/index.md)
+- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/artifact-frame/index.md)
 - [The 3-tier cascade](../tokens/the-cascade-rule.md)
 - [AGENTS.md — agentic contract](../../../AGENTS.md)

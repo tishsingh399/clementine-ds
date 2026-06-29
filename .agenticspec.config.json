@@ -1,0 +1,9 @@
+{
+  "staleness": {
+    "warnDays": 90,
+    "failDays": 180
+  },
+  "honesty": {
+    "mode": "strict"
+  }
+}

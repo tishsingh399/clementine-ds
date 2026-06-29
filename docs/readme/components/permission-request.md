@@ -1,6 +1,6 @@
 # PermissionRequest
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/permission-request/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PermissionRequest.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PermissionRequest.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/permission-request.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/permission-request/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PermissionRequest.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PermissionRequest.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/permission-request.json)
 
 ## Overview
 

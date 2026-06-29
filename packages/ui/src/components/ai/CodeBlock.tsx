@@ -10,17 +10,17 @@ export interface CodeBlockProps {
 /**
  * Tray 4 · AI — a copyable code block for model-generated code, with a filename/language
  * header and a copy button. For large/reusable output, wrap in an ArtifactFrame.
- * Tokens: code-block.* . Spec: specs/ai/code-block/index.md
+ * Tokens: code-block.* . Spec: specs/code-block/index.md
  */
 export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
   ({ code, language, filename }, ref) => (
-    <Paper ref={ref} withBorder radius="md" style={{ overflow: 'hidden', background: 'var(--tds-surface-elevated)' }}>
+    <Paper ref={ref} withBorder radius="md" style={{ overflow: 'hidden', background: 'var(--cds-surface-elevated)' }}>
       <Group
         justify="space-between"
         px="sm"
         py={6}
         wrap="nowrap"
-        style={{ background: 'var(--tds-surface-subtle)', borderBottom: '1px solid var(--tds-border-default)' }}
+        style={{ background: 'var(--cds-surface-subtle)', borderBottom: '1px solid var(--cds-border-default)' }}
       >
         <Text size="xs" ff="monospace" c="dimmed">{filename ?? language ?? 'code'}</Text>
         <CopyButton value={code}>
@@ -35,7 +35,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
         style={{
           margin: 0, padding: 12, fontSize: 12, overflowX: 'auto',
           fontFamily: 'var(--mantine-font-family-monospace)', whiteSpace: 'pre',
-          color: 'var(--tds-text-primary)',
+          color: 'var(--cds-text-primary)',
         }}
       >
         {code}

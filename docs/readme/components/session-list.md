@@ -1,6 +1,6 @@
 # SessionList
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/session-list/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/SessionList.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/SessionList.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/session-list.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/session-list/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/SessionList.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/SessionList.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/session-list.json)
 
 ## Overview
 

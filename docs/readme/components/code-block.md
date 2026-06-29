@@ -1,6 +1,6 @@
 # CodeBlock
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/code-block/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/CodeBlock.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/CodeBlock.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/code-block.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/code-block/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/CodeBlock.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/CodeBlock.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/code-block.json)
 
 ## Overview
 

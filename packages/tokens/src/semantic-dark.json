@@ -76,10 +76,7 @@
     }
   },
   "focus": {
-    "ring": {
-      "$value": "#ff8040",
-      "$type": "color"
-    }
+    "ring": { "$value": "{color.brand.clementine}", "$type": "color" }
   },
   "feedback": {
     "error": {

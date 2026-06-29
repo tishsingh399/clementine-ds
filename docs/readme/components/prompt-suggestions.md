@@ -1,6 +1,6 @@
 # PromptSuggestions
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/prompt-suggestions/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PromptSuggestions.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PromptSuggestions.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/prompt-suggestions.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/prompt-suggestions/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/PromptSuggestions.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/PromptSuggestions.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/prompt-suggestions.json)
 
 ## Overview
 

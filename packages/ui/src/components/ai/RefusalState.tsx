@@ -11,10 +11,10 @@ export interface RefusalStateProps {
 /**
  * Tray 4 · AI — a clear, non-dead-end refusal: "I can't do X — here's why, try Y." Styled
  * NEUTRALLY (not as an error), per content/error-and-refusal-microcopy. Tokens: refusal.* .
- * Spec: specs/ai/refusal-state/index.md
+ * Spec: specs/refusal-state/index.md
  */
 export const RefusalState = forwardRef<HTMLDivElement, RefusalStateProps>(({ reason, suggestion }, ref) => (
-  <Paper ref={ref} withBorder radius="md" p="sm" style={{ background: 'var(--tds-surface-subtle)', borderColor: 'var(--tds-border-default)' }}>
+  <Paper ref={ref} withBorder radius="md" p="sm" style={{ background: 'var(--cds-surface-subtle)', borderColor: 'var(--cds-border-default)' }}>
     <Stack gap={6}>
       <Group gap={8} wrap="nowrap" align="center">
         <span aria-hidden>⊘</span>

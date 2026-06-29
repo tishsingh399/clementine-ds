@@ -9,7 +9,7 @@ export interface ModelSelectorProps extends Omit<SelectProps, 'data'> {
 /**
  * Tray 4 · AI — pick the active model for a surface. The chosen model + prompt version
  * should be recorded with feedback (see governance/model-prompt-registry.json).
- * Tokens: model-selector.* . Spec: specs/ai/model-selector/index.md
+ * Tokens: model-selector.* . Spec: specs/model-selector/index.md
  */
 export const ModelSelector = forwardRef<HTMLInputElement, ModelSelectorProps>(
   ({ models, ...props }, ref) => (

@@ -23,7 +23,7 @@ const statusMeta: Record<ToolCallStatus, { color: string; label: string }> = {
  *
  * Header shows the tool name + a status badge (pending/running/success/error); the body
  * expands to reveal arguments (as code) and the result. Tokens: tool-call.* .
- * See specs/ai/tool-call-card/index.md.
+ * See specs/tool-call-card/index.md.
  */
 export const ToolCallCard = forwardRef<HTMLDivElement, ToolCallCardProps>(
   ({ name, args, result, status = 'success', defaultOpen = false }, ref) => {
@@ -31,7 +31,7 @@ export const ToolCallCard = forwardRef<HTMLDivElement, ToolCallCardProps>(
     const meta = statusMeta[status];
     const argText = typeof args === 'string' ? args : args ? JSON.stringify(args, null, 2) : undefined;
     return (
-      <Paper ref={ref} withBorder radius="md" p="xs" data-status={status} style={{ background: 'var(--tds-surface-elevated)' }}>
+      <Paper ref={ref} withBorder radius="md" p="xs" data-status={status} style={{ background: 'var(--cds-surface-elevated)' }}>
         <UnstyledButton onClick={() => setOpen((o) => !o)} aria-expanded={open} style={{ width: '100%' }}>
           <Group justify="space-between" wrap="nowrap">
             <Text size="sm" ff="monospace" fw={600}>⚙ {name}</Text>

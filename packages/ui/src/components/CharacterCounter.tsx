@@ -15,7 +15,7 @@ export const CharacterCounter = forwardRef<HTMLSpanElement, CharacterCounterProp
     const near = !over && value >= max * 0.9;
     return (
       <span ref={ref} aria-live="polite"
-        style={{ fontSize: 12, fontWeight: near || over ? 600 : 400, color: over ? 'var(--tds-feedback-error)' : 'var(--tds-text-secondary)' }}>
+        style={{ fontSize: 12, fontWeight: near || over ? 600 : 400, color: over ? 'var(--cds-feedback-error)' : 'var(--cds-text-secondary)' }}>
         {value + ' / ' + max}
       </span>
     );

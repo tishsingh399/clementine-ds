@@ -21,10 +21,10 @@ export const ActivityFeed = forwardRef<HTMLDivElement, ActivityFeedProps>(({ ite
       <Group key={it.id} gap="sm" wrap="nowrap" align="flex-start">
         <Avatar name={it.actor} color="gray" radius="xl" size="sm" />
         <div>
-          <Text size="sm" style={{ color: 'var(--tds-text-primary)' }}>
+          <Text size="sm" style={{ color: 'var(--cds-text-primary)' }}>
             <strong>{it.actor}</strong> {it.action}
           </Text>
-          <Text size="xs" style={{ color: 'var(--tds-text-tertiary)' }}>{it.when}</Text>
+          <Text size="xs" style={{ color: 'var(--cds-text-tertiary)' }}>{it.when}</Text>
         </div>
       </Group>
     ))}

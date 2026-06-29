@@ -1,6 +1,6 @@
 ---
 component: presence-indicator
-ds_version: clementine-ds@HEAD (2026-06-10 verified)
+ds_version: clementine-ds@0.1.0 (2026-06-10 verified)
 status: AI-Ready
 last_verified: 2026-06-10
 
@@ -12,11 +12,11 @@ semantic_parts:
   dot: presence dot
 
 token_contract:
-  - presence.online
-  - presence.away
-  - presence.busy
-  - presence.offline
-  - presence.ring
+  - presence-indicator.online
+  - presence-indicator.away
+  - presence-indicator.busy
+  - presence-indicator.offline
+  - presence-indicator.ring
 
 interaction_states: [online, away, busy, offline]
 
@@ -51,11 +51,11 @@ Who is here, as a stack of avatars each with a presence dot.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `presence.online` | `{feedback.success}` | `#16a34a` |
-| `presence.away` | `{feedback.warning}` | `#f97316` |
-| `presence.busy` | `{feedback.error}` | `#dc2626` |
-| `presence.offline` | `{text.tertiary}` | `#a3a39e` |
-| `presence.ring` | `{surface.default}` | `#fafaf8` |
+| `presence-indicator.online` | `{feedback.success}` | `#16a34a` |
+| `presence-indicator.away` | `{feedback.warning}` | `#f97316` |
+| `presence-indicator.busy` | `{feedback.error}` | `#dc2626` |
+| `presence-indicator.offline` | `{text.tertiary}` | `#a3a39e` |
+| `presence-indicator.ring` | `{surface.default}` | `#fafaf8` |
 
 **Do:** Pair dot with the person name (tooltip); Cap the stack with a +N.
 **Don't:** Convey presence by color alone; Show stale presence as live.

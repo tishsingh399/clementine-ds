@@ -15,12 +15,12 @@ export interface SourcesPanelProps {
 
 /**
  * Tray 4 · AI — the provenance list behind a cited answer. Pairs with inline CitationChip
- * [n] markers. Tokens: sources.* . Spec: specs/ai/sources-panel/index.md
+ * [n] markers. Tokens: sources.* . Spec: specs/sources-panel/index.md
  */
 export const SourcesPanel = forwardRef<HTMLDivElement, SourcesPanelProps>(
   ({ sources, title = 'Sources' }, ref) => (
-    <Paper ref={ref} withBorder radius="md" p="sm" style={{ background: 'var(--tds-surface-elevated)' }}>
-      <Text size="xs" fw={600} mb={8} style={{ textTransform: 'uppercase', color: 'var(--tds-text-tertiary)' }}>
+    <Paper ref={ref} withBorder radius="md" p="sm" style={{ background: 'var(--cds-surface-elevated)' }}>
+      <Text size="xs" fw={600} mb={8} style={{ textTransform: 'uppercase', color: 'var(--cds-text-tertiary)' }}>
         {title}
       </Text>
       <Stack gap={8}>
@@ -29,8 +29,8 @@ export const SourcesPanel = forwardRef<HTMLDivElement, SourcesPanelProps>(
             <span
               style={{
                 minWidth: 18, height: 18, display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 11, borderRadius: 4, background: 'var(--tds-surface-subtle)',
-                color: 'var(--tds-text-secondary)', border: '1px solid var(--tds-border-default)',
+                fontSize: 11, borderRadius: 4, background: 'var(--cds-surface-subtle)',
+                color: 'var(--cds-text-secondary)', border: '1px solid var(--cds-border-default)',
               }}
             >
               {s.index}

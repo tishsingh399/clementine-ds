@@ -21,10 +21,10 @@ export const SessionDeviceList = forwardRef<HTMLDivElement, SessionDeviceListPro
   <Stack ref={ref} gap="xs">
     {sessions.map((s) => (
       <Group key={s.id} justify="space-between" wrap="nowrap" p="sm"
-        style={{ border: '1px solid var(--tds-border-default)', borderRadius: 8, background: 'var(--tds-surface-elevated)' }}>
+        style={{ border: '1px solid var(--cds-border-default)', borderRadius: 8, background: 'var(--cds-surface-elevated)' }}>
         <div>
           <Group gap={8} align="center">
-            <Text size="sm" fw={600} style={{ color: 'var(--tds-text-primary)' }}>{s.device}</Text>
+            <Text size="sm" fw={600} style={{ color: 'var(--cds-text-primary)' }}>{s.device}</Text>
             {s.current && <Badge size="xs" color="green" variant="light">This device</Badge>}
           </Group>
           <Text size="xs" c="dimmed">{[s.location, s.lastActive].filter(Boolean).join(' · ')}</Text>

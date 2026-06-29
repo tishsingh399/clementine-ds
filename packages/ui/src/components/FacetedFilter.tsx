@@ -24,7 +24,7 @@ export const FacetedFilter = forwardRef<HTMLDivElement, FacetedFilterProps>(({ g
   <Stack ref={ref} gap="lg" style={{ width: 220 }}>
     {groups.map((g) => (
       <Stack key={g.label} gap={6}>
-        <Text size="xs" fw={700} style={{ textTransform: 'uppercase', color: 'var(--tds-text-tertiary)' }}>{g.label}</Text>
+        <Text size="xs" fw={700} style={{ textTransform: 'uppercase', color: 'var(--cds-text-tertiary)' }}>{g.label}</Text>
         {g.options.map((o) => (
           <Group key={o.value} justify="space-between" wrap="nowrap">
             <Checkbox

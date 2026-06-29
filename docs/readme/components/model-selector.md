@@ -1,6 +1,6 @@
 # ModelSelector
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/model-selector/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ModelSelector.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ModelSelector.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/model-selector.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/model-selector/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ModelSelector.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ModelSelector.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/model-selector.json)
 
 ## Overview
 

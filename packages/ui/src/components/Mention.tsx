@@ -11,8 +11,8 @@ export interface MentionProps {
  */
 export const Mention = forwardRef<HTMLAnchorElement, MentionProps>(({ name, href }, ref) => {
   const style: React.CSSProperties = {
-    color: 'var(--tds-text-link)',
-    background: 'var(--tds-surface-subtle)',
+    color: 'var(--cds-text-link)',
+    background: 'var(--cds-surface-subtle)',
     padding: '1px 5px',
     borderRadius: 4,
     fontWeight: 500,

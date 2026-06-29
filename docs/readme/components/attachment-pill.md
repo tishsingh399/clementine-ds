@@ -1,6 +1,6 @@
 # AttachmentPill
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/attachment-pill/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/AttachmentPill.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/AttachmentPill.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/attachment-pill.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/attachment-pill/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/AttachmentPill.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/AttachmentPill.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/attachment-pill.json)
 
 ## Overview
 

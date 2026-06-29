@@ -1,6 +1,6 @@
 # SourcesPanel
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/sources-panel/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/SourcesPanel.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/SourcesPanel.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/sources-panel.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/sources-panel/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/SourcesPanel.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/SourcesPanel.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/sources-panel.json)
 
 ## Overview
 

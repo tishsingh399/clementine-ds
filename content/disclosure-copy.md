@@ -12,6 +12,6 @@ AI involvement is **always disclosed**. Never let a user mistake generated conte
 
 ## Rules
 1. Disclosure is **visible**, not buried in a tooltip or settings page.
-2. Consequential or destructive actions get an explicit **approval** step ([HITLGate](../specs/ai/hitl-gate/index.md)), not just a disclosure.
+2. Consequential or destructive actions get an explicit **approval** step ([HITLGate](../specs/hitl-gate/index.md)), not just a disclosure.
 3. Claims of fact carry **provenance** (`CitationChip`) wherever a source exists.
 4. Never imply certainty the model doesn't have.

@@ -1,6 +1,6 @@
 # MessageActions
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/message-actions/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/MessageActions.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/MessageActions.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/message-actions.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/message-actions/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/MessageActions.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/MessageActions.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/message-actions.json)
 
 ## Overview
 

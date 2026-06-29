@@ -14,9 +14,9 @@ export interface MessageProps {
 }
 
 const roleStyle: Record<MessageRole, { bg: string; fg: string }> = {
-  user:      { bg: 'var(--tds-action-primary)',  fg: 'var(--tds-text-on-action)' },
-  assistant: { bg: 'var(--tds-surface-subtle)',  fg: 'var(--tds-text-primary)' },
-  system:    { bg: 'var(--tds-surface-default)', fg: 'var(--tds-text-secondary)' },
+  user:      { bg: 'var(--cds-action-primary)',  fg: 'var(--cds-text-on-action)' },
+  assistant: { bg: 'var(--cds-surface-subtle)',  fg: 'var(--cds-text-primary)' },
+  system:    { bg: 'var(--cds-surface-default)', fg: 'var(--cds-text-secondary)' },
 };
 
 /**
@@ -24,7 +24,7 @@ const roleStyle: Record<MessageRole, { bg: string; fg: string }> = {
  *
  * Tokens: message.* . User turns align right on `action.primary`; assistant/system align
  * left on a subtle surface. `status="streaming"` sets `aria-busy` for assistive tech.
- * See specs/ai/message/index.md.
+ * See specs/message/index.md.
  */
 export const Message = forwardRef<HTMLDivElement, MessageProps>(
   ({ role, children, authorName, timestamp, status = 'complete' }, ref) => {

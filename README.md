@@ -19,9 +19,9 @@ A small, opinionated React design system that ships with **machine-readable spec
 | Surface | Where | What it holds |
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
-| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | 121 components (UI + AI surfaces + enterprise) running live, every paint bound to a token, auto-deploys on `git push origin main` after CI passes |
+| 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | <!-- COUNTS:components -->121<!-- /COUNTS --> components (UI + AI surfaces + enterprise) running live; component paint resolves through the 3-tier cascade (verified by `pnpm validate`), auto-deploys on `git push origin main` after CI passes |
 | 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
-| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS) | 3 variable collections, **747 variables — all 121 components' tokens synced (628 component vars, cascade-aliased, 1:1 with code)** + rendered as real components across 7 category pages — Actions & Inputs · Containers & Navigation · Display & Feedback · AI Surfaces · Enterprise · Trust & Feedback · Dates, Charts, Toast & Carousel — plus a Cover page. Every paint bound to a Tier-3 variable. |
+| 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS) | 3 variable collections; **all <!-- COUNTS:components -->121<!-- /COUNTS --> components' tokens synced as variables (<!-- COUNTS:component-tokens -->628<!-- /COUNTS --> component vars, cascade-aliased; diffed against code by [`scripts/figma-parity.mjs`](./scripts/figma-parity.mjs))** + rendered as real components across 7 category pages — Actions & Inputs · Containers & Navigation · Display & Feedback · AI Surfaces · Enterprise · Trust & Feedback · Dates, Charts, Toast & Carousel — plus a Cover page. Component paint resolves through the Tier-3 → semantic → primitive cascade at runtime; contract parity is checked by [`scripts/parity-report.mjs`](./scripts/parity-report.mjs). |
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | 📄 Long-form docs (GitHub) | [`docs/readme/`](./docs/readme) | 20 source pages — getting-started, architecture, tokens, components. GitHub renders with TOC + syntax highlighting. |
@@ -37,7 +37,7 @@ Clementine lives in code, in Figma, and as machine-readable specs. The cascade i
 
 ![Figma · 3-tier token cascade](./docs/figma/overview.png)
 
-The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **87 primitives, 32 semantic tokens, and 571 component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
+The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **<!-- COUNTS:primitives -->89<!-- /COUNTS --> primitives, <!-- COUNTS:semantic -->32<!-- /COUNTS --> semantic tokens, and <!-- COUNTS:component-tokens -->628<!-- /COUNTS --> component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
 
 ### Components board
 
@@ -58,7 +58,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 | Package | What |
 |---|---|
 | [`packages/tokens`](./packages/tokens) | Style Dictionary source: primitives → semantic-light → semantic-dark |
-| [`packages/ui`](./packages/ui) | 121 React components (UI + AI surfaces + enterprise + dates/charts/toast/carousel) + 3 behavior hooks, Mantine-backed |
+| [`packages/ui`](./packages/ui) | <!-- COUNTS:components -->121<!-- /COUNTS --> React components (UI + AI surfaces + enterprise + dates/charts/toast/carousel) + 3 behavior hooks, Mantine-backed |
 | [`apps/storybook`](./apps/storybook) | Live component sandbox |
 | [`specs/`](./specs) | ⭐ Per-component agentic specs (frontmatter contract + closed token list) |
 | [`_templates/`](./_templates) | Scaffolding for new specs |
@@ -66,7 +66,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 ## Components
 
-**121 components across the trays** — full map + per-component specs in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)** and [`specs/`](./specs). Every one ships tokens + spec + story + guidance.
+**<!-- COUNTS:components -->121<!-- /COUNTS --> components across the trays** — full map + per-component specs in **[AI-READY-ARCHITECTURE.md](./AI-READY-ARCHITECTURE.md)** and [`specs/`](./specs). Every one ships tokens + spec + story + guidance.
 
 **Tray 2 · Components (77)**
 - *Actions & inputs (28):* Button · TextInput · Textarea · Select · Autocomplete · NumberInput · PasswordInput · PinInput · FileInput · MultiSelect · TagsInput · Checkbox · Radio · Switch · SegmentedControl · Slider · Rating · Fieldset · IconButton · ButtonGroup · SplitButton · ColorInput · SearchField · Fab · FieldLabel · HelperText · ValidationMessage · CharacterCounter
@@ -82,7 +82,7 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 **Patterns (22):** composed multi-component flows — action-bar, confirm-dialog, form-field, data-table, empty-state, wizard, + 16 agentic / governance patterns. See [`patterns/`](./patterns).
 
-`AI-Ready` means all four artifacts are reconciled on `last_verified`: component-tier tokens, a `specs/<name>/` contract, a Mantine-backed implementation, and a Storybook story per interaction state.
+`AI-Ready` means all five `checks:` pass the validator (`pnpm validate`) **and** the spec holds ≥80% contract parity in [`scripts/parity-report.mjs`](./scripts/parity-report.mjs) — every declared token exists in the component-tier file and resolves through the cascade. Specs below that bar, or with a `last_verified` older than 90 days, are demoted to `In progress` until re-verified (see [`.agenticspec.config.json`](./.agenticspec.config.json)). Current per-spec parity: [`apps/observatory/parity-report.json`](./apps/observatory/parity-report.json).
 
 ## Quick start
 

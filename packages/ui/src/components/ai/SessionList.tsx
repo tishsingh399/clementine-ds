@@ -15,7 +15,7 @@ export interface SessionListProps {
 
 /**
  * Tray 4 · AI — past conversations, searchable and resumable. Tokens: session-list.* .
- * Spec: specs/ai/session-list/index.md
+ * Spec: specs/session-list/index.md
  */
 export const SessionList = forwardRef<HTMLDivElement, SessionListProps>(({ sessions, activeId, onOpen }, ref) => (
   <Stack ref={ref} gap={2}>
@@ -26,12 +26,12 @@ export const SessionList = forwardRef<HTMLDivElement, SessionListProps>(({ sessi
         aria-current={s.id === activeId ? 'page' : undefined}
         style={{
           padding: '8px 10px', borderRadius: 6,
-          background: s.id === activeId ? 'var(--tds-surface-subtle)' : 'transparent',
+          background: s.id === activeId ? 'var(--cds-surface-subtle)' : 'transparent',
         }}
       >
         <Group justify="space-between" wrap="nowrap" gap="sm">
-          <Text size="sm" lineClamp={1} style={{ color: 'var(--tds-text-primary)' }}>{s.title}</Text>
-          {s.when && <Text size="xs" style={{ color: 'var(--tds-text-tertiary)', flexShrink: 0 }}>{s.when}</Text>}
+          <Text size="sm" lineClamp={1} style={{ color: 'var(--cds-text-primary)' }}>{s.title}</Text>
+          {s.when && <Text size="xs" style={{ color: 'var(--cds-text-tertiary)', flexShrink: 0 }}>{s.when}</Text>}
         </Group>
       </UnstyledButton>
     ))}

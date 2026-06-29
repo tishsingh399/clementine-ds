@@ -1,6 +1,6 @@
 ---
 component: session-device-list
-ds_version: clementine-ds@HEAD (2026-06-10 verified)
+ds_version: clementine-ds@0.1.0 (2026-06-10 verified)
 status: AI-Ready
 last_verified: 2026-06-10
 
@@ -13,11 +13,11 @@ semantic_parts:
   revoke: revoke action
 
 token_contract:
-  - session-device.bg
-  - session-device.border
-  - session-device.fg
-  - session-device.meta
-  - session-device.revoke
+  - session-device-list.bg
+  - session-device-list.border
+  - session-device-list.fg
+  - session-device-list.meta
+  - session-device-list.revoke
 
 interaction_states: [default, current]
 
@@ -52,11 +52,11 @@ Active sessions/devices for a principal, each revocable — a privileged-access 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `session-device.bg` | `{surface.elevated}` | `#ffffff` |
-| `session-device.border` | `{border.default}` | `#e5e5e0` |
-| `session-device.fg` | `{text.primary}` | `#1a1a18` |
-| `session-device.meta` | `{text.tertiary}` | `#a3a39e` |
-| `session-device.revoke` | `{feedback.error}` | `#dc2626` |
+| `session-device-list.bg` | `{surface.elevated}` | `#ffffff` |
+| `session-device-list.border` | `{border.default}` | `#e5e5e0` |
+| `session-device-list.fg` | `{text.primary}` | `#1a1a18` |
+| `session-device-list.meta` | `{text.tertiary}` | `#a3a39e` |
+| `session-device-list.revoke` | `{feedback.error}` | `#dc2626` |
 
 **Do:** Mark the current device; protect it from revoke; Show location + last-active; Confirm revoke.
 **Don't:** Let users revoke their current session by accident; Hide where/when a session was active.

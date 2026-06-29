@@ -20,10 +20,10 @@ export const BulkActionBar = forwardRef<HTMLDivElement, BulkActionBarProps>(({ c
     py="xs"
     role="region"
     aria-label={`${count} selected`}
-    style={{ background: 'var(--tds-surface-subtle)', border: '1px solid var(--tds-border-default)', borderRadius: 8 }}
+    style={{ background: 'var(--cds-surface-subtle)', border: '1px solid var(--cds-border-default)', borderRadius: 8 }}
   >
     <Group gap="sm">
-      <Text size="sm" fw={600} style={{ color: 'var(--tds-text-primary)' }}>{count} selected</Text>
+      <Text size="sm" fw={600} style={{ color: 'var(--cds-text-primary)' }}>{count} selected</Text>
       {onClear && <Button size="xs" variant="subtle" color="gray" onClick={onClear}>Clear</Button>}
     </Group>
     <Group gap="xs">{actions}</Group>

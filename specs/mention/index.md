@@ -1,6 +1,6 @@
 ---
 component: mention
-ds_version: clementine-ds@HEAD (2026-06-10 verified)
+ds_version: clementine-ds@0.1.0 (2026-06-10 verified)
 status: AI-Ready
 last_verified: 2026-06-10
 

@@ -12,7 +12,7 @@ export interface HelperTextProps {
  */
 export const HelperText = forwardRef<HTMLParagraphElement, HelperTextProps>(
   ({ id, children }, ref) => (
-    <Text ref={ref} id={id} size="xs" style={{ color: 'var(--tds-text-secondary)', marginTop: 4 }}>{children}</Text>
+    <Text ref={ref} id={id} size="xs" style={{ color: 'var(--cds-text-secondary)', marginTop: 4 }}>{children}</Text>
   )
 );
 

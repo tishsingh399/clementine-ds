@@ -20,4 +20,4 @@ Break a long or consequential task into ordered steps with clear progress — on
 2. Validate per step, not only at the end; preserve entered data when going Back.
 3. Allow Back without losing work; warn before discarding on exit.
 4. Keep destructive/irreversible work behind the final Review + an explicit confirm.
-5. For agent-driven multi-step actions, each consequential step is a [HITLGate](../../specs/ai/hitl-gate/index.md).
+5. For agent-driven multi-step actions, each consequential step is a [HITLGate](../../specs/hitl-gate/index.md).

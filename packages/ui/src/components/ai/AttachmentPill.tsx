@@ -10,7 +10,7 @@ export interface AttachmentPillProps {
 
 /**
  * Tray 4 · AI — a file attached to a prompt, shown as a removable pill in the Composer.
- * Tokens: attachment.* . Spec: specs/ai/attachment-pill/index.md
+ * Tokens: attachment.* . Spec: specs/attachment-pill/index.md
  */
 export const AttachmentPill = forwardRef<HTMLDivElement, AttachmentPillProps>(
   ({ name, size, onRemove }, ref) => (
@@ -20,7 +20,7 @@ export const AttachmentPill = forwardRef<HTMLDivElement, AttachmentPillProps>(
       wrap="nowrap"
       style={{
         padding: '4px 6px 4px 10px', borderRadius: 8, display: 'inline-flex',
-        background: 'var(--tds-surface-subtle)', border: '1px solid var(--tds-border-default)',
+        background: 'var(--cds-surface-subtle)', border: '1px solid var(--cds-border-default)',
       }}
     >
       <span aria-hidden>📎</span>

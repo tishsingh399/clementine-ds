@@ -13,7 +13,7 @@ export interface FeedbackControlProps {
  * (thumbs → telemetry → eval sets → iterate).
  *
  * Toggleable, exposes `aria-pressed`. Tokens: feedback-control.* .
- * See specs/feedback/feedback-control/index.md.
+ * See specs/feedback-control/index.md.
  */
 export const FeedbackControl = forwardRef<HTMLDivElement, FeedbackControlProps>(
   ({ value = null, onChange }, ref) => {

@@ -1,6 +1,6 @@
 # ConversationThread
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/conversation-thread/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ConversationThread.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ConversationThread.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/conversation-thread.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/conversation-thread/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/ConversationThread.tsx) | [Storybook](https://github.com/tishsingh399/clementine-ds/blob/main/apps/storybook/stories/ai/ConversationThread.stories.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/conversation-thread.json)
 
 ## Overview
 

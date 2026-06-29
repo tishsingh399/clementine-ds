@@ -15,7 +15,7 @@ export interface CitationChipProps {
  * reference that links to its source and reveals source + snippet on hover/focus.
  *
  * Tokens: citation.* . Always provide a real `source`; the chip's accessible name is
- * "Source N: <source>". See specs/ai/citation-chip/index.md.
+ * "Source N: <source>". See specs/citation-chip/index.md.
  */
 export const CitationChip = forwardRef<HTMLAnchorElement, CitationChipProps>(
   ({ index, source, href, snippet }, ref) => {
@@ -38,9 +38,9 @@ export const CitationChip = forwardRef<HTMLAnchorElement, CitationChipProps>(
           lineHeight: 1,
           verticalAlign: 'super',
           borderRadius: 4,
-          background: 'var(--tds-surface-subtle)',
-          color: 'var(--tds-text-secondary)',
-          border: '1px solid var(--tds-border-default)',
+          background: 'var(--cds-surface-subtle)',
+          color: 'var(--cds-text-secondary)',
+          border: '1px solid var(--cds-border-default)',
           textDecoration: 'none',
         }}
       >

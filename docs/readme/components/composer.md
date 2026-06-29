@@ -1,12 +1,12 @@
 # Composer
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/composer/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/Composer.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/composer.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/composer/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/Composer.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/composer.json)
 
 ## Overview
 
 The prompt input for an AI surface: an autosizing textarea with a Send affordance that becomes Stop while busy.
 
-Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/composer/index.md).
+Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/composer/index.md).
 
 ## Token contract
 
@@ -31,6 +31,6 @@ import { Composer } from '@clementine-ds/ui';
 
 ## Related
 
-- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/composer/index.md)
+- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/composer/index.md)
 - [The 3-tier cascade](../tokens/the-cascade-rule.md)
 - [AGENTS.md — agentic contract](../../../AGENTS.md)

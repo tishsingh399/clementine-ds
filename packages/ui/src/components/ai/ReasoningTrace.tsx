@@ -17,7 +17,7 @@ export interface ReasoningTraceProps {
  *
  * Collapsed by default; the toggle is a real button with `aria-expanded`. Content is
  * dimmed (text.secondary) so it reads as secondary to the answer. Tokens: reasoning.* .
- * See specs/ai/reasoning-trace/index.md.
+ * See specs/reasoning-trace/index.md.
  */
 export const ReasoningTrace = forwardRef<HTMLDivElement, ReasoningTraceProps>(
   ({ children, label, defaultOpen = false, streaming = false, durationMs }, ref) => {
@@ -25,7 +25,7 @@ export const ReasoningTrace = forwardRef<HTMLDivElement, ReasoningTraceProps>(
     const heading =
       label ?? (streaming ? 'Thinking…' : durationMs != null ? `Thought for ${(durationMs / 1000).toFixed(1)}s` : 'Reasoning');
     return (
-      <Paper ref={ref} radius="md" p="xs" style={{ background: 'var(--tds-surface-subtle)' }} aria-busy={streaming}>
+      <Paper ref={ref} radius="md" p="xs" style={{ background: 'var(--cds-surface-subtle)' }} aria-busy={streaming}>
         <UnstyledButton onClick={() => setOpen((o) => !o)} aria-expanded={open} style={{ width: '100%' }}>
           <Group gap={6} wrap="nowrap">
             <Text size="xs" c="dimmed" style={{ fontVariantNumeric: 'tabular-nums' }}>
@@ -38,7 +38,7 @@ export const ReasoningTrace = forwardRef<HTMLDivElement, ReasoningTraceProps>(
             size="xs"
             c="dimmed"
             mt={6}
-            style={{ whiteSpace: 'pre-wrap', borderLeft: '2px solid var(--tds-border-default)', paddingLeft: 8 }}
+            style={{ whiteSpace: 'pre-wrap', borderLeft: '2px solid var(--cds-border-default)', paddingLeft: 8 }}
           >
             {children}
           </Text>

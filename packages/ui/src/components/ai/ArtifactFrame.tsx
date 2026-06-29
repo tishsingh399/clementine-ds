@@ -15,18 +15,18 @@ export interface ArtifactFrameProps {
  * (a document, a code file, a rendered preview) lifted out of the chat stream.
  *
  * Header carries the title, a kind badge, and actions; the body holds the artifact.
- * Tokens: artifact.* . See specs/ai/artifact-frame/index.md.
+ * Tokens: artifact.* . See specs/artifact-frame/index.md.
  */
 export const ArtifactFrame = forwardRef<HTMLDivElement, ArtifactFrameProps>(
   ({ title, kind, children, actions }, ref) => {
     return (
-      <Paper ref={ref} withBorder radius="md" style={{ overflow: 'hidden', background: 'var(--tds-surface-elevated)' }}>
+      <Paper ref={ref} withBorder radius="md" style={{ overflow: 'hidden', background: 'var(--cds-surface-elevated)' }}>
         <Group
           justify="space-between"
           px="sm"
           py={8}
           wrap="nowrap"
-          style={{ background: 'var(--tds-surface-subtle)', borderBottom: '1px solid var(--tds-border-default)' }}
+          style={{ background: 'var(--cds-surface-subtle)', borderBottom: '1px solid var(--cds-border-default)' }}
         >
           <Group gap={8} wrap="nowrap">
             <Text size="sm" fw={600}>{title}</Text>

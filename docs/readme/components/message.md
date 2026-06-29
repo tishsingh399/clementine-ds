@@ -1,12 +1,12 @@
 # Message
 
-[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/message/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/Message.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/message.json)
+[Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/message/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/ai/Message.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/message.json)
 
 ## Overview
 
 A single turn in a chat thread — user, assistant, or system — with timestamp and status.
 
-Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/message/index.md).
+Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contract, parts, ARIA, and interaction states are in the [spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/message/index.md).
 
 ## Token contract
 
@@ -31,6 +31,6 @@ import { Message } from '@clementine-ds/ui';
 
 ## Related
 
-- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/ai/message/index.md)
+- [Spec — full anatomy, ARIA, states](https://github.com/tishsingh399/clementine-ds/blob/main/specs/message/index.md)
 - [The 3-tier cascade](../tokens/the-cascade-rule.md)
 - [AGENTS.md — agentic contract](../../../AGENTS.md)
