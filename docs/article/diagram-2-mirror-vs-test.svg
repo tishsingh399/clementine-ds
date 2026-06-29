@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="t2">A check that reads the spec versus a check that reads the screen</title>
+  <desc id="d2">On the left, the spec is validated against itself in a loop and stays green. On the right, the rendered component's painted pixel is compared against the contract and returns a real percentage.</desc>
+  <style>
+    svg{ --ink:#1a1a18; --muted:#6b6b66; --panel:#fafaf8; --panelb:#e5e5e0; --ok:#16a34a; --brand:#f5631a; }
+    .h{ fill:var(--ink); font-size:15px; font-weight:700; }
+    .lbl{ fill:var(--ink); font-size:13.5px; font-weight:600; }
+    .sub{ fill:var(--muted); font-size:12px; }
+    .box{ fill:var(--panel); stroke:var(--panelb); stroke-width:1.5; }
+  </style>
+  <rect width="760" height="400" fill="#ffffff"/>
+  <line x1="380" y1="40" x2="380" y2="372" stroke="#e5e5e0" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <text class="h" x="40" y="58">reads the paperwork</text>
+  <rect class="box" x="40" y="86" width="135" height="58" rx="10"/>
+  <text class="lbl" x="58" y="111">spec</text>
+  <text class="sub" x="58" y="129">what I wrote</text>
+  <rect class="box" x="205" y="86" width="135" height="58" rx="10"/>
+  <text class="lbl" x="223" y="111">validator</text>
+  <text class="sub" x="223" y="129">is it consistent?</text>
+  <path d="M175 102 H 205" fill="none" stroke="#6b6b66" stroke-width="2.5"/>
+  <polygon points="205,102 196,97 196,107" fill="#6b6b66"/>
+  <path d="M272 144 C 272 188, 108 188, 108 144" fill="none" stroke="#6b6b66" stroke-width="2.5"/>
+  <polygon points="108,144 103,153 113,153" fill="#6b6b66"/>
+  <text class="sub" x="150" y="178">checks the spec against the spec</text>
+  <rect x="120" y="222" width="140" height="40" rx="20" fill="#eaf7ee" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="148" cy="242" r="8" fill="#16a34a"/><path d="M144 242 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
+  <text class="lbl" x="164" y="247" fill="#16a34a">always green</text>
+  <text class="sub" x="40" y="300">It never opened the component file.</text>
+  <text class="sub" x="40" y="320">Green meant well-formed, not wired.</text>
+  <text class="h" x="408" y="58">reads the screen</text>
+  <rect class="box" x="408" y="86" width="150" height="58" rx="10"/>
+  <text class="lbl" x="426" y="111">rendered button</text>
+  <text class="sub" x="426" y="129">in a real browser</text>
+  <rect class="box" x="408" y="170" width="150" height="58" rx="10"/>
+  <text class="lbl" x="426" y="195">painted pixel</text>
+  <text class="sub" x="426" y="213">getComputedStyle</text>
+  <rect class="box" x="588" y="128" width="140" height="58" rx="10"/>
+  <text class="lbl" x="606" y="153">the contract</text>
+  <text class="sub" x="606" y="171">resolved value</text>
+  <path d="M483 144 V 170" fill="none" stroke="#f5631a" stroke-width="2.5"/>
+  <polygon points="483,170 478,161 488,161" fill="#f5631a"/>
+  <path d="M558 199 C 600 199, 600 165, 588 159" fill="none" stroke="#f5631a" stroke-width="2.5"/>
+  <polygon points="588,159 596,162 592,153" fill="#f5631a"/>
+  <text class="sub" x="500" y="246">compares the pixel to the contract</text>
+  <rect x="488" y="276" width="170" height="40" rx="20" fill="#fef0e8" stroke="#f5631a" stroke-width="1.5"/>
+  <text class="lbl" x="508" y="301" fill="#f5631a">89%, with a list</text>
+  <text class="sub" x="408" y="348">The first number it gave me was how</text>
+  <text class="sub" x="408" y="368">much I had not finished.</text>
+</svg>
