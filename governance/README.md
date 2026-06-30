@@ -10,6 +10,7 @@
 | Component contract | `specs/<component>/` validated by `agentic-spec` |
 | CI / security | GitHub Actions, CodeQL, Dependabot |
 | Docs | Storybook + Mintlify + this repo |
+| Milestone proof | [`MILESTONE.md`](../MILESTONE.md) + [`docs/governance-proof.html`](../docs/governance-proof.html) |
 
 ## AI-era governance (net-new)
 | Concern | How |
