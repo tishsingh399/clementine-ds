@@ -579,5 +579,26 @@ export const clementineTheme = createTheme({
         },
       }),
     },
+    Kbd: {
+      styles: {
+        root: {
+          backgroundColor: 'var(--cds-kbd-bg)',
+          borderColor: 'var(--cds-kbd-border)',
+          color: 'var(--cds-kbd-fg)',
+        },
+      },
+    },
+    Divider: {
+      vars: () => ({ root: { '--divider-color': 'var(--cds-divider-line)' } }),
+    },
+    Fieldset: {
+      styles: {
+        root: {
+          backgroundColor: 'var(--cds-fieldset-bg)',
+          borderColor: 'var(--cds-fieldset-border)',
+        },
+        legend: { color: 'var(--cds-fieldset-legend)' },
+      },
+    },
   },
 });
