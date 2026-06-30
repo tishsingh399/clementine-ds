@@ -117,19 +117,35 @@ for (const file of findSpecs(join(root, 'specs'))) {
     try {
       await page.goto(`${STORYBOOK_URL}/iframe.html?id=${storyId}&viewMode=story&globals=theme:${mode}`, { waitUntil: 'networkidle' });
       await page.evaluate((m) => document.documentElement.setAttribute('data-mantine-color-scheme', m), mode);
-      // Only measure the component's OWN root. Portal/trigger components (Drawer,
-      // Modal, Popover) whose root isn't rendered in the default story are skipped
-      // rather than mis-scored against a trigger element. Per-state + portal-aware
-      // selectors are the documented next refinement.
-      const el = page.locator(`.mantine-${cap(name)}-root`).first();
-      if ((await el.count()) === 0) {
+      // Find the component's own root, then read it — in one pass. Priority:
+      //  1. Mantine root (.mantine-<Cap>-root) for Mantine-backed components.
+      //  2. For custom components: the first element under #storybook-root that
+      //     actually paints (a --cds-* inline var, a real bg, or a border) — this
+      //     unwraps decorator wrappers without grabbing a transparent container.
+      // Portal/trigger components whose root isn't in the default story yield
+      // nothing and are skipped (not mis-scored against a trigger).
+      const painted = await page.evaluate(({ Cap }) => {
+        const paints = (n) => {
+          const cs = getComputedStyle(n);
+          const bg = cs.backgroundColor;
+          const transparent = bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent';
+          const hasBorder = parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none';
+          const hasCdsVar = (n.getAttribute('style') || '').includes('--cds-');
+          return (!transparent) || hasBorder || hasCdsVar;
+        };
+        let el = document.querySelector(`.mantine-${Cap}-root`);
+        if (!el) {
+          const sbRoot = document.querySelector('#storybook-root, #root, .sb-show-main');
+          if (sbRoot) el = [...sbRoot.querySelectorAll('*')].find(paints) ?? null;
+        }
+        if (!el) return null;
+        const cs = getComputedStyle(el);
+        return { 'background-color': cs.backgroundColor, color: cs.color, 'border-color': cs.borderTopColor };
+      }, { Cap: cap(name) });
+      if (!painted) {
         result.skippedModes = (result.skippedModes ?? 0) + 1;
         continue;
       }
-      const painted = await el.evaluate((n) => {
-        const cs = getComputedStyle(n);
-        return { 'background-color': cs.backgroundColor, color: cs.color, 'border-color': cs.borderTopColor };
-      });
       for (const [prop, raw] of Object.entries(painted)) {
         const v = canon(raw);
         if (v == null) continue;
