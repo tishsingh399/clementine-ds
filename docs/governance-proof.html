@@ -535,7 +535,7 @@
     .bar span {
       display: block;
       height: 100%;
-      width: 83%;
+      width: 100%;
       background: var(--sds-bg-interactive-primary);
     }
 
@@ -615,7 +615,7 @@
         <button class="tab" type="button" data-view="machinery" aria-selected="false">Machinery</button>
         <button class="tab" type="button" data-view="benchmark" aria-selected="false">Benchmark</button>
         <button class="tab" type="button" data-view="loop" aria-selected="false">Learning Loop</button>
-        <button class="tab" type="button" data-view="known" aria-selected="false">Known Holdout</button>
+        <button class="tab" type="button" data-view="known" aria-selected="false">Closed Loop</button>
       </nav>
 
       <section class="view active" id="product">
@@ -770,17 +770,17 @@
         <div class="panel known">
           <div>
             <div class="panel-head">
-              <h2>Known Holdout: Badge</h2>
-              <span class="meta">Parked deliberately</span>
+              <h2>Closed Loop: Badge</h2>
+              <span class="meta">Fixed after proof</span>
             </div>
-            <p>Badge still has one dark-mode painted-DOM miss in the default light variant: Mantine paints a blue alpha background instead of a declared <code>badge.*</code> component token. The component remains above threshold, but the exception is named so it does not disappear inside the average.</p>
-            <p style="margin-top: 12px;">Recommended next move: design a Clementine Badge intent API, then map neutral, success, warning, error, and risk variants through component tokens instead of passing arbitrary Mantine colors through.</p>
+            <p>Badge was the named holdout from the first proof pass. The follow-up closed it by adding stable intent/risk attributes in the wrapper and mapping those states through <code>badge.*</code> component tokens in the Mantine theme.</p>
+            <p style="margin-top: 12px;">The important part is the loop: the proof named a real drift, the fix changed the runtime path, and painted DOM parity verified the result. The remaining question is API shape: keep arbitrary Mantine colors, or expose only named Clementine intents.</p>
           </div>
           <div class="meter" aria-label="Badge parity">
             <span class="label">Badge DOM parity</span>
-            <strong style="font-family: var(--sds-font-heading); font-size: 2rem; font-variant-numeric: tabular-nums;">83%</strong>
+            <strong style="font-family: var(--sds-font-heading); font-size: 2rem; font-variant-numeric: tabular-nums;">100%</strong>
             <div class="bar"><span></span></div>
-            <p>1 miss: dark background color on default light variant.</p>
+            <p>6 of 6 painted values matched. No Badge misses remain in the latest DOM parity report.</p>
           </div>
         </div>
       </section>
