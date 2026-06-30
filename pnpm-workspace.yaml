@@ -1,3 +1,8 @@
 packages:
   - "packages/*"
   - "apps/*"
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  '@swc/core': true
+  esbuild: true
+  style-dictionary: true
