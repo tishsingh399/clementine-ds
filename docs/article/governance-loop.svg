@@ -1,0 +1,89 @@
+<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img">
+<title>Governed learning loop for agentic design systems</title>
+<desc>A dark editorial systems diagram showing signals entering a governed contract, then moving through watch, diagnose, fix, and learn stages. Learning only becomes a new rule after repeated evidence.</desc>
+<defs>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+  </filter>
+  <marker id="arrow-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#55D890" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arrow-orange" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#F29B58" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect width="1400" height="820" rx="32" fill="#11100D"/>
+<rect x="36" y="36" width="1328" height="748" rx="28" fill="#15130F" stroke="#2A261E" stroke-width="2"/>
+
+<text x="92" y="94" font-size="18" fill="#8D887D" letter-spacing="0">agentic-spec governance layer</text>
+<text x="92" y="140" font-size="48" font-weight="650" fill="#F4EFE6" letter-spacing="0">The system can learn, but it cannot silently mutate.</text>
+<text x="92" y="178" font-size="22" fill="#C7BFB0" letter-spacing="0">Signals become rules only after diagnosis, review, and repeated evidence.</text>
+
+<g opacity="0.9">
+  <path d="M1152 292C1222 306 1276 354 1276 412C1276 471 1222 518 1152 532" fill="none" stroke="#55D890" stroke-width="3" stroke-dasharray="3 12" stroke-linecap="round"/>
+  <path d="M1168 334C1216 344 1254 374 1254 412C1254 450 1216 480 1168 490" fill="none" stroke="#55D890" stroke-width="3" stroke-dasharray="3 12" stroke-linecap="round"/>
+  <circle cx="1277" cy="412" r="6" fill="#55D890"/>
+  <circle cx="1244" cy="372" r="5" fill="#55D890"/>
+  <circle cx="1244" cy="452" r="5" fill="#55D890"/>
+  <text x="1216" y="350" font-size="28" font-weight="650" fill="#55D890">signals</text>
+  <text x="1216" y="382" font-size="15" fill="#B8B0A1">components · hooks</text>
+  <text x="1216" y="405" font-size="15" fill="#B8B0A1">CI · Storybook</text>
+  <text x="1216" y="428" font-size="15" fill="#B8B0A1">DOM parity</text>
+</g>
+
+<g filter="url(#soft)">
+  <rect x="306" y="236" width="780" height="350" rx="175" fill="#11100D" stroke="#55D890" stroke-width="22"/>
+  <path d="M310 410C310 314 389 236 486 236H996" fill="none" stroke="#55D890" stroke-width="22" stroke-linecap="round"/>
+  <path d="M1086 410C1086 506 1007 586 910 586H484" fill="none" stroke="#55D890" stroke-width="22" stroke-linecap="round"/>
+  <path d="M488 236H910" fill="none" stroke="#EF7067" stroke-width="22" stroke-linecap="round"/>
+  <path d="M488 586H910" fill="none" stroke="#E7B45D" stroke-width="22" stroke-linecap="round"/>
+</g>
+
+<circle cx="698" cy="236" r="13" fill="#F4EFE6"/>
+<circle cx="698" cy="586" r="13" fill="#F4EFE6"/>
+
+<text x="698" y="198" text-anchor="middle" font-size="31" font-weight="700" fill="#EF7067">learn</text>
+<text x="698" y="224" text-anchor="middle" font-size="17" fill="#C7BFB0">new rule only after repeated evidence</text>
+
+<text x="698" y="640" text-anchor="middle" font-size="31" font-weight="700" fill="#E7B45D">diagnose</text>
+<text x="698" y="668" text-anchor="middle" font-size="17" fill="#C7BFB0">real issue, drift, or noise?</text>
+
+<text x="244" y="414" text-anchor="middle" font-size="31" font-weight="700" fill="#55D890">fix</text>
+<text x="244" y="442" text-anchor="middle" font-size="17" fill="#C7BFB0">back as a reviewable PR</text>
+
+<text x="1142" y="414" text-anchor="middle" font-size="31" font-weight="700" fill="#55D890">watch</text>
+<text x="1142" y="442" text-anchor="middle" font-size="17" fill="#C7BFB0">parity + a11y + behavior drift</text>
+
+<g>
+  <text x="698" y="370" text-anchor="middle" font-size="54" font-style="italic" fill="#F4EFE6">governed contract</text>
+  <text x="698" y="410" text-anchor="middle" font-size="18" font-weight="700" fill="#55D890" letter-spacing="5">EVIDENCE BEFORE RULES</text>
+  <line x1="540" y1="436" x2="856" y2="436" stroke="#4A4336" stroke-width="2"/>
+  <text x="698" y="480" text-anchor="middle" font-size="23" fill="#D6CFC2">token architecture · component specs · behavior specs</text>
+  <text x="698" y="514" text-anchor="middle" font-size="23" fill="#D6CFC2">parity history · review trail · rule candidates</text>
+</g>
+
+<g>
+  <rect x="84" y="686" width="292" height="58" rx="12" fill="#221E17" stroke="#3B3428"/>
+  <text x="230" y="710" text-anchor="middle" font-size="15" fill="#8D887D">watch</text>
+  <text x="230" y="732" text-anchor="middle" font-size="18" fill="#F4EFE6">collect runtime signals</text>
+
+  <path d="M384 715H458" stroke="#55D890" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="474" y="686" width="292" height="58" rx="12" fill="#221E17" stroke="#3B3428"/>
+  <text x="620" y="710" text-anchor="middle" font-size="15" fill="#8D887D">diagnose</text>
+  <text x="620" y="732" text-anchor="middle" font-size="18" fill="#F4EFE6">separate issue from noise</text>
+
+  <path d="M774 715H848" stroke="#E7B45D" stroke-width="2.5" marker-end="url(#arrow-orange)"/>
+
+  <rect x="864" y="686" width="220" height="58" rx="12" fill="#221E17" stroke="#3B3428"/>
+  <text x="974" y="710" text-anchor="middle" font-size="15" fill="#8D887D">fix</text>
+  <text x="974" y="732" text-anchor="middle" font-size="18" fill="#F4EFE6">open a PR</text>
+
+  <path d="M1092 715H1166" stroke="#55D890" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="1182" y="686" width="134" height="58" rx="12" fill="#221E17" stroke="#3B3428"/>
+  <text x="1249" y="710" text-anchor="middle" font-size="15" fill="#8D887D">learn</text>
+  <text x="1249" y="732" text-anchor="middle" font-size="18" fill="#F4EFE6">add rule</text>
+</g>
+</svg>
