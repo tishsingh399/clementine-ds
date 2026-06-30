@@ -579,6 +579,24 @@ export const clementineTheme = createTheme({
         },
       }),
     },
+    Badge: {
+      defaultProps: { radius: 'sm', variant: 'light' },
+      styles: {
+        root: {
+          backgroundColor: 'var(--cds-badge-bg-neutral)',
+          color: 'var(--cds-badge-fg-default)',
+          borderRadius: 'var(--cds-badge-radius)',
+          '&[data-intent="success"]': { backgroundColor: 'var(--cds-badge-bg-success)' },
+          '&[data-intent="error"]': { backgroundColor: 'var(--cds-badge-bg-error)' },
+          '&[data-intent="warning"]': { backgroundColor: 'var(--cds-badge-bg-warning)' },
+          '&[data-risk="critical"]': { backgroundColor: 'var(--cds-badge-bg-risk-critical)' },
+          '&[data-risk="high"]': { backgroundColor: 'var(--cds-badge-bg-risk-high)' },
+          '&[data-risk="medium"]': { backgroundColor: 'var(--cds-badge-bg-risk-medium)' },
+          '&[data-risk="low"]': { backgroundColor: 'var(--cds-badge-bg-risk-low)' },
+        },
+        section: { color: 'var(--cds-badge-fg-default)' },
+      },
+    },
     Kbd: {
       styles: {
         root: {

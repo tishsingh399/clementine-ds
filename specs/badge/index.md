@@ -1,8 +1,8 @@
 ---
 component: badge
 ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+status: AI-Ready
+last_verified: 2026-06-30
 
 category: Component
 required_aria: []
@@ -29,8 +29,8 @@ checks:
   aria_correct: true
   structure_correct: true
   states_complete: true
-  tokens_valid: false
-  no_invented_styles: false
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -49,9 +49,11 @@ patterns_used_in: [data-table, status-list, page-header]
 pages_used_in: []
 ---
 
-# AGENTIC DOCUMENTATION: BADGE
+# Agentic Documentation: Badge
 
-> **Status:** Draft. Spec stub — needs token reconciliation and full state table. See [AGENTS.md](../../AGENTS.md) for the workflow to promote to `AI-Ready`.
+> **Status:** AI-Ready. Badge paints known Clementine intents through `badge.*`
+> component tokens at runtime. See [AGENTS.md](../../AGENTS.md) for the token
+> cascade workflow.
 
 ## 1. Purpose & Intent
 
@@ -63,7 +65,7 @@ Non-interactive label that communicates status, severity, or count. Never clicka
 
 None — Badge is presentational. If it conveys status critical to the surrounding context, the parent should expose that via its own label.
 
-### 2.2 Token Bindings (to verify)
+### 2.2 Token Bindings
 
 | Intent | Token | Resolves (light) |
 |---|---|---|
@@ -78,5 +80,7 @@ None — Badge is presentational. If it conveys status critical to the surroundi
 
 ## 3. Open Questions
 
-- Confirm whether risk-tier badges should also bind a `border` token for contrast in dark mode
-- Confirm text token (text.primary vs a tier-specific text-on-subtle)
+- Future contrast pass: confirm whether risk-tier badges should add a border token
+  for dense dark-mode surfaces.
+- Future API pass: decide whether arbitrary Mantine `color` values should remain
+  accepted or whether Badge should expose only named Clementine intents.
