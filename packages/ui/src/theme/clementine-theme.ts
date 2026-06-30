@@ -273,9 +273,84 @@ export const clementineTheme = createTheme({
         },
       }),
     },
-    Checkbox: { defaultProps: { radius: 'sm' } },
-    Modal: { defaultProps: { radius: 'lg' } },
-    Card: { defaultProps: { withBorder: true, radius: 'lg', shadow: 'sm', padding: 'lg' } },
+    Checkbox: {
+      defaultProps: { radius: 'sm' },
+      vars: () => ({
+        root: {
+          '--checkbox-color': 'var(--cds-checkbox-bg-checked)',
+          '--checkbox-icon-color': 'var(--cds-checkbox-check)',
+          '--checkbox-radius': 'var(--cds-checkbox-radius)',
+        },
+      }),
+      styles: {
+        input: {
+          // Only the UNCHECKED box uses the unchecked bg. When checked, Mantine
+          // paints the box from --checkbox-color (wired above to bg-checked); an
+          // unconditional backgroundColor here would clobber that and leave a
+          // checked box white.
+          '&:not(:checked):not(:indeterminate)': {
+            backgroundColor: 'var(--cds-checkbox-bg-unchecked)',
+          },
+          borderColor: 'var(--cds-checkbox-border-default)',
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-checkbox-border-focus)',
+            outlineOffset: '2px',
+          },
+          '&[data-error]': { borderColor: 'var(--cds-checkbox-border-error)' },
+          '&:disabled:not(:checked)': { backgroundColor: 'var(--cds-checkbox-bg-disabled)' },
+        },
+        label: { color: 'var(--cds-checkbox-fg-label)' },
+        description: { color: 'var(--cds-checkbox-fg-description)' },
+        error: { color: 'var(--cds-checkbox-fg-error)' },
+      },
+    },
+    Modal: {
+      defaultProps: { radius: 'lg' },
+      vars: () => ({
+        root: { '--modal-radius': 'var(--cds-modal-radius)' },
+      }),
+      styles: {
+        overlay: { backgroundColor: 'var(--cds-modal-overlay)' },
+        content: {
+          backgroundColor: 'var(--cds-modal-bg)',
+          color: 'var(--cds-modal-fg-body)',
+        },
+        header: {
+          backgroundColor: 'var(--cds-modal-bg)',
+          borderBottom: '1px solid var(--cds-modal-border-divider)',
+        },
+        title: { color: 'var(--cds-modal-fg-title)' },
+        body: { color: 'var(--cds-modal-fg-body)' },
+        close: {
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-modal-ring)',
+            outlineOffset: '2px',
+          },
+        },
+      },
+    },
+    Card: {
+      defaultProps: { withBorder: true, radius: 'lg', shadow: 'sm', padding: 'lg' },
+      vars: () => ({
+        root: { '--card-radius': 'var(--cds-card-radius)' },
+      }),
+      styles: {
+        root: {
+          backgroundColor: 'var(--cds-card-bg)',
+          borderColor: 'var(--cds-card-border)',
+          boxShadow: 'var(--cds-card-shadow)',
+          color: 'var(--cds-card-fg-body)',
+          '&[data-interactive="true"]:hover': { boxShadow: 'var(--mantine-shadow-md)' },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-focus-ring)',
+            outlineOffset: '2px',
+          },
+        },
+        section: {
+          '&[data-subtle="true"]': { backgroundColor: 'var(--cds-card-bg-subtle)' },
+        },
+      },
+    },
     Alert: {
       defaultProps: { radius: 'md' },
       // Per-intent, mirroring the Alert wrapper's intent→color map
@@ -296,10 +371,90 @@ export const clementineTheme = createTheme({
         };
       },
     },
-    Tooltip: { defaultProps: { radius: 'sm' } },
-    Menu: { defaultProps: { radius: 'md', shadow: 'lg' } },
-    Accordion: { defaultProps: { radius: 'md', variant: 'separated' } },
-    Drawer: { defaultProps: { radius: 'lg', position: 'right' } },
+    Tooltip: {
+      defaultProps: {
+        radius: 'sm',
+        color: 'dark',
+        transitionProps: { duration: 100, transition: 'fade' },
+      },
+      vars: () => ({
+        tooltip: {
+          '--tooltip-bg': 'var(--cds-tooltip-bg)',
+          '--tooltip-color': 'var(--cds-tooltip-fg)',
+          '--tooltip-radius': 'var(--cds-tooltip-radius)',
+        },
+      }),
+      styles: {
+        tooltip: {
+          border: '1px solid var(--cds-tooltip-border)',
+          boxShadow: 'var(--cds-tooltip-shadow)',
+        },
+        arrow: { borderColor: 'var(--cds-tooltip-border)' },
+      },
+    },
+    Menu: {
+      defaultProps: { radius: 'md', shadow: 'lg' },
+      styles: {
+        dropdown: {
+          backgroundColor: 'var(--cds-menu-bg)',
+          borderColor: 'var(--cds-menu-border)',
+          boxShadow: 'var(--cds-menu-shadow)',
+          borderRadius: 'var(--cds-menu-radius)',
+        },
+        item: {
+          color: 'var(--cds-menu-item-fg)',
+          '--menu-item-hover': 'var(--cds-menu-item-bg-hover)',
+          '&[data-variant="danger"], &[data-color="red"]': {
+            color: 'var(--cds-menu-item-fg-danger)',
+          },
+        },
+        label: { color: 'var(--cds-menu-label)' },
+        divider: { borderColor: 'var(--cds-menu-divider)' },
+      },
+    },
+    Accordion: {
+      defaultProps: { radius: 'md', variant: 'separated' },
+      vars: () => ({
+        root: { '--accordion-radius': 'var(--cds-accordion-radius)' },
+      }),
+      styles: {
+        item: {
+          backgroundColor: 'var(--cds-accordion-bg)',
+          borderColor: 'var(--cds-accordion-border)',
+        },
+        control: {
+          color: 'var(--cds-accordion-fg-label)',
+          '&:hover:not(:disabled, [data-disabled])': {
+            backgroundColor: 'var(--cds-accordion-bg-hover)',
+          },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-accordion-border-focus)',
+            outlineOffset: '2px',
+          },
+        },
+        chevron: { color: 'var(--cds-accordion-fg-chevron)' },
+        panel: { color: 'var(--cds-accordion-fg-content)' },
+        content: { color: 'var(--cds-accordion-fg-content)' },
+      },
+    },
+    Drawer: {
+      defaultProps: { radius: 'lg', position: 'right' },
+      styles: {
+        overlay: { backgroundColor: 'var(--cds-drawer-overlay)' },
+        content: {
+          backgroundColor: 'var(--cds-drawer-bg)',
+          borderColor: 'var(--cds-drawer-border)',
+          color: 'var(--cds-drawer-fg-body)',
+          borderRadius: 'var(--cds-drawer-radius)',
+        },
+        header: {
+          backgroundColor: 'var(--cds-drawer-bg)',
+          borderBottom: '1px solid var(--cds-drawer-border)',
+        },
+        title: { color: 'var(--cds-drawer-fg-title)' },
+        body: { color: 'var(--cds-drawer-fg-body)' },
+      },
+    },
     Autocomplete: {
       defaultProps: { radius: 'md' },
       vars: () => ({
@@ -311,9 +466,61 @@ export const clementineTheme = createTheme({
         },
       }),
     },
-    Pagination: { defaultProps: { radius: 'md' } },
-    Progress: { defaultProps: { radius: 'xl' } },
-    Skeleton: { defaultProps: { radius: 'md' } },
+    Pagination: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        root: {
+          '--pagination-active-bg': 'var(--cds-pagination-item-bg-active)',
+          '--pagination-active-color': 'var(--cds-pagination-item-fg-active)',
+          '--pagination-control-radius': 'var(--cds-pagination-radius)',
+        },
+      }),
+      styles: {
+        control: {
+          color: 'var(--cds-pagination-item-fg)',
+          borderColor: 'var(--cds-pagination-border)',
+          '&:hover:not(:disabled, [data-disabled], [data-active])': {
+            backgroundColor: 'var(--cds-pagination-item-bg-hover)',
+          },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-pagination-border-focus)',
+            outlineOffset: '2px',
+          },
+        },
+      },
+    },
+    Progress: {
+      defaultProps: { radius: 'xl', color: 'blue' },
+      vars: () => ({
+        root: { '--progress-radius': 'var(--cds-progress-radius)' },
+      }),
+      styles: {
+        root: { backgroundColor: 'var(--cds-progress-track)' },
+        section: {
+          backgroundColor: 'var(--cds-progress-bar)',
+          '&[data-color="green"]': { backgroundColor: 'var(--cds-progress-bar-success)' },
+          '&[data-color="orange"], &[data-color="yellow"]': {
+            backgroundColor: 'var(--cds-progress-bar-warning)',
+          },
+          '&[data-color="red"]': { backgroundColor: 'var(--cds-progress-bar-error)' },
+        },
+      },
+    },
+    Skeleton: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        root: { '--skeleton-radius': 'var(--cds-skeleton-radius)' },
+      }),
+      styles: {
+        root: {
+          '&[data-visible]::before': { backgroundColor: 'var(--cds-skeleton-base)' },
+          '&[data-visible]::after': {
+            animationDuration: 'var(--cds-skeleton-duration)',
+            backgroundColor: 'var(--cds-skeleton-highlight)',
+          },
+        },
+      },
+    },
     Chip: {
       defaultProps: { radius: 'xl' },
       vars: () => ({
@@ -324,11 +531,45 @@ export const clementineTheme = createTheme({
         },
       }),
     },
-    Popover: { defaultProps: { radius: 'md', shadow: 'lg' } },
-    // SegmentedControl deferred: --sc-color drives the active-label color on the
-    // indicator, not the inactive labels measured against segmented-control.fg —
-    // its label/indicator var split needs a styles pass. Next batch.
-    SegmentedControl: { defaultProps: { radius: 'md' } },
+    Popover: {
+      defaultProps: { radius: 'md', shadow: 'lg' },
+      vars: () => ({
+        dropdown: {
+          '--popover-radius': 'var(--cds-popover-radius)',
+          '--popover-shadow': 'var(--cds-popover-shadow)',
+          '--popover-border-color': 'var(--cds-popover-border)',
+        },
+      }),
+      styles: {
+        dropdown: {
+          backgroundColor: 'var(--cds-popover-bg)',
+          borderColor: 'var(--cds-popover-border)',
+          boxShadow: 'var(--cds-popover-shadow)',
+        },
+        arrow: {
+          backgroundColor: 'var(--cds-popover-bg)',
+          borderColor: 'var(--cds-popover-border)',
+        },
+      },
+    },
+    SegmentedControl: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        root: {
+          '--sc-radius': 'var(--cds-segmented-control-radius)',
+          '--sc-color': 'var(--cds-segmented-control-bg-active)',
+          '--sc-label-color': 'var(--cds-segmented-control-fg-active)',
+        },
+      }),
+      styles: {
+        root: { backgroundColor: 'var(--cds-segmented-control-bg)' },
+        label: {
+          color: 'var(--cds-segmented-control-fg)',
+          '&[data-active]': { color: 'var(--cds-segmented-control-fg-active)' },
+        },
+        indicator: { backgroundColor: 'var(--cds-segmented-control-bg-active)' },
+      },
+    },
     ThemeIcon: {
       defaultProps: { radius: 'md' },
       vars: () => ({

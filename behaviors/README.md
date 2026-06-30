@@ -29,9 +29,17 @@ Don't show a blank pause. The order of reveal communicates that the system is wo
 
 | Hook | Purpose |
 |---|---|
-| `useStreaming()` | Accumulate streamed text; drives `StreamingText`. |
-| `useInterruptible()` | Run an abortable op; wire `interrupt` to Stop. |
-| `useRetry(max)` | Bounded retry with `attempt` / `pending` / `error`. |
+| `useStreaming()` | Accumulate streamed text; drives `StreamingText`. Spec: [`behaviors/use-streaming`](./use-streaming/index.md). |
+| `useInterruptible()` | Run an abortable op; wire `interrupt` to Stop. Spec: [`behaviors/use-interruptible`](./use-interruptible/index.md). |
+| `useRetry(max)` | Bounded retry with `attempt` / `pending` / `error`. Spec: [`behaviors/use-retry`](./use-retry/index.md). |
+
+## Behavior spec contract
+
+Behavior specs live under `behaviors/<hook-name>/index.md`. They describe non-visual
+state machines and exported hooks, so they use `state_contract` instead of a
+component `token_contract`. The repo gate `pnpm validate:behaviors` checks that each
+behavior spec points at an existing hook file, exported hook, result type, state
+contract, and reset/guard story.
 
 ## Reduced motion
 Every "becoming" animation (caret, shimmer, slide) must degrade under `prefers-reduced-motion: reduce` — cross-fade or go static. Built into `StreamingText`, `Skeleton`, `Drawer`.
