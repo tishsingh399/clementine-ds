@@ -82,20 +82,24 @@ Latest observed result:
 - below threshold: 0
 - report: `apps/observatory/parity-dom-report.json`
 
-## Known Holdout
+## Closed Follow-Up
 
-Badge is the named exception to keep visible. The latest DOM report shows Badge
-at 83% parity because the dark-mode default `light` variant paints a Mantine
-blue alpha background instead of a declared Badge component token.
+Badge was the named exception from the first milestone pass. It is now closed:
+the Badge wrapper exposes stable intent/risk attributes, and the Mantine theme
+maps those states through `badge.*` component tokens.
 
-This is not a token-file or cascade problem. It needs a wrapper/theme decision:
-either constrain Badge to named Clementine intents or map Mantine badge variants
-and colors through `badge.*` component tokens.
+Latest observed Badge painted-DOM result:
 
-Decision for this milestone: park Badge as a known wrapper-level follow-up, not
-a hidden failure.
+- checked values: 6
+- matched values: 6
+- parity: 100%
+- misses: 0
+
+Remaining design decision, not a parity blocker: decide whether arbitrary
+Mantine `color` values should remain accepted or whether Badge should expose
+only named Clementine intents.
 
 ## Visual Explainer
 
 Open `docs/governance-proof.html` to see the product layer, machinery layer,
-learning loop, proof numbers, and Badge follow-up as a visual map.
+learning loop, proof numbers, and closed Badge follow-up as a visual map.
