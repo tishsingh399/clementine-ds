@@ -70,8 +70,25 @@ function leaves(obj, path = [], out = []) {
   }
   return out;
 }
+// Resolved values of the whole semantic layer, per mode (cached). A component
+// that paints a semantic value (inherited body text, a shared surface) is still
+// bound to the token cascade — just at the semantic tier — so it counts.
+const semanticAllowed = { light: null, dark: null };
+function semanticSet(mode) {
+  if (semanticAllowed[mode]) return semanticAllowed[mode];
+  const set = new Set();
+  for (const group of Object.values(semantic[mode])) {
+    for (const node of Object.values(group)) {
+      const v = canon(resolve(node.$value, semantic[mode]));
+      if (v) set.add(v);
+    }
+  }
+  semanticAllowed[mode] = set;
+  return set;
+}
 function allowedFor(component, mode) {
-  const set = new Set(['transparent', '0,0,0', '255,255,255']); // free: transparent + pure black/white text fallbacks
+  // free: transparent + pure black/white fallbacks + the semantic layer
+  const set = new Set(['transparent', '0,0,0', '255,255,255', ...semanticSet(mode)]);
   const ns = components[component];
   if (!ns) return set;
   for (const [, node] of leaves(ns)) {
@@ -140,7 +157,14 @@ for (const file of findSpecs(join(root, 'specs'))) {
         }
         if (!el) return null;
         const cs = getComputedStyle(el);
-        return { 'background-color': cs.backgroundColor, color: cs.color, 'border-color': cs.borderTopColor };
+        const out = { 'background-color': cs.backgroundColor, color: cs.color };
+        // Only measure the border when there actually is one. With no border,
+        // border-color defaults to currentColor (the text colour), which is a
+        // phantom, not a painted border.
+        if (parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none') {
+          out['border-color'] = cs.borderTopColor;
+        }
+        return out;
       }, { Cap: cap(name) });
       if (!painted) {
         result.skippedModes = (result.skippedModes ?? 0) + 1;
