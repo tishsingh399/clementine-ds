@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clementine Governance Proof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root,
+    [data-theme="light"] {
+      --sds-bg-layer-1: #e4e7ec;
+      --sds-bg-layer-2: #f4f5f7;
+      --sds-bg-layer-3: #fafafa;
+      --sds-bg-input: #f8f9f9;
+      --sds-bg-interactive-primary: #1c63a5;
+      --sds-bg-interactive-hover-primary: #1771c6;
+      --sds-bg-interactive-active: #d5e4f5;
+      --sds-bg-surface-row: #fafafa;
+      --sds-bg-surface-row-hover: #e9ebec;
+      --sds-bg-surface-row-selected: #d3f0f7;
+      --sds-bg-status-success: #006e18;
+      --sds-bg-status-error: #c1001b;
+      --sds-bg-status-info: #007d9a;
+      --sds-text-primary: #081826;
+      --sds-text-secondary: #15293a;
+      --sds-text-tertiary: #253746;
+      --sds-text-interactive-primary: #1c63a5;
+      --sds-text-contrast-primary: #ffffff;
+      --sds-border-primary: #d1d1d6;
+      --sds-border-secondary: #9da4ae;
+      --sds-border-hover: #1771c6;
+      --sds-border-focus: #ff8040;
+      --sds-icon-primary: #253746;
+      --sds-font-display: "Inter", sans-serif;
+      --sds-font-heading: "Inter", sans-serif;
+      --sds-font-body: "Noto Sans", sans-serif;
+      --sds-font-code: "Fira Code", monospace;
+      --sds-font-size-xs: 0.75rem;
+      --sds-font-size-sm: 0.875rem;
+      --sds-font-size-md: 1rem;
+      --sds-font-size-lg: 1.125rem;
+      --sds-font-size-xl: 1.25rem;
+      --sds-lh-sm: 1.25rem;
+      --sds-lh-md: 1.5rem;
+      --sds-lh-lg: 1.75rem;
+      --sds-radius-sm: 6px;
+      --sds-radius-md: 8px;
+      --sds-radius-lg: 12px;
+      --sds-shadow-sm: 0 1px 2px rgba(8, 24, 38, 0.08);
+      --sds-shadow-md: 0 12px 30px rgba(8, 24, 38, 0.12);
+    }
+
+    [data-theme="dark"] {
+      --sds-bg-layer-1: #121212;
+      --sds-bg-layer-2: #242424;
+      --sds-bg-layer-3: #3b3b3b;
+      --sds-bg-input: #121212;
+      --sds-bg-interactive-primary: #53b1fd;
+      --sds-bg-interactive-hover-primary: #7cc3fd;
+      --sds-bg-interactive-active: #022f43;
+      --sds-bg-surface-row: #242424;
+      --sds-bg-surface-row-hover: #595959;
+      --sds-bg-surface-row-selected: #125667;
+      --sds-bg-status-success: #7fc5a2;
+      --sds-bg-status-error: #ff8593;
+      --sds-bg-status-info: #6699cc;
+      --sds-text-primary: #fcfcfc;
+      --sds-text-secondary: #e7e9e9;
+      --sds-text-tertiary: #d0d3d4;
+      --sds-text-interactive-primary: #53b1fd;
+      --sds-text-contrast-primary: #081826;
+      --sds-border-primary: #949494;
+      --sds-border-secondary: #949494;
+      --sds-border-hover: #7cc3fd;
+      --sds-border-focus: #ff8040;
+      --sds-icon-primary: #d0d3d4;
+      --sds-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.22);
+      --sds-shadow-md: 0 18px 42px rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--sds-bg-layer-1);
+      color: var(--sds-text-primary);
+      font-family: var(--sds-font-body);
+      line-height: var(--sds-lh-md);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--sds-border-primary);
+      background: color-mix(in srgb, var(--sds-bg-layer-2) 92%, transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-interactive-primary);
+      color: var(--sds-text-contrast-primary);
+      font-family: var(--sds-font-heading);
+      font-weight: 700;
+      box-shadow: var(--sds-shadow-sm);
+      flex: 0 0 auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--sds-font-heading);
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+      line-height: 1.12;
+      max-width: 860px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      line-height: var(--sds-lh-md);
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      line-height: var(--sds-lh-sm);
+    }
+
+    .eyebrow,
+    .meta,
+    .label {
+      color: var(--sds-text-tertiary);
+      font-size: var(--sds-font-size-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-layer-3);
+      color: var(--sds-icon-primary);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--sds-border-hover);
+      color: var(--sds-text-interactive-primary);
+    }
+
+    .theme-toggle:focus-visible,
+    .tab:focus-visible,
+    .node:focus-visible,
+    .case-button:focus-visible {
+      outline: 2px solid var(--sds-border-focus);
+      outline-offset: 2px;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy,
+    .score-panel,
+    .panel,
+    .detail-panel {
+      background: var(--sds-bg-layer-3);
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      box-shadow: var(--sds-shadow-sm);
+    }
+
+    .hero-copy {
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+      align-content: center;
+    }
+
+    .summary {
+      max-width: 760px;
+      color: var(--sds-text-secondary);
+      font-size: var(--sds-font-size-lg);
+      line-height: var(--sds-lh-lg);
+      margin: 0;
+    }
+
+    .score-panel {
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .score {
+      min-height: 96px;
+      padding: 14px;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-surface-row);
+      display: grid;
+      align-content: space-between;
+      gap: 10px;
+    }
+
+    .score strong {
+      display: block;
+      font-family: var(--sds-font-heading);
+      font-size: 1.65rem;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score span {
+      color: var(--sds-text-tertiary);
+      font-size: var(--sds-font-size-xs);
+      line-height: var(--sds-lh-sm);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-layer-2);
+      margin-bottom: 18px;
+      overflow-x: auto;
+    }
+
+    .tab {
+      border: 0;
+      border-radius: var(--sds-radius-sm);
+      background: transparent;
+      color: var(--sds-text-secondary);
+      min-height: 36px;
+      padding: 0 14px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .tab[aria-selected="true"] {
+      background: var(--sds-bg-interactive-primary);
+      color: var(--sds-text-contrast-primary);
+    }
+
+    .view {
+      display: none;
+    }
+
+    .view.active {
+      display: block;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.74fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 18px;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .flow {
+      display: grid;
+      gap: 12px;
+    }
+
+    .node {
+      width: 100%;
+      text-align: left;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-surface-row);
+      color: var(--sds-text-primary);
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .node:hover,
+    .node.active {
+      background: var(--sds-bg-surface-row-hover);
+      border-color: var(--sds-border-hover);
+    }
+
+    .node.active {
+      transform: translateX(2px);
+    }
+
+    .node-index {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--sds-radius-sm);
+      background: var(--sds-bg-layer-2);
+      color: var(--sds-text-interactive-primary);
+      font-family: var(--sds-font-code);
+      font-size: var(--sds-font-size-sm);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .node p,
+    .detail-panel p,
+    .case-copy {
+      margin: 0;
+      color: var(--sds-text-secondary);
+      font-size: var(--sds-font-size-sm);
+      line-height: var(--sds-lh-md);
+    }
+
+    .arrow {
+      color: var(--sds-text-tertiary);
+      font-family: var(--sds-font-code);
+    }
+
+    .detail-panel {
+      padding: 20px;
+      position: sticky;
+      top: 92px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .detail-kicker {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--sds-bg-surface-row-selected);
+      color: var(--sds-text-primary);
+      font-size: var(--sds-font-size-xs);
+      font-weight: 700;
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .status-card {
+      padding: 14px;
+      border-radius: var(--sds-radius-md);
+      border: 1px solid var(--sds-border-primary);
+      background: var(--sds-bg-surface-row);
+      min-height: 100px;
+    }
+
+    .status-card strong {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--sds-font-heading);
+      font-size: 1.45rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .case-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .case-button {
+      text-align: left;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-surface-row);
+      color: var(--sds-text-primary);
+      padding: 12px;
+      cursor: pointer;
+      display: grid;
+      gap: 6px;
+    }
+
+    .case-button.active {
+      border-color: var(--sds-border-hover);
+      background: var(--sds-bg-surface-row-hover);
+    }
+
+    .verdict {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: var(--sds-font-size-xs);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .verdict.block {
+      background: color-mix(in srgb, var(--sds-bg-status-error) 14%, transparent);
+      color: var(--sds-text-primary);
+    }
+
+    .verdict.warn {
+      background: color-mix(in srgb, var(--sds-border-focus) 22%, transparent);
+      color: var(--sds-text-primary);
+    }
+
+    .verdict.pass {
+      background: color-mix(in srgb, var(--sds-bg-status-success) 14%, transparent);
+      color: var(--sds-text-primary);
+    }
+
+    .loop {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .loop-step {
+      border: 1px solid var(--sds-border-primary);
+      background: var(--sds-bg-surface-row);
+      border-radius: var(--sds-radius-md);
+      padding: 16px;
+      min-height: 150px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .loop-step .node-index {
+      width: 32px;
+      height: 32px;
+    }
+
+    code {
+      font-family: var(--sds-font-code);
+      font-size: 0.9em;
+      color: var(--sds-text-primary);
+      background: var(--sds-bg-layer-2);
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-sm);
+      padding: 2px 5px;
+    }
+
+    .known {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.5fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .meter {
+      display: grid;
+      gap: 8px;
+      align-content: center;
+      padding: 18px;
+      border: 1px solid var(--sds-border-primary);
+      border-radius: var(--sds-radius-md);
+      background: var(--sds-bg-surface-row);
+    }
+
+    .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: var(--sds-bg-layer-2);
+      overflow: hidden;
+      border: 1px solid var(--sds-border-primary);
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 83%;
+      background: var(--sds-bg-interactive-primary);
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .two-col,
+      .known {
+        grid-template-columns: 1fr;
+      }
+
+      .status-row,
+      .loop,
+      .score-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-panel {
+        position: static;
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark">C</div>
+        <div>
+          <div class="eyebrow">Clementine DS</div>
+          <strong>Governance proof</strong>
+        </div>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v2m0 14v2M5.6 5.6 7 7m10 10 1.4 1.4M3 12h2m14 0h2M5.6 18.4 7 17M17 7l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Milestone: 2026-06-30</div>
+          <h1 id="page-title">A design system that can prove what an AI changed.</h1>
+          <p class="summary">Clementine is the product layer. agentic-spec is the inspector. The governance layer connects specs, tokens, code, rendered UI, and diagnosis into one evidence loop.</p>
+        </div>
+        <aside class="score-panel" aria-label="Proof scorecard">
+          <div class="panel-head">
+            <h2>Proof Snapshot</h2>
+            <span class="meta">Live run</span>
+          </div>
+          <div class="score-grid">
+            <div class="score"><strong>7/7</strong><span>seeded agent mistakes surfaced</span></div>
+            <div class="score"><strong>121</strong><span>component specs validate</span></div>
+            <div class="score"><strong>100%</strong><span>contract parity across specs</span></div>
+            <div class="score"><strong>114</strong><span>painted stories measured</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <nav class="tabs" aria-label="Views">
+        <button class="tab" type="button" data-view="product" aria-selected="true">Product</button>
+        <button class="tab" type="button" data-view="machinery" aria-selected="false">Machinery</button>
+        <button class="tab" type="button" data-view="benchmark" aria-selected="false">Benchmark</button>
+        <button class="tab" type="button" data-view="loop" aria-selected="false">Learning Loop</button>
+        <button class="tab" type="button" data-view="known" aria-selected="false">Known Holdout</button>
+      </nav>
+
+      <section class="view active" id="product">
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Product Layer</h2>
+              <span class="meta">What people use</span>
+            </div>
+            <div class="flow" data-detail-group="product">
+              <button class="node active" type="button" data-title="Component Library" data-kicker="React + Mantine" data-body="The visible kit: Button, Badge, Kbd, Divider, Fieldset, AI surfaces, and the rest of the 121-spec catalog.">
+                <span class="node-index">01</span><span><h3>Component Library</h3><p>Visible UI pieces for product work.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Storybook" data-kicker="Rendered sandbox" data-body="The place where components become inspectable browser output. Painted DOM parity reads this layer.">
+                <span class="node-index">02</span><span><h3>Storybook</h3><p>Browser-rendered component evidence.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Specs" data-kicker="Machine-readable contracts" data-body="Each component has a spec declaring parts, states, source files, allowed tokens, and checks.">
+                <span class="node-index">03</span><span><h3>Specs</h3><p>The agreement the AI must obey.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Token Cascade" data-kicker="Primitive -> semantic -> component" data-body="Component code consumes Tier 3 variables. The cascade check keeps every token path legal.">
+                <span class="node-index">04</span><span><h3>Token Cascade</h3><p>Official values with traceable intent.</p></span><span class="arrow">-&gt;</span>
+              </button>
+            </div>
+          </div>
+          <aside class="detail-panel" data-detail="product">
+            <span class="detail-kicker">React + Mantine</span>
+            <h2>Component Library</h2>
+            <p>The visible kit: Button, Badge, Kbd, Divider, Fieldset, AI surfaces, and the rest of the 121-spec catalog.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="machinery">
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Machinery Layer</h2>
+              <span class="meta">What proves it</span>
+            </div>
+            <div class="flow" data-detail-group="machinery">
+              <button class="node active" type="button" data-title="Validate" data-kicker="Structure" data-body="Reads specs and rejects broken contracts, bad statuses, missing token entries, and incomplete state claims.">
+                <span class="node-index">01</span><span><h3>Validate</h3><p>Checks the paperwork.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Cascade" data-kicker="Token law" data-body="Stops a component token from jumping straight to a primitive. Component -> semantic -> primitive stays one-way.">
+                <span class="node-index">02</span><span><h3>Cascade</h3><p>Enforces the token hierarchy.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Code Usage" data-kicker="Runtime contract" data-body="Finds code that uses a style value not declared in the component's closed token contract.">
+                <span class="node-index">03</span><span><h3>Code Usage</h3><p>Catches invented styles.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Self-report Checks" data-kicker="Honesty" data-body="Catches specs that claim tokens or states are complete while the actual files disagree.">
+                <span class="node-index">04</span><span><h3>Self-report Checks</h3><p>Stops green-check theater.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Parity" data-kicker="Contract equality" data-body="Compares frontmatter token_contract with tokens.json and reports 100% parity across 121 specs.">
+                <span class="node-index">05</span><span><h3>Parity</h3><p>Checks spec-to-token drift.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Painted DOM" data-kicker="Browser proof" data-body="Renders stories in a browser and compares actual CSS values against allowed token values.">
+                <span class="node-index">06</span><span><h3>Painted DOM</h3><p>Checks the screen, not only files.</p></span><span class="arrow">-&gt;</span>
+              </button>
+              <button class="node" type="button" data-title="Diagnose" data-kicker="Worklist" data-body="Turns validation and parity signals into a governed repair list, so recurring drift can become a rule.">
+                <span class="node-index">07</span><span><h3>Diagnose</h3><p>Converts evidence into next action.</p></span><span class="arrow">-&gt;</span>
+              </button>
+            </div>
+          </div>
+          <aside class="detail-panel" data-detail="machinery">
+            <span class="detail-kicker">Structure</span>
+            <h2>Validate</h2>
+            <p>Reads specs and rejects broken contracts, bad statuses, missing token entries, and incomplete state claims.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="benchmark">
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Seeded Mistake Simulation</h2>
+              <span class="meta">7 surfaced, 0 false positives</span>
+            </div>
+            <div class="case-list" data-case-list>
+              <button class="case-button active" type="button" data-verdict="PASS" data-kind="pass" data-title="Clean spec" data-body="The control case passes silently, proving the checker is not just flagging everything.">
+                <span class="verdict pass">PASS</span><strong>clean spec control</strong><span class="case-copy">No warning. No block.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="BLOCK" data-kind="block" data-title="Invented token" data-body="A component claims a token that does not exist. The contract catches missing-token-entry and lying-check.">
+                <span class="verdict block">BLOCK</span><strong>invents a token</strong><span class="case-copy">Missing token entry.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="WARN" data-kind="warn" data-title="Orphan token" data-body="A token exists in tokens.json but is not declared in the contract. The checker surfaces code/contract drift without blocking.">
+                <span class="verdict warn">WARN</span><strong>leaves an orphan token</strong><span class="case-copy">Contract drift surfaced.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="BLOCK" data-kind="block" data-title="Bad cascade" data-body="A component token binds directly to a primitive. The cascade rule blocks the shortcut.">
+                <span class="verdict block">BLOCK</span><strong>skips a tier</strong><span class="case-copy">Bad cascade direction.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="BLOCK" data-kind="block" data-title="Identity mismatch" data-body="A component is renamed in code but not in tokens. The identity mismatch is caught.">
+                <span class="verdict block">BLOCK</span><strong>renames code only</strong><span class="case-copy">Identity mismatch.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="BLOCK" data-kind="block" data-title="Lying self-report" data-body="The spec says the contract is valid while the files are broken. The honesty rule blocks it.">
+                <span class="verdict block">BLOCK</span><strong>self-reports valid falsely</strong><span class="case-copy">Lying check.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="WARN" data-kind="warn" data-title="Future verification date" data-body="A spec stamps a future last_verified date. The stale-spec branch surfaces it as a warning.">
+                <span class="verdict warn">WARN</span><strong>future verification date</strong><span class="case-copy">Future date warning.</span>
+              </button>
+              <button class="case-button" type="button" data-verdict="BLOCK" data-kind="block" data-title="Invalid status" data-body="A spec uses a status outside the allowed set. The validator blocks bad-status.">
+                <span class="verdict block">BLOCK</span><strong>invalid status value</strong><span class="case-copy">Bad status.</span>
+              </button>
+            </div>
+          </div>
+          <aside class="detail-panel" data-case-detail>
+            <span class="detail-kicker">PASS</span>
+            <h2>Clean spec</h2>
+            <p>The control case passes silently, proving the checker is not just flagging everything.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="loop">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Governed Learning Loop</h2>
+            <span class="meta">Watch -> diagnose -> fix -> learn</span>
+          </div>
+          <div class="loop">
+            <article class="loop-step">
+              <span class="node-index">01</span>
+              <h3>Watch</h3>
+              <p>Read specs, token files, component code, Storybook output, and browser CSS.</p>
+            </article>
+            <article class="loop-step">
+              <span class="node-index">02</span>
+              <h3>Diagnose</h3>
+              <p>Separate a real contract drift from noise and turn the signal into a named work item.</p>
+            </article>
+            <article class="loop-step">
+              <span class="node-index">03</span>
+              <h3>Fix</h3>
+              <p>Update the wrapper, tokens, spec, story, or rule in a scoped PR.</p>
+            </article>
+            <article class="loop-step">
+              <span class="node-index">04</span>
+              <h3>Learn</h3>
+              <p>Promote repeated mistakes into a reusable agentic-spec rule so the same miss is cheaper next time.</p>
+            </article>
+          </div>
+          <div class="status-row">
+            <div class="status-card"><span class="label">Rules</span><strong>5/5</strong><p>upstream checks landed</p></div>
+            <div class="status-card"><span class="label">Specs</span><strong>121</strong><p>validate cleanly</p></div>
+            <div class="status-card"><span class="label">Tokens</span><strong>628</strong><p>component-level bindings</p></div>
+            <div class="status-card"><span class="label">Behavior</span><strong>3</strong><p>hook specs valid</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="known">
+        <div class="panel known">
+          <div>
+            <div class="panel-head">
+              <h2>Known Holdout: Badge</h2>
+              <span class="meta">Parked deliberately</span>
+            </div>
+            <p>Badge still has one dark-mode painted-DOM miss in the default light variant: Mantine paints a blue alpha background instead of a declared <code>badge.*</code> component token. The component remains above threshold, but the exception is named so it does not disappear inside the average.</p>
+            <p style="margin-top: 12px;">Recommended next move: design a Clementine Badge intent API, then map neutral, success, warning, error, and risk variants through component tokens instead of passing arbitrary Mantine colors through.</p>
+          </div>
+          <div class="meter" aria-label="Badge parity">
+            <span class="label">Badge DOM parity</span>
+            <strong style="font-family: var(--sds-font-heading); font-size: 2rem; font-variant-numeric: tabular-nums;">83%</strong>
+            <div class="bar"><span></span></div>
+            <p>1 miss: dark background color on default light variant.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("clementine-proof-theme");
+    const preferredDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = savedTheme || (preferredDark ? "dark" : "light");
+
+    document.querySelector(".theme-toggle").addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      localStorage.setItem("clementine-proof-theme", root.dataset.theme);
+    });
+
+    const tabs = [...document.querySelectorAll(".tab")];
+    const views = [...document.querySelectorAll(".view")];
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.setAttribute("aria-selected", String(t === tab)));
+        views.forEach((view) => view.classList.toggle("active", view.id === tab.dataset.view));
+      });
+    });
+
+    document.querySelectorAll("[data-detail-group]").forEach((group) => {
+      const detail = document.querySelector(`[data-detail="${group.dataset.detailGroup}"]`);
+      group.querySelectorAll(".node").forEach((node) => {
+        node.addEventListener("click", () => {
+          group.querySelectorAll(".node").forEach((n) => n.classList.toggle("active", n === node));
+          detail.querySelector(".detail-kicker").textContent = node.dataset.kicker;
+          detail.querySelector("h2").textContent = node.dataset.title;
+          detail.querySelector("p").textContent = node.dataset.body;
+        });
+      });
+    });
+
+    const caseDetail = document.querySelector("[data-case-detail]");
+    document.querySelectorAll(".case-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".case-button").forEach((b) => b.classList.toggle("active", b === button));
+        const kicker = caseDetail.querySelector(".detail-kicker");
+        kicker.textContent = button.dataset.verdict;
+        kicker.className = `detail-kicker verdict ${button.dataset.kind}`;
+        caseDetail.querySelector("h2").textContent = button.dataset.title;
+        caseDetail.querySelector("p").textContent = button.dataset.body;
+      });
+    });
+  </script>
+</body>
+</html>
