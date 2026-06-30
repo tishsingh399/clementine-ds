@@ -1,0 +1,46 @@
+---
+behavior: use-example
+ds_version: clementine-ds@0.1.0 (YYYY-MM-DD verified)
+status: Draft
+last_verified: YYYY-MM-DD
+
+category: Behavior
+kind: hook
+source:
+  path: packages/ui/src/hooks/useExample.ts
+  export: useExample
+  result_type: UseExampleResult
+
+state_contract:
+  inputs: []
+  outputs: []
+  commands: []
+  transitions: []
+
+required_guards: []
+paired_components: []
+
+checks:
+  source_exists: false
+  export_exists: false
+  states_complete: false
+  reset_path: false
+  no_visual_tokens: true
+---
+
+# AGENTIC BEHAVIOR SPEC: USEEXAMPLE
+
+Behavior specs document non-visual interaction contracts: hooks, async state machines,
+and command surfaces that components consume. They do not declare `token_contract`.
+
+## Purpose
+
+Describe the behavior and when an agent should use it.
+
+## State Contract
+
+List inputs, returned state, commands, and allowed transitions.
+
+## Guards
+
+List cancellation, reset, retry, cleanup, race, and reduced-motion responsibilities.
