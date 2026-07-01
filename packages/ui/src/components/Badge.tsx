@@ -28,11 +28,26 @@ const colorIntentMap: Record<string, string> = {
   orange: 'warning',
 };
 
+const tokenBgByIntent: Record<string, string> = {
+  neutral: 'var(--cds-badge-bg-neutral)',
+  success: 'var(--cds-badge-bg-success)',
+  error: 'var(--cds-badge-bg-error)',
+  warning: 'var(--cds-badge-bg-warning)',
+};
+
+const tokenBgByRisk: Record<RiskLevel, string> = {
+  critical: 'var(--cds-badge-bg-risk-critical)',
+  high: 'var(--cds-badge-bg-risk-high)',
+  medium: 'var(--cds-badge-bg-risk-medium)',
+  low: 'var(--cds-badge-bg-risk-low)',
+};
+
 export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
-  ({ risk, color, variant, ...props }, ref) => {
+  ({ risk, color, variant, style, ...props }, ref) => {
     const resolvedColor = risk ? riskColorMap[risk] : color;
     const resolvedVariant = risk ? riskVariantMap[risk] : variant;
     const intent = risk ? undefined : colorIntentMap[resolvedColor ?? 'gray'] ?? 'neutral';
+    const backgroundColor = risk ? tokenBgByRisk[risk] : tokenBgByIntent[intent];
 
     return (
       <MantineBadge
@@ -41,6 +56,10 @@ export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
         variant={resolvedVariant}
         data-intent={intent}
         data-risk={risk}
+        style={[
+          { backgroundColor },
+          style,
+        ]}
         {...props}
       />
     );
