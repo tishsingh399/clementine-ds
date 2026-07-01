@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T02:16:21.364Z",
+  "generated_at": "2026-07-01T05:08:08.336Z",
   "repo": "tishsingh399/clementine-ds",
   "surfaces": {
     "storybook": "https://clementine-ds-storybook.vercel.app",
@@ -148,7 +148,7 @@
   "recent_changes": [
     {
       "hash": "787bd72b",
-      "when": "7 hours ago",
+      "when": "10 hours ago",
       "subject": "feat(theme): route Badge through component tokens (#48)"
     },
     {
@@ -225,12 +225,12 @@
   "recent_scans": [
     {
       "hash": "1ba8c481",
-      "when": "12 hours ago",
+      "when": "15 hours ago",
       "subject": "build(deps): bump actions/upload-artifact from 4 to 7 (#45)"
     },
     {
       "hash": "5fcfa902",
-      "when": "12 hours ago",
+      "when": "15 hours ago",
       "subject": "build(deps): bump actions/checkout from 4 to 7 (#32)"
     },
     {

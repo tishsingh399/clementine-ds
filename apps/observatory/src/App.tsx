@@ -90,7 +90,23 @@ const COMPONENT_PROOF = [
   'Validator catches drift before a broken component ships.',
 ];
 
-const CYCLE = ['Spec', 'Tokens', 'Theme', 'Component', 'Story', 'Figma'];
+const TOKEN_SWATCHES = {
+  primitives: [
+    ['ORANGE-400', 'color.orange.4', '#FB923C'],
+    ['ORANGE-500', 'color.orange.5', '#F97316'],
+    ['ORANGE-600', 'color.orange.6', '#EA580C'],
+    ['ORANGE-700', 'color.orange.7', '#C2410C'],
+    ['ORANGE-800', 'color.orange.8', '#9A3412'],
+  ],
+  atmosphere: [
+    ['BLUE-500', 'color.blue.5', '#3B82F6'],
+    ['BLUE-700', 'color.blue.7', '#1D4ED8'],
+  ],
+  accent: [
+    ['RED-500', 'color.red.5', '#EF4444'],
+    ['RED-600', 'color.red.6', '#DC2626'],
+  ],
+};
 
 const GOVERNANCE_SIGNALS = [
   {
@@ -292,7 +308,7 @@ export function App() {
     <main className="site-shell">
       <nav className="top-nav" aria-label="Primary">
         <a className="brand" href="#top" aria-label="Clementine home">
-          <span className="brand-glyph">C</span>
+          <span className="brand-glyph" aria-hidden="true" />
           <span>Clementine</span>
         </a>
         <div className="nav-links">
@@ -306,11 +322,17 @@ export function App() {
 
       <section id="top" className="hero-section">
         <div className="hero-copy">
-          <p className="eyebrow">Agentic design system / live contract proof</p>
-          <h1>Design systems built for agents to read before they write.</h1>
+          <h1 className="pixel-wordmark">
+            Clementine
+            <span className="clementine-dot" aria-hidden="true" />
+          </h1>
+          <div className="hero-rule">
+            <p className="eyebrow">Design system</p>
+            <span />
+          </div>
           <p className="hero-lede">
-            Clementine's unique selling point is the third artifact: every component ships with a closed,
-            machine-readable spec and token contract, so AI tools can validate work before drift reaches production.
+            A modern component library for enterprise products. Designed for speed, accessibility,
+            and agent-readable contracts.
           </p>
           <div className="hero-actions">
             <a className="action primary" href="#playground">Try the contract playground</a>
@@ -318,17 +340,53 @@ export function App() {
           </div>
         </div>
 
-        <div className="contract-orbit" aria-label="Clementine contract cycle">
-          <div className="orbit-core">
-            <span>closed</span>
-            <strong>contract</strong>
+        <div className="token-board" aria-label="Clementine design tokens">
+          <div className="token-group primitives">
+            <p className="board-label">Core primitives</p>
+            <div className="swatch-row wide">
+              {TOKEN_SWATCHES.primitives.map(([name, path, value]) => (
+                <article key={name} className="swatch-card">
+                  <span style={{ backgroundColor: value }} />
+                  <strong>{name}</strong>
+                  <small>{path}</small>
+                  <small>{value}</small>
+                </article>
+              ))}
+            </div>
           </div>
-          {CYCLE.map((step, index) => (
-            <span key={step} className={`orbit-node node-${index + 1}`}>
-              {step}
-            </span>
-          ))}
-          <div className="orbit-line" />
+
+          <div className="token-group atmosphere">
+            <p className="board-label">Atmosphere</p>
+            <div className="swatch-row">
+              {TOKEN_SWATCHES.atmosphere.map(([name, path, value]) => (
+                <article key={name} className="swatch-card">
+                  <span style={{ backgroundColor: value }} />
+                  <strong>{name}</strong>
+                  <small>{path}</small>
+                  <small>{value}</small>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="token-group accent">
+            <p className="board-label">Accent</p>
+            <div className="swatch-row">
+              {TOKEN_SWATCHES.accent.map(([name, path, value]) => (
+                <article key={name} className="swatch-card">
+                  <span style={{ backgroundColor: value }} />
+                  <strong>{name}</strong>
+                  <small>{path}</small>
+                  <small>{value}</small>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="live-component-ghost">
+            <p className="board-label">Live component</p>
+            <div className="ghost-mark" />
+          </div>
         </div>
       </section>
 
@@ -514,7 +572,7 @@ export function App() {
       </section>
 
       <footer className="site-footer">
-        <span>Generated from Clementine's repo contract.</span>
+        <span>Always here when agents need proof.</span>
         <div>
           <a href={data.surfaces.github}>GitHub</a>
           <a href={data.surfaces.figma}>Figma</a>
