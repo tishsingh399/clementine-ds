@@ -27,6 +27,7 @@ A small, opinionated React design system that ships with **machine-readable spec
 | 📓 Notion | [Clementine DS](https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f) | Architecture, Tokens, Components, Operations — the narrative version |
 | 🛠 CLI | [`agentic-spec`](https://github.com/tishsingh399/agentic-spec) | Validates specs, scaffolds new ones, bridges Figma |
 | ✅ Governance proof | [`MILESTONE.md`](./MILESTONE.md) · [`docs/governance-proof.html`](./docs/governance-proof.html) | Live milestone proof: 7/7 seeded agent mistakes surfaced, 121 specs validate, 100% contract parity, Badge closed through the diagnose → fix → verify loop |
+| 🖼 Article assets | [`docs/article/`](./docs/article) · [`docs/marketing/`](./docs/marketing) | Diagrams, captions, and launch copy for explaining the token path, check-honesty problem, quiet failure modes, and governance loop |
 | 📄 Long-form docs (GitHub) | [`docs/readme/`](./docs/readme) | 20 source pages — getting-started, architecture, tokens, components. GitHub renders with TOC + syntax highlighting. |
 | 📓 Long-form docs (Notion) | [Documentation tree](https://tinasingh.notion.site/Documentation-37ae72c9cf36815792daccfb95906b2d) | Same 20 pages published as Notion sub-pages under Clementine DS — readable on any device, no clone needed. |
 

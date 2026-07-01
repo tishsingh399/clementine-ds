@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 d1" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="t1">Where the component token arrived and where it did not</title>
+  <desc id="d1">A component token reaches Figma and the spec, but a dashed broken line shows it never reaches the running component that paints the button.</desc>
+  <style>
+    svg { --ink:#1a1a18; --muted:#6b6b66; --line:#d4d4cf; --panel:#fafaf8; --panelb:#e5e5e0; --ok:#16a34a; --brand:#f5631a; }
+    .lbl{ fill:var(--ink); font-size:15px; font-weight:600; }
+    .sub{ fill:var(--muted); font-size:12.5px; }
+    .cap{ fill:var(--muted); font-size:13px; }
+    .box{ fill:var(--panel); stroke:var(--panelb); stroke-width:1.5; }
+  </style>
+  <rect width="760" height="430" fill="#ffffff"/>
+  <rect class="box" x="40" y="170" width="190" height="86" rx="12"/>
+  <text class="lbl" x="60" y="205">component token</text>
+  <text class="sub" x="60" y="227">button.bg.default</text>
+  <text class="sub" x="60" y="244">a JSON entry</text>
+  <path d="M230 196 C 320 196, 360 96, 470 96" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="470,96 460,91 460,101" fill="#16a34a"/>
+  <path d="M230 213 C 330 213, 370 213, 470 213" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="470,213 460,208 460,218" fill="#16a34a"/>
+  <path d="M230 232 C 320 232, 360 332, 470 332" fill="none" stroke="#f5631a" stroke-width="2.5" stroke-dasharray="7 7"/>
+  <text x="300" y="312" class="cap" fill="#f5631a" font-weight="600">never read</text>
+  <rect class="box" x="470" y="64" width="240" height="64" rx="12"/>
+  <text class="lbl" x="490" y="92">Figma variable</text>
+  <text class="sub" x="490" y="112">drawn, bound, visible</text>
+  <circle cx="690" cy="96" r="9" fill="#16a34a"/><path d="M685 96 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
+  <rect class="box" x="470" y="181" width="240" height="64" rx="12"/>
+  <text class="lbl" x="490" y="209">spec contract</text>
+  <text class="sub" x="490" y="229">listed, validated, green</text>
+  <circle cx="690" cy="213" r="9" fill="#16a34a"/><path d="M685 213 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
+  <rect x="470" y="300" width="240" height="64" rx="12" fill="#fff" stroke="#f5631a" stroke-width="1.8"/>
+  <text class="lbl" x="490" y="328">running component</text>
+  <text class="sub" x="490" y="348">the pixel a user sees</text>
+  <circle cx="690" cy="332" r="9" fill="#f5631a"/><path d="M686 328 l8 8 M694 328 l-8 8" stroke="#fff" stroke-width="2"/>
+  <text class="cap" x="40" y="404">The token existed in every place I looked. It was missing from the only place that paints the button.</text>
+</svg>
