@@ -1,12 +1,9 @@
-# Vercel build only needs source + built Storybook output.
-# Skip everything that's not needed for Storybook.
+# Vercel builds Storybook and Observatory previews.
+# Keep agentic specs, patterns, and token sources available because the
+# Observatory scanner reads them at build time.
 
 .github/
 .git/
-docs/
-specs/
-_templates/
-guidelines/
 examples/
 
 # These are generated locally and re-generated at build

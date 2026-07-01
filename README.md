@@ -8,7 +8,7 @@
 [![CLI](https://img.shields.io/badge/CLI-agentic--spec-2563eb)](https://github.com/tishsingh399/agentic-spec)
 [![License](https://img.shields.io/badge/license-MIT-15803d)](./LICENSE)
 
-![Hero — spec → tokens → agent → code pipeline](./docs/hero.png)
+![Clementine Design System cover](./docs/clementine-cover.png)
 
 A small, opinionated React design system that ships with **machine-readable specs** for every component. Built so AI agents (Claude, Cursor, Copilot, MCP servers) can read the contract, validate against it, and extend the system without hallucinating tokens or breaking accessibility.
 

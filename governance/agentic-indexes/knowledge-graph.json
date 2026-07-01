@@ -1,0 +1,7091 @@
+{
+  "generated_from_last_verified": "2026-06-11T00:00:00.000Z",
+  "source": "specs/**/index.md",
+  "purpose": "Impact graph for agent planning. Generated from Clementine spec frontmatter.",
+  "totals": {
+    "components": 121,
+    "ai_ready": 113,
+    "draft": 8
+  },
+  "nodes": {
+    "accordion": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 96,
+      "spec_path": "specs/accordion/index.md",
+      "code_path": "packages/ui/src/components/Accordion.tsx",
+      "story_path": "apps/storybook/stories/Accordion.stories.tsx",
+      "token_file": "packages/tokens/src/components/accordion.json",
+      "tokens": [
+        "accordion.bg",
+        "accordion.bg-hover",
+        "accordion.border",
+        "accordion.fg.label",
+        "accordion.fg.content",
+        "accordion.fg.chevron",
+        "accordion.border-focus",
+        "accordion.radius"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "control",
+        "chevron",
+        "panel",
+        "label"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [
+        "progressive-disclosure",
+        "faq",
+        "settings-groups"
+      ],
+      "pages": [
+        "settings",
+        "help",
+        "onboarding"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "activity-feed": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 74,
+      "spec_path": "specs/activity-feed/index.md",
+      "code_path": "packages/ui/src/components/ActivityFeed.tsx",
+      "story_path": "apps/storybook/stories/ActivityFeed.stories.tsx",
+      "token_file": "packages/tokens/src/components/activity-feed.json",
+      "tokens": [
+        "activity-feed.actor",
+        "activity-feed.action",
+        "activity-feed.meta"
+      ],
+      "parts": [
+        "item",
+        "actor",
+        "action",
+        "meta"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "agent-card": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 76,
+      "spec_path": "specs/agent-card/index.md",
+      "code_path": "packages/ui/src/components/ai/AgentCard.tsx",
+      "story_path": "apps/storybook/stories/ai/AgentCard.stories.tsx",
+      "token_file": "packages/tokens/src/components/agent-card.json",
+      "tokens": [
+        "agent-card.bg",
+        "agent-card.border",
+        "agent-card.name",
+        "agent-card.meta"
+      ],
+      "parts": [
+        "root",
+        "name",
+        "capabilities",
+        "owner"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "agent-picker": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/agent-picker/index.md",
+      "code_path": "packages/ui/src/components/ai/AgentPicker.tsx",
+      "story_path": "apps/storybook/stories/ai/AgentPicker.stories.tsx",
+      "token_file": "packages/tokens/src/components/agent-picker.json",
+      "tokens": [
+        "agent-picker.bg",
+        "agent-picker.border",
+        "agent-picker.fg",
+        "agent-picker.icon"
+      ],
+      "parts": [
+        "trigger",
+        "dropdown"
+      ],
+      "states": [
+        "default",
+        "open",
+        "disabled"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "agent-status": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 85,
+      "spec_path": "specs/agent-status/index.md",
+      "code_path": "packages/ui/src/components/ai/AgentStatus.tsx",
+      "story_path": "apps/storybook/stories/ai/AgentStatus.stories.tsx",
+      "token_file": "packages/tokens/src/components/agent-status.json",
+      "tokens": [
+        "agent-status.idle",
+        "agent-status.busy",
+        "agent-status.waiting",
+        "agent-status.done",
+        "agent-status.error"
+      ],
+      "parts": [
+        "indicator",
+        "label"
+      ],
+      "states": [
+        "idle",
+        "thinking",
+        "tool",
+        "waiting",
+        "done",
+        "error",
+        "refused"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "trust-copy"
+      ]
+    },
+    "alert": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 91,
+      "spec_path": "specs/alert/index.md",
+      "code_path": "packages/ui/src/components/Alert.tsx",
+      "story_path": "apps/storybook/stories/Alert.stories.tsx",
+      "token_file": "packages/tokens/src/components/alert.json",
+      "tokens": [
+        "alert.bg.info",
+        "alert.bg.success",
+        "alert.bg.warning",
+        "alert.bg.error",
+        "alert.border.info",
+        "alert.border.success",
+        "alert.border.warning",
+        "alert.border.error",
+        "alert.fg.title",
+        "alert.fg.body",
+        "alert.icon.info",
+        "alert.icon.success",
+        "alert.icon.warning",
+        "alert.icon.error",
+        "alert.radius"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "title",
+        "body",
+        "close",
+        "actions"
+      ],
+      "states": [
+        "visible",
+        "dismissing"
+      ],
+      "patterns": [
+        "form-field",
+        "page-header"
+      ],
+      "pages": [
+        "login",
+        "signup",
+        "settings",
+        "billing"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "anchor": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 76,
+      "spec_path": "specs/anchor/index.md",
+      "code_path": "packages/ui/src/components/Anchor.tsx",
+      "story_path": "apps/storybook/stories/Anchor.stories.tsx",
+      "token_file": "packages/tokens/src/components/anchor.json",
+      "tokens": [
+        "anchor.fg",
+        "anchor.fg-hover"
+      ],
+      "parts": [
+        "root",
+        "label"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "visited"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "artifact-frame": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/artifact-frame/index.md",
+      "code_path": "packages/ui/src/components/ai/ArtifactFrame.tsx",
+      "story_path": "apps/storybook/stories/ai/ArtifactFrame.stories.tsx",
+      "token_file": "packages/tokens/src/components/artifact-frame.json",
+      "tokens": [
+        "artifact.bg",
+        "artifact.header-bg",
+        "artifact.border",
+        "artifact.title",
+        "artifact.kind",
+        "artifact.radius"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "body"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "attachment-pill": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/attachment-pill/index.md",
+      "code_path": "packages/ui/src/components/ai/AttachmentPill.tsx",
+      "story_path": "apps/storybook/stories/ai/AttachmentPill.stories.tsx",
+      "token_file": "packages/tokens/src/components/attachment-pill.json",
+      "tokens": [
+        "attachment-pill.bg",
+        "attachment-pill.border",
+        "attachment-pill.fg",
+        "attachment-pill.meta",
+        "attachment-pill.radius"
+      ],
+      "parts": [
+        "root",
+        "name",
+        "meta",
+        "remove"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "audit-log-viewer": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/audit-log-viewer/index.md",
+      "code_path": "packages/ui/src/components/AuditLogViewer.tsx",
+      "story_path": "apps/storybook/stories/AuditLogViewer.stories.tsx",
+      "token_file": "packages/tokens/src/components/audit-log-viewer.json",
+      "tokens": [
+        "audit-log-viewer.header-bg",
+        "audit-log-viewer.row-striped",
+        "audit-log-viewer.fg",
+        "audit-log-viewer.meta",
+        "audit-log-viewer.border"
+      ],
+      "parts": [
+        "header",
+        "row",
+        "actor",
+        "target"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "autocomplete": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 96,
+      "spec_path": "specs/autocomplete/index.md",
+      "code_path": "packages/ui/src/components/Autocomplete.tsx",
+      "story_path": "apps/storybook/stories/Autocomplete.stories.tsx",
+      "token_file": "packages/tokens/src/components/autocomplete.json",
+      "tokens": [
+        "autocomplete.bg",
+        "autocomplete.border",
+        "autocomplete.border-focus",
+        "autocomplete.fg",
+        "autocomplete.placeholder",
+        "autocomplete.popover-bg",
+        "autocomplete.option-bg-hover",
+        "autocomplete.radius"
+      ],
+      "parts": [
+        "input",
+        "popover",
+        "option",
+        "label",
+        "error"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "typing",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms",
+        "search",
+        "assignee-picker"
+      ],
+      "pages": [
+        "settings",
+        "list-view"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "avatar": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/avatar/index.md",
+      "code_path": "packages/ui/src/components/Avatar.tsx",
+      "story_path": "apps/storybook/stories/Avatar.stories.tsx",
+      "token_file": "packages/tokens/src/components/avatar.json",
+      "tokens": [
+        "avatar.bg",
+        "avatar.fg",
+        "avatar.border",
+        "avatar.ring",
+        "avatar.radius"
+      ],
+      "parts": [
+        "root",
+        "image",
+        "placeholder",
+        "group",
+        "group-overflow"
+      ],
+      "states": [
+        "default",
+        "focus"
+      ],
+      "patterns": [
+        "data-display",
+        "global-header",
+        "comment-thread"
+      ],
+      "pages": [
+        "dashboard",
+        "list-view",
+        "profile"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "badge": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 83,
+      "spec_path": "specs/badge/index.md",
+      "code_path": "packages/ui/src/components/Badge.tsx",
+      "story_path": "apps/storybook/stories/Badge.stories.tsx",
+      "token_file": "packages/tokens/src/components/badge.json",
+      "tokens": [
+        "badge.bg.neutral",
+        "badge.bg.success",
+        "badge.bg.error",
+        "badge.bg.warning",
+        "badge.bg.risk-critical",
+        "badge.bg.risk-high",
+        "badge.bg.risk-medium",
+        "badge.bg.risk-low",
+        "badge.fg.default",
+        "badge.radius"
+      ],
+      "parts": [
+        "root",
+        "label"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "status-list",
+        "page-header"
+      ],
+      "pages": [],
+      "review_lenses": []
+    },
+    "breadcrumbs": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/breadcrumbs/index.md",
+      "code_path": "packages/ui/src/components/Breadcrumbs.tsx",
+      "story_path": "apps/storybook/stories/Breadcrumbs.stories.tsx",
+      "token_file": "packages/tokens/src/components/breadcrumbs.json",
+      "tokens": [
+        "breadcrumbs.fg",
+        "breadcrumbs.fg-current",
+        "breadcrumbs.separator"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "current",
+        "separator"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "current"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "bulk-action-bar": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 72,
+      "spec_path": "specs/bulk-action-bar/index.md",
+      "code_path": "packages/ui/src/components/BulkActionBar.tsx",
+      "story_path": "apps/storybook/stories/BulkActionBar.stories.tsx",
+      "token_file": "packages/tokens/src/components/bulk-action-bar.json",
+      "tokens": [
+        "bulk-action-bar.bg",
+        "bulk-action-bar.border",
+        "bulk-action-bar.fg"
+      ],
+      "parts": [
+        "root",
+        "count",
+        "actions"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "button": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 100,
+      "spec_path": "specs/button/index.md",
+      "code_path": "packages/ui/src/components/Button.tsx",
+      "story_path": "apps/storybook/stories/Button.stories.tsx",
+      "token_file": "packages/tokens/src/components/button.json",
+      "tokens": [
+        "button.bg.default",
+        "button.bg.hover",
+        "button.bg.active",
+        "button.bg.disabled",
+        "button.bg-destructive.default",
+        "button.bg-destructive.hover",
+        "button.bg-outline.default",
+        "button.bg-outline.hover",
+        "button.fg.on-filled",
+        "button.fg.on-outline",
+        "button.fg.disabled",
+        "button.border.default",
+        "button.border.hover",
+        "button.border.focus",
+        "button.radius"
+      ],
+      "parts": [
+        "root",
+        "icon-leading",
+        "label",
+        "icon-trailing",
+        "spinner"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "active",
+        "disabled",
+        "loading"
+      ],
+      "patterns": [
+        "form",
+        "action-bar",
+        "modal-footer",
+        "toolbar"
+      ],
+      "pages": [
+        "dashboard",
+        "settings",
+        "list-view"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "button-group": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 65,
+      "spec_path": "specs/button-group/index.md",
+      "code_path": "packages/ui/src/components/ButtonGroup.tsx",
+      "story_path": "apps/storybook/stories/ButtonGroup.stories.tsx",
+      "token_file": "packages/tokens/src/components/button-group.json",
+      "tokens": [
+        "button-group.divider"
+      ],
+      "parts": [
+        "root",
+        "button"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "calendar": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 88,
+      "spec_path": "specs/calendar/index.md",
+      "code_path": "packages/ui/src/components/Calendar.tsx",
+      "story_path": "apps/storybook/stories/Calendar.stories.tsx",
+      "token_file": "packages/tokens/src/components/calendar.json",
+      "tokens": [
+        "calendar.bg",
+        "calendar.fg",
+        "calendar.header-fg",
+        "calendar.weekday-fg",
+        "calendar.day-today-border",
+        "calendar.day-muted-fg",
+        "calendar.ring"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "weekday",
+        "day",
+        "day-today"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "card": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 88,
+      "spec_path": "specs/card/index.md",
+      "code_path": "packages/ui/src/components/Card.tsx",
+      "story_path": "apps/storybook/stories/Card.stories.tsx",
+      "token_file": "packages/tokens/src/components/card.json",
+      "tokens": [
+        "card.bg",
+        "card.bg-subtle",
+        "card.border",
+        "card.fg.title",
+        "card.fg.body",
+        "card.radius",
+        "card.shadow"
+      ],
+      "parts": [
+        "root",
+        "section",
+        "title",
+        "body"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "patterns": [
+        "data-display",
+        "empty-state",
+        "dashboard-tile"
+      ],
+      "pages": [
+        "dashboard",
+        "settings",
+        "list-view"
+      ],
+      "review_lenses": []
+    },
+    "carousel": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 91,
+      "spec_path": "specs/carousel/index.md",
+      "code_path": "packages/ui/src/components/Carousel.tsx",
+      "story_path": "apps/storybook/stories/Carousel.stories.tsx",
+      "token_file": "packages/tokens/src/components/carousel.json",
+      "tokens": [
+        "carousel.control-bg",
+        "carousel.control-fg",
+        "carousel.control-border",
+        "carousel.indicator",
+        "carousel.indicator-active",
+        "carousel.ring",
+        "carousel.radius"
+      ],
+      "parts": [
+        "viewport",
+        "slide",
+        "control",
+        "indicator"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "dragging"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "character-counter": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 73,
+      "spec_path": "specs/character-counter/index.md",
+      "code_path": "packages/ui/src/components/CharacterCounter.tsx",
+      "story_path": "apps/storybook/stories/CharacterCounter.stories.tsx",
+      "token_file": "packages/tokens/src/components/character-counter.json",
+      "tokens": [
+        "character-counter.fg",
+        "character-counter.over"
+      ],
+      "parts": [
+        "root",
+        "over"
+      ],
+      "states": [
+        "default",
+        "near-limit",
+        "over-limit"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "chart": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 94,
+      "spec_path": "specs/chart/index.md",
+      "code_path": "packages/ui/src/components/Chart.tsx",
+      "story_path": "apps/storybook/stories/Chart.stories.tsx",
+      "token_file": "packages/tokens/src/components/chart.json",
+      "tokens": [
+        "chart.grid",
+        "chart.axis-fg",
+        "chart.label-fg",
+        "chart.tooltip-bg",
+        "chart.tooltip-fg",
+        "chart.series-1",
+        "chart.series-2",
+        "chart.series-3",
+        "chart.series-4",
+        "chart.series-5"
+      ],
+      "parts": [
+        "plot",
+        "grid",
+        "axis",
+        "series",
+        "tooltip",
+        "legend"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "empty"
+      ],
+      "patterns": [
+        "cost-latency-transparency"
+      ],
+      "pages": [
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "checkbox": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 57,
+      "spec_path": "specs/checkbox/index.md",
+      "code_path": "packages/ui/src/components/Checkbox.tsx",
+      "story_path": "apps/storybook/stories/Checkbox.stories.tsx",
+      "token_file": "packages/tokens/src/components/checkbox.json",
+      "tokens": [
+        "checkbox.bg.unchecked",
+        "checkbox.bg.checked",
+        "checkbox.bg.indeterminate",
+        "checkbox.bg.disabled",
+        "checkbox.check",
+        "checkbox.border.default",
+        "checkbox.border.focus",
+        "checkbox.border.error",
+        "checkbox.fg.label",
+        "checkbox.fg.description",
+        "checkbox.fg.error",
+        "checkbox.radius"
+      ],
+      "parts": [
+        "root",
+        "box",
+        "check",
+        "label",
+        "description"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "checked",
+        "indeterminate",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "form",
+        "filter-list",
+        "settings-row"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "chip": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 92,
+      "spec_path": "specs/chip/index.md",
+      "code_path": "packages/ui/src/components/Chip.tsx",
+      "story_path": "apps/storybook/stories/Chip.stories.tsx",
+      "token_file": "packages/tokens/src/components/chip.json",
+      "tokens": [
+        "chip.bg",
+        "chip.bg-checked",
+        "chip.fg",
+        "chip.fg-checked",
+        "chip.border",
+        "chip.border-checked",
+        "chip.radius"
+      ],
+      "parts": [
+        "root",
+        "label",
+        "group"
+      ],
+      "states": [
+        "unchecked",
+        "checked",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "citation-chip": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/citation-chip/index.md",
+      "code_path": "packages/ui/src/components/ai/CitationChip.tsx",
+      "story_path": "apps/storybook/stories/ai/CitationChip.stories.tsx",
+      "token_file": "packages/tokens/src/components/citation-chip.json",
+      "tokens": [
+        "citation.bg",
+        "citation.fg",
+        "citation.border",
+        "citation.radius"
+      ],
+      "parts": [
+        "chip",
+        "tooltip"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "code": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/code/index.md",
+      "code_path": "packages/ui/src/components/Code.tsx",
+      "story_path": "apps/storybook/stories/Code.stories.tsx",
+      "token_file": "packages/tokens/src/components/code.json",
+      "tokens": [
+        "code.bg",
+        "code.fg",
+        "code.radius"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "inline",
+        "block"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": []
+    },
+    "code-block": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 83,
+      "spec_path": "specs/code-block/index.md",
+      "code_path": "packages/ui/src/components/ai/CodeBlock.tsx",
+      "story_path": "apps/storybook/stories/ai/CodeBlock.stories.tsx",
+      "token_file": "packages/tokens/src/components/code-block.json",
+      "tokens": [
+        "code-block.bg",
+        "code-block.header-bg",
+        "code-block.border",
+        "code-block.fg",
+        "code-block.filename",
+        "code-block.radius"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "body",
+        "copy"
+      ],
+      "states": [
+        "default",
+        "copied"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "color-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/color-input/index.md",
+      "code_path": "packages/ui/src/components/ColorInput.tsx",
+      "story_path": "apps/storybook/stories/ColorInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/color-input.json",
+      "tokens": [
+        "color-input.bg",
+        "color-input.border",
+        "color-input.border-focus",
+        "color-input.fg",
+        "color-input.radius"
+      ],
+      "parts": [
+        "root",
+        "swatch",
+        "field"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "comment-thread": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 69,
+      "spec_path": "specs/comment-thread/index.md",
+      "code_path": "packages/ui/src/components/CommentThread.tsx",
+      "story_path": "apps/storybook/stories/CommentThread.stories.tsx",
+      "token_file": "packages/tokens/src/components/comment-thread.json",
+      "tokens": [
+        "comment-thread.author",
+        "comment-thread.body",
+        "comment-thread.meta"
+      ],
+      "parts": [
+        "comment",
+        "composer"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "composer": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 94,
+      "spec_path": "specs/composer/index.md",
+      "code_path": "packages/ui/src/components/ai/Composer.tsx",
+      "story_path": "apps/storybook/stories/ai/Composer.stories.tsx",
+      "token_file": "packages/tokens/src/components/composer.json",
+      "tokens": [
+        "composer.bg",
+        "composer.border",
+        "composer.border-focus",
+        "composer.fg",
+        "composer.placeholder",
+        "composer.send-bg",
+        "composer.stop-bg",
+        "composer.radius"
+      ],
+      "parts": [
+        "root",
+        "textarea",
+        "send"
+      ],
+      "states": [
+        "idle",
+        "focus",
+        "typing",
+        "busy",
+        "disabled"
+      ],
+      "patterns": [
+        "chat",
+        "empty-state"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "trust-copy"
+      ]
+    },
+    "confidence-meter": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/confidence-meter/index.md",
+      "code_path": "packages/ui/src/components/ai/ConfidenceMeter.tsx",
+      "story_path": "apps/storybook/stories/ai/ConfidenceMeter.stories.tsx",
+      "token_file": "packages/tokens/src/components/confidence-meter.json",
+      "tokens": [
+        "confidence-meter.track",
+        "confidence-meter.high",
+        "confidence-meter.medium",
+        "confidence-meter.low",
+        "confidence-meter.label"
+      ],
+      "parts": [
+        "root",
+        "bar",
+        "label"
+      ],
+      "states": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "context-meter": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/context-meter/index.md",
+      "code_path": "packages/ui/src/components/ai/ContextMeter.tsx",
+      "story_path": "apps/storybook/stories/ai/ContextMeter.stories.tsx",
+      "token_file": "packages/tokens/src/components/context-meter.json",
+      "tokens": [
+        "context-meter.track",
+        "context-meter.fill",
+        "context-meter.fill-warning",
+        "context-meter.label"
+      ],
+      "parts": [
+        "track",
+        "fill",
+        "label"
+      ],
+      "states": [
+        "default",
+        "warning"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "conversation-thread": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 67,
+      "spec_path": "specs/conversation-thread/index.md",
+      "code_path": "packages/ui/src/components/ai/ConversationThread.tsx",
+      "story_path": "apps/storybook/stories/ai/ConversationThread.stories.tsx",
+      "token_file": "packages/tokens/src/components/conversation-thread.json",
+      "tokens": [
+        "conversation-thread.bg",
+        "conversation-thread.divider"
+      ],
+      "parts": [
+        "root",
+        "divider"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "cost-meter": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/cost-meter/index.md",
+      "code_path": "packages/ui/src/components/ai/CostMeter.tsx",
+      "story_path": "apps/storybook/stories/ai/CostMeter.stories.tsx",
+      "token_file": "packages/tokens/src/components/cost-meter.json",
+      "tokens": [
+        "cost-meter.label",
+        "cost-meter.value"
+      ],
+      "parts": [
+        "root",
+        "label",
+        "value"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "date-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 98,
+      "spec_path": "specs/date-input/index.md",
+      "code_path": "packages/ui/src/components/DateInput.tsx",
+      "story_path": "apps/storybook/stories/DateInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/date-input.json",
+      "tokens": [
+        "date-input.bg",
+        "date-input.fg",
+        "date-input.placeholder",
+        "date-input.border",
+        "date-input.border-focus",
+        "date-input.border-error",
+        "date-input.ring",
+        "date-input.popover-bg",
+        "date-input.radius"
+      ],
+      "parts": [
+        "label",
+        "input",
+        "popover",
+        "helper"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "open",
+        "filled",
+        "error",
+        "disabled"
+      ],
+      "patterns": [
+        "forms",
+        "form-field"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "date-picker": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 100,
+      "spec_path": "specs/date-picker/index.md",
+      "code_path": "packages/ui/src/components/DatePicker.tsx",
+      "story_path": "apps/storybook/stories/DatePicker.stories.tsx",
+      "token_file": "packages/tokens/src/components/date-picker.json",
+      "tokens": [
+        "date-picker.bg",
+        "date-picker.fg",
+        "date-picker.header-fg",
+        "date-picker.weekday-fg",
+        "date-picker.day-selected-bg",
+        "date-picker.day-selected-fg",
+        "date-picker.day-in-range-bg",
+        "date-picker.day-today-border",
+        "date-picker.day-muted-fg",
+        "date-picker.ring",
+        "date-picker.radius"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "weekday",
+        "day",
+        "day-selected",
+        "day-today"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "range",
+        "disabled"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "description-list": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/description-list/index.md",
+      "code_path": "packages/ui/src/components/DescriptionList.tsx",
+      "story_path": "apps/storybook/stories/DescriptionList.stories.tsx",
+      "token_file": "packages/tokens/src/components/description-list.json",
+      "tokens": [
+        "description-list.term",
+        "description-list.detail"
+      ],
+      "parts": [
+        "root",
+        "term",
+        "detail"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": []
+    },
+    "diff-view": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/diff-view/index.md",
+      "code_path": "packages/ui/src/components/ai/DiffView.tsx",
+      "story_path": "apps/storybook/stories/ai/DiffView.stories.tsx",
+      "token_file": "packages/tokens/src/components/diff-view.json",
+      "tokens": [
+        "diff-view.added-bg",
+        "diff-view.removed-bg",
+        "diff-view.fg",
+        "diff-view.gutter"
+      ],
+      "parts": [
+        "line",
+        "footer"
+      ],
+      "states": [
+        "added",
+        "removed",
+        "context"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "disclosure-badge": {
+      "type": "Trust",
+      "status": "AI-Ready",
+      "trust_health": 69,
+      "spec_path": "specs/disclosure-badge/index.md",
+      "code_path": "packages/ui/src/components/trust/DisclosureBadge.tsx",
+      "story_path": "apps/storybook/stories/trust/DisclosureBadge.stories.tsx",
+      "token_file": "packages/tokens/src/components/disclosure-badge.json",
+      "tokens": [
+        "disclosure.bg",
+        "disclosure.fg",
+        "disclosure.border",
+        "disclosure.radius"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat",
+        "data-display"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": []
+    },
+    "divider": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/divider/index.md",
+      "code_path": "packages/ui/src/components/Divider.tsx",
+      "story_path": "apps/storybook/stories/Divider.stories.tsx",
+      "token_file": "packages/tokens/src/components/divider.json",
+      "tokens": [
+        "divider.line",
+        "divider.label"
+      ],
+      "parts": [
+        "line",
+        "label"
+      ],
+      "states": [
+        "default",
+        "labelled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "drawer": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 89,
+      "spec_path": "specs/drawer/index.md",
+      "code_path": "packages/ui/src/components/Drawer.tsx",
+      "story_path": "apps/storybook/stories/Drawer.stories.tsx",
+      "token_file": "packages/tokens/src/components/drawer.json",
+      "tokens": [
+        "drawer.bg",
+        "drawer.overlay",
+        "drawer.border",
+        "drawer.fg.title",
+        "drawer.fg.body",
+        "drawer.radius"
+      ],
+      "parts": [
+        "overlay",
+        "panel",
+        "header",
+        "title",
+        "body",
+        "close"
+      ],
+      "states": [
+        "closed",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "patterns": [
+        "filters",
+        "detail-panel",
+        "create-edit"
+      ],
+      "pages": [
+        "list-view",
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "empty-state": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/empty-state/index.md",
+      "code_path": "packages/ui/src/components/EmptyState.tsx",
+      "story_path": "apps/storybook/stories/EmptyState.stories.tsx",
+      "token_file": "packages/tokens/src/components/empty-state.json",
+      "tokens": [
+        "empty-state.bg",
+        "empty-state.icon",
+        "empty-state.title",
+        "empty-state.description",
+        "empty-state.radius"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "title",
+        "description",
+        "action"
+      ],
+      "states": [
+        "default",
+        "with-action"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "error-state": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/error-state/index.md",
+      "code_path": "packages/ui/src/components/ErrorState.tsx",
+      "story_path": "apps/storybook/stories/ErrorState.stories.tsx",
+      "token_file": "packages/tokens/src/components/error-state.json",
+      "tokens": [
+        "error-state.bg",
+        "error-state.icon",
+        "error-state.title",
+        "error-state.description",
+        "error-state.radius"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "title",
+        "description",
+        "action"
+      ],
+      "states": [
+        "default",
+        "with-retry"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "export-menu": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/export-menu/index.md",
+      "code_path": "packages/ui/src/components/ExportMenu.tsx",
+      "story_path": "apps/storybook/stories/ExportMenu.stories.tsx",
+      "token_file": "packages/tokens/src/components/export-menu.json",
+      "tokens": [
+        "export-menu.trigger-fg",
+        "export-menu.item-fg"
+      ],
+      "parts": [
+        "trigger",
+        "dropdown"
+      ],
+      "states": [
+        "closed",
+        "open"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "fab": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/fab/index.md",
+      "code_path": "packages/ui/src/components/Fab.tsx",
+      "story_path": "apps/storybook/stories/Fab.stories.tsx",
+      "token_file": "packages/tokens/src/components/fab.json",
+      "tokens": [
+        "fab.bg",
+        "fab.fg",
+        "fab.shadow",
+        "fab.radius"
+      ],
+      "parts": [
+        "root",
+        "icon"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "faceted-filter": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 75,
+      "spec_path": "specs/faceted-filter/index.md",
+      "code_path": "packages/ui/src/components/FacetedFilter.tsx",
+      "story_path": "apps/storybook/stories/FacetedFilter.stories.tsx",
+      "token_file": "packages/tokens/src/components/faceted-filter.json",
+      "tokens": [
+        "faceted-filter.group-label",
+        "faceted-filter.fg",
+        "faceted-filter.count"
+      ],
+      "parts": [
+        "group",
+        "option",
+        "count"
+      ],
+      "states": [
+        "default",
+        "checked"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "feedback-control": {
+      "type": "Feedback",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/feedback-control/index.md",
+      "code_path": "packages/ui/src/components/feedback/FeedbackControl.tsx",
+      "story_path": "apps/storybook/stories/feedback/FeedbackControl.stories.tsx",
+      "token_file": "packages/tokens/src/components/feedback-control.json",
+      "tokens": [
+        "feedback-control.idle",
+        "feedback-control.positive",
+        "feedback-control.negative"
+      ],
+      "parts": [
+        "root",
+        "positive",
+        "negative"
+      ],
+      "states": [
+        "idle",
+        "positive",
+        "negative"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "field-label": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/field-label/index.md",
+      "code_path": "packages/ui/src/components/FieldLabel.tsx",
+      "story_path": "apps/storybook/stories/FieldLabel.stories.tsx",
+      "token_file": "packages/tokens/src/components/field-label.json",
+      "tokens": [
+        "field-label.fg",
+        "field-label.required",
+        "field-label.optional"
+      ],
+      "parts": [
+        "root",
+        "required",
+        "optional"
+      ],
+      "states": [
+        "default",
+        "required",
+        "optional"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "fieldset": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/fieldset/index.md",
+      "code_path": "packages/ui/src/components/Fieldset.tsx",
+      "story_path": "apps/storybook/stories/Fieldset.stories.tsx",
+      "token_file": "packages/tokens/src/components/fieldset.json",
+      "tokens": [
+        "fieldset.bg",
+        "fieldset.border",
+        "fieldset.legend",
+        "fieldset.radius"
+      ],
+      "parts": [
+        "root",
+        "legend",
+        "body"
+      ],
+      "states": [
+        "default",
+        "disabled"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "file-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 87,
+      "spec_path": "specs/file-input/index.md",
+      "code_path": "packages/ui/src/components/FileInput.tsx",
+      "story_path": "apps/storybook/stories/FileInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/file-input.json",
+      "tokens": [
+        "file-input.bg",
+        "file-input.border",
+        "file-input.border-focus",
+        "file-input.fg",
+        "file-input.placeholder",
+        "file-input.radius"
+      ],
+      "parts": [
+        "root",
+        "value",
+        "label"
+      ],
+      "states": [
+        "empty",
+        "selected",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "helper-text": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 63,
+      "spec_path": "specs/helper-text/index.md",
+      "code_path": "packages/ui/src/components/HelperText.tsx",
+      "story_path": "apps/storybook/stories/HelperText.stories.tsx",
+      "token_file": "packages/tokens/src/components/helper-text.json",
+      "tokens": [
+        "helper-text.fg"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "hitl-gate": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 90,
+      "spec_path": "specs/hitl-gate/index.md",
+      "code_path": "packages/ui/src/components/ai/HITLGate.tsx",
+      "story_path": "apps/storybook/stories/ai/HITLGate.stories.tsx",
+      "token_file": "packages/tokens/src/components/hitl-gate.json",
+      "tokens": [
+        "hitl.bg",
+        "hitl.border",
+        "hitl.title",
+        "hitl.body",
+        "hitl.approve-bg",
+        "hitl.approve-destructive-bg",
+        "hitl.deny-bg",
+        "hitl.radius"
+      ],
+      "parts": [
+        "root",
+        "title",
+        "preview",
+        "actions"
+      ],
+      "states": [
+        "pending",
+        "approved",
+        "denied"
+      ],
+      "patterns": [
+        "tool-use",
+        "wizard"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "hover-card": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 74,
+      "spec_path": "specs/hover-card/index.md",
+      "code_path": "packages/ui/src/components/HoverCard.tsx",
+      "story_path": "apps/storybook/stories/HoverCard.stories.tsx",
+      "token_file": "packages/tokens/src/components/hover-card.json",
+      "tokens": [
+        "hover-card.bg",
+        "hover-card.border",
+        "hover-card.shadow",
+        "hover-card.radius"
+      ],
+      "parts": [
+        "target",
+        "dropdown"
+      ],
+      "states": [
+        "closed",
+        "open"
+      ],
+      "patterns": [
+        "data-display"
+      ],
+      "pages": [],
+      "review_lenses": []
+    },
+    "icon-button": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/icon-button/index.md",
+      "code_path": "packages/ui/src/components/IconButton.tsx",
+      "story_path": "apps/storybook/stories/IconButton.stories.tsx",
+      "token_file": "packages/tokens/src/components/icon-button.json",
+      "tokens": [
+        "icon-button.fg",
+        "icon-button.bg-hover",
+        "icon-button.border-focus"
+      ],
+      "parts": [
+        "root",
+        "icon"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "image": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 73,
+      "spec_path": "specs/image/index.md",
+      "code_path": "packages/ui/src/components/Image.tsx",
+      "story_path": "apps/storybook/stories/Image.stories.tsx",
+      "token_file": "packages/tokens/src/components/image.json",
+      "tokens": [
+        "image.bg",
+        "image.radius"
+      ],
+      "parts": [
+        "root",
+        "fallback"
+      ],
+      "states": [
+        "loading",
+        "loaded",
+        "error"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "indicator": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 73,
+      "spec_path": "specs/indicator/index.md",
+      "code_path": "packages/ui/src/components/Indicator.tsx",
+      "story_path": "apps/storybook/stories/Indicator.stories.tsx",
+      "token_file": "packages/tokens/src/components/indicator.json",
+      "tokens": [
+        "indicator.bg",
+        "indicator.fg"
+      ],
+      "parts": [
+        "root",
+        "dot"
+      ],
+      "states": [
+        "dot",
+        "count",
+        "processing"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "inline-message": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 85,
+      "spec_path": "specs/inline-message/index.md",
+      "code_path": "packages/ui/src/components/InlineMessage.tsx",
+      "story_path": "apps/storybook/stories/InlineMessage.stories.tsx",
+      "token_file": "packages/tokens/src/components/inline-message.json",
+      "tokens": [
+        "inline-message.fg",
+        "inline-message.info",
+        "inline-message.success",
+        "inline-message.warning",
+        "inline-message.error"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "text"
+      ],
+      "states": [
+        "info",
+        "success",
+        "warning",
+        "error"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "edge-states"
+      ]
+    },
+    "kbd": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 69,
+      "spec_path": "specs/kbd/index.md",
+      "code_path": "packages/ui/src/components/Kbd.tsx",
+      "story_path": "apps/storybook/stories/Kbd.stories.tsx",
+      "token_file": "packages/tokens/src/components/kbd.json",
+      "tokens": [
+        "kbd.bg",
+        "kbd.fg",
+        "kbd.border",
+        "kbd.radius"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": []
+    },
+    "list": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/list/index.md",
+      "code_path": "packages/ui/src/components/List.tsx",
+      "story_path": "apps/storybook/stories/List.stories.tsx",
+      "token_file": "packages/tokens/src/components/list.json",
+      "tokens": [
+        "list.fg",
+        "list.marker"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "marker"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "loader": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 63,
+      "spec_path": "specs/loader/index.md",
+      "code_path": "packages/ui/src/components/Loader.tsx",
+      "story_path": "apps/storybook/stories/Loader.stories.tsx",
+      "token_file": "packages/tokens/src/components/loader.json",
+      "tokens": [
+        "loader.color"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "spinning"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "loading-state": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 72,
+      "spec_path": "specs/loading-state/index.md",
+      "code_path": "packages/ui/src/components/LoadingState.tsx",
+      "story_path": "apps/storybook/stories/LoadingState.stories.tsx",
+      "token_file": "packages/tokens/src/components/loading-state.json",
+      "tokens": [
+        "loading-state.spinner",
+        "loading-state.label",
+        "loading-state.bg"
+      ],
+      "parts": [
+        "root",
+        "spinner",
+        "label"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "maintenance-banner": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/maintenance-banner/index.md",
+      "code_path": "packages/ui/src/components/MaintenanceBanner.tsx",
+      "story_path": "apps/storybook/stories/MaintenanceBanner.stories.tsx",
+      "token_file": "packages/tokens/src/components/maintenance-banner.json",
+      "tokens": [
+        "maintenance-banner.info-bg",
+        "maintenance-banner.degraded-bg",
+        "maintenance-banner.down-bg",
+        "maintenance-banner.fg"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "message"
+      ],
+      "states": [
+        "info",
+        "degraded",
+        "down"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "memory-panel": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 74,
+      "spec_path": "specs/memory-panel/index.md",
+      "code_path": "packages/ui/src/components/ai/MemoryPanel.tsx",
+      "story_path": "apps/storybook/stories/ai/MemoryPanel.stories.tsx",
+      "token_file": "packages/tokens/src/components/memory-panel.json",
+      "tokens": [
+        "memory-panel.bg",
+        "memory-panel.border",
+        "memory-panel.fg",
+        "memory-panel.remove"
+      ],
+      "parts": [
+        "root",
+        "fact",
+        "remove"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "mention": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 65,
+      "spec_path": "specs/mention/index.md",
+      "code_path": "packages/ui/src/components/Mention.tsx",
+      "story_path": "apps/storybook/stories/Mention.stories.tsx",
+      "token_file": "packages/tokens/src/components/mention.json",
+      "tokens": [
+        "mention.bg",
+        "mention.fg"
+      ],
+      "parts": [
+        "root"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "menu": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 98,
+      "spec_path": "specs/menu/index.md",
+      "code_path": "packages/ui/src/components/Menu.tsx",
+      "story_path": "apps/storybook/stories/Menu.stories.tsx",
+      "token_file": "packages/tokens/src/components/menu.json",
+      "tokens": [
+        "menu.bg",
+        "menu.border",
+        "menu.shadow",
+        "menu.radius",
+        "menu.item.fg",
+        "menu.item.fg-danger",
+        "menu.item.bg-hover",
+        "menu.label",
+        "menu.divider"
+      ],
+      "parts": [
+        "root",
+        "target",
+        "dropdown",
+        "item",
+        "label",
+        "divider"
+      ],
+      "states": [
+        "closed",
+        "open",
+        "item-hover",
+        "item-focus",
+        "item-disabled"
+      ],
+      "patterns": [
+        "action-bar",
+        "row-actions",
+        "global-header"
+      ],
+      "pages": [
+        "dashboard",
+        "list-view",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "message": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 93,
+      "spec_path": "specs/message/index.md",
+      "code_path": "packages/ui/src/components/ai/Message.tsx",
+      "story_path": "apps/storybook/stories/ai/Message.stories.tsx",
+      "token_file": "packages/tokens/src/components/message.json",
+      "tokens": [
+        "message.user.bg",
+        "message.user.fg",
+        "message.assistant.bg",
+        "message.assistant.fg",
+        "message.system.bg",
+        "message.system.fg",
+        "message.meta",
+        "message.radius"
+      ],
+      "parts": [
+        "root",
+        "avatar",
+        "bubble",
+        "meta"
+      ],
+      "states": [
+        "sending",
+        "streaming",
+        "complete",
+        "error"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "trust-copy"
+      ]
+    },
+    "message-actions": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/message-actions/index.md",
+      "code_path": "packages/ui/src/components/ai/MessageActions.tsx",
+      "story_path": "apps/storybook/stories/ai/MessageActions.stories.tsx",
+      "token_file": "packages/tokens/src/components/message-actions.json",
+      "tokens": [
+        "message-actions.fg",
+        "message-actions.fg-hover"
+      ],
+      "parts": [
+        "root",
+        "action"
+      ],
+      "states": [
+        "default",
+        "hover"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "modal": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 50,
+      "spec_path": "specs/modal/index.md",
+      "code_path": "packages/ui/src/components/Modal.tsx",
+      "story_path": "apps/storybook/stories/Modal.stories.tsx",
+      "token_file": "packages/tokens/src/components/modal.json",
+      "tokens": [
+        "modal.bg",
+        "modal.overlay",
+        "modal.fg.title",
+        "modal.fg.body",
+        "modal.fg.secondary",
+        "modal.border.divider",
+        "modal.ring",
+        "modal.radius"
+      ],
+      "parts": [
+        "overlay",
+        "dialog",
+        "header",
+        "body",
+        "footer"
+      ],
+      "states": [
+        "closed",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "patterns": [
+        "confirm-dialog",
+        "edit-form",
+        "image-viewer"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "model-selector": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 79,
+      "spec_path": "specs/model-selector/index.md",
+      "code_path": "packages/ui/src/components/ai/ModelSelector.tsx",
+      "story_path": "apps/storybook/stories/ai/ModelSelector.stories.tsx",
+      "token_file": "packages/tokens/src/components/model-selector.json",
+      "tokens": [
+        "model-selector.bg",
+        "model-selector.border",
+        "model-selector.fg",
+        "model-selector.icon",
+        "model-selector.radius"
+      ],
+      "parts": [
+        "trigger",
+        "dropdown"
+      ],
+      "states": [
+        "default",
+        "open",
+        "disabled"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "multi-select": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 98,
+      "spec_path": "specs/multi-select/index.md",
+      "code_path": "packages/ui/src/components/MultiSelect.tsx",
+      "story_path": "apps/storybook/stories/MultiSelect.stories.tsx",
+      "token_file": "packages/tokens/src/components/multi-select.json",
+      "tokens": [
+        "multi-select.bg",
+        "multi-select.border",
+        "multi-select.border-focus",
+        "multi-select.fg",
+        "multi-select.placeholder",
+        "multi-select.pill-bg",
+        "multi-select.pill-fg",
+        "multi-select.option-bg-hover",
+        "multi-select.radius"
+      ],
+      "parts": [
+        "root",
+        "pill",
+        "popover",
+        "option"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "notification": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 89,
+      "spec_path": "specs/notification/index.md",
+      "code_path": "packages/ui/src/components/Notification.tsx",
+      "story_path": "apps/storybook/stories/Notification.stories.tsx",
+      "token_file": "packages/tokens/src/components/notification.json",
+      "tokens": [
+        "notification.bg",
+        "notification.border",
+        "notification.fg-title",
+        "notification.fg-body",
+        "notification.accent",
+        "notification.radius"
+      ],
+      "parts": [
+        "root",
+        "accent",
+        "title",
+        "body",
+        "close"
+      ],
+      "states": [
+        "info",
+        "success",
+        "error",
+        "loading"
+      ],
+      "patterns": [
+        "data-display"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "notification-center": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/notification-center/index.md",
+      "code_path": "packages/ui/src/components/NotificationCenter.tsx",
+      "story_path": "apps/storybook/stories/NotificationCenter.stories.tsx",
+      "token_file": "packages/tokens/src/components/notification-center.json",
+      "tokens": [
+        "notification-center.bg",
+        "notification-center.unread-bg",
+        "notification-center.title",
+        "notification-center.body",
+        "notification-center.dot",
+        "notification-center.meta"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "unread"
+      ],
+      "states": [
+        "read",
+        "unread"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "number-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 87,
+      "spec_path": "specs/number-input/index.md",
+      "code_path": "packages/ui/src/components/NumberInput.tsx",
+      "story_path": "apps/storybook/stories/NumberInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/number-input.json",
+      "tokens": [
+        "number-input.bg",
+        "number-input.border",
+        "number-input.border-focus",
+        "number-input.fg",
+        "number-input.placeholder",
+        "number-input.radius"
+      ],
+      "parts": [
+        "root",
+        "stepper",
+        "label"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "pagination": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 94,
+      "spec_path": "specs/pagination/index.md",
+      "code_path": "packages/ui/src/components/Pagination.tsx",
+      "story_path": "apps/storybook/stories/Pagination.stories.tsx",
+      "token_file": "packages/tokens/src/components/pagination.json",
+      "tokens": [
+        "pagination.item.fg",
+        "pagination.item.bg-active",
+        "pagination.item.fg-active",
+        "pagination.item.bg-hover",
+        "pagination.border",
+        "pagination.border-focus",
+        "pagination.radius"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "active",
+        "ellipsis",
+        "control"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [
+        "data-table",
+        "search-results",
+        "list-view"
+      ],
+      "pages": [
+        "list-view",
+        "audit-log"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "password-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 87,
+      "spec_path": "specs/password-input/index.md",
+      "code_path": "packages/ui/src/components/PasswordInput.tsx",
+      "story_path": "apps/storybook/stories/PasswordInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/password-input.json",
+      "tokens": [
+        "password-input.bg",
+        "password-input.border",
+        "password-input.border-focus",
+        "password-input.fg",
+        "password-input.placeholder",
+        "password-input.radius"
+      ],
+      "parts": [
+        "root",
+        "toggle",
+        "label"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "permission-request": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/permission-request/index.md",
+      "code_path": "packages/ui/src/components/ai/PermissionRequest.tsx",
+      "story_path": "apps/storybook/stories/ai/PermissionRequest.stories.tsx",
+      "token_file": "packages/tokens/src/components/permission-request.json",
+      "tokens": [
+        "permission-request.bg",
+        "permission-request.border",
+        "permission-request.title",
+        "permission-request.scope-bg"
+      ],
+      "parts": [
+        "root",
+        "scope",
+        "actions"
+      ],
+      "states": [
+        "pending",
+        "allowed",
+        "denied"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "pill": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/pill/index.md",
+      "code_path": "packages/ui/src/components/Pill.tsx",
+      "story_path": "apps/storybook/stories/Pill.stories.tsx",
+      "token_file": "packages/tokens/src/components/pill.json",
+      "tokens": [
+        "pill.bg",
+        "pill.fg",
+        "pill.remove",
+        "pill.radius"
+      ],
+      "parts": [
+        "root",
+        "label",
+        "remove"
+      ],
+      "states": [
+        "default",
+        "removable"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "pin-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/pin-input/index.md",
+      "code_path": "packages/ui/src/components/PinInput.tsx",
+      "story_path": "apps/storybook/stories/PinInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/pin-input.json",
+      "tokens": [
+        "pin-input.bg",
+        "pin-input.border",
+        "pin-input.border-focus",
+        "pin-input.fg",
+        "pin-input.radius"
+      ],
+      "parts": [
+        "root",
+        "cell"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "filled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "plan-steps": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 85,
+      "spec_path": "specs/plan-steps/index.md",
+      "code_path": "packages/ui/src/components/ai/PlanSteps.tsx",
+      "story_path": "apps/storybook/stories/ai/PlanSteps.stories.tsx",
+      "token_file": "packages/tokens/src/components/plan-steps.json",
+      "tokens": [
+        "plan-steps.pending",
+        "plan-steps.active",
+        "plan-steps.done",
+        "plan-steps.error",
+        "plan-steps.fg"
+      ],
+      "parts": [
+        "root",
+        "step",
+        "marker"
+      ],
+      "states": [
+        "pending",
+        "active",
+        "done",
+        "error"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "trust-copy"
+      ]
+    },
+    "popover": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/popover/index.md",
+      "code_path": "packages/ui/src/components/Popover.tsx",
+      "story_path": "apps/storybook/stories/Popover.stories.tsx",
+      "token_file": "packages/tokens/src/components/popover.json",
+      "tokens": [
+        "popover.bg",
+        "popover.border",
+        "popover.shadow",
+        "popover.radius"
+      ],
+      "parts": [
+        "target",
+        "dropdown",
+        "root"
+      ],
+      "states": [
+        "closed",
+        "open"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "presence-indicator": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/presence-indicator/index.md",
+      "code_path": "packages/ui/src/components/PresenceIndicator.tsx",
+      "story_path": "apps/storybook/stories/PresenceIndicator.stories.tsx",
+      "token_file": "packages/tokens/src/components/presence-indicator.json",
+      "tokens": [
+        "presence-indicator.online",
+        "presence-indicator.away",
+        "presence-indicator.busy",
+        "presence-indicator.offline",
+        "presence-indicator.ring"
+      ],
+      "parts": [
+        "avatar",
+        "dot"
+      ],
+      "states": [
+        "online",
+        "away",
+        "busy",
+        "offline"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "progress": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/progress/index.md",
+      "code_path": "packages/ui/src/components/Progress.tsx",
+      "story_path": "apps/storybook/stories/Progress.stories.tsx",
+      "token_file": "packages/tokens/src/components/progress.json",
+      "tokens": [
+        "progress.track",
+        "progress.bar",
+        "progress.bar-success",
+        "progress.bar-warning",
+        "progress.bar-error",
+        "progress.radius"
+      ],
+      "parts": [
+        "track",
+        "bar",
+        "label"
+      ],
+      "states": [
+        "determinate",
+        "complete"
+      ],
+      "patterns": [
+        "upload",
+        "import",
+        "quota"
+      ],
+      "pages": [
+        "settings",
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "progress-circle": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/progress-circle/index.md",
+      "code_path": "packages/ui/src/components/ProgressCircle.tsx",
+      "story_path": "apps/storybook/stories/ProgressCircle.stories.tsx",
+      "token_file": "packages/tokens/src/components/progress-circle.json",
+      "tokens": [
+        "progress-circle.track",
+        "progress-circle.indicator",
+        "progress-circle.label"
+      ],
+      "parts": [
+        "root",
+        "track",
+        "indicator",
+        "label"
+      ],
+      "states": [
+        0,
+        50,
+        100
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "prompt-suggestions": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/prompt-suggestions/index.md",
+      "code_path": "packages/ui/src/components/ai/PromptSuggestions.tsx",
+      "story_path": "apps/storybook/stories/ai/PromptSuggestions.stories.tsx",
+      "token_file": "packages/tokens/src/components/prompt-suggestions.json",
+      "tokens": [
+        "prompt-suggestions.bg",
+        "prompt-suggestions.border",
+        "prompt-suggestions.fg",
+        "prompt-suggestions.radius"
+      ],
+      "parts": [
+        "root",
+        "chip"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "radio": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 51,
+      "spec_path": "specs/radio/index.md",
+      "code_path": "packages/ui/src/components/Radio.tsx",
+      "story_path": "apps/storybook/stories/Radio.stories.tsx",
+      "token_file": "packages/tokens/src/components/radio.json",
+      "tokens": [
+        "radio.bg.unchecked",
+        "radio.bg.disabled",
+        "radio.dot.checked",
+        "radio.border.default",
+        "radio.border.checked",
+        "radio.border.focus",
+        "radio.fg.label"
+      ],
+      "parts": [
+        "group",
+        "root",
+        "circle",
+        "dot",
+        "label"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "checked",
+        "disabled"
+      ],
+      "patterns": [
+        "form",
+        "segmented-choice"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "rating": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 76,
+      "spec_path": "specs/rating/index.md",
+      "code_path": "packages/ui/src/components/Rating.tsx",
+      "story_path": "apps/storybook/stories/Rating.stories.tsx",
+      "token_file": "packages/tokens/src/components/rating.json",
+      "tokens": [
+        "rating.symbol-empty",
+        "rating.symbol-filled"
+      ],
+      "parts": [
+        "root",
+        "symbol"
+      ],
+      "states": [
+        "empty",
+        "hover",
+        "selected",
+        "readonly"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "rbac-matrix": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/rbac-matrix/index.md",
+      "code_path": "packages/ui/src/components/RbacMatrix.tsx",
+      "story_path": "apps/storybook/stories/RbacMatrix.stories.tsx",
+      "token_file": "packages/tokens/src/components/rbac-matrix.json",
+      "tokens": [
+        "rbac-matrix.header-bg",
+        "rbac-matrix.border",
+        "rbac-matrix.granted",
+        "rbac-matrix.fg"
+      ],
+      "parts": [
+        "header",
+        "row",
+        "cell"
+      ],
+      "states": [
+        "granted",
+        "denied"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "reasoning-trace": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/reasoning-trace/index.md",
+      "code_path": "packages/ui/src/components/ai/ReasoningTrace.tsx",
+      "story_path": "apps/storybook/stories/ai/ReasoningTrace.stories.tsx",
+      "token_file": "packages/tokens/src/components/reasoning-trace.json",
+      "tokens": [
+        "reasoning.bg",
+        "reasoning.fg",
+        "reasoning.label",
+        "reasoning.rule",
+        "reasoning.radius"
+      ],
+      "parts": [
+        "root",
+        "toggle",
+        "body"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "streaming"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "refusal-state": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 74,
+      "spec_path": "specs/refusal-state/index.md",
+      "code_path": "packages/ui/src/components/ai/RefusalState.tsx",
+      "story_path": "apps/storybook/stories/ai/RefusalState.stories.tsx",
+      "token_file": "packages/tokens/src/components/refusal-state.json",
+      "tokens": [
+        "refusal-state.bg",
+        "refusal-state.border",
+        "refusal-state.fg",
+        "refusal-state.suggestion"
+      ],
+      "parts": [
+        "root",
+        "reason",
+        "suggestion"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "role-picker": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 73,
+      "spec_path": "specs/role-picker/index.md",
+      "code_path": "packages/ui/src/components/RolePicker.tsx",
+      "story_path": "apps/storybook/stories/RolePicker.stories.tsx",
+      "token_file": "packages/tokens/src/components/role-picker.json",
+      "tokens": [
+        "role-picker.pill-bg",
+        "role-picker.fg"
+      ],
+      "parts": [
+        "root",
+        "pill"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "saved-views": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 73,
+      "spec_path": "specs/saved-views/index.md",
+      "code_path": "packages/ui/src/components/SavedViews.tsx",
+      "story_path": "apps/storybook/stories/SavedViews.stories.tsx",
+      "token_file": "packages/tokens/src/components/saved-views.json",
+      "tokens": [
+        "saved-views.active-fg",
+        "saved-views.fg"
+      ],
+      "parts": [
+        "view",
+        "active",
+        "save"
+      ],
+      "states": [
+        "default",
+        "active"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "search-field": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 89,
+      "spec_path": "specs/search-field/index.md",
+      "code_path": "packages/ui/src/components/SearchField.tsx",
+      "story_path": "apps/storybook/stories/SearchField.stories.tsx",
+      "token_file": "packages/tokens/src/components/search-field.json",
+      "tokens": [
+        "search-field.bg",
+        "search-field.border",
+        "search-field.border-focus",
+        "search-field.fg",
+        "search-field.placeholder",
+        "search-field.icon",
+        "search-field.radius"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "clear"
+      ],
+      "states": [
+        "empty",
+        "typing",
+        "focus",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "segmented-control": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/segmented-control/index.md",
+      "code_path": "packages/ui/src/components/SegmentedControl.tsx",
+      "story_path": "apps/storybook/stories/SegmentedControl.stories.tsx",
+      "token_file": "packages/tokens/src/components/segmented-control.json",
+      "tokens": [
+        "segmented-control.bg",
+        "segmented-control.bg-active",
+        "segmented-control.fg",
+        "segmented-control.fg-active",
+        "segmented-control.radius"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "indicator"
+      ],
+      "states": [
+        "default",
+        "active",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "select": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 57,
+      "spec_path": "specs/select/index.md",
+      "code_path": "packages/ui/src/components/Select.tsx",
+      "story_path": "apps/storybook/stories/Select.stories.tsx",
+      "token_file": "packages/tokens/src/components/select.json",
+      "tokens": [
+        "select.bg.trigger",
+        "select.bg.trigger-disabled",
+        "select.bg.popover",
+        "select.option.bg-default",
+        "select.option.bg-hover",
+        "select.option.bg-selected",
+        "select.option.fg-default",
+        "select.option.fg-selected",
+        "select.fg.value",
+        "select.fg.placeholder",
+        "select.border.default",
+        "select.border.focus",
+        "select.border.error",
+        "select.ring",
+        "select.radius"
+      ],
+      "parts": [
+        "root",
+        "value",
+        "caret",
+        "popover",
+        "option",
+        "empty-state"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "open",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "form",
+        "filter-bar",
+        "table-row-editor"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "session-device-list": {
+      "type": "Enterprise",
+      "status": "AI-Ready",
+      "trust_health": 79,
+      "spec_path": "specs/session-device-list/index.md",
+      "code_path": "packages/ui/src/components/SessionDeviceList.tsx",
+      "story_path": "apps/storybook/stories/SessionDeviceList.stories.tsx",
+      "token_file": "packages/tokens/src/components/session-device-list.json",
+      "tokens": [
+        "session-device-list.bg",
+        "session-device-list.border",
+        "session-device-list.fg",
+        "session-device-list.meta",
+        "session-device-list.revoke"
+      ],
+      "parts": [
+        "item",
+        "current",
+        "revoke"
+      ],
+      "states": [
+        "default",
+        "current"
+      ],
+      "patterns": [
+        "data-table",
+        "faceted-search"
+      ],
+      "pages": [
+        "console",
+        "settings"
+      ],
+      "review_lenses": []
+    },
+    "session-list": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 78,
+      "spec_path": "specs/session-list/index.md",
+      "code_path": "packages/ui/src/components/ai/SessionList.tsx",
+      "story_path": "apps/storybook/stories/ai/SessionList.stories.tsx",
+      "token_file": "packages/tokens/src/components/session-list.json",
+      "tokens": [
+        "session-list.item-bg-hover",
+        "session-list.fg",
+        "session-list.meta"
+      ],
+      "parts": [
+        "item",
+        "title",
+        "meta"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "active"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "skeleton": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 72,
+      "spec_path": "specs/skeleton/index.md",
+      "code_path": "packages/ui/src/components/Skeleton.tsx",
+      "story_path": "apps/storybook/stories/Skeleton.stories.tsx",
+      "token_file": "packages/tokens/src/components/skeleton.json",
+      "tokens": [
+        "skeleton.base",
+        "skeleton.highlight",
+        "skeleton.duration",
+        "skeleton.radius"
+      ],
+      "parts": [
+        "block"
+      ],
+      "states": [
+        "loading",
+        "loaded"
+      ],
+      "patterns": [
+        "loading",
+        "data-display",
+        "dashboard"
+      ],
+      "pages": [
+        "dashboard",
+        "list-view",
+        "profile"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "slider": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 89,
+      "spec_path": "specs/slider/index.md",
+      "code_path": "packages/ui/src/components/Slider.tsx",
+      "story_path": "apps/storybook/stories/Slider.stories.tsx",
+      "token_file": "packages/tokens/src/components/slider.json",
+      "tokens": [
+        "slider.track",
+        "slider.track-filled",
+        "slider.thumb",
+        "slider.thumb-border",
+        "slider.mark",
+        "slider.label"
+      ],
+      "parts": [
+        "track",
+        "filled",
+        "thumb",
+        "mark",
+        "label"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "dragging",
+        "disabled"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "sources-panel": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 82,
+      "spec_path": "specs/sources-panel/index.md",
+      "code_path": "packages/ui/src/components/ai/SourcesPanel.tsx",
+      "story_path": "apps/storybook/stories/ai/SourcesPanel.stories.tsx",
+      "token_file": "packages/tokens/src/components/sources-panel.json",
+      "tokens": [
+        "sources-panel.bg",
+        "sources-panel.border",
+        "sources-panel.title",
+        "sources-panel.item-fg",
+        "sources-panel.item-meta",
+        "sources-panel.index-bg",
+        "sources-panel.radius"
+      ],
+      "parts": [
+        "root",
+        "title",
+        "item",
+        "index"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "trust-copy"
+      ]
+    },
+    "sparkline": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 71,
+      "spec_path": "specs/sparkline/index.md",
+      "code_path": "packages/ui/src/components/Sparkline.tsx",
+      "story_path": "apps/storybook/stories/Sparkline.stories.tsx",
+      "token_file": "packages/tokens/src/components/sparkline.json",
+      "tokens": [
+        "sparkline.stroke",
+        "sparkline.fill",
+        "sparkline.stroke-trend-up",
+        "sparkline.stroke-trend-down"
+      ],
+      "parts": [
+        "line",
+        "fill"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "split-button": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 77,
+      "spec_path": "specs/split-button/index.md",
+      "code_path": "packages/ui/src/components/SplitButton.tsx",
+      "story_path": "apps/storybook/stories/SplitButton.stories.tsx",
+      "token_file": "packages/tokens/src/components/split-button.json",
+      "tokens": [
+        "split-button.bg",
+        "split-button.fg",
+        "split-button.divider",
+        "split-button.radius"
+      ],
+      "parts": [
+        "primary",
+        "trigger",
+        "menu"
+      ],
+      "states": [
+        "default",
+        "open"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "spoiler": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 68,
+      "spec_path": "specs/spoiler/index.md",
+      "code_path": "packages/ui/src/components/Spoiler.tsx",
+      "story_path": "apps/storybook/stories/Spoiler.stories.tsx",
+      "token_file": "packages/tokens/src/components/spoiler.json",
+      "tokens": [
+        "spoiler.control"
+      ],
+      "parts": [
+        "root",
+        "control"
+      ],
+      "states": [
+        "collapsed",
+        "expanded"
+      ],
+      "patterns": [
+        "data-display"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "stat": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/stat/index.md",
+      "code_path": "packages/ui/src/components/Stat.tsx",
+      "story_path": "apps/storybook/stories/Stat.stories.tsx",
+      "token_file": "packages/tokens/src/components/stat.json",
+      "tokens": [
+        "stat.value",
+        "stat.label",
+        "stat.delta-up",
+        "stat.delta-down"
+      ],
+      "parts": [
+        "label",
+        "value",
+        "delta"
+      ],
+      "states": [
+        "default",
+        "up",
+        "down"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": []
+    },
+    "status-dot": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 85,
+      "spec_path": "specs/status-dot/index.md",
+      "code_path": "packages/ui/src/components/StatusDot.tsx",
+      "story_path": "apps/storybook/stories/StatusDot.stories.tsx",
+      "token_file": "packages/tokens/src/components/status-dot.json",
+      "tokens": [
+        "status-dot.online",
+        "status-dot.offline",
+        "status-dot.busy",
+        "status-dot.away",
+        "status-dot.label"
+      ],
+      "parts": [
+        "dot",
+        "label"
+      ],
+      "states": [
+        "online",
+        "offline",
+        "busy",
+        "away",
+        "neutral"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "edge-states"
+      ]
+    },
+    "stepper": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 91,
+      "spec_path": "specs/stepper/index.md",
+      "code_path": "packages/ui/src/components/Stepper.tsx",
+      "story_path": "apps/storybook/stories/Stepper.stories.tsx",
+      "token_file": "packages/tokens/src/components/stepper.json",
+      "tokens": [
+        "stepper.bg-completed",
+        "stepper.bg-active",
+        "stepper.bg-pending",
+        "stepper.fg-active",
+        "stepper.fg-pending",
+        "stepper.separator",
+        "stepper.border-focus"
+      ],
+      "parts": [
+        "root",
+        "step",
+        "completed",
+        "separator"
+      ],
+      "states": [
+        "pending",
+        "active",
+        "completed",
+        "disabled"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "streaming-text": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 72,
+      "spec_path": "specs/streaming-text/index.md",
+      "code_path": "packages/ui/src/components/ai/StreamingText.tsx",
+      "story_path": "apps/storybook/stories/ai/StreamingText.stories.tsx",
+      "token_file": "packages/tokens/src/components/streaming-text.json",
+      "tokens": [
+        "streaming.fg",
+        "streaming.caret",
+        "streaming.duration"
+      ],
+      "parts": [
+        "text",
+        "caret"
+      ],
+      "states": [
+        "streaming",
+        "done"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "success-state": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 81,
+      "spec_path": "specs/success-state/index.md",
+      "code_path": "packages/ui/src/components/SuccessState.tsx",
+      "story_path": "apps/storybook/stories/SuccessState.stories.tsx",
+      "token_file": "packages/tokens/src/components/success-state.json",
+      "tokens": [
+        "success-state.bg",
+        "success-state.icon",
+        "success-state.title",
+        "success-state.description",
+        "success-state.radius"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "title",
+        "description",
+        "action"
+      ],
+      "states": [
+        "default",
+        "with-action"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "switch": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 49,
+      "spec_path": "specs/switch/index.md",
+      "code_path": "packages/ui/src/components/Switch.tsx",
+      "story_path": "apps/storybook/stories/Switch.stories.tsx",
+      "token_file": "packages/tokens/src/components/switch.json",
+      "tokens": [
+        "switch.track.on",
+        "switch.track.off",
+        "switch.track.disabled",
+        "switch.thumb.default",
+        "switch.border.focus",
+        "switch.fg.label"
+      ],
+      "parts": [
+        "root",
+        "track",
+        "thumb",
+        "label"
+      ],
+      "states": [
+        "off",
+        "on",
+        "focus",
+        "hover",
+        "disabled"
+      ],
+      "patterns": [
+        "settings-row",
+        "feature-flag"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "table": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 88,
+      "spec_path": "specs/table/index.md",
+      "code_path": "packages/ui/src/components/Table.tsx",
+      "story_path": "apps/storybook/stories/Table.stories.tsx",
+      "token_file": "packages/tokens/src/components/table.json",
+      "tokens": [
+        "table.header-bg",
+        "table.header-fg",
+        "table.row-bg",
+        "table.row-bg-striped",
+        "table.row-bg-hover",
+        "table.border",
+        "table.fg"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "row",
+        "cell"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "striped"
+      ],
+      "patterns": [
+        "data-display"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "tabs": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 51,
+      "spec_path": "specs/tabs/index.md",
+      "code_path": "packages/ui/src/components/Tabs.tsx",
+      "story_path": "apps/storybook/stories/Tabs.stories.tsx",
+      "token_file": "packages/tokens/src/components/tabs.json",
+      "tokens": [
+        "tabs.indicator.active",
+        "tabs.fg.active",
+        "tabs.fg.inactive",
+        "tabs.fg.hover",
+        "tabs.fg.disabled",
+        "tabs.border.list",
+        "tabs.border.focus"
+      ],
+      "parts": [
+        "list",
+        "tab",
+        "indicator",
+        "panel"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "disabled"
+      ],
+      "patterns": [
+        "settings-page",
+        "object-details",
+        "dashboard"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "tags-input": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 91,
+      "spec_path": "specs/tags-input/index.md",
+      "code_path": "packages/ui/src/components/TagsInput.tsx",
+      "story_path": "apps/storybook/stories/TagsInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/tags-input.json",
+      "tokens": [
+        "tags-input.bg",
+        "tags-input.border",
+        "tags-input.border-focus",
+        "tags-input.fg",
+        "tags-input.placeholder",
+        "tags-input.pill-bg",
+        "tags-input.pill-fg",
+        "tags-input.radius"
+      ],
+      "parts": [
+        "root",
+        "pill",
+        "label"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "forms"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "text-input": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 57,
+      "spec_path": "specs/text-input/index.md",
+      "code_path": "packages/ui/src/components/TextInput.tsx",
+      "story_path": "apps/storybook/stories/TextInput.stories.tsx",
+      "token_file": "packages/tokens/src/components/text-input.json",
+      "tokens": [
+        "text-input.bg.default",
+        "text-input.bg.disabled",
+        "text-input.fg.value",
+        "text-input.fg.placeholder",
+        "text-input.fg.disabled",
+        "text-input.border.default",
+        "text-input.border.hover",
+        "text-input.border.focus",
+        "text-input.border.error",
+        "text-input.ring",
+        "text-input.radius"
+      ],
+      "parts": [
+        "label",
+        "root",
+        "input",
+        "icon-leading",
+        "icon-trailing",
+        "helper"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "disabled",
+        "error",
+        "loading"
+      ],
+      "patterns": [
+        "form",
+        "search-bar",
+        "filter-bar",
+        "table-row-editor"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "textarea": {
+      "type": "Component",
+      "status": "Draft",
+      "trust_health": 57,
+      "spec_path": "specs/textarea/index.md",
+      "code_path": "packages/ui/src/components/Textarea.tsx",
+      "story_path": "apps/storybook/stories/Textarea.stories.tsx",
+      "token_file": "packages/tokens/src/components/textarea.json",
+      "tokens": [
+        "textarea.bg.default",
+        "textarea.bg.disabled",
+        "textarea.fg.value",
+        "textarea.fg.placeholder",
+        "textarea.fg.disabled",
+        "textarea.border.default",
+        "textarea.border.focus",
+        "textarea.border.error",
+        "textarea.ring",
+        "textarea.radius"
+      ],
+      "parts": [
+        "label",
+        "root",
+        "textarea",
+        "counter",
+        "helper"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "disabled",
+        "error"
+      ],
+      "patterns": [
+        "form",
+        "comment-box",
+        "note-editor"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "token-drift"
+      ]
+    },
+    "theme-icon": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 69,
+      "spec_path": "specs/theme-icon/index.md",
+      "code_path": "packages/ui/src/components/ThemeIcon.tsx",
+      "story_path": "apps/storybook/stories/ThemeIcon.stories.tsx",
+      "token_file": "packages/tokens/src/components/theme-icon.json",
+      "tokens": [
+        "theme-icon.bg",
+        "theme-icon.fg",
+        "theme-icon.radius"
+      ],
+      "parts": [
+        "root",
+        "icon"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "timeline": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 84,
+      "spec_path": "specs/timeline/index.md",
+      "code_path": "packages/ui/src/components/Timeline.tsx",
+      "story_path": "apps/storybook/stories/Timeline.stories.tsx",
+      "token_file": "packages/tokens/src/components/timeline.json",
+      "tokens": [
+        "timeline.line",
+        "timeline.bullet",
+        "timeline.bullet-active",
+        "timeline.fg-title",
+        "timeline.fg-body"
+      ],
+      "parts": [
+        "root",
+        "item",
+        "bullet",
+        "line"
+      ],
+      "states": [
+        "pending",
+        "active",
+        "complete"
+      ],
+      "patterns": [
+        "data-display"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "toast": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 92,
+      "spec_path": "specs/toast/index.md",
+      "code_path": "packages/ui/src/components/Toast.tsx",
+      "story_path": "apps/storybook/stories/Toast.stories.tsx",
+      "token_file": "packages/tokens/src/components/toast.json",
+      "tokens": [
+        "toast.bg",
+        "toast.fg",
+        "toast.description-fg",
+        "toast.border",
+        "toast.icon-success",
+        "toast.icon-error",
+        "toast.icon-warning",
+        "toast.icon-info",
+        "toast.radius"
+      ],
+      "parts": [
+        "outlet",
+        "root",
+        "icon",
+        "title",
+        "description",
+        "close"
+      ],
+      "states": [
+        "entering",
+        "visible",
+        "exiting"
+      ],
+      "patterns": [
+        "optimistic-correctable",
+        "reversibility"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "tool-call-card": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 95,
+      "spec_path": "specs/tool-call-card/index.md",
+      "code_path": "packages/ui/src/components/ai/ToolCallCard.tsx",
+      "story_path": "apps/storybook/stories/ai/ToolCallCard.stories.tsx",
+      "token_file": "packages/tokens/src/components/tool-call-card.json",
+      "tokens": [
+        "tool-call.bg",
+        "tool-call.border",
+        "tool-call.name",
+        "tool-call.args-bg",
+        "tool-call.status.pending",
+        "tool-call.status.running",
+        "tool-call.status.success",
+        "tool-call.status.error",
+        "tool-call.radius"
+      ],
+      "parts": [
+        "root",
+        "header",
+        "args",
+        "result"
+      ],
+      "states": [
+        "pending",
+        "running",
+        "success",
+        "error"
+      ],
+      "patterns": [
+        "chat",
+        "tool-use"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states",
+        "trust-copy"
+      ]
+    },
+    "tooltip": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 87,
+      "spec_path": "specs/tooltip/index.md",
+      "code_path": "packages/ui/src/components/Tooltip.tsx",
+      "story_path": "apps/storybook/stories/Tooltip.stories.tsx",
+      "token_file": "packages/tokens/src/components/tooltip.json",
+      "tokens": [
+        "tooltip.bg",
+        "tooltip.fg",
+        "tooltip.border",
+        "tooltip.radius",
+        "tooltip.shadow"
+      ],
+      "parts": [
+        "trigger",
+        "bubble",
+        "arrow",
+        "label"
+      ],
+      "states": [
+        "hidden",
+        "opening",
+        "open",
+        "closing"
+      ],
+      "patterns": [
+        "action-bar",
+        "page-header"
+      ],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "tree": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 85,
+      "spec_path": "specs/tree/index.md",
+      "code_path": "packages/ui/src/components/Tree.tsx",
+      "story_path": "apps/storybook/stories/Tree.stories.tsx",
+      "token_file": "packages/tokens/src/components/tree.json",
+      "tokens": [
+        "tree.fg",
+        "tree.bg-selected",
+        "tree.guide",
+        "tree.chevron"
+      ],
+      "parts": [
+        "root",
+        "node",
+        "chevron",
+        "guide"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "selected",
+        "focus"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "undo-bar": {
+      "type": "AI Surface",
+      "status": "AI-Ready",
+      "trust_health": 70,
+      "spec_path": "specs/undo-bar/index.md",
+      "code_path": "packages/ui/src/components/ai/UndoBar.tsx",
+      "story_path": "apps/storybook/stories/ai/UndoBar.stories.tsx",
+      "token_file": "packages/tokens/src/components/undo-bar.json",
+      "tokens": [
+        "undo-bar.bg",
+        "undo-bar.fg"
+      ],
+      "parts": [
+        "root",
+        "message",
+        "action"
+      ],
+      "states": [
+        "default"
+      ],
+      "patterns": [
+        "chat"
+      ],
+      "pages": [
+        "assistant"
+      ],
+      "review_lenses": [
+        "a11y",
+        "trust-copy"
+      ]
+    },
+    "validation-message": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 80,
+      "spec_path": "specs/validation-message/index.md",
+      "code_path": "packages/ui/src/components/ValidationMessage.tsx",
+      "story_path": "apps/storybook/stories/ValidationMessage.stories.tsx",
+      "token_file": "packages/tokens/src/components/validation-message.json",
+      "tokens": [
+        "validation-message.fg",
+        "validation-message.error",
+        "validation-message.warning",
+        "validation-message.success"
+      ],
+      "parts": [
+        "root",
+        "icon",
+        "text"
+      ],
+      "states": [
+        "error",
+        "warning",
+        "success"
+      ],
+      "patterns": [],
+      "pages": [],
+      "review_lenses": [
+        "a11y"
+      ]
+    }
+  },
+  "edges": {
+    "token_to_components": {
+      "accordion.bg": [
+        "accordion"
+      ],
+      "accordion.bg-hover": [
+        "accordion"
+      ],
+      "accordion.border": [
+        "accordion"
+      ],
+      "accordion.fg.label": [
+        "accordion"
+      ],
+      "accordion.fg.content": [
+        "accordion"
+      ],
+      "accordion.fg.chevron": [
+        "accordion"
+      ],
+      "accordion.border-focus": [
+        "accordion"
+      ],
+      "accordion.radius": [
+        "accordion"
+      ],
+      "activity-feed.actor": [
+        "activity-feed"
+      ],
+      "activity-feed.action": [
+        "activity-feed"
+      ],
+      "activity-feed.meta": [
+        "activity-feed"
+      ],
+      "agent-card.bg": [
+        "agent-card"
+      ],
+      "agent-card.border": [
+        "agent-card"
+      ],
+      "agent-card.name": [
+        "agent-card"
+      ],
+      "agent-card.meta": [
+        "agent-card"
+      ],
+      "agent-picker.bg": [
+        "agent-picker"
+      ],
+      "agent-picker.border": [
+        "agent-picker"
+      ],
+      "agent-picker.fg": [
+        "agent-picker"
+      ],
+      "agent-picker.icon": [
+        "agent-picker"
+      ],
+      "agent-status.idle": [
+        "agent-status"
+      ],
+      "agent-status.busy": [
+        "agent-status"
+      ],
+      "agent-status.waiting": [
+        "agent-status"
+      ],
+      "agent-status.done": [
+        "agent-status"
+      ],
+      "agent-status.error": [
+        "agent-status"
+      ],
+      "alert.bg.info": [
+        "alert"
+      ],
+      "alert.bg.success": [
+        "alert"
+      ],
+      "alert.bg.warning": [
+        "alert"
+      ],
+      "alert.bg.error": [
+        "alert"
+      ],
+      "alert.border.info": [
+        "alert"
+      ],
+      "alert.border.success": [
+        "alert"
+      ],
+      "alert.border.warning": [
+        "alert"
+      ],
+      "alert.border.error": [
+        "alert"
+      ],
+      "alert.fg.title": [
+        "alert"
+      ],
+      "alert.fg.body": [
+        "alert"
+      ],
+      "alert.icon.info": [
+        "alert"
+      ],
+      "alert.icon.success": [
+        "alert"
+      ],
+      "alert.icon.warning": [
+        "alert"
+      ],
+      "alert.icon.error": [
+        "alert"
+      ],
+      "alert.radius": [
+        "alert"
+      ],
+      "anchor.fg": [
+        "anchor"
+      ],
+      "anchor.fg-hover": [
+        "anchor"
+      ],
+      "artifact.bg": [
+        "artifact-frame"
+      ],
+      "artifact.header-bg": [
+        "artifact-frame"
+      ],
+      "artifact.border": [
+        "artifact-frame"
+      ],
+      "artifact.title": [
+        "artifact-frame"
+      ],
+      "artifact.kind": [
+        "artifact-frame"
+      ],
+      "artifact.radius": [
+        "artifact-frame"
+      ],
+      "attachment-pill.bg": [
+        "attachment-pill"
+      ],
+      "attachment-pill.border": [
+        "attachment-pill"
+      ],
+      "attachment-pill.fg": [
+        "attachment-pill"
+      ],
+      "attachment-pill.meta": [
+        "attachment-pill"
+      ],
+      "attachment-pill.radius": [
+        "attachment-pill"
+      ],
+      "audit-log-viewer.header-bg": [
+        "audit-log-viewer"
+      ],
+      "audit-log-viewer.row-striped": [
+        "audit-log-viewer"
+      ],
+      "audit-log-viewer.fg": [
+        "audit-log-viewer"
+      ],
+      "audit-log-viewer.meta": [
+        "audit-log-viewer"
+      ],
+      "audit-log-viewer.border": [
+        "audit-log-viewer"
+      ],
+      "autocomplete.bg": [
+        "autocomplete"
+      ],
+      "autocomplete.border": [
+        "autocomplete"
+      ],
+      "autocomplete.border-focus": [
+        "autocomplete"
+      ],
+      "autocomplete.fg": [
+        "autocomplete"
+      ],
+      "autocomplete.placeholder": [
+        "autocomplete"
+      ],
+      "autocomplete.popover-bg": [
+        "autocomplete"
+      ],
+      "autocomplete.option-bg-hover": [
+        "autocomplete"
+      ],
+      "autocomplete.radius": [
+        "autocomplete"
+      ],
+      "avatar.bg": [
+        "avatar"
+      ],
+      "avatar.fg": [
+        "avatar"
+      ],
+      "avatar.border": [
+        "avatar"
+      ],
+      "avatar.ring": [
+        "avatar"
+      ],
+      "avatar.radius": [
+        "avatar"
+      ],
+      "badge.bg.neutral": [
+        "badge"
+      ],
+      "badge.bg.success": [
+        "badge"
+      ],
+      "badge.bg.error": [
+        "badge"
+      ],
+      "badge.bg.warning": [
+        "badge"
+      ],
+      "badge.bg.risk-critical": [
+        "badge"
+      ],
+      "badge.bg.risk-high": [
+        "badge"
+      ],
+      "badge.bg.risk-medium": [
+        "badge"
+      ],
+      "badge.bg.risk-low": [
+        "badge"
+      ],
+      "badge.fg.default": [
+        "badge"
+      ],
+      "badge.radius": [
+        "badge"
+      ],
+      "breadcrumbs.fg": [
+        "breadcrumbs"
+      ],
+      "breadcrumbs.fg-current": [
+        "breadcrumbs"
+      ],
+      "breadcrumbs.separator": [
+        "breadcrumbs"
+      ],
+      "bulk-action-bar.bg": [
+        "bulk-action-bar"
+      ],
+      "bulk-action-bar.border": [
+        "bulk-action-bar"
+      ],
+      "bulk-action-bar.fg": [
+        "bulk-action-bar"
+      ],
+      "button.bg.default": [
+        "button"
+      ],
+      "button.bg.hover": [
+        "button"
+      ],
+      "button.bg.active": [
+        "button"
+      ],
+      "button.bg.disabled": [
+        "button"
+      ],
+      "button.bg-destructive.default": [
+        "button"
+      ],
+      "button.bg-destructive.hover": [
+        "button"
+      ],
+      "button.bg-outline.default": [
+        "button"
+      ],
+      "button.bg-outline.hover": [
+        "button"
+      ],
+      "button.fg.on-filled": [
+        "button"
+      ],
+      "button.fg.on-outline": [
+        "button"
+      ],
+      "button.fg.disabled": [
+        "button"
+      ],
+      "button.border.default": [
+        "button"
+      ],
+      "button.border.hover": [
+        "button"
+      ],
+      "button.border.focus": [
+        "button"
+      ],
+      "button.radius": [
+        "button"
+      ],
+      "button-group.divider": [
+        "button-group"
+      ],
+      "calendar.bg": [
+        "calendar"
+      ],
+      "calendar.fg": [
+        "calendar"
+      ],
+      "calendar.header-fg": [
+        "calendar"
+      ],
+      "calendar.weekday-fg": [
+        "calendar"
+      ],
+      "calendar.day-today-border": [
+        "calendar"
+      ],
+      "calendar.day-muted-fg": [
+        "calendar"
+      ],
+      "calendar.ring": [
+        "calendar"
+      ],
+      "card.bg": [
+        "card"
+      ],
+      "card.bg-subtle": [
+        "card"
+      ],
+      "card.border": [
+        "card"
+      ],
+      "card.fg.title": [
+        "card"
+      ],
+      "card.fg.body": [
+        "card"
+      ],
+      "card.radius": [
+        "card"
+      ],
+      "card.shadow": [
+        "card"
+      ],
+      "carousel.control-bg": [
+        "carousel"
+      ],
+      "carousel.control-fg": [
+        "carousel"
+      ],
+      "carousel.control-border": [
+        "carousel"
+      ],
+      "carousel.indicator": [
+        "carousel"
+      ],
+      "carousel.indicator-active": [
+        "carousel"
+      ],
+      "carousel.ring": [
+        "carousel"
+      ],
+      "carousel.radius": [
+        "carousel"
+      ],
+      "character-counter.fg": [
+        "character-counter"
+      ],
+      "character-counter.over": [
+        "character-counter"
+      ],
+      "chart.grid": [
+        "chart"
+      ],
+      "chart.axis-fg": [
+        "chart"
+      ],
+      "chart.label-fg": [
+        "chart"
+      ],
+      "chart.tooltip-bg": [
+        "chart"
+      ],
+      "chart.tooltip-fg": [
+        "chart"
+      ],
+      "chart.series-1": [
+        "chart"
+      ],
+      "chart.series-2": [
+        "chart"
+      ],
+      "chart.series-3": [
+        "chart"
+      ],
+      "chart.series-4": [
+        "chart"
+      ],
+      "chart.series-5": [
+        "chart"
+      ],
+      "checkbox.bg.unchecked": [
+        "checkbox"
+      ],
+      "checkbox.bg.checked": [
+        "checkbox"
+      ],
+      "checkbox.bg.indeterminate": [
+        "checkbox"
+      ],
+      "checkbox.bg.disabled": [
+        "checkbox"
+      ],
+      "checkbox.check": [
+        "checkbox"
+      ],
+      "checkbox.border.default": [
+        "checkbox"
+      ],
+      "checkbox.border.focus": [
+        "checkbox"
+      ],
+      "checkbox.border.error": [
+        "checkbox"
+      ],
+      "checkbox.fg.label": [
+        "checkbox"
+      ],
+      "checkbox.fg.description": [
+        "checkbox"
+      ],
+      "checkbox.fg.error": [
+        "checkbox"
+      ],
+      "checkbox.radius": [
+        "checkbox"
+      ],
+      "chip.bg": [
+        "chip"
+      ],
+      "chip.bg-checked": [
+        "chip"
+      ],
+      "chip.fg": [
+        "chip"
+      ],
+      "chip.fg-checked": [
+        "chip"
+      ],
+      "chip.border": [
+        "chip"
+      ],
+      "chip.border-checked": [
+        "chip"
+      ],
+      "chip.radius": [
+        "chip"
+      ],
+      "citation.bg": [
+        "citation-chip"
+      ],
+      "citation.fg": [
+        "citation-chip"
+      ],
+      "citation.border": [
+        "citation-chip"
+      ],
+      "citation.radius": [
+        "citation-chip"
+      ],
+      "code.bg": [
+        "code"
+      ],
+      "code.fg": [
+        "code"
+      ],
+      "code.radius": [
+        "code"
+      ],
+      "code-block.bg": [
+        "code-block"
+      ],
+      "code-block.header-bg": [
+        "code-block"
+      ],
+      "code-block.border": [
+        "code-block"
+      ],
+      "code-block.fg": [
+        "code-block"
+      ],
+      "code-block.filename": [
+        "code-block"
+      ],
+      "code-block.radius": [
+        "code-block"
+      ],
+      "color-input.bg": [
+        "color-input"
+      ],
+      "color-input.border": [
+        "color-input"
+      ],
+      "color-input.border-focus": [
+        "color-input"
+      ],
+      "color-input.fg": [
+        "color-input"
+      ],
+      "color-input.radius": [
+        "color-input"
+      ],
+      "comment-thread.author": [
+        "comment-thread"
+      ],
+      "comment-thread.body": [
+        "comment-thread"
+      ],
+      "comment-thread.meta": [
+        "comment-thread"
+      ],
+      "composer.bg": [
+        "composer"
+      ],
+      "composer.border": [
+        "composer"
+      ],
+      "composer.border-focus": [
+        "composer"
+      ],
+      "composer.fg": [
+        "composer"
+      ],
+      "composer.placeholder": [
+        "composer"
+      ],
+      "composer.send-bg": [
+        "composer"
+      ],
+      "composer.stop-bg": [
+        "composer"
+      ],
+      "composer.radius": [
+        "composer"
+      ],
+      "confidence-meter.track": [
+        "confidence-meter"
+      ],
+      "confidence-meter.high": [
+        "confidence-meter"
+      ],
+      "confidence-meter.medium": [
+        "confidence-meter"
+      ],
+      "confidence-meter.low": [
+        "confidence-meter"
+      ],
+      "confidence-meter.label": [
+        "confidence-meter"
+      ],
+      "context-meter.track": [
+        "context-meter"
+      ],
+      "context-meter.fill": [
+        "context-meter"
+      ],
+      "context-meter.fill-warning": [
+        "context-meter"
+      ],
+      "context-meter.label": [
+        "context-meter"
+      ],
+      "conversation-thread.bg": [
+        "conversation-thread"
+      ],
+      "conversation-thread.divider": [
+        "conversation-thread"
+      ],
+      "cost-meter.label": [
+        "cost-meter"
+      ],
+      "cost-meter.value": [
+        "cost-meter"
+      ],
+      "date-input.bg": [
+        "date-input"
+      ],
+      "date-input.fg": [
+        "date-input"
+      ],
+      "date-input.placeholder": [
+        "date-input"
+      ],
+      "date-input.border": [
+        "date-input"
+      ],
+      "date-input.border-focus": [
+        "date-input"
+      ],
+      "date-input.border-error": [
+        "date-input"
+      ],
+      "date-input.ring": [
+        "date-input"
+      ],
+      "date-input.popover-bg": [
+        "date-input"
+      ],
+      "date-input.radius": [
+        "date-input"
+      ],
+      "date-picker.bg": [
+        "date-picker"
+      ],
+      "date-picker.fg": [
+        "date-picker"
+      ],
+      "date-picker.header-fg": [
+        "date-picker"
+      ],
+      "date-picker.weekday-fg": [
+        "date-picker"
+      ],
+      "date-picker.day-selected-bg": [
+        "date-picker"
+      ],
+      "date-picker.day-selected-fg": [
+        "date-picker"
+      ],
+      "date-picker.day-in-range-bg": [
+        "date-picker"
+      ],
+      "date-picker.day-today-border": [
+        "date-picker"
+      ],
+      "date-picker.day-muted-fg": [
+        "date-picker"
+      ],
+      "date-picker.ring": [
+        "date-picker"
+      ],
+      "date-picker.radius": [
+        "date-picker"
+      ],
+      "description-list.term": [
+        "description-list"
+      ],
+      "description-list.detail": [
+        "description-list"
+      ],
+      "diff-view.added-bg": [
+        "diff-view"
+      ],
+      "diff-view.removed-bg": [
+        "diff-view"
+      ],
+      "diff-view.fg": [
+        "diff-view"
+      ],
+      "diff-view.gutter": [
+        "diff-view"
+      ],
+      "disclosure.bg": [
+        "disclosure-badge"
+      ],
+      "disclosure.fg": [
+        "disclosure-badge"
+      ],
+      "disclosure.border": [
+        "disclosure-badge"
+      ],
+      "disclosure.radius": [
+        "disclosure-badge"
+      ],
+      "divider.line": [
+        "divider"
+      ],
+      "divider.label": [
+        "divider"
+      ],
+      "drawer.bg": [
+        "drawer"
+      ],
+      "drawer.overlay": [
+        "drawer"
+      ],
+      "drawer.border": [
+        "drawer"
+      ],
+      "drawer.fg.title": [
+        "drawer"
+      ],
+      "drawer.fg.body": [
+        "drawer"
+      ],
+      "drawer.radius": [
+        "drawer"
+      ],
+      "empty-state.bg": [
+        "empty-state"
+      ],
+      "empty-state.icon": [
+        "empty-state"
+      ],
+      "empty-state.title": [
+        "empty-state"
+      ],
+      "empty-state.description": [
+        "empty-state"
+      ],
+      "empty-state.radius": [
+        "empty-state"
+      ],
+      "error-state.bg": [
+        "error-state"
+      ],
+      "error-state.icon": [
+        "error-state"
+      ],
+      "error-state.title": [
+        "error-state"
+      ],
+      "error-state.description": [
+        "error-state"
+      ],
+      "error-state.radius": [
+        "error-state"
+      ],
+      "export-menu.trigger-fg": [
+        "export-menu"
+      ],
+      "export-menu.item-fg": [
+        "export-menu"
+      ],
+      "fab.bg": [
+        "fab"
+      ],
+      "fab.fg": [
+        "fab"
+      ],
+      "fab.shadow": [
+        "fab"
+      ],
+      "fab.radius": [
+        "fab"
+      ],
+      "faceted-filter.group-label": [
+        "faceted-filter"
+      ],
+      "faceted-filter.fg": [
+        "faceted-filter"
+      ],
+      "faceted-filter.count": [
+        "faceted-filter"
+      ],
+      "feedback-control.idle": [
+        "feedback-control"
+      ],
+      "feedback-control.positive": [
+        "feedback-control"
+      ],
+      "feedback-control.negative": [
+        "feedback-control"
+      ],
+      "field-label.fg": [
+        "field-label"
+      ],
+      "field-label.required": [
+        "field-label"
+      ],
+      "field-label.optional": [
+        "field-label"
+      ],
+      "fieldset.bg": [
+        "fieldset"
+      ],
+      "fieldset.border": [
+        "fieldset"
+      ],
+      "fieldset.legend": [
+        "fieldset"
+      ],
+      "fieldset.radius": [
+        "fieldset"
+      ],
+      "file-input.bg": [
+        "file-input"
+      ],
+      "file-input.border": [
+        "file-input"
+      ],
+      "file-input.border-focus": [
+        "file-input"
+      ],
+      "file-input.fg": [
+        "file-input"
+      ],
+      "file-input.placeholder": [
+        "file-input"
+      ],
+      "file-input.radius": [
+        "file-input"
+      ],
+      "helper-text.fg": [
+        "helper-text"
+      ],
+      "hitl.bg": [
+        "hitl-gate"
+      ],
+      "hitl.border": [
+        "hitl-gate"
+      ],
+      "hitl.title": [
+        "hitl-gate"
+      ],
+      "hitl.body": [
+        "hitl-gate"
+      ],
+      "hitl.approve-bg": [
+        "hitl-gate"
+      ],
+      "hitl.approve-destructive-bg": [
+        "hitl-gate"
+      ],
+      "hitl.deny-bg": [
+        "hitl-gate"
+      ],
+      "hitl.radius": [
+        "hitl-gate"
+      ],
+      "hover-card.bg": [
+        "hover-card"
+      ],
+      "hover-card.border": [
+        "hover-card"
+      ],
+      "hover-card.shadow": [
+        "hover-card"
+      ],
+      "hover-card.radius": [
+        "hover-card"
+      ],
+      "icon-button.fg": [
+        "icon-button"
+      ],
+      "icon-button.bg-hover": [
+        "icon-button"
+      ],
+      "icon-button.border-focus": [
+        "icon-button"
+      ],
+      "image.bg": [
+        "image"
+      ],
+      "image.radius": [
+        "image"
+      ],
+      "indicator.bg": [
+        "indicator"
+      ],
+      "indicator.fg": [
+        "indicator"
+      ],
+      "inline-message.fg": [
+        "inline-message"
+      ],
+      "inline-message.info": [
+        "inline-message"
+      ],
+      "inline-message.success": [
+        "inline-message"
+      ],
+      "inline-message.warning": [
+        "inline-message"
+      ],
+      "inline-message.error": [
+        "inline-message"
+      ],
+      "kbd.bg": [
+        "kbd"
+      ],
+      "kbd.fg": [
+        "kbd"
+      ],
+      "kbd.border": [
+        "kbd"
+      ],
+      "kbd.radius": [
+        "kbd"
+      ],
+      "list.fg": [
+        "list"
+      ],
+      "list.marker": [
+        "list"
+      ],
+      "loader.color": [
+        "loader"
+      ],
+      "loading-state.spinner": [
+        "loading-state"
+      ],
+      "loading-state.label": [
+        "loading-state"
+      ],
+      "loading-state.bg": [
+        "loading-state"
+      ],
+      "maintenance-banner.info-bg": [
+        "maintenance-banner"
+      ],
+      "maintenance-banner.degraded-bg": [
+        "maintenance-banner"
+      ],
+      "maintenance-banner.down-bg": [
+        "maintenance-banner"
+      ],
+      "maintenance-banner.fg": [
+        "maintenance-banner"
+      ],
+      "memory-panel.bg": [
+        "memory-panel"
+      ],
+      "memory-panel.border": [
+        "memory-panel"
+      ],
+      "memory-panel.fg": [
+        "memory-panel"
+      ],
+      "memory-panel.remove": [
+        "memory-panel"
+      ],
+      "mention.bg": [
+        "mention"
+      ],
+      "mention.fg": [
+        "mention"
+      ],
+      "menu.bg": [
+        "menu"
+      ],
+      "menu.border": [
+        "menu"
+      ],
+      "menu.shadow": [
+        "menu"
+      ],
+      "menu.radius": [
+        "menu"
+      ],
+      "menu.item.fg": [
+        "menu"
+      ],
+      "menu.item.fg-danger": [
+        "menu"
+      ],
+      "menu.item.bg-hover": [
+        "menu"
+      ],
+      "menu.label": [
+        "menu"
+      ],
+      "menu.divider": [
+        "menu"
+      ],
+      "message.user.bg": [
+        "message"
+      ],
+      "message.user.fg": [
+        "message"
+      ],
+      "message.assistant.bg": [
+        "message"
+      ],
+      "message.assistant.fg": [
+        "message"
+      ],
+      "message.system.bg": [
+        "message"
+      ],
+      "message.system.fg": [
+        "message"
+      ],
+      "message.meta": [
+        "message"
+      ],
+      "message.radius": [
+        "message"
+      ],
+      "message-actions.fg": [
+        "message-actions"
+      ],
+      "message-actions.fg-hover": [
+        "message-actions"
+      ],
+      "modal.bg": [
+        "modal"
+      ],
+      "modal.overlay": [
+        "modal"
+      ],
+      "modal.fg.title": [
+        "modal"
+      ],
+      "modal.fg.body": [
+        "modal"
+      ],
+      "modal.fg.secondary": [
+        "modal"
+      ],
+      "modal.border.divider": [
+        "modal"
+      ],
+      "modal.ring": [
+        "modal"
+      ],
+      "modal.radius": [
+        "modal"
+      ],
+      "model-selector.bg": [
+        "model-selector"
+      ],
+      "model-selector.border": [
+        "model-selector"
+      ],
+      "model-selector.fg": [
+        "model-selector"
+      ],
+      "model-selector.icon": [
+        "model-selector"
+      ],
+      "model-selector.radius": [
+        "model-selector"
+      ],
+      "multi-select.bg": [
+        "multi-select"
+      ],
+      "multi-select.border": [
+        "multi-select"
+      ],
+      "multi-select.border-focus": [
+        "multi-select"
+      ],
+      "multi-select.fg": [
+        "multi-select"
+      ],
+      "multi-select.placeholder": [
+        "multi-select"
+      ],
+      "multi-select.pill-bg": [
+        "multi-select"
+      ],
+      "multi-select.pill-fg": [
+        "multi-select"
+      ],
+      "multi-select.option-bg-hover": [
+        "multi-select"
+      ],
+      "multi-select.radius": [
+        "multi-select"
+      ],
+      "notification.bg": [
+        "notification"
+      ],
+      "notification.border": [
+        "notification"
+      ],
+      "notification.fg-title": [
+        "notification"
+      ],
+      "notification.fg-body": [
+        "notification"
+      ],
+      "notification.accent": [
+        "notification"
+      ],
+      "notification.radius": [
+        "notification"
+      ],
+      "notification-center.bg": [
+        "notification-center"
+      ],
+      "notification-center.unread-bg": [
+        "notification-center"
+      ],
+      "notification-center.title": [
+        "notification-center"
+      ],
+      "notification-center.body": [
+        "notification-center"
+      ],
+      "notification-center.dot": [
+        "notification-center"
+      ],
+      "notification-center.meta": [
+        "notification-center"
+      ],
+      "number-input.bg": [
+        "number-input"
+      ],
+      "number-input.border": [
+        "number-input"
+      ],
+      "number-input.border-focus": [
+        "number-input"
+      ],
+      "number-input.fg": [
+        "number-input"
+      ],
+      "number-input.placeholder": [
+        "number-input"
+      ],
+      "number-input.radius": [
+        "number-input"
+      ],
+      "pagination.item.fg": [
+        "pagination"
+      ],
+      "pagination.item.bg-active": [
+        "pagination"
+      ],
+      "pagination.item.fg-active": [
+        "pagination"
+      ],
+      "pagination.item.bg-hover": [
+        "pagination"
+      ],
+      "pagination.border": [
+        "pagination"
+      ],
+      "pagination.border-focus": [
+        "pagination"
+      ],
+      "pagination.radius": [
+        "pagination"
+      ],
+      "password-input.bg": [
+        "password-input"
+      ],
+      "password-input.border": [
+        "password-input"
+      ],
+      "password-input.border-focus": [
+        "password-input"
+      ],
+      "password-input.fg": [
+        "password-input"
+      ],
+      "password-input.placeholder": [
+        "password-input"
+      ],
+      "password-input.radius": [
+        "password-input"
+      ],
+      "permission-request.bg": [
+        "permission-request"
+      ],
+      "permission-request.border": [
+        "permission-request"
+      ],
+      "permission-request.title": [
+        "permission-request"
+      ],
+      "permission-request.scope-bg": [
+        "permission-request"
+      ],
+      "pill.bg": [
+        "pill"
+      ],
+      "pill.fg": [
+        "pill"
+      ],
+      "pill.remove": [
+        "pill"
+      ],
+      "pill.radius": [
+        "pill"
+      ],
+      "pin-input.bg": [
+        "pin-input"
+      ],
+      "pin-input.border": [
+        "pin-input"
+      ],
+      "pin-input.border-focus": [
+        "pin-input"
+      ],
+      "pin-input.fg": [
+        "pin-input"
+      ],
+      "pin-input.radius": [
+        "pin-input"
+      ],
+      "plan-steps.pending": [
+        "plan-steps"
+      ],
+      "plan-steps.active": [
+        "plan-steps"
+      ],
+      "plan-steps.done": [
+        "plan-steps"
+      ],
+      "plan-steps.error": [
+        "plan-steps"
+      ],
+      "plan-steps.fg": [
+        "plan-steps"
+      ],
+      "popover.bg": [
+        "popover"
+      ],
+      "popover.border": [
+        "popover"
+      ],
+      "popover.shadow": [
+        "popover"
+      ],
+      "popover.radius": [
+        "popover"
+      ],
+      "presence-indicator.online": [
+        "presence-indicator"
+      ],
+      "presence-indicator.away": [
+        "presence-indicator"
+      ],
+      "presence-indicator.busy": [
+        "presence-indicator"
+      ],
+      "presence-indicator.offline": [
+        "presence-indicator"
+      ],
+      "presence-indicator.ring": [
+        "presence-indicator"
+      ],
+      "progress.track": [
+        "progress"
+      ],
+      "progress.bar": [
+        "progress"
+      ],
+      "progress.bar-success": [
+        "progress"
+      ],
+      "progress.bar-warning": [
+        "progress"
+      ],
+      "progress.bar-error": [
+        "progress"
+      ],
+      "progress.radius": [
+        "progress"
+      ],
+      "progress-circle.track": [
+        "progress-circle"
+      ],
+      "progress-circle.indicator": [
+        "progress-circle"
+      ],
+      "progress-circle.label": [
+        "progress-circle"
+      ],
+      "prompt-suggestions.bg": [
+        "prompt-suggestions"
+      ],
+      "prompt-suggestions.border": [
+        "prompt-suggestions"
+      ],
+      "prompt-suggestions.fg": [
+        "prompt-suggestions"
+      ],
+      "prompt-suggestions.radius": [
+        "prompt-suggestions"
+      ],
+      "radio.bg.unchecked": [
+        "radio"
+      ],
+      "radio.bg.disabled": [
+        "radio"
+      ],
+      "radio.dot.checked": [
+        "radio"
+      ],
+      "radio.border.default": [
+        "radio"
+      ],
+      "radio.border.checked": [
+        "radio"
+      ],
+      "radio.border.focus": [
+        "radio"
+      ],
+      "radio.fg.label": [
+        "radio"
+      ],
+      "rating.symbol-empty": [
+        "rating"
+      ],
+      "rating.symbol-filled": [
+        "rating"
+      ],
+      "rbac-matrix.header-bg": [
+        "rbac-matrix"
+      ],
+      "rbac-matrix.border": [
+        "rbac-matrix"
+      ],
+      "rbac-matrix.granted": [
+        "rbac-matrix"
+      ],
+      "rbac-matrix.fg": [
+        "rbac-matrix"
+      ],
+      "reasoning.bg": [
+        "reasoning-trace"
+      ],
+      "reasoning.fg": [
+        "reasoning-trace"
+      ],
+      "reasoning.label": [
+        "reasoning-trace"
+      ],
+      "reasoning.rule": [
+        "reasoning-trace"
+      ],
+      "reasoning.radius": [
+        "reasoning-trace"
+      ],
+      "refusal-state.bg": [
+        "refusal-state"
+      ],
+      "refusal-state.border": [
+        "refusal-state"
+      ],
+      "refusal-state.fg": [
+        "refusal-state"
+      ],
+      "refusal-state.suggestion": [
+        "refusal-state"
+      ],
+      "role-picker.pill-bg": [
+        "role-picker"
+      ],
+      "role-picker.fg": [
+        "role-picker"
+      ],
+      "saved-views.active-fg": [
+        "saved-views"
+      ],
+      "saved-views.fg": [
+        "saved-views"
+      ],
+      "search-field.bg": [
+        "search-field"
+      ],
+      "search-field.border": [
+        "search-field"
+      ],
+      "search-field.border-focus": [
+        "search-field"
+      ],
+      "search-field.fg": [
+        "search-field"
+      ],
+      "search-field.placeholder": [
+        "search-field"
+      ],
+      "search-field.icon": [
+        "search-field"
+      ],
+      "search-field.radius": [
+        "search-field"
+      ],
+      "segmented-control.bg": [
+        "segmented-control"
+      ],
+      "segmented-control.bg-active": [
+        "segmented-control"
+      ],
+      "segmented-control.fg": [
+        "segmented-control"
+      ],
+      "segmented-control.fg-active": [
+        "segmented-control"
+      ],
+      "segmented-control.radius": [
+        "segmented-control"
+      ],
+      "select.bg.trigger": [
+        "select"
+      ],
+      "select.bg.trigger-disabled": [
+        "select"
+      ],
+      "select.bg.popover": [
+        "select"
+      ],
+      "select.option.bg-default": [
+        "select"
+      ],
+      "select.option.bg-hover": [
+        "select"
+      ],
+      "select.option.bg-selected": [
+        "select"
+      ],
+      "select.option.fg-default": [
+        "select"
+      ],
+      "select.option.fg-selected": [
+        "select"
+      ],
+      "select.fg.value": [
+        "select"
+      ],
+      "select.fg.placeholder": [
+        "select"
+      ],
+      "select.border.default": [
+        "select"
+      ],
+      "select.border.focus": [
+        "select"
+      ],
+      "select.border.error": [
+        "select"
+      ],
+      "select.ring": [
+        "select"
+      ],
+      "select.radius": [
+        "select"
+      ],
+      "session-device-list.bg": [
+        "session-device-list"
+      ],
+      "session-device-list.border": [
+        "session-device-list"
+      ],
+      "session-device-list.fg": [
+        "session-device-list"
+      ],
+      "session-device-list.meta": [
+        "session-device-list"
+      ],
+      "session-device-list.revoke": [
+        "session-device-list"
+      ],
+      "session-list.item-bg-hover": [
+        "session-list"
+      ],
+      "session-list.fg": [
+        "session-list"
+      ],
+      "session-list.meta": [
+        "session-list"
+      ],
+      "skeleton.base": [
+        "skeleton"
+      ],
+      "skeleton.highlight": [
+        "skeleton"
+      ],
+      "skeleton.duration": [
+        "skeleton"
+      ],
+      "skeleton.radius": [
+        "skeleton"
+      ],
+      "slider.track": [
+        "slider"
+      ],
+      "slider.track-filled": [
+        "slider"
+      ],
+      "slider.thumb": [
+        "slider"
+      ],
+      "slider.thumb-border": [
+        "slider"
+      ],
+      "slider.mark": [
+        "slider"
+      ],
+      "slider.label": [
+        "slider"
+      ],
+      "sources-panel.bg": [
+        "sources-panel"
+      ],
+      "sources-panel.border": [
+        "sources-panel"
+      ],
+      "sources-panel.title": [
+        "sources-panel"
+      ],
+      "sources-panel.item-fg": [
+        "sources-panel"
+      ],
+      "sources-panel.item-meta": [
+        "sources-panel"
+      ],
+      "sources-panel.index-bg": [
+        "sources-panel"
+      ],
+      "sources-panel.radius": [
+        "sources-panel"
+      ],
+      "sparkline.stroke": [
+        "sparkline"
+      ],
+      "sparkline.fill": [
+        "sparkline"
+      ],
+      "sparkline.stroke-trend-up": [
+        "sparkline"
+      ],
+      "sparkline.stroke-trend-down": [
+        "sparkline"
+      ],
+      "split-button.bg": [
+        "split-button"
+      ],
+      "split-button.fg": [
+        "split-button"
+      ],
+      "split-button.divider": [
+        "split-button"
+      ],
+      "split-button.radius": [
+        "split-button"
+      ],
+      "spoiler.control": [
+        "spoiler"
+      ],
+      "stat.value": [
+        "stat"
+      ],
+      "stat.label": [
+        "stat"
+      ],
+      "stat.delta-up": [
+        "stat"
+      ],
+      "stat.delta-down": [
+        "stat"
+      ],
+      "status-dot.online": [
+        "status-dot"
+      ],
+      "status-dot.offline": [
+        "status-dot"
+      ],
+      "status-dot.busy": [
+        "status-dot"
+      ],
+      "status-dot.away": [
+        "status-dot"
+      ],
+      "status-dot.label": [
+        "status-dot"
+      ],
+      "stepper.bg-completed": [
+        "stepper"
+      ],
+      "stepper.bg-active": [
+        "stepper"
+      ],
+      "stepper.bg-pending": [
+        "stepper"
+      ],
+      "stepper.fg-active": [
+        "stepper"
+      ],
+      "stepper.fg-pending": [
+        "stepper"
+      ],
+      "stepper.separator": [
+        "stepper"
+      ],
+      "stepper.border-focus": [
+        "stepper"
+      ],
+      "streaming.fg": [
+        "streaming-text"
+      ],
+      "streaming.caret": [
+        "streaming-text"
+      ],
+      "streaming.duration": [
+        "streaming-text"
+      ],
+      "success-state.bg": [
+        "success-state"
+      ],
+      "success-state.icon": [
+        "success-state"
+      ],
+      "success-state.title": [
+        "success-state"
+      ],
+      "success-state.description": [
+        "success-state"
+      ],
+      "success-state.radius": [
+        "success-state"
+      ],
+      "switch.track.on": [
+        "switch"
+      ],
+      "switch.track.off": [
+        "switch"
+      ],
+      "switch.track.disabled": [
+        "switch"
+      ],
+      "switch.thumb.default": [
+        "switch"
+      ],
+      "switch.border.focus": [
+        "switch"
+      ],
+      "switch.fg.label": [
+        "switch"
+      ],
+      "table.header-bg": [
+        "table"
+      ],
+      "table.header-fg": [
+        "table"
+      ],
+      "table.row-bg": [
+        "table"
+      ],
+      "table.row-bg-striped": [
+        "table"
+      ],
+      "table.row-bg-hover": [
+        "table"
+      ],
+      "table.border": [
+        "table"
+      ],
+      "table.fg": [
+        "table"
+      ],
+      "tabs.indicator.active": [
+        "tabs"
+      ],
+      "tabs.fg.active": [
+        "tabs"
+      ],
+      "tabs.fg.inactive": [
+        "tabs"
+      ],
+      "tabs.fg.hover": [
+        "tabs"
+      ],
+      "tabs.fg.disabled": [
+        "tabs"
+      ],
+      "tabs.border.list": [
+        "tabs"
+      ],
+      "tabs.border.focus": [
+        "tabs"
+      ],
+      "tags-input.bg": [
+        "tags-input"
+      ],
+      "tags-input.border": [
+        "tags-input"
+      ],
+      "tags-input.border-focus": [
+        "tags-input"
+      ],
+      "tags-input.fg": [
+        "tags-input"
+      ],
+      "tags-input.placeholder": [
+        "tags-input"
+      ],
+      "tags-input.pill-bg": [
+        "tags-input"
+      ],
+      "tags-input.pill-fg": [
+        "tags-input"
+      ],
+      "tags-input.radius": [
+        "tags-input"
+      ],
+      "text-input.bg.default": [
+        "text-input"
+      ],
+      "text-input.bg.disabled": [
+        "text-input"
+      ],
+      "text-input.fg.value": [
+        "text-input"
+      ],
+      "text-input.fg.placeholder": [
+        "text-input"
+      ],
+      "text-input.fg.disabled": [
+        "text-input"
+      ],
+      "text-input.border.default": [
+        "text-input"
+      ],
+      "text-input.border.hover": [
+        "text-input"
+      ],
+      "text-input.border.focus": [
+        "text-input"
+      ],
+      "text-input.border.error": [
+        "text-input"
+      ],
+      "text-input.ring": [
+        "text-input"
+      ],
+      "text-input.radius": [
+        "text-input"
+      ],
+      "textarea.bg.default": [
+        "textarea"
+      ],
+      "textarea.bg.disabled": [
+        "textarea"
+      ],
+      "textarea.fg.value": [
+        "textarea"
+      ],
+      "textarea.fg.placeholder": [
+        "textarea"
+      ],
+      "textarea.fg.disabled": [
+        "textarea"
+      ],
+      "textarea.border.default": [
+        "textarea"
+      ],
+      "textarea.border.focus": [
+        "textarea"
+      ],
+      "textarea.border.error": [
+        "textarea"
+      ],
+      "textarea.ring": [
+        "textarea"
+      ],
+      "textarea.radius": [
+        "textarea"
+      ],
+      "theme-icon.bg": [
+        "theme-icon"
+      ],
+      "theme-icon.fg": [
+        "theme-icon"
+      ],
+      "theme-icon.radius": [
+        "theme-icon"
+      ],
+      "timeline.line": [
+        "timeline"
+      ],
+      "timeline.bullet": [
+        "timeline"
+      ],
+      "timeline.bullet-active": [
+        "timeline"
+      ],
+      "timeline.fg-title": [
+        "timeline"
+      ],
+      "timeline.fg-body": [
+        "timeline"
+      ],
+      "toast.bg": [
+        "toast"
+      ],
+      "toast.fg": [
+        "toast"
+      ],
+      "toast.description-fg": [
+        "toast"
+      ],
+      "toast.border": [
+        "toast"
+      ],
+      "toast.icon-success": [
+        "toast"
+      ],
+      "toast.icon-error": [
+        "toast"
+      ],
+      "toast.icon-warning": [
+        "toast"
+      ],
+      "toast.icon-info": [
+        "toast"
+      ],
+      "toast.radius": [
+        "toast"
+      ],
+      "tool-call.bg": [
+        "tool-call-card"
+      ],
+      "tool-call.border": [
+        "tool-call-card"
+      ],
+      "tool-call.name": [
+        "tool-call-card"
+      ],
+      "tool-call.args-bg": [
+        "tool-call-card"
+      ],
+      "tool-call.status.pending": [
+        "tool-call-card"
+      ],
+      "tool-call.status.running": [
+        "tool-call-card"
+      ],
+      "tool-call.status.success": [
+        "tool-call-card"
+      ],
+      "tool-call.status.error": [
+        "tool-call-card"
+      ],
+      "tool-call.radius": [
+        "tool-call-card"
+      ],
+      "tooltip.bg": [
+        "tooltip"
+      ],
+      "tooltip.fg": [
+        "tooltip"
+      ],
+      "tooltip.border": [
+        "tooltip"
+      ],
+      "tooltip.radius": [
+        "tooltip"
+      ],
+      "tooltip.shadow": [
+        "tooltip"
+      ],
+      "tree.fg": [
+        "tree"
+      ],
+      "tree.bg-selected": [
+        "tree"
+      ],
+      "tree.guide": [
+        "tree"
+      ],
+      "tree.chevron": [
+        "tree"
+      ],
+      "undo-bar.bg": [
+        "undo-bar"
+      ],
+      "undo-bar.fg": [
+        "undo-bar"
+      ],
+      "validation-message.fg": [
+        "validation-message"
+      ],
+      "validation-message.error": [
+        "validation-message"
+      ],
+      "validation-message.warning": [
+        "validation-message"
+      ],
+      "validation-message.success": [
+        "validation-message"
+      ]
+    },
+    "pattern_to_components": {
+      "progressive-disclosure": [
+        "accordion"
+      ],
+      "faq": [
+        "accordion"
+      ],
+      "settings-groups": [
+        "accordion"
+      ],
+      "data-table": [
+        "activity-feed",
+        "audit-log-viewer",
+        "badge",
+        "bulk-action-bar",
+        "comment-thread",
+        "export-menu",
+        "faceted-filter",
+        "maintenance-banner",
+        "mention",
+        "notification-center",
+        "pagination",
+        "presence-indicator",
+        "rbac-matrix",
+        "role-picker",
+        "saved-views",
+        "session-device-list"
+      ],
+      "faceted-search": [
+        "activity-feed",
+        "audit-log-viewer",
+        "bulk-action-bar",
+        "comment-thread",
+        "export-menu",
+        "faceted-filter",
+        "maintenance-banner",
+        "mention",
+        "notification-center",
+        "presence-indicator",
+        "rbac-matrix",
+        "role-picker",
+        "saved-views",
+        "session-device-list"
+      ],
+      "chat": [
+        "agent-card",
+        "agent-picker",
+        "agent-status",
+        "artifact-frame",
+        "attachment-pill",
+        "citation-chip",
+        "code-block",
+        "composer",
+        "confidence-meter",
+        "context-meter",
+        "conversation-thread",
+        "cost-meter",
+        "diff-view",
+        "disclosure-badge",
+        "feedback-control",
+        "memory-panel",
+        "message",
+        "message-actions",
+        "model-selector",
+        "permission-request",
+        "plan-steps",
+        "prompt-suggestions",
+        "reasoning-trace",
+        "refusal-state",
+        "session-list",
+        "sources-panel",
+        "streaming-text",
+        "tool-call-card",
+        "undo-bar"
+      ],
+      "form-field": [
+        "alert",
+        "date-input"
+      ],
+      "page-header": [
+        "alert",
+        "badge",
+        "tooltip"
+      ],
+      "forms": [
+        "autocomplete",
+        "date-input",
+        "date-picker",
+        "fieldset",
+        "file-input",
+        "multi-select",
+        "number-input",
+        "password-input",
+        "pin-input",
+        "rating",
+        "slider",
+        "tags-input"
+      ],
+      "search": [
+        "autocomplete"
+      ],
+      "assignee-picker": [
+        "autocomplete"
+      ],
+      "data-display": [
+        "avatar",
+        "card",
+        "disclosure-badge",
+        "hover-card",
+        "notification",
+        "skeleton",
+        "spoiler",
+        "table",
+        "timeline"
+      ],
+      "global-header": [
+        "avatar",
+        "menu"
+      ],
+      "comment-thread": [
+        "avatar"
+      ],
+      "status-list": [
+        "badge"
+      ],
+      "form": [
+        "button",
+        "checkbox",
+        "radio",
+        "select",
+        "text-input",
+        "textarea"
+      ],
+      "action-bar": [
+        "button",
+        "menu",
+        "tooltip"
+      ],
+      "modal-footer": [
+        "button"
+      ],
+      "toolbar": [
+        "button"
+      ],
+      "empty-state": [
+        "card",
+        "composer"
+      ],
+      "dashboard-tile": [
+        "card"
+      ],
+      "cost-latency-transparency": [
+        "chart"
+      ],
+      "filter-list": [
+        "checkbox"
+      ],
+      "settings-row": [
+        "checkbox",
+        "switch"
+      ],
+      "filters": [
+        "drawer"
+      ],
+      "detail-panel": [
+        "drawer"
+      ],
+      "create-edit": [
+        "drawer"
+      ],
+      "tool-use": [
+        "hitl-gate",
+        "tool-call-card"
+      ],
+      "wizard": [
+        "hitl-gate"
+      ],
+      "row-actions": [
+        "menu"
+      ],
+      "confirm-dialog": [
+        "modal"
+      ],
+      "edit-form": [
+        "modal"
+      ],
+      "image-viewer": [
+        "modal"
+      ],
+      "search-results": [
+        "pagination"
+      ],
+      "list-view": [
+        "pagination"
+      ],
+      "upload": [
+        "progress"
+      ],
+      "import": [
+        "progress"
+      ],
+      "quota": [
+        "progress"
+      ],
+      "segmented-choice": [
+        "radio"
+      ],
+      "filter-bar": [
+        "select",
+        "text-input"
+      ],
+      "table-row-editor": [
+        "select",
+        "text-input"
+      ],
+      "loading": [
+        "skeleton"
+      ],
+      "dashboard": [
+        "skeleton",
+        "tabs"
+      ],
+      "feature-flag": [
+        "switch"
+      ],
+      "settings-page": [
+        "tabs"
+      ],
+      "object-details": [
+        "tabs"
+      ],
+      "search-bar": [
+        "text-input"
+      ],
+      "comment-box": [
+        "textarea"
+      ],
+      "note-editor": [
+        "textarea"
+      ],
+      "optimistic-correctable": [
+        "toast"
+      ],
+      "reversibility": [
+        "toast"
+      ]
+    },
+    "source_to_components": {
+      "packages/ui/src/components/Accordion.tsx": [
+        "accordion"
+      ],
+      "apps/storybook/stories/Accordion.stories.tsx": [
+        "accordion"
+      ],
+      "packages/ui/src/components/ActivityFeed.tsx": [
+        "activity-feed"
+      ],
+      "apps/storybook/stories/ActivityFeed.stories.tsx": [
+        "activity-feed"
+      ],
+      "packages/ui/src/components/ai/AgentCard.tsx": [
+        "agent-card"
+      ],
+      "apps/storybook/stories/ai/AgentCard.stories.tsx": [
+        "agent-card"
+      ],
+      "packages/ui/src/components/ai/AgentPicker.tsx": [
+        "agent-picker"
+      ],
+      "apps/storybook/stories/ai/AgentPicker.stories.tsx": [
+        "agent-picker"
+      ],
+      "packages/ui/src/components/ai/AgentStatus.tsx": [
+        "agent-status"
+      ],
+      "apps/storybook/stories/ai/AgentStatus.stories.tsx": [
+        "agent-status"
+      ],
+      "packages/ui/src/components/Alert.tsx": [
+        "alert"
+      ],
+      "apps/storybook/stories/Alert.stories.tsx": [
+        "alert"
+      ],
+      "packages/ui/src/components/Anchor.tsx": [
+        "anchor"
+      ],
+      "apps/storybook/stories/Anchor.stories.tsx": [
+        "anchor"
+      ],
+      "packages/ui/src/components/ai/ArtifactFrame.tsx": [
+        "artifact-frame"
+      ],
+      "apps/storybook/stories/ai/ArtifactFrame.stories.tsx": [
+        "artifact-frame"
+      ],
+      "packages/ui/src/components/ai/AttachmentPill.tsx": [
+        "attachment-pill"
+      ],
+      "apps/storybook/stories/ai/AttachmentPill.stories.tsx": [
+        "attachment-pill"
+      ],
+      "packages/ui/src/components/AuditLogViewer.tsx": [
+        "audit-log-viewer"
+      ],
+      "apps/storybook/stories/AuditLogViewer.stories.tsx": [
+        "audit-log-viewer"
+      ],
+      "packages/ui/src/components/Autocomplete.tsx": [
+        "autocomplete"
+      ],
+      "apps/storybook/stories/Autocomplete.stories.tsx": [
+        "autocomplete"
+      ],
+      "packages/ui/src/components/Avatar.tsx": [
+        "avatar"
+      ],
+      "apps/storybook/stories/Avatar.stories.tsx": [
+        "avatar"
+      ],
+      "packages/ui/src/components/Badge.tsx": [
+        "badge"
+      ],
+      "apps/storybook/stories/Badge.stories.tsx": [
+        "badge"
+      ],
+      "packages/ui/src/components/Breadcrumbs.tsx": [
+        "breadcrumbs"
+      ],
+      "apps/storybook/stories/Breadcrumbs.stories.tsx": [
+        "breadcrumbs"
+      ],
+      "packages/ui/src/components/BulkActionBar.tsx": [
+        "bulk-action-bar"
+      ],
+      "apps/storybook/stories/BulkActionBar.stories.tsx": [
+        "bulk-action-bar"
+      ],
+      "packages/ui/src/components/Button.tsx": [
+        "button"
+      ],
+      "apps/storybook/stories/Button.stories.tsx": [
+        "button"
+      ],
+      "packages/ui/src/components/ButtonGroup.tsx": [
+        "button-group"
+      ],
+      "apps/storybook/stories/ButtonGroup.stories.tsx": [
+        "button-group"
+      ],
+      "packages/ui/src/components/Calendar.tsx": [
+        "calendar"
+      ],
+      "apps/storybook/stories/Calendar.stories.tsx": [
+        "calendar"
+      ],
+      "packages/ui/src/components/Card.tsx": [
+        "card"
+      ],
+      "apps/storybook/stories/Card.stories.tsx": [
+        "card"
+      ],
+      "packages/ui/src/components/Carousel.tsx": [
+        "carousel"
+      ],
+      "apps/storybook/stories/Carousel.stories.tsx": [
+        "carousel"
+      ],
+      "packages/ui/src/components/CharacterCounter.tsx": [
+        "character-counter"
+      ],
+      "apps/storybook/stories/CharacterCounter.stories.tsx": [
+        "character-counter"
+      ],
+      "packages/ui/src/components/Chart.tsx": [
+        "chart"
+      ],
+      "apps/storybook/stories/Chart.stories.tsx": [
+        "chart"
+      ],
+      "packages/ui/src/components/Checkbox.tsx": [
+        "checkbox"
+      ],
+      "apps/storybook/stories/Checkbox.stories.tsx": [
+        "checkbox"
+      ],
+      "packages/ui/src/components/Chip.tsx": [
+        "chip"
+      ],
+      "apps/storybook/stories/Chip.stories.tsx": [
+        "chip"
+      ],
+      "packages/ui/src/components/ai/CitationChip.tsx": [
+        "citation-chip"
+      ],
+      "apps/storybook/stories/ai/CitationChip.stories.tsx": [
+        "citation-chip"
+      ],
+      "packages/ui/src/components/Code.tsx": [
+        "code"
+      ],
+      "apps/storybook/stories/Code.stories.tsx": [
+        "code"
+      ],
+      "packages/ui/src/components/ai/CodeBlock.tsx": [
+        "code-block"
+      ],
+      "apps/storybook/stories/ai/CodeBlock.stories.tsx": [
+        "code-block"
+      ],
+      "packages/ui/src/components/ColorInput.tsx": [
+        "color-input"
+      ],
+      "apps/storybook/stories/ColorInput.stories.tsx": [
+        "color-input"
+      ],
+      "packages/ui/src/components/CommentThread.tsx": [
+        "comment-thread"
+      ],
+      "apps/storybook/stories/CommentThread.stories.tsx": [
+        "comment-thread"
+      ],
+      "packages/ui/src/components/ai/Composer.tsx": [
+        "composer"
+      ],
+      "apps/storybook/stories/ai/Composer.stories.tsx": [
+        "composer"
+      ],
+      "packages/ui/src/components/ai/ConfidenceMeter.tsx": [
+        "confidence-meter"
+      ],
+      "apps/storybook/stories/ai/ConfidenceMeter.stories.tsx": [
+        "confidence-meter"
+      ],
+      "packages/ui/src/components/ai/ContextMeter.tsx": [
+        "context-meter"
+      ],
+      "apps/storybook/stories/ai/ContextMeter.stories.tsx": [
+        "context-meter"
+      ],
+      "packages/ui/src/components/ai/ConversationThread.tsx": [
+        "conversation-thread"
+      ],
+      "apps/storybook/stories/ai/ConversationThread.stories.tsx": [
+        "conversation-thread"
+      ],
+      "packages/ui/src/components/ai/CostMeter.tsx": [
+        "cost-meter"
+      ],
+      "apps/storybook/stories/ai/CostMeter.stories.tsx": [
+        "cost-meter"
+      ],
+      "packages/ui/src/components/DateInput.tsx": [
+        "date-input"
+      ],
+      "apps/storybook/stories/DateInput.stories.tsx": [
+        "date-input"
+      ],
+      "packages/ui/src/components/DatePicker.tsx": [
+        "date-picker"
+      ],
+      "apps/storybook/stories/DatePicker.stories.tsx": [
+        "date-picker"
+      ],
+      "packages/ui/src/components/DescriptionList.tsx": [
+        "description-list"
+      ],
+      "apps/storybook/stories/DescriptionList.stories.tsx": [
+        "description-list"
+      ],
+      "packages/ui/src/components/ai/DiffView.tsx": [
+        "diff-view"
+      ],
+      "apps/storybook/stories/ai/DiffView.stories.tsx": [
+        "diff-view"
+      ],
+      "packages/ui/src/components/trust/DisclosureBadge.tsx": [
+        "disclosure-badge"
+      ],
+      "apps/storybook/stories/trust/DisclosureBadge.stories.tsx": [
+        "disclosure-badge"
+      ],
+      "packages/ui/src/components/Divider.tsx": [
+        "divider"
+      ],
+      "apps/storybook/stories/Divider.stories.tsx": [
+        "divider"
+      ],
+      "packages/ui/src/components/Drawer.tsx": [
+        "drawer"
+      ],
+      "apps/storybook/stories/Drawer.stories.tsx": [
+        "drawer"
+      ],
+      "packages/ui/src/components/EmptyState.tsx": [
+        "empty-state"
+      ],
+      "apps/storybook/stories/EmptyState.stories.tsx": [
+        "empty-state"
+      ],
+      "packages/ui/src/components/ErrorState.tsx": [
+        "error-state"
+      ],
+      "apps/storybook/stories/ErrorState.stories.tsx": [
+        "error-state"
+      ],
+      "packages/ui/src/components/ExportMenu.tsx": [
+        "export-menu"
+      ],
+      "apps/storybook/stories/ExportMenu.stories.tsx": [
+        "export-menu"
+      ],
+      "packages/ui/src/components/Fab.tsx": [
+        "fab"
+      ],
+      "apps/storybook/stories/Fab.stories.tsx": [
+        "fab"
+      ],
+      "packages/ui/src/components/FacetedFilter.tsx": [
+        "faceted-filter"
+      ],
+      "apps/storybook/stories/FacetedFilter.stories.tsx": [
+        "faceted-filter"
+      ],
+      "packages/ui/src/components/feedback/FeedbackControl.tsx": [
+        "feedback-control"
+      ],
+      "apps/storybook/stories/feedback/FeedbackControl.stories.tsx": [
+        "feedback-control"
+      ],
+      "packages/ui/src/components/FieldLabel.tsx": [
+        "field-label"
+      ],
+      "apps/storybook/stories/FieldLabel.stories.tsx": [
+        "field-label"
+      ],
+      "packages/ui/src/components/Fieldset.tsx": [
+        "fieldset"
+      ],
+      "apps/storybook/stories/Fieldset.stories.tsx": [
+        "fieldset"
+      ],
+      "packages/ui/src/components/FileInput.tsx": [
+        "file-input"
+      ],
+      "apps/storybook/stories/FileInput.stories.tsx": [
+        "file-input"
+      ],
+      "packages/ui/src/components/HelperText.tsx": [
+        "helper-text"
+      ],
+      "apps/storybook/stories/HelperText.stories.tsx": [
+        "helper-text"
+      ],
+      "packages/ui/src/components/ai/HITLGate.tsx": [
+        "hitl-gate"
+      ],
+      "apps/storybook/stories/ai/HITLGate.stories.tsx": [
+        "hitl-gate"
+      ],
+      "packages/ui/src/components/HoverCard.tsx": [
+        "hover-card"
+      ],
+      "apps/storybook/stories/HoverCard.stories.tsx": [
+        "hover-card"
+      ],
+      "packages/ui/src/components/IconButton.tsx": [
+        "icon-button"
+      ],
+      "apps/storybook/stories/IconButton.stories.tsx": [
+        "icon-button"
+      ],
+      "packages/ui/src/components/Image.tsx": [
+        "image"
+      ],
+      "apps/storybook/stories/Image.stories.tsx": [
+        "image"
+      ],
+      "packages/ui/src/components/Indicator.tsx": [
+        "indicator"
+      ],
+      "apps/storybook/stories/Indicator.stories.tsx": [
+        "indicator"
+      ],
+      "packages/ui/src/components/InlineMessage.tsx": [
+        "inline-message"
+      ],
+      "apps/storybook/stories/InlineMessage.stories.tsx": [
+        "inline-message"
+      ],
+      "packages/ui/src/components/Kbd.tsx": [
+        "kbd"
+      ],
+      "apps/storybook/stories/Kbd.stories.tsx": [
+        "kbd"
+      ],
+      "packages/ui/src/components/List.tsx": [
+        "list"
+      ],
+      "apps/storybook/stories/List.stories.tsx": [
+        "list"
+      ],
+      "packages/ui/src/components/Loader.tsx": [
+        "loader"
+      ],
+      "apps/storybook/stories/Loader.stories.tsx": [
+        "loader"
+      ],
+      "packages/ui/src/components/LoadingState.tsx": [
+        "loading-state"
+      ],
+      "apps/storybook/stories/LoadingState.stories.tsx": [
+        "loading-state"
+      ],
+      "packages/ui/src/components/MaintenanceBanner.tsx": [
+        "maintenance-banner"
+      ],
+      "apps/storybook/stories/MaintenanceBanner.stories.tsx": [
+        "maintenance-banner"
+      ],
+      "packages/ui/src/components/ai/MemoryPanel.tsx": [
+        "memory-panel"
+      ],
+      "apps/storybook/stories/ai/MemoryPanel.stories.tsx": [
+        "memory-panel"
+      ],
+      "packages/ui/src/components/Mention.tsx": [
+        "mention"
+      ],
+      "apps/storybook/stories/Mention.stories.tsx": [
+        "mention"
+      ],
+      "packages/ui/src/components/Menu.tsx": [
+        "menu"
+      ],
+      "apps/storybook/stories/Menu.stories.tsx": [
+        "menu"
+      ],
+      "packages/ui/src/components/ai/Message.tsx": [
+        "message"
+      ],
+      "apps/storybook/stories/ai/Message.stories.tsx": [
+        "message"
+      ],
+      "packages/ui/src/components/ai/MessageActions.tsx": [
+        "message-actions"
+      ],
+      "apps/storybook/stories/ai/MessageActions.stories.tsx": [
+        "message-actions"
+      ],
+      "packages/ui/src/components/Modal.tsx": [
+        "modal"
+      ],
+      "apps/storybook/stories/Modal.stories.tsx": [
+        "modal"
+      ],
+      "packages/ui/src/components/ai/ModelSelector.tsx": [
+        "model-selector"
+      ],
+      "apps/storybook/stories/ai/ModelSelector.stories.tsx": [
+        "model-selector"
+      ],
+      "packages/ui/src/components/MultiSelect.tsx": [
+        "multi-select"
+      ],
+      "apps/storybook/stories/MultiSelect.stories.tsx": [
+        "multi-select"
+      ],
+      "packages/ui/src/components/Notification.tsx": [
+        "notification"
+      ],
+      "apps/storybook/stories/Notification.stories.tsx": [
+        "notification"
+      ],
+      "packages/ui/src/components/NotificationCenter.tsx": [
+        "notification-center"
+      ],
+      "apps/storybook/stories/NotificationCenter.stories.tsx": [
+        "notification-center"
+      ],
+      "packages/ui/src/components/NumberInput.tsx": [
+        "number-input"
+      ],
+      "apps/storybook/stories/NumberInput.stories.tsx": [
+        "number-input"
+      ],
+      "packages/ui/src/components/Pagination.tsx": [
+        "pagination"
+      ],
+      "apps/storybook/stories/Pagination.stories.tsx": [
+        "pagination"
+      ],
+      "packages/ui/src/components/PasswordInput.tsx": [
+        "password-input"
+      ],
+      "apps/storybook/stories/PasswordInput.stories.tsx": [
+        "password-input"
+      ],
+      "packages/ui/src/components/ai/PermissionRequest.tsx": [
+        "permission-request"
+      ],
+      "apps/storybook/stories/ai/PermissionRequest.stories.tsx": [
+        "permission-request"
+      ],
+      "packages/ui/src/components/Pill.tsx": [
+        "pill"
+      ],
+      "apps/storybook/stories/Pill.stories.tsx": [
+        "pill"
+      ],
+      "packages/ui/src/components/PinInput.tsx": [
+        "pin-input"
+      ],
+      "apps/storybook/stories/PinInput.stories.tsx": [
+        "pin-input"
+      ],
+      "packages/ui/src/components/ai/PlanSteps.tsx": [
+        "plan-steps"
+      ],
+      "apps/storybook/stories/ai/PlanSteps.stories.tsx": [
+        "plan-steps"
+      ],
+      "packages/ui/src/components/Popover.tsx": [
+        "popover"
+      ],
+      "apps/storybook/stories/Popover.stories.tsx": [
+        "popover"
+      ],
+      "packages/ui/src/components/PresenceIndicator.tsx": [
+        "presence-indicator"
+      ],
+      "apps/storybook/stories/PresenceIndicator.stories.tsx": [
+        "presence-indicator"
+      ],
+      "packages/ui/src/components/Progress.tsx": [
+        "progress"
+      ],
+      "apps/storybook/stories/Progress.stories.tsx": [
+        "progress"
+      ],
+      "packages/ui/src/components/ProgressCircle.tsx": [
+        "progress-circle"
+      ],
+      "apps/storybook/stories/ProgressCircle.stories.tsx": [
+        "progress-circle"
+      ],
+      "packages/ui/src/components/ai/PromptSuggestions.tsx": [
+        "prompt-suggestions"
+      ],
+      "apps/storybook/stories/ai/PromptSuggestions.stories.tsx": [
+        "prompt-suggestions"
+      ],
+      "packages/ui/src/components/Radio.tsx": [
+        "radio"
+      ],
+      "apps/storybook/stories/Radio.stories.tsx": [
+        "radio"
+      ],
+      "packages/ui/src/components/Rating.tsx": [
+        "rating"
+      ],
+      "apps/storybook/stories/Rating.stories.tsx": [
+        "rating"
+      ],
+      "packages/ui/src/components/RbacMatrix.tsx": [
+        "rbac-matrix"
+      ],
+      "apps/storybook/stories/RbacMatrix.stories.tsx": [
+        "rbac-matrix"
+      ],
+      "packages/ui/src/components/ai/ReasoningTrace.tsx": [
+        "reasoning-trace"
+      ],
+      "apps/storybook/stories/ai/ReasoningTrace.stories.tsx": [
+        "reasoning-trace"
+      ],
+      "packages/ui/src/components/ai/RefusalState.tsx": [
+        "refusal-state"
+      ],
+      "apps/storybook/stories/ai/RefusalState.stories.tsx": [
+        "refusal-state"
+      ],
+      "packages/ui/src/components/RolePicker.tsx": [
+        "role-picker"
+      ],
+      "apps/storybook/stories/RolePicker.stories.tsx": [
+        "role-picker"
+      ],
+      "packages/ui/src/components/SavedViews.tsx": [
+        "saved-views"
+      ],
+      "apps/storybook/stories/SavedViews.stories.tsx": [
+        "saved-views"
+      ],
+      "packages/ui/src/components/SearchField.tsx": [
+        "search-field"
+      ],
+      "apps/storybook/stories/SearchField.stories.tsx": [
+        "search-field"
+      ],
+      "packages/ui/src/components/SegmentedControl.tsx": [
+        "segmented-control"
+      ],
+      "apps/storybook/stories/SegmentedControl.stories.tsx": [
+        "segmented-control"
+      ],
+      "packages/ui/src/components/Select.tsx": [
+        "select"
+      ],
+      "apps/storybook/stories/Select.stories.tsx": [
+        "select"
+      ],
+      "packages/ui/src/components/SessionDeviceList.tsx": [
+        "session-device-list"
+      ],
+      "apps/storybook/stories/SessionDeviceList.stories.tsx": [
+        "session-device-list"
+      ],
+      "packages/ui/src/components/ai/SessionList.tsx": [
+        "session-list"
+      ],
+      "apps/storybook/stories/ai/SessionList.stories.tsx": [
+        "session-list"
+      ],
+      "packages/ui/src/components/Skeleton.tsx": [
+        "skeleton"
+      ],
+      "apps/storybook/stories/Skeleton.stories.tsx": [
+        "skeleton"
+      ],
+      "packages/ui/src/components/Slider.tsx": [
+        "slider"
+      ],
+      "apps/storybook/stories/Slider.stories.tsx": [
+        "slider"
+      ],
+      "packages/ui/src/components/ai/SourcesPanel.tsx": [
+        "sources-panel"
+      ],
+      "apps/storybook/stories/ai/SourcesPanel.stories.tsx": [
+        "sources-panel"
+      ],
+      "packages/ui/src/components/Sparkline.tsx": [
+        "sparkline"
+      ],
+      "apps/storybook/stories/Sparkline.stories.tsx": [
+        "sparkline"
+      ],
+      "packages/ui/src/components/SplitButton.tsx": [
+        "split-button"
+      ],
+      "apps/storybook/stories/SplitButton.stories.tsx": [
+        "split-button"
+      ],
+      "packages/ui/src/components/Spoiler.tsx": [
+        "spoiler"
+      ],
+      "apps/storybook/stories/Spoiler.stories.tsx": [
+        "spoiler"
+      ],
+      "packages/ui/src/components/Stat.tsx": [
+        "stat"
+      ],
+      "apps/storybook/stories/Stat.stories.tsx": [
+        "stat"
+      ],
+      "packages/ui/src/components/StatusDot.tsx": [
+        "status-dot"
+      ],
+      "apps/storybook/stories/StatusDot.stories.tsx": [
+        "status-dot"
+      ],
+      "packages/ui/src/components/Stepper.tsx": [
+        "stepper"
+      ],
+      "apps/storybook/stories/Stepper.stories.tsx": [
+        "stepper"
+      ],
+      "packages/ui/src/components/ai/StreamingText.tsx": [
+        "streaming-text"
+      ],
+      "apps/storybook/stories/ai/StreamingText.stories.tsx": [
+        "streaming-text"
+      ],
+      "packages/ui/src/components/SuccessState.tsx": [
+        "success-state"
+      ],
+      "apps/storybook/stories/SuccessState.stories.tsx": [
+        "success-state"
+      ],
+      "packages/ui/src/components/Switch.tsx": [
+        "switch"
+      ],
+      "apps/storybook/stories/Switch.stories.tsx": [
+        "switch"
+      ],
+      "packages/ui/src/components/Table.tsx": [
+        "table"
+      ],
+      "apps/storybook/stories/Table.stories.tsx": [
+        "table"
+      ],
+      "packages/ui/src/components/Tabs.tsx": [
+        "tabs"
+      ],
+      "apps/storybook/stories/Tabs.stories.tsx": [
+        "tabs"
+      ],
+      "packages/ui/src/components/TagsInput.tsx": [
+        "tags-input"
+      ],
+      "apps/storybook/stories/TagsInput.stories.tsx": [
+        "tags-input"
+      ],
+      "packages/ui/src/components/TextInput.tsx": [
+        "text-input"
+      ],
+      "apps/storybook/stories/TextInput.stories.tsx": [
+        "text-input"
+      ],
+      "packages/ui/src/components/Textarea.tsx": [
+        "textarea"
+      ],
+      "apps/storybook/stories/Textarea.stories.tsx": [
+        "textarea"
+      ],
+      "packages/ui/src/components/ThemeIcon.tsx": [
+        "theme-icon"
+      ],
+      "apps/storybook/stories/ThemeIcon.stories.tsx": [
+        "theme-icon"
+      ],
+      "packages/ui/src/components/Timeline.tsx": [
+        "timeline"
+      ],
+      "apps/storybook/stories/Timeline.stories.tsx": [
+        "timeline"
+      ],
+      "packages/ui/src/components/Toast.tsx": [
+        "toast"
+      ],
+      "apps/storybook/stories/Toast.stories.tsx": [
+        "toast"
+      ],
+      "packages/ui/src/components/ai/ToolCallCard.tsx": [
+        "tool-call-card"
+      ],
+      "apps/storybook/stories/ai/ToolCallCard.stories.tsx": [
+        "tool-call-card"
+      ],
+      "packages/ui/src/components/Tooltip.tsx": [
+        "tooltip"
+      ],
+      "apps/storybook/stories/Tooltip.stories.tsx": [
+        "tooltip"
+      ],
+      "packages/ui/src/components/Tree.tsx": [
+        "tree"
+      ],
+      "apps/storybook/stories/Tree.stories.tsx": [
+        "tree"
+      ],
+      "packages/ui/src/components/ai/UndoBar.tsx": [
+        "undo-bar"
+      ],
+      "apps/storybook/stories/ai/UndoBar.stories.tsx": [
+        "undo-bar"
+      ],
+      "packages/ui/src/components/ValidationMessage.tsx": [
+        "validation-message"
+      ],
+      "apps/storybook/stories/ValidationMessage.stories.tsx": [
+        "validation-message"
+      ]
+    }
+  }
+}
