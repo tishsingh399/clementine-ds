@@ -19,6 +19,7 @@
   },
   "navbar": {
     "links": [
+      { "label": "Playground", "href": "https://clementine-ds-site.vercel.app" },
       { "label": "Storybook", "href": "https://clementine-ds-storybook.vercel.app" },
       { "label": "Notion", "href": "https://tinasingh.notion.site/Clementine-DS-379e72c9cf36806f9a5ce8fdb927b93f" }
     ],
@@ -83,6 +84,11 @@
     ],
     "global": {
       "anchors": [
+        {
+          "anchor": "Live Playground",
+          "href": "https://clementine-ds-site.vercel.app",
+          "icon": "sparkles"
+        },
         {
           "anchor": "GitHub",
           "href": "https://github.com/tishsingh399/clementine-ds",
