@@ -1,6 +1,7 @@
 # clementine-ds — an agentic design system
 
 [![Docs](https://img.shields.io/badge/Docs-Mintlify-22d3ee?logo=mintlify&logoColor=white)](https://clementineds.mintlify.app)
+[![Playground](https://img.shields.io/badge/Playground-Live-f97316)](https://clementine-ds-site.vercel.app)
 [![Storybook](https://img.shields.io/badge/Storybook-Live-ff4785?logo=storybook&logoColor=white)](https://clementine-ds-storybook.vercel.app)
 [![CI](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml/badge.svg)](https://github.com/tishsingh399/clementine-ds/actions/workflows/codeql.yml)
@@ -19,6 +20,7 @@ A small, opinionated React design system that ships with **machine-readable spec
 | Surface | Where | What it holds |
 |---|---|---|
 | 📦 Code | This repo | React components, 3-tier tokens, per-component specs |
+| 🍊 Live Playground | [clementine-ds-site.vercel.app](https://clementine-ds-site.vercel.app) | Marketing overview + interactive contract playground for the Clementine story: component preview, closed token contract, ARIA requirements, agent packet, verifier route |
 | 🚀 Live Storybook | [clementine-ds-storybook.vercel.app](https://clementine-ds-storybook.vercel.app) | <!-- COUNTS:components -->121<!-- /COUNTS --> components (UI + AI surfaces + enterprise) running live; component paint resolves through the 3-tier cascade (verified by `pnpm validate`), auto-deploys on `git push origin main` after CI passes |
 | 📘 Mintlify docs | [clementineds.mintlify.app](https://clementineds.mintlify.app) | Hosted docs site, auto-synced from this repo. Same content as `docs/readme/` and the Notion tree, with Mintlify's native search + nav. |
 | 📐 Figma | [Clementine DS Figma file](https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS) | 3 variable collections; **all <!-- COUNTS:components -->121<!-- /COUNTS --> components' tokens synced as variables (<!-- COUNTS:component-tokens -->628<!-- /COUNTS --> component vars, cascade-aliased; diffed against code by [`scripts/figma-parity.mjs`](./scripts/figma-parity.mjs))** + rendered as real components across 7 category pages — Actions & Inputs · Containers & Navigation · Display & Feedback · AI Surfaces · Enterprise · Trust & Feedback · Dates, Charts, Toast & Carousel — plus a Cover page. Component paint resolves through the Tier-3 → semantic → primitive cascade at runtime; contract parity is checked by [`scripts/parity-report.mjs`](./scripts/parity-report.mjs). |
