@@ -46,7 +46,7 @@ export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
   ({ risk, color, variant, style, ...props }, ref) => {
     const resolvedColor = risk ? riskColorMap[risk] : color;
     const resolvedVariant = risk ? riskVariantMap[risk] : variant;
-    const intent = risk ? undefined : colorIntentMap[resolvedColor ?? 'gray'] ?? 'neutral';
+    const intent = colorIntentMap[resolvedColor ?? 'gray'] ?? 'neutral';
     const backgroundColor = risk ? tokenBgByRisk[risk] : tokenBgByIntent[intent];
 
     return (
@@ -54,7 +54,7 @@ export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
         ref={ref}
         color={resolvedColor}
         variant={resolvedVariant}
-        data-intent={intent}
+        data-intent={risk ? undefined : intent}
         data-risk={risk}
         style={[
           { backgroundColor },
