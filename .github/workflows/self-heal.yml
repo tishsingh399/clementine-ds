@@ -1,0 +1,125 @@
+name: Self-heal
+
+# The loop: Measure → Flag → Fix → Gate → Encode.
+#
+# This workflow is the automated inner cycle for the MECHANICAL drift class —
+# files that are derivable from the source of truth (the generated component
+# index, the agentic knowledge indexes, the doc count markers). The fixers are
+# deterministic scripts, not an AI: same input, same output, reviewable diff.
+#
+# Judgment-class findings (a component off its contract, a stale spec) are NOT
+# auto-fixed — they're filed as a GitHub issue for a human/agent to close.
+#
+# Guardrails:
+#  - kill switch: repo variable LOOP_PAUSED=true stops the loop entirely
+#  - scalpel:     `skip: <fixer>` lines in governance/loop-rules.md disable one fixer
+#  - gate:        the fix ships as a PR; branch protection requires the
+#                 independent "Contract gates" check to pass on that exact
+#                 commit before auto-merge can complete
+#  - bounded:     the loop may only run the three named fixers; it never edits
+#                 components, specs, tokens source, or loop-rules.md
+on:
+  schedule:
+    - cron: '30 6 * * *' # nightly, after the DOM-parity run
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: self-heal
+  cancel-in-progress: false
+
+jobs:
+  heal:
+    name: Detect and heal mechanical drift
+    runs-on: ubuntu-latest
+    if: ${{ vars.LOOP_PAUSED != 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @clementine-ds/tokens build
+
+      - name: Run fixers (obeying governance/loop-rules.md)
+        run: |
+          skip() { grep -qE "^skip: $1\$" governance/loop-rules.md; }
+          skip tokens-index    || pnpm tokens:index
+          skip agentic-indexes || pnpm agentic:indexes
+          skip counts          || pnpm counts
+
+      - name: Anything to heal?
+        id: diff
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Boring pass — nothing drifted. That's the loop working."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --stat
+          fi
+
+      - name: Verify the healed tree in-job (belt; the PR gate is braces)
+        if: steps.diff.outputs.changed == 'true'
+        run: pnpm contract
+
+      - name: Open the loop PR with auto-merge
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="loop/heal-$(date -u +%Y%m%d-%H%M)"
+          git config user.name  "clementine-loop"
+          git config user.email "loop@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git commit -m "loop: heal mechanical drift (regenerated derivable files)"
+          git push origin "$BRANCH"
+          gh label create self-heal --force --color F97316 \
+            --description "Opened by the self-healing loop" >/dev/null 2>&1 || true
+          PR_URL=$(gh pr create --base main --head "$BRANCH" --label self-heal \
+            --title "loop: heal mechanical drift" \
+            --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, agentic:indexes, counts) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
+          # The PR was created by the workflow token, which does not trigger
+          # other workflows — so ask the independent gate to inspect the branch.
+          gh workflow run "Contract checks" --ref "$BRANCH"
+          gh pr merge --auto --squash "$PR_URL"
+          echo "Loop PR: $PR_URL (auto-merge armed, waiting on the gate)"
+
+      - name: File judgment-class findings as an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/parity-report.mjs > /tmp/parity.txt 2>&1 || true
+          node scripts/check-spec-honesty.mjs > /tmp/honesty.txt 2>&1 || true
+          BELOW=$(grep -oE '[0-9]+ below' /tmp/parity.txt | grep -oE '^[0-9]+' || echo 0)
+          WARNS=$(grep -oE '[0-9]+ warning' /tmp/honesty.txt | grep -oE '^[0-9]+' || echo 0)
+          if [ "${BELOW:-0}" -gt 0 ] || [ "${WARNS:-0}" -gt 0 ]; then
+            TITLE="loop: judgment-class findings need a human or an agent"
+            BODY="Found by the nightly loop — these are NOT auto-fixed by design.
+
+\`\`\`
+$(cat /tmp/parity.txt)
+$(grep '⚠︎' /tmp/honesty.txt || true)
+\`\`\`"
+            EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --body "$BODY"
+            else
+              gh issue create --title "$TITLE" --body "$BODY" --label self-heal
+            fi
+          else
+            echo "No judgment-class findings. Nothing to file."
+          fi
