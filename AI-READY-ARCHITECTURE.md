@@ -4,6 +4,11 @@
 
 Every *buildable* artifact in Clementine follows the same closed contract — **token → spec → component → story (→ Figma)** — so an AI agent can read the contract before writing code. The AI trays extend that contract; they don't replace it. See [AGENTS.md](./AGENTS.md) for the contract mechanics.
 
+Not every AI tool consumes that contract the same way. Git-native agents can
+usually inspect the repo directly; design-native tools such as Figma Make and
+Claude Design may need a smaller interpretation packet or kit. See
+[`docs/AI-TOOL-ADAPTERS.md`](./docs/AI-TOOL-ADAPTERS.md) for the testing plan.
+
 **Legend:** ✅ in place · 🟡 partial · 🔲 net-new
 
 ---
