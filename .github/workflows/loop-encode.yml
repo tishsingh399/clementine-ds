@@ -23,13 +23,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          {
+            echo "A human closed loop PR #${{ github.event.pull_request.number }} without merging it. Per the loop's contract, a rejection is not allowed to evaporate — it becomes a rule."
+            echo ""
+            echo "Do one of these in \`governance/loop-rules.md\`:"
+            echo "1. Add a ledger entry: the date, what was wrong with the PR, and the rule that prevents it next time."
+            echo "2. If a whole fixer should stop running, add a \`skip: <fixer>\` line (tokens-index / agentic-indexes / counts)."
+            echo ""
+            echo "The nightly loop reads that file before every run. Close this issue when the rule is written."
+          } > /tmp/body.md
           gh issue create --repo "${{ github.repository }}" \
             --title "Encode: loop PR #${{ github.event.pull_request.number }} was rejected — write the rule" \
             --label self-heal \
-            --body "A human closed loop PR #${{ github.event.pull_request.number }} without merging it. Per the loop's contract, a rejection is not allowed to evaporate — it becomes a rule.
-
-**Do one of these in \`governance/loop-rules.md\`:**
-1. Add a ledger entry: the date, what was wrong with the PR, and the rule that prevents it next time.
-2. If a whole fixer should stop running, add a \`skip: <fixer>\` line (\`tokens-index\` / \`agentic-indexes\` / \`counts\`).
-
-The nightly loop reads that file before every run. Close this issue when the rule is written."
+            --body-file /tmp/body.md

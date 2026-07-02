@@ -108,17 +108,19 @@ jobs:
           WARNS=$(grep -oE '[0-9]+ warning' /tmp/honesty.txt | grep -oE '^[0-9]+' || echo 0)
           if [ "${BELOW:-0}" -gt 0 ] || [ "${WARNS:-0}" -gt 0 ]; then
             TITLE="loop: judgment-class findings need a human or an agent"
-            BODY="Found by the nightly loop — these are NOT auto-fixed by design.
-
-\`\`\`
-$(cat /tmp/parity.txt)
-$(grep '⚠︎' /tmp/honesty.txt || true)
-\`\`\`"
+            {
+              echo "Found by the nightly loop — these are NOT auto-fixed by design."
+              echo ""
+              echo '```'
+              cat /tmp/parity.txt
+              grep '⚠︎' /tmp/honesty.txt || true
+              echo '```'
+            } > /tmp/body.md
             EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')
             if [ -n "$EXISTING" ]; then
-              gh issue comment "$EXISTING" --body "$BODY"
+              gh issue comment "$EXISTING" --body-file /tmp/body.md
             else
-              gh issue create --title "$TITLE" --body "$BODY" --label self-heal
+              gh issue create --title "$TITLE" --body-file /tmp/body.md --label self-heal
             fi
           else
             echo "No judgment-class findings. Nothing to file."
