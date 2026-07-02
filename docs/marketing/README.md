@@ -14,6 +14,21 @@ Clementine is an agentic design system: code, Storybook, and machine-readable sp
 - The verifier catches the seeded agent mistakes that shallow automation tends to miss.
 - The governance layer now has a loop: watch, diagnose, fix, learn.
 
+## Next Article Thread
+
+The next question is not whether a design system can become machine-readable.
+Clementine already tests that.
+
+The next question is whether different AI tools can consume the same design
+system context.
+
+Git-native agents such as Codex, Claude Code, Cursor, and Replit can inspect the
+repo directly. Figma Make and Claude Design may need adapters: a compact Figma
+Make kit, a Claude Design handoff packet, or an MCP/context layer that serves the
+right slice of Clementine at the right time.
+
+See [`docs/AI-TOOL-ADAPTERS.md`](../AI-TOOL-ADAPTERS.md).
+
 ## LinkedIn Post Draft
 
 I spent the last stretch turning Clementine from a component library into a governed design system for AI agents.
