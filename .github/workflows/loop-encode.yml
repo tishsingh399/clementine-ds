@@ -1,0 +1,35 @@
+name: Loop encode
+
+# The Encode stage: a rejected loop PR must become a written rule.
+# When a `self-heal` PR is closed WITHOUT merging, this opens an issue that
+# asks for one thing — a rule line in governance/loop-rules.md — so the next
+# pass is sharper instead of repeating the same rejected fix.
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  issues: write
+
+jobs:
+  encode:
+    name: Rejection becomes a rule
+    runs-on: ubuntu-latest
+    if: >
+      github.event.pull_request.merged == false &&
+      contains(github.event.pull_request.labels.*.name, 'self-heal')
+    steps:
+      - name: Open the encode task
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Encode: loop PR #${{ github.event.pull_request.number }} was rejected — write the rule" \
+            --label self-heal \
+            --body "A human closed loop PR #${{ github.event.pull_request.number }} without merging it. Per the loop's contract, a rejection is not allowed to evaporate — it becomes a rule.
+
+**Do one of these in \`governance/loop-rules.md\`:**
+1. Add a ledger entry: the date, what was wrong with the PR, and the rule that prevents it next time.
+2. If a whole fixer should stop running, add a \`skip: <fixer>\` line (\`tokens-index\` / \`agentic-indexes\` / \`counts\`).
+
+The nightly loop reads that file before every run. Close this issue when the rule is written."

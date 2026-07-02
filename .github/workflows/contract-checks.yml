@@ -1,19 +1,15 @@
 name: Contract checks
 
-# Gates the contract layer on every PR so the validators added alongside the
-# Tier-3 runtime bridge can't quietly regress. Runs only when the contract
-# surface (specs, tokens, ui, scripts, config) changes.
+# The independent gate. Runs on EVERY PR (no path filter) so it can be a
+# required status check on main — and it accepts workflow_dispatch so the
+# self-heal loop can ask it to inspect a loop branch (PRs opened by the
+# workflow token don't trigger pull_request workflows on their own).
+# The check reports on the exact commit; GitHub only lets auto-merge finish
+# if it's green. Agents propose. This gate decides.
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'specs/**'
-      - 'packages/tokens/**'
-      - 'packages/ui/**'
-      - 'scripts/**'
-      - '.agenticspec.config.json'
-      - 'package.json'
-      - '.github/workflows/contract-checks.yml'
+  workflow_dispatch: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
