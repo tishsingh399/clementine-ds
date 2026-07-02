@@ -40,6 +40,15 @@ jobs:
     if: ${{ vars.LOOP_PAUSED != 'true' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # With a LOOP_TOKEN secret (fine-grained PAT, this repo, contents+PR
+          # write), loop PRs are authored as the owner: the gate runs natively
+          # on the PR and auto-merge completes unattended (full-auto). Without
+          # it, the workflow token opens the PR and GitHub holds the PR-bound
+          # gate run for a one-click "approve and run" (semi-auto). Either way
+          # the same independent gate decides; the token only changes who is
+          # named as the PR author.
+          token: ${{ secrets.LOOP_TOKEN || github.token }}
 
       - uses: pnpm/action-setup@v4
         with:
@@ -79,7 +88,7 @@ jobs:
       - name: Open the loop PR with auto-merge
         if: steps.diff.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.LOOP_TOKEN || github.token }}
         run: |
           BRANCH="loop/heal-$(date -u +%Y%m%d-%H%M)"
           git config user.name  "clementine-loop"
