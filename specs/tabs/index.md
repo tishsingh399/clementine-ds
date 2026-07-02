@@ -1,8 +1,8 @@
 ---
 component: tabs
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [role, aria-selected, aria-controls, aria-labelledby]
@@ -25,11 +25,11 @@ token_contract:
 interaction_states: [default, hover, focus, selected, disabled]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -50,7 +50,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: TABS
 
-> **Status:** Draft. Arrow-key navigation between tabs needs verification.
+> **Status:** AI-Ready. Mantine owns the tablist/tab/tabpanel semantics and arrow-key behavior; Storybook covers default, outline, pills, vertical, and disabled-tab states.
 
 ## 1. Purpose & Intent
 

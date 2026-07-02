@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/switch/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Switch.tsx)
 
-Status: `Draft`.
+Status: `AI-Ready`. Switch is the immediate-effect setting pattern; Checkbox remains the form-field pattern.
 
 ## Overview
 

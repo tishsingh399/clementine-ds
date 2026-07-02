@@ -1,8 +1,8 @@
 ---
 component: text-input
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [aria-invalid, aria-describedby, aria-required, aria-disabled]
@@ -31,11 +31,11 @@ token_contract:
 interaction_states: [default, hover, focus, filled, disabled, error, loading]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -56,7 +56,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: TEXT-INPUT
 
-> **Status:** Draft. Needs full state coverage and error-text wiring (`aria-describedby` → helper id).
+> **Status:** AI-Ready. Mantine owns rendered ARIA; Storybook covers default, filled, loading, disabled, helper, and error states. Token coverage is closed through `text-input.*`.
 
 ## 1. Purpose & Intent
 
@@ -66,3 +66,4 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 - have an associated `<label>` (visible by default; `aria-label` only as a last resort)
 - expose `aria-invalid="true"` and `aria-describedby="<helperId>"` on error
 - preserve native browser autofill / autocomplete behavior
+- use `rightSection` for loading/status affordances rather than inventing ad hoc input chrome

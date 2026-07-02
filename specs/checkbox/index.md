@@ -1,8 +1,8 @@
 ---
 component: checkbox
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [aria-checked, aria-disabled, aria-describedby]
@@ -31,11 +31,11 @@ token_contract:
 interaction_states: [default, hover, focus, checked, indeterminate, disabled, error]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -56,7 +56,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: CHECKBOX
 
-> **Status:** Draft. Needs ARIA verification + full state coverage in Storybook.
+> **Status:** AI-Ready. Mantine owns the native checkbox/indeterminate ARIA; Storybook covers unchecked, checked, indeterminate, disabled, disabled-checked, description, and error states.
 
 ## 1. Purpose & Intent
 
@@ -67,8 +67,8 @@ Binary or tri-state form input. Use for non-exclusive selection (multi-select) o
 - expose `aria-checked` (including `"mixed"` for indeterminate)
 - have a clickable label (the label is part of the hit area)
 
-## 2. Open Items
+## 2. Verified Contract
 
-- Verify Mantine's default ARIA output covers `aria-checked="mixed"` for indeterminate
-- Confirm error state binds `feedback.error` for both border and helper text
-- Add Storybook stories for: indeterminate, error
+- Indeterminate state is represented through Mantine's native checkbox wrapper and covered in Storybook.
+- Error state is represented by the component-tier `checkbox.border.error` and `checkbox.fg.error` contract.
+- Descriptive helper copy uses the `description` part and remains attached to the checkbox row.

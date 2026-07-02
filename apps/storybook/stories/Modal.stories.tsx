@@ -53,6 +53,15 @@ export const Centered: Story = {
   },
 };
 
+export const InitiallyOpen: Story = {
+  args: { opened: true, onClose: () => undefined },
+  render: (args) => (
+    <Modal {...args}>
+      <Text>Open modal state for visual and accessibility review.</Text>
+    </Modal>
+  ),
+};
+
 export const WithForm: Story = {
   args: { title: 'Create Access Request' },
   render: (args) => {

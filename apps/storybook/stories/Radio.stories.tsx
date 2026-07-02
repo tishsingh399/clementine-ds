@@ -38,3 +38,16 @@ export const WithDefault: Story = {
 export const WithDescription: Story = {
   args: { description: 'Choose the role for this user' },
 };
+
+export const DisabledOption: Story = {
+  render: (args) => (
+    <RadioGroup {...args}>
+      <Stack gap="xs" mt="xs">
+        <Radio value="admin" label="Administrator" />
+        <Radio value="operator" label="Operator" />
+        <Radio value="auditor" label="Auditor" disabled />
+        <Radio value="viewer" label="Viewer" />
+      </Stack>
+    </RadioGroup>
+  ),
+};

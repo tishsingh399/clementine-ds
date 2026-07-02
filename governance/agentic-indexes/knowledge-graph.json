@@ -4,8 +4,8 @@
   "purpose": "Impact graph for agent planning. Generated from Clementine spec frontmatter.",
   "totals": {
     "components": 121,
-    "ai_ready": 113,
-    "draft": 8
+    "ai_ready": 121,
+    "draft": 0
   },
   "nodes": {
     "accordion": {
@@ -830,8 +830,8 @@
     },
     "checkbox": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 57,
+      "status": "AI-Ready",
+      "trust_health": 100,
       "spec_path": "specs/checkbox/index.md",
       "code_path": "packages/ui/src/components/Checkbox.tsx",
       "story_path": "apps/storybook/stories/Checkbox.stories.tsx",
@@ -874,8 +874,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "chip": {
@@ -2303,8 +2302,8 @@
     },
     "modal": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 50,
+      "status": "AI-Ready",
+      "trust_health": 93,
       "spec_path": "specs/modal/index.md",
       "code_path": "packages/ui/src/components/Modal.tsx",
       "story_path": "apps/storybook/stories/Modal.stories.tsx",
@@ -2340,8 +2339,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "model-selector": {
@@ -2916,8 +2914,8 @@
     },
     "radio": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 51,
+      "status": "AI-Ready",
+      "trust_health": 94,
       "spec_path": "specs/radio/index.md",
       "code_path": "packages/ui/src/components/Radio.tsx",
       "story_path": "apps/storybook/stories/Radio.stories.tsx",
@@ -2952,8 +2950,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "rating": {
@@ -3224,8 +3221,8 @@
     },
     "select": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 57,
+      "status": "AI-Ready",
+      "trust_health": 100,
       "spec_path": "specs/select/index.md",
       "code_path": "packages/ui/src/components/Select.tsx",
       "story_path": "apps/storybook/stories/Select.stories.tsx",
@@ -3271,8 +3268,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "session-device-list": {
@@ -3699,8 +3695,8 @@
     },
     "switch": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 49,
+      "status": "AI-Ready",
+      "trust_health": 92,
       "spec_path": "specs/switch/index.md",
       "code_path": "packages/ui/src/components/Switch.tsx",
       "story_path": "apps/storybook/stories/Switch.stories.tsx",
@@ -3733,8 +3729,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "table": {
@@ -3775,8 +3770,8 @@
     },
     "tabs": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 51,
+      "status": "AI-Ready",
+      "trust_health": 94,
       "spec_path": "specs/tabs/index.md",
       "code_path": "packages/ui/src/components/Tabs.tsx",
       "story_path": "apps/storybook/stories/Tabs.stories.tsx",
@@ -3811,8 +3806,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "tags-input": {
@@ -3855,8 +3849,8 @@
     },
     "text-input": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 57,
+      "status": "AI-Ready",
+      "trust_health": 100,
       "spec_path": "specs/text-input/index.md",
       "code_path": "packages/ui/src/components/TextInput.tsx",
       "story_path": "apps/storybook/stories/TextInput.stories.tsx",
@@ -3900,14 +3894,13 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "textarea": {
       "type": "Component",
-      "status": "Draft",
-      "trust_health": 57,
+      "status": "AI-Ready",
+      "trust_health": 100,
       "spec_path": "specs/textarea/index.md",
       "code_path": "packages/ui/src/components/Textarea.tsx",
       "story_path": "apps/storybook/stories/Textarea.stories.tsx",
@@ -3947,8 +3940,7 @@
       "pages": [],
       "review_lenses": [
         "a11y",
-        "edge-states",
-        "token-drift"
+        "edge-states"
       ]
     },
     "theme-icon": {

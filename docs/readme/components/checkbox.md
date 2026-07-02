@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/checkbox/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Checkbox.tsx)
 
-Status: `Draft`. Component token file pending.
+Status: `AI-Ready`. Component token file exists and Storybook covers checked, indeterminate, disabled, description, and error states.
 
 ## Overview
 
@@ -20,13 +20,11 @@ Binary or tri-state form input. For exclusive choice use Radio. For settings out
 
 ## States
 
-`default`, `hover`, `focus`, `checked`, `indeterminate`, `disabled`, `error`
+`default`, `hover`, `focus`, `checked`, `indeterminate`, `disabled`, `error`, `description`
 
 ## Accessibility
 
 Must be a native `<input type="checkbox">` with `aria-checked` exposed. Indeterminate state uses `aria-checked="mixed"`. Label is part of the hit area.
-
-> **Needs input:** Confirm Mantine's default output covers `aria-checked="mixed"` for indeterminate.
 
 ## Related
 

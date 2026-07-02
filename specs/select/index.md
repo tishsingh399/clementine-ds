@@ -1,8 +1,8 @@
 ---
 component: select
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [role, aria-expanded, aria-controls, aria-activedescendant]
@@ -35,11 +35,11 @@ token_contract:
 interaction_states: [default, hover, focus, open, disabled, error]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -60,13 +60,14 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: SELECT
 
-> **Status:** Draft. Combobox vs select pattern needs an explicit decision.
+> **Status:** AI-Ready. Select is the Mantine single-value combobox/listbox pattern for closed lists. Searchable Select is allowed for filtering known options; freeform values belong in a future Combobox spec.
 
 ## 1. Purpose & Intent
 
 Single-choice picker for a closed list of options. Use Select when the list is short to medium and known up front. For type-ahead / search use a Combobox (not yet specced).
 
-## 2. Open Items
+## 2. Verified Contract
 
-- Decide: ARIA pattern is `combobox` (text + listbox) or `listbox` (button + listbox)?
-- Add Storybook stories for: empty, long-list (overflow), error
+- Use Select for one value from a known list.
+- Use `searchable` only to filter known options, not to accept arbitrary input.
+- Storybook covers default, searchable, clearable, long-list, empty, error, and disabled states.

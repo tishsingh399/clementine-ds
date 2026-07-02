@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/tabs/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Tabs.tsx)
 
-Status: `Draft`. Arrow-key navigation needs verification.
+Status: `AI-Ready`. Mantine owns tablist semantics and arrow-key behavior; Storybook covers default, outline, pills, vertical, and disabled-tab states.
 
 ## Overview
 
@@ -19,7 +19,7 @@ Switch between sibling views of related content within the same page region. For
 
 ## States
 
-`default`, `hover`, `focus`, `selected`, `disabled`
+`default`, `hover`, `focus`, `selected`, `disabled`, `vertical`
 
 ## Accessibility
 

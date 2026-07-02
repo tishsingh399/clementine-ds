@@ -33,6 +33,17 @@ export const Indeterminate: Story = {
   args: { indeterminate: true },
 };
 
+export const WithDescription: Story = {
+  args: { description: 'Send product and security updates to this address.' },
+};
+
+export const WithError: Story = {
+  args: {
+    error: 'You must accept the terms before continuing.',
+    withAsterisk: true,
+  },
+};
+
 export const Disabled: Story = {
   args: { disabled: true },
 };

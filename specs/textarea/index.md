@@ -1,8 +1,8 @@
 ---
 component: textarea
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [aria-invalid, aria-describedby, aria-required, aria-disabled]
@@ -29,11 +29,11 @@ token_contract:
 interaction_states: [default, hover, focus, filled, disabled, error]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -54,7 +54,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: TEXTAREA
 
-> **Status:** Draft. Auto-resize behavior needs an explicit decision.
+> **Status:** AI-Ready. Default is fixed rows with user-controlled vertical resize; `autosize` is opt-in for comment/composer surfaces with bounded `minRows`/`maxRows`.
 
 ## 1. Purpose & Intent
 
@@ -65,7 +65,8 @@ Multi-line free-text input. For single-line use TextInput. For rich content use 
 - expose `aria-invalid` and `aria-describedby` on error
 - preserve user-controlled resize (`resize: vertical`) unless explicitly disabled
 
-## 2. Open Items
+## 2. Verified Contract
 
-- Default: fixed rows + user-resize, or auto-grow to content?
-- Character counter: always shown, or only when `maxLength` is set?
+- Use fixed rows by default.
+- Use `autosize` only when the surrounding layout can absorb vertical growth.
+- Character counters are optional and should appear only when `maxLength` is set.

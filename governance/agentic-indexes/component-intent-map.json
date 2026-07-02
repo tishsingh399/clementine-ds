@@ -1226,7 +1226,7 @@
       "spec_path": "specs/chart/index.md"
     },
     "checkbox": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Binary or tri-state form input. Use for non-exclusive selection (multi-select) or for opt-in/opt-out toggles inside a form. For exclusive choice use Radio. For settings outside a form use Switch.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -3484,7 +3484,7 @@
       "spec_path": "specs/message-actions/index.md"
     },
     "modal": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Blocking overlay that interrupts the page to demand a decision or show critical content. Use sparingly — most flows belong inline.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -4398,7 +4398,7 @@
       "spec_path": "specs/prompt-suggestions/index.md"
     },
     "radio": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Mutually exclusive choice within a group. For non-exclusive selection use Checkbox.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -4861,7 +4861,7 @@
       "spec_path": "specs/segmented-control/index.md"
     },
     "select": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Single-choice picker for a closed list of options. Use Select when the list is short to medium and known up front. For type-ahead / search use a Combobox (not yet specced).",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -5580,7 +5580,7 @@
       "spec_path": "specs/success-state/index.md"
     },
     "switch": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Immediate-effect toggle for a single setting. Use when the change takes effect without a Save action. For form fields use Checkbox.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -5691,7 +5691,7 @@
       "spec_path": "specs/table/index.md"
     },
     "tabs": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Switch between sibling views of related content within the same page region. For top-level navigation use a side nav; for primary actions use Buttons.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -5806,7 +5806,7 @@
       "spec_path": "specs/tags-input/index.md"
     },
     "text-input": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Single-line free-text input. For multi-line use Textarea. For closed lists use Select. For sensitive values use `type=\"password\"`.",
       "use_when": "Use when the component spec and token contract match the product need.",
@@ -5875,7 +5875,7 @@
       "spec_path": "specs/text-input/index.md"
     },
     "textarea": {
-      "status": "Draft",
+      "status": "AI-Ready",
       "category": "Component",
       "intent": "Multi-line free-text input. For single-line use TextInput. For rich content use a rich-text editor (not in this DS).",
       "use_when": "Use when the component spec and token contract match the product need.",

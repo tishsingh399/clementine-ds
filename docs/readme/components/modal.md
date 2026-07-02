@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/modal/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Modal.tsx)
 
-Status: `Draft`. Focus-trap and Esc behavior need verification.
+Status: `AI-Ready`. Mantine owns focus trap, Esc-to-close, portal behavior, and rendered dialog ARIA.
 
 ## Overview
 
@@ -30,7 +30,11 @@ Blocking overlay that interrupts the page. Use sparingly. Most flows belong inli
 - Close on Esc
 - Restore focus to the trigger element on close
 
-> **Needs input:** Add motion spec for opening / closing transitions.
+## Decisions
+
+- Header close button is the default close affordance.
+- Footer actions are reserved for task decisions.
+- Opening/closing motion follows Mantine defaults unless a product surface explicitly overrides it.
 
 ## Related
 

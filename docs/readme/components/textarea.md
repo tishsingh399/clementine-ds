@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/textarea/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Textarea.tsx)
 
-Status: `Draft`. Auto-resize behavior needs a decision.
+Status: `AI-Ready`. Default is fixed rows with user-controlled vertical resize; autosize is opt-in for composer/comment surfaces.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Multi-line free-text input. For single-line use TextInput. For rich content use 
 
 ## States
 
-`default`, `hover`, `focus`, `filled`, `disabled`, `error`
+`default`, `hover`, `focus`, `filled`, `disabled`, `error`, `autosize`, `description`
 
 ## Accessibility
 
@@ -28,7 +28,7 @@ Multi-line free-text input. For single-line use TextInput. For rich content use 
 - `aria-invalid` and `aria-describedby` on error
 - Preserve user-controlled resize (`resize: vertical`) unless explicitly disabled
 
-> **Needs input:** Default: fixed rows + user resize, or auto-grow to content? Character counter: always shown, or only when `maxLength` is set?
+Character counters are optional and should appear only when `maxLength` is set.
 
 ## Related
 

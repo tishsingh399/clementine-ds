@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/radio/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Radio.tsx)
 
-Status: `Draft`.
+Status: `AI-Ready`. Mantine owns group semantics and keyboard behavior; Storybook covers checked, description, and disabled-option states.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Mutually exclusive choice within a group. For non-exclusive selection use Checkb
 
 ## States
 
-`default`, `hover`, `focus`, `checked`, `disabled`
+`default`, `hover`, `focus`, `checked`, `disabled`, `description`
 
 ## Accessibility
 

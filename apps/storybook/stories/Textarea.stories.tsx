@@ -31,6 +31,14 @@ export const Autosize: Story = {
   args: { autosize: true, minRows: 3, maxRows: 8 },
 };
 
+export const Filled: Story = {
+  args: { value: 'This request needs privileged production access for incident response.' },
+};
+
+export const WithDescription: Story = {
+  args: { description: 'Include enough context for the reviewer to approve safely.' },
+};
+
 export const WithError: Story = {
   args: { error: 'Description is required' },
 };
