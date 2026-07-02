@@ -14,6 +14,10 @@ import {
   ToolCallCard,
 } from '@clementine-ds/ui';
 import snapshot from './data/snapshot.json';
+import diagramTokenPath from '../../../docs/article/diagram-1-token-path.png';
+import diagramMirrorVsTest from '../../../docs/article/diagram-2-mirror-vs-test.png';
+import diagramPitfalls from '../../../docs/article/diagram-3-pitfalls.png';
+import diagramGovernanceLoop from '../../../docs/article/governance-loop.png';
 
 interface Spec {
   name: string;
@@ -81,6 +85,16 @@ type PlaygroundItem = {
   render: (variant: string) => ReactNode;
 };
 
+type StoryPanel = {
+  id: string;
+  label: string;
+  headline: string;
+  image: string;
+  caption: string;
+  placement: string;
+  proof: string;
+};
+
 const data = snapshot as unknown as Snap;
 
 const COMPONENT_PROOF = [
@@ -128,6 +142,45 @@ const GOVERNANCE_SIGNALS = [
     label: 'Learn',
     value: 'new rule, less next time',
     detail: 'Repeated misses graduate into validator rules, so the design system gets harder to break over time.',
+  },
+];
+
+const STORY_PANELS: StoryPanel[] = [
+  {
+    id: 'pitfalls',
+    label: 'Failure modes',
+    headline: 'The failures are quiet before they are expensive.',
+    image: diagramPitfalls,
+    caption: 'Five failure modes that pass shallow automation: invented tokens, missing states, stale specs, ARIA drift, and false confidence.',
+    placement: 'Use after the article opening, where the problem is named.',
+    proof: 'Clementine catches these with closed token contracts, state requirements, spec freshness checks, and independent validation.',
+  },
+  {
+    id: 'token-path',
+    label: 'Token path',
+    headline: 'A token should travel through a contract, not through a guess.',
+    image: diagramTokenPath,
+    caption: 'Component paint resolves through component tokens, semantic intent, and primitive values before it reaches the browser.',
+    placement: 'Use when explaining the 3-tier token cascade.',
+    proof: 'The playground exposes the same packet: spec, tokens, source file, states, and validator route.',
+  },
+  {
+    id: 'mirror-test',
+    label: 'Honesty check',
+    headline: 'A checker that grades itself is a mirror, not proof.',
+    image: diagramMirrorVsTest,
+    caption: 'Self-reported checks become useful only when an external verifier compares the claim against code and runtime output.',
+    placement: 'Use in the section about spec honesty and false positives.',
+    proof: 'agentic-spec separates the agent claim from the validator verdict, so the model cannot approve its own work.',
+  },
+  {
+    id: 'governance',
+    label: 'Governance loop',
+    headline: 'The system watches, diagnoses, fixes, and learns.',
+    image: diagramGovernanceLoop,
+    caption: 'Signals feed a governance loop around the design system: watch drift, diagnose noise, fix through PR, and learn a new rule.',
+    placement: 'Use as the closing update: this is what changed after Clementine matured.',
+    proof: 'The nightly painted-DOM check now verifies the contract automatically, so the public claim has a running proof behind it.',
   },
 ];
 
@@ -286,6 +339,73 @@ function AppMetric({ label, value, detail }: { label: string; value: string | nu
   );
 }
 
+function StoryMode() {
+  const [activeId, setActiveId] = useState(STORY_PANELS[0]?.id ?? 'pitfalls');
+  const active = STORY_PANELS.find((panel) => panel.id === activeId) ?? STORY_PANELS[0];
+
+  if (!active) {
+    return null;
+  }
+
+  return (
+    <section id="story" className="story-section">
+      <div className="section-heading narrow">
+        <p className="eyebrow">Article mode</p>
+        <h2>See the narrative assets inside the product.</h2>
+        <p>
+          These are the diagrams now landed in the repo for Medium, Notion, and launch posts. The playground shows where each one fits and what it proves.
+        </p>
+      </div>
+
+      <div className="story-board">
+        <div className="story-tabs" role="tablist" aria-label="Article diagrams">
+          {STORY_PANELS.map((panel) => (
+            <button
+              key={panel.id}
+              id={`story-tab-${panel.id}`}
+              type="button"
+              role="tab"
+              aria-controls={`story-panel-${panel.id}`}
+              aria-selected={panel.id === active.id}
+              className={panel.id === active.id ? 'is-active' : ''}
+              onClick={() => setActiveId(panel.id)}
+            >
+              <span>{panel.label}</span>
+              <small>{panel.placement}</small>
+            </button>
+          ))}
+        </div>
+
+        <article
+          id={`story-panel-${active.id}`}
+          className="story-preview"
+          role="tabpanel"
+          aria-labelledby={`story-tab-${active.id}`}
+        >
+          <div className="story-preview__media">
+            <img src={active.image} alt={active.caption} />
+          </div>
+          <div className="story-preview__copy">
+            <p className="eyebrow">Selected diagram</p>
+            <h3>{active.headline}</h3>
+            <p>{active.caption}</p>
+            <dl>
+              <div>
+                <dt>Placement</dt>
+                <dd>{active.placement}</dd>
+              </div>
+              <div>
+                <dt>Proof</dt>
+                <dd>{active.proof}</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 export function App() {
   const [selectedId, setSelectedId] = useState<PlaygroundId>('tool-call-card');
   const selected = playground.find((item) => item.id === selectedId) ?? playground[0];
@@ -313,6 +433,7 @@ export function App() {
         </a>
         <div className="nav-links">
           <a href="#proof">Proof</a>
+          <a href="#story">Story</a>
           <a href="#playground">Playground</a>
           <a href="#governance">Governance</a>
           <a href="#architecture">Architecture</a>
@@ -404,6 +525,8 @@ export function App() {
           ))}
         </div>
       </section>
+
+      <StoryMode />
 
       <section className="metrics-strip" aria-label="Clementine system metrics">
         <AppMetric label="Specs" value={data.totals.specs} detail={`${aiReadyPct}% AI-Ready`} />
