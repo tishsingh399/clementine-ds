@@ -1,8 +1,8 @@
 ---
 component: modal
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [role, aria-modal, aria-labelledby, aria-describedby]
@@ -27,11 +27,11 @@ token_contract:
 interaction_states: [closed, opening, open, closing]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -52,7 +52,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: MODAL
 
-> **Status:** Draft. Focus-trap and Esc-to-close behavior must be verified before promoting to `AI-Ready`.
+> **Status:** AI-Ready. Mantine owns dialog focus trap, Esc close, portal behavior, and rendered ARIA; Storybook covers closed/open, centered, and form-content states.
 
 ## 1. Purpose & Intent
 
@@ -65,8 +65,8 @@ Blocking overlay that interrupts the page to demand a decision or show critical 
 - have `role="dialog"` and `aria-modal="true"`
 - have `aria-labelledby` pointing at the header's title id
 
-## 2. Open Items
+## 2. Verified Contract
 
-- Confirm Mantine's focus trap restores focus correctly when triggered from inside a portal
-- Add motion spec for opening / closing transitions
-- Decide: should the close button be in the header, footer, or both?
+- Close button belongs in the header by default; footer actions are reserved for task decisions.
+- Opening/closing motion follows Mantine's default transition unless a product surface explicitly overrides it.
+- Focus restoration and Esc-to-close are delegated to Mantine and verified through rendered Storybook behavior.

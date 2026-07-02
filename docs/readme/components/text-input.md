@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/text-input/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/TextInput.tsx) | [Tokens](https://github.com/tishsingh399/clementine-ds/blob/main/packages/tokens/src/components/text-input.json)
 
-Status: `Draft`. Component token file exists. Spec needs full state coverage.
+Status: `AI-Ready`. Component token file exists, state coverage is in Storybook, and the spec contract validates.
 
 ## Overview
 
@@ -41,6 +41,7 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 - Associated `<label>` (visible by default, `aria-label` only as last resort)
 - `aria-invalid="true"` and `aria-describedby="<helperId>"` on error
 - Preserve native autofill and autocomplete behavior
+- Use `rightSection` for loading/status affordances rather than custom input chrome
 
 ## Related
 

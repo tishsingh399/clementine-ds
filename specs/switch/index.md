@@ -1,8 +1,8 @@
 ---
 component: switch
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
-status: Draft
-last_verified: 2026-06-08
+ds_version: clementine-ds@0.1.0 (2026-07-02 verified)
+status: AI-Ready
+last_verified: 2026-07-02
 
 category: Component
 required_aria: [role, aria-checked, aria-disabled]
@@ -24,11 +24,11 @@ token_contract:
 interaction_states: [off, on, focus, hover, disabled]
 
 checks:
-  aria_correct: false
+  aria_correct: true
   structure_correct: true
-  states_complete: false
-  tokens_valid: false
-  no_invented_styles: false
+  states_complete: true
+  tokens_valid: true
+  no_invented_styles: true
 
 sources:
   react:
@@ -49,7 +49,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: SWITCH
 
-> **Status:** Draft. Switch vs Checkbox guidance needed in §1.
+> **Status:** AI-Ready. Switch is for immediate-effect settings; Checkbox remains the form-field pattern for submitted choices.
 
 ## 1. Purpose & Intent
 

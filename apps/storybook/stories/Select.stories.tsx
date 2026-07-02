@@ -38,6 +38,29 @@ export const Clearable: Story = {
   args: { clearable: true },
 };
 
+export const LongList: Story = {
+  args: {
+    data: [
+      'Production database',
+      'Staging database',
+      'Customer support console',
+      'Billing administration',
+      'Audit archive',
+      'Identity provider',
+      'Secrets manager',
+      'Break-glass vault',
+      'Endpoint protection',
+      'Cloud firewall',
+      'Observability stack',
+      'Deployment pipeline',
+    ],
+  },
+};
+
+export const Empty: Story = {
+  args: { data: [], placeholder: 'No options available' },
+};
+
 export const WithError: Story = {
   args: { error: 'Selection required' },
 };

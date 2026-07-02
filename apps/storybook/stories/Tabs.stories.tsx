@@ -49,3 +49,18 @@ export const Pills: Story = {
 export const Vertical: Story = {
   args: { orientation: 'vertical' },
 };
+
+export const WithDisabledTab: Story = {
+  render: (args) => (
+    <Tabs {...args}>
+      <TabsList>
+        <TabsTab value="overview">Overview</TabsTab>
+        <TabsTab value="sessions">Sessions</TabsTab>
+        <TabsTab value="audit" disabled>Audit Log</TabsTab>
+      </TabsList>
+      <TabsPanel value="overview" pt="md">Overview content</TabsPanel>
+      <TabsPanel value="sessions" pt="md">Sessions content</TabsPanel>
+      <TabsPanel value="audit" pt="md">Audit log content</TabsPanel>
+    </Tabs>
+  ),
+};

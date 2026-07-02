@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TextInput } from '@clementine-ds/ui';
+import { Loader, TextInput } from '@clementine-ds/ui';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Components/TextInput',
@@ -29,6 +29,18 @@ export const Default: Story = {};
 
 export const WithError: Story = {
   args: { error: 'This field is required', withAsterisk: true },
+};
+
+export const Filled: Story = {
+  args: { value: 'Verified value' },
+};
+
+export const Loading: Story = {
+  args: {
+    value: 'Resolving...',
+    rightSection: <Loader size="xs" />,
+    'aria-busy': true,
+  },
 };
 
 export const Disabled: Story = {

@@ -2,7 +2,7 @@
 
 [Spec](https://github.com/tishsingh399/clementine-ds/blob/main/specs/select/index.md) | [Code](https://github.com/tishsingh399/clementine-ds/blob/main/packages/ui/src/components/Select.tsx)
 
-Status: `Draft`. Combobox vs select pattern needs a decision.
+Status: `AI-Ready`. Select uses Mantine's single-value combobox/listbox pattern for known options.
 
 ## Overview
 
@@ -21,11 +21,11 @@ Single-choice picker for a closed list. Use Select when the list is short to med
 
 ## States
 
-`default`, `hover`, `focus`, `open`, `disabled`, `error`
+`default`, `hover`, `focus`, `open`, `disabled`, `error`, `searchable`, `clearable`, `empty`, `long-list`
 
 ## Accessibility
 
-> **Needs input:** Decide between `combobox` (text input + listbox) or `listbox` (button + listbox) ARIA pattern.
+Use Select for one value from a known list. Use `searchable` only to filter known options; arbitrary freeform entry belongs in a future Combobox spec.
 
 ## Related
 
