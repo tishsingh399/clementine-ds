@@ -12,8 +12,8 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0(size-limit@12.1.0)
       agentic-spec:
-        specifier: 0.1.1
-        version: 0.1.1
+        specifier: 0.2.0
+        version: 0.2.0
       size-limit:
         specifier: ^12.1.0
         version: 12.1.0
@@ -1916,8 +1916,8 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  agentic-spec@0.1.1:
-    resolution: {integrity: sha512-DAIHLyvxI/lyo2aSL5JWT7yN6oRVVVRq4uBpPTOsYqDMxkVrht55LRtqrD8peI6iRYHfu4KDsrJUHfJr3I0UaA==}
+  agentic-spec@0.2.0:
+    resolution: {integrity: sha512-pQ9xcripavDmtQoM9J5VAkvvpe329wgF5q5LcLWq+Lyv1CGKMlnhJ0oUs60+FliVUzr8nsyAZ9Omotag1vqXBA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6583,7 +6583,7 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  agentic-spec@0.1.1:
+  agentic-spec@0.2.0:
     dependencies:
       '@modelcontextprotocol/sdk': 1.29.0(zod@3.25.58)
       commander: 12.1.0

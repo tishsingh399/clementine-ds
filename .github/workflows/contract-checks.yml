@@ -39,7 +39,7 @@ jobs:
       - name: Build tokens (generates component index)
         run: pnpm --filter @clementine-ds/tokens build
 
-      - name: agentic-spec validate (structural, pinned 0.1.1)
+      - name: agentic-spec validate (structural, pinned 0.2.0)
         run: pnpm validate:contract
 
       - name: Cascade direction (F2)
