@@ -89,6 +89,7 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.LOOP_TOKEN || github.token }}
+          LOOP_TOKEN_PRESENT: ${{ secrets.LOOP_TOKEN != '' }}
         run: |
           BRANCH="loop/heal-$(date -u +%Y%m%d-%H%M)"
           git config user.name  "clementine-loop"
@@ -101,9 +102,15 @@ jobs:
           PR_URL=$(gh pr create --base main --head "$BRANCH" --label self-heal \
             --title "loop: heal mechanical drift" \
             --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, agentic:indexes, counts) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
-          # The PR was created by the workflow token, which does not trigger
-          # other workflows — so ask the independent gate to inspect the branch.
-          gh workflow run "Contract checks" --ref "$BRANCH"
+          # If LOOP_TOKEN authored the PR, normal pull_request checks run
+          # natively. If the workflow token authored it, ask the independent
+          # gate to inspect the branch because workflow-token PRs do not
+          # trigger pull_request workflows on their own.
+          if [ "$LOOP_TOKEN_PRESENT" = "true" ]; then
+            echo "LOOP_TOKEN present; pull_request checks will run natively."
+          else
+            gh workflow run "Contract checks" --ref "$BRANCH"
+          fi
           gh pr merge --auto --squash "$PR_URL"
           echo "Loop PR: $PR_URL (auto-merge armed, waiting on the gate)"
 
