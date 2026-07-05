@@ -107,7 +107,7 @@ In loading state, `icon-leading` is replaced by `spinner`; label and `aria-busy=
 | root | hover bg (destructive) | `action.destructive-hover` | `{color.red.7}` → `#b91c1c` |
 | label | text on filled | `text.on-action` | `{color.white}` → `#ffffff` |
 | label | text on subtle | `text.primary` | `{color.gray.9}` → `#1a1a18` |
-| root | border (outline) | `border.strong` | `{color.gray.3}` → `#d4d4cf` |
+| root | border (outline) | `border.strong` | `{color.gray.5}` → `#737370` |
 | root | focus ring | `focus.ring` | `#ff8040` |
 
 ## 3. Interaction States
