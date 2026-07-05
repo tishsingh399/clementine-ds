@@ -55,10 +55,10 @@ A TextInput preset for search: type=search, a leading search affordance, and a c
 | Token | Resolves through | Light |
 |---|---|---|
 | `search-field.bg` | `{surface.elevated}` | `#ffffff` |
-| `search-field.border` | `{border.strong}` | `#d4d4cf` |
-| `search-field.border-focus` | `{focus.ring}` | `#ff8040` |
+| `search-field.border` | `{border.strong}` | `#737370` |
+| `search-field.border-focus` | `{focus.ring}` | `#f5631a` |
 | `search-field.fg` | `{text.primary}` | `#1a1a18` |
-| `search-field.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `search-field.placeholder` | `{text.tertiary}` | `#737370` |
 | `search-field.icon` | `{text.secondary}` | `#6b6b66` |
 | `search-field.radius` | `{radius.md}` | `6px` |
 

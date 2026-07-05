@@ -52,7 +52,7 @@ A KPI/metric tile: a label, a large value, and an optional trend delta.
 | Token | Resolves through | Light |
 |---|---|---|
 | `stat.value` | `{text.primary}` | `#1a1a18` |
-| `stat.label` | `{text.tertiary}` | `#a3a39e` |
+| `stat.label` | `{text.tertiary}` | `#737370` |
 | `stat.delta-up` | `{feedback.success}` | `#16a34a` |
 | `stat.delta-down` | `{feedback.error}` | `#dc2626` |
 

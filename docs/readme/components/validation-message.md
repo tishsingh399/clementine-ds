@@ -49,7 +49,7 @@ Status: `AI-Ready`. Token contract closed at 4 component-tier tokens.
 |---|---|---|
 | `validation-message.fg` | `{text.primary}` | `#1a1a18` |
 | `validation-message.error` | `{feedback.error}` | `#dc2626` |
-| `validation-message.warning` | `{feedback.warning}` | `#f97316` |
+| `validation-message.warning` | `{feedback.warning}` | `#ea580c` |
 | `validation-message.success` | `{feedback.success}` | `#16a34a` |
 
 ## Library notes

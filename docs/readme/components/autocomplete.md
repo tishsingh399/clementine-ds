@@ -16,9 +16,9 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 |---|---|---|
 | `autocomplete.bg` | `{surface.elevated}` | `#ffffff` |
 | `autocomplete.border` | `{border.default}` | `#e5e5e0` |
-| `autocomplete.border-focus` | `{focus.ring}` | `#ff8040` |
+| `autocomplete.border-focus` | `{focus.ring}` | `#f5631a` |
 | `autocomplete.fg` | `{text.primary}` | `#1a1a18` |
-| `autocomplete.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `autocomplete.placeholder` | `{text.tertiary}` | `#737370` |
 | `autocomplete.popover-bg` | `{surface.elevated}` | `#ffffff` |
 | `autocomplete.option-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
 | `autocomplete.radius` | `{radius.md}` | `6px` |

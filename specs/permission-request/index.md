@@ -54,7 +54,7 @@ A least-privilege access request — "Agent wants to do X (scope Y)" → Allow /
 | Token | Resolves through | Light |
 |---|---|---|
 | `permission-request.bg` | `{feedback.warning-subtle}` | `#fff7ed` |
-| `permission-request.border` | `{feedback.warning}` | `#f97316` |
+| `permission-request.border` | `{feedback.warning}` | `#ea580c` |
 | `permission-request.title` | `{text.primary}` | `#1a1a18` |
 | `permission-request.scope-bg` | `{surface.subtle}` | `#f3f3f0` |
 

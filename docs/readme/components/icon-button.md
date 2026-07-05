@@ -50,7 +50,7 @@ Status: `AI-Ready`. Token contract closed at 3 component-tier tokens.
 |---|---|---|
 | `icon-button.fg` | `{text.primary}` | `#1a1a18` |
 | `icon-button.bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `icon-button.border-focus` | `{focus.ring}` | `#ff8040` |
+| `icon-button.border-focus` | `{focus.ring}` | `#f5631a` |
 
 ## Library notes
 

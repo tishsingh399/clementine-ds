@@ -56,7 +56,7 @@ A chronological, attributable record of actions — who did what to what, when.
 | `audit-log-viewer.header-bg` | `{surface.subtle}` | `#f3f3f0` |
 | `audit-log-viewer.row-striped` | `{surface.default}` | `#fafaf8` |
 | `audit-log-viewer.fg` | `{text.primary}` | `#1a1a18` |
-| `audit-log-viewer.meta` | `{text.tertiary}` | `#a3a39e` |
+| `audit-log-viewer.meta` | `{text.tertiary}` | `#737370` |
 | `audit-log-viewer.border` | `{border.default}` | `#e5e5e0` |
 
 **Do:** Attribute every entry to a principal; Make it sortable/filterable + exportable; Keep timestamps precise.

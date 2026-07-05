@@ -66,9 +66,9 @@ A text input that suggests matching options as you type but still allows free te
 |---|---|---|---|
 | input fill | default | `autocomplete.bg` → `{surface.elevated}` | `#ffffff` |
 | input border | default | `autocomplete.border` → `{border.default}` | `#e5e5e0` |
-| input border | focus | `autocomplete.border-focus` → `{focus.ring}` | `#ff8040` |
+| input border | focus | `autocomplete.border-focus` → `{focus.ring}` | `#f5631a` |
 | value text | default | `autocomplete.fg` → `{text.primary}` | `#1a1a18` |
-| placeholder | default | `autocomplete.placeholder` → `{text.tertiary}` | `#a3a39e` |
+| placeholder | default | `autocomplete.placeholder` → `{text.tertiary}` | `#737370` |
 | listbox fill | open | `autocomplete.popover-bg` → `{surface.elevated}` | `#ffffff` |
 | option | hover/active | `autocomplete.option-bg-hover` → `{surface.subtle}` | `#f3f3f0` |
 | corners | — | `autocomplete.radius` → `{radius.md}` | `6px` |

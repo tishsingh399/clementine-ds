@@ -51,7 +51,7 @@ Thumbs up/down on an AI response — the first link in the evaluation loop. Togg
 
 | State | Token | Light |
 |---|---|---|
-| idle | `feedback-control.idle` → `{text.tertiary}` | `#a3a39e` |
+| idle | `feedback-control.idle` → `{text.tertiary}` | `#737370` |
 | positive | `feedback-control.positive` → `{feedback.success}` | `#16a34a` |
 | negative | `feedback-control.negative` → `{feedback.error}` | `#dc2626` |
 

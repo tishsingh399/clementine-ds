@@ -60,7 +60,7 @@ A copyable code block for model-generated code, with a filename/language header.
 | `code-block.header-bg` | `{surface.subtle}` | `#f3f3f0` |
 | `code-block.border` | `{border.default}` | `#e5e5e0` |
 | `code-block.fg` | `{text.primary}` | `#1a1a18` |
-| `code-block.filename` | `{text.tertiary}` | `#a3a39e` |
+| `code-block.filename` | `{text.tertiary}` | `#737370` |
 | `code-block.radius` | `{radius.md}` | `6px` |
 
 **Do:** Always offer copy with clear feedback; Label the language/filename; Wrap big output in an ArtifactFrame.

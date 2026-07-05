@@ -63,7 +63,7 @@ A determinate bar showing how far a known task has progressed (upload, import, q
 | track | — | `progress.track` → `{surface.subtle}` | `#f3f3f0` |
 | bar | default | `progress.bar` → `{action.primary}` | `#2563eb` |
 | bar | success | `progress.bar-success` → `{feedback.success}` | `#16a34a` |
-| bar | warning | `progress.bar-warning` → `{feedback.warning}` | `#f97316` |
+| bar | warning | `progress.bar-warning` → `{feedback.warning}` | `#ea580c` |
 | bar | error | `progress.bar-error` → `{feedback.error}` | `#dc2626` |
 | corners | — | `progress.radius` → `{radius.xl}` | `99px` |
 

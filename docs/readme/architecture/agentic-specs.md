@@ -31,7 +31,7 @@ Pre-validate before writing. If you want to use `color.indigo.500` for a button,
 ```yaml
 ---
 component: button
-ds_version: clementine-ds@HEAD (2026-06-08 verified)
+ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
 status: AI-Ready | In progress | Draft
 last_verified: 2026-06-08
 category: Component | Pattern | Page

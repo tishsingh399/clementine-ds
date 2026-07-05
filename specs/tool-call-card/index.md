@@ -60,7 +60,7 @@ A transparent record of a tool/function the agent invoked: name + status badge i
 
 | Status | Token | Light |
 |---|---|---|
-| pending | `tool-call.status.pending` → `{text.tertiary}` | `#a3a39e` |
+| pending | `tool-call.status.pending` → `{text.tertiary}` | `#737370` |
 | running | `tool-call.status.running` → `{action.primary}` | `#2563eb` |
 | success | `tool-call.status.success` → `{feedback.success}` | `#16a34a` |
 | error | `tool-call.status.error` → `{feedback.error}` | `#dc2626` |

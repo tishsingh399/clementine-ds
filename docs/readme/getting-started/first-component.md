@@ -11,7 +11,7 @@ Walk through adding a new component to Clementine. This is the workflow an AI ag
 ### 1. Scaffold the spec
 
 ```bash
-agentic-spec init tooltip --out ./specs --ds-version "clementine-ds@HEAD"
+agentic-spec init tooltip --out ./specs --ds-version "clementine-ds@0.1.0"
 ```
 
 This writes two files: `specs/tooltip/index.md` and `specs/tooltip/tokens.json`. Status is `Draft`.

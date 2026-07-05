@@ -52,8 +52,8 @@ A segmented input for short codes — OTP / MFA / verification PINs.
 | Token | Resolves through | Light |
 |---|---|---|
 | `pin-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `pin-input.border` | `{border.strong}` | `#d4d4cf` |
-| `pin-input.border-focus` | `{focus.ring}` | `#ff8040` |
+| `pin-input.border` | `{border.strong}` | `#737370` |
+| `pin-input.border-focus` | `{focus.ring}` | `#f5631a` |
 | `pin-input.fg` | `{text.primary}` | `#1a1a18` |
 | `pin-input.radius` | `{radius.md}` | `6px` |
 

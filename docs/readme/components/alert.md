@@ -20,13 +20,13 @@ Status: `AI-Ready`. Token contract closed at 15 component-tier tokens. Full cont
 | `alert.bg.error` | `{feedback.error-subtle}` | `#fef2f2` |
 | `alert.border.info` | `{border.default}` | `#e5e5e0` |
 | `alert.border.success` | `{feedback.success}` | `#16a34a` |
-| `alert.border.warning` | `{feedback.warning}` | `#f97316` |
+| `alert.border.warning` | `{feedback.warning}` | `#ea580c` |
 | `alert.border.error` | `{feedback.error}` | `#dc2626` |
 | `alert.fg.title` | `{text.primary}` | `#1a1a18` |
 | `alert.fg.body` | `{text.secondary}` | `#6b6b66` |
 | `alert.icon.info` | `{text.secondary}` | `#6b6b66` |
 | `alert.icon.success` | `{feedback.success}` | `#16a34a` |
-| `alert.icon.warning` | `{feedback.warning}` | `#f97316` |
+| `alert.icon.warning` | `{feedback.warning}` | `#ea580c` |
 | `alert.icon.error` | `{feedback.error}` | `#dc2626` |
 | `alert.radius` | `{radius.md}` | `8px` |
 

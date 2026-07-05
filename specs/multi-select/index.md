@@ -58,10 +58,10 @@ Pick several values from a list; selections show as removable pills.
 | Token | Resolves through | Light |
 |---|---|---|
 | `multi-select.bg` | `{surface.elevated}` | `#ffffff` |
-| `multi-select.border` | `{border.strong}` | `#d4d4cf` |
-| `multi-select.border-focus` | `{focus.ring}` | `#ff8040` |
+| `multi-select.border` | `{border.strong}` | `#737370` |
+| `multi-select.border-focus` | `{focus.ring}` | `#f5631a` |
 | `multi-select.fg` | `{text.primary}` | `#1a1a18` |
-| `multi-select.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `multi-select.placeholder` | `{text.tertiary}` | `#737370` |
 | `multi-select.pill-bg` | `{surface.subtle}` | `#f3f3f0` |
 | `multi-select.pill-fg` | `{text.primary}` | `#1a1a18` |
 | `multi-select.option-bg-hover` | `{surface.subtle}` | `#f3f3f0` |

@@ -53,9 +53,9 @@ The agent's current state — idle / thinking / calling tool / waiting on you / 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `agent-status.idle` | `{text.tertiary}` | `#a3a39e` |
+| `agent-status.idle` | `{text.tertiary}` | `#737370` |
 | `agent-status.busy` | `{action.primary}` | `#2563eb` |
-| `agent-status.waiting` | `{feedback.warning}` | `#f97316` |
+| `agent-status.waiting` | `{feedback.warning}` | `#ea580c` |
 | `agent-status.done` | `{feedback.success}` | `#16a34a` |
 | `agent-status.error` | `{feedback.error}` | `#dc2626` |
 

@@ -55,8 +55,8 @@ Shows how much of the context window is consumed (used / total), warning as it n
 |---|---|---|
 | `context-meter.track` | `{surface.subtle}` | `#f3f3f0` |
 | `context-meter.fill` | `{action.primary}` | `#2563eb` |
-| `context-meter.fill-warning` | `{feedback.warning}` | `#f97316` |
-| `context-meter.label` | `{text.tertiary}` | `#a3a39e` |
+| `context-meter.fill-warning` | `{feedback.warning}` | `#ea580c` |
+| `context-meter.label` | `{text.tertiary}` | `#737370` |
 
 **Do:** Warn before the limit; show the numbers; Use role=meter with aria values.
 **Don't:** Surprise the user at the hard limit; Show the bar without the figures.

@@ -20,7 +20,7 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 | `message.assistant.fg` | `{text.primary}` | `#1a1a18` |
 | `message.system.bg` | `{surface.default}` | `#fafaf8` |
 | `message.system.fg` | `{text.secondary}` | `#6b6b66` |
-| `message.meta` | `{text.tertiary}` | `#a3a39e` |
+| `message.meta` | `{text.tertiary}` | `#737370` |
 | `message.radius` | `{radius.lg}` | `8px` |
 
 ## Library notes

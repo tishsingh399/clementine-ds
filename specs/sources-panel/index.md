@@ -59,7 +59,7 @@ The provenance list behind a cited answer; pairs with inline CitationChip [n] ma
 |---|---|---|
 | `sources-panel.bg` | `{surface.elevated}` | `#ffffff` |
 | `sources-panel.border` | `{border.default}` | `#e5e5e0` |
-| `sources-panel.title` | `{text.tertiary}` | `#a3a39e` |
+| `sources-panel.title` | `{text.tertiary}` | `#737370` |
 | `sources-panel.item-fg` | `{text.link}` | `#2563eb` |
 | `sources-panel.item-meta` | `{text.secondary}` | `#6b6b66` |
 | `sources-panel.index-bg` | `{surface.subtle}` | `#f3f3f0` |

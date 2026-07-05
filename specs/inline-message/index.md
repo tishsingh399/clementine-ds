@@ -55,7 +55,7 @@ A compact inline status line (icon + text) for info, success, warning, or error.
 | `inline-message.fg` | `{text.primary}` | `#1a1a18` |
 | `inline-message.info` | `{text.secondary}` | `#6b6b66` |
 | `inline-message.success` | `{feedback.success}` | `#16a34a` |
-| `inline-message.warning` | `{feedback.warning}` | `#f97316` |
+| `inline-message.warning` | `{feedback.warning}` | `#ea580c` |
 | `inline-message.error` | `{feedback.error}` | `#dc2626` |
 
 **Do:** Keep messages to one line where possible; Let the glyph shape and wording carry the status.

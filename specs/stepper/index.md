@@ -59,9 +59,9 @@ Ordered progress through a multi-step flow (wizard, onboarding, guided setup).
 | `stepper.bg-active` | `{action.primary}` | `#2563eb` |
 | `stepper.bg-pending` | `{surface.subtle}` | `#f3f3f0` |
 | `stepper.fg-active` | `{text.primary}` | `#1a1a18` |
-| `stepper.fg-pending` | `{text.tertiary}` | `#a3a39e` |
+| `stepper.fg-pending` | `{text.tertiary}` | `#737370` |
 | `stepper.separator` | `{border.default}` | `#e5e5e0` |
-| `stepper.border-focus` | `{focus.ring}` | `#ff8040` |
+| `stepper.border-focus` | `{focus.ring}` | `#f5631a` |
 
 **Do:** Show total + current position; mark active with aria-current="step"; Validate per step; preserve data on Back; Gate the final commit behind a Review step.
 **Don't:** Hide the finish line; Lose entered data when going Back; Signal the active step by color alone.

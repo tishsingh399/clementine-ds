@@ -49,7 +49,7 @@ A thin rule that separates content groups, optionally with a centered or aligned
 | Token | Resolves through | Light |
 |---|---|---|
 | `divider.line` | `{border.default}` | `#e5e5e0` |
-| `divider.label` | `{text.tertiary}` | `#a3a39e` |
+| `divider.label` | `{text.tertiary}` | `#737370` |
 
 **Do:** Use spacing first; reach for a line only when grouping is ambiguous; Label it when the split has meaning ("or").
 **Don't:** Stack multiple dividers; Use as a decorative flourish.

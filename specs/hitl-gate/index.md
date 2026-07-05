@@ -60,7 +60,7 @@ A human-in-the-loop checkpoint that pauses an agent before a consequential actio
 | Part | Token | Light |
 |---|---|---|
 | container | `hitl.bg` → `{feedback.warning-subtle}` | `#fff7ed` |
-| border | `hitl.border` → `{feedback.warning}` | `#f97316` |
+| border | `hitl.border` → `{feedback.warning}` | `#ea580c` |
 | approve | `hitl.approve-bg` → `{action.primary}` | `#2563eb` |
 | approve (destructive) | `hitl.approve-destructive-bg` → `{action.destructive}` | `#dc2626` |
 

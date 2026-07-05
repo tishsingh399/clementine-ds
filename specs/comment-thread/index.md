@@ -51,7 +51,7 @@ A list of comments plus a composer for adding more.
 |---|---|---|
 | `comment-thread.author` | `{text.primary}` | `#1a1a18` |
 | `comment-thread.body` | `{text.primary}` | `#1a1a18` |
-| `comment-thread.meta` | `{text.tertiary}` | `#a3a39e` |
+| `comment-thread.meta` | `{text.tertiary}` | `#737370` |
 
 **Do:** Attribute + timestamp each comment; Support @mentions; Disable submit on empty.
 **Don't:** Lose draft text; Allow empty comments.

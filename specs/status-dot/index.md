@@ -52,9 +52,9 @@ A small colored dot plus a text label for presence or health state.
 | Token | Resolves through | Light |
 |---|---|---|
 | `status-dot.online` | `{feedback.success}` | `#16a34a` |
-| `status-dot.offline` | `{text.tertiary}` | `#a3a39e` |
+| `status-dot.offline` | `{text.tertiary}` | `#737370` |
 | `status-dot.busy` | `{feedback.error}` | `#dc2626` |
-| `status-dot.away` | `{feedback.warning}` | `#f97316` |
+| `status-dot.away` | `{feedback.warning}` | `#ea580c` |
 | `status-dot.label` | `{text.primary}` | `#1a1a18` |
 
 **Do:** Always pair the dot with a text label; Keep the color set consistent across the app.
