@@ -34,6 +34,23 @@ the active working context.
 | Figma Make | Untested | Prompt, Figma file, exported variables, examples | Figma Make kit |
 | Claude Design | Untested | Prompt, uploaded files, snapshots, design-sync instructions | Interpretation and handoff packet |
 
+## Figma MCP console bridge
+
+Clementine uses a local Figma MCP console bridge to inspect the Figma file and
+connect it back to Clementine's token and spec contracts.
+
+More precisely: Tina uses a hardened local fork of `figma-console-mcp` as the
+Figma bridge. It inspects Figma variables and components locally, while
+Clementine's own parity script derives the expected 628 component variables from
+code. The bridge reads Figma; Clementine decides whether it matches.
+
+Public wording should stay honest:
+
+> For Figma, Clementine is not claiming full parity yet. It has a local Figma
+> MCP console bridge, and Clementine already derives the expected token contract
+> from code. The next proof is running the bridge against the live Figma file
+> and publishing the diff.
+
 ## What is not proven yet
 
 Do not claim that Clementine works out of the box in every AI design tool.

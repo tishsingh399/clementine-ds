@@ -27,6 +27,12 @@ repo directly. Figma Make and Claude Design may need adapters: a compact Figma
 Make kit, a Claude Design handoff packet, or an MCP/context layer that serves the
 right slice of Clementine at the right time.
 
+Clementine's Figma story is deliberately phrased as a bridge, not a completed
+claim of full parity. Tina uses a hardened local fork of `figma-console-mcp` to
+inspect the Figma file, and Clementine derives the expected 628 component
+variables from code. The bridge reads Figma; Clementine decides whether it
+matches. The next proof is running the live Figma diff and publishing the result.
+
 See [`docs/AI-TOOL-ADAPTERS.md`](../AI-TOOL-ADAPTERS.md).
 
 ## LinkedIn Post Draft
