@@ -20,6 +20,9 @@ agentic-spec governance tooling.
 - Clementine behavior specs are present and valid for 3 hooks.
 - Clementine painted DOM parity currently reports an average of 100% across
   114 measured stories, with 0 components below the 80% threshold.
+- Clementine has a full-auto-capable maintenance loop for mechanical drift:
+  `LOOP_TOKEN` is configured, the self-heal workflow can run unattended, and
+  judgment-class findings are escalated as issues instead of auto-fixed.
 
 ## Live Verification
 
@@ -81,6 +84,20 @@ Latest observed result:
 - measured stories: 114
 - below threshold: 0
 - report: `apps/observatory/parity-dom-report.json`
+
+Clementine self-heal loop:
+
+```sh
+gh workflow run self-heal.yml --repo tishsingh399/clementine-ds --ref main
+```
+
+Latest observed result:
+
+- workflow completed successfully
+- `LOOP_TOKEN` is present as an Actions secret
+- result: "Boring pass — nothing drifted. That's the loop working."
+- judgment-class findings: none filed
+- run: `https://github.com/tishsingh399/clementine-ds/actions/runs/28733223186`
 
 ## Closed Follow-Up
 

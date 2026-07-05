@@ -12,7 +12,31 @@ Clementine is an agentic design system: code, Storybook, and machine-readable sp
 - Contract parity is 100%.
 - Painted-DOM parity runs in CI/nightly and currently reports 100%.
 - The verifier catches the seeded agent mistakes that shallow automation tends to miss.
-- The governance layer now has a loop: watch, diagnose, fix, learn.
+- The governance layer now has a maintenance loop: watch, diagnose, fix, learn.
+- The self-healing loop is full-auto capable: `LOOP_TOKEN` is configured, and a
+  manual run verified a healthy boring pass with no mechanical drift and no
+  judgment-class findings.
+
+## Next Article Thread
+
+The next question is not whether a design system can become machine-readable.
+Clementine already tests that.
+
+The next question is whether different AI tools can consume the same design
+system context.
+
+Git-native agents such as Codex, Claude Code, Cursor, and Replit can inspect the
+repo directly. Figma Make and Claude Design may need adapters: a compact Figma
+Make kit, a Claude Design handoff packet, or an MCP/context layer that serves the
+right slice of Clementine at the right time.
+
+Clementine's Figma story is deliberately phrased as a bridge, not a completed
+claim of full parity. Tina uses a hardened local fork of `figma-console-mcp` to
+inspect the Figma file, and Clementine derives the expected 628 component
+variables from code. The bridge reads Figma; Clementine decides whether it
+matches. The next proof is running the live Figma diff and publishing the result.
+
+See [`docs/AI-TOOL-ADAPTERS.md`](../AI-TOOL-ADAPTERS.md).
 
 ## LinkedIn Post Draft
 
@@ -25,6 +49,11 @@ Every component now has a machine-readable spec: allowed tokens, semantic parts,
 The part I care about most: the system now has a governance loop.
 
 It watches for drift, diagnoses whether a failure is signal or noise, fixes the issue through a PR, and turns repeated failures into new rules. That means the design system gets harder to break over time.
+
+The milestone is that this is no longer only a diagram. Clementine now has a
+design-system maintenance loop that watches, fixes the safe class of drift, and
+escalates the judgment class. The latest manual run completed as a boring pass:
+nothing drifted, and nothing needed to be filed.
 
 Current proof:
 

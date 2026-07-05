@@ -48,3 +48,20 @@ Each script talks to the local daemon at `http://127.0.0.1:3456/exec` and execut
 The Figma file and the code in this repo are **the same system**, not a screenshot of a different artifact. Every paint in `components.png` is backed by a Figma variable. Every variable matches one of the JSON files in `packages/tokens/src/`. Every component token in the file matches one in [`specs/<name>/tokens.json`](../../specs).
 
 Drift between Figma and code becomes a thing you can lint. That is the point.
+
+## What this does not prove yet
+
+This Figma sync does not automatically prove that every AI design tool can use
+Clementine without extra packaging. Figma Make and Claude Design may need
+tool-specific kits: compact prompts, exported token summaries, examples, and
+handoff instructions that translate the repo contract into each tool's context
+model.
+
+It also does not claim complete live Figma parity until the remote diff runs.
+Clementine has a local Figma MCP console bridge, backed by Tina's hardened fork
+of `figma-console-mcp`, and the repo can derive the expected 628 component
+variables from code. The next proof is running that bridge/token check against
+the live Figma file and publishing the diff.
+
+The testing plan for that layer lives in
+[`docs/AI-TOOL-ADAPTERS.md`](../AI-TOOL-ADAPTERS.md).

@@ -5,6 +5,16 @@ and how to reproduce it. Done via the **Figma Console MCP** (Desktop Bridge plug
 which exposes the full Plugin API with a 30s ceiling — the earlier `figma-cli`
 daemon kept timing out and binding to the wrong same-named file, so it was retired.
 
+Current bridge wording: Clementine uses a hardened local fork of
+`figma-console-mcp` as its Figma bridge. The bridge inspects Figma variables and
+components locally; Clementine's own parity script derives the expected 628
+component variables from code and decides whether the live file matches. The
+bridge reads Figma; Clementine remains the contract authority.
+
+Until `scripts/figma-parity.mjs --remote` has been run against the live file and
+the diff is published, describe the Figma layer as "bridge-backed and
+diffable," not as fully proven 1:1 parity.
+
 ## What was wrong
 
 The file had grown to 14 pages built across several sessions/tools. A full-tree
