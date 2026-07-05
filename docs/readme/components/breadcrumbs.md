@@ -56,7 +56,7 @@ Status: `AI-Ready`. Token contract closed at 3 component-tier tokens.
 |---|---|---|
 | `breadcrumbs.fg` | `{text.secondary}` | `#6b6b66` |
 | `breadcrumbs.fg-current` | `{text.primary}` | `#1a1a18` |
-| `breadcrumbs.separator` | `{text.tertiary}` | `#a3a39e` |
+| `breadcrumbs.separator` | `{text.tertiary}` | `#737370` |
 
 ## Library notes
 

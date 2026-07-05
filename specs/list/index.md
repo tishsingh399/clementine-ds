@@ -50,7 +50,7 @@ Ordered or unordered lists with consistent markers and spacing.
 | Token | Resolves through | Light |
 |---|---|---|
 | `list.fg` | `{text.primary}` | `#1a1a18` |
-| `list.marker` | `{text.tertiary}` | `#a3a39e` |
+| `list.marker` | `{text.tertiary}` | `#737370` |
 
 **Do:** Use semantic ul/ol; Keep items parallel in structure.
 **Don't:** Fake a list with divs; Nest deeply.

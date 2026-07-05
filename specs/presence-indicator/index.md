@@ -52,9 +52,9 @@ Who is here, as a stack of avatars each with a presence dot.
 | Token | Resolves through | Light |
 |---|---|---|
 | `presence-indicator.online` | `{feedback.success}` | `#16a34a` |
-| `presence-indicator.away` | `{feedback.warning}` | `#f97316` |
+| `presence-indicator.away` | `{feedback.warning}` | `#ea580c` |
 | `presence-indicator.busy` | `{feedback.error}` | `#dc2626` |
-| `presence-indicator.offline` | `{text.tertiary}` | `#a3a39e` |
+| `presence-indicator.offline` | `{text.tertiary}` | `#737370` |
 | `presence-indicator.ring` | `{surface.default}` | `#fafaf8` |
 
 **Do:** Pair dot with the person name (tooltip); Cap the stack with a +N.

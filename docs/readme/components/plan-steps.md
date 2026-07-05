@@ -48,7 +48,7 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 5 component-
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `plan.pending` | `{text.tertiary}` | `#a3a39e` |
+| `plan.pending` | `{text.tertiary}` | `#737370` |
 | `plan.active` | `{action.primary}` | `#2563eb` |
 | `plan.done` | `{feedback.success}` | `#16a34a` |
 | `plan.error` | `{feedback.error}` | `#dc2626` |

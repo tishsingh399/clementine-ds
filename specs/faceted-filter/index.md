@@ -50,9 +50,9 @@ Grouped, checkable facets with counts for narrowing a result set.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `faceted-filter.group-label` | `{text.tertiary}` | `#a3a39e` |
+| `faceted-filter.group-label` | `{text.tertiary}` | `#737370` |
 | `faceted-filter.fg` | `{text.primary}` | `#1a1a18` |
-| `faceted-filter.count` | `{text.tertiary}` | `#a3a39e` |
+| `faceted-filter.count` | `{text.tertiary}` | `#737370` |
 
 **Do:** Show result counts per facet; Persist selections; allow clearing; Group related facets.
 **Don't:** Hide how many results a facet yields; Reset filters silently.

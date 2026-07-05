@@ -53,7 +53,7 @@ A chronological stream of who-did-what-when (audit-adjacent, human-readable).
 |---|---|---|
 | `activity-feed.actor` | `{text.primary}` | `#1a1a18` |
 | `activity-feed.action` | `{text.primary}` | `#1a1a18` |
-| `activity-feed.meta` | `{text.tertiary}` | `#a3a39e` |
+| `activity-feed.meta` | `{text.tertiary}` | `#737370` |
 
 **Do:** Attribute each item to an actor + time; Order consistently (newest first).
 **Don't:** Drop attribution; Mix orderings.

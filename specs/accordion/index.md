@@ -103,7 +103,7 @@ Progressive disclosure for a stack of independent sections — FAQs, grouped set
 | label | default | `accordion.fg.label` → `{text.primary}` | `#1a1a18` |
 | panel text | default | `accordion.fg.content` → `{text.secondary}` | `#6b6b66` |
 | chevron | default | `accordion.fg.chevron` → `{text.secondary}` | `#6b6b66` |
-| control | focus | `accordion.border-focus` → `{focus.ring}` | `#ff8040` |
+| control | focus | `accordion.border-focus` → `{focus.ring}` | `#f5631a` |
 | corners | — | `accordion.radius` → `{radius.md}` | `6px` |
 
 ## 3. Interaction States

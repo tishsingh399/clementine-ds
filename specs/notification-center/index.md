@@ -58,7 +58,7 @@ A panel of system/activity notifications, unread first, each markable.
 | `notification-center.title` | `{text.primary}` | `#1a1a18` |
 | `notification-center.body` | `{text.secondary}` | `#6b6b66` |
 | `notification-center.dot` | `{action.primary}` | `#2563eb` |
-| `notification-center.meta` | `{text.tertiary}` | `#a3a39e` |
+| `notification-center.meta` | `{text.tertiary}` | `#737370` |
 
 **Do:** Show unread distinctly (dot + weight); Group/sort by recency; Let users mark read / clear.
 **Don't:** Rely on color alone for unread; Lose notifications silently.

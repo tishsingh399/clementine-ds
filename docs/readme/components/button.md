@@ -123,10 +123,10 @@ For destructive actions, name the consequence: "Delete project" not "Delete," "R
 | `button.bg-outline.hover` | `surface.subtle` | `#f3f3f0` |
 | `button.fg.on-filled` | `text.on-action` | `#ffffff` |
 | `button.fg.on-outline` | `text.primary` | `#1a1a18` |
-| `button.fg.disabled` | `text.tertiary` | `#a3a39e` |
-| `button.border.default` | `border.strong` | `#d4d4cf` |
+| `button.fg.disabled` | `text.tertiary` | `#737370` |
+| `button.border.default` | `border.strong` | `#737370` |
 | `button.border.hover` | `action.primary` | `#2563eb` |
-| `button.border.focus` | `focus.ring` | `#ff8040` |
+| `button.border.focus` | `focus.ring` | `#f5631a` |
 | `button.radius` | `radius.md` | `8px` |
 
 ## Library notes

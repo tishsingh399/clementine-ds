@@ -59,7 +59,7 @@ The one literal. Clementine uses an orange focus ring across themes for instant 
 
 | Token | Light | Dark | Role |
 |---|---|---|---|
-| `focus.ring` | `#ff8040` | `#ff8040` | Focus ring color |
+| `focus.ring` | `#f5631a` | `#f5631a` | Focus ring color |
 
 ### Feedback
 

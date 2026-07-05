@@ -62,6 +62,6 @@ A single turn in a chat thread. User turns align right on `action.primary`; assi
 | bubble | user | `message.user.bg` / `.fg` | `#2563eb` / `#ffffff` |
 | bubble | assistant | `message.assistant.bg` / `.fg` | `#f3f3f0` / `#1a1a18` |
 | bubble | system | `message.system.bg` / `.fg` | `#fafaf8` / `#6b6b66` |
-| meta | — | `message.meta` | `#a3a39e` |
+| meta | — | `message.meta` | `#737370` |
 
 **Do** keep each message one role/one author. **Don't** carry status by color alone — pair with the meta line ("Failed to send").

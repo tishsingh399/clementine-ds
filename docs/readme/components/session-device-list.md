@@ -51,7 +51,7 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 5 component-tie
 | `session-device.bg` | `{surface.elevated}` | `#ffffff` |
 | `session-device.border` | `{border.default}` | `#e5e5e0` |
 | `session-device.fg` | `{text.primary}` | `#1a1a18` |
-| `session-device.meta` | `{text.tertiary}` | `#a3a39e` |
+| `session-device.meta` | `{text.tertiary}` | `#737370` |
 | `session-device.revoke` | `{feedback.error}` | `#dc2626` |
 
 ## Library notes

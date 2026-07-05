@@ -31,10 +31,10 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 | `text-input.bg.disabled` | `surface.subtle` | `#f3f3f0` |
 | `text-input.fg.value` | `text.primary` | `#1a1a18` |
 | `text-input.fg.placeholder` | `text.secondary` | `#6b6b66` |
-| `text-input.border.default` | `border.strong` | `#d4d4cf` |
+| `text-input.border.default` | `border.strong` | `#737370` |
 | `text-input.border.focus` | `border.focus` | `#2563eb` |
 | `text-input.border.error` | `feedback.error` | `#dc2626` |
-| `text-input.ring` | `focus.ring` | `#ff8040` |
+| `text-input.ring` | `focus.ring` | `#f5631a` |
 
 ## Accessibility
 

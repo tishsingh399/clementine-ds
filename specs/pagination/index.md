@@ -68,7 +68,7 @@ Page navigation for long, chunked result sets. Pair with a results count ("Showi
 | page | active text | `pagination.item.fg-active` → `{text.on-action}` | `#ffffff` |
 | page | hover | `pagination.item.bg-hover` → `{surface.subtle}` | `#f3f3f0` |
 | item | border | `pagination.border` → `{border.default}` | `#e5e5e0` |
-| item | focus | `pagination.border-focus` → `{focus.ring}` | `#ff8040` |
+| item | focus | `pagination.border-focus` → `{focus.ring}` | `#f5631a` |
 | corners | — | `pagination.radius` → `{radius.md}` | `6px` |
 
 ## 3. States

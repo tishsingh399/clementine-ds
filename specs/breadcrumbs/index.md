@@ -53,7 +53,7 @@ A hierarchical trail showing where the current page sits, with one-click jumps t
 |---|---|---|
 | `breadcrumbs.fg` | `{text.secondary}` | `#6b6b66` |
 | `breadcrumbs.fg-current` | `{text.primary}` | `#1a1a18` |
-| `breadcrumbs.separator` | `{text.tertiary}` | `#a3a39e` |
+| `breadcrumbs.separator` | `{text.tertiary}` | `#737370` |
 
 **Do:** Mark the last item as current (not a link); Keep labels short — match the page titles; Truncate the middle with an ellipsis on small screens.
 **Don't:** Link the current page to itself; Use it as the only way back; Rely on the separator glyph alone for structure.

@@ -57,7 +57,7 @@ A collapsible, de-emphasized view of the model's intermediate thinking. Collapse
 |---|---|---|
 | container | `reasoning.bg` → `{surface.subtle}` | `#f3f3f0` |
 | body text | `reasoning.fg` → `{text.secondary}` | `#6b6b66` |
-| heading | `reasoning.label` → `{text.tertiary}` | `#a3a39e` |
+| heading | `reasoning.label` → `{text.tertiary}` | `#737370` |
 | left rule | `reasoning.rule` → `{border.default}` | `#e5e5e0` |
 
 **Do** keep it collapsed by default and label it ("Thought for 1.2s"). **Don't** present reasoning as the answer, or surface raw chain-of-thought the model shouldn't expose.

@@ -50,7 +50,7 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 3 component-
 |---|---|---|
 | `session-list.item-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
 | `session-list.fg` | `{text.primary}` | `#1a1a18` |
-| `session-list.meta` | `{text.tertiary}` | `#a3a39e` |
+| `session-list.meta` | `{text.tertiary}` | `#737370` |
 
 ## Library notes
 

@@ -89,7 +89,7 @@ A compact, recognizable stand-in for a person or entity — a photo, initials, o
 | placeholder fill | `avatar.bg` → `{surface.subtle}` | `#f3f3f0` |
 | initials / icon | `avatar.fg` → `{text.secondary}` | `#6b6b66` |
 | ring between stacked members | `avatar.border` → `{border.default}` | `#e5e5e0` |
-| focus ring (interactive) | `avatar.ring` → `{focus.ring}` | `#ff8040` |
+| focus ring (interactive) | `avatar.ring` → `{focus.ring}` | `#f5631a` |
 | corners | `avatar.radius` → `{radius.xl}` | `99px` (full) |
 
 ## 3. Interaction States

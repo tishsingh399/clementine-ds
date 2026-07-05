@@ -56,10 +56,10 @@ Free-text entry of multiple values as pills (labels, keywords) — optionally wi
 | Token | Resolves through | Light |
 |---|---|---|
 | `tags-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `tags-input.border` | `{border.strong}` | `#d4d4cf` |
-| `tags-input.border-focus` | `{focus.ring}` | `#ff8040` |
+| `tags-input.border` | `{border.strong}` | `#737370` |
+| `tags-input.border-focus` | `{focus.ring}` | `#f5631a` |
 | `tags-input.fg` | `{text.primary}` | `#1a1a18` |
-| `tags-input.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `tags-input.placeholder` | `{text.tertiary}` | `#737370` |
 | `tags-input.pill-bg` | `{surface.subtle}` | `#f3f3f0` |
 | `tags-input.pill-fg` | `{text.primary}` | `#1a1a18` |
 | `tags-input.radius` | `{radius.md}` | `6px` |

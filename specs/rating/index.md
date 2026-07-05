@@ -48,8 +48,8 @@ Capture or display a star rating (feedback score, quality).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `rating.symbol-empty` | `{border.strong}` | `#d4d4cf` |
-| `rating.symbol-filled` | `{feedback.warning}` | `#f97316` |
+| `rating.symbol-empty` | `{border.strong}` | `#737370` |
+| `rating.symbol-filled` | `{feedback.warning}` | `#ea580c` |
 
 **Do:** Label what is being rated; support fractions for display; Allow keyboard selection; Use readOnly for display-only.
 **Don't:** Use color alone to mean "good/bad"; Make a display-only rating look interactive.

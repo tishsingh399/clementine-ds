@@ -56,7 +56,7 @@ Communicates how confident the model is in an answer, with filled bars AND a tex
 |---|---|---|
 | `confidence-meter.track` | `{surface.subtle}` | `#f3f3f0` |
 | `confidence-meter.high` | `{feedback.success}` | `#16a34a` |
-| `confidence-meter.medium` | `{feedback.warning}` | `#f97316` |
+| `confidence-meter.medium` | `{feedback.warning}` | `#ea580c` |
 | `confidence-meter.low` | `{feedback.error}` | `#dc2626` |
 | `confidence-meter.label` | `{text.secondary}` | `#6b6b66` |
 

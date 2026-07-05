@@ -54,7 +54,7 @@ An agent's task decomposition with live per-step status. Distinct from Stepper (
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `plan-steps.pending` | `{text.tertiary}` | `#a3a39e` |
+| `plan-steps.pending` | `{text.tertiary}` | `#737370` |
 | `plan-steps.active` | `{action.primary}` | `#2563eb` |
 | `plan-steps.done` | `{feedback.success}` | `#16a34a` |
 | `plan-steps.error` | `{feedback.error}` | `#dc2626` |

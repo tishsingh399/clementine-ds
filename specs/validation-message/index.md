@@ -53,7 +53,7 @@ Inline field validation feedback for error, warning, or success.
 |---|---|---|
 | `validation-message.fg` | `{text.primary}` | `#1a1a18` |
 | `validation-message.error` | `{feedback.error}` | `#dc2626` |
-| `validation-message.warning` | `{feedback.warning}` | `#f97316` |
+| `validation-message.warning` | `{feedback.warning}` | `#ea580c` |
 | `validation-message.success` | `{feedback.success}` | `#16a34a` |
 
 **Do:** Tie error messages to the field via aria-describedby; Lead with the glyph and plain wording.

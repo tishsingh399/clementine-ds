@@ -55,7 +55,7 @@ Active sessions/devices for a principal, each revocable — a privileged-access 
 | `session-device-list.bg` | `{surface.elevated}` | `#ffffff` |
 | `session-device-list.border` | `{border.default}` | `#e5e5e0` |
 | `session-device-list.fg` | `{text.primary}` | `#1a1a18` |
-| `session-device-list.meta` | `{text.tertiary}` | `#a3a39e` |
+| `session-device-list.meta` | `{text.tertiary}` | `#737370` |
 | `session-device-list.revoke` | `{feedback.error}` | `#dc2626` |
 
 **Do:** Mark the current device; protect it from revoke; Show location + last-active; Confirm revoke.

@@ -54,10 +54,10 @@ A masked text input with a visibility toggle, for passwords and secrets.
 | Token | Resolves through | Light |
 |---|---|---|
 | `password-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `password-input.border` | `{border.strong}` | `#d4d4cf` |
-| `password-input.border-focus` | `{focus.ring}` | `#ff8040` |
+| `password-input.border` | `{border.strong}` | `#737370` |
+| `password-input.border-focus` | `{focus.ring}` | `#f5631a` |
 | `password-input.fg` | `{text.primary}` | `#1a1a18` |
-| `password-input.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `password-input.placeholder` | `{text.tertiary}` | `#737370` |
 | `password-input.radius` | `{radius.md}` | `6px` |
 
 **Do:** Offer a show/hide toggle; Pair with clear strength/criteria text; Never log or echo the value.

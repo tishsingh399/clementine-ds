@@ -54,10 +54,10 @@ A control to pick one or more files, showing the chosen file name(s).
 | Token | Resolves through | Light |
 |---|---|---|
 | `file-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `file-input.border` | `{border.strong}` | `#d4d4cf` |
-| `file-input.border-focus` | `{focus.ring}` | `#ff8040` |
+| `file-input.border` | `{border.strong}` | `#737370` |
+| `file-input.border-focus` | `{focus.ring}` | `#f5631a` |
 | `file-input.fg` | `{text.primary}` | `#1a1a18` |
-| `file-input.placeholder` | `{text.tertiary}` | `#a3a39e` |
+| `file-input.placeholder` | `{text.tertiary}` | `#737370` |
 | `file-input.radius` | `{radius.md}` | `6px` |
 
 **Do:** Show the selected file name; allow clearing; State accepted types + size limits; Validate type/size and surface errors.

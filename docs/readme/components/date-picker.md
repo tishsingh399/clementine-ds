@@ -31,7 +31,7 @@ Status: `AI-Ready`. Token contract closed at 11 component-tier tokens. Dependenc
 | `date-picker.day-selected-bg` | `action.primary` | `#2563eb` |
 | `date-picker.day-in-range-bg` | `surface.subtle` | `#f3f3f0` |
 | `date-picker.day-today-border` | `action.primary` | `#2563eb` |
-| `date-picker.ring` | `focus.ring` | `#ff8040` |
+| `date-picker.ring` | `focus.ring` | `#f5631a` |
 
 ## Related
 

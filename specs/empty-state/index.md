@@ -55,7 +55,7 @@ A centered placeholder for no-data or cleared-filter views, with an optional nex
 | Token | Resolves through | Light |
 |---|---|---|
 | `empty-state.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `empty-state.icon` | `{text.tertiary}` | `#a3a39e` |
+| `empty-state.icon` | `{text.tertiary}` | `#737370` |
 | `empty-state.title` | `{text.primary}` | `#1a1a18` |
 | `empty-state.description` | `{text.secondary}` | `#6b6b66` |
 | `empty-state.radius` | `{radius.lg}` | `8px` |

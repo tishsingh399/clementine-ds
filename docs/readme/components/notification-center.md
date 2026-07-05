@@ -53,7 +53,7 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 6 component-tie
 | `notification-center.title` | `{text.primary}` | `#1a1a18` |
 | `notification-center.body` | `{text.secondary}` | `#6b6b66` |
 | `notification-center.dot` | `{action.primary}` | `#2563eb` |
-| `notification-center.meta` | `{text.tertiary}` | `#a3a39e` |
+| `notification-center.meta` | `{text.tertiary}` | `#737370` |
 
 ## Library notes
 
