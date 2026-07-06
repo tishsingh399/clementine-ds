@@ -11,9 +11,10 @@ components locally; Clementine's own parity script derives the expected 628
 component variables from code and decides whether the live file matches. The
 bridge reads Figma; Clementine remains the contract authority.
 
-Until `scripts/figma-parity.mjs --remote` has been run against the live file and
-the diff is published, describe the Figma layer as "bridge-backed and
-diffable," not as fully proven 1:1 parity.
+The local bridge diff has been run against the live file at name/value level:
+the code-derived 628 component variables are present in Figma, with no missing
+names and no confirmed value mismatches after alpha values are resolved. This is
+still not full visual Figma parity; it is a variable-bridge proof.
 
 ## What was wrong
 
@@ -54,6 +55,30 @@ mis-snap).
 The 37 holdouts are intentional off-brand decoratives (status/illustration
 swatches on Foundations + a few accents). They are reported, not force-mapped —
 inventing Clementine tokens for off-brand hex would pollute the palette.
+
+## Figma-only shell variables
+
+The live `Clementine · Components` collection contains 50 variables that do not
+exist in the code-derived 628 component-token set. They are not missing code
+tokens; they are Figma-only shell/organism tokens created for the application
+chrome and template pages:
+
+| Family | Count | Use |
+|---|---:|---|
+| `sidebar/*` | 11 | Figma-only app shell sidebar |
+| `command/*` | 10 | Figma-only command palette |
+| `data-grid/*` | 10 | Figma-only dense table/data-grid exploration |
+| `navbar/*` | 9 | Figma-only top navigation |
+| `footer/*` | 5 | Figma-only footer |
+| `page-header/*` | 4 | Figma-only page header |
+| `app-shell/*` | 1 | Figma-only app surface |
+
+These should stay out of the 121-component contract unless the corresponding
+organism becomes a real package component with a spec and Storybook story. The
+near-term cleanup is to re-alias their raw values to existing semantic tokens
+inside Figma, and to settle the sidebar/navbar active-orange difference. Do not
+describe these 50 as code parity failures; describe them as Figma-only shell
+tokens.
 
 ## Componentization
 

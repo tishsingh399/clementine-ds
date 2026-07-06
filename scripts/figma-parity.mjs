@@ -68,15 +68,27 @@ if (!res.ok) {
   process.exit(1);
 }
 const live = await res.json();
-const liveNames = new Set(Object.values(live.meta?.variables ?? {}).map((v) => v.name));
+const liveVariables = Object.values(live.meta?.variables ?? {});
+const liveCollections = Object.values(live.meta?.variableCollections ?? {});
+const componentCollection = liveCollections.find((collection) => collection.name === 'Clementine · Components');
+if (!componentCollection) {
+  console.error('✗ Figma file does not contain a "Clementine · Components" variable collection.');
+  process.exit(1);
+}
+
+const liveComponentVariables = liveVariables.filter(
+  (variable) => variable.variableCollectionId === componentCollection.id,
+);
+const liveNames = new Set(liveComponentVariables.map((v) => v.name));
 const expectedNames = new Set(expected.map((e) => e.name));
 
 const missingInFigma = [...expectedNames].filter((n) => !liveNames.has(n));
 const extraInFigma = [...liveNames].filter((n) => !expectedNames.has(n));
 
-console.log(`\nFigma parity: ${expectedNames.size} expected · ${liveNames.size} live`);
+console.log(`\nFigma parity: ${expectedNames.size} expected · ${liveNames.size} live in Clementine · Components`);
 console.log(`  missing in Figma (code has, Figma lacks): ${missingInFigma.length}`);
 console.log(`  extra in Figma   (Figma has, code lacks): ${extraInFigma.length}`);
 for (const n of missingInFigma.slice(0, 20)) console.log(`    + ${n}`);
+for (const n of extraInFigma.slice(0, 20)) console.log(`    - ${n}`);
 
 process.exit(missingInFigma.length ? 1 : 0);
