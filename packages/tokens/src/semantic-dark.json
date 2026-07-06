@@ -12,12 +12,26 @@
       "$value": "{color.blue.5}",
       "$type": "color"
     },
+    "selected-subtle": {
+      "$value": "{color.blue.9}",
+      "$type": "color"
+    },
+    "selected-subtle-hover": {
+      "$value": "{color.blue.8}",
+      "$type": "color"
+    },
     "destructive": {
       "$value": "{color.red.4}",
       "$type": "color"
     },
     "destructive-hover": {
       "$value": "{color.red.3}",
+      "$type": "color"
+    }
+  },
+  "accent": {
+    "brand": {
+      "$value": "{color.brand.clementine}",
       "$type": "color"
     }
   },
@@ -32,6 +46,14 @@
     },
     "subtle": {
       "$value": "#15202e",
+      "$type": "color"
+    },
+    "subtle-hover": {
+      "$value": "#243447",
+      "$type": "color"
+    },
+    "inverse": {
+      "$value": "{color.gray.9}",
       "$type": "color"
     },
     "overlay": {
@@ -59,6 +81,18 @@
     "link": {
       "$value": "{color.blue.4}",
       "$type": "color"
+    },
+    "on-inverse": {
+      "$value": "{color.gray.4}",
+      "$type": "color"
+    },
+    "on-inverse-muted": {
+      "$value": "{color.gray.2}",
+      "$type": "color"
+    },
+    "on-inverse-strong": {
+      "$value": "{color.white}",
+      "$type": "color"
     }
   },
   "border": {
@@ -72,6 +106,10 @@
     },
     "focus": {
       "$value": "{color.blue.4}",
+      "$type": "color"
+    },
+    "inverse": {
+      "$value": "{color.gray.8}",
       "$type": "color"
     }
   },
