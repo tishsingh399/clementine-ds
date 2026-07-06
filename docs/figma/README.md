@@ -57,11 +57,12 @@ tool-specific kits: compact prompts, exported token summaries, examples, and
 handoff instructions that translate the repo contract into each tool's context
 model.
 
-It also does not claim complete live Figma parity until the remote diff runs.
-Clementine has a local Figma MCP console bridge, backed by Tina's hardened fork
-of `figma-console-mcp`, and the repo can derive the expected 628 component
-variables from code. The next proof is running that bridge/token check against
-the live Figma file and publishing the diff.
+It also does not claim complete visual Figma parity. Clementine has a local
+Figma MCP console bridge, backed by Tina's hardened fork of `figma-console-mcp`,
+and the repo derives the expected 628 component variables from code. A live
+bridge read verified that those 628 component variable names exist in Figma; the
+remaining 50 live-only component variables are documented shell/organism tokens,
+not part of the code contract.
 
 The testing plan for that layer lives in
 [`docs/AI-TOOL-ADAPTERS.md`](../AI-TOOL-ADAPTERS.md).
