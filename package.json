@@ -11,6 +11,8 @@
     "size": "size-limit",
     "size:why": "size-limit --why",
     "tokens:index": "node scripts/build-component-index.mjs",
+    "tokens:types": "node scripts/build-token-types.mjs",
+    "tokens:types:check": "node scripts/build-token-types.mjs --check",
     "agentic:indexes": "node scripts/build-agentic-indexes.mjs",
     "counts": "node scripts/inject-counts.mjs",
     "counts:check": "node scripts/inject-counts.mjs --check",
@@ -23,7 +25,7 @@
     "validate:behaviors": "node scripts/check-behavior-specs.mjs",
     "validate:state-coverage": "node scripts/check-state-coverage.mjs",
     "validate:contract": "agentic-spec validate specs/",
-    "validate": "pnpm tokens:index && pnpm agentic:indexes && pnpm validate:contract && pnpm validate:cascade && pnpm spec-token-metadata:check && pnpm validate:honesty && pnpm validate:links && pnpm validate:behaviors && pnpm validate:state-coverage && pnpm counts:check",
+    "validate": "pnpm tokens:index && pnpm tokens:types:check && pnpm agentic:indexes && pnpm validate:contract && pnpm validate:cascade && pnpm spec-token-metadata:check && pnpm validate:honesty && pnpm validate:links && pnpm validate:behaviors && pnpm validate:state-coverage && pnpm counts:check",
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
     "parity:dom": "node scripts/parity-dom.mjs",
     "test": "pnpm validate"

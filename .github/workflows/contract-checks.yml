@@ -42,6 +42,9 @@ jobs:
       - name: agentic-spec validate (structural, pinned 0.2.0)
         run: pnpm validate:contract
 
+      - name: Typed token exports are current
+        run: pnpm tokens:types:check
+
       - name: Cascade direction (F2)
         run: node scripts/lint-cascade-direction.mjs
 
