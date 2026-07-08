@@ -17,7 +17,8 @@
   },
   "scripts": {
     "prebuild": "node ../../scripts/build-component-index.mjs",
-    "build": "style-dictionary build --config sd.config.ts"
+    "build": "style-dictionary build --config sd.config.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {
     "style-dictionary": "^4",

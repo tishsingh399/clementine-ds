@@ -4,7 +4,7 @@ name: Self-heal
 #
 # This workflow is the automated inner cycle for the MECHANICAL drift class —
 # files that are derivable from the source of truth (the generated component
-# index, the agentic knowledge indexes, the doc count markers). The fixers are
+# index, typed token exports, the agentic knowledge indexes, the doc count markers). The fixers are
 # deterministic scripts, not an AI: same input, same output, reviewable diff.
 #
 # Judgment-class findings (a component off its contract, a stale spec) are NOT
@@ -16,7 +16,7 @@ name: Self-heal
 #  - gate:        the fix ships as a PR; branch protection requires the
 #                 independent "Contract gates" check to pass on that exact
 #                 commit before auto-merge can complete
-#  - bounded:     the loop may only run the three named fixers; it never edits
+#  - bounded:     the loop may only run the four named fixers; it never edits
 #                 components, specs, tokens source, or loop-rules.md
 on:
   schedule:
@@ -66,6 +66,7 @@ jobs:
         run: |
           skip() { grep -qE "^skip: $1\$" governance/loop-rules.md; }
           skip tokens-index    || pnpm tokens:index
+          skip token-types     || pnpm tokens:types
           skip agentic-indexes || pnpm agentic:indexes
           skip counts          || pnpm counts
 
@@ -101,7 +102,7 @@ jobs:
             --description "Opened by the self-healing loop" >/dev/null 2>&1 || true
           PR_URL=$(gh pr create --base main --head "$BRANCH" --label self-heal \
             --title "loop: heal mechanical drift" \
-            --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, agentic:indexes, counts) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
+            --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, tokens:types, agentic:indexes, counts) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
           # If LOOP_TOKEN authored the PR, normal pull_request checks run
           # natively. If the workflow token authored it, ask the independent
           # gate to inspect the branch because workflow-token PRs do not
