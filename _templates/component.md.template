@@ -122,4 +122,4 @@ The contract token is component-tier; it resolves *through* a semantic token to 
 What an AI agent needs to know to safely extend this component:
 - Every token in `token_contract` MUST exist in `packages/tokens/src/components/<component>.json` and resolve through a semantic token (component → semantic → primitive)
 - Don't bypass Mantine's prop API — extend it
-- Storybook story names map 1:1 to `interaction_states`
+- Storybook or painted-DOM evidence maps to `interaction_states`; any intentional gap must be tracked by `validate:state-coverage`

@@ -1,0 +1,740 @@
+{
+  "generatedAt": "2026-07-08T03:53:53.219Z",
+  "gaps": [
+    {
+      "component": "accordion",
+      "state": "collapsed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Accordion.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "accordion",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Accordion.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "accordion",
+      "state": "expanded",
+      "status": "gap",
+      "story": "apps/storybook/stories/Accordion.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "agent-picker",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/AgentPicker.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "agent-picker",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/AgentPicker.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "alert",
+      "state": "dismissing",
+      "status": "gap",
+      "story": "apps/storybook/stories/Alert.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "alert",
+      "state": "visible",
+      "status": "gap",
+      "story": "apps/storybook/stories/Alert.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "anchor",
+      "state": "visited",
+      "status": "gap",
+      "story": "apps/storybook/stories/Anchor.stories.tsx",
+      "reason": "visited cannot be reliably simulated in automated browser CSS checks; needs an explicit story or manual evidence"
+    },
+    {
+      "component": "autocomplete",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/Autocomplete.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "autocomplete",
+      "state": "typing",
+      "status": "gap",
+      "story": "apps/storybook/stories/Autocomplete.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "breadcrumbs",
+      "state": "current",
+      "status": "gap",
+      "story": "apps/storybook/stories/Breadcrumbs.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "calendar",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Calendar.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "carousel",
+      "state": "dragging",
+      "status": "gap",
+      "story": "apps/storybook/stories/Carousel.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "character-counter",
+      "state": "near-limit",
+      "status": "gap",
+      "story": "apps/storybook/stories/CharacterCounter.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "character-counter",
+      "state": "over-limit",
+      "status": "gap",
+      "story": "apps/storybook/stories/CharacterCounter.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "chart",
+      "state": "empty",
+      "status": "gap",
+      "story": "apps/storybook/stories/Chart.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "chip",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Chip.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "code-block",
+      "state": "copied",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/CodeBlock.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "color-input",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/ColorInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "composer",
+      "state": "idle",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/Composer.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "composer",
+      "state": "typing",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/Composer.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "context-meter",
+      "state": "warning",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/ContextMeter.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "date-input",
+      "state": "filled",
+      "status": "gap",
+      "story": "apps/storybook/stories/DateInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "date-input",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/DateInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "date-picker",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/DatePicker.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "date-picker",
+      "state": "selected",
+      "status": "gap",
+      "story": "apps/storybook/stories/DatePicker.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "diff-view",
+      "state": "added",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/DiffView.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "diff-view",
+      "state": "removed",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/DiffView.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "divider",
+      "state": "labelled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Divider.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "drawer",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Drawer.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "drawer",
+      "state": "closing",
+      "status": "gap",
+      "story": "apps/storybook/stories/Drawer.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "drawer",
+      "state": "opening",
+      "status": "gap",
+      "story": "apps/storybook/stories/Drawer.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "export-menu",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/ExportMenu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "export-menu",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/ExportMenu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "faceted-filter",
+      "state": "checked",
+      "status": "gap",
+      "story": "apps/storybook/stories/FacetedFilter.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "feedback-control",
+      "state": "idle",
+      "status": "gap",
+      "story": "apps/storybook/stories/feedback/FeedbackControl.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "feedback-control",
+      "state": "negative",
+      "status": "gap",
+      "story": "apps/storybook/stories/feedback/FeedbackControl.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "file-input",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/FileInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "file-input",
+      "state": "empty",
+      "status": "gap",
+      "story": "apps/storybook/stories/FileInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "file-input",
+      "state": "selected",
+      "status": "gap",
+      "story": "apps/storybook/stories/FileInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "hover-card",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/HoverCard.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "hover-card",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/HoverCard.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "image",
+      "state": "error",
+      "status": "gap",
+      "story": "apps/storybook/stories/Image.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "image",
+      "state": "loaded",
+      "status": "gap",
+      "story": "apps/storybook/stories/Image.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "image",
+      "state": "loading",
+      "status": "gap",
+      "story": "apps/storybook/stories/Image.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "loader",
+      "state": "spinning",
+      "status": "gap",
+      "story": "apps/storybook/stories/Loader.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "maintenance-banner",
+      "state": "info",
+      "status": "gap",
+      "story": "apps/storybook/stories/MaintenanceBanner.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "menu",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Menu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "menu",
+      "state": "item-disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Menu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "menu",
+      "state": "item-focus",
+      "status": "gap",
+      "story": "apps/storybook/stories/Menu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "menu",
+      "state": "item-hover",
+      "status": "gap",
+      "story": "apps/storybook/stories/Menu.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "modal",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Modal.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "modal",
+      "state": "closing",
+      "status": "gap",
+      "story": "apps/storybook/stories/Modal.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "modal",
+      "state": "opening",
+      "status": "gap",
+      "story": "apps/storybook/stories/Modal.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "model-selector",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/ModelSelector.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "model-selector",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/ModelSelector.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "multi-select",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/MultiSelect.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "multi-select",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/MultiSelect.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "notification-center",
+      "state": "unread",
+      "status": "gap",
+      "story": "apps/storybook/stories/NotificationCenter.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "notification",
+      "state": "info",
+      "status": "gap",
+      "story": "apps/storybook/stories/Notification.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "permission-request",
+      "state": "allowed",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/PermissionRequest.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "permission-request",
+      "state": "denied",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/PermissionRequest.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "permission-request",
+      "state": "pending",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/PermissionRequest.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "pill",
+      "state": "removable",
+      "status": "gap",
+      "story": "apps/storybook/stories/Pill.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "pin-input",
+      "state": "filled",
+      "status": "gap",
+      "story": "apps/storybook/stories/PinInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "plan-steps",
+      "state": "error",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/PlanSteps.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "popover",
+      "state": "closed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Popover.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "presence-indicator",
+      "state": "offline",
+      "status": "gap",
+      "story": "apps/storybook/stories/PresenceIndicator.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "progress",
+      "state": "complete",
+      "status": "gap",
+      "story": "apps/storybook/stories/Progress.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "progress",
+      "state": "determinate",
+      "status": "gap",
+      "story": "apps/storybook/stories/Progress.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "radio",
+      "state": "checked",
+      "status": "gap",
+      "story": "apps/storybook/stories/Radio.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "rating",
+      "state": "empty",
+      "status": "gap",
+      "story": "apps/storybook/stories/Rating.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "rating",
+      "state": "selected",
+      "status": "gap",
+      "story": "apps/storybook/stories/Rating.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "rbac-matrix",
+      "state": "denied",
+      "status": "gap",
+      "story": "apps/storybook/stories/RbacMatrix.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "rbac-matrix",
+      "state": "granted",
+      "status": "gap",
+      "story": "apps/storybook/stories/RbacMatrix.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "reasoning-trace",
+      "state": "expanded",
+      "status": "gap",
+      "story": "apps/storybook/stories/ai/ReasoningTrace.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "role-picker",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/RolePicker.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "search-field",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/SearchField.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "search-field",
+      "state": "empty",
+      "status": "gap",
+      "story": "apps/storybook/stories/SearchField.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "search-field",
+      "state": "typing",
+      "status": "gap",
+      "story": "apps/storybook/stories/SearchField.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "select",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/Select.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "skeleton",
+      "state": "loaded",
+      "status": "gap",
+      "story": "apps/storybook/stories/Skeleton.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "slider",
+      "state": "dragging",
+      "status": "gap",
+      "story": "apps/storybook/stories/Slider.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "split-button",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/SplitButton.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "spoiler",
+      "state": "collapsed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Spoiler.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "spoiler",
+      "state": "expanded",
+      "status": "gap",
+      "story": "apps/storybook/stories/Spoiler.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "status-dot",
+      "state": "neutral",
+      "status": "gap",
+      "story": "apps/storybook/stories/StatusDot.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "stepper",
+      "state": "completed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Stepper.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "stepper",
+      "state": "disabled",
+      "status": "gap",
+      "story": "apps/storybook/stories/Stepper.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "stepper",
+      "state": "pending",
+      "status": "gap",
+      "story": "apps/storybook/stories/Stepper.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "switch",
+      "state": "off",
+      "status": "gap",
+      "story": "apps/storybook/stories/Switch.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "switch",
+      "state": "on",
+      "status": "gap",
+      "story": "apps/storybook/stories/Switch.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tabs",
+      "state": "selected",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tabs.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tags-input",
+      "state": "error",
+      "status": "gap",
+      "story": "apps/storybook/stories/TagsInput.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "timeline",
+      "state": "pending",
+      "status": "gap",
+      "story": "apps/storybook/stories/Timeline.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "toast",
+      "state": "entering",
+      "status": "gap",
+      "story": "apps/storybook/stories/Toast.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "toast",
+      "state": "exiting",
+      "status": "gap",
+      "story": "apps/storybook/stories/Toast.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "toast",
+      "state": "visible",
+      "status": "gap",
+      "story": "apps/storybook/stories/Toast.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tooltip",
+      "state": "closing",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tooltip.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tooltip",
+      "state": "hidden",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tooltip.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tooltip",
+      "state": "open",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tooltip.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tooltip",
+      "state": "opening",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tooltip.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tree",
+      "state": "collapsed",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tree.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tree",
+      "state": "expanded",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tree.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    },
+    {
+      "component": "tree",
+      "state": "selected",
+      "status": "gap",
+      "story": "apps/storybook/stories/Tree.stories.tsx",
+      "reason": "no explicit Storybook evidence for declared state"
+    }
+  ]
+}

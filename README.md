@@ -129,7 +129,7 @@ The specs in `/specs/` are designed to eliminate those failures by making the co
 
 - **Closed token list** — `specs/<component>/tokens.json` is the complete set of tokens that component may use. Anything else is a lint failure.
 - **Named parts** — every token must target a declared region (`root`, `label`, `icon-leading`).
-- **Required states** — `interaction_states:` enumerates what must exist in code + stories.
+- **Required states** — `interaction_states:` enumerates what must exist in code and be evidenced by a Storybook story, painted-DOM sampling, or the tracked state-coverage gap ledger.
 - **Source pointers** — the spec tells the agent exactly which file to open.
 
 The agent reads the spec first, then writes the code. Reverse-engineering from a hex value or a screenshot is no longer needed.
@@ -144,7 +144,7 @@ Short version:
 2. Fill `semantic_parts` + `interaction_states` first
 3. Build `tokens.json` from existing semantic tokens (extend `semantic-*.json` if you need new ones — never inline a hex)
 4. Implement against the spec in `packages/ui/src/components/`
-5. Add a Storybook story per state
+5. Add Storybook coverage for each state, or make sure the state is covered by the painted-DOM sampler or tracked in the state-coverage ledger
 6. Flip `status: AI-Ready` when all `checks:` are `true`
 
 ## License
