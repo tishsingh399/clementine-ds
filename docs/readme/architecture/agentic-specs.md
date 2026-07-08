@@ -68,7 +68,7 @@ sources:
 | `required_aria` | Implement every attribute. Missing one is a contract violation. |
 | `semantic_parts` | Every token must target one of these regions. Tokens that do not are dangling. |
 | `token_contract` | Closed list. Treat as the complete vocabulary you can use. |
-| `interaction_states` | Every state must have a Storybook story. Every state must be implemented. |
+| `interaction_states` | Every state must be implemented, and a Storybook file must exist for the component (enforced). One story per state is the convention; per-state enforcement is a known gap. |
 | `checks` | The component's self-reported gate status. `tokens_valid: true` means the validator passed. |
 | `sources.code.path` | Open this file to see the actual implementation. |
 | `sources.tokens.component` | Open this file to see the value bindings. |

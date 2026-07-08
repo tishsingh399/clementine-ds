@@ -48,7 +48,7 @@ The board above captured the initial snapshot — 52 primitives, 32 semantic tok
 
 ![Figma · 10 components bound to Tier-3 variables](./docs/figma/components.png)
 
-Every paint on every frame is bound to a `Clementine · Components` variable. Hover on the Button → swaps to `button/bg/hover`. Focus ring → `button/border/focus`. The code-contract variables are diffed against Figma; Figma-only shell variables are documented separately instead of being counted as component-contract drift.
+Paints are bound to Clementine variables (99% coverage; 37 documented intentional holdouts). Hover on the Button → swaps to `button/bg/hover`. Focus ring → `button/border/focus`. The code-contract variables are diffed against Figma; Figma-only shell variables are documented separately instead of being counted as component-contract drift.
 
 ### Spec board
 

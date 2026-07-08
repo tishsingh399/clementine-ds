@@ -18,7 +18,7 @@ Cursor) can execute this directly — commands are copy-pasteable and ordered.
 | Components | **<!-- COUNTS:components -->121<!-- /COUNTS -->**, each shipping token + spec + Storybook story + guidance doc + implementation |
 | Patterns | **22** composed flows in [`patterns/`](./patterns) |
 | Tokens | <!-- COUNTS:primitives -->89<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->41<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->628<!-- /COUNTS -->** component tokens |
-| Figma variables | **<!-- COUNTS:component-tokens -->628<!-- /COUNTS -->** component variables, cascade-aliased, **1:1 with the code** |
+| Figma variables | **<!-- COUNTS:component-tokens -->628<!-- /COUNTS -->** code-derived component variables, cascade-aliased, all verified present in Figma (0 missing — `scripts/figma-parity.mjs`); shell variables documented separately |
 | Figma render | All **<!-- COUNTS:components -->121<!-- /COUNTS -->** drawn as real, token-bound nodes — across 6 category pages plus the core on the Cover page |
 | Typecheck | `@clementine-ds/ui` and `observatory` both pass `tsc --noEmit` (verified) |
 
@@ -130,7 +130,7 @@ File: `Clementine DS` (`w4JB0MOEIzOtSKx5Y3YSQR`)
 
 - **Cover page (`Clementine DS`):** token cascade board, the 10 core components showcase, the Button spec board
 - **Category pages** (94 components, grouped): Actions & Inputs · Containers & Navigation · Display & Feedback · AI Surfaces · Enterprise · Trust & Feedback
-- **3 variable collections:** Primitives · Semantic (light/dark modes) · Components — every paint on every component is bound to a Components-tier variable.
+- **3 variable collections:** Primitives · Semantic (light/dark modes) · Components — paints are bound through the token cascade: 99% coverage, 37 documented intentional holdouts (`docs/figma/TOKEN-BINDING.md`).
 
 ---
 
