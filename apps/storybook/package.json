@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "health:data": "node scripts/build-health-data.mjs",
+    "predev": "pnpm health:data",
     "dev": "storybook dev -p 6006",
+    "prebuild": "pnpm health:data",
     "build": "storybook build",
     "test-storybook": "test-storybook",
     "a11y:ci": "start-server-and-test \"http-server storybook-static --port 6006 -a 127.0.0.1 --silent\" http://127.0.0.1:6006/index.json \"test-storybook --url http://127.0.0.1:6006\""

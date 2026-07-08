@@ -1,0 +1,328 @@
+{
+  "generatedAt": "2026-07-09T00:00:54.072Z",
+  "sources": {
+    "contract": "apps/observatory/parity-report.json",
+    "dom": "apps/observatory/parity-dom-report.json",
+    "stateCoverage": "governance/state-coverage-baseline.json"
+  },
+  "contract": {
+    "generatedAt": "2026-07-08T23:54:53.417Z",
+    "threshold": 80,
+    "specs": 121,
+    "total": 627,
+    "passed": 627,
+    "average": 100,
+    "belowThreshold": []
+  },
+  "dom": {
+    "generatedAt": "2026-07-08T01:30:22.454Z",
+    "modes": [
+      "light",
+      "dark"
+    ],
+    "measured": 114,
+    "average": 100,
+    "belowFullParity": [],
+    "unwiredStateCount": 77,
+    "unwiredStates": [
+      {
+        "component": "accordion",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg-hover"
+        ]
+      },
+      {
+        "component": "accordion",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border-focus"
+        ]
+      },
+      {
+        "component": "accordion",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg-hover"
+        ]
+      },
+      {
+        "component": "accordion",
+        "mode": "dark",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border-focus"
+        ]
+      },
+      {
+        "component": "anchor",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "fg-hover"
+        ]
+      },
+      {
+        "component": "anchor",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "fg-hover"
+        ]
+      },
+      {
+        "component": "autocomplete",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border-focus"
+        ]
+      },
+      {
+        "component": "autocomplete",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option-bg-hover"
+        ]
+      },
+      {
+        "component": "autocomplete",
+        "mode": "dark",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border-focus"
+        ]
+      },
+      {
+        "component": "autocomplete",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option-bg-hover"
+        ]
+      },
+      {
+        "component": "button",
+        "mode": "light",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg.active"
+        ]
+      },
+      {
+        "component": "button",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      },
+      {
+        "component": "button",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg.hover",
+          "bg-destructive.hover",
+          "bg-outline.hover",
+          "border.hover"
+        ]
+      },
+      {
+        "component": "button",
+        "mode": "dark",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg.active"
+        ]
+      },
+      {
+        "component": "button",
+        "mode": "dark",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      },
+      {
+        "component": "carousel",
+        "mode": "light",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "indicator-active"
+        ]
+      },
+      {
+        "component": "carousel",
+        "mode": "dark",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "indicator-active"
+        ]
+      },
+      {
+        "component": "checkbox",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      }
+    ]
+  },
+  "stateCoverage": {
+    "generatedAt": "2026-07-08T03:53:53.219Z",
+    "gaps": 105,
+    "componentsWithGaps": 61,
+    "visibleGaps": [
+      {
+        "component": "accordion",
+        "state": "collapsed",
+        "status": "gap",
+        "story": "apps/storybook/stories/Accordion.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "accordion",
+        "state": "disabled",
+        "status": "gap",
+        "story": "apps/storybook/stories/Accordion.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "accordion",
+        "state": "expanded",
+        "status": "gap",
+        "story": "apps/storybook/stories/Accordion.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "agent-picker",
+        "state": "disabled",
+        "status": "gap",
+        "story": "apps/storybook/stories/ai/AgentPicker.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "agent-picker",
+        "state": "open",
+        "status": "gap",
+        "story": "apps/storybook/stories/ai/AgentPicker.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "alert",
+        "state": "dismissing",
+        "status": "gap",
+        "story": "apps/storybook/stories/Alert.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "alert",
+        "state": "visible",
+        "status": "gap",
+        "story": "apps/storybook/stories/Alert.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "anchor",
+        "state": "visited",
+        "status": "gap",
+        "story": "apps/storybook/stories/Anchor.stories.tsx",
+        "reason": "visited cannot be reliably simulated in automated browser CSS checks; needs an explicit story or manual evidence"
+      },
+      {
+        "component": "autocomplete",
+        "state": "open",
+        "status": "gap",
+        "story": "apps/storybook/stories/Autocomplete.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "autocomplete",
+        "state": "typing",
+        "status": "gap",
+        "story": "apps/storybook/stories/Autocomplete.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "breadcrumbs",
+        "state": "current",
+        "status": "gap",
+        "story": "apps/storybook/stories/Breadcrumbs.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "calendar",
+        "state": "disabled",
+        "status": "gap",
+        "story": "apps/storybook/stories/Calendar.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "carousel",
+        "state": "dragging",
+        "status": "gap",
+        "story": "apps/storybook/stories/Carousel.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "character-counter",
+        "state": "near-limit",
+        "status": "gap",
+        "story": "apps/storybook/stories/CharacterCounter.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "character-counter",
+        "state": "over-limit",
+        "status": "gap",
+        "story": "apps/storybook/stories/CharacterCounter.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "chart",
+        "state": "empty",
+        "status": "gap",
+        "story": "apps/storybook/stories/Chart.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "chip",
+        "state": "disabled",
+        "status": "gap",
+        "story": "apps/storybook/stories/Chip.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      },
+      {
+        "component": "code-block",
+        "state": "copied",
+        "status": "gap",
+        "story": "apps/storybook/stories/ai/CodeBlock.stories.tsx",
+        "reason": "no explicit Storybook evidence for declared state"
+      }
+    ]
+  }
+}
