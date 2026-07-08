@@ -40,7 +40,7 @@ If the values your component needs already exist in semantic, you can skip this 
 }
 ```
 
-Each entry references a semantic token. The cascade rule is one-way: components reference semantic, never primitives.
+Each color entry references a semantic token. The cascade rule is one-way: component colors reference semantic, never primitives; dimensional tokens may reference primitives directly.
 
 ### 4. Reflect tokens in the spec
 
@@ -85,7 +85,7 @@ If the validator complains about a `lying-check` or `ai-ready-gate`, the spec is
 After step 6:
 
 - The spec passes `agentic-spec validate`
-- The Storybook story exists for every state
+- A Storybook file exists for the component; one story per state is the convention
 - The TSX uses only tokens listed in `token_contract`
 - An AI agent can be pointed at `specs/tooltip/index.md` and write a screen using Tooltip without inventing tokens
 
