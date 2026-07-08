@@ -9,10 +9,10 @@
  *
  *   STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs [--strict]
  *
- * MVP scope (extensible): the component's root element in its default story,
- * colour properties (background, text, border) in light + dark. Per-state and
- * per-semantic-part coverage grows as components gain per-state stories and
- * data-part attribution (see the Phase 4 brief). Writes
+ * Scope: the component's root element in its default story, colour properties
+ * (background, text, border, outline, shadow) in light + dark, plus phase-1
+ * interaction state sampling for hover/focus/active/disabled. Per-state wiring
+ * warnings are informational in this phase; parity remains the gate. Writes
  * apps/observatory/parity-dom-report.json. Heavy — run nightly, not per-PR.
  */
 import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
@@ -24,6 +24,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
 const STORYBOOK_URL = process.env.STORYBOOK_URL ?? 'http://localhost:6006';
 const threshold = Number(process.env.PARITY_DOM_THRESHOLD ?? 80);
+const stateNames = ['hover', 'focus', 'active', 'disabled'];
 
 // playwright lives in the storybook workspace (via @storybook/test-runner)
 const require = createRequire(join(root, 'apps/storybook/package.json'));
@@ -98,6 +99,50 @@ function allowedFor(component, mode) {
   return set;
 }
 
+const colorPattern = /#[0-9a-f]{3,8}\b|rgba?\([^)]+\)/gi;
+function colorValues(raw) {
+  if (!raw || raw === 'none') return [];
+  const text = String(raw);
+  const matches = text.match(colorPattern);
+  if (matches) return matches;
+  return [{ raw: text, unparseable: true }];
+}
+
+function tokenStates(component) {
+  const found = new Set();
+  const ns = components[component];
+  if (!ns) return [];
+  for (const [path] of leaves(ns)) {
+    const segments = path.toLowerCase().split(/[.-]/g);
+    for (const state of stateNames) {
+      if (segments.includes(state)) found.add(state);
+    }
+  }
+  return [...found];
+}
+
+function stateTokenInfo(component, state, mode) {
+  const ns = components[component];
+  if (!ns) return { tokens: [], expectsChange: false };
+  const tokens = [];
+  let expectsChange = false;
+  for (const [path, node] of leaves(ns)) {
+    const parts = path.toLowerCase().split(/[.-]/g);
+    if (!parts.includes(state)) continue;
+    const value = canon(resolve(node.$value, semantic[mode]));
+    const defaultPath = path
+      .replace(new RegExp(`(^|[.-])${state}($|[.-])`, 'i'), '$1default$2')
+      .replace(new RegExp(`-${state}$`, 'i'), '-default')
+      .replace(new RegExp(`\\.${state}$`, 'i'), '.default');
+    const defaultNode = lookup(ns, defaultPath);
+    const defaultValue = defaultNode?.$value ? canon(resolve(defaultNode.$value, semantic[mode])) : null;
+    const changes = value != null && value !== defaultValue;
+    tokens.push({ path, value, defaultPath: defaultNode ? defaultPath : null, defaultValue, changes });
+    if (changes) expectsChange = true;
+  }
+  return { tokens, expectsChange };
+}
+
 function findSpecs(dir) {
   const out = [];
   for (const e of readdirSync(dir)) {
@@ -111,10 +156,117 @@ const field = (fm, k) => new RegExp(`^${k}:\\s*(.+)$`, 'm').exec(fm)?.[1]?.trim(
 
 const cap = (s) => s.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join('');
 
+async function gotoStory(page, storyId, mode) {
+  await page.goto(`${STORYBOOK_URL}/iframe.html?id=${storyId}&viewMode=story&globals=theme:${mode}`, { waitUntil: 'load' });
+  await page.evaluate((m) => {
+    document.documentElement.setAttribute('data-mantine-color-scheme', m);
+    let style = document.getElementById('cds-parity-disable-motion');
+    if (!style) {
+      style = document.createElement('style');
+      style.id = 'cds-parity-disable-motion';
+      style.textContent = '*{transition:none!important;animation:none!important;}';
+      document.head.appendChild(style);
+    }
+  }, mode);
+  await page.waitForTimeout(75);
+  await page.evaluate((m) => document.documentElement.setAttribute('data-mantine-color-scheme', m), mode);
+}
+
+async function findRootHandle(page, name) {
+  return page.evaluateHandle(({ Cap }) => {
+    const paints = (n) => {
+      const cs = getComputedStyle(n);
+      const bg = cs.backgroundColor;
+      const transparent = bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent';
+      const hasBorder = parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none';
+      const hasCdsVar = (n.getAttribute('style') || '').includes('--cds-');
+      return (!transparent) || hasBorder || hasCdsVar;
+    };
+    let el = document.querySelector(`.mantine-${Cap}-root`);
+    if (!el) {
+      const sbRoot = document.querySelector('#storybook-root, #root, .sb-show-main');
+      if (sbRoot) el = [...sbRoot.querySelectorAll('*')].find(paints) ?? null;
+    }
+    return el;
+  }, { Cap: cap(name) });
+}
+
+async function sampleRoot(page, rootHandle) {
+  return page.evaluate((el) => {
+    if (!el) return null;
+    const cs = getComputedStyle(el);
+    const out = { 'background-color': cs.backgroundColor, color: cs.color };
+    if (parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none') {
+      out['border-color'] = cs.borderTopColor;
+    }
+    if (parseFloat(cs.outlineWidth) > 0 && cs.outlineStyle !== 'none') {
+      out['outline-color'] = cs.outlineColor;
+    }
+    if (cs.boxShadow && cs.boxShadow !== 'none') {
+      out['box-shadow'] = cs.boxShadow;
+    }
+    return out;
+  }, rootHandle);
+}
+
+async function driveFocus(page, rootHandle) {
+  for (let i = 0; i < 12; i++) {
+    await page.keyboard.press('Tab');
+    const inside = await page.evaluate((el) => el?.contains(document.activeElement), rootHandle);
+    if (inside) return true;
+  }
+  return false;
+}
+
+async function driveState(page, rootHandle, state) {
+  if (state === 'hover') {
+    const box = await rootHandle.boundingBox();
+    if (!box) return { status: 'unreachable' };
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    return { status: 'measured' };
+  }
+  if (state === 'active') {
+    const box = await rootHandle.boundingBox();
+    if (!box) return { status: 'unreachable' };
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    await page.mouse.down();
+    return { status: 'measured', cleanup: async () => page.mouse.up() };
+  }
+  if (state === 'focus') {
+    const reached = await driveFocus(page, rootHandle);
+    return reached ? { status: 'measured' } : { status: 'unreachable' };
+  }
+  return { status: 'unsupported' };
+}
+
+function recordPaint(result, allowed, mode, state, painted, beforePainted = null) {
+  let sampled = 0;
+  let changed = false;
+  for (const [prop, raw] of Object.entries(painted ?? {})) {
+    const beforeRaw = beforePainted?.[prop];
+    if (beforeRaw !== undefined && String(beforeRaw) !== String(raw)) changed = true;
+    for (const color of colorValues(raw)) {
+      if (color?.unparseable) {
+        result.unparseable = result.unparseable ?? [];
+        result.unparseable.push({ mode, state, prop, value: color.raw });
+        continue;
+      }
+      const v = canon(color);
+      if (v == null) continue;
+      sampled++;
+      result.checked++;
+      if (allowed.has(v)) result.matched++;
+      else result.misses.push({ mode, state, prop, value: raw });
+    }
+  }
+  return { sampled, changed };
+}
+
 const report = { generatedAt: new Date().toISOString(), storybook: STORYBOOK_URL, modes: ['light', 'dark'], components: [] };
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
+page.setDefaultTimeout(3000);
 const index = await (await fetch(`${STORYBOOK_URL}/index.json`)).json();
 const stories = index.entries ?? index.stories ?? {};
 
@@ -128,54 +280,80 @@ for (const file of findSpecs(join(root, 'specs'))) {
   ) ?? Object.keys(stories).find((id) => new RegExp(`${name.replace(/-/g, '')}--`).test(id));
   if (!storyId) continue;
 
-  const result = { component: name, story: storyId, checked: 0, matched: 0, misses: [] };
+  const declaredStates = tokenStates(name);
+  const disabledStoryId = declaredStates.includes('disabled')
+    ? Object.keys(stories).find((id) => new RegExp(`${name.replace(/-/g, '')}--disabled$`).test(id))
+    : null;
+  const result = {
+    component: name,
+    story: storyId,
+    checked: 0,
+    matched: 0,
+    misses: [],
+    states: {},
+    unwiredStates: [],
+  };
   for (const mode of ['light', 'dark']) {
     const allowed = allowedFor(name, mode);
     try {
-      await page.goto(`${STORYBOOK_URL}/iframe.html?id=${storyId}&viewMode=story&globals=theme:${mode}`, { waitUntil: 'networkidle' });
-      await page.evaluate((m) => document.documentElement.setAttribute('data-mantine-color-scheme', m), mode);
-      // Find the component's own root, then read it — in one pass. Priority:
-      //  1. Mantine root (.mantine-<Cap>-root) for Mantine-backed components.
-      //  2. For custom components: the first element under #storybook-root that
-      //     actually paints (a --cds-* inline var, a real bg, or a border) — this
-      //     unwraps decorator wrappers without grabbing a transparent container.
-      // Portal/trigger components whose root isn't in the default story yield
-      // nothing and are skipped (not mis-scored against a trigger).
-      const painted = await page.evaluate(({ Cap }) => {
-        const paints = (n) => {
-          const cs = getComputedStyle(n);
-          const bg = cs.backgroundColor;
-          const transparent = bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent';
-          const hasBorder = parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none';
-          const hasCdsVar = (n.getAttribute('style') || '').includes('--cds-');
-          return (!transparent) || hasBorder || hasCdsVar;
-        };
-        let el = document.querySelector(`.mantine-${Cap}-root`);
-        if (!el) {
-          const sbRoot = document.querySelector('#storybook-root, #root, .sb-show-main');
-          if (sbRoot) el = [...sbRoot.querySelectorAll('*')].find(paints) ?? null;
-        }
-        if (!el) return null;
-        const cs = getComputedStyle(el);
-        const out = { 'background-color': cs.backgroundColor, color: cs.color };
-        // Only measure the border when there actually is one. With no border,
-        // border-color defaults to currentColor (the text colour), which is a
-        // phantom, not a painted border.
-        if (parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none') {
-          out['border-color'] = cs.borderTopColor;
-        }
-        return out;
-      }, { Cap: cap(name) });
+      await gotoStory(page, storyId, mode);
+      const rootHandle = await findRootHandle(page, name);
+      const painted = await sampleRoot(page, rootHandle);
       if (!painted) {
         result.skippedModes = (result.skippedModes ?? 0) + 1;
         continue;
       }
-      for (const [prop, raw] of Object.entries(painted)) {
-        const v = canon(raw);
-        if (v == null) continue;
-        result.checked++;
-        if (allowed.has(v)) result.matched++;
-        else result.misses.push({ mode, prop, value: raw });
+      const defaultResult = recordPaint(result, allowed, mode, 'default', painted);
+      result.states.default = result.states.default ?? {};
+      result.states.default[mode] = { status: 'measured', sampled: defaultResult.sampled };
+
+      for (const state of declaredStates.filter((s) => s !== 'disabled')) {
+        result.states[state] = result.states[state] ?? {};
+        try {
+          await gotoStory(page, storyId, mode);
+          const stateRoot = await findRootHandle(page, name);
+          const before = await sampleRoot(page, stateRoot);
+          if (!before) {
+            result.states[state][mode] = { status: 'no-root' };
+            continue;
+          }
+          const driven = await driveState(page, stateRoot, state);
+          if (driven.status !== 'measured') {
+            result.states[state][mode] = { status: state === 'focus' ? 'unreachable' : driven.status };
+            continue;
+          }
+          const statePainted = await sampleRoot(page, stateRoot);
+          const sampled = recordPaint(result, allowed, mode, state, statePainted, before);
+          result.states[state][mode] = { status: 'measured', sampled: sampled.sampled, changed: sampled.changed };
+          const info = stateTokenInfo(name, state, mode);
+          if (info.expectsChange && !sampled.changed) {
+            result.unwiredStates.push({ mode, state, reason: 'declared-state-token-did-not-change-painted-root', tokens: info.tokens.filter((t) => t.changes).map((t) => t.path) });
+          }
+          await driven.cleanup?.();
+        } catch (e) {
+          result.states[state] = result.states[state] ?? {};
+          result.states[state][mode] = { status: 'error', error: String(e).slice(0, 120) };
+        }
+      }
+
+      if (declaredStates.includes('disabled')) {
+        result.states.disabled = result.states.disabled ?? {};
+        if (!disabledStoryId) {
+          result.states.disabled[mode] = { status: 'no-story' };
+        } else {
+          await gotoStory(page, disabledStoryId, mode);
+          const disabledRoot = await findRootHandle(page, name);
+          const disabledPainted = await sampleRoot(page, disabledRoot);
+          if (!disabledPainted) result.states.disabled[mode] = { status: 'no-root', story: disabledStoryId };
+          else {
+            const sampled = recordPaint(result, allowed, mode, 'disabled', disabledPainted, painted);
+            result.states.disabled[mode] = { status: 'measured', story: disabledStoryId, sampled: sampled.sampled, changed: sampled.changed };
+            const info = stateTokenInfo(name, 'disabled', mode);
+            if (info.expectsChange && !sampled.changed) {
+              result.unwiredStates.push({ mode, state: 'disabled', reason: 'declared-state-token-did-not-change-painted-root', tokens: info.tokens.filter((t) => t.changes).map((t) => t.path) });
+            }
+          }
+        }
       }
     } catch (e) {
       result.misses.push({ mode, error: String(e).slice(0, 120) });
@@ -197,6 +375,8 @@ report.summary = {
   notMeasurable: report.components.length - measured.length,
   averageParity: Math.round(measured.reduce((s, c) => s + c.parity, 0) / (measured.length || 1)),
   belowThreshold: measured.filter((c) => c.parity < threshold).length,
+  unwiredStates: report.components.reduce((sum, c) => sum + (c.unwiredStates?.length ?? 0), 0),
+  disabledNoStory: report.components.filter((c) => c.states?.disabled && Object.values(c.states.disabled).some((s) => s.status === 'no-story')).map((c) => c.component),
   threshold,
 };
 
