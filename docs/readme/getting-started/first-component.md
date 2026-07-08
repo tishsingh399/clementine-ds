@@ -67,7 +67,7 @@ token_contract:
 
 Build `packages/ui/src/components/Tooltip.tsx`. Reference the spec for ARIA, structure, and which tokens to bind.
 
-Add a Storybook story per interaction state in `apps/storybook/stories/Tooltip.stories.tsx`.
+Add Storybook coverage for each interaction state in `apps/storybook/stories/Tooltip.stories.tsx`, or document why a pseudo-state is covered by the painted-DOM sampler instead.
 
 ### 6. Promote to AI-Ready
 
@@ -85,7 +85,7 @@ If the validator complains about a `lying-check` or `ai-ready-gate`, the spec is
 After step 6:
 
 - The spec passes `agentic-spec validate`
-- A Storybook file exists for the component; one story per state is the convention
+- A Storybook file exists for the component; each state has Storybook evidence, painted-DOM sampler coverage, or an explicit state-coverage ledger row
 - The TSX uses only tokens listed in `token_contract`
 - An AI agent can be pointed at `specs/tooltip/index.md` and write a screen using Tooltip without inventing tokens
 
@@ -96,7 +96,7 @@ After step 6:
 | Binding a hex value directly in TSX | Add a token, reference the token |
 | Component token references a primitive | Add a semantic in between |
 | Status flipped to `AI-Ready` while a story is missing | The validator will catch this. Add the story. |
-| Spec lists more states than stories cover | Add the story or drop the state |
+| Spec lists more states than coverage proves | Add the story, rely on painted-DOM sampling for pseudo-states, or track the intentional gap |
 
 ## Related
 

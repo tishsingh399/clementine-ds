@@ -147,7 +147,7 @@ What an AI agent must check before editing Button:
 
 1. Every token referenced in code must exist in `token_contract` and in `tokens.json`
 2. Do not bypass Mantine's prop API. Extend `MantineButtonProps`.
-3. Storybook story names should map one-to-one with `interaction_states`. Add a story for every new state.
+3. Storybook or painted-DOM evidence should map to `interaction_states`. Add story coverage for new non-pseudo states, and keep any intentional gap visible in the state-coverage ledger.
 4. Adding a variant requires updating four things in the same commit: §4 of the spec, `button.json` (component tokens), `tokens.json` (spec contract), and a new Storybook story.
 5. Dark mode resolves through `semantic-dark.json` with the same token names. Never hardcode a hex.
 

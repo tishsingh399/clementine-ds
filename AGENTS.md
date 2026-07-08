@@ -109,7 +109,7 @@ clementine-ds/
 | `required_aria` | Attributes the component MUST expose | Accessibility lint |
 | `semantic_parts` | Named regions inside the component | Token validator |
 | `token_contract` | The complete set of tokens this component may use | Token validator |
-| `interaction_states` | States that must exist in code + stories | Storybook drift check |
+| `interaction_states` | States that must exist in code and have Storybook, painted-DOM, or tracked-gap evidence | Storybook + state-coverage drift checks |
 | `checks` | Self-reported gate results | Agents (gate before edit) |
 | `sources` | Pointers to code, stories, token files | Agents (locate implementation) |
 | `patterns_used_in` | Where this component appears | Impact analysis |
@@ -120,7 +120,7 @@ clementine-ds/
 2. Set `status: Draft`, fill `semantic_parts:` and `interaction_states:` first
 3. Build `tokens.json` — only tokens that already exist in `semantic-*.json`. Missing ones? Extend tokens first.
 4. Implement in `packages/ui/src/components/<Name>.tsx` against the spec
-5. Add a Storybook story per interaction state
+5. Add Storybook coverage per interaction state, or make sure pseudo-state coverage is handled by painted-DOM sampling and any remaining gap is tracked explicitly
 6. Flip `checks:` to `true` as each gate passes
 7. Set `status: AI-Ready` only when all checks are `true`
 
@@ -129,7 +129,7 @@ clementine-ds/
 1. Read `specs/<component>/index.md` end-to-end. Don't skim.
 2. Make the code change.
 3. If the change touches tokens, update `tokens.json` in the same commit.
-4. If the change touches states, update `interaction_states:` and the Storybook story set in the same commit.
+4. If the change touches states, update `interaction_states:` and the Storybook or painted-DOM coverage evidence in the same commit.
 5. Bump `last_verified` to today's date.
 
 ## What this enables
