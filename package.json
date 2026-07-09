@@ -42,6 +42,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^12.1.0",
     "agentic-spec": "0.2.0",
+    "css-calipers": "1.0.0",
     "size-limit": "^12.1.0",
     "turbo": "^2",
     "typescript": "^5.7"
