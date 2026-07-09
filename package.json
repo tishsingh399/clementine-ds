@@ -29,6 +29,7 @@
     "validate": "pnpm tokens:index && pnpm tokens:types:check && pnpm agentic:indexes && pnpm validate:contract && pnpm validate:cascade && pnpm spec-token-metadata:check && pnpm validate:honesty && pnpm validate:links && pnpm validate:behaviors && pnpm validate:state-coverage && pnpm counts:check",
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
     "parity:dom": "node scripts/parity-dom.mjs",
+    "parity:dom:states": "node scripts/parity-dom.mjs --state-strict",
     "test": "pnpm validate"
   },
   "size-limit": [

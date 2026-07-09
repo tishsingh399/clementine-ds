@@ -27,6 +27,7 @@ type HealthData = {
     modes: string[];
     measured: number;
     average: number;
+    belowFullParityCount: number;
     belowFullParity: Array<{
       component: string;
       parity: number;
@@ -244,7 +245,7 @@ function HealthPanel() {
           value={report.dom ? formatPercent(report.dom.average) : 'n/a'}
           meta={
             report.dom
-              ? `${report.dom.measured} measured components, ${report.dom.belowFullParity.length} below 100%`
+              ? `${report.dom.measured} measured components, ${report.dom.belowFullParityCount} below 100%`
               : 'no painted-DOM snapshot available'
           }
           status={report.dom ? 'ok' : 'warn'}

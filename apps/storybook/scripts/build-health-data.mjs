@@ -72,17 +72,20 @@ const summarizeDom = (report) => {
     })),
   );
 
+  const belowFullParity = measured.filter((component) => component.parity < 100);
+
   return {
     generatedAt: report.generatedAt,
     modes: report.modes ?? [],
     measured: measured.length,
     average,
-    belowFullParity: measured
-      .filter((component) => component.parity < 100)
+    belowFullParityCount: belowFullParity.length,
+    belowFullParity: belowFullParity
+      .slice(0, 18)
       .map((component) => ({
         component: component.component,
         parity: component.parity,
-        misses: component.misses ?? [],
+        misses: (component.misses ?? []).slice(0, 6),
       })),
     unwiredStateCount: unwiredStates.length,
     unwiredStates: unwiredStates.slice(0, 18),
