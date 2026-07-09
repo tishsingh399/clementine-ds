@@ -128,6 +128,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.5
 
+  packages/eslint-plugin: {}
+
   packages/tokens:
     devDependencies:
       '@tokens-studio/sd-transforms':
