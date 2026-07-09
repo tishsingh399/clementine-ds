@@ -14,17 +14,28 @@
  * runs in CI today.
  *
  * Writes apps/observatory/parity-report.json and exits 1 (with --strict) if any
- * AI-Ready spec is below the threshold.
+ * AI-Ready spec is below the threshold or below the committed ratchet baseline.
  *
- * Usage: node scripts/parity-report.mjs [--strict] [--threshold=80]
+ * Usage: node scripts/parity-report.mjs [--strict] [--threshold=100] [--update-baseline]
  */
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
-const threshold = Number(process.argv.find((a) => a.startsWith('--threshold='))?.split('=')[1] ?? 80);
+const updateBaseline = process.argv.includes('--update-baseline');
+const threshold = Number(process.argv.find((a) => a.startsWith('--threshold='))?.split('=')[1] ?? 100);
+const baselinePath = join(root, 'governance/parity-baseline.json');
+
+function readBaseline() {
+  try {
+    return JSON.parse(readFileSync(baselinePath, 'utf8'));
+  } catch (error) {
+    if (error?.code === 'ENOENT') return null;
+    throw error;
+  }
+}
 
 const primitives = JSON.parse(readFileSync(join(root, 'packages/tokens/src/primitives.json'), 'utf8'));
 const semantic = JSON.parse(readFileSync(join(root, 'packages/tokens/src/semantic-light.json'), 'utf8'));
@@ -81,19 +92,65 @@ for (const file of findSpecs(join(root, 'specs'))) {
 }
 
 report.specs.sort((a, b) => a.parity - b.parity);
+const baselineSpecs = Object.fromEntries(
+  [...report.specs].sort((a, b) => a.name.localeCompare(b.name)).map((spec) => [spec.name, spec.parity]),
+);
+let baseline = readBaseline();
+let baselineMissing = false;
+let baselineRegressions = [];
+
+if (baseline) {
+  baselineRegressions = report.specs
+    .map((spec) => {
+      const baselineParity = baseline.specs?.[spec.name];
+      if (typeof baselineParity !== 'number' || spec.parity >= baselineParity) return null;
+      return { name: spec.name, parity: spec.parity, baseline: baselineParity };
+    })
+    .filter(Boolean);
+} else if (strict && !updateBaseline) {
+  baselineMissing = true;
+}
+
 report.summary = {
   count: report.specs.length,
   averageParity: Math.round(report.specs.reduce((s, x) => s + x.parity, 0) / report.specs.length),
   belowThreshold: report.specs.filter((s) => s.parity < threshold).length,
   demoteCandidates: demote.map((d) => d.name),
+  belowBaseline: baselineRegressions.length,
+  baseline: baseline ? 'governance/parity-baseline.json' : null,
 };
 
 const outDir = join(root, 'apps/observatory');
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'parity-report.json'), JSON.stringify(report, null, 2) + '\n');
+
+if (updateBaseline) {
+  if (demote.length) {
+    console.error(`refusing to update parity baseline: ${demote.length} AI-Ready specs are below ${threshold}%`);
+    process.exit(1);
+  }
+
+  const baselineDir = dirname(baselinePath);
+  mkdirSync(baselineDir, { recursive: true });
+  writeFileSync(
+    baselinePath,
+    JSON.stringify(
+      {
+        generatedAt: report.generatedAt,
+        threshold,
+        specs: baselineSpecs,
+      },
+      null,
+      2,
+    ) + '\n',
+  );
+}
 
 console.log(`parity: avg ${report.summary.averageParity}% across ${report.summary.count} specs — ${report.summary.belowThreshold} below ${threshold}%`);
 for (const d of demote) console.warn(`  ⚠︎ ${d.name}: ${d.parity}% (AI-Ready) — missing ${d.failed.slice(0, 3).join(', ')}${d.failed.length > 3 ? '…' : ''}`);
+for (const d of baselineRegressions) console.warn(`  ⚠︎ ${d.name}: ${d.parity}% below committed baseline ${d.baseline}%`);
+if (baselineMissing) console.error(`  ✕ missing governance/parity-baseline.json; run node scripts/parity-report.mjs --update-baseline from a healthy tree`);
 console.log(`→ apps/observatory/parity-report.json`);
+if (updateBaseline) console.log(`→ governance/parity-baseline.json`);
 
-if (strict && demote.length) process.exit(1);
+if (strict && (demote.length || baselineRegressions.length || baselineMissing)) process.exit(1);
