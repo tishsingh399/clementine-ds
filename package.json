@@ -24,6 +24,7 @@
     "validate:links": "node scripts/check-spec-links.mjs",
     "validate:behaviors": "node scripts/check-behavior-specs.mjs",
     "validate:state-coverage": "node scripts/check-state-coverage.mjs",
+    "lint:ds": "pnpm --filter @clementine-ds/eslint-plugin test",
     "validate:contract": "agentic-spec validate specs/",
     "validate": "pnpm tokens:index && pnpm tokens:types:check && pnpm agentic:indexes && pnpm validate:contract && pnpm validate:cascade && pnpm spec-token-metadata:check && pnpm validate:honesty && pnpm validate:links && pnpm validate:behaviors && pnpm validate:state-coverage && pnpm counts:check",
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
