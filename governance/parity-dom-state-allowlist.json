@@ -1,0 +1,805 @@
+{
+  "generatedAt": "2026-07-09T15:33:07.707Z",
+  "source": "apps/observatory/parity-dom-report.json",
+  "sourceGeneratedAt": "2026-07-08T01:30:22.454Z",
+  "note": "Temporary ratchet baseline for --states-strict. These entries are allowed known gaps, not proof of per-state parity. New or changed warnings fail the nightly DOM parity job.",
+  "unwiredStates": [
+    {
+      "component": "accordion",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "accordion",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "accordion",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "accordion",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "anchor",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "anchor",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "autocomplete",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "autocomplete",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "autocomplete",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option-bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "autocomplete",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option-bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "button",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "button",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "button",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "button",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "button",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-destructive.hover",
+        "bg-outline.hover",
+        "bg.hover",
+        "border.hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "carousel",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "indicator-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "carousel",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "indicator-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "checkbox",
+      "mode": "dark",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "checkbox",
+      "mode": "light",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "checkbox",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "checkbox",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "color-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "color-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "date-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "date-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "file-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "file-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "multi-select",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "multi-select",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "multi-select",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option-bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "multi-select",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option-bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "number-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "number-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "item.bg-active",
+        "item.fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "item.bg-active",
+        "item.fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "item.bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pagination",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "item.bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "password-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "password-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pin-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "pin-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "radio",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "radio",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "segmented-control",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-active",
+        "fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "segmented-control",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-active",
+        "fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "dark",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.trigger-disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "light",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.trigger-disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option.bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "select",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "option.bg-hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "stepper",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-active",
+        "fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "stepper",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg-active",
+        "fg-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "switch",
+      "mode": "dark",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "track.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "switch",
+      "mode": "light",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "track.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "switch",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "switch",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg.active",
+        "indicator.active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg.active",
+        "indicator.active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "dark",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg.hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tabs",
+      "mode": "light",
+      "state": "hover",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "fg.hover"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tags-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "tags-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border-focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "text-input",
+      "mode": "dark",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled",
+        "fg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "text-input",
+      "mode": "light",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled",
+        "fg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "text-input",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "text-input",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "textarea",
+      "mode": "dark",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled",
+        "fg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "textarea",
+      "mode": "light",
+      "state": "disabled",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bg.disabled",
+        "fg.disabled"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "textarea",
+      "mode": "dark",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "textarea",
+      "mode": "light",
+      "state": "focus",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "border.focus"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "timeline",
+      "mode": "dark",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bullet-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    },
+    {
+      "component": "timeline",
+      "mode": "light",
+      "state": "active",
+      "reason": "declared-state-token-did-not-change-painted-root",
+      "tokens": [
+        "bullet-active"
+      ],
+      "allowReason": "Known phase-1 per-state DOM sampler gap: the current root-level probe does not prove this declared state token repaints the target part yet."
+    }
+  ],
+  "disabledNoStory": [
+    {
+      "component": "radio",
+      "reason": "declared-disabled-state-has-no-disabled-story",
+      "allowReason": "Known phase-1 story coverage gap: disabled state is declared but does not yet have a dedicated disabled Storybook story for DOM sampling."
+    },
+    {
+      "component": "tabs",
+      "reason": "declared-disabled-state-has-no-disabled-story",
+      "allowReason": "Known phase-1 story coverage gap: disabled state is declared but does not yet have a dedicated disabled Storybook story for DOM sampling."
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-09T02:12:28.706Z",
+  "generatedAt": "2026-07-09T15:34:12.611Z",
   "sources": {
     "contract": "apps/observatory/parity-report.json",
     "dom": "apps/observatory/parity-dom-report.json",
     "stateCoverage": "governance/state-coverage-baseline.json"
   },
   "contract": {
-    "generatedAt": "2026-07-09T01:41:23.404Z",
-    "threshold": 80,
+    "generatedAt": "2026-07-09T15:31:44.002Z",
+    "threshold": 100,
     "specs": 121,
     "total": 627,
     "passed": 627,

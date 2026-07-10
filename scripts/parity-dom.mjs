@@ -7,14 +7,14 @@
  * it renders each component in a real browser and asserts every colour it paints
  * is a value some token in that component's contract resolves to.
  *
- *   STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs [--strict] [--state-strict]
+ *   STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs [--strict] [--states-strict]
  *
  * Scope: the component's visible rendered subtree in its default story, colour properties
  * (background, text, border, outline, shadow) in light + dark, plus phase-1
- * interaction state sampling for hover/focus/active/disabled. Per-state wiring
- * warnings are informational by default; `--state-strict` turns those warnings
- * into a failing gate. Writes apps/observatory/parity-dom-report.json. Heavy —
- * run nightly, not per-PR.
+ * interaction state sampling for hover/focus/active/disabled. With
+ * --states-strict, new or changed state-wiring warnings fail unless explicitly
+ * documented in governance/parity-dom-state-allowlist.json. Writes
+ * apps/observatory/parity-dom-report.json. Heavy — run nightly, not per-PR.
  */
 import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -23,14 +23,37 @@ import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
-const stateStrict = process.argv.includes('--state-strict') || process.env.PARITY_DOM_STATE_STRICT === '1';
+const statesStrict = process.argv.includes('--states-strict') || process.env.PARITY_DOM_STATE_STRICT === '1';
 const STORYBOOK_URL = process.env.STORYBOOK_URL ?? 'http://localhost:6006';
-const threshold = Number(process.env.PARITY_DOM_THRESHOLD ?? 80);
+const threshold = Number(process.env.PARITY_DOM_THRESHOLD ?? 100);
 const stateNames = ['hover', 'focus', 'active', 'disabled'];
 const sampleLimit = Number(process.env.PARITY_DOM_SAMPLE_LIMIT ?? 140);
 const componentFilter = new Set(
   (process.env.PARITY_DOM_COMPONENTS ?? '').split(',').map((name) => name.trim()).filter(Boolean),
 );
+const stateAllowlistPath = join(root, 'governance/parity-dom-state-allowlist.json');
+
+function readStateAllowlist() {
+  if (!existsSync(stateAllowlistPath)) return { unwiredStates: [], disabledNoStory: [] };
+  const parsed = JSON.parse(readFileSync(stateAllowlistPath, 'utf8'));
+  return {
+    unwiredStates: parsed.unwiredStates ?? [],
+    disabledNoStory: parsed.disabledNoStory ?? [],
+  };
+}
+
+const stateAllowlist = readStateAllowlist();
+const unwiredStateKey = (entry) =>
+  [
+    entry.component,
+    entry.mode,
+    entry.state,
+    entry.reason,
+    [...(entry.tokens ?? [])].sort().join(','),
+  ].join('|');
+const disabledNoStoryKey = (entry) => entry.component;
+const allowedUnwiredStateKeys = new Set(stateAllowlist.unwiredStates.map(unwiredStateKey));
+const allowedDisabledNoStoryKeys = new Set(stateAllowlist.disabledNoStory.map(disabledNoStoryKey));
 
 // playwright lives in the storybook workspace (via @storybook/test-runner)
 const require = createRequire(join(root, 'apps/storybook/package.json'));
@@ -422,27 +445,54 @@ await browser.close();
 const measured = report.components.filter((c) => c.measured);
 measured.sort((a, b) => a.parity - b.parity);
 report.components = [...measured, ...report.components.filter((c) => !c.measured)];
+const unwiredStateFindings = report.components.flatMap((component) =>
+  (component.unwiredStates ?? []).map((state) => ({
+    component: component.component,
+    ...state,
+  })),
+);
+const disabledNoStoryFindings = report.components
+  .filter((component) => component.states?.disabled && Object.values(component.states.disabled).some((state) => state.status === 'no-story'))
+  .map((component) => ({
+    component: component.component,
+    reason: 'declared-disabled-state-has-no-disabled-story',
+  }));
+const unallowedUnwiredStates = unwiredStateFindings.filter((entry) => !allowedUnwiredStateKeys.has(unwiredStateKey(entry)));
+const unallowedDisabledNoStory = disabledNoStoryFindings.filter((entry) => !allowedDisabledNoStoryKeys.has(disabledNoStoryKey(entry)));
 report.summary = {
   total: report.components.length,
   measured: measured.length,
   notMeasurable: report.components.length - measured.length,
   averageParity: Math.round(measured.reduce((s, c) => s + c.parity, 0) / (measured.length || 1)),
   belowThreshold: measured.filter((c) => c.parity < threshold).length,
-  unwiredStates: report.components.reduce((sum, c) => sum + (c.unwiredStates?.length ?? 0), 0),
-  disabledNoStory: report.components.filter((c) => c.states?.disabled && Object.values(c.states.disabled).some((s) => s.status === 'no-story')).map((c) => c.component),
-  stateStrict,
+  unwiredStates: unwiredStateFindings.length,
+  disabledNoStory: disabledNoStoryFindings.map((entry) => entry.component),
+  stateWarnings: unwiredStateFindings.length + disabledNoStoryFindings.length,
+  allowedStateWarnings:
+    unwiredStateFindings.length -
+    unallowedUnwiredStates.length +
+    disabledNoStoryFindings.length -
+    unallowedDisabledNoStory.length,
+  unallowedStateWarnings: unallowedUnwiredStates.length + unallowedDisabledNoStory.length,
+  stateWarningAllowlist: existsSync(stateAllowlistPath) ? 'governance/parity-dom-state-allowlist.json' : null,
   threshold,
 };
 
 const outDir = join(root, 'apps/observatory');
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'parity-dom-report.json'), JSON.stringify(report, null, 2) + '\n');
 
 console.log(`DOM parity: avg ${report.summary.averageParity}% across ${report.summary.measured} measured components (${report.summary.notMeasurable} not measurable in their default story) — ${report.summary.belowThreshold} below ${threshold}%`);
 for (const c of report.components.filter((c) => c.measured && c.parity < threshold).slice(0, 15)) {
   console.log(`  ⚠︎ ${c.component}: ${c.parity}% — ${c.misses.slice(0, 2).map((m) => m.prop ? `${m.prop}=${m.value} (${m.mode})` : m.error).join(', ')}`);
 }
+console.log(`state warnings: ${report.summary.stateWarnings} total, ${report.summary.allowedStateWarnings} allowed, ${report.summary.unallowedStateWarnings} unallowed`);
+for (const s of unallowedUnwiredStates.slice(0, 10)) {
+  console.warn(`  ⚠︎ ${s.component}/${s.state}/${s.mode}: ${s.reason} (${(s.tokens ?? []).join(', ')})`);
+}
+for (const s of unallowedDisabledNoStory.slice(0, 10)) {
+  console.warn(`  ⚠︎ ${s.component}: ${s.reason}`);
+}
 console.log('→ apps/observatory/parity-dom-report.json');
 
-if (strict && report.summary.belowThreshold > 0) process.exit(1);
-if (stateStrict && (report.summary.unwiredStates > 0 || report.summary.disabledNoStory.length > 0)) process.exit(1);
+if ((strict && report.summary.belowThreshold > 0) || (statesStrict && report.summary.unallowedStateWarnings > 0)) process.exit(1);

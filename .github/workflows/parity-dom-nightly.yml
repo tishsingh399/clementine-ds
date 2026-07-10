@@ -39,7 +39,7 @@ jobs:
         run: |
           pnpm --filter storybook exec http-server storybook-static -p 6006 --silent &
           pnpm --filter storybook exec wait-on -t 60000 http://localhost:6006/index.json
-          STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs
+          STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs --strict --states-strict
 
       - name: Upload report
         if: always()
