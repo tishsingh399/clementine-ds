@@ -9,7 +9,7 @@
  *
  *   STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs [--strict] [--states-strict]
  *
- * Scope: the component's root element in its default story, colour properties
+ * Scope: the component's visible rendered subtree in its default story, colour properties
  * (background, text, border, outline, shadow) in light + dark, plus phase-1
  * interaction state sampling for hover/focus/active/disabled. With
  * --states-strict, new or changed state-wiring warnings fail unless explicitly
@@ -23,10 +23,14 @@ import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
-const statesStrict = process.argv.includes('--states-strict');
+const statesStrict = process.argv.includes('--states-strict') || process.env.PARITY_DOM_STATE_STRICT === '1';
 const STORYBOOK_URL = process.env.STORYBOOK_URL ?? 'http://localhost:6006';
 const threshold = Number(process.env.PARITY_DOM_THRESHOLD ?? 100);
 const stateNames = ['hover', 'focus', 'active', 'disabled'];
+const sampleLimit = Number(process.env.PARITY_DOM_SAMPLE_LIMIT ?? 140);
+const componentFilter = new Set(
+  (process.env.PARITY_DOM_COMPONENTS ?? '').split(',').map((name) => name.trim()).filter(Boolean),
+);
 const stateAllowlistPath = join(root, 'governance/parity-dom-state-allowlist.json');
 
 function readStateAllowlist() {
@@ -193,14 +197,42 @@ async function gotoStory(page, storyId, mode) {
       document.head.appendChild(style);
     }
   }, mode);
-  await page.waitForTimeout(75);
+  await page.waitForFunction(
+    () => {
+      const preparing = document.querySelector('.sb-preparing-story');
+      if (!preparing) return true;
+      const cs = getComputedStyle(preparing);
+      return cs.display === 'none' || cs.visibility === 'hidden';
+    },
+    null,
+    { timeout: 5000 },
+  ).catch(() => {});
+  await page.waitForTimeout(150);
   await page.evaluate((m) => document.documentElement.setAttribute('data-mantine-color-scheme', m), mode);
 }
 
 async function findRootHandle(page, name) {
+  const ready = await page.waitForFunction(({ Cap }) => {
+    const paints = (n) => {
+      if (typeof n.className === 'string' && n.className.includes('sb-')) return false;
+      const cs = getComputedStyle(n);
+      if (cs.display === 'none' || cs.visibility === 'hidden') return false;
+      const bg = cs.backgroundColor;
+      const transparent = bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent';
+      const hasBorder = parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none';
+      const hasCdsVar = (n.getAttribute('style') || '').includes('--cds-');
+      return (!transparent) || hasBorder || hasCdsVar;
+    };
+    if (document.querySelector(`.mantine-${Cap}-root`)) return true;
+    const sbRoot = document.querySelector('#storybook-root, #root, .sb-show-main');
+    return sbRoot ? [...sbRoot.querySelectorAll('*')].some(paints) : false;
+  }, { Cap: cap(name) }, { timeout: 10000 }).then(() => true).catch(() => false);
+  if (!ready) return page.evaluateHandle(() => null);
   return page.evaluateHandle(({ Cap }) => {
     const paints = (n) => {
+      if (typeof n.className === 'string' && n.className.includes('sb-')) return false;
       const cs = getComputedStyle(n);
+      if (cs.display === 'none' || cs.visibility === 'hidden') return false;
       const bg = cs.backgroundColor;
       const transparent = bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent';
       const hasBorder = parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none';
@@ -217,21 +249,38 @@ async function findRootHandle(page, name) {
 }
 
 async function sampleRoot(page, rootHandle) {
-  return page.evaluate((el) => {
+  return rootHandle.evaluate((el, limit) => {
     if (!el) return null;
-    const cs = getComputedStyle(el);
-    const out = { 'background-color': cs.backgroundColor, color: cs.color };
-    if (parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none') {
-      out['border-color'] = cs.borderTopColor;
-    }
-    if (parseFloat(cs.outlineWidth) > 0 && cs.outlineStyle !== 'none') {
-      out['outline-color'] = cs.outlineColor;
-    }
-    if (cs.boxShadow && cs.boxShadow !== 'none') {
-      out['box-shadow'] = cs.boxShadow;
+    const visible = (node) => {
+      const cs = getComputedStyle(node);
+      return cs.display !== 'none' && cs.visibility !== 'hidden';
+    };
+    const selector = (node, index) => {
+      const tag = node.tagName.toLowerCase();
+      const classes = typeof node.className === 'string'
+        ? node.className.split(/\s+/).filter(Boolean).slice(0, 3).join('.')
+        : '';
+      return `${index}:${tag}${classes ? `.${classes}` : ''}`;
+    };
+    const out = {};
+    const nodes = [el, ...el.querySelectorAll('*')].filter(visible).slice(0, limit);
+    for (const [index, node] of nodes.entries()) {
+      const cs = getComputedStyle(node);
+      const key = selector(node, index);
+      out[`${key}:background-color`] = cs.backgroundColor;
+      out[`${key}:color`] = cs.color;
+      if (parseFloat(cs.borderTopWidth) > 0 && cs.borderTopStyle !== 'none') {
+        out[`${key}:border-color`] = cs.borderTopColor;
+      }
+      if (parseFloat(cs.outlineWidth) > 0 && cs.outlineStyle !== 'none') {
+        out[`${key}:outline-color`] = cs.outlineColor;
+      }
+      if (cs.boxShadow && cs.boxShadow !== 'none') {
+        out[`${key}:box-shadow`] = cs.boxShadow;
+      }
     }
     return out;
-  }, rootHandle);
+  }, sampleLimit);
 }
 
 async function driveFocus(page, rootHandle) {
@@ -299,6 +348,7 @@ for (const file of findSpecs(join(root, 'specs'))) {
   const fm = /^---\n([\s\S]*?)\n---/.exec(readFileSync(file, 'utf8'))?.[1] ?? '';
   const name = field(fm, 'component');
   if (!name || !components[name]) continue;
+  if (componentFilter.size && !componentFilter.has(name)) continue;
   // pick the default-ish story for this component
   const storyId = Object.keys(stories).find(
     (id) => stories[id].title?.toLowerCase().endsWith('/' + name.replace(/-/g, '')) || id === `components-${name.replace(/-/g, '')}--default`,
@@ -347,6 +397,7 @@ for (const file of findSpecs(join(root, 'specs'))) {
             result.states[state][mode] = { status: state === 'focus' ? 'unreachable' : driven.status };
             continue;
           }
+          await page.waitForTimeout(75);
           const statePainted = await sampleRoot(page, stateRoot);
           const sampled = recordPaint(result, allowed, mode, state, statePainted, before);
           result.states[state][mode] = { status: 'measured', sampled: sampled.sampled, changed: sampled.changed };

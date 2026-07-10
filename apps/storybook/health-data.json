@@ -15,117 +15,542 @@
     "belowThreshold": []
   },
   "dom": {
-    "generatedAt": "2026-07-08T01:30:22.454Z",
+    "generatedAt": "2026-07-09T02:07:13.519Z",
     "modes": [
       "light",
       "dark"
     ],
     "measured": 114,
-    "average": 100,
-    "belowFullParity": [],
-    "unwiredStateCount": 77,
+    "average": 98.78947368421052,
+    "belowFullParityCount": 19,
+    "belowFullParity": [
+      {
+        "component": "color-input",
+        "parity": 80,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:div.m_82577fc2.mantine-Input-section.mantine-ColorInput-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "4:div.mantine-focus-auto.m_c5ccdcab.mantine-ColorInput-colorPreview:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "5:span.m_95709ac0.mantine-ColorSwatch-alphaOverlay:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "6:span.m_98ae7f22.mantine-ColorSwatch-shadowOverlay:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "7:span.m_862f3d1b.mantine-ColorSwatch-colorOverlay:background-color",
+            "value": "rgb(37, 99, 235)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "7:span.m_862f3d1b.mantine-ColorSwatch-colorOverlay:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "breadcrumbs",
+        "parity": 83,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "2:div.m_3b8f2208.mantine-Breadcrumbs-separator:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "4:div.m_3b8f2208.mantine-Breadcrumbs-separator:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "2:div.m_3b8f2208.mantine-Breadcrumbs-separator:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "4:div.m_3b8f2208.mantine-Breadcrumbs-separator:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "switch",
+        "parity": 83,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "3:span.m_9307d992.mantine-Switch-track:background-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "focus",
+            "prop": "2:input.m_926b4011.mantine-Switch-input:outline-color",
+            "value": "rgb(0, 95, 204)"
+          },
+          {
+            "mode": "light",
+            "state": "focus",
+            "prop": "3:span.m_9307d992.mantine-Switch-track:background-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "disabled",
+            "prop": "2:input.m_926b4011.mantine-Switch-input:color",
+            "value": "rgb(84, 84, 84)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:span.m_9307d992.mantine-Switch-track:background-color",
+            "value": "rgb(61, 77, 97)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:span.m_9307d992.mantine-Switch-track:color",
+            "value": "rgb(219, 227, 236)"
+          }
+        ]
+      },
+      {
+        "component": "password-input",
+        "parity": 88,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:div.m_ccf8da4c.m_8fb7ebe7.mantine-Input-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "5:div.m_82577fc2.mantine-Input-section.mantine-PasswordInput-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "6:button.mantine-focus-auto.mantine-active.m_b1072d44:color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "7:span.m_8d3afb97.mantine-ActionIcon-icon:color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "8:svg:color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "9:path:color",
+            "value": "rgb(212, 212, 207)"
+          }
+        ]
+      },
+      {
+        "component": "stepper",
+        "parity": 88,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "14:span.m_1959ad01.mantine-Stepper-stepIcon:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "15:span:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "22:span.m_1959ad01.mantine-Stepper-stepIcon:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "23:span:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "active",
+            "prop": "14:span.m_1959ad01.mantine-Stepper-stepIcon:color",
+            "value": "rgb(82, 82, 78)"
+          },
+          {
+            "mode": "light",
+            "state": "active",
+            "prop": "15:span:color",
+            "value": "rgb(82, 82, 78)"
+          }
+        ]
+      },
+      {
+        "component": "avatar",
+        "parity": 90,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "1:span.m_104cd71f.mantine-Avatar-placeholder:background-color",
+            "value": "rgba(37, 99, 235, 0.15)"
+          }
+        ]
+      },
+      {
+        "component": "pin-input",
+        "parity": 91,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "2:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "4:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "6:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "8:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "10:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "12:input.m_8fb7ebe7.mantine-Input-input.mantine-PinInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          }
+        ]
+      },
+      {
+        "component": "indicator",
+        "parity": 94,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:span.m_104cd71f.mantine-Avatar-placeholder:background-color",
+            "value": "rgba(37, 99, 235, 0.15)"
+          }
+        ]
+      },
+      {
+        "component": "timeline",
+        "parity": 94,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "14:div.m_8affcee1.mantine-Timeline-itemBullet:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "active",
+            "prop": "14:div.m_8affcee1.mantine-Timeline-itemBullet:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "6:p.mantine-focus-auto.m_b6d8b162.mantine-Text-root:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "12:p.mantine-focus-auto.m_b6d8b162.mantine-Text-root:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "14:div.m_8affcee1.mantine-Timeline-itemBullet:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "18:p.mantine-focus-auto.m_b6d8b162.mantine-Text-root:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "carousel",
+        "parity": 95,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "2:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "default",
+            "prop": "5:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "active",
+            "prop": "2:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "light",
+            "state": "active",
+            "prop": "5:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "2:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "5:button.mantine-focus-auto.m_64f58e10.mantine-Carousel-control:border-color",
+            "value": "rgb(212, 212, 207)"
+          }
+        ]
+      },
+      {
+        "component": "number-input",
+        "parity": 95,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:input.m_8fb7ebe7.mantine-Input-input.mantine-NumberInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-NumberInput-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "5:div.m_95e17d22.mantine-NumberInput-controls:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "focus",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-NumberInput-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "focus",
+            "prop": "5:div.m_95e17d22.mantine-NumberInput-controls:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "date-input",
+        "parity": 97,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:input.m_8fb7ebe7.mantine-Input-input.mantine-DateInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          }
+        ]
+      },
+      {
+        "component": "multi-select",
+        "parity": 97,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:div.m_8fb7ebe7.mantine-Input-input.mantine-MultiSelect-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "11:div.m_82577fc2.mantine-Input-section.mantine-MultiSelect-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "focus",
+            "prop": "11:div.m_82577fc2.mantine-Input-section.mantine-MultiSelect-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "hover",
+            "prop": "3:div.m_8fb7ebe7.mantine-Input-input.mantine-MultiSelect-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "hover",
+            "prop": "11:div.m_82577fc2.mantine-Input-section.mantine-MultiSelect-section:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "radio",
+        "parity": 97,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:input.mantine-focus-auto.m_8a3dbb89.mantine-Radio-radio:border-color",
+            "value": "rgb(105, 120, 141)"
+          },
+          {
+            "mode": "dark",
+            "state": "focus",
+            "prop": "3:input.mantine-focus-auto.m_8a3dbb89.mantine-Radio-radio:border-color",
+            "value": "rgb(105, 120, 141)"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "parity": 97,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-Select-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "hover",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-Select-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "focus",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-Select-section:color",
+            "value": "rgb(170, 182, 198)"
+          },
+          {
+            "mode": "dark",
+            "state": "disabled",
+            "prop": "4:div.m_82577fc2.mantine-Input-section.mantine-Select-section:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "card",
+        "parity": 98,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "6:p.mantine-focus-auto.m_b6d8b162.mantine-Text-root:color",
+            "value": "rgb(170, 182, 198)"
+          }
+        ]
+      },
+      {
+        "component": "checkbox",
+        "parity": 98,
+        "misses": [
+          {
+            "mode": "light",
+            "state": "disabled",
+            "prop": "3:input.mantine-focus-auto.m_26063560.mantine-Checkbox-input:color",
+            "value": "rgb(84, 84, 84)"
+          },
+          {
+            "mode": "dark",
+            "state": "disabled",
+            "prop": "3:input.mantine-focus-auto.m_26063560.mantine-Checkbox-input:color",
+            "value": "rgb(170, 170, 170)"
+          }
+        ]
+      },
+      {
+        "component": "file-input",
+        "parity": 98,
+        "misses": [
+          {
+            "mode": "dark",
+            "state": "default",
+            "prop": "3:button.m_8fb7ebe7.mantine-Input-input.mantine-FileInput-input:border-color",
+            "value": "rgb(105, 120, 141)"
+          }
+        ]
+      }
+    ],
+    "unwiredStateCount": 43,
     "unwiredStates": [
       {
-        "component": "accordion",
-        "mode": "light",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "bg-hover"
-        ]
-      },
-      {
-        "component": "accordion",
-        "mode": "light",
-        "state": "focus",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "border-focus"
-        ]
-      },
-      {
-        "component": "accordion",
-        "mode": "dark",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "bg-hover"
-        ]
-      },
-      {
-        "component": "accordion",
-        "mode": "dark",
-        "state": "focus",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "border-focus"
-        ]
-      },
-      {
-        "component": "anchor",
-        "mode": "light",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "fg-hover"
-        ]
-      },
-      {
-        "component": "anchor",
-        "mode": "dark",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "fg-hover"
-        ]
-      },
-      {
-        "component": "autocomplete",
-        "mode": "light",
-        "state": "focus",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "border-focus"
-        ]
-      },
-      {
-        "component": "autocomplete",
-        "mode": "light",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "option-bg-hover"
-        ]
-      },
-      {
-        "component": "autocomplete",
-        "mode": "dark",
-        "state": "focus",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "border-focus"
-        ]
-      },
-      {
-        "component": "autocomplete",
-        "mode": "dark",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "option-bg-hover"
-        ]
-      },
-      {
-        "component": "button",
-        "mode": "light",
-        "state": "active",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "bg.active"
-        ]
-      },
-      {
-        "component": "button",
+        "component": "switch",
         "mode": "light",
         "state": "focus",
         "reason": "declared-state-token-did-not-change-painted-root",
@@ -134,33 +559,50 @@
         ]
       },
       {
-        "component": "button",
-        "mode": "dark",
-        "state": "hover",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "bg.hover",
-          "bg-destructive.hover",
-          "bg-outline.hover",
-          "border.hover"
-        ]
-      },
-      {
-        "component": "button",
-        "mode": "dark",
-        "state": "active",
-        "reason": "declared-state-token-did-not-change-painted-root",
-        "tokens": [
-          "bg.active"
-        ]
-      },
-      {
-        "component": "button",
+        "component": "switch",
         "mode": "dark",
         "state": "focus",
         "reason": "declared-state-token-did-not-change-painted-root",
         "tokens": [
           "border.focus"
+        ]
+      },
+      {
+        "component": "stepper",
+        "mode": "light",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg-active",
+          "fg-active"
+        ]
+      },
+      {
+        "component": "stepper",
+        "mode": "dark",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg-active",
+          "fg-active"
+        ]
+      },
+      {
+        "component": "timeline",
+        "mode": "light",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bullet-active"
+        ]
+      },
+      {
+        "component": "timeline",
+        "mode": "dark",
+        "state": "active",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bullet-active"
         ]
       },
       {
@@ -179,6 +621,60 @@
         "reason": "declared-state-token-did-not-change-painted-root",
         "tokens": [
           "indicator-active"
+        ]
+      },
+      {
+        "component": "multi-select",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option-bg-hover"
+        ]
+      },
+      {
+        "component": "multi-select",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option-bg-hover"
+        ]
+      },
+      {
+        "component": "radio",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      },
+      {
+        "component": "radio",
+        "mode": "dark",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      },
+      {
+        "component": "select",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option.bg-hover"
+        ]
+      },
+      {
+        "component": "select",
+        "mode": "dark",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "option.bg-hover"
         ]
       },
       {
@@ -188,6 +684,33 @@
         "reason": "declared-state-token-did-not-change-painted-root",
         "tokens": [
           "border.focus"
+        ]
+      },
+      {
+        "component": "checkbox",
+        "mode": "dark",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border.focus"
+        ]
+      },
+      {
+        "component": "accordion",
+        "mode": "light",
+        "state": "hover",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "bg-hover"
+        ]
+      },
+      {
+        "component": "accordion",
+        "mode": "light",
+        "state": "focus",
+        "reason": "declared-state-token-did-not-change-painted-root",
+        "tokens": [
+          "border-focus"
         ]
       }
     ]

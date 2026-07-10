@@ -371,6 +371,20 @@ export const clementineTheme = createTheme({
         };
       },
     },
+    Notification: {
+      defaultProps: { radius: 'md' },
+      styles: {
+        root: {
+          backgroundColor: 'var(--cds-notification-bg)',
+          borderColor: 'var(--cds-notification-border)',
+          borderRadius: 'var(--cds-notification-radius)',
+        },
+        icon: { color: 'var(--cds-notification-accent)' },
+        title: { color: 'var(--cds-notification-fg-title)' },
+        description: { color: 'var(--cds-notification-fg-body)' },
+        closeButton: { color: 'var(--cds-notification-fg-body)' },
+      },
+    },
     Tooltip: {
       defaultProps: {
         radius: 'sm',
