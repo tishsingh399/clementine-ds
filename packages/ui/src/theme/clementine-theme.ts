@@ -117,16 +117,17 @@ export const clementineTheme = createTheme({
     // Clementine's dark theme. Mantine drives ALL dark-scheme surfaces, text, and
     // borders from `colors.dark` — without this it silently falls back to its
     // generic grey dark mode (#242424) and the navy `surface.*` tokens go unused.
-    // Index map (Mantine v7): 0-1 brightest text · 2 dimmed · 3 placeholder ·
-    // 4-5 borders/hover · 6 default surface (Paper/default button) · 7 body ·
-    // 8-9 deepest. Tuned so dimmed text and input borders clear WCAG AA on navy.
+    // Index map (Mantine v7): 0-1 brightest text · 2 text.dimmed · 3 placeholder ·
+    // 4 border.input · 5 border.input-hover/control line · 6 default surface
+    // (Paper/default button) · 7 body · 8-9 deepest. Tuned so dimmed text and
+    // input borders clear WCAG AA on navy.
     dark: [
       '#f0f4f8', // 0  text.primary — brightest
       '#dbe3ec', // 1
-      '#aab6c6', // 2  dimmed text (≥4.5:1 on navy + colored subtle panels)
+      '#aab6c6', // 2  text.dimmed (≥4.5:1 on navy + colored subtle panels)
       '#94a1b2', // 3  placeholder — text.tertiary (dark)
-      '#69788d', // 4  default border (≥3:1 input borders, 1.4.11)
-      '#3d4d61', // 5  hover border / control line
+      '#69788d', // 4  border.input (≥3:1 input borders, 1.4.11)
+      '#3d4d61', // 5  border.input-hover / control line
       '#243447', // 6  surface.elevated — Paper / default-variant button bg
       '#1a2735', // 7  surface.default — body background
       '#15202e', // 8  surface.subtle — deeper wells
@@ -251,6 +252,39 @@ export const clementineTheme = createTheme({
         },
       }),
     },
+    PasswordInput: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-password-input-bg)',
+          '--input-color': 'var(--cds-password-input-fg)',
+          '--input-bd': 'var(--cds-password-input-border)',
+          '--input-placeholder-color': 'var(--cds-password-input-placeholder)',
+        },
+      }),
+      styles: {
+        visibilityToggle: {
+          color: 'var(--cds-password-input-placeholder)',
+          '& svg, & svg *': { color: 'currentColor' },
+        },
+      },
+    },
+    ColorInput: {
+      defaultProps: { radius: 'md' },
+      vars: () => ({
+        wrapper: {
+          '--input-bg': 'var(--cds-color-input-bg)',
+          '--input-color': 'var(--cds-color-input-fg)',
+          '--input-bd': 'var(--cds-color-input-border)',
+        },
+      }),
+      styles: {
+        eyeDropperButton: {
+          color: 'var(--cds-color-input-fg)',
+          '& svg, & svg *': { color: 'currentColor' },
+        },
+      },
+    },
     Textarea: {
       defaultProps: { radius: 'md' },
       vars: () => ({
@@ -284,6 +318,7 @@ export const clementineTheme = createTheme({
       }),
       styles: {
         input: {
+          color: 'var(--cds-checkbox-fg-label)',
           // Only the UNCHECKED box uses the unchecked bg. When checked, Mantine
           // paints the box from --checkbox-color (wired above to bg-checked); an
           // unconditional backgroundColor here would clobber that and leave a
@@ -302,6 +337,39 @@ export const clementineTheme = createTheme({
         label: { color: 'var(--cds-checkbox-fg-label)' },
         description: { color: 'var(--cds-checkbox-fg-description)' },
         error: { color: 'var(--cds-checkbox-fg-error)' },
+      },
+    },
+    Switch: {
+      defaultProps: { radius: 'xl' },
+      styles: {
+        input: {
+          color: 'var(--cds-switch-fg-label)',
+          outlineColor: 'var(--cds-switch-border-focus)',
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-switch-border-focus) !important',
+            outlineColor: 'var(--cds-switch-border-focus)',
+            outlineOffset: '2px',
+          },
+        },
+        track: {
+          backgroundColor: 'var(--cds-switch-track-off)',
+          borderColor: 'var(--cds-switch-track-off)',
+          color: 'var(--cds-switch-fg-label)',
+          '&[data-checked]': {
+            backgroundColor: 'var(--cds-switch-track-on)',
+            borderColor: 'var(--cds-switch-track-on)',
+          },
+          '&[data-disabled]': {
+            backgroundColor: 'var(--cds-switch-track-disabled)',
+            borderColor: 'var(--cds-switch-track-disabled)',
+          },
+        },
+        thumb: {
+          backgroundColor: 'var(--cds-switch-thumb-default)',
+          color: 'var(--cds-switch-fg-label)',
+        },
+        trackLabel: { color: 'var(--cds-switch-fg-label)' },
+        label: { color: 'var(--cds-switch-fg-label)' },
       },
     },
     Modal: {
@@ -503,6 +571,36 @@ export const clementineTheme = createTheme({
         },
       },
     },
+    Breadcrumbs: {
+      styles: {
+        separator: { color: 'var(--cds-breadcrumbs-separator)' },
+      },
+    },
+    Stepper: {
+      styles: {
+        separator: { backgroundColor: 'var(--cds-stepper-separator)' },
+        stepIcon: {
+          backgroundColor: 'var(--cds-stepper-bg-pending)',
+          borderColor: 'var(--cds-stepper-separator)',
+          color: 'var(--cds-stepper-fg-pending)',
+          '& span': { color: 'var(--cds-stepper-fg-pending)' },
+          '&[data-progress]': {
+            backgroundColor: 'var(--cds-stepper-bg-active)',
+            borderColor: 'var(--cds-stepper-bg-active)',
+            color: 'var(--cds-stepper-fg-active)',
+          },
+          '&[data-completed]': {
+            backgroundColor: 'var(--cds-stepper-bg-completed)',
+            borderColor: 'var(--cds-stepper-bg-completed)',
+            color: 'var(--cds-text-on-action)',
+          },
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-stepper-border-focus)',
+            outlineOffset: '2px',
+          },
+        },
+      },
+    },
     Progress: {
       defaultProps: { radius: 'xl', color: 'blue' },
       vars: () => ({
@@ -592,6 +690,48 @@ export const clementineTheme = createTheme({
           '--ti-color': 'var(--cds-theme-icon-fg)',
         },
       }),
+    },
+    Timeline: {
+      styles: {
+        itemBullet: {
+          backgroundColor: 'var(--cds-timeline-bullet)',
+          borderColor: 'var(--cds-timeline-line)',
+        },
+        itemTitle: { color: 'var(--cds-timeline-fg-title)' },
+        itemBody: { color: 'var(--cds-timeline-fg-body)' },
+      },
+    },
+    Carousel: {
+      defaultProps: { withIndicators: true },
+      styles: {
+        control: {
+          backgroundColor: 'var(--cds-carousel-control-bg)',
+          borderColor: 'var(--cds-carousel-control-border)',
+          borderRadius: 'var(--cds-carousel-radius)',
+          color: 'var(--cds-carousel-control-fg)',
+          '&:focus-visible': {
+            outline: '2px solid var(--cds-carousel-ring)',
+            outlineOffset: '2px',
+          },
+        },
+        indicator: {
+          backgroundColor: 'var(--cds-carousel-indicator)',
+          '&[data-active]': { backgroundColor: 'var(--cds-carousel-indicator-active)' },
+        },
+      },
+    },
+    Avatar: {
+      defaultProps: { radius: 'xl' },
+      styles: {
+        root: {
+          borderColor: 'var(--cds-avatar-border)',
+          borderRadius: 'var(--cds-avatar-radius)',
+        },
+        placeholder: {
+          backgroundColor: 'var(--cds-avatar-bg)',
+          color: 'var(--cds-avatar-fg)',
+        },
+      },
     },
     Badge: {
       defaultProps: { radius: 'sm', variant: 'light' },

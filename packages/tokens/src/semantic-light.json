@@ -70,6 +70,10 @@
       "$value": "{color.gray.6}",
       "$type": "color"
     },
+    "dimmed": {
+      "$value": "{color.gray.6}",
+      "$type": "color"
+    },
     "tertiary": {
       "$value": "{color.gray.5}",
       "$type": "color"
@@ -101,6 +105,14 @@
       "$type": "color"
     },
     "strong": {
+      "$value": "{color.gray.5}",
+      "$type": "color"
+    },
+    "input": {
+      "$value": "{color.gray.5}",
+      "$type": "color"
+    },
+    "input-hover": {
       "$value": "{color.gray.5}",
       "$type": "color"
     },

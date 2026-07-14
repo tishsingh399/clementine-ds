@@ -42,7 +42,7 @@ Clementine lives in code, in Figma, and as machine-readable specs. The cascade i
 
 ![Figma · 3-tier token cascade](./docs/figma/overview.png)
 
-The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **<!-- COUNTS:primitives -->89<!-- /COUNTS --> primitives, <!-- COUNTS:semantic -->41<!-- /COUNTS --> semantic tokens, and <!-- COUNTS:component-tokens -->628<!-- /COUNTS --> component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
+The board above captured the initial snapshot — 52 primitives, 32 semantic tokens (Light + Dark modes), 102 component tokens. The system has since grown to **<!-- COUNTS:primitives -->89<!-- /COUNTS --> primitives, <!-- COUNTS:semantic -->44<!-- /COUNTS --> semantic tokens, and <!-- COUNTS:component-tokens -->628<!-- /COUNTS --> component tokens** — all three Figma variable collections still cross-reference exactly like the JSON source files. Switch the Semantic collection's mode and every paint on every component reflows.
 
 ### Components board
 

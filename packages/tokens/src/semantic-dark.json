@@ -70,6 +70,10 @@
       "$value": "#a0aec0",
       "$type": "color"
     },
+    "dimmed": {
+      "$value": "#aab6c6",
+      "$type": "color"
+    },
     "tertiary": {
       "$value": "#94a1b2",
       "$type": "color"
@@ -102,6 +106,14 @@
     },
     "strong": {
       "$value": "#718096",
+      "$type": "color"
+    },
+    "input": {
+      "$value": "#69788d",
+      "$type": "color"
+    },
+    "input-hover": {
+      "$value": "#3d4d61",
       "$type": "color"
     },
     "focus": {
