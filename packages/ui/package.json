@@ -23,10 +23,10 @@
     "embla-carousel-react": "^8.6.0",
     "react": "^19",
     "react-dom": "^19",
-    "recharts": "^3.9.2"
+    "recharts": "^3.10.1"
   },
   "devDependencies": {
-    "@figma/code-connect": "^1.4.9",
+    "@figma/code-connect": "^1.5.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5.7"
