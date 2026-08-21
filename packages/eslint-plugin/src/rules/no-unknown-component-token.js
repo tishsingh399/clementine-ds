@@ -17,7 +17,7 @@ function reportViolations(context, node, text, index) {
     context.report({
       node,
       messageId: violation.kind === 'css-var' ? 'unknownCssVariable' : 'unknownToken',
-      data: { value: violation.value, namespace: violation.namespace },
+      data: { value: violation.value, namespace: violation.namespace, tier: violation.tier },
     });
   }
 }
@@ -33,14 +33,14 @@ export const noUnknownComponentToken = {
     type: 'problem',
     docs: {
       description:
-        'Disallow invented Clementine component token paths and component-tier CSS variables.',
+        'Disallow invented Clementine token paths and CSS variables across all three tiers.',
     },
     schema: [],
     messages: {
       unknownToken:
-        '"{{value}}" looks like a {{namespace}} component token, but it is not in the generated contract.',
+        '"{{value}}" looks like a {{tier}} token in the {{namespace}} namespace, but it is not in the contract. Use an exact token path — there is no nearest match.',
       unknownCssVariable:
-        '"{{value}}" looks like a {{namespace}} component CSS variable, but it is not emitted by the generated contract.',
+        '"{{value}}" is not emitted by the contract and resolves to nothing at runtime. Use an exact variable — there is no nearest match.',
     },
   },
   create(context) {
