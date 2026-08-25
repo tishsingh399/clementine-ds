@@ -1,5 +1,5 @@
 {
-  "generated_from_last_verified": "2026-06-10T00:00:00.000Z",
+  "generated_from_last_verified": "2026-06-11T00:00:00.000Z",
   "source": "specs/**/index.md",
   "purpose": "Clementine-native component intent map for agents. Generated from specs; do not hand-edit.",
   "components": {
@@ -39,6 +39,7 @@
         "accordion.border-focus",
         "accordion.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "progressive-disclosure",
         "faq",
@@ -97,6 +98,7 @@
         "activity-feed.action",
         "activity-feed.meta"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -148,6 +150,7 @@
         "agent-card.name",
         "agent-card.meta"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -199,6 +202,7 @@
         "agent-picker.fg",
         "agent-picker.icon"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -255,6 +259,32 @@
         "agent-status.done",
         "agent-status.error"
       ],
+      "token_intents": {
+        "agent-status.busy": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "agent-status.waiting": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "agent-status.done": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "agent-status.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -321,6 +351,62 @@
         "alert.icon.error",
         "alert.radius"
       ],
+      "token_intents": {
+        "alert.bg.success": {
+          "inherits_from": "feedback.success-subtle",
+          "intent": "success",
+          "usage": "Low-emphasis backgrounds behind a success message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "alert.bg.warning": {
+          "inherits_from": "feedback.warning-subtle",
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "alert.bg.error": {
+          "inherits_from": "feedback.error-subtle",
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "alert.border.success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "alert.border.warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "alert.border.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "alert.icon.success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "alert.icon.warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "alert.icon.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "form-field",
         "page-header"
@@ -375,6 +461,14 @@
         "anchor.fg",
         "anchor.fg-hover"
       ],
+      "token_intents": {
+        "anchor.fg-hover": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -420,6 +514,7 @@
         "artifact.kind",
         "artifact.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -471,6 +566,7 @@
         "attachment-pill.meta",
         "attachment-pill.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -523,6 +619,7 @@
         "audit-log-viewer.meta",
         "audit-log-viewer.border"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -590,6 +687,7 @@
         "autocomplete.option-bg-hover",
         "autocomplete.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms",
         "search",
@@ -647,6 +745,7 @@
         "avatar.ring",
         "avatar.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-display",
         "global-header",
@@ -706,6 +805,50 @@
         "badge.fg.default",
         "badge.radius"
       ],
+      "token_intents": {
+        "badge.bg.success": {
+          "inherits_from": "feedback.success-subtle",
+          "intent": "success",
+          "usage": "Low-emphasis backgrounds behind a success message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.error": {
+          "inherits_from": "feedback.error-subtle",
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.warning": {
+          "inherits_from": "feedback.warning-subtle",
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.risk-critical": {
+          "inherits_from": "risk.critical-subtle",
+          "intent": "risk-critical",
+          "usage": "Low-emphasis background for a critical-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.risk-high": {
+          "inherits_from": "risk.high-subtle",
+          "intent": "risk-high",
+          "usage": "Low-emphasis background for a high-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.risk-medium": {
+          "inherits_from": "risk.medium-subtle",
+          "intent": "risk-medium",
+          "usage": "Low-emphasis background for a medium-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "badge.bg.risk-low": {
+          "inherits_from": "risk.low-subtle",
+          "intent": "risk-low",
+          "usage": "Low-emphasis background for a low-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "status-list",
@@ -758,6 +901,7 @@
         "breadcrumbs.fg-current",
         "breadcrumbs.separator"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -803,6 +947,7 @@
         "bulk-action-bar.border",
         "bulk-action-bar.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -874,6 +1019,44 @@
         "button.border.focus",
         "button.radius"
       ],
+      "token_intents": {
+        "button.bg.default": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "button.bg.hover": {
+          "inherits_from": "action.primary-hover",
+          "intent": "primary",
+          "usage": "Hover state for the main action.",
+          "notFor": "Hover state for destructive or secondary controls."
+        },
+        "button.bg.active": {
+          "inherits_from": "action.primary-active",
+          "intent": "primary",
+          "usage": "Pressed state for the main action.",
+          "notFor": "Pressed state for destructive or secondary controls."
+        },
+        "button.bg-destructive.default": {
+          "inherits_from": "action.destructive",
+          "intent": "destructive",
+          "usage": "Irreversible or hard-to-undo actions: delete, revoke, terminate, force-disconnect.",
+          "notFor": "Primary or default actions, emphasis, decoration, or anything a user can simply undo."
+        },
+        "button.bg-destructive.hover": {
+          "inherits_from": "action.destructive-hover",
+          "intent": "destructive",
+          "usage": "Hover state for an irreversible action.",
+          "notFor": "Hover state for any non-destructive control."
+        },
+        "button.border.hover": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "form",
         "action-bar",
@@ -925,6 +1108,7 @@
       "token_contract": [
         "button-group.divider"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -978,6 +1162,14 @@
         "calendar.day-muted-fg",
         "calendar.ring"
       ],
+      "token_intents": {
+        "calendar.day-today-border": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [
         "dashboard"
@@ -1029,6 +1221,7 @@
         "card.radius",
         "card.shadow"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-display",
         "empty-state",
@@ -1094,6 +1287,14 @@
         "carousel.ring",
         "carousel.radius"
       ],
+      "token_intents": {
+        "carousel.indicator-active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -1138,6 +1339,14 @@
         "character-counter.fg",
         "character-counter.over"
       ],
+      "token_intents": {
+        "character-counter.over": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -1195,6 +1404,38 @@
         "chart.series-4",
         "chart.series-5"
       ],
+      "token_intents": {
+        "chart.series-1": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "chart.series-2": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "chart.series-3": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "chart.series-4": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "chart.series-5": {
+          "inherits_from": "risk.medium",
+          "intent": "risk-medium",
+          "usage": "Scoring or classifying at medium severity.",
+          "notFor": "Operation outcomes (use feedback.*)."
+        }
+      },
       "patterns_used_in": [
         "cost-latency-transparency"
       ],
@@ -1266,6 +1507,32 @@
         "checkbox.fg.error",
         "checkbox.radius"
       ],
+      "token_intents": {
+        "checkbox.bg.checked": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "checkbox.bg.indeterminate": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "checkbox.border.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "checkbox.fg.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "form",
         "filter-list",
@@ -1323,6 +1590,20 @@
         "chip.border-checked",
         "chip.radius"
       ],
+      "token_intents": {
+        "chip.bg-checked": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "chip.border-checked": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -1370,6 +1651,7 @@
         "citation.border",
         "citation.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -1415,6 +1697,7 @@
         "code.fg",
         "code.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -1464,6 +1747,7 @@
         "code-block.filename",
         "code-block.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -1516,6 +1800,7 @@
         "color-input.fg",
         "color-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -1557,6 +1842,7 @@
         "comment-thread.body",
         "comment-thread.meta"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -1617,6 +1903,20 @@
         "composer.stop-bg",
         "composer.radius"
       ],
+      "token_intents": {
+        "composer.send-bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "composer.stop-bg": {
+          "inherits_from": "action.destructive",
+          "intent": "destructive",
+          "usage": "Irreversible or hard-to-undo actions: delete, revoke, terminate, force-disconnect.",
+          "notFor": "Primary or default actions, emphasis, decoration, or anything a user can simply undo."
+        }
+      },
       "patterns_used_in": [
         "chat",
         "empty-state"
@@ -1671,6 +1971,26 @@
         "confidence-meter.low",
         "confidence-meter.label"
       ],
+      "token_intents": {
+        "confidence-meter.high": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "confidence-meter.medium": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "confidence-meter.low": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -1723,6 +2043,20 @@
         "context-meter.fill-warning",
         "context-meter.label"
       ],
+      "token_intents": {
+        "context-meter.fill": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "context-meter.fill-warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -1770,6 +2104,7 @@
         "conversation-thread.bg",
         "conversation-thread.divider"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -1815,6 +2150,7 @@
         "cost-meter.label",
         "cost-meter.value"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -1877,6 +2213,14 @@
         "date-input.popover-bg",
         "date-input.radius"
       ],
+      "token_intents": {
+        "date-input.border-error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "forms",
         "form-field"
@@ -1942,6 +2286,20 @@
         "date-picker.ring",
         "date-picker.radius"
       ],
+      "token_intents": {
+        "date-picker.day-selected-bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "date-picker.day-today-border": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "forms"
       ],
@@ -1985,6 +2343,7 @@
         "description-list.term",
         "description-list.detail"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2030,6 +2389,20 @@
         "diff-view.fg",
         "diff-view.gutter"
       ],
+      "token_intents": {
+        "diff-view.added-bg": {
+          "inherits_from": "feedback.success-subtle",
+          "intent": "success",
+          "usage": "Low-emphasis backgrounds behind a success message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "diff-view.removed-bg": {
+          "inherits_from": "feedback.error-subtle",
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -2076,6 +2449,7 @@
         "disclosure.border",
         "disclosure.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat",
         "data-display"
@@ -2125,6 +2499,7 @@
         "divider.line",
         "divider.label"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2180,6 +2555,7 @@
         "drawer.fg.body",
         "drawer.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "filters",
         "detail-panel",
@@ -2237,6 +2613,7 @@
         "empty-state.description",
         "empty-state.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2286,6 +2663,20 @@
         "error-state.description",
         "error-state.radius"
       ],
+      "token_intents": {
+        "error-state.bg": {
+          "inherits_from": "feedback.error-subtle",
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "error-state.icon": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2330,6 +2721,7 @@
         "export-menu.trigger-fg",
         "export-menu.item-fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -2382,6 +2774,14 @@
         "fab.shadow",
         "fab.radius"
       ],
+      "token_intents": {
+        "fab.bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2425,6 +2825,7 @@
         "faceted-filter.fg",
         "faceted-filter.count"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -2480,6 +2881,20 @@
         "feedback-control.positive",
         "feedback-control.negative"
       ],
+      "token_intents": {
+        "feedback-control.positive": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "feedback-control.negative": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -2532,6 +2947,14 @@
         "field-label.required",
         "field-label.optional"
       ],
+      "token_intents": {
+        "field-label.required": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2578,6 +3001,7 @@
         "fieldset.legend",
         "fieldset.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -2630,6 +3054,7 @@
         "file-input.placeholder",
         "file-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -2672,6 +3097,7 @@
       "token_contract": [
         "helper-text.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2725,6 +3151,32 @@
         "hitl.deny-bg",
         "hitl.radius"
       ],
+      "token_intents": {
+        "hitl.bg": {
+          "inherits_from": "feedback.warning-subtle",
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "hitl.border": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "hitl.approve-bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "hitl.approve-destructive-bg": {
+          "inherits_from": "action.destructive",
+          "intent": "destructive",
+          "usage": "Irreversible or hard-to-undo actions: delete, revoke, terminate, force-disconnect.",
+          "notFor": "Primary or default actions, emphasis, decoration, or anything a user can simply undo."
+        }
+      },
       "patterns_used_in": [
         "tool-use",
         "wizard"
@@ -2774,6 +3226,7 @@
         "hover-card.shadow",
         "hover-card.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-display"
       ],
@@ -2822,6 +3275,7 @@
         "icon-button.bg-hover",
         "icon-button.border-focus"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2866,6 +3320,7 @@
         "image.bg",
         "image.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2910,6 +3365,14 @@
         "indicator.bg",
         "indicator.fg"
       ],
+      "token_intents": {
+        "indicator.bg": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2957,6 +3420,26 @@
         "inline-message.warning",
         "inline-message.error"
       ],
+      "token_intents": {
+        "inline-message.success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "inline-message.warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "inline-message.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -2998,6 +3481,7 @@
         "kbd.border",
         "kbd.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -3041,6 +3525,7 @@
         "list.fg",
         "list.marker"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -3083,6 +3568,14 @@
       "token_contract": [
         "loader.color"
       ],
+      "token_intents": {
+        "loader.color": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -3128,6 +3621,14 @@
         "loading-state.label",
         "loading-state.bg"
       ],
+      "token_intents": {
+        "loading-state.spinner": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -3175,6 +3676,20 @@
         "maintenance-banner.down-bg",
         "maintenance-banner.fg"
       ],
+      "token_intents": {
+        "maintenance-banner.degraded-bg": {
+          "inherits_from": "feedback.warning-subtle",
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "maintenance-banner.down-bg": {
+          "inherits_from": "feedback.error-subtle",
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -3227,6 +3742,7 @@
         "memory-panel.fg",
         "memory-panel.remove"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -3271,6 +3787,7 @@
         "mention.bg",
         "mention.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -3336,6 +3853,14 @@
         "menu.label",
         "menu.divider"
       ],
+      "token_intents": {
+        "menu.item.fg-danger": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "action-bar",
         "row-actions",
@@ -3408,6 +3933,14 @@
         "message.meta",
         "message.radius"
       ],
+      "token_intents": {
+        "message.user.bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -3457,6 +3990,7 @@
         "message-actions.fg",
         "message-actions.fg-hover"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -3518,6 +4052,7 @@
         "modal.ring",
         "modal.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "confirm-dialog",
         "edit-form",
@@ -3570,6 +4105,7 @@
         "model-selector.icon",
         "model-selector.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -3631,6 +4167,7 @@
         "multi-select.option-bg-hover",
         "multi-select.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -3686,6 +4223,14 @@
         "notification.accent",
         "notification.radius"
       ],
+      "token_intents": {
+        "notification.accent": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-display"
       ],
@@ -3734,6 +4279,14 @@
         "notification-center.dot",
         "notification-center.meta"
       ],
+      "token_intents": {
+        "notification-center.dot": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -3792,6 +4345,7 @@
         "number-input.placeholder",
         "number-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -3849,6 +4403,14 @@
         "pagination.border-focus",
         "pagination.radius"
       ],
+      "token_intents": {
+        "pagination.item.bg-active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "search-results",
@@ -3907,6 +4469,7 @@
         "password-input.placeholder",
         "password-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -3957,6 +4520,20 @@
         "permission-request.title",
         "permission-request.scope-bg"
       ],
+      "token_intents": {
+        "permission-request.bg": {
+          "inherits_from": "feedback.warning-subtle",
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "permission-request.border": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -4007,6 +4584,7 @@
         "pill.remove",
         "pill.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -4056,6 +4634,7 @@
         "pin-input.fg",
         "pin-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -4107,6 +4686,26 @@
         "plan-steps.error",
         "plan-steps.fg"
       ],
+      "token_intents": {
+        "plan-steps.active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "plan-steps.done": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "plan-steps.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -4161,6 +4760,7 @@
         "popover.shadow",
         "popover.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -4211,6 +4811,26 @@
         "presence-indicator.offline",
         "presence-indicator.ring"
       ],
+      "token_intents": {
+        "presence-indicator.online": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "presence-indicator.away": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "presence-indicator.busy": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -4271,6 +4891,32 @@
         "progress.bar-error",
         "progress.radius"
       ],
+      "token_intents": {
+        "progress.bar": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "progress.bar-success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "progress.bar-warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "progress.bar-error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "upload",
         "import",
@@ -4327,6 +4973,14 @@
         "progress-circle.indicator",
         "progress-circle.label"
       ],
+      "token_intents": {
+        "progress-circle.indicator": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -4371,6 +5025,7 @@
         "prompt-suggestions.fg",
         "prompt-suggestions.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -4431,6 +5086,20 @@
         "radio.border.focus",
         "radio.fg.label"
       ],
+      "token_intents": {
+        "radio.dot.checked": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "radio.border.checked": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "form",
         "segmented-choice"
@@ -4480,6 +5149,14 @@
         "rating.symbol-empty",
         "rating.symbol-filled"
       ],
+      "token_intents": {
+        "rating.symbol-filled": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "forms"
       ],
@@ -4529,6 +5206,14 @@
         "rbac-matrix.granted",
         "rbac-matrix.fg"
       ],
+      "token_intents": {
+        "rbac-matrix.granted": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -4584,6 +5269,7 @@
         "reasoning.rule",
         "reasoning.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -4631,6 +5317,7 @@
         "refusal-state.fg",
         "refusal-state.suggestion"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -4680,6 +5367,7 @@
         "role-picker.pill-bg",
         "role-picker.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -4730,6 +5418,14 @@
         "saved-views.active-fg",
         "saved-views.fg"
       ],
+      "token_intents": {
+        "saved-views.active-fg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -4789,6 +5485,7 @@
         "search-field.icon",
         "search-field.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -4838,6 +5535,7 @@
         "segmented-control.fg-active",
         "segmented-control.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -4905,6 +5603,20 @@
         "select.ring",
         "select.radius"
       ],
+      "token_intents": {
+        "select.option.bg-selected": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "select.border.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "form",
         "filter-bar",
@@ -4954,6 +5666,14 @@
         "session-device-list.meta",
         "session-device-list.revoke"
       ],
+      "token_intents": {
+        "session-device-list.revoke": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "data-table",
         "faceted-search"
@@ -5007,6 +5727,7 @@
         "session-list.fg",
         "session-list.meta"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -5057,6 +5778,7 @@
         "skeleton.duration",
         "skeleton.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "loading",
         "data-display",
@@ -5121,6 +5843,20 @@
         "slider.mark",
         "slider.label"
       ],
+      "token_intents": {
+        "slider.track-filled": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "slider.thumb-border": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "forms"
       ],
@@ -5170,6 +5906,7 @@
         "sources-panel.index-bg",
         "sources-panel.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -5219,6 +5956,26 @@
         "sparkline.stroke-trend-up",
         "sparkline.stroke-trend-down"
       ],
+      "token_intents": {
+        "sparkline.stroke": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "sparkline.stroke-trend-up": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "sparkline.stroke-trend-down": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [
         "dashboard"
@@ -5268,6 +6025,14 @@
         "split-button.divider",
         "split-button.radius"
       ],
+      "token_intents": {
+        "split-button.bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -5310,6 +6075,7 @@
       "token_contract": [
         "spoiler.control"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-display"
       ],
@@ -5357,6 +6123,20 @@
         "stat.delta-up",
         "stat.delta-down"
       ],
+      "token_intents": {
+        "stat.delta-up": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "stat.delta-down": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -5404,6 +6184,26 @@
         "status-dot.away",
         "status-dot.label"
       ],
+      "token_intents": {
+        "status-dot.online": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "status-dot.busy": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "status-dot.away": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -5457,6 +6257,20 @@
         "stepper.separator",
         "stepper.border-focus"
       ],
+      "token_intents": {
+        "stepper.bg-completed": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "stepper.bg-active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -5504,6 +6318,14 @@
         "streaming.caret",
         "streaming.duration"
       ],
+      "token_intents": {
+        "streaming.caret": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "chat"
       ],
@@ -5557,6 +6379,20 @@
         "success-state.description",
         "success-state.radius"
       ],
+      "token_intents": {
+        "success-state.bg": {
+          "inherits_from": "feedback.success-subtle",
+          "intent": "success",
+          "usage": "Low-emphasis backgrounds behind a success message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        },
+        "success-state.icon": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -5611,6 +6447,14 @@
         "switch.border.focus",
         "switch.fg.label"
       ],
+      "token_intents": {
+        "switch.track.on": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "settings-row",
         "feature-flag"
@@ -5666,6 +6510,7 @@
         "table.border",
         "table.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "data-display"
       ],
@@ -5724,6 +6569,14 @@
         "tabs.border.list",
         "tabs.border.focus"
       ],
+      "token_intents": {
+        "tabs.indicator.active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "settings-page",
         "object-details",
@@ -5781,6 +6634,7 @@
         "tags-input.pill-fg",
         "tags-input.radius"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "forms"
       ],
@@ -5847,6 +6701,14 @@
         "text-input.ring",
         "text-input.radius"
       ],
+      "token_intents": {
+        "text-input.border.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "form",
         "search-bar",
@@ -5913,6 +6775,14 @@
         "textarea.ring",
         "textarea.radius"
       ],
+      "token_intents": {
+        "textarea.border.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "form",
         "comment-box",
@@ -5960,6 +6830,14 @@
         "theme-icon.fg",
         "theme-icon.radius"
       ],
+      "token_intents": {
+        "theme-icon.bg": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -6009,6 +6887,14 @@
         "timeline.fg-title",
         "timeline.fg-body"
       ],
+      "token_intents": {
+        "timeline.bullet-active": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "data-display"
       ],
@@ -6067,6 +6953,32 @@
         "toast.icon-info",
         "toast.radius"
       ],
+      "token_intents": {
+        "toast.icon-success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "toast.icon-error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "toast.icon-warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "toast.icon-info": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      },
       "patterns_used_in": [
         "optimistic-correctable",
         "reversibility"
@@ -6124,6 +7036,26 @@
         "tool-call.status.error",
         "tool-call.radius"
       ],
+      "token_intents": {
+        "tool-call.status.running": {
+          "inherits_from": "action.primary",
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        },
+        "tool-call.status.success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        },
+        "tool-call.status.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      },
       "patterns_used_in": [
         "chat",
         "tool-use"
@@ -6181,6 +7113,7 @@
         "tooltip.radius",
         "tooltip.shadow"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "action-bar",
         "page-header"
@@ -6236,6 +7169,7 @@
         "tree.guide",
         "tree.chevron"
       ],
+      "token_intents": {},
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {
@@ -6280,6 +7214,7 @@
         "undo-bar.bg",
         "undo-bar.fg"
       ],
+      "token_intents": {},
       "patterns_used_in": [
         "chat"
       ],
@@ -6332,6 +7267,26 @@
         "validation-message.warning",
         "validation-message.success"
       ],
+      "token_intents": {
+        "validation-message.error": {
+          "inherits_from": "feedback.error",
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        },
+        "validation-message.warning": {
+          "inherits_from": "feedback.warning",
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        },
+        "validation-message.success": {
+          "inherits_from": "feedback.success",
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        }
+      },
       "patterns_used_in": [],
       "pages_used_in": [],
       "sources": {

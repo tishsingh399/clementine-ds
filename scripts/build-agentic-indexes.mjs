@@ -93,6 +93,60 @@ const latestVerified = specs
   .sort()
   .at(-1) ?? null;
 
+/**
+ * Intent declared on the semantic tier, and which component tokens inherit it.
+ *
+ * A token name means nothing to a model: `alert.bg.error` and `diff-view.removed-bg`
+ * both resolve to a red, and only one of them says so. Publishing the inherited
+ * intent lets an agent read the rule ("destructive: irreversible actions only")
+ * instead of guessing it from the name.
+ */
+const semanticTokens = JSON.parse(
+  readFileSync(join(root, 'packages/tokens/src/semantic-light.json'), 'utf8'),
+);
+const componentTokens = JSON.parse(
+  readFileSync(join(root, 'packages/tokens/src/components.generated.json'), 'utf8'),
+);
+
+const semanticIntent = {};
+for (const [group, entries] of Object.entries(semanticTokens)) {
+  for (const [name, token] of Object.entries(entries)) {
+    const declared = token?.$extensions?.clementine;
+    if (declared?.intent) semanticIntent[`${group}.${name}`] = declared;
+  }
+}
+
+function tokenLeaves(node, prefix = []) {
+  const out = [];
+  for (const [key, value] of Object.entries(node ?? {})) {
+    if (value && typeof value === 'object' && '$value' in value) {
+      out.push([prefix.concat(key).join('.'), value.$value]);
+    } else if (value && typeof value === 'object') {
+      out.push(...tokenLeaves(value, prefix.concat(key)));
+    }
+  }
+  return out;
+}
+
+const tokenIntent = {};
+for (const [component, tree] of Object.entries(componentTokens)) {
+  for (const [path, value] of tokenLeaves(tree)) {
+    if (typeof value !== 'string') continue;
+    const alias = /^\{([^}]+)\}$/.exec(value.trim());
+    const declared = alias && semanticIntent[alias[1]];
+    if (!declared) continue;
+    tokenIntent[`${component}.${path}`] = { inherits_from: alias[1], ...declared };
+  }
+}
+
+function intentsFor(meta) {
+  const out = {};
+  for (const token of meta.token_contract ?? []) {
+    if (tokenIntent[token]) out[token] = tokenIntent[token];
+  }
+  return out;
+}
+
 const componentIntentMap = {
   generated_from_last_verified: latestVerified,
   source: 'specs/**/index.md',
@@ -109,6 +163,7 @@ const componentIntentMap = {
       required_aria: meta.required_aria ?? [],
       interaction_states: meta.interaction_states ?? [],
       token_contract: meta.token_contract ?? [],
+      token_intents: intentsFor(meta),
       patterns_used_in: meta.patterns_used_in ?? [],
       pages_used_in: meta.pages_used_in ?? [],
       sources: meta.sources ?? {},

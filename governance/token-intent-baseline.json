@@ -1,0 +1,650 @@
+{
+  "generatedAt": "2026-08-25T23:05:55.948Z",
+  "inherited": [
+    {
+      "token": "agent-status.busy",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "agent-status.done",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "agent-status.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "agent-status.waiting",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "alert.bg.error",
+      "inheritsFrom": "feedback.error-subtle",
+      "intent": "error"
+    },
+    {
+      "token": "alert.bg.success",
+      "inheritsFrom": "feedback.success-subtle",
+      "intent": "success"
+    },
+    {
+      "token": "alert.bg.warning",
+      "inheritsFrom": "feedback.warning-subtle",
+      "intent": "warning"
+    },
+    {
+      "token": "alert.border.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "alert.border.success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "alert.border.warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "alert.icon.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "alert.icon.success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "alert.icon.warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "anchor.fg-hover",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "badge.bg.error",
+      "inheritsFrom": "feedback.error-subtle",
+      "intent": "error"
+    },
+    {
+      "token": "badge.bg.risk-critical",
+      "inheritsFrom": "risk.critical-subtle",
+      "intent": "risk-critical"
+    },
+    {
+      "token": "badge.bg.risk-high",
+      "inheritsFrom": "risk.high-subtle",
+      "intent": "risk-high"
+    },
+    {
+      "token": "badge.bg.risk-low",
+      "inheritsFrom": "risk.low-subtle",
+      "intent": "risk-low"
+    },
+    {
+      "token": "badge.bg.risk-medium",
+      "inheritsFrom": "risk.medium-subtle",
+      "intent": "risk-medium"
+    },
+    {
+      "token": "badge.bg.success",
+      "inheritsFrom": "feedback.success-subtle",
+      "intent": "success"
+    },
+    {
+      "token": "badge.bg.warning",
+      "inheritsFrom": "feedback.warning-subtle",
+      "intent": "warning"
+    },
+    {
+      "token": "button.bg-destructive.default",
+      "inheritsFrom": "action.destructive",
+      "intent": "destructive"
+    },
+    {
+      "token": "button.bg-destructive.hover",
+      "inheritsFrom": "action.destructive-hover",
+      "intent": "destructive"
+    },
+    {
+      "token": "button.bg.active",
+      "inheritsFrom": "action.primary-active",
+      "intent": "primary"
+    },
+    {
+      "token": "button.bg.default",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "button.bg.hover",
+      "inheritsFrom": "action.primary-hover",
+      "intent": "primary"
+    },
+    {
+      "token": "button.border.hover",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "calendar.day-today-border",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "carousel.indicator-active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "character-counter.over",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "chart.series-1",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "chart.series-2",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "chart.series-3",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "chart.series-4",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "chart.series-5",
+      "inheritsFrom": "risk.medium",
+      "intent": "risk-medium"
+    },
+    {
+      "token": "checkbox.bg.checked",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "checkbox.bg.indeterminate",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "checkbox.border.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "checkbox.fg.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "chip.bg-checked",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "chip.border-checked",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "composer.send-bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "composer.stop-bg",
+      "inheritsFrom": "action.destructive",
+      "intent": "destructive"
+    },
+    {
+      "token": "confidence-meter.high",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "confidence-meter.low",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "confidence-meter.medium",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "context-meter.fill",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "context-meter.fill-warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "date-input.border-error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "date-picker.day-selected-bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "date-picker.day-today-border",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "diff-view.added-bg",
+      "inheritsFrom": "feedback.success-subtle",
+      "intent": "success"
+    },
+    {
+      "token": "diff-view.removed-bg",
+      "inheritsFrom": "feedback.error-subtle",
+      "intent": "error"
+    },
+    {
+      "token": "error-state.bg",
+      "inheritsFrom": "feedback.error-subtle",
+      "intent": "error"
+    },
+    {
+      "token": "error-state.icon",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "fab.bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "feedback-control.negative",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "feedback-control.positive",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "field-label.required",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "hitl.approve-bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "hitl.approve-destructive-bg",
+      "inheritsFrom": "action.destructive",
+      "intent": "destructive"
+    },
+    {
+      "token": "hitl.bg",
+      "inheritsFrom": "feedback.warning-subtle",
+      "intent": "warning"
+    },
+    {
+      "token": "hitl.border",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "indicator.bg",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "inline-message.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "inline-message.success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "inline-message.warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "loader.color",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "loading-state.spinner",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "maintenance-banner.degraded-bg",
+      "inheritsFrom": "feedback.warning-subtle",
+      "intent": "warning"
+    },
+    {
+      "token": "maintenance-banner.down-bg",
+      "inheritsFrom": "feedback.error-subtle",
+      "intent": "error"
+    },
+    {
+      "token": "menu.item.fg-danger",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "message.user.bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "notification-center.dot",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "notification.accent",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "pagination.item.bg-active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "permission-request.bg",
+      "inheritsFrom": "feedback.warning-subtle",
+      "intent": "warning"
+    },
+    {
+      "token": "permission-request.border",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "plan-steps.active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "plan-steps.done",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "plan-steps.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "presence-indicator.away",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "presence-indicator.busy",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "presence-indicator.online",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "progress-circle.indicator",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "progress.bar",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "progress.bar-error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "progress.bar-success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "progress.bar-warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "radio.border.checked",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "radio.dot.checked",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "rating.symbol-filled",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "rbac-matrix.granted",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "saved-views.active-fg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "select.border.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "select.option.bg-selected",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "session-device-list.revoke",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "slider.thumb-border",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "slider.track-filled",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "sparkline.stroke",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "sparkline.stroke-trend-down",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "sparkline.stroke-trend-up",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "split-button.bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "stat.delta-down",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "stat.delta-up",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "status-dot.away",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "status-dot.busy",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "status-dot.online",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "stepper.bg-active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "stepper.bg-completed",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "streaming.caret",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "success-state.bg",
+      "inheritsFrom": "feedback.success-subtle",
+      "intent": "success"
+    },
+    {
+      "token": "success-state.icon",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "switch.track.on",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "tabs.indicator.active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "text-input.border.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "textarea.border.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "theme-icon.bg",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "timeline.bullet-active",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "toast.icon-error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "toast.icon-info",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "toast.icon-success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "toast.icon-warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    },
+    {
+      "token": "tool-call.status.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "tool-call.status.running",
+      "inheritsFrom": "action.primary",
+      "intent": "primary"
+    },
+    {
+      "token": "tool-call.status.success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "validation-message.error",
+      "inheritsFrom": "feedback.error",
+      "intent": "error"
+    },
+    {
+      "token": "validation-message.success",
+      "inheritsFrom": "feedback.success",
+      "intent": "success"
+    },
+    {
+      "token": "validation-message.warning",
+      "inheritsFrom": "feedback.warning",
+      "intent": "warning"
+    }
+  ]
+}

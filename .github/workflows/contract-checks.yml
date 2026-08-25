@@ -62,3 +62,6 @@ jobs:
 
       - name: Token references resolve (no invented tokens)
         run: pnpm lint:ds
+
+      - name: Token intent declared and inherited deliberately
+        run: pnpm validate:token-intent

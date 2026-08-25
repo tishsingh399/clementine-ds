@@ -2,31 +2,80 @@
   "action": {
     "primary": {
       "$value": "{color.blue.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "primary",
+          "usage": "The main action in a view or region — the one thing you most want the user to do. This is the token a designer means when they say \"the primary colour\".",
+          "notFor": "Destructive actions (use action.destructive), brand marks (use accent.brand), or decorative fills."
+        }
+      }
     },
     "primary-hover": {
       "$value": "{color.blue.7}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "primary",
+          "usage": "Hover state for the main action.",
+          "notFor": "Hover state for destructive or secondary controls."
+        }
+      }
     },
     "primary-active": {
       "$value": "{color.blue.8}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "primary",
+          "usage": "Pressed state for the main action.",
+          "notFor": "Pressed state for destructive or secondary controls."
+        }
+      }
     },
     "selected-subtle": {
       "$value": "{color.blue.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "selected",
+          "usage": "Background marking an item as currently selected in a list, table, or nav.",
+          "notFor": "Hover-only feedback, or primary action fills."
+        }
+      }
     },
     "selected-subtle-hover": {
       "$value": "{color.blue.1}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "selected",
+          "usage": "Hover state for an already-selected item.",
+          "notFor": "Hover state for unselected items (use surface.subtle-hover)."
+        }
+      }
     },
     "destructive": {
       "$value": "{color.red.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "destructive",
+          "usage": "Irreversible or hard-to-undo actions: delete, revoke, terminate, force-disconnect.",
+          "notFor": "Primary or default actions, emphasis, decoration, or anything a user can simply undo."
+        }
+      }
     },
     "destructive-hover": {
       "$value": "{color.red.7}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "destructive",
+          "usage": "Hover state for an irreversible action.",
+          "notFor": "Hover state for any non-destructive control."
+        }
+      }
     }
   },
   "accent": {
@@ -114,66 +163,167 @@
     }
   },
   "focus": {
-    "ring": { "$value": "{color.brand.clementine-strong}", "$type": "color" }
+    "ring": {
+      "$value": "{color.brand.clementine-strong}",
+      "$type": "color"
+    }
   },
   "feedback": {
     "error": {
       "$value": "{color.red.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "error",
+          "usage": "Communicating that something failed or is invalid.",
+          "notFor": "Destructive controls (use action.destructive), or risk severity (use risk.*)."
+        }
+      }
     },
     "error-subtle": {
       "$value": "{color.red.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "error",
+          "usage": "Low-emphasis backgrounds behind an error message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     },
     "success": {
       "$value": "{color.green.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "success",
+          "usage": "Communicating that something completed or validated.",
+          "notFor": "Positive decoration or brand accent."
+        }
+      }
     },
     "success-subtle": {
       "$value": "{color.green.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "success",
+          "usage": "Low-emphasis backgrounds behind a success message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     },
     "warning": {
       "$value": "{color.orange.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "warning",
+          "usage": "Communicating a caution the user should read before acting.",
+          "notFor": "Errors (use feedback.error) or risk severity (use risk.*)."
+        }
+      }
     },
     "warning-subtle": {
       "$value": "{color.orange.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "warning",
+          "usage": "Low-emphasis backgrounds behind a warning message.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     }
   },
   "risk": {
     "critical": {
       "$value": "{color.red.9}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-critical",
+          "usage": "Scoring or classifying an asset, finding, or session at critical severity.",
+          "notFor": "Operation outcomes (use feedback.*) or destructive controls (use action.destructive)."
+        }
+      }
     },
     "critical-subtle": {
       "$value": "{color.red.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-critical",
+          "usage": "Low-emphasis background for a critical-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     },
     "high": {
       "$value": "{color.orange.7}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-high",
+          "usage": "Scoring or classifying at high severity.",
+          "notFor": "Operation outcomes (use feedback.*)."
+        }
+      }
     },
     "high-subtle": {
       "$value": "{color.orange.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-high",
+          "usage": "Low-emphasis background for a high-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     },
     "medium": {
       "$value": "{color.orange.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-medium",
+          "usage": "Scoring or classifying at medium severity.",
+          "notFor": "Operation outcomes (use feedback.*)."
+        }
+      }
     },
     "medium-subtle": {
       "$value": "{color.orange.1}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-medium",
+          "usage": "Low-emphasis background for a medium-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     },
     "low": {
       "$value": "{color.green.6}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-low",
+          "usage": "Scoring or classifying at low severity.",
+          "notFor": "Operation outcomes (use feedback.*)."
+        }
+      }
     },
     "low-subtle": {
       "$value": "{color.green.0}",
-      "$type": "color"
+      "$type": "color",
+      "$extensions": {
+        "clementine": {
+          "intent": "risk-low",
+          "usage": "Low-emphasis background for a low-severity indicator.",
+          "notFor": "Foreground text or icons — contrast is not guaranteed."
+        }
+      }
     }
   }
 }
