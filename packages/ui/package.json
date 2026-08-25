@@ -19,7 +19,7 @@
     "@mantine/dates": "^8.3.18",
     "@mantine/hooks": "^8",
     "@mantine/notifications": "^8.3.18",
-    "dayjs": "^1.11.21",
+    "dayjs": "^1.11.23",
     "embla-carousel-react": "^8.6.0",
     "react": "^19",
     "react-dom": "^19",
