@@ -24,7 +24,7 @@
     "@storybook/blocks": "^8",
     "@storybook/react": "^8",
     "@storybook/react-vite": "^8",
-    "@storybook/test-runner": "^0.24.4",
+    "@storybook/test-runner": "^0.24.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "axe-playwright": "^2.0.3",
