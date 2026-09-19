@@ -8,7 +8,7 @@ export interface MaintenanceBannerProps {
 }
 
 const SEV: Record<MaintenanceSeverity, { bg: string; fg: string }> = {
-  info:     { bg: 'var(--cds-surface-subtle)',          fg: 'var(--cds-text-primary)' },
+  info:     { bg: '#f3f3f0',          fg: 'var(--cds-text-primary)' },
   degraded: { bg: 'var(--cds-feedback-warning-subtle)', fg: 'var(--cds-text-primary)' },
   down:     { bg: 'var(--cds-feedback-error-subtle)',   fg: 'var(--cds-text-primary)' },
 };
@@ -23,7 +23,7 @@ export const MaintenanceBanner = forwardRef<HTMLDivElement, MaintenanceBannerPro
   const icon = severity === 'down' ? '⛔' : severity === 'degraded' ? '⚠' : 'ℹ';
   return (
     <Group ref={ref} gap={8} px="md" py={8} justify="center" role="status"
-      style={{ background: s.bg, borderBottom: '1px solid var(--cds-border-default)', width: '100%' }}>
+      style={{ background: s.bg, borderBottom: '1px solid #e5e5e0', width: '100%' }}>
       <span aria-hidden>{icon}</span>
       <Text size="sm" style={{ color: s.fg }}>{message}</Text>
     </Group>
