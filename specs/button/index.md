@@ -25,11 +25,15 @@ token_contract:
   - button.bg-outline.hover
   - button.fg.on-filled
   - button.fg.on-outline
+  - button.fg.on-subtle
   - button.fg.disabled
   - button.border.default
   - button.border.hover
   - button.border.focus
   - button.radius
+  - button.height.sm
+  - button.height.md
+  - button.height.lg
 
 interaction_states: [default, hover, focus, active, disabled, loading]
 

@@ -16,6 +16,9 @@ export type ButtonToken =
   | "button.fg.on-filled"
   | "button.fg.on-outline"
   | "button.fg.on-subtle"
+  | "button.height.lg"
+  | "button.height.md"
+  | "button.height.sm"
   | "button.radius";
 
 export const buttonTokens = {
@@ -34,6 +37,9 @@ export const buttonTokens = {
   fgOnFilled: "button.fg.on-filled",
   fgOnOutline: "button.fg.on-outline",
   fgOnSubtle: "button.fg.on-subtle",
+  heightLg: "button.height.lg",
+  heightMd: "button.height.md",
+  heightSm: "button.height.sm",
   radius: "button.radius",
 } as const satisfies Record<string, ButtonToken>;
 

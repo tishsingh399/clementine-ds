@@ -6,7 +6,7 @@
 
 Primary action trigger. Use to start an action like submit, save, cancel, or navigate to a destructive step.
 
-Status: `AI-Ready`. All five gates pass. Token contract is closed at 15 component-tier tokens.
+Status: `AI-Ready`. All five gates pass. Token contract is closed at 19 component-tier tokens.
 
 ## When to use
 
@@ -123,11 +123,15 @@ For destructive actions, name the consequence: "Delete project" not "Delete," "R
 | `button.bg-outline.hover` | `surface.subtle` | `#f3f3f0` |
 | `button.fg.on-filled` | `text.on-action` | `#ffffff` |
 | `button.fg.on-outline` | `text.primary` | `#1a1a18` |
+| `button.fg.on-subtle` | `text.primary` | `#1a1a18` |
 | `button.fg.disabled` | `text.tertiary` | `#737370` |
 | `button.border.default` | `border.strong` | `#737370` |
 | `button.border.hover` | `action.primary` | `#2563eb` |
 | `button.border.focus` | `focus.ring` | `#f5631a` |
-| `button.radius` | `radius.md` | `8px` |
+| `button.radius` | `radius.md` | `6px` |
+| `button.height.sm` | — | `32px` |
+| `button.height.md` | — | `40px` |
+| `button.height.lg` | — | `48px` |
 
 ## Library notes
 

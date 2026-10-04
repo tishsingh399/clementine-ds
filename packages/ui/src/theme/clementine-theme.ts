@@ -176,8 +176,15 @@ export const clementineTheme = createTheme({
     // resolve through the component → semantic → primitive cascade. This is the
     // pattern the other Mantine-backed components below follow.
     Button: {
-      defaultProps: { radius: 'md' },
-      vars: (_theme: unknown, props: { variant?: string; color?: string }) => {
+      // md is the spec's default size (40px); Mantine's own default is sm.
+      defaultProps: { radius: 'md', size: 'md' },
+      vars: (_theme: unknown, props: { variant?: string; color?: string; size?: string }) => {
+        // Height comes from button.height.{sm,md,lg} for every variant. Sizes the
+        // spec doesn't define (xs, xl, compact-*) keep Mantine's own height.
+        const height =
+          props.size === 'sm' || props.size === 'md' || props.size === 'lg'
+            ? { '--button-height': `var(--cds-button-height-${props.size})` }
+            : {};
         const isOutline = props.variant === 'outline' || props.variant === 'default';
         const isSubtle =
           props.variant === 'subtle' || props.variant === 'light' || props.variant === 'transparent';
@@ -185,6 +192,7 @@ export const clementineTheme = createTheme({
         if (isOutline) {
           return {
             root: {
+              ...height,
               '--button-bg': 'var(--cds-button-bg-outline-default)',
               '--button-hover': 'var(--cds-button-bg-outline-hover)',
               '--button-color': 'var(--cds-button-fg-on-outline)',
@@ -193,11 +201,12 @@ export const clementineTheme = createTheme({
           };
         }
         if (isSubtle) {
-          return { root: { '--button-color': 'var(--cds-button-fg-on-subtle)' } };
+          return { root: { ...height, '--button-color': 'var(--cds-button-fg-on-subtle)' } };
         }
         // filled (default) — primary or destructive
         return {
           root: {
+            ...height,
             '--button-bg': destructive
               ? 'var(--cds-button-bg-destructive-default)'
               : 'var(--cds-button-bg-default)',
