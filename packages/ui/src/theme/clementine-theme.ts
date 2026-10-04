@@ -171,10 +171,11 @@ export const clementineTheme = createTheme({
     // Button is the gold-standard proof that Tier 3 is consumed at runtime.
     // Every declared button.* token has a paint path here: the `vars` callback
     // remaps Mantine's internal --button-* vars per variant/color (so the
-    // variant machinery is respected), and `styles` covers the states Mantine
+    // variant machinery is respected), and ./states.css covers the states Mantine
     // doesn't expose as a single var (active, disabled, focus ring). All values
     // resolve through the component → semantic → primitive cascade. This is the
-    // pattern the other Mantine-backed components below follow.
+    // pattern the other Mantine-backed components below follow. Theme `styles`
+    // are inline: they cannot hold selectors, so state rules never go there.
     Button: {
       // md is the spec's default size (40px); Mantine's own default is sm.
       defaultProps: { radius: 'md', size: 'md' },
@@ -218,40 +219,37 @@ export const clementineTheme = createTheme({
           },
         };
       },
-      styles: {
-        root: {
-          // States Mantine doesn't drive off a single --button-* var: set the
-          // painted property directly so the Tier-3 token wins.
-          '&:active:not([data-disabled])': { backgroundColor: 'var(--cds-button-bg-active)' },
-          // border.hover is only visible on bordered variants
-          '&[data-variant="outline"]:hover, &[data-variant="default"]:hover': {
-            borderColor: 'var(--cds-button-border-hover)',
-          },
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-button-border-focus)',
-            outlineOffset: '2px',
-          },
-          // Disabled fg/border bind to Tier-3. The disabled *background* is owned
-          // by Mantine's @layer mantine rule (gray.2), which a theme-level rule
-          // can't override without leaving the layer; it's one ramp-step off the
-          // spec's gray.1 and visually identical. Tracked for the DOM-parity pass.
-          '&[data-disabled]:not([data-loading])': {
-            color: 'var(--cds-button-fg-disabled)',
-            borderColor: 'var(--cds-button-fg-disabled)',
-          },
-        },
-      },
     },
     TextInput: {
-      defaultProps: { radius: 'md' },
-      vars: () => ({
-        wrapper: {
-          '--input-bg': 'var(--cds-text-input-bg-default)',
-          '--input-color': 'var(--cds-text-input-fg-value)',
-          '--input-bd': 'var(--cds-text-input-border-default)',
-          '--input-placeholder-color': 'var(--cds-text-input-fg-placeholder)',
-        },
-      }),
+      // md (40px) matches Button's md, so a field and a button line up in a row.
+      defaultProps: { radius: 'md', size: 'md' },
+      // Every state is painted through Mantine's own --input-* variables, set
+      // inline, so the text-input.* tokens win over Mantine's class rules
+      // without nested selectors (which need @mantine/emotion, not installed).
+      vars: (_theme: unknown, props: { size?: string; error?: unknown }) => {
+        const height =
+          props.size === 'sm' || props.size === 'md' || props.size === 'lg'
+            ? { '--input-height': `var(--cds-text-input-height-${props.size})` }
+            : {};
+        const hasError = Boolean(props.error);
+        return {
+          wrapper: {
+            ...height,
+            '--input-bg': 'var(--cds-text-input-bg-default)',
+            '--input-color': 'var(--cds-text-input-fg-value)',
+            '--input-bd': hasError
+              ? 'var(--cds-text-input-border-error)'
+              : 'var(--cds-text-input-border-default)',
+            '--input-bd-focus': 'var(--cds-text-input-border-focus)',
+            '--input-placeholder-color': 'var(--cds-text-input-fg-placeholder)',
+            '--input-disabled-bg': 'var(--cds-text-input-bg-disabled)',
+            '--input-disabled-color': 'var(--cds-text-input-fg-disabled)',
+          },
+          // Mantine re-colours an errored input on focus from its own palette;
+          // pinning the border on the input element keeps the error token.
+          ...(hasError ? { input: { '--input-bd': 'var(--cds-text-input-border-error)' } } : {}),
+        };
+      },
     },
     PasswordInput: {
       defaultProps: { radius: 'md' },
@@ -266,7 +264,6 @@ export const clementineTheme = createTheme({
       styles: {
         visibilityToggle: {
           color: 'var(--cds-password-input-placeholder)',
-          '& svg, & svg *': { color: 'currentColor' },
         },
       },
     },
@@ -282,7 +279,6 @@ export const clementineTheme = createTheme({
       styles: {
         eyeDropperButton: {
           color: 'var(--cds-color-input-fg)',
-          '& svg, & svg *': { color: 'currentColor' },
         },
       },
     },
@@ -320,20 +316,6 @@ export const clementineTheme = createTheme({
       styles: {
         input: {
           color: 'var(--cds-checkbox-fg-label)',
-          // Only the UNCHECKED box uses the unchecked bg. When checked, Mantine
-          // paints the box from --checkbox-color (wired above to bg-checked); an
-          // unconditional backgroundColor here would clobber that and leave a
-          // checked box white.
-          '&:not(:checked):not(:indeterminate)': {
-            backgroundColor: 'var(--cds-checkbox-bg-unchecked)',
-          },
-          borderColor: 'var(--cds-checkbox-border-default)',
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-checkbox-border-focus)',
-            outlineOffset: '2px',
-          },
-          '&[data-error]': { borderColor: 'var(--cds-checkbox-border-error)' },
-          '&:disabled:not(:checked)': { backgroundColor: 'var(--cds-checkbox-bg-disabled)' },
         },
         label: { color: 'var(--cds-checkbox-fg-label)' },
         description: { color: 'var(--cds-checkbox-fg-description)' },
@@ -346,24 +328,9 @@ export const clementineTheme = createTheme({
         input: {
           color: 'var(--cds-switch-fg-label)',
           outlineColor: 'var(--cds-switch-border-focus)',
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-switch-border-focus) !important',
-            outlineColor: 'var(--cds-switch-border-focus)',
-            outlineOffset: '2px',
-          },
         },
         track: {
-          backgroundColor: 'var(--cds-switch-track-off)',
-          borderColor: 'var(--cds-switch-track-off)',
           color: 'var(--cds-switch-fg-label)',
-          '&[data-checked]': {
-            backgroundColor: 'var(--cds-switch-track-on)',
-            borderColor: 'var(--cds-switch-track-on)',
-          },
-          '&[data-disabled]': {
-            backgroundColor: 'var(--cds-switch-track-disabled)',
-            borderColor: 'var(--cds-switch-track-disabled)',
-          },
         },
         thumb: {
           backgroundColor: 'var(--cds-switch-thumb-default)',
@@ -390,12 +357,6 @@ export const clementineTheme = createTheme({
         },
         title: { color: 'var(--cds-modal-fg-title)' },
         body: { color: 'var(--cds-modal-fg-body)' },
-        close: {
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-modal-ring)',
-            outlineOffset: '2px',
-          },
-        },
       },
     },
     Card: {
@@ -409,14 +370,6 @@ export const clementineTheme = createTheme({
           borderColor: 'var(--cds-card-border)',
           boxShadow: 'var(--cds-card-shadow)',
           color: 'var(--cds-card-fg-body)',
-          '&[data-interactive="true"]:hover': { boxShadow: 'var(--mantine-shadow-md)' },
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-focus-ring)',
-            outlineOffset: '2px',
-          },
-        },
-        section: {
-          '&[data-subtle="true"]': { backgroundColor: 'var(--cds-card-bg-subtle)' },
         },
       },
     },
@@ -485,11 +438,7 @@ export const clementineTheme = createTheme({
           borderRadius: 'var(--cds-menu-radius)',
         },
         item: {
-          color: 'var(--cds-menu-item-fg)',
           '--menu-item-hover': 'var(--cds-menu-item-bg-hover)',
-          '&[data-variant="danger"], &[data-color="red"]': {
-            color: 'var(--cds-menu-item-fg-danger)',
-          },
         },
         label: { color: 'var(--cds-menu-label)' },
         divider: { borderColor: 'var(--cds-menu-divider)' },
@@ -507,13 +456,6 @@ export const clementineTheme = createTheme({
         },
         control: {
           color: 'var(--cds-accordion-fg-label)',
-          '&:hover:not(:disabled, [data-disabled])': {
-            backgroundColor: 'var(--cds-accordion-bg-hover)',
-          },
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-accordion-border-focus)',
-            outlineOffset: '2px',
-          },
         },
         chevron: { color: 'var(--cds-accordion-fg-chevron)' },
         panel: { color: 'var(--cds-accordion-fg-content)' },
@@ -562,13 +504,6 @@ export const clementineTheme = createTheme({
         control: {
           color: 'var(--cds-pagination-item-fg)',
           borderColor: 'var(--cds-pagination-border)',
-          '&:hover:not(:disabled, [data-disabled], [data-active])': {
-            backgroundColor: 'var(--cds-pagination-item-bg-hover)',
-          },
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-pagination-border-focus)',
-            outlineOffset: '2px',
-          },
         },
       },
     },
@@ -580,43 +515,28 @@ export const clementineTheme = createTheme({
     Stepper: {
       styles: {
         separator: { backgroundColor: 'var(--cds-stepper-separator)' },
-        stepIcon: {
-          backgroundColor: 'var(--cds-stepper-bg-pending)',
-          borderColor: 'var(--cds-stepper-separator)',
-          color: 'var(--cds-stepper-fg-pending)',
-          '& span': { color: 'var(--cds-stepper-fg-pending)' },
-          '&[data-progress]': {
-            backgroundColor: 'var(--cds-stepper-bg-active)',
-            borderColor: 'var(--cds-stepper-bg-active)',
-            color: 'var(--cds-stepper-fg-active)',
-          },
-          '&[data-completed]': {
-            backgroundColor: 'var(--cds-stepper-bg-completed)',
-            borderColor: 'var(--cds-stepper-bg-completed)',
-            color: 'var(--cds-text-on-action)',
-          },
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-stepper-border-focus)',
-            outlineOffset: '2px',
-          },
-        },
       },
     },
     Progress: {
       defaultProps: { radius: 'xl', color: 'blue' },
-      vars: () => ({
-        root: { '--progress-radius': 'var(--cds-progress-radius)' },
-      }),
+      // The bar is painted from --progress-section-color, chosen here from the
+      // color prop, so status colours resolve to progress.bar-* tokens.
+      vars: (_theme: unknown, props: { color?: string }) => {
+        const bar =
+          props.color === 'green'
+            ? 'var(--cds-progress-bar-success)'
+            : props.color === 'orange' || props.color === 'yellow'
+              ? 'var(--cds-progress-bar-warning)'
+              : props.color === 'red'
+                ? 'var(--cds-progress-bar-error)'
+                : 'var(--cds-progress-bar)';
+        return {
+          root: { '--progress-radius': 'var(--cds-progress-radius)' },
+          section: { '--progress-section-color': bar },
+        };
+      },
       styles: {
         root: { backgroundColor: 'var(--cds-progress-track)' },
-        section: {
-          backgroundColor: 'var(--cds-progress-bar)',
-          '&[data-color="green"]': { backgroundColor: 'var(--cds-progress-bar-success)' },
-          '&[data-color="orange"], &[data-color="yellow"]': {
-            backgroundColor: 'var(--cds-progress-bar-warning)',
-          },
-          '&[data-color="red"]': { backgroundColor: 'var(--cds-progress-bar-error)' },
-        },
       },
     },
     Skeleton: {
@@ -624,15 +544,6 @@ export const clementineTheme = createTheme({
       vars: () => ({
         root: { '--skeleton-radius': 'var(--cds-skeleton-radius)' },
       }),
-      styles: {
-        root: {
-          '&[data-visible]::before': { backgroundColor: 'var(--cds-skeleton-base)' },
-          '&[data-visible]::after': {
-            animationDuration: 'var(--cds-skeleton-duration)',
-            backgroundColor: 'var(--cds-skeleton-highlight)',
-          },
-        },
-      },
     },
     Chip: {
       defaultProps: { radius: 'xl' },
@@ -676,10 +587,6 @@ export const clementineTheme = createTheme({
       }),
       styles: {
         root: { backgroundColor: 'var(--cds-segmented-control-bg)' },
-        label: {
-          color: 'var(--cds-segmented-control-fg)',
-          '&[data-active]': { color: 'var(--cds-segmented-control-fg-active)' },
-        },
         indicator: { backgroundColor: 'var(--cds-segmented-control-bg-active)' },
       },
     },
@@ -710,14 +617,6 @@ export const clementineTheme = createTheme({
           borderColor: 'var(--cds-carousel-control-border)',
           borderRadius: 'var(--cds-carousel-radius)',
           color: 'var(--cds-carousel-control-fg)',
-          '&:focus-visible': {
-            outline: '2px solid var(--cds-carousel-ring)',
-            outlineOffset: '2px',
-          },
-        },
-        indicator: {
-          backgroundColor: 'var(--cds-carousel-indicator)',
-          '&[data-active]': { backgroundColor: 'var(--cds-carousel-indicator-active)' },
         },
       },
     },

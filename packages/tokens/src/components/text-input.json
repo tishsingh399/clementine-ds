@@ -16,6 +16,11 @@
       "error":       { "$value": "{feedback.error}",   "$type": "color" }
     },
     "ring":          { "$value": "{focus.ring}",       "$type": "color" },
-    "radius":        { "$value": "{radius.md}", "$type": "dimension" }
+    "radius":        { "$value": "{radius.md}", "$type": "dimension" },
+    "height": {
+      "sm":          { "$value": "32px", "$type": "dimension" },
+      "md":          { "$value": "40px", "$type": "dimension" },
+      "lg":          { "$value": "48px", "$type": "dimension" }
+    }
   }
 }

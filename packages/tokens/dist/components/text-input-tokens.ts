@@ -10,6 +10,9 @@ export type TextInputToken =
   | "text-input.fg.disabled"
   | "text-input.fg.placeholder"
   | "text-input.fg.value"
+  | "text-input.height.lg"
+  | "text-input.height.md"
+  | "text-input.height.sm"
   | "text-input.radius"
   | "text-input.ring";
 
@@ -23,6 +26,9 @@ export const textInputTokens = {
   fgDisabled: "text-input.fg.disabled",
   fgPlaceholder: "text-input.fg.placeholder",
   fgValue: "text-input.fg.value",
+  heightLg: "text-input.height.lg",
+  heightMd: "text-input.height.md",
+  heightSm: "text-input.height.sm",
   radius: "text-input.radius",
   ring: "text-input.ring",
 } as const satisfies Record<string, TextInputToken>;

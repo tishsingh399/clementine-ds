@@ -6,6 +6,8 @@ import '@mantine/dates/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/charts/styles.css';
 import '@mantine/carousel/styles.css';
+// After Mantine's stylesheets, so equal-specificity state rules win.
+import './theme/states.css';
 
 export interface ClementineDSProviderProps {
   children: React.ReactNode;

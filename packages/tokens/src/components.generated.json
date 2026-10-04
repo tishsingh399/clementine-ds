@@ -2391,7 +2391,7 @@
       "$type": "color"
     },
     "fg-active": {
-      "$value": "{text.primary}",
+      "$value": "{text.on-action}",
       "$type": "color"
     },
     "fg-pending": {
@@ -2627,6 +2627,20 @@
     "radius": {
       "$value": "{radius.md}",
       "$type": "dimension"
+    },
+    "height": {
+      "sm": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "48px",
+        "$type": "dimension"
+      }
     }
   },
   "textarea": {

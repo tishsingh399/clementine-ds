@@ -1,0 +1,198 @@
+/*
+ * Component state styles: hover, focus, active, checked, error, disabled.
+ *
+ * Why this file exists: Mantine's theme `styles` are applied as inline
+ * styles, and inline styles cannot hold selectors. Nested keys such as
+ * '&:focus-visible' or '&[data-checked]' only work with @mantine/emotion,
+ * which Clementine does not use, so until this file they were dropped
+ * without an error. A checked Switch kept its "off" track, a completed
+ * Stepper step stayed grey, a success Progress bar stayed blue, and a
+ * destructive menu item rendered in body text colour.
+ *
+ * Rules here use Mantine's static class names (.mantine-<Component>-<part>).
+ * This file is imported after Mantine's stylesheets, so at equal specificity
+ * these rules win. A base value that a state rule must override lives here
+ * too, not in the theme: an inline style would beat every rule below.
+ *
+ * scripts/check-theme-nested-selectors.mjs fails if a nested selector is
+ * put back into the theme's `styles`.
+ */
+
+/* ── Button ─────────────────────────────────────────────────────────── */
+.mantine-Button-root:active:not(:disabled, [data-disabled], [data-loading]) {
+  background-color: var(--cds-button-bg-active);
+}
+.mantine-Button-root[data-variant='outline']:hover:not(:disabled, [data-disabled]),
+.mantine-Button-root[data-variant='default']:hover:not(:disabled, [data-disabled]) {
+  border-color: var(--cds-button-border-hover);
+}
+.mantine-Button-root:focus-visible {
+  outline: 2px solid var(--cds-button-border-focus);
+  outline-offset: 2px;
+}
+.mantine-Button-root:disabled:not([data-loading]),
+.mantine-Button-root[data-disabled]:not([data-loading]) {
+  background-color: var(--cds-button-bg-disabled);
+  color: var(--cds-button-fg-disabled);
+  border-color: var(--cds-button-fg-disabled);
+}
+
+/* ── TextInput ──────────────────────────────────────────────────────── */
+/* Border colours for default / focus / error / disabled are set through
+   Mantine's --input-* variables in the theme; hover and the ring have no
+   Mantine variable. */
+.mantine-TextInput-input:hover:not(:focus, :disabled, [data-error]) {
+  border-color: var(--cds-text-input-border-hover);
+}
+.mantine-TextInput-input:focus-visible {
+  outline: 2px solid var(--cds-text-input-ring);
+  outline-offset: 2px;
+}
+
+/* ── PasswordInput / ColorInput ─────────────────────────────────────── */
+.mantine-PasswordInput-visibilityToggle svg,
+.mantine-PasswordInput-visibilityToggle svg *,
+.mantine-ColorInput-eyeDropperButton svg,
+.mantine-ColorInput-eyeDropperButton svg * {
+  color: currentColor;
+}
+
+/* ── Checkbox ───────────────────────────────────────────────────────── */
+.mantine-Checkbox-input {
+  border-color: var(--cds-checkbox-border-default);
+}
+/* Only the unchecked box uses the unchecked fill; a checked box is painted
+   from --checkbox-color (bg-checked) by Mantine. */
+.mantine-Checkbox-input:not(:checked, :indeterminate) {
+  background-color: var(--cds-checkbox-bg-unchecked);
+}
+.mantine-Checkbox-input:focus-visible {
+  outline: 2px solid var(--cds-checkbox-border-focus);
+  outline-offset: 2px;
+}
+.mantine-Checkbox-input[data-error] {
+  border-color: var(--cds-checkbox-border-error);
+}
+.mantine-Checkbox-input:disabled:not(:checked) {
+  background-color: var(--cds-checkbox-bg-disabled);
+}
+
+/* ── Switch ─────────────────────────────────────────────────────────── */
+/* The track carries no data-checked attribute; checked comes from the
+   sibling input, which is how Mantine itself styles it. */
+.mantine-Switch-track {
+  background-color: var(--cds-switch-track-off);
+  border-color: var(--cds-switch-track-off);
+}
+.mantine-Switch-input:checked + .mantine-Switch-track {
+  background-color: var(--cds-switch-track-on);
+  border-color: var(--cds-switch-track-on);
+}
+.mantine-Switch-input:disabled + .mantine-Switch-track {
+  background-color: var(--cds-switch-track-disabled);
+  border-color: var(--cds-switch-track-disabled);
+}
+.mantine-Switch-input:focus-visible + .mantine-Switch-track {
+  outline: 2px solid var(--cds-switch-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Modal ──────────────────────────────────────────────────────────── */
+.mantine-Modal-close:focus-visible {
+  outline: 2px solid var(--cds-modal-ring);
+  outline-offset: 2px;
+}
+
+/* ── Card ───────────────────────────────────────────────────────────── */
+.mantine-Card-root[data-interactive='true']:hover {
+  box-shadow: var(--mantine-shadow-md);
+}
+.mantine-Card-root:focus-visible {
+  outline: 2px solid var(--cds-focus-ring);
+  outline-offset: 2px;
+}
+.mantine-Card-section[data-subtle='true'] {
+  background-color: var(--cds-card-bg-subtle);
+}
+
+/* ── Menu ───────────────────────────────────────────────────────────── */
+.mantine-Menu-item {
+  color: var(--cds-menu-item-fg);
+}
+/* A coloured item is a destructive one: Menu.tsx documents color="red" as
+   the destructive API, and Mantine marks it with an inline --menu-item-color. */
+.mantine-Menu-item[style*='--menu-item-color'] {
+  color: var(--cds-menu-item-fg-danger);
+}
+
+/* ── Accordion ──────────────────────────────────────────────────────── */
+.mantine-Accordion-control:hover:not(:disabled, [data-disabled]) {
+  background-color: var(--cds-accordion-bg-hover);
+}
+.mantine-Accordion-control:focus-visible {
+  outline: 2px solid var(--cds-accordion-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Pagination ─────────────────────────────────────────────────────── */
+.mantine-Pagination-control:hover:not(:disabled, [data-disabled], [data-active]) {
+  background-color: var(--cds-pagination-item-bg-hover);
+}
+.mantine-Pagination-control:focus-visible {
+  outline: 2px solid var(--cds-pagination-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Stepper ────────────────────────────────────────────────────────── */
+.mantine-Stepper-stepIcon {
+  background-color: var(--cds-stepper-bg-pending);
+  border-color: var(--cds-stepper-separator);
+  color: var(--cds-stepper-fg-pending);
+}
+/* The step number follows its circle's text colour in every state. */
+.mantine-Stepper-stepIcon span {
+  color: inherit;
+}
+.mantine-Stepper-stepIcon[data-progress] {
+  background-color: var(--cds-stepper-bg-active);
+  border-color: var(--cds-stepper-bg-active);
+  color: var(--cds-stepper-fg-active);
+}
+.mantine-Stepper-stepIcon[data-completed] {
+  background-color: var(--cds-stepper-bg-completed);
+  border-color: var(--cds-stepper-bg-completed);
+  color: var(--cds-text-on-action);
+}
+.mantine-Stepper-stepIcon:focus-visible {
+  outline: 2px solid var(--cds-stepper-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Skeleton ───────────────────────────────────────────────────────── */
+.mantine-Skeleton-root[data-visible]::before {
+  background-color: var(--cds-skeleton-base);
+}
+.mantine-Skeleton-root[data-visible]::after {
+  animation-duration: var(--cds-skeleton-duration);
+  background-color: var(--cds-skeleton-highlight);
+}
+
+/* ── SegmentedControl ───────────────────────────────────────────────── */
+.mantine-SegmentedControl-label {
+  color: var(--cds-segmented-control-fg);
+}
+.mantine-SegmentedControl-label[data-active] {
+  color: var(--cds-segmented-control-fg-active);
+}
+
+/* ── Carousel ───────────────────────────────────────────────────────── */
+.mantine-Carousel-control:focus-visible {
+  outline: 2px solid var(--cds-carousel-ring);
+  outline-offset: 2px;
+}
+.mantine-Carousel-indicator {
+  background-color: var(--cds-carousel-indicator);
+}
+.mantine-Carousel-indicator[data-active] {
+  background-color: var(--cds-carousel-indicator-active);
+}

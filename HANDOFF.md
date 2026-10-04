@@ -17,8 +17,8 @@ Cursor) can execute this directly — commands are copy-pasteable and ordered.
 |---|---|
 | Components | **<!-- COUNTS:components -->121<!-- /COUNTS -->**, each shipping token + spec + Storybook story + guidance doc + implementation |
 | Patterns | **22** composed flows in [`patterns/`](./patterns) |
-| Tokens | <!-- COUNTS:primitives -->99<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->46<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->631<!-- /COUNTS -->** component tokens |
-| Figma variables | **<!-- COUNTS:component-tokens -->631<!-- /COUNTS -->** code-derived component variables, cascade-aliased, all verified present in Figma (0 missing — `scripts/figma-parity.mjs`); shell variables documented separately |
+| Tokens | <!-- COUNTS:primitives -->99<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->46<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->634<!-- /COUNTS -->** component tokens |
+| Figma variables | **<!-- COUNTS:component-tokens -->634<!-- /COUNTS -->** code-derived component variables, cascade-aliased, all verified present in Figma (0 missing — `scripts/figma-parity.mjs`); shell variables documented separately |
 | Figma render | All **<!-- COUNTS:components -->121<!-- /COUNTS -->** drawn as real, token-bound nodes — across 6 category pages plus the core on the Cover page |
 | Typecheck | `@clementine-ds/ui` and `observatory` both pass `tsc --noEmit` (verified) |
 

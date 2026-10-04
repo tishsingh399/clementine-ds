@@ -27,6 +27,9 @@ token_contract:
   - text-input.border.error
   - text-input.ring
   - text-input.radius
+  - text-input.height.sm
+  - text-input.height.md
+  - text-input.height.lg
 
 interaction_states: [default, hover, focus, filled, disabled, error, loading]
 
@@ -67,3 +70,9 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 - expose `aria-invalid="true"` and `aria-describedby="<helperId>"` on error
 - preserve native browser autofill / autocomplete behavior
 - use `rightSection` for loading/status affordances rather than inventing ad hoc input chrome
+
+| Size | Height | Use when |
+|---|---|---|
+| `sm` | 32px | Dense forms, toolbars, table filters |
+| `md` | 40px | Default. Matches Button `md`, so a field and its action line up |
+| `lg` | 48px | Mobile, or a page's primary search |

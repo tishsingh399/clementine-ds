@@ -35,6 +35,9 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 | `text-input.border.focus` | `border.focus` | `#2563eb` |
 | `text-input.border.error` | `feedback.error` | `#dc2626` |
 | `text-input.ring` | `focus.ring` | `#f5631a` |
+| `text-input.height.sm` | — | `32px` |
+| `text-input.height.md` | — | `40px` |
+| `text-input.height.lg` | — | `48px` |
 
 ## Accessibility
 
