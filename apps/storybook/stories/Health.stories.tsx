@@ -72,15 +72,18 @@ const formatDate = (value: string) =>
 const visibleStateGaps = report.stateCoverage.visibleGaps;
 const visibleUnwiredStates = report.dom?.unwiredStates.slice(0, 12) ?? [];
 
+// Theme tokens, not hand-picked hex: the page follows light/dark like every
+// other story. ok/warn use the text-tier status tokens, which hold 4.5:1 for
+// the 12px labels where the feedback.* fills do not.
 const tone = {
-  ink: '#191918',
-  muted: '#737370',
-  line: '#e5e5e0',
-  panel: '#ffffff',
-  subtle: '#fafaf8',
-  accent: '#f5631a',
-  ok: '#15803d',
-  warn: '#a16207',
+  ink: 'var(--cds-text-primary)',
+  muted: 'var(--cds-text-tertiary)',
+  line: 'var(--cds-border-default)',
+  panel: 'var(--cds-surface-elevated)',
+  subtle: 'var(--cds-surface-default)',
+  accent: 'var(--cds-accent-brand)',
+  ok: 'var(--cds-text-success)',
+  warn: 'var(--cds-text-warning)',
 };
 
 function StatTile({

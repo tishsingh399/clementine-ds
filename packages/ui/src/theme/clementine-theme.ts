@@ -122,16 +122,8 @@ export const clementineTheme = createTheme({
     // (Paper/default button) · 7 body · 8-9 deepest. Tuned so dimmed text and
     // input borders clear WCAG AA on navy.
     dark: [
-      '#f0f4f8', // 0  text.primary — brightest
-      '#dbe3ec', // 1
-      '#aab6c6', // 2  text.dimmed (≥4.5:1 on navy + colored subtle panels)
-      '#94a1b2', // 3  placeholder — text.tertiary (dark)
-      '#69788d', // 4  border.input (≥3:1 input borders, 1.4.11)
-      '#3d4d61', // 5  border.input-hover / control line
-      '#243447', // 6  surface.elevated — Paper / default-variant button bg
-      '#1a2735', // 7  surface.default — body background
-      '#15202e', // 8  surface.subtle — deeper wells
-      '#0f1722', // 9  deepest
+      p.colorNavy0, p.colorNavy1, p.colorNavy2, p.colorNavy3, p.colorNavy4,
+      p.colorNavy5, p.colorNavy6, p.colorNavy7, p.colorNavy8, p.colorNavy9,
     ],
   },
 

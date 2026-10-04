@@ -34,6 +34,16 @@ export type PrimitiveTokenPath =
   | "color.green.7"
   | "color.green.8"
   | "color.green.9"
+  | "color.navy.0"
+  | "color.navy.1"
+  | "color.navy.2"
+  | "color.navy.3"
+  | "color.navy.4"
+  | "color.navy.5"
+  | "color.navy.6"
+  | "color.navy.7"
+  | "color.navy.8"
+  | "color.navy.9"
   | "color.orange.0"
   | "color.orange.1"
   | "color.orange.2"
@@ -135,7 +145,9 @@ export type SemanticTokenPath =
   | "text.on-inverse-strong"
   | "text.primary"
   | "text.secondary"
-  | "text.tertiary";
+  | "text.success"
+  | "text.tertiary"
+  | "text.warning";
 
 export type ComponentTokenPath =
   | "accordion.bg"

@@ -37,19 +37,19 @@
   },
   "surface": {
     "default": {
-      "$value": "#1a2735",
+      "$value": "{color.navy.7}",
       "$type": "color"
     },
     "elevated": {
-      "$value": "#243447",
+      "$value": "{color.navy.6}",
       "$type": "color"
     },
     "subtle": {
-      "$value": "#15202e",
+      "$value": "{color.navy.8}",
       "$type": "color"
     },
     "subtle-hover": {
-      "$value": "#243447",
+      "$value": "{color.navy.6}",
       "$type": "color"
     },
     "inverse": {
@@ -63,7 +63,7 @@
   },
   "text": {
     "primary": {
-      "$value": "#f0f4f8",
+      "$value": "{color.navy.0}",
       "$type": "color"
     },
     "secondary": {
@@ -71,11 +71,11 @@
       "$type": "color"
     },
     "dimmed": {
-      "$value": "#aab6c6",
+      "$value": "{color.navy.2}",
       "$type": "color"
     },
     "tertiary": {
-      "$value": "#94a1b2",
+      "$value": "{color.navy.3}",
       "$type": "color"
     },
     "on-action": {
@@ -84,6 +84,14 @@
     },
     "link": {
       "$value": "{color.blue.4}",
+      "$type": "color"
+    },
+    "success": {
+      "$value": "{color.green.4}",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "{color.orange.4}",
       "$type": "color"
     },
     "on-inverse": {
@@ -109,11 +117,11 @@
       "$type": "color"
     },
     "input": {
-      "$value": "#69788d",
+      "$value": "{color.navy.4}",
       "$type": "color"
     },
     "input-hover": {
-      "$value": "#3d4d61",
+      "$value": "{color.navy.5}",
       "$type": "color"
     },
     "focus": {

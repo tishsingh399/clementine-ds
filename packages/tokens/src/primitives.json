@@ -36,6 +36,18 @@
       "8":  { "$value": "#3a3a37", "$type": "color" },
       "9":  { "$value": "#1a1a18", "$type": "color" }
     },
+    "navy": {
+      "0":  { "$value": "#f0f4f8", "$type": "color" },
+      "1":  { "$value": "#dbe3ec", "$type": "color" },
+      "2":  { "$value": "#aab6c6", "$type": "color" },
+      "3":  { "$value": "#94a1b2", "$type": "color" },
+      "4":  { "$value": "#69788d", "$type": "color" },
+      "5":  { "$value": "#3d4d61", "$type": "color" },
+      "6":  { "$value": "#243447", "$type": "color" },
+      "7":  { "$value": "#1a2735", "$type": "color" },
+      "8":  { "$value": "#15202e", "$type": "color" },
+      "9":  { "$value": "#0f1722", "$type": "color" }
+    },
     "green": {
       "0":  { "$value": "#f0fdf4", "$type": "color" },
       "1":  { "$value": "#dcfce7", "$type": "color" },
