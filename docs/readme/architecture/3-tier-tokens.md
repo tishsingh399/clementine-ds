@@ -6,7 +6,7 @@
 
 Clementine organizes tokens into three tiers: primitive, semantic, component. Each tier references only the tier above it. Component colors never reference primitives directly. Dimensional tokens (radius, spacing, shadow, motion, typography) may — they have no semantic layer. Enforced by `scripts/lint-cascade-direction.mjs`.
 
-This is not a new idea. Adobe Spectrum, IBM Carbon, Shopify Polaris, and BeyondTrust Shield all use some version of it. Clementine's version is small enough to read in one sitting.
+This is not a new idea. Adobe Spectrum, IBM Carbon, and Shopify Polaris all use some version of it. Clementine's version is small enough to read in one sitting.
 
 ## The three tiers
 
