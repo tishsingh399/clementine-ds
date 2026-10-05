@@ -1,5 +1,5 @@
 {
-  "generated_from_last_verified": "2026-06-10T00:00:00.000Z",
+  "generated_from_last_verified": "2026-06-11T00:00:00.000Z",
   "source": "specs/**/index.md",
   "purpose": "Impact graph for agent planning. Generated from Clementine spec frontmatter.",
   "totals": {
@@ -584,11 +584,15 @@
         "button.bg-outline.hover",
         "button.fg.on-filled",
         "button.fg.on-outline",
+        "button.fg.on-subtle",
         "button.fg.disabled",
         "button.border.default",
         "button.border.hover",
         "button.border.focus",
-        "button.radius"
+        "button.radius",
+        "button.height.sm",
+        "button.height.md",
+        "button.height.lg"
       ],
       "parts": [
         "root",
@@ -3866,7 +3870,10 @@
         "text-input.border.focus",
         "text-input.border.error",
         "text-input.ring",
-        "text-input.radius"
+        "text-input.radius",
+        "text-input.height.sm",
+        "text-input.height.md",
+        "text-input.height.lg"
       ],
       "parts": [
         "label",
@@ -4510,6 +4517,9 @@
       "button.fg.on-outline": [
         "button"
       ],
+      "button.fg.on-subtle": [
+        "button"
+      ],
       "button.fg.disabled": [
         "button"
       ],
@@ -4523,6 +4533,15 @@
         "button"
       ],
       "button.radius": [
+        "button"
+      ],
+      "button.height.sm": [
+        "button"
+      ],
+      "button.height.md": [
+        "button"
+      ],
+      "button.height.lg": [
         "button"
       ],
       "button-group.divider": [
@@ -5948,6 +5967,15 @@
         "text-input"
       ],
       "text-input.radius": [
+        "text-input"
+      ],
+      "text-input.height.sm": [
+        "text-input"
+      ],
+      "text-input.height.md": [
+        "text-input"
+      ],
+      "text-input.height.lg": [
         "text-input"
       ],
       "textarea.bg.default": [

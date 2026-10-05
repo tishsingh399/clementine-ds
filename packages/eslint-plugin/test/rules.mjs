@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -21,7 +22,19 @@ assert.deepEqual(findRawStyleValues('color: "var(--cds-button-bg-default)"; // #
 
 assert.ok(index.paths.has('button.bg.default'));
 assert.ok(index.cssVariables.has('--cds-button-bg-default'));
-assert.equal(index.paths.size, 628);
+// The index must hold every component token in the source files. Counted from
+// the source rather than hard-coded, so adding a token doesn't break the build.
+const countLeaves = (node) =>
+  Object.values(node).reduce(
+    (n, v) => n + (v && typeof v === 'object' ? ('$value' in v ? 1 : countLeaves(v)) : 0),
+    0,
+  );
+const componentsDir = join(root, 'packages/tokens/src/components');
+const sourceCount = readdirSync(componentsDir)
+  .filter((f) => f.endsWith('.json'))
+  .reduce((n, f) => n + countLeaves(JSON.parse(readFileSync(join(componentsDir, f), 'utf8'))), 0);
+assert.ok(sourceCount > 600, `expected the full component token set, counted ${sourceCount}`);
+assert.equal(index.paths.size, sourceCount);
 
 assert.deepEqual(findComponentTokenViolations('"button.bg.default"', index), []);
 assert.deepEqual(findComponentTokenViolations('"surface.default"', index), []);
