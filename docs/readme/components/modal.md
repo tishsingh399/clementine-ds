@@ -16,7 +16,8 @@ Blocking overlay that interrupts the page. Use sparingly. Most flows belong inli
 | `dialog` | Modal container. Owns elevation, radius, focus trap |
 | `header` | Title row + close button |
 | `body` | Main content |
-| `footer` | Action row (typically Buttons) |
+| `description` | Supporting text under the title. `ModalDescription`, in `modal.fg.secondary` |
+| `footer` | Decision row. `ModalFooter`: Cancel first, then the action that commits |
 
 ## States
 
@@ -29,6 +30,19 @@ Blocking overlay that interrupts the page. Use sparingly. Most flows belong inli
 - Trap focus while open
 - Close on Esc
 - Restore focus to the trigger element on close
+- The close button is named "Close dialog"
+
+## Example
+
+```tsx
+<Modal title="Revoke session?" opened={opened} onClose={close}>
+  <ModalDescription>This will sign out the user from all devices.</ModalDescription>
+  <ModalFooter>
+    <Button variant="outline" onClick={close}>Cancel</Button>
+    <Button color="red" onClick={revoke}>Revoke session</Button>
+  </ModalFooter>
+</Modal>
+```
 
 ## Decisions
 
