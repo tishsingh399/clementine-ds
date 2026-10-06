@@ -73,8 +73,11 @@
 .mantine-Checkbox-input[data-error] {
   border-color: var(--cds-checkbox-border-error);
 }
-.mantine-Checkbox-input:disabled:not(:checked) {
+.mantine-Checkbox-input:disabled:not(:checked, :indeterminate) {
   background-color: var(--cds-checkbox-bg-disabled);
+  /* Mantine's own :disabled rule (gray.3) outranks the base border above;
+     restate the token. Checkbox has no disabled-border token of its own. */
+  border-color: var(--cds-checkbox-border-default);
 }
 
 /* ── Switch ─────────────────────────────────────────────────────────── */
