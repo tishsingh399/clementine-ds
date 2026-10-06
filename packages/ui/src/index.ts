@@ -14,7 +14,7 @@ export { Switch, type SwitchProps } from './components/Switch';
 export { Radio, RadioGroup, type RadioProps, type RadioGroupProps } from './components/Radio';
 export { Badge, type BadgeProps, type RiskLevel } from './components/Badge';
 export { Tabs, TabsList, TabsTab, TabsPanel, type TabsProps, type TabsListProps, type TabsTabProps, type TabsPanelProps } from './components/Tabs';
-export { Modal, type ModalProps } from './components/Modal';
+export { Modal, ModalDescription, ModalFooter, type ModalProps } from './components/Modal';
 export { Tooltip, type TooltipProps } from './components/Tooltip';
 export { Alert, type AlertProps, type AlertIntent } from './components/Alert';
 export { Card, CardSection, type CardProps, type CardSectionProps } from './components/Card';
