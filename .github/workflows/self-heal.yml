@@ -19,8 +19,12 @@ name: Self-heal
 #  - bounded:     the loop may only run the four named fixers; it never edits
 #                 components, specs, tokens source, or loop-rules.md
 on:
-  schedule:
-    - cron: '30 6 * * *' # nightly, after the DOM-parity run
+  # Runs when the nightly painted-DOM job finishes, so re-verification can use
+  # that run's report. GitHub starts scheduled jobs hours late and at varying
+  # times, so ordering two cron schedules by clock time was not reliable.
+  workflow_run:
+    workflows: ['DOM parity (nightly)']
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -62,6 +66,26 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter @clementine-ds/tokens build
 
+      - name: Fetch the painted-DOM report and the commit it measured
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Triggered by the DOM job: use that exact run. Started by hand: use the
+          # latest completed DOM run. verify-specs ignores a report made on another
+          # commit, so a stale one can never re-verify anything.
+          RUN="${{ github.event.workflow_run.id }}"
+          SHA="${{ github.event.workflow_run.head_sha }}"
+          if [ -z "$RUN" ]; then
+            read -r RUN SHA < <(gh run list --workflow "DOM parity (nightly)" --status completed --limit 1 \
+              --json databaseId,headSha --jq '.[0] | "\(.databaseId) \(.headSha)"')
+          fi
+          if [ -n "$RUN" ] && gh run download "$RUN" -n parity-dom-report -D /tmp/dom; then
+            echo "DOM_REPORT=/tmp/dom/parity-dom-report.json" >> "$GITHUB_ENV"
+            echo "DOM_COMMIT=$SHA" >> "$GITHUB_ENV"
+          else
+            echo "No painted-DOM report found; specs it measures will not be re-verified this run."
+          fi
+
       - name: Run fixers (obeying governance/loop-rules.md)
         run: |
           skip() { grep -qE "^skip: $1\$" governance/loop-rules.md; }
@@ -69,6 +93,10 @@ jobs:
           skip token-types     || pnpm tokens:types
           skip agentic-indexes || pnpm agentic:indexes
           skip counts          || pnpm counts
+          # Moves a spec's last_verified only when its evidence passes on this
+          # commit; a spec that fails keeps its old date and is reported below.
+          skip verify-specs    || node scripts/verify-specs.mjs ${DOM_REPORT:+--dom "$DOM_REPORT" --dom-commit "$DOM_COMMIT"}
+          git checkout -- apps/observatory/parity-report.json 2>/dev/null || true
 
       - name: Anything to heal?
         id: diff
@@ -102,7 +130,7 @@ jobs:
             --description "Opened by the self-healing loop" >/dev/null 2>&1 || true
           PR_URL=$(gh pr create --base main --head "$BRANCH" --label self-heal \
             --title "loop: heal mechanical drift" \
-            --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, tokens:types, agentic:indexes, counts) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
+            --body "Opened automatically by the Self-heal workflow. The diff below is the output of deterministic fixers (tokens:index, tokens:types, agentic:indexes, counts, verify-specs) — no hand-written changes. The independent Contract gates check must pass on this exact commit before auto-merge completes. Reject this PR (close without merging) and the Loop encode workflow will file an 'encode the rule' task.")
           # If LOOP_TOKEN authored the PR, normal pull_request checks run
           # natively. If the workflow token authored it, ask the independent
           # gate to inspect the branch because workflow-token PRs do not
@@ -116,14 +144,27 @@ jobs:
           echo "Loop PR: $PR_URL (auto-merge armed, waiting on the gate)"
 
       - name: File judgment-class findings as an issue
+        # always(): the report matters most on the nights an earlier step fails.
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           node scripts/parity-report.mjs > /tmp/parity.txt 2>&1 || true
           node scripts/check-spec-honesty.mjs > /tmp/honesty.txt 2>&1 || true
+          node scripts/verify-specs.mjs --dry-run ${DOM_REPORT:+--dom "$DOM_REPORT" --dom-commit "$DOM_COMMIT"} > /tmp/verify.txt 2>&1 || true
+          FAILING=$(grep -c 'not re-verified —' /tmp/verify.txt || true)
+          # The nightly health report, on every run, good nights included.
+          {
+            echo "## Nightly health"
+            echo '```'
+            cat /tmp/parity.txt
+            grep -E '^Checked' /tmp/honesty.txt || true
+            cat /tmp/verify.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
           BELOW=$(grep -oE '[0-9]+ below' /tmp/parity.txt | grep -oE '^[0-9]+' || echo 0)
           WARNS=$(grep -oE '[0-9]+ warning' /tmp/honesty.txt | grep -oE '^[0-9]+' || echo 0)
-          if [ "${BELOW:-0}" -gt 0 ] || [ "${WARNS:-0}" -gt 0 ]; then
+          if [ "${BELOW:-0}" -gt 0 ] || [ "${WARNS:-0}" -gt 0 ] || [ "${FAILING:-0}" -gt 0 ]; then
             TITLE="loop: judgment-class findings need a human or an agent"
             {
               echo "Found by the nightly loop — these are NOT auto-fixed by design."
@@ -131,6 +172,7 @@ jobs:
               echo '```'
               cat /tmp/parity.txt
               grep '⚠︎' /tmp/honesty.txt || true
+              grep -E 'verify-specs|not re-verified' /tmp/verify.txt || true
               echo '```'
             } > /tmp/body.md
             EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')

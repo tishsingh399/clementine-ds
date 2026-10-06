@@ -1,8 +1,11 @@
 ---
 component: button
-ds_version: clementine-ds@0.1.0 (2026-06-08 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
 status: AI-Ready
-last_verified: 2026-06-08
+last_verified: 2026-10-06
+verified_commit: 015819c0
+verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
+verified_gaps: 3
 
 category: Component
 required_aria: [aria-label, aria-disabled, aria-busy]

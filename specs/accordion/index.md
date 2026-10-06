@@ -1,8 +1,11 @@
 ---
 component: accordion
-ds_version: clementine-ds@0.1.0 (2026-06-10 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
 status: AI-Ready
-last_verified: 2026-06-10
+last_verified: 2026-10-06
+verified_commit: 015819c0
+verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
+verified_gaps: 4
 
 category: Component
 required_aria: [aria-expanded, aria-controls, aria-labelledby]

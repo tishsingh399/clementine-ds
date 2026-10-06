@@ -12,7 +12,7 @@ Add a line anywhere in this file in the form:
 skip: name-of-fixer
 ```
 
-Valid fixer names: `tokens-index` · `agentic-indexes` · `counts`
+Valid fixer names: `tokens-index` · `token-types` · `agentic-indexes` · `counts` · `verify-specs`
 
 The nightly run greps for these lines and skips the named fixer. Delete the
 line to switch the fixer back on. (The whole loop pauses with the repo
