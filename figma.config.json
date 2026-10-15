@@ -2,7 +2,8 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "packages/ui/src/**/*.figma.tsx"
+      "packages/ui/src/**/*.figma.tsx",
+      "packages/ui/src/components/**/*.tsx"
     ],
     "importPaths": {
       "packages/ui/src/*": "@clementine-ds/ui"
