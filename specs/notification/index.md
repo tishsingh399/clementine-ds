@@ -66,3 +66,5 @@ A self-contained status card for transient feedback — the visual a toast syste
 
 **Do:** Announce via aria-live (polite for info, assertive for errors); Auto-dismiss info; let errors persist; Pair color with an icon + text.
 **Don't:** Stack a wall of notifications; Auto-dismiss errors the user must act on; Carry critical-only info in a toast.
+
+**Figma mapping (component set `86:11`, Accent):** Code Connect points at the set but does not map Accent; no single code prop turns the accent on and off. Needs a decision on what Accent means in code.

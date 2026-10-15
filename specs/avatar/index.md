@@ -104,6 +104,7 @@ A compact, recognizable stand-in for a person or entity — a photo, initials, o
 ## 4. Variants
 
 - **Sizes:** `xs`–`xl` via Mantine `size`.
+- **Figma drift:** the component set (`76:445`) has sizes XS–2XL at 24/32/40/48/56/72 px. The code uses Mantine's `xs`–`xl` (16/26/38/56/84 px) and has no 2XL. Code Connect maps by name (2XL → `xl`), so the sizes a designer sees and the sizes code renders differ. Needs a decision on which scale is right.
 - **Group:** `AvatarGroup` overlaps members and separates them with `avatar.border`; cap visible members and render the rest as a `+N` placeholder.
 
 ## 5. Do / Don't
