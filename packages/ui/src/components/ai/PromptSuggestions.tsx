@@ -20,8 +20,8 @@ export const PromptSuggestions = forwardRef<HTMLDivElement, PromptSuggestionsPro
           key={i}
           onClick={() => onSelect?.(s)}
           style={{
-            padding: '6px 12px',
-            borderRadius: 99,
+            padding: 'var(--mantine-spacing-sm) var(--mantine-spacing-md)',
+            borderRadius: 'var(--mantine-radius-xl)',
             fontSize: 13,
             background: 'var(--cds-surface-subtle)',
             color: 'var(--cds-text-primary)',

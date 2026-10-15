@@ -25,7 +25,7 @@ export const SessionList = forwardRef<HTMLDivElement, SessionListProps>(({ sessi
         onClick={() => onOpen?.(s.id)}
         aria-current={s.id === activeId ? 'page' : undefined}
         style={{
-          padding: '8px 10px', borderRadius: 6,
+          padding: 'var(--mantine-spacing-sm)', borderRadius: 'var(--mantine-radius-md)',
           background: s.id === activeId ? 'var(--cds-surface-subtle)' : 'transparent',
         }}
       >

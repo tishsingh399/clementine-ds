@@ -1,0 +1,282 @@
+{
+  "note": "Raw sizes in component inline styles that predate check-raw-sizes.mjs. Known debt, not approval: fix them onto tokens and run --update to shrink this list. It never grows.",
+  "createdAt": "2026-10-15",
+  "entries": [
+    {
+      "file": "packages/ui/src/components/ai/AttachmentPill.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/CitationChip.tsx",
+      "prop": "fontSize",
+      "value": "11",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/CitationChip.tsx",
+      "prop": "marginInline",
+      "value": "2",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/CodeBlock.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/CodeBlock.tsx",
+      "prop": "padding",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/ConfidenceMeter.tsx",
+      "prop": "borderRadius",
+      "value": "2",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/ConversationThread.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/ConversationThread.tsx",
+      "prop": "padding",
+      "value": "16",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/DiffView.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/DiffView.tsx",
+      "prop": "padding",
+      "value": "12px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/DiffView.tsx",
+      "prop": "padding",
+      "value": "2px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/PermissionRequest.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/PlanSteps.tsx",
+      "prop": "fontSize",
+      "value": "13",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/PromptSuggestions.tsx",
+      "prop": "fontSize",
+      "value": "13",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/ReasoningTrace.tsx",
+      "prop": "paddingLeft",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/SourcesPanel.tsx",
+      "prop": "fontSize",
+      "value": "11",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/StreamingText.tsx",
+      "prop": "marginLeft",
+      "value": "2",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/ToolCallCard.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ai/UndoBar.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/BulkActionBar.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/CharacterCounter.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/DescriptionList.tsx",
+      "prop": "fontSize",
+      "value": "13",
+      "count": 2
+    },
+    {
+      "file": "packages/ui/src/components/DescriptionList.tsx",
+      "prop": "gap",
+      "value": "16px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/DescriptionList.tsx",
+      "prop": "gap",
+      "value": "8px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/EmptyState.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/EmptyState.tsx",
+      "prop": "marginTop",
+      "value": "4",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/EmptyState.tsx",
+      "prop": "padding",
+      "value": "24px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/EmptyState.tsx",
+      "prop": "padding",
+      "value": "32px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ErrorState.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ErrorState.tsx",
+      "prop": "marginTop",
+      "value": "4",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ErrorState.tsx",
+      "prop": "padding",
+      "value": "24px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ErrorState.tsx",
+      "prop": "padding",
+      "value": "32px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/FieldLabel.tsx",
+      "prop": "fontSize",
+      "value": "13",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/FieldLabel.tsx",
+      "prop": "fontSize",
+      "value": "14",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/FieldLabel.tsx",
+      "prop": "gap",
+      "value": "4",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/FieldLabel.tsx",
+      "prop": "margin",
+      "value": "-1",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/HelperText.tsx",
+      "prop": "marginTop",
+      "value": "4",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/LoadingState.tsx",
+      "prop": "padding",
+      "value": "24px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/LoadingState.tsx",
+      "prop": "padding",
+      "value": "28px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/SessionDeviceList.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/SuccessState.tsx",
+      "prop": "borderRadius",
+      "value": "8",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/SuccessState.tsx",
+      "prop": "marginTop",
+      "value": "4",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/SuccessState.tsx",
+      "prop": "padding",
+      "value": "24px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/SuccessState.tsx",
+      "prop": "padding",
+      "value": "32px",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ValidationMessage.tsx",
+      "prop": "fontSize",
+      "value": "12",
+      "count": 1
+    },
+    {
+      "file": "packages/ui/src/components/ValidationMessage.tsx",
+      "prop": "marginTop",
+      "value": "4",
+      "count": 1
+    }
+  ]
+}

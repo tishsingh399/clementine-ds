@@ -110,7 +110,8 @@
       "sm": { "$value": "14px", "$type": "dimension" },
       "md": { "$value": "16px", "$type": "dimension" },
       "lg": { "$value": "18px", "$type": "dimension" },
-      "xl": { "$value": "20px", "$type": "dimension" }
+      "xl": { "$value": "20px", "$type": "dimension" },
+      "2xl": { "$value": "28px", "$type": "dimension" }
     },
     "line-height": {
       "xs": { "$value": "1.4",  "$type": "number" },

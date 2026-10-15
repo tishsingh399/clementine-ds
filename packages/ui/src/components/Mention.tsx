@@ -13,8 +13,8 @@ export const Mention = forwardRef<HTMLAnchorElement, MentionProps>(({ name, href
   const style: React.CSSProperties = {
     color: 'var(--cds-text-link)',
     background: 'var(--cds-surface-subtle)',
-    padding: '1px 5px',
-    borderRadius: 4,
+    padding: '1px var(--mantine-spacing-xs)',
+    borderRadius: 'var(--mantine-radius-sm)',
     fontWeight: 500,
     textDecoration: 'none',
   };

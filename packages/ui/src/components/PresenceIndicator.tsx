@@ -28,7 +28,7 @@ export const PresenceIndicator = forwardRef<HTMLDivElement, PresenceIndicatorPro
       <Tooltip key={i} label={`${u.name} · ${u.status}`} withArrow>
         <div style={{ position: 'relative' }}>
           <Avatar name={u.name} color="blue" radius="xl" size="md" style={{ border: '2px solid var(--cds-surface-default)' }} />
-          <span aria-hidden style={{ position: 'absolute', right: 0, bottom: 0, width: 10, height: 10, borderRadius: 99, background: DOT[u.status], border: '2px solid var(--cds-surface-default)' }} />
+          <span aria-hidden style={{ position: 'absolute', right: 0, bottom: 0, width: 10, height: 10, borderRadius: 'var(--mantine-radius-xl)', background: DOT[u.status], border: '2px solid var(--cds-surface-default)' }} />
         </div>
       </Tooltip>
     ))}

@@ -90,6 +90,7 @@ export type PrimitiveTokenPath =
   | "spacing.xs"
   | "typography.font-family.mono"
   | "typography.font-family.sans"
+  | "typography.font-size.2xl"
   | "typography.font-size.lg"
   | "typography.font-size.md"
   | "typography.font-size.sm"
