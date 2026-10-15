@@ -19,7 +19,7 @@ export const AttachmentPill = forwardRef<HTMLDivElement, AttachmentPillProps>(
       gap={8}
       wrap="nowrap"
       style={{
-        padding: 'var(--mantine-spacing-xs) var(--mantine-spacing-xs) var(--mantine-spacing-xs) var(--mantine-spacing-sm)', borderRadius: 8, display: 'inline-flex',
+        padding: 'var(--mantine-spacing-xs) var(--mantine-spacing-xs) var(--mantine-spacing-xs) var(--mantine-spacing-sm)', borderRadius: 'var(--mantine-radius-lg)', display: 'inline-flex',
         background: 'var(--cds-surface-subtle)', border: '1px solid var(--cds-border-default)',
       }}
     >

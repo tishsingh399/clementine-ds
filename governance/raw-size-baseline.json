@@ -3,12 +3,6 @@
   "createdAt": "2026-10-15",
   "entries": [
     {
-      "file": "packages/ui/src/components/ai/AttachmentPill.tsx",
-      "prop": "borderRadius",
-      "value": "8",
-      "count": 1
-    },
-    {
       "file": "packages/ui/src/components/ai/CitationChip.tsx",
       "prop": "fontSize",
       "value": "11",

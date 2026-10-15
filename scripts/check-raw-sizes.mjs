@@ -22,7 +22,7 @@
  * Usage: node scripts/check-raw-sizes.mjs [--update]
  *        node scripts/check-raw-sizes.mjs --init   (once: records today's state; refuses if a baseline exists)
  */
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -71,23 +71,32 @@ for (const file of files(srcDir)) {
 }
 
 if (init) {
-  if (existsSync(baselineFile)) {
-    console.error('✗ a baseline already exists; --init only records the first one. Use --update to shrink it.');
-    process.exit(1);
-  }
   const entries = [...found]
     .map(([key, e]) => { const [file, prop, value] = key.split('|'); return { file, prop, value, count: e.count }; })
     .sort((a, b) => (a.file + a.prop + a.value).localeCompare(b.file + b.prop + b.value));
-  writeFileSync(baselineFile, JSON.stringify({
+  // 'wx' creates the file or fails if it exists, in one step (no check-then-write race).
+  try {
+    writeFileSync(baselineFile, JSON.stringify({
     note: 'Raw sizes in component inline styles that predate check-raw-sizes.mjs. Known debt, not approval: fix them onto tokens and run --update to shrink this list. It never grows.',
     createdAt: new Date().toISOString().slice(0, 10),
     entries,
-  }, null, 2) + '\n');
+    }, null, 2) + '\n', { flag: 'wx' });
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err;
+    console.error('✗ a baseline already exists; --init only records the first one. Use --update to shrink it.');
+    process.exit(1);
+  }
   console.log(`raw-size baseline recorded: ${entries.length} entries, ${entries.reduce((n, e) => n + e.count, 0)} uses`);
   process.exit(0);
 }
 
-const baseline = existsSync(baselineFile) ? JSON.parse(readFileSync(baselineFile, 'utf8')) : { entries: [] };
+// Read in one step; a missing file means an empty baseline.
+let baseline = { entries: [] };
+try {
+  baseline = JSON.parse(readFileSync(baselineFile, 'utf8'));
+} catch (err) {
+  if (err.code !== 'ENOENT') throw err;
+}
 const allowed = new Map(baseline.entries.map((e) => [`${e.file}|${e.prop}|${e.value}`, e.count]));
 
 const failures = [];
