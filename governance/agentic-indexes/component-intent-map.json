@@ -3498,6 +3498,7 @@
         "dialog",
         "header",
         "body",
+        "description",
         "footer"
       ],
       "required_aria": [

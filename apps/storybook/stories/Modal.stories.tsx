@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Modal, Button, Text, Stack, TextInput } from '@clementine-ds/ui';
+import { Modal, ModalDescription, ModalFooter, Button, Text, Stack, TextInput } from '@clementine-ds/ui';
 
 const meta: Meta<typeof Modal> = {
   title: 'Components/Modal',
@@ -14,7 +14,7 @@ const meta: Meta<typeof Modal> = {
     withCloseButton: { control: 'boolean' },
   },
   args: {
-    title: 'Modal Title',
+    title: 'Modal title',
     size: 'md',
     centered: false,
     withCloseButton: true,
@@ -29,7 +29,7 @@ export const Default: Story = {
     const [opened, setOpened] = useState(false);
     return (
       <>
-        <Button onClick={() => setOpened(true)}>Open Modal</Button>
+        <Button onClick={() => setOpened(true)}>Open modal</Button>
         <Modal {...args} opened={opened} onClose={() => setOpened(false)}>
           <Text>Modal content goes here.</Text>
         </Modal>
@@ -44,7 +44,7 @@ export const Centered: Story = {
     const [opened, setOpened] = useState(false);
     return (
       <>
-        <Button onClick={() => setOpened(true)}>Open Centered</Button>
+        <Button onClick={() => setOpened(true)}>Open centered</Button>
         <Modal {...args} opened={opened} onClose={() => setOpened(false)}>
           <Text>Centered modal content.</Text>
         </Modal>
@@ -63,18 +63,47 @@ export const InitiallyOpen: Story = {
 };
 
 export const WithForm: Story = {
-  args: { title: 'Create Access Request' },
+  args: { title: 'Create access request' },
   render: (args) => {
     const [opened, setOpened] = useState(false);
     return (
       <>
-        <Button onClick={() => setOpened(true)}>Request Access</Button>
+        <Button onClick={() => setOpened(true)}>Request access</Button>
         <Modal {...args} opened={opened} onClose={() => setOpened(false)}>
           <Stack gap="md">
-            <TextInput label="Target System" placeholder="e.g., prod-db-01" />
+            <TextInput label="Target system" placeholder="e.g., prod-db-01" />
             <TextInput label="Justification" placeholder="Reason for access" />
-            <Button fullWidth>Submit Request</Button>
+            <Button fullWidth>Submit request</Button>
           </Stack>
+        </Modal>
+      </>
+    );
+  },
+};
+
+// Mirrors the Clementine Figma specimen: heading, supporting text, then a
+// decision row with Cancel first and an action named for what it does.
+export const ConfirmDestructive: Story = {
+  args: { title: 'Revoke session?' },
+  render: (args) => {
+    const [opened, setOpened] = useState(false);
+    return (
+      <>
+        <Button color="red" onClick={() => setOpened(true)}>
+          Revoke session
+        </Button>
+        <Modal {...args} opened={opened} onClose={() => setOpened(false)}>
+          <ModalDescription>
+            This will sign out the user from all devices and require re-authentication.
+          </ModalDescription>
+          <ModalFooter>
+            <Button variant="outline" onClick={() => setOpened(false)}>
+              Cancel
+            </Button>
+            <Button color="red" onClick={() => setOpened(false)}>
+              Revoke session
+            </Button>
+          </ModalFooter>
         </Modal>
       </>
     );

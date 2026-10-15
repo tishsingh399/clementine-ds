@@ -2327,6 +2327,7 @@
         "dialog",
         "header",
         "body",
+        "description",
         "footer"
       ],
       "states": [

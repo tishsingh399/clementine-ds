@@ -197,7 +197,9 @@ export const clementineTheme = createTheme({
               '--button-bg': 'var(--cds-button-bg-outline-default)',
               '--button-hover': 'var(--cds-button-bg-outline-hover)',
               '--button-color': 'var(--cds-button-fg-on-outline)',
-              '--button-bd': 'var(--cds-button-border-default)',
+              // Mantine reads --button-bd as a whole border, not a colour: a bare
+              // colour is invalid and the outline variant rendered no border.
+              '--button-bd': 'calc(0.0625rem * var(--mantine-scale)) solid var(--cds-button-border-default)',
             },
           };
         }
@@ -341,7 +343,9 @@ export const clementineTheme = createTheme({
       },
     },
     Modal: {
-      defaultProps: { radius: 'lg' },
+      // The close button is icon-only; without a name a screen reader announces
+      // just "button".
+      defaultProps: { radius: 'lg', closeButtonProps: { 'aria-label': 'Close dialog' } },
       vars: () => ({
         root: { '--modal-radius': 'var(--cds-modal-radius)' },
       }),
@@ -355,8 +359,12 @@ export const clementineTheme = createTheme({
           backgroundColor: 'var(--cds-modal-bg)',
           borderBottom: '1px solid var(--cds-modal-border-divider)',
         },
-        title: { color: 'var(--cds-modal-fg-title)' },
-        body: { color: 'var(--cds-modal-fg-body)' },
+        // A heading, not body text: lg size token; weight 600 as FieldLabel uses
+        // (Clementine has no font-weight tokens yet).
+        title: { color: 'var(--cds-modal-fg-title)', fontSize: 'var(--mantine-font-size-lg)', fontWeight: 600 },
+        // Space below the header divider; Mantine drops the body's top padding
+        // when a title is present.
+        body: { color: 'var(--cds-modal-fg-body)', paddingTop: 'var(--mantine-spacing-md)' },
       },
     },
     Card: {

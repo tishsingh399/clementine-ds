@@ -14,7 +14,8 @@ semantic_parts:
   dialog:   The modal container — owns elevation, radius, focus trap
   header:   Title row + close button
   body:     Main content
-  footer:   Action row (typically Buttons)
+  description: Supporting text under the title (ModalDescription, modal.fg.secondary)
+  footer:   Decision row (ModalFooter), Cancel first, then the committing action
 
 token_contract:
   - modal.bg
@@ -72,3 +73,25 @@ Blocking overlay that interrupts the page to demand a decision or show critical 
 - Close button belongs in the header by default; footer actions are reserved for task decisions.
 - Opening/closing motion follows Mantine's default transition unless a product surface explicitly overrides it.
 - Focus restoration and Esc-to-close are delegated to Mantine and verified through rendered Storybook behavior.
+
+## 2.1 Parts and sizes
+
+| Part | Code | Painted from |
+|---|---|---|
+| Title | `title` prop | `modal.fg.title`, font-size `lg` (18px), weight 600 |
+| Close button | header, automatic | named "Close dialog" for screen readers; focus ring `modal.ring` |
+| Description | `ModalDescription` | `modal.fg.secondary`, font-size `sm` (14px) |
+| Footer | `ModalFooter` | spacing `md` between buttons, `lg` above; buttons are Clementine `Button` at `md` (40px) |
+
+Width follows Mantine's `size` prop: `md` (440px) is the default; use `lg` or `xl` only for forms that need it. Elevation is `shadow.xl`.
+
+Footer order follows the Clementine Figma specimen: Cancel (outline) first, then the action that commits, labelled with what it does ("Revoke session", not "Confirm"). A destructive action uses `color="red"`.
+
+**Gaps, recorded rather than invented:**
+- Clementine has no font-weight tokens; the title uses 600, as `FieldLabel` does.
+- Figma has no Modal component set, only a specimen frame on the overview page (`1:1647`), whose body text overflows its 360px frame.
+
+## 2.2 Behaviour verified in a real browser
+
+Measured with Playwright against the `Default` and `ConfirmDestructive` stories, light and dark:
+`aria-modal="true"`; `aria-labelledby` resolves to the title; `aria-describedby` resolves; focus moves into the dialog on open and stays inside across Tab presses; Esc closes; focus returns to the trigger; every painted colour matches its token; description text 5.36:1 light, 5.62:1 dark.
