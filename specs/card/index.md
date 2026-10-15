@@ -112,6 +112,10 @@ A static Card needs **no** ARIA. A Card that is *entirely* clickable must expose
 
 Driven by Mantine props (defaults in theme): `withBorder` (on), `shadow` (`sm`), `radius` (`lg`), `padding` (`lg`). For an inset/nested card use `card.bg-subtle`.
 
+**Figma mapping (component set `88:55`, Elevation × Interactive), and two gaps:**
+- Figma's Elevation is one of Flat (no border, no shadow), Raised (shadow) or Bordered (`border/default`). The theme's default Card is bordered **and** raised, which matches none of them. Code Connect maps each Figma variant faithfully; the default needs a design decision.
+- Figma's Interactive maps to `data-interactive="true"`, the attribute the hover lift in `theme/states.css` keys on. Nothing in the library sets it, and nothing gives a clickable Card the link or button semantics this spec requires (`component="a"` with `href`, or `component="button"`). Until a wrapper does both, set them by hand.
+
 ## 5. Do / Don't
 
 **Do:**
