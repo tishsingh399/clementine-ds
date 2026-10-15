@@ -27,7 +27,7 @@ export const AgentStatus = forwardRef<HTMLDivElement, AgentStatusProps>(({ state
   const m = MAP[state];
   return (
     <Group ref={ref} gap={6} align="center" role="status" aria-live="polite">
-      {m.busy ? <Loader size={12} color={m.color} /> : <span style={{ width: 8, height: 8, borderRadius: 99, background: m.color }} aria-hidden />}
+      {m.busy ? <Loader size={12} color={m.color} /> : <span style={{ width: 8, height: 8, borderRadius: 'var(--mantine-radius-xl)', background: m.color }} aria-hidden />}
       <Text size="sm" style={{ color: 'var(--cds-text-secondary)' }}>{label ?? m.text}</Text>
     </Group>
   );

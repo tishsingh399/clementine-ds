@@ -29,7 +29,7 @@ export const SourcesPanel = forwardRef<HTMLDivElement, SourcesPanelProps>(
             <span
               style={{
                 minWidth: 18, height: 18, display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 11, borderRadius: 4, background: 'var(--cds-surface-subtle)',
+                fontSize: 11, borderRadius: 'var(--mantine-radius-sm)', background: 'var(--cds-surface-subtle)',
                 color: 'var(--cds-text-secondary)', border: '1px solid var(--cds-border-default)',
               }}
             >

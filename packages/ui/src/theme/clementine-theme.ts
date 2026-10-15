@@ -157,6 +157,8 @@ export const clementineTheme = createTheme({
     md: p.typographyFontSizeMd,
     lg: p.typographyFontSizeLg,
     xl: p.typographyFontSizeXl,
+    // Display size for state icons and stat values; the text scale stops at xl.
+    '2xl': p.typographyFontSize2xl,
   },
 
   lineHeights: {

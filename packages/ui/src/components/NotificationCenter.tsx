@@ -23,10 +23,10 @@ export const NotificationCenter = forwardRef<HTMLDivElement, NotificationCenterP
     <Stack gap={2}>
       {notifications.map((n) => (
         <Group key={n.id} justify="space-between" wrap="nowrap" align="flex-start" p="xs"
-          style={{ borderRadius: 6, background: n.read ? 'transparent' : 'var(--cds-surface-subtle)' }}>
+          style={{ borderRadius: 'var(--mantine-radius-md)', background: n.read ? 'transparent' : 'var(--cds-surface-subtle)' }}>
           <div>
             <Group gap={6} wrap="nowrap" align="center">
-              {!n.read && <span style={{ width: 6, height: 6, borderRadius: 99, background: 'var(--cds-action-primary)' }} aria-hidden />}
+              {!n.read && <span style={{ width: 6, height: 6, borderRadius: 'var(--mantine-radius-xl)', background: 'var(--cds-action-primary)' }} aria-hidden />}
               <Text size="sm" fw={n.read ? 400 : 600} style={{ color: 'var(--cds-text-primary)' }}>{n.title}</Text>
             </Group>
             {n.body && <Text size="xs" c="dimmed">{n.body}</Text>}

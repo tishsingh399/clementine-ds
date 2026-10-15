@@ -26,7 +26,7 @@ export const StatusDot = forwardRef<HTMLDivElement, StatusDotProps>(({ status, l
   const m = MAP[status];
   return (
     <Group ref={ref} gap={6} align="center">
-      <span style={{ width: 8, height: 8, borderRadius: 99, background: m.color, flexShrink: 0 }} aria-hidden />
+      <span style={{ width: 8, height: 8, borderRadius: 'var(--mantine-radius-xl)', background: m.color, flexShrink: 0 }} aria-hidden />
       <Text size="sm">{label ?? m.text}</Text>
     </Group>
   );

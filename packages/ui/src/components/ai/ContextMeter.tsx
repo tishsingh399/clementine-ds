@@ -24,8 +24,8 @@ export const ContextMeter = forwardRef<HTMLDivElement, ContextMeterProps>(({ use
           {used.toLocaleString()} / {total.toLocaleString()}
         </Text>
       </Group>
-      <div style={{ height: 6, borderRadius: 99, background: 'var(--cds-surface-subtle)', overflow: 'hidden' }}>
-        <div style={{ width: `${pct * 100}%`, height: '100%', background: fill, borderRadius: 99 }} />
+      <div style={{ height: 6, borderRadius: 'var(--mantine-radius-xl)', background: 'var(--cds-surface-subtle)', overflow: 'hidden' }}>
+        <div style={{ width: `${pct * 100}%`, height: '100%', background: fill, borderRadius: 'var(--mantine-radius-xl)' }} />
       </div>
     </div>
   );
