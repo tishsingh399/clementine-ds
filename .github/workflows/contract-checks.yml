@@ -59,3 +59,13 @@ jobs:
 
       - name: Spec links resolve (F13)
         run: node scripts/check-spec-links.mjs
+
+      - name: Spec token metadata current
+        run: pnpm spec-token-metadata:check
+
+      - name: Behavior specs valid
+        run: pnpm validate:behaviors
+
+      - name: State coverage holds its baseline
+        run: pnpm validate:state-coverage
+

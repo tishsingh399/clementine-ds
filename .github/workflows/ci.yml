@@ -11,19 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-specs:
-    name: Validate agentic specs
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Run agentic-spec validate
-        run: npx -y github:tishsingh399/agentic-spec validate $(find specs -name index.md | xargs -n1 dirname)
-
+  # Spec validation lives in contract-checks.yml (pinned agentic-spec 0.2.0).
   build:
     name: Build packages
     runs-on: ubuntu-latest
