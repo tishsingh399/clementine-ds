@@ -1,5 +1,10 @@
 
-> @clementine-ds/tokens@0.1.0 build /Users/tinasingh/Desktop/clementine-ds/packages/tokens
+> @clementine-ds/tokens@0.1.0 prebuild /private/tmp/claude-501/-Users-tinasingh-Desktop-SDS-Calude/d87d240c-cbfd-4d09-8043-b1c660be1cea/scratchpad/clem8/packages/tokens
+> node ../../scripts/build-component-index.mjs
+
+✔︎ components.generated.json — 121 files → 121 namespaces
+
+> @clementine-ds/tokens@0.1.0 build /private/tmp/claude-501/-Users-tinasingh-Desktop-SDS-Calude/d87d240c-cbfd-4d09-8043-b1c660be1cea/scratchpad/clem8/packages/tokens
 > style-dictionary build --config sd.config.ts
 
 

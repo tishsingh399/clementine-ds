@@ -63,3 +63,5 @@ Pick one of a small set of mutually-exclusive options — a compact, styled radi
 
 **Do:** Keep to 2-5 short options; Default to the most common choice; Use full-width inside narrow containers.
 **Don't:** Overflow with long labels; Use for more than ~5 options; Hide the active segment behind color alone.
+
+**Figma mapping:** Code Connect still points at the specimen `16:1041`. The variant set `88:23` (State × Size) is a single segment, not the whole control, so it cannot stand in for `SegmentedControl`. Build a control-level set in Figma, then repoint.

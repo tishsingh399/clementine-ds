@@ -66,3 +66,5 @@ A compact, toggleable selection — filter chips and multi-choice pickers. Disti
 
 **Do:** Use ChipGroup for single/multi selection; Keep labels to 1-2 words; Show selected state with fill AND the checked affordance.
 **Don't:** Use chips for status (that is Badge); Rely on color alone for selected; Overflow a row with 20 chips — group or filter.
+
+**Figma mapping (component set `84:69`, Checked × Removable × Size):** Checked and Size map to `checked` and `size`. Removable has no code equivalent; Mantine Chip is a toggle with no remove button. Decide whether Removable belongs in Figma or a removable chip belongs in code.
