@@ -89,6 +89,8 @@ The actual YAML frontmatter from [`specs/button/index.md`](./specs/button/index.
 
 `AI-Ready` means all five `checks:` pass the validator (`pnpm validate`) **and** the spec holds 100% contract parity in [`scripts/parity-report.mjs`](./scripts/parity-report.mjs) without dropping below the committed ratchet baseline in [`governance/parity-baseline.json`](./governance/parity-baseline.json) — every declared token exists in the component-tier file and resolves through the cascade. Specs below that bar, or with a `last_verified` older than 90 days, are demoted to `In progress` until re-verified (see [`.agenticspec.config.json`](./.agenticspec.config.json)). Current per-spec parity: [`apps/observatory/parity-report.json`](./apps/observatory/parity-report.json).
 
+Matching a token's value is not the same as using the token: a component that paints a library default passes every value check while the default and the token agree. [`scripts/token-swap.mjs`](./scripts/token-swap.mjs) (`pnpm parity:swap` against a running Storybook, nightly in CI) swaps `action.primary` to a sentinel colour in the rendered page and fails any component whose contract aliases it but keeps painting the old colour. Known misses are listed, with reasons, in [`governance/token-swap-allowlist.json`](./governance/token-swap-allowlist.json); each is a bug to fix, not an exemption.
+
 ## Quick start
 
 ```bash
