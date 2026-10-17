@@ -14,10 +14,10 @@ const meta: Meta<typeof Avatar> = {
 export default meta;
 type Story = StoryObj<typeof Avatar>;
 
-export const Initials: Story = { args: { name: 'Tina Singh', color: 'blue' } };
+export const Initials: Story = { args: { name: 'Ana Lee', color: 'blue' } };
 
 export const Image: Story = {
-  args: { src: 'https://i.pravatar.cc/120?img=47', alt: 'Tina Singh' },
+  args: { src: 'https://i.pravatar.cc/120?img=47', alt: 'Ana Lee' },
 };
 
 export const Placeholder: Story = {};
@@ -26,7 +26,7 @@ export const Stacked: Story = {
   name: 'Group',
   render: () => (
     <AvatarGroup>
-      <Avatar name="Tina Singh" color="blue" />
+      <Avatar name="Ana Lee" color="blue" />
       <Avatar name="Jordan Lee" color="green" />
       <Avatar name="Sam Park" color="orange" />
       <Avatar>+5</Avatar>

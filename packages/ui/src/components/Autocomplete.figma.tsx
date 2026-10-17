@@ -5,6 +5,6 @@ import { Autocomplete } from './Autocomplete';
 // Publish with: npx figma connect publish  (requires FIGMA_ACCESS_TOKEN)
 figma.connect(Autocomplete, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS?node-id=6-618', {
   example: () => (
-    <Autocomplete label="Assignee" placeholder="Type a name" data={['Tina Singh', 'Tim Park']} />
+    <Autocomplete label="Assignee" placeholder="Type a name" data={['Ana Lee', 'Tim Park']} />
   ),
 });
