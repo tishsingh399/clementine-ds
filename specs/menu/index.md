@@ -1,8 +1,8 @@
 ---
 component: menu
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -103,7 +103,7 @@ A dropdown list of **actions** triggered by a control — row actions, an overfl
 | dropdown elevation | default | `menu.shadow` → `{shadow.lg}` | `0 8px 24px rgba(0,0,0,0.16)` |
 | corners | — | `menu.radius` → `{radius.md}` | `6px` |
 | item text | default | `menu.item.fg` → `{text.primary}` | `#1a1a18` |
-| destructive item | default | `menu.item.fg-danger` → `{feedback.error}` | `#dc2626` |
+| destructive item | default | `menu.item.fg-danger` → `{text.error}` | `#b91c1c` |
 | item | hover/focus | `menu.item.bg-hover` → `{surface.subtle}` | `#f3f3f0` |
 | group heading | default | `menu.label` → `{text.secondary}` | `#6b6b66` |
 | separator | default | `menu.divider` → `{border.default}` | `#e5e5e0` |

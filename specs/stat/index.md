@@ -1,8 +1,8 @@
 ---
 component: stat
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -55,8 +55,8 @@ A KPI/metric tile: a label, a large value, and an optional trend delta.
 |---|---|---|
 | `stat.value` | `{text.primary}` | `#1a1a18` |
 | `stat.label` | `{text.tertiary}` | `#737370` |
-| `stat.delta-up` | `{feedback.success}` | `#16a34a` |
-| `stat.delta-down` | `{feedback.error}` | `#dc2626` |
+| `stat.delta-up` | `{text.success}` | `#15803d` |
+| `stat.delta-down` | `{text.error}` | `#b91c1c` |
 
 **Do:** Pair the trend arrow with text + color; Keep labels short; Right-size the value type.
 **Don't:** Show a delta with color/arrow but no number; Cram units ambiguously.

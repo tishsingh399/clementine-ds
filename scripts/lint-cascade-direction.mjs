@@ -9,6 +9,8 @@
  *   - dimensional/motion tokens (radius, spacing, shadow, motion, typography)
  *     MAY reference primitives directly — they have no semantic layer
  *   - every reference must resolve to a real token (no dangling refs)
+ *   - text-role tokens resolve through `text.*`, never feedback/risk/action,
+ *     and never text.tertiary on a surface.subtle background (4.28:1)
  *
  * `bad-token-tier` only checks the tier enum; this checks the *direction*.
  * Exit 1 on any violation. Wire as `pnpm validate:cascade`.
@@ -76,10 +78,61 @@ function checkLeaf(file, name, leaf) {
   }
 }
 
+// Text-role intent. A token that colors text must resolve through `text.*`:
+// `feedback.*` / `risk.*` / `action.*` are tuned for fills, borders and icons
+// (3:1), not text (4.5:1) — feedback.success is 3.3:1 on white. Roles come
+// from the names specs give text parts (fg, label, title, count, delta-up…).
+const TEXT_SEGMENT = /^(fg|label|title|body|value|count|empty|duration|delta-up|delta-down|caption|description|meta|placeholder|helper|name|text)$|^fg-|-fg$|-label$|-title$/;
+// Text parts whose names don't say so (checked against the component source).
+const TEXT_NAMED_OTHERWISE = new Set(['character-counter.over', 'field-label.required']);
+const NON_TEXT_GROUP = /^\{(feedback|risk|action)\./;
+
+const isTextRole = (path) =>
+  TEXT_NAMED_OTHERWISE.has(path.join('.')) || path.slice(1).some((seg) => TEXT_SEGMENT.test(seg));
+
+// The background a text token sits on, when the file names it: the same part's
+// bg (fg-pending ↔ bg-pending, fg.x ↔ bg.x) or the component container's bg.
+// shortcut: name pairing only — a text part on a differently named subtle area
+// (e.g. a meta line inside an unread row) is not caught; upgrade with a paints-on field in the spec.
+function backgroundsOf(path, colors) {
+  const [comp, ...rest] = path;
+  const swapped = rest.map((s) => s.replace(/^fg(?=-|$)/, 'bg').replace(/-fg$/, '-bg'));
+  const candidates = [[comp, ...swapped].join('.'), `${comp}.bg`, `${comp}.bg.default`];
+  return candidates.filter((c) => c !== path.join('.') && colors.has(c)).map((c) => [c, colors.get(c)]);
+}
+
+function checkTextRoles(file, json) {
+  const colors = new Map();
+  (function collect(node, path) {
+    for (const [key, value] of Object.entries(node)) {
+      if (value && typeof value === 'object' && '$value' in value) {
+        if (value.$type === 'color') colors.set([...path, key].join('.'), value.$value);
+      } else if (value && typeof value === 'object') collect(value, [...path, key]);
+    }
+  })(json, []);
+
+  for (const [name, ref] of colors) {
+    const path = name.split('.');
+    if (!isTextRole(path)) continue;
+    if (NON_TEXT_GROUP.test(ref)) {
+      violations.push(`${file}: ${name} → ${ref} colors text with a non-text semantic — use a text.* token (text.error, text.success, text.warning, text.link…)`);
+    }
+    // Disabled text is WCAG-exempt (1.4.3), so disabled tertiary-on-subtle is allowed.
+    if (ref === '{text.tertiary}' && !path.includes('disabled') && !path.some((s) => s.endsWith('-disabled'))) {
+      for (const [bg, bgRef] of backgroundsOf(path, colors)) {
+        if (bgRef === '{surface.subtle}') {
+          violations.push(`${file}: ${name} → {text.tertiary} paints on ${bg} → {surface.subtle} (4.28:1, below AA) — use text.secondary`);
+        }
+      }
+    }
+  }
+}
+
 const files = readdirSync(componentsDir).filter((f) => f.endsWith('.json') && f !== 'components.generated.json');
 for (const file of files) {
   const json = JSON.parse(readFileSync(join(componentsDir, file), 'utf8'));
   walk(file, json);
+  checkTextRoles(file, json);
 }
 
 if (violations.length) {

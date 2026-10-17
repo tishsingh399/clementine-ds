@@ -139,6 +139,7 @@ export type SemanticTokenPath =
   | "surface.subtle"
   | "surface.subtle-hover"
   | "text.dimmed"
+  | "text.error"
   | "text.link"
   | "text.on-action"
   | "text.on-inverse"

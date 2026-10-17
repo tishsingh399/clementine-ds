@@ -1,8 +1,8 @@
 ---
 component: reasoning-trace
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens]
 
@@ -59,7 +59,7 @@ A collapsible, de-emphasized view of the model's intermediate thinking. Collapse
 |---|---|---|
 | container | `reasoning.bg` → `{surface.subtle}` | `#f3f3f0` |
 | body text | `reasoning.fg` → `{text.secondary}` | `#6b6b66` |
-| heading | `reasoning.label` → `{text.tertiary}` | `#737370` |
+| heading | `reasoning.label` → `{text.secondary}` | `#6b6b66` |
 | left rule | `reasoning.rule` → `{border.default}` | `#e5e5e0` |
 
 **Do** keep it collapsed by default and label it ("Thought for 1.2s"). **Don't** present reasoning as the answer, or surface raw chain-of-thought the model shouldn't expose.

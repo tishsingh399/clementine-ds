@@ -5,7 +5,7 @@
       "$type": "color"
     },
     "over": {
-      "$value": "{feedback.error}",
+      "$value": "{text.error}",
       "$type": "color"
     }
   }

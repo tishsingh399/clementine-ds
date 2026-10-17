@@ -67,6 +67,11 @@ const PAIRS = [
   ['text.tertiary', 'surface.elevated', 'text'],     // placeholder/muted — often the offender
   ['text.tertiary', 'surface.subtle', 'text'],
   ['text.link', 'surface.elevated', 'text'],
+  // status text (component text tokens must use these, not feedback.* — see lint-cascade-direction)
+  ['text.error', 'surface.elevated', 'text'],
+  ['text.error', 'surface.subtle', 'text'],
+  ['text.success', 'surface.elevated', 'text'],
+  ['text.warning', 'surface.elevated', 'text'],
   // text on filled actions (button labels)
   ['text.on-action', 'action.primary', 'text'],
   ['text.on-action', 'action.primary-hover', 'text'],

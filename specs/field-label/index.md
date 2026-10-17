@@ -1,8 +1,8 @@
 ---
 component: field-label
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -53,7 +53,7 @@ A form field label with optional required or optional markers.
 | Token | Resolves through | Light |
 |---|---|---|
 | `field-label.fg` | `{text.primary}` | `#1a1a18` |
-| `field-label.required` | `{feedback.error}` | `#dc2626` |
+| `field-label.required` | `{text.error}` | `#b91c1c` |
 | `field-label.optional` | `{text.secondary}` | `#6b6b66` |
 
 **Do:** Associate via htmlFor and the control id; Mark required with the asterisk AND screen-reader text.

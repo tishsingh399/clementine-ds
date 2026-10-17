@@ -2,7 +2,7 @@
   "reasoning": {
     "bg":     { "$value": "{surface.subtle}",  "$type": "color" },
     "fg":     { "$value": "{text.secondary}",  "$type": "color" },
-    "label":  { "$value": "{text.tertiary}",   "$type": "color" },
+    "label":  { "$value": "{text.secondary}",  "$type": "color" },
     "rule":   { "$value": "{border.default}",  "$type": "color" },
     "radius": { "$value": "{radius.md}", "$type": "dimension" }
   }

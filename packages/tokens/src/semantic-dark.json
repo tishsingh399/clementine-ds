@@ -94,6 +94,10 @@
       "$value": "{color.orange.4}",
       "$type": "color"
     },
+    "error": {
+      "$value": "{color.red.4}",
+      "$type": "color"
+    },
     "on-inverse": {
       "$value": "{color.gray.4}",
       "$type": "color"

@@ -1,8 +1,8 @@
 ---
 component: stepper
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 verified_gaps: 2
@@ -62,7 +62,7 @@ Ordered progress through a multi-step flow (wizard, onboarding, guided setup).
 | `stepper.bg-active` | `{action.primary}` | `#2563eb` |
 | `stepper.bg-pending` | `{surface.subtle}` | `#f3f3f0` |
 | `stepper.fg-active` | `{text.on-action}` | `#ffffff` |
-| `stepper.fg-pending` | `{text.tertiary}` | `#737370` |
+| `stepper.fg-pending` | `{text.secondary}` | `#6b6b66` |
 | `stepper.separator` | `{border.default}` | `#e5e5e0` |
 | `stepper.border-focus` | `{focus.ring}` | `#f5631a` |
 
