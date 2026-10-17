@@ -3,8 +3,8 @@
   "source": "specs/**/index.md",
   "purpose": "Impact graph for agent planning. Generated from Clementine spec frontmatter.",
   "totals": {
-    "components": 121,
-    "ai_ready": 121,
+    "components": 126,
+    "ai_ready": 126,
     "draft": 0
   },
   "nodes": {
@@ -1043,6 +1043,54 @@
         "a11y"
       ]
     },
+    "command-palette": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 94,
+      "spec_path": "specs/command-palette/index.md",
+      "code_path": "packages/ui/src/components/CommandPalette.tsx",
+      "story_path": "apps/storybook/stories/CommandPalette.stories.tsx",
+      "token_file": "packages/tokens/src/components/command-palette.json",
+      "tokens": [
+        "command-palette.bg",
+        "command-palette.border",
+        "command-palette.item-fg",
+        "command-palette.item-bg-active",
+        "command-palette.group-label",
+        "command-palette.shortcut",
+        "command-palette.empty"
+      ],
+      "parts": [
+        "root",
+        "input",
+        "list",
+        "group-label",
+        "item",
+        "shortcut",
+        "empty"
+      ],
+      "states": [
+        "default",
+        "closed",
+        "open",
+        "empty",
+        "active-item"
+      ],
+      "patterns": [
+        "command-launcher",
+        "global-search"
+      ],
+      "pages": [
+        "issue-board",
+        "dashboard",
+        "doc-page",
+        "trace-explorer"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
     "comment-thread": {
       "type": "Enterprise",
       "status": "AI-Ready",
@@ -1983,6 +2031,90 @@
       "pages": [],
       "review_lenses": [
         "edge-states"
+      ]
+    },
+    "json-viewer": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 86,
+      "spec_path": "specs/json-viewer/index.md",
+      "code_path": "packages/ui/src/components/JsonViewer.tsx",
+      "story_path": "apps/storybook/stories/JsonViewer.stories.tsx",
+      "token_file": "packages/tokens/src/components/json-viewer.json",
+      "tokens": [
+        "json-viewer.key",
+        "json-viewer.string",
+        "json-viewer.number",
+        "json-viewer.literal",
+        "json-viewer.punctuation",
+        "json-viewer.guide"
+      ],
+      "parts": [
+        "root",
+        "node",
+        "key",
+        "string",
+        "number",
+        "literal",
+        "punctuation",
+        "guide"
+      ],
+      "states": [
+        "default",
+        "expanded",
+        "collapsed"
+      ],
+      "patterns": [
+        "payload-inspector",
+        "log-details"
+      ],
+      "pages": [
+        "trace-explorer",
+        "agent-chat",
+        "dashboard"
+      ],
+      "review_lenses": [
+        "a11y"
+      ]
+    },
+    "kanban-board": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 86,
+      "spec_path": "specs/kanban-board/index.md",
+      "code_path": "packages/ui/src/components/KanbanBoard.tsx",
+      "story_path": "apps/storybook/stories/KanbanBoard.stories.tsx",
+      "token_file": "packages/tokens/src/components/kanban-board.json",
+      "tokens": [
+        "kanban-board.column-bg",
+        "kanban-board.column-border",
+        "kanban-board.header-fg",
+        "kanban-board.count",
+        "kanban-board.over-limit",
+        "kanban-board.empty"
+      ],
+      "parts": [
+        "root",
+        "column",
+        "header",
+        "count",
+        "card",
+        "actions",
+        "empty"
+      ],
+      "states": [
+        "default",
+        "empty",
+        "over-limit"
+      ],
+      "patterns": [
+        "work-tracking"
+      ],
+      "pages": [
+        "issue-board"
+      ],
+      "review_lenses": [
+        "a11y"
       ]
     },
     "kbd": {
@@ -3977,6 +4109,48 @@
         "a11y"
       ]
     },
+    "time-range-picker": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 90,
+      "spec_path": "specs/time-range-picker/index.md",
+      "code_path": "packages/ui/src/components/TimeRangePicker.tsx",
+      "story_path": "apps/storybook/stories/TimeRangePicker.stories.tsx",
+      "token_file": "packages/tokens/src/components/time-range-picker.json",
+      "tokens": [
+        "time-range-picker.trigger-fg",
+        "time-range-picker.label",
+        "time-range-picker.option-fg",
+        "time-range-picker.option-bg-active",
+        "time-range-picker.divider"
+      ],
+      "parts": [
+        "trigger",
+        "absolute",
+        "quick",
+        "option",
+        "divider"
+      ],
+      "states": [
+        "default",
+        "open",
+        "selected-range",
+        "absolute",
+        "invalid"
+      ],
+      "patterns": [
+        "dashboard-toolbar",
+        "explorer-toolbar"
+      ],
+      "pages": [
+        "dashboard",
+        "trace-explorer"
+      ],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
     "timeline": {
       "type": "Component",
       "status": "AI-Ready",
@@ -4128,6 +4302,52 @@
         "page-header"
       ],
       "pages": [],
+      "review_lenses": [
+        "a11y",
+        "edge-states"
+      ]
+    },
+    "trace-tree": {
+      "type": "Component",
+      "status": "AI-Ready",
+      "trust_health": 94,
+      "spec_path": "specs/trace-tree/index.md",
+      "code_path": "packages/ui/src/components/TraceTree.tsx",
+      "story_path": "apps/storybook/stories/TraceTree.stories.tsx",
+      "token_file": "packages/tokens/src/components/trace-tree.json",
+      "tokens": [
+        "trace-tree.fg",
+        "trace-tree.row-bg-selected",
+        "trace-tree.track",
+        "trace-tree.bar",
+        "trace-tree.bar-error",
+        "trace-tree.duration",
+        "trace-tree.guide"
+      ],
+      "parts": [
+        "root",
+        "row",
+        "type",
+        "duration",
+        "track",
+        "bar",
+        "guide"
+      ],
+      "states": [
+        "default",
+        "expanded",
+        "collapsed",
+        "selected",
+        "error"
+      ],
+      "patterns": [
+        "agent-run-inspector",
+        "distributed-tracing"
+      ],
+      "pages": [
+        "trace-explorer",
+        "agent-chat"
+      ],
       "review_lenses": [
         "a11y",
         "edge-states"
@@ -4758,6 +4978,27 @@
       "color-input.radius": [
         "color-input"
       ],
+      "command-palette.bg": [
+        "command-palette"
+      ],
+      "command-palette.border": [
+        "command-palette"
+      ],
+      "command-palette.item-fg": [
+        "command-palette"
+      ],
+      "command-palette.item-bg-active": [
+        "command-palette"
+      ],
+      "command-palette.group-label": [
+        "command-palette"
+      ],
+      "command-palette.shortcut": [
+        "command-palette"
+      ],
+      "command-palette.empty": [
+        "command-palette"
+      ],
       "comment-thread.author": [
         "comment-thread"
       ],
@@ -5123,6 +5364,42 @@
       ],
       "inline-message.error": [
         "inline-message"
+      ],
+      "json-viewer.key": [
+        "json-viewer"
+      ],
+      "json-viewer.string": [
+        "json-viewer"
+      ],
+      "json-viewer.number": [
+        "json-viewer"
+      ],
+      "json-viewer.literal": [
+        "json-viewer"
+      ],
+      "json-viewer.punctuation": [
+        "json-viewer"
+      ],
+      "json-viewer.guide": [
+        "json-viewer"
+      ],
+      "kanban-board.column-bg": [
+        "kanban-board"
+      ],
+      "kanban-board.column-border": [
+        "kanban-board"
+      ],
+      "kanban-board.header-fg": [
+        "kanban-board"
+      ],
+      "kanban-board.count": [
+        "kanban-board"
+      ],
+      "kanban-board.over-limit": [
+        "kanban-board"
+      ],
+      "kanban-board.empty": [
+        "kanban-board"
       ],
       "kbd.bg": [
         "kbd"
@@ -6018,6 +6295,21 @@
       "theme-icon.radius": [
         "theme-icon"
       ],
+      "time-range-picker.trigger-fg": [
+        "time-range-picker"
+      ],
+      "time-range-picker.label": [
+        "time-range-picker"
+      ],
+      "time-range-picker.option-fg": [
+        "time-range-picker"
+      ],
+      "time-range-picker.option-bg-active": [
+        "time-range-picker"
+      ],
+      "time-range-picker.divider": [
+        "time-range-picker"
+      ],
       "timeline.line": [
         "timeline"
       ],
@@ -6101,6 +6393,27 @@
       ],
       "tooltip.shadow": [
         "tooltip"
+      ],
+      "trace-tree.fg": [
+        "trace-tree"
+      ],
+      "trace-tree.row-bg-selected": [
+        "trace-tree"
+      ],
+      "trace-tree.track": [
+        "trace-tree"
+      ],
+      "trace-tree.bar": [
+        "trace-tree"
+      ],
+      "trace-tree.bar-error": [
+        "trace-tree"
+      ],
+      "trace-tree.duration": [
+        "trace-tree"
+      ],
+      "trace-tree.guide": [
+        "trace-tree"
       ],
       "tree.fg": [
         "tree"
@@ -6294,6 +6607,12 @@
         "checkbox",
         "switch"
       ],
+      "command-launcher": [
+        "command-palette"
+      ],
+      "global-search": [
+        "command-palette"
+      ],
       "filters": [
         "drawer"
       ],
@@ -6309,6 +6628,15 @@
       ],
       "wizard": [
         "hitl-gate"
+      ],
+      "payload-inspector": [
+        "json-viewer"
+      ],
+      "log-details": [
+        "json-viewer"
+      ],
+      "work-tracking": [
+        "kanban-board"
       ],
       "row-actions": [
         "menu"
@@ -6373,11 +6701,23 @@
       "note-editor": [
         "textarea"
       ],
+      "dashboard-toolbar": [
+        "time-range-picker"
+      ],
+      "explorer-toolbar": [
+        "time-range-picker"
+      ],
       "optimistic-correctable": [
         "toast"
       ],
       "reversibility": [
         "toast"
+      ],
+      "agent-run-inspector": [
+        "trace-tree"
+      ],
+      "distributed-tracing": [
+        "trace-tree"
       ]
     },
     "source_to_components": {
@@ -6548,6 +6888,12 @@
       ],
       "apps/storybook/stories/ColorInput.stories.tsx": [
         "color-input"
+      ],
+      "packages/ui/src/components/CommandPalette.tsx": [
+        "command-palette"
+      ],
+      "apps/storybook/stories/CommandPalette.stories.tsx": [
+        "command-palette"
       ],
       "packages/ui/src/components/CommentThread.tsx": [
         "comment-thread"
@@ -6722,6 +7068,18 @@
       ],
       "apps/storybook/stories/InlineMessage.stories.tsx": [
         "inline-message"
+      ],
+      "packages/ui/src/components/JsonViewer.tsx": [
+        "json-viewer"
+      ],
+      "apps/storybook/stories/JsonViewer.stories.tsx": [
+        "json-viewer"
+      ],
+      "packages/ui/src/components/KanbanBoard.tsx": [
+        "kanban-board"
+      ],
+      "apps/storybook/stories/KanbanBoard.stories.tsx": [
+        "kanban-board"
       ],
       "packages/ui/src/components/Kbd.tsx": [
         "kbd"
@@ -7065,6 +7423,12 @@
       "apps/storybook/stories/ThemeIcon.stories.tsx": [
         "theme-icon"
       ],
+      "packages/ui/src/components/TimeRangePicker.tsx": [
+        "time-range-picker"
+      ],
+      "apps/storybook/stories/TimeRangePicker.stories.tsx": [
+        "time-range-picker"
+      ],
       "packages/ui/src/components/Timeline.tsx": [
         "timeline"
       ],
@@ -7088,6 +7452,12 @@
       ],
       "apps/storybook/stories/Tooltip.stories.tsx": [
         "tooltip"
+      ],
+      "packages/ui/src/components/TraceTree.tsx": [
+        "trace-tree"
+      ],
+      "apps/storybook/stories/TraceTree.stories.tsx": [
+        "trace-tree"
       ],
       "packages/ui/src/components/Tree.tsx": [
         "tree"

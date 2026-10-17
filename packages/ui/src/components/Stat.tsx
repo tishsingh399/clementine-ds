@@ -15,11 +15,11 @@ export interface StatProps {
  */
 export const Stat = forwardRef<HTMLDivElement, StatProps>(({ label, value, delta, trend }, ref) => (
   <Stack ref={ref} gap={2}>
-    <Text size="xs" c="dimmed" style={{ textTransform: 'uppercase', letterSpacing: 0.4 }}>{label}</Text>
+    <Text size="xs" style={{ textTransform: 'uppercase', letterSpacing: 0.4, color: 'var(--cds-stat-label)' }}>{label}</Text>
     <Group gap={8} align="baseline">
-      <Text fw={700} style={{ fontSize: 'var(--mantine-font-size-2xl)', lineHeight: 1.1, color: 'var(--cds-text-primary)' }}>{value}</Text>
+      <Text fw={700} style={{ fontSize: 'var(--mantine-font-size-2xl)', lineHeight: 1.1, color: 'var(--cds-stat-value)' }}>{value}</Text>
       {delta && (
-        <Text size="sm" style={{ color: trend === 'down' ? 'var(--cds-feedback-error)' : 'var(--cds-feedback-success)' }}>
+        <Text size="sm" style={{ color: trend === 'down' ? 'var(--cds-stat-delta-down)' : 'var(--cds-stat-delta-up)' }}>
           {trend === 'down' ? '▾' : '▴'} {delta}
         </Text>
       )}

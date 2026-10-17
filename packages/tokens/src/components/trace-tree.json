@@ -1,0 +1,32 @@
+{
+  "trace-tree": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "row-bg-selected": {
+      "$value": "{action.selected-subtle}",
+      "$type": "color"
+    },
+    "track": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "bar": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "bar-error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "duration": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "guide": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  }
+}

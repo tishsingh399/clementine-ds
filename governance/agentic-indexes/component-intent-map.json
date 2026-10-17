@@ -1542,6 +1542,77 @@
       },
       "spec_path": "specs/color-input/index.md"
     },
+    "command-palette": {
+      "status": "AI-Ready",
+      "category": "Component",
+      "intent": "The ⌘K launcher found in issue trackers, dashboards, wikis and agent consoles: one search box over a grouped list of actions and destinations.",
+      "use_when": "Write labels as verb + object (\"Assign to me\"); add `keywords` for synonyms; group by intent (Actions, Navigation, Settings).",
+      "dont_use_when": "Put destructive commands in without a confirm step in `onSelect`; show a shortcut the app doesn't handle.",
+      "semantic_parts": [
+        "root",
+        "input",
+        "list",
+        "group-label",
+        "item",
+        "shortcut",
+        "empty"
+      ],
+      "required_aria": [
+        "role=combobox",
+        "aria-controls",
+        "aria-activedescendant",
+        "role=listbox",
+        "role=option",
+        "aria-selected"
+      ],
+      "interaction_states": [
+        "default",
+        "closed",
+        "open",
+        "empty",
+        "active-item"
+      ],
+      "token_contract": [
+        "command-palette.bg",
+        "command-palette.border",
+        "command-palette.item-fg",
+        "command-palette.item-bg-active",
+        "command-palette.group-label",
+        "command-palette.shortcut",
+        "command-palette.empty"
+      ],
+      "patterns_used_in": [
+        "command-launcher",
+        "global-search"
+      ],
+      "pages_used_in": [
+        "issue-board",
+        "dashboard",
+        "doc-page",
+        "trace-explorer"
+      ],
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/CommandPalette.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "CommandPalette",
+            "CommandPaletteProps",
+            "CommandItem",
+            "filterCommands"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/CommandPalette.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/command-palette.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "spec_path": "specs/command-palette/index.md"
+    },
     "comment-thread": {
       "status": "AI-Ready",
       "category": "Enterprise",
@@ -2982,6 +3053,129 @@
         }
       },
       "spec_path": "specs/inline-message/index.md"
+    },
+    "json-viewer": {
+      "status": "AI-Ready",
+      "category": "Component",
+      "intent": "Read-only, collapsible JSON: tool-call arguments and results, span input/output, structured log fields.",
+      "use_when": "Label it (`aria-label=\"Tool input\"`); pair Input and Output viewers under clear headings.",
+      "dont_use_when": "Use it for editable JSON; render megabyte payloads without truncating upstream.",
+      "semantic_parts": [
+        "root",
+        "node",
+        "key",
+        "string",
+        "number",
+        "literal",
+        "punctuation",
+        "guide"
+      ],
+      "required_aria": [
+        "role=group",
+        "aria-label"
+      ],
+      "interaction_states": [
+        "default",
+        "expanded",
+        "collapsed"
+      ],
+      "token_contract": [
+        "json-viewer.key",
+        "json-viewer.string",
+        "json-viewer.number",
+        "json-viewer.literal",
+        "json-viewer.punctuation",
+        "json-viewer.guide"
+      ],
+      "patterns_used_in": [
+        "payload-inspector",
+        "log-details"
+      ],
+      "pages_used_in": [
+        "trace-explorer",
+        "agent-chat",
+        "dashboard"
+      ],
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/JsonViewer.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "JsonViewer",
+            "JsonViewerProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/JsonViewer.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/json-viewer.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "spec_path": "specs/json-viewer/index.md"
+    },
+    "kanban-board": {
+      "status": "AI-Ready",
+      "category": "Component",
+      "intent": "Columns of cards for work moving through stages: sprint boards, triage queues, review pipelines.",
+      "use_when": "Keep card content to ID, title, 1–2 badges and an avatar; put full detail in a `Drawer`.",
+      "dont_use_when": "Use a board for more than ~7 columns (use a `Table` grouped by status); show a WIP limit in colour alone.",
+      "semantic_parts": [
+        "root",
+        "column",
+        "header",
+        "count",
+        "card",
+        "actions",
+        "empty"
+      ],
+      "required_aria": [
+        "role=group",
+        "aria-label",
+        "aria-labelledby"
+      ],
+      "interaction_states": [
+        "default",
+        "empty",
+        "over-limit"
+      ],
+      "token_contract": [
+        "kanban-board.column-bg",
+        "kanban-board.column-border",
+        "kanban-board.header-fg",
+        "kanban-board.count",
+        "kanban-board.over-limit",
+        "kanban-board.empty"
+      ],
+      "patterns_used_in": [
+        "work-tracking"
+      ],
+      "pages_used_in": [
+        "issue-board"
+      ],
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/KanbanBoard.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "KanbanBoard",
+            "KanbanColumn",
+            "KanbanBoardProps",
+            "KanbanColumnProps"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/KanbanBoard.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/kanban-board.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "spec_path": "specs/kanban-board/index.md"
     },
     "kbd": {
       "status": "AI-Ready",
@@ -5990,6 +6184,69 @@
       },
       "spec_path": "specs/theme-icon/index.md"
     },
+    "time-range-picker": {
+      "status": "AI-Ready",
+      "category": "Component",
+      "intent": "The \"Last 6 hours ▾\" control at the top right of dashboards, log explorers and trace explorers. It sets the time window every panel on the page shares.",
+      "use_when": "Put one picker per page, top right, and drive every panel from it; keep 5–8 quick ranges.",
+      "dont_use_when": "Give each panel its own picker; offer ranges your backend can't serve.",
+      "semantic_parts": [
+        "trigger",
+        "absolute",
+        "quick",
+        "option",
+        "divider"
+      ],
+      "required_aria": [
+        "aria-label",
+        "aria-pressed",
+        "role=group"
+      ],
+      "interaction_states": [
+        "default",
+        "open",
+        "selected-range",
+        "absolute",
+        "invalid"
+      ],
+      "token_contract": [
+        "time-range-picker.trigger-fg",
+        "time-range-picker.label",
+        "time-range-picker.option-fg",
+        "time-range-picker.option-bg-active",
+        "time-range-picker.divider"
+      ],
+      "patterns_used_in": [
+        "dashboard-toolbar",
+        "explorer-toolbar"
+      ],
+      "pages_used_in": [
+        "dashboard",
+        "trace-explorer"
+      ],
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/TimeRangePicker.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "TimeRangePicker",
+            "TimeRangePickerProps",
+            "TimeRange",
+            "QuickRange",
+            "DEFAULT_QUICK_RANGES"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/TimeRangePicker.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/time-range-picker.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "spec_path": "specs/time-range-picker/index.md"
+    },
     "timeline": {
       "status": "AI-Ready",
       "category": "Component",
@@ -6214,6 +6471,75 @@
         }
       },
       "spec_path": "specs/tooltip/index.md"
+    },
+    "trace-tree": {
+      "status": "AI-Ready",
+      "category": "Component",
+      "intent": "Nested spans of one trace (an agent run, an LLM pipeline, a distributed request), each with a waterfall bar on a shared time axis. Selecting a span drives a detail pane.",
+      "use_when": "Keep `type` to a small fixed vocabulary; show cost and token counts in the detail pane, not the row.",
+      "dont_use_when": "Use it for flat lists of runs (use `Table`); encode status only in bar colour.",
+      "semantic_parts": [
+        "root",
+        "row",
+        "type",
+        "duration",
+        "track",
+        "bar",
+        "guide"
+      ],
+      "required_aria": [
+        "role=tree",
+        "role=treeitem",
+        "aria-level",
+        "aria-expanded",
+        "aria-selected"
+      ],
+      "interaction_states": [
+        "default",
+        "expanded",
+        "collapsed",
+        "selected",
+        "error"
+      ],
+      "token_contract": [
+        "trace-tree.fg",
+        "trace-tree.row-bg-selected",
+        "trace-tree.track",
+        "trace-tree.bar",
+        "trace-tree.bar-error",
+        "trace-tree.duration",
+        "trace-tree.guide"
+      ],
+      "patterns_used_in": [
+        "agent-run-inspector",
+        "distributed-tracing"
+      ],
+      "pages_used_in": [
+        "trace-explorer",
+        "agent-chat"
+      ],
+      "sources": {
+        "react": {
+          "path": "packages/ui/src/components/TraceTree.tsx",
+          "underlying_library": "custom (Mantine primitives + tokens)",
+          "exports": [
+            "TraceTree",
+            "TraceTreeProps",
+            "TraceSpan",
+            "visibleSpanRows",
+            "formatDuration"
+          ]
+        },
+        "storybook": {
+          "path": "apps/storybook/stories/TraceTree.stories.tsx"
+        },
+        "tokens": {
+          "component": "packages/tokens/src/components/trace-tree.json",
+          "semantic_light": "packages/tokens/src/semantic-light.json",
+          "semantic_dark": "packages/tokens/src/semantic-dark.json"
+        }
+      },
+      "spec_path": "specs/trace-tree/index.md"
     },
     "tree": {
       "status": "AI-Ready",
