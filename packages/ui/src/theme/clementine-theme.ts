@@ -87,10 +87,13 @@ function flattenComponentTokens(
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
   variables: {},
   light: {
+    // Mantine's error colour is a red tuple index, which can't follow our per-mode text/error step.
+    '--mantine-color-error': resolveValue('{text.error}', lightTokens as AnyTree),
     ...flattenSemanticTokens(lightTokens as AnyTree, lightTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, lightTokens as AnyTree),
   },
   dark: {
+    '--mantine-color-error': resolveValue('{text.error}', darkTokens as AnyTree),
     ...flattenSemanticTokens(darkTokens as AnyTree, darkTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, darkTokens as AnyTree),
   },
@@ -99,7 +102,7 @@ export const cssVariablesResolver: CSSVariablesResolver = () => ({
 // Palette steps (1-12) for each Mantine shade index 0-9.
 const SOLID = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // index 6 = step 9, the solid fill
 const GRAY = [2, 3, 4, 5, 6, 10, 11, 12, 12, 12]; // 0 canvas · 4 border.default · 5 placeholder · 6 dimmed
-const DARK = [12, 11, 11, 10, 8, 9, 3, 1, 1, 1];
+const DARK = [12, 11, 11, 11, 7, 6, 3, 1, 1, 1]; // 3 placeholder = text.tertiary · 4 border · 5 control/hover surface (Chip, hover) · 6 Paper
 const pal = p as unknown as Record<string, string>;
 const steps = (hue: string, idx: number[], prefix = 'palette') =>
   idx.map((n) => {
@@ -129,7 +132,7 @@ export const clementineTheme = createTheme({
     // Mantine drives ALL dark-scheme surfaces, text and borders from
     // `colors.dark`; without it, it falls back to its generic grey (#242424).
     // Index map (Mantine v7): 0-1 text · 2 dimmed · 3 placeholder · 4 border ·
-    // 5 input-hover/control line · 6 default surface (Paper) · 7 body · 8-9
+    // 5 control/hover surface · 6 default surface (Paper) · 7 body · 8-9
     // deepest. Each index points at the step the matching semantic token uses.
     dark: steps('Neutral', DARK, 'paletteDark'),
   },

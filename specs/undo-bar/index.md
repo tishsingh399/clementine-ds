@@ -53,8 +53,8 @@ A transient bar confirming an agent action and offering to reverse it — revers
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `undo-bar.bg` | `{text.primary}` | `#2a2926` |
-| `undo-bar.fg` | `{text.on-action}` | `#ffffff` |
+| `undo-bar.bg` | `{surface.inverse}` | `#2a2926` |
+| `undo-bar.fg` | `{text.on-inverse-strong}` | `#ffffff` |
 
 **Do:** Name what happened + offer Undo; Auto-dismiss after a grace period; Make Undo keyboard-reachable.
 **Don't:** Offer Undo for irreversible actions; Dismiss before the user can react.
