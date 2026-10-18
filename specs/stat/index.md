@@ -53,10 +53,10 @@ A KPI/metric tile: a label, a large value, and an optional trend delta.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `stat.value` | `{text.primary}` | `#1a1a18` |
-| `stat.label` | `{text.tertiary}` | `#737370` |
-| `stat.delta-up` | `{feedback.success}` | `#16a34a` |
-| `stat.delta-down` | `{feedback.error}` | `#dc2626` |
+| `stat.value` | `{text.primary}` | `#2a2926` |
+| `stat.label` | `{text.tertiary}` | `#6e6b65` |
+| `stat.delta-up` | `{feedback.success}` | `#198044` |
+| `stat.delta-down` | `{feedback.error}` | `#c1332f` |
 
 **Do:** Pair the trend arrow with text + color; Keep labels short; Right-size the value type.
 **Don't:** Show a delta with color/arrow but no number; Cram units ambiguously.

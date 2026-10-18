@@ -22,11 +22,11 @@ Five colors, semantic-bound, closed:
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `chart.series-1` | `action.primary` | `#2563eb` |
-| `chart.series-2` | `feedback.success` | `#16a34a` |
-| `chart.series-3` | `feedback.warning` | `#ea580c` |
-| `chart.series-4` | `feedback.error` | `#dc2626` |
-| `chart.series-5` | `risk.medium` | `#ea580c` |
+| `chart.series-1` | `action.primary` | `#305eb7` |
+| `chart.series-2` | `feedback.success` | `#198044` |
+| `chart.series-3` | `feedback.warning` | `#855905` |
+| `chart.series-4` | `feedback.error` | `#c1332f` |
+| `chart.series-5` | `risk.medium` | `#855905` |
 
 More than 5 series means the chart needs rethinking, not a 6th color.
 

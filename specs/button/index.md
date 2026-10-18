@@ -107,15 +107,15 @@ In loading state, `icon-leading` is replaced by `spinner`; label and `aria-busy=
 
 | Semantic part | State | Token | Resolves (light) |
 |---|---|---|---|
-| root | default bg (primary) | `action.primary` | `{color.blue.6}` → `#2563eb` |
-| root | hover bg (primary) | `action.primary-hover` | `{color.blue.7}` → `#1d4ed8` |
-| root | active bg (primary) | `action.primary-active` | `{color.blue.8}` → `#1e40af` |
-| root | default bg (destructive) | `action.destructive` | `{color.red.6}` → `#dc2626` |
-| root | hover bg (destructive) | `action.destructive-hover` | `{color.red.7}` → `#b91c1c` |
+| root | default bg (primary) | `action.primary` | `{color.blue.6}` → `#305eb7` |
+| root | hover bg (primary) | `action.primary-hover` | `{color.blue.7}` → `#224fa7` |
+| root | active bg (primary) | `action.primary-active` | `{color.blue.8}` → `#16284a` |
+| root | default bg (destructive) | `action.destructive` | `{color.red.6}` → `#c1332f` |
+| root | hover bg (destructive) | `action.destructive-hover` | `{color.red.7}` → `#b01f1f` |
 | label | text on filled | `text.on-action` | `{color.white}` → `#ffffff` |
-| label | text on subtle | `text.primary` | `{color.gray.9}` → `#1a1a18` |
-| root | border (outline) | `border.strong` | `{color.gray.5}` → `#737370` |
-| root | focus ring | `focus.ring` | `#f5631a` |
+| label | text on subtle | `text.primary` | `{color.gray.9}` → `#2a2926` |
+| root | border (outline) | `border.strong` | `{color.gray.5}` → `#83807a` |
+| root | focus ring | `focus.ring` | `#e86800` |
 
 ## 3. Interaction States
 

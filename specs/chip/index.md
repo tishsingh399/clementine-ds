@@ -56,12 +56,12 @@ A compact, toggleable selection — filter chips and multi-choice pickers. Disti
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `chip.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `chip.bg-checked` | `{action.primary}` | `#2563eb` |
-| `chip.fg` | `{text.primary}` | `#1a1a18` |
+| `chip.bg` | `{surface.subtle}` | `#efeeec` |
+| `chip.bg-checked` | `{action.primary}` | `#305eb7` |
+| `chip.fg` | `{text.primary}` | `#2a2926` |
 | `chip.fg-checked` | `{text.on-action}` | `#ffffff` |
-| `chip.border` | `{border.default}` | `#e5e5e0` |
-| `chip.border-checked` | `{action.primary}` | `#2563eb` |
+| `chip.border` | `{border.default}` | `#d5d3d0` |
+| `chip.border-checked` | `{action.primary}` | `#305eb7` |
 | `chip.radius` | `{radius.xl}` | `99px` |
 
 **Do:** Use ChipGroup for single/multi selection; Keep labels to 1-2 words; Show selected state with fill AND the checked affordance.

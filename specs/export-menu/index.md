@@ -50,8 +50,8 @@ A dropdown of export formats (CSV, JSON, PDF) for a data view.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `export-menu.trigger-fg` | `{text.primary}` | `#1a1a18` |
-| `export-menu.item-fg` | `{text.primary}` | `#1a1a18` |
+| `export-menu.trigger-fg` | `{text.primary}` | `#2a2926` |
+| `export-menu.item-fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** List supported formats clearly; Disable formats that are not applicable.
 **Don't:** Offer formats that will fail; Hide the format choice behind a guess.

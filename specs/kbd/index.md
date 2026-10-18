@@ -51,9 +51,9 @@ Renders a keyboard key or shortcut (⌘, Ctrl, Enter) as a key cap.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `kbd.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `kbd.fg` | `{text.primary}` | `#1a1a18` |
-| `kbd.border` | `{border.strong}` | `#737370` |
+| `kbd.bg` | `{surface.subtle}` | `#efeeec` |
+| `kbd.fg` | `{text.primary}` | `#2a2926` |
+| `kbd.border` | `{border.strong}` | `#83807a` |
 | `kbd.radius` | `{radius.sm}` | `4px` |
 
 **Do:** One key per Kbd; join combos with a "+"; Match the platform (⌘ on mac, Ctrl on win).

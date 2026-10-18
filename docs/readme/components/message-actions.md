@@ -45,8 +45,8 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 2 component-
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `message-actions.fg` | `{text.secondary}` | `#6b6b66` |
-| `message-actions.fg-hover` | `{text.primary}` | `#1a1a18` |
+| `message-actions.fg` | `{text.secondary}` | `#65635e` |
+| `message-actions.fg-hover` | `{text.primary}` | `#2a2926` |
 
 ## Library notes
 

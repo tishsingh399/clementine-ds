@@ -57,9 +57,9 @@ A profile card for an agent — identity, what it does, capabilities, and owner.
 | Token | Resolves through | Light |
 |---|---|---|
 | `agent-card.bg` | `{surface.elevated}` | `#ffffff` |
-| `agent-card.border` | `{border.default}` | `#e5e5e0` |
-| `agent-card.name` | `{text.primary}` | `#1a1a18` |
-| `agent-card.meta` | `{text.secondary}` | `#6b6b66` |
+| `agent-card.border` | `{border.default}` | `#d5d3d0` |
+| `agent-card.name` | `{text.primary}` | `#2a2926` |
+| `agent-card.meta` | `{text.secondary}` | `#65635e` |
 
 **Do:** State capabilities + scope + owner; Keep the description concrete.
 **Don't:** Overstate capabilities; Hide limits/scope.

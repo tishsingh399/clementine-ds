@@ -53,10 +53,10 @@ Inline field validation feedback for error, warning, or success.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `validation-message.fg` | `{text.primary}` | `#1a1a18` |
-| `validation-message.error` | `{feedback.error}` | `#dc2626` |
-| `validation-message.warning` | `{feedback.warning}` | `#ea580c` |
-| `validation-message.success` | `{feedback.success}` | `#16a34a` |
+| `validation-message.fg` | `{text.primary}` | `#2a2926` |
+| `validation-message.error` | `{feedback.error}` | `#c1332f` |
+| `validation-message.warning` | `{feedback.warning}` | `#855905` |
+| `validation-message.success` | `{feedback.success}` | `#198044` |
 
 **Do:** Tie error messages to the field via aria-describedby; Lead with the glyph and plain wording.
 **Don’t:** Signal validity by color alone; Write vague messages like "invalid".

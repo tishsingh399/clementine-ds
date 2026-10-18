@@ -56,11 +56,11 @@ An agent's task decomposition with live per-step status. Distinct from Stepper (
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `plan-steps.pending` | `{text.tertiary}` | `#737370` |
-| `plan-steps.active` | `{action.primary}` | `#2563eb` |
-| `plan-steps.done` | `{feedback.success}` | `#16a34a` |
-| `plan-steps.error` | `{feedback.error}` | `#dc2626` |
-| `plan-steps.fg` | `{text.primary}` | `#1a1a18` |
+| `plan-steps.pending` | `{text.tertiary}` | `#6e6b65` |
+| `plan-steps.active` | `{action.primary}` | `#305eb7` |
+| `plan-steps.done` | `{feedback.success}` | `#198044` |
+| `plan-steps.error` | `{feedback.error}` | `#c1332f` |
+| `plan-steps.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Show status by glyph + text; Update live as steps complete; Surface errors on the failing step.
 **Don't:** Use color alone for status; Hide which step is active.

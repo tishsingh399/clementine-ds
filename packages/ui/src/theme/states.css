@@ -199,3 +199,15 @@
 .mantine-Carousel-indicator[data-active] {
   background-color: var(--cds-carousel-indicator-active);
 }
+
+/* ── Calendar / date pickers ────────────────────────────────────────── */
+/* Mantine dims outside-month days with opacity 0.5 on top of the dimmed
+   colour (2.1:1). Use the tertiary text token at full opacity (AA) instead. */
+:is(.mantine-Calendar-day, .mantine-DatePicker-day, .mantine-DatePickerInput-day, .mantine-DateInput-day)[data-outside] {
+  color: var(--cds-text-tertiary);
+  opacity: 1;
+}
+/* Weekend days default to Mantine red-6, a fill colour (3.4:1 in dark mode). */
+:is(.mantine-Calendar-day, .mantine-DatePicker-day, .mantine-DatePickerInput-day, .mantine-DateInput-day)[data-weekend]:not([data-selected], [data-outside]) {
+  color: var(--cds-text-error);
+}

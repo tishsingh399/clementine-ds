@@ -51,8 +51,8 @@ Term/detail pairs for record metadata and key-value summaries; renders semantic 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `description-list.term` | `{text.secondary}` | `#6b6b66` |
-| `description-list.detail` | `{text.primary}` | `#1a1a18` |
+| `description-list.term` | `{text.secondary}` | `#65635e` |
+| `description-list.detail` | `{text.primary}` | `#2a2926` |
 
 **Do:** Use real dl/dt/dd; Keep terms short + consistent.
 **Don't:** Fake it with a two-column table when it is metadata; Mix unrelated pairs.
