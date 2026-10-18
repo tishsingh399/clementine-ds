@@ -22,7 +22,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const yaml = createRequire(import.meta.url)('js-yaml');
+// js-yaml is an observatory dependency, not a root one (same as build-agentic-indexes.mjs)
+const yaml = createRequire(join(root, 'apps', 'observatory', 'package.json'))('js-yaml');
 const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
 // CORE_SCHEMA keeps last_verified a string instead of a Date
 const meta = (md) => yaml.load(md.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '', { schema: yaml.CORE_SCHEMA }) ?? {};
