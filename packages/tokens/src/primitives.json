@@ -99,7 +99,12 @@
     "sm": { "$value": "0 1px 3px rgba(0,0,0,0.08)", "$type": "shadow" },
     "md": { "$value": "0 4px 12px rgba(0,0,0,0.12)", "$type": "shadow" },
     "lg": { "$value": "0 8px 24px rgba(0,0,0,0.16)", "$type": "shadow" },
-    "xl": { "$value": "0 16px 48px rgba(0,0,0,0.2)", "$type": "shadow" }
+    "xl": { "$value": "0 16px 48px rgba(0,0,0,0.2)", "$type": "shadow" },
+    "10": { "$value": "#2a29261a", "$type": "color" },
+    "12": { "$value": "#2a29261f", "$type": "color" },
+    "14": { "$value": "#2a292624", "$type": "color" },
+    "18": { "$value": "#2a29262e", "$type": "color" },
+    "none": { "$value": "#2a292600", "$type": "color" }
   },
   "typography": {
     "font-family": {
@@ -413,9 +418,45 @@
   },
   "elevation": {
     "0": { "$value": "none", "$type": "shadow", "$description": "Figma effect style Elevation/0 Flat" },
-    "1": { "$value": "0 1px 3px 0 rgba(42,41,38,0.10)", "$type": "shadow", "$description": "Figma effect style Elevation/1 Raised" },
-    "2": { "$value": "0 4px 12px 0 rgba(42,41,38,0.12)", "$type": "shadow", "$description": "Figma effect style Elevation/2 Overlay" },
-    "3": { "$value": "0 8px 24px 0 rgba(42,41,38,0.14)", "$type": "shadow", "$description": "Figma effect style Elevation/3 Popover" },
-    "4": { "$value": "0 16px 48px 0 rgba(42,41,38,0.18)", "$type": "shadow", "$description": "Figma effect style Elevation/4 Modal" }
+    "1": { "$value": "0 1px 3px 0 {shadow.10}", "$type": "shadow", "$description": "Figma effect style Elevation/1 Raised. Dark mode drops the shadow: use semantic elevation/shadow-sm for the colour." },
+    "2": { "$value": "0 4px 12px 0 {shadow.12}", "$type": "shadow", "$description": "Figma effect style Elevation/2 Overlay. Dark mode drops the shadow: use semantic elevation/shadow-md for the colour." },
+    "3": { "$value": "0 8px 24px 0 {shadow.14}", "$type": "shadow", "$description": "Figma effect style Elevation/3 Popover. Dark mode drops the shadow: use semantic elevation/shadow-lg for the colour." },
+    "4": { "$value": "0 16px 48px 0 {shadow.18}", "$type": "shadow", "$description": "Figma effect style Elevation/4 Modal. Dark mode drops the shadow: use semantic elevation/shadow-xl for the colour." }
+  },
+  "category": {
+    "clementine": { "$value": "#af5a21", "$type": "color" },
+    "clementine-subtle": { "$value": "#feece2", "$type": "color" },
+    "ink": { "$value": "#4972c0", "$type": "color" },
+    "ink-subtle": { "$value": "#e9f1fe", "$type": "color" },
+    "green": { "$value": "#26894c", "$type": "color" },
+    "green-subtle": { "$value": "#e3f6e7", "$type": "color" },
+    "plum": { "$value": "#9459a5", "$type": "color" },
+    "plum-subtle": { "$value": "#f8ebfd", "$type": "color" },
+    "teal": { "$value": "#088586", "$type": "color" },
+    "teal-subtle": { "$value": "#dcf6f6", "$type": "color" },
+    "amber": { "$value": "#996a03", "$type": "color" },
+    "amber-subtle": { "$value": "#fbeedc", "$type": "color" },
+    "rose": { "$value": "#b34f60", "$type": "color" },
+    "rose-subtle": { "$value": "#ffeaec", "$type": "color" },
+    "sky": { "$value": "#027eb1", "$type": "color" },
+    "sky-subtle": { "$value": "#e2f3fe", "$type": "color" }
+  },
+  "category-dark": {
+    "clementine": { "$value": "#ee9a69", "$type": "color" },
+    "clementine-subtle": { "$value": "#362014", "$type": "color" },
+    "ink": { "$value": "#87b1fd", "$type": "color" },
+    "ink-subtle": { "$value": "#1c263a", "$type": "color" },
+    "green": { "$value": "#72c78b", "$type": "color" },
+    "green-subtle": { "$value": "#172c1d", "$type": "color" },
+    "plum": { "$value": "#d198e3", "$type": "color" },
+    "plum-subtle": { "$value": "#2f2033", "$type": "color" },
+    "teal": { "$value": "#31c8ca", "$type": "color" },
+    "teal-subtle": { "$value": "#082c2d", "$type": "color" },
+    "amber": { "$value": "#dba751", "$type": "color" },
+    "amber-subtle": { "$value": "#31240e", "$type": "color" },
+    "rose": { "$value": "#f3909d", "$type": "color" },
+    "rose-subtle": { "$value": "#371e21", "$type": "color" },
+    "sky": { "$value": "#5cbcf3", "$type": "color" },
+    "sky-subtle": { "$value": "#112937", "$type": "color" }
   }
 }

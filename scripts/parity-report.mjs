@@ -42,12 +42,12 @@ const semantic = JSON.parse(readFileSync(join(root, 'packages/tokens/src/semanti
 const components = JSON.parse(readFileSync(join(root, 'packages/tokens/src/components.generated.json'), 'utf8'));
 
 const lookup = (tree, path) => path.split('.').reduce((acc, k) => (acc == null ? acc : acc[k]), tree);
-function resolves(value) {
+function resolves(value, sem = semantic) {
   const m = /^\{(.+)\}$/.exec(value);
   if (!m) return true; // literal — a concrete value
-  const node = lookup(semantic, m[1]) ?? lookup(primitives, m[1]);
+  const node = lookup(sem, m[1]) ?? lookup(primitives, m[1]);
   if (!node || typeof node.$value !== 'string') return false;
-  return resolves(node.$value);
+  return resolves(node.$value, {}); // later hops: primitives only
 }
 
 function frontmatter(md) {

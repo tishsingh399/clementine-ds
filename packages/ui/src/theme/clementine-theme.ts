@@ -37,7 +37,9 @@ function resolveValue(value: string, semantic: AnyTree): string {
   if (!match) return value; // literal (hex, rgba, ms, dimension)
   const node = lookup(semantic, match[1]) ?? lookup(primitivesTree, match[1]);
   if (!node || typeof node.$value !== 'string') return value; // unresolved — keep the ref
-  return resolveValue(node.$value, semantic);
+  // After one hop the value has left the semantic layer; resolve further hops
+  // against primitives only (Figma reuses names like category/clementine in both).
+  return resolveValue(node.$value, {});
 }
 
 /** Flatten the semantic layer into `--<prefix>-<path>` vars (one per prefix), e.g. --cds-text-contrast-default. */
