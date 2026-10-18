@@ -111,6 +111,13 @@ const steps = (hue: string, idx: number[], prefix = 'palette') =>
     return v;
   }) as unknown as MantineColorsTuple;
 
+const PAGINATION_LABELS: Record<string, string> = {
+  first: 'First page',
+  previous: 'Previous page',
+  next: 'Next page',
+  last: 'Last page',
+};
+
 export const clementineTheme = createTheme({
   primaryColor: 'blue',
   // Index 6 is the solid step (palette step 9) in both schemes, so filled
@@ -282,7 +289,7 @@ export const clementineTheme = createTheme({
       },
     },
     ColorInput: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', eyeDropperButtonProps: { 'aria-label': 'Pick a colour from the screen' } },
       vars: () => ({
         wrapper: {
           '--input-bg': 'var(--cds-color-input-bg)',
@@ -394,7 +401,7 @@ export const clementineTheme = createTheme({
       },
     },
     Alert: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', closeButtonLabel: 'Dismiss' },
       // Per-intent, mirroring the Alert wrapper's intent→color map
       // (info=gray, success=green, warning=orange, error=red). bg + border come
       // from the matching alert.bg/border.<intent> tokens; body/title text from
@@ -414,7 +421,7 @@ export const clementineTheme = createTheme({
       },
     },
     Notification: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', closeButtonProps: { 'aria-label': 'Dismiss notification' } },
       styles: {
         root: {
           backgroundColor: 'var(--cds-notification-bg)',
@@ -512,7 +519,7 @@ export const clementineTheme = createTheme({
       }),
     },
     Pagination: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', getControlProps: (control: string) => ({ 'aria-label': PAGINATION_LABELS[control] }) },
       vars: () => ({
         root: {
           '--pagination-active-bg': 'var(--cds-pagination-item-bg-active)',
@@ -630,7 +637,11 @@ export const clementineTheme = createTheme({
       },
     },
     Carousel: {
-      defaultProps: { withIndicators: true },
+      defaultProps: {
+        withIndicators: true,
+        previousControlProps: { 'aria-label': 'Previous slide' },
+        nextControlProps: { 'aria-label': 'Next slide' },
+      },
       styles: {
         control: {
           backgroundColor: 'var(--cds-carousel-control-bg)',
@@ -676,6 +687,13 @@ export const clementineTheme = createTheme({
     Divider: {
       vars: () => ({ root: { '--divider-color': 'var(--cds-divider-line)' } }),
     },
+    // Calendar header previous/next are icon-only buttons with no default name.
+    ...Object.fromEntries(
+      ['Calendar', 'DatePicker', 'DatePickerInput', 'DateInput', 'MonthPicker', 'YearPicker'].map((c) => [
+        c,
+        { defaultProps: { previousLabel: 'Previous', nextLabel: 'Next' } },
+      ]),
+    ),
     Fieldset: {
       styles: {
         root: {
