@@ -55,10 +55,10 @@ Pick one of a small set of mutually-exclusive options — a compact, styled radi
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `segmented-control.bg` | `{surface.subtle}` | `#f3f3f0` |
+| `segmented-control.bg` | `{surface.subtle}` | `#f6f6f4` |
 | `segmented-control.bg-active` | `{surface.elevated}` | `#ffffff` |
-| `segmented-control.fg` | `{text.secondary}` | `#6b6b66` |
-| `segmented-control.fg-active` | `{text.primary}` | `#1a1a18` |
+| `segmented-control.fg` | `{text.secondary}` | `#65635e` |
+| `segmented-control.fg-active` | `{text.primary}` | `#2a2926` |
 | `segmented-control.radius` | `{radius.md}` | `6px` |
 
 **Do:** Keep to 2-5 short options; Default to the most common choice; Use full-width inside narrow containers.

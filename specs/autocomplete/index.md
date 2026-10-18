@@ -68,12 +68,12 @@ A text input that suggests matching options as you type but still allows free te
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
 | input fill | default | `autocomplete.bg` → `{surface.elevated}` | `#ffffff` |
-| input border | default | `autocomplete.border` → `{border.default}` | `#e5e5e0` |
-| input border | focus | `autocomplete.border-focus` → `{focus.ring}` | `#f5631a` |
-| value text | default | `autocomplete.fg` → `{text.primary}` | `#1a1a18` |
-| placeholder | default | `autocomplete.placeholder` → `{text.tertiary}` | `#737370` |
+| input border | default | `autocomplete.border` → `{border.default}` | `#d5d3d0` |
+| input border | focus | `autocomplete.border-focus` → `{focus.ring}` | `#e86800` |
+| value text | default | `autocomplete.fg` → `{text.primary}` | `#2a2926` |
+| placeholder | default | `autocomplete.placeholder` → `{text.tertiary}` | `#6e6b65` |
 | listbox fill | open | `autocomplete.popover-bg` → `{surface.elevated}` | `#ffffff` |
-| option | hover/active | `autocomplete.option-bg-hover` → `{surface.subtle}` | `#f3f3f0` |
+| option | hover/active | `autocomplete.option-bg-hover` → `{surface.subtle}` | `#f6f6f4` |
 | corners | — | `autocomplete.radius` → `{radius.md}` | `6px` |
 
 ## 3. States

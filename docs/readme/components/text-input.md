@@ -28,13 +28,13 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 | Token | Resolves through | Light |
 |---|---|---|
 | `text-input.bg.default` | `surface.elevated` | `#ffffff` |
-| `text-input.bg.disabled` | `surface.subtle` | `#f3f3f0` |
-| `text-input.fg.value` | `text.primary` | `#1a1a18` |
-| `text-input.fg.placeholder` | `text.secondary` | `#6b6b66` |
-| `text-input.border.default` | `border.strong` | `#737370` |
-| `text-input.border.focus` | `border.focus` | `#2563eb` |
-| `text-input.border.error` | `feedback.error` | `#dc2626` |
-| `text-input.ring` | `focus.ring` | `#f5631a` |
+| `text-input.bg.disabled` | `surface.subtle` | `#f6f6f4` |
+| `text-input.fg.value` | `text.primary` | `#2a2926` |
+| `text-input.fg.placeholder` | `text.secondary` | `#65635e` |
+| `text-input.border.default` | `border.strong` | `#93908b` |
+| `text-input.border.focus` | `border.focus` | `#305eb7` |
+| `text-input.border.error` | `feedback.error` | `#c1332f` |
+| `text-input.ring` | `focus.ring` | `#e86800` |
 | `text-input.height.sm` | — | `32px` |
 | `text-input.height.md` | — | `40px` |
 | `text-input.height.lg` | — | `48px` |

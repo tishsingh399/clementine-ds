@@ -51,11 +51,11 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 7 component-
 | Token | Resolves through | Light value |
 |---|---|---|
 | `sources.bg` | `{surface.elevated}` | `#ffffff` |
-| `sources.border` | `{border.default}` | `#e5e5e0` |
-| `sources.title` | `{text.tertiary}` | `#737370` |
-| `sources.item-fg` | `{text.link}` | `#2563eb` |
-| `sources.item-meta` | `{text.secondary}` | `#6b6b66` |
-| `sources.index-bg` | `{surface.subtle}` | `#f3f3f0` |
+| `sources.border` | `{border.default}` | `#d5d3d0` |
+| `sources.title` | `{text.tertiary}` | `#6e6b65` |
+| `sources.item-fg` | `{text.link}` | `#3960ab` |
+| `sources.item-meta` | `{text.secondary}` | `#65635e` |
+| `sources.index-bg` | `{surface.subtle}` | `#f6f6f4` |
 | `sources.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

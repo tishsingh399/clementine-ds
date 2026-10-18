@@ -52,9 +52,9 @@ A form field label with optional required or optional markers.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `field-label.fg` | `{text.primary}` | `#1a1a18` |
-| `field-label.required` | `{feedback.error}` | `#dc2626` |
-| `field-label.optional` | `{text.secondary}` | `#6b6b66` |
+| `field-label.fg` | `{text.primary}` | `#2a2926` |
+| `field-label.required` | `{feedback.error}` | `#c1332f` |
+| `field-label.optional` | `{text.secondary}` | `#65635e` |
 
 **Do:** Associate via htmlFor and the control id; Mark required with the asterisk AND screen-reader text.
 **Don’t:** Use color (red asterisk) as the only required cue; Hide labels for sighted users.

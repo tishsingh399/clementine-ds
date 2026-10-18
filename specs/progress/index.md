@@ -62,11 +62,11 @@ A determinate bar showing how far a known task has progressed (upload, import, q
 
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
-| track | — | `progress.track` → `{surface.subtle}` | `#f3f3f0` |
-| bar | default | `progress.bar` → `{action.primary}` | `#2563eb` |
-| bar | success | `progress.bar-success` → `{feedback.success}` | `#16a34a` |
-| bar | warning | `progress.bar-warning` → `{feedback.warning}` | `#ea580c` |
-| bar | error | `progress.bar-error` → `{feedback.error}` | `#dc2626` |
+| track | — | `progress.track` → `{surface.subtle}` | `#f6f6f4` |
+| bar | default | `progress.bar` → `{action.primary}` | `#305eb7` |
+| bar | success | `progress.bar-success` → `{feedback.success}` | `#198044` |
+| bar | warning | `progress.bar-warning` → `{feedback.warning}` | `#855905` |
+| bar | error | `progress.bar-error` → `{feedback.error}` | `#c1332f` |
 | corners | — | `progress.radius` → `{radius.xl}` | `99px` |
 
 ## 3. States

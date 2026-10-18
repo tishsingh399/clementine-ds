@@ -52,7 +52,7 @@ Status: `AI-Ready`. Token contract closed at 4 component-tier tokens.
 | Token | Resolves through | Light value |
 |---|---|---|
 | `hover-card.bg` | `{surface.elevated}` | `#ffffff` |
-| `hover-card.border` | `{border.default}` | `#e5e5e0` |
+| `hover-card.border` | `{border.default}` | `#d5d3d0` |
 | `hover-card.shadow` | `{shadow.lg}` | `0 8px 24px rgba(0,0,0,0.16)` |
 | `hover-card.radius` | `{radius.md}` | `6px` |
 

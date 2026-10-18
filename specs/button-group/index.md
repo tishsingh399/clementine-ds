@@ -49,7 +49,7 @@ Joins a set of related buttons into one visually-connected control.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `button-group.divider` | `{border.strong}` | `#737370` |
+| `button-group.divider` | `{border.strong}` | `#93908b` |
 
 **Do:** Keep members the same size/variant; Limit to a few buttons.
 **Don't:** Mix variants within a group; Cram many buttons.

@@ -53,10 +53,10 @@ A full-width system banner for maintenance / degraded / down states. Severity by
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `maintenance-banner.info-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `maintenance-banner.degraded-bg` | `{feedback.warning-subtle}` | `#fff7ed` |
-| `maintenance-banner.down-bg` | `{feedback.error-subtle}` | `#fef2f2` |
-| `maintenance-banner.fg` | `{text.primary}` | `#1a1a18` |
+| `maintenance-banner.info-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `maintenance-banner.degraded-bg` | `{feedback.warning-subtle}` | `#ffebcf` |
+| `maintenance-banner.down-bg` | `{feedback.error-subtle}` | `#fee8e5` |
+| `maintenance-banner.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Carry severity with icon + text, not color alone; State impact + ETA if known; Keep it dismissible only when safe.
 **Don't:** Use color alone for severity; Leave a stale banner up after recovery.

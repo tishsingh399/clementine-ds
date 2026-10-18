@@ -56,11 +56,11 @@ A panel of system/activity notifications, unread first, each markable.
 | Token | Resolves through | Light |
 |---|---|---|
 | `notification-center.bg` | `{surface.elevated}` | `#ffffff` |
-| `notification-center.unread-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `notification-center.title` | `{text.primary}` | `#1a1a18` |
-| `notification-center.body` | `{text.secondary}` | `#6b6b66` |
-| `notification-center.dot` | `{action.primary}` | `#2563eb` |
-| `notification-center.meta` | `{text.tertiary}` | `#737370` |
+| `notification-center.unread-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `notification-center.title` | `{text.primary}` | `#2a2926` |
+| `notification-center.body` | `{text.secondary}` | `#65635e` |
+| `notification-center.dot` | `{action.primary}` | `#305eb7` |
+| `notification-center.meta` | `{text.tertiary}` | `#6e6b65` |
 
 **Do:** Show unread distinctly (dot + weight); Group/sort by recency; Let users mark read / clear.
 **Don't:** Rely on color alone for unread; Lose notifications silently.

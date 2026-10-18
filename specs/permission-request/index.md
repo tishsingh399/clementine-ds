@@ -55,10 +55,10 @@ A least-privilege access request — "Agent wants to do X (scope Y)" → Allow /
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `permission-request.bg` | `{feedback.warning-subtle}` | `#fff7ed` |
-| `permission-request.border` | `{feedback.warning}` | `#ea580c` |
-| `permission-request.title` | `{text.primary}` | `#1a1a18` |
-| `permission-request.scope-bg` | `{surface.subtle}` | `#f3f3f0` |
+| `permission-request.bg` | `{feedback.warning-subtle}` | `#ffebcf` |
+| `permission-request.border` | `{feedback.warning}` | `#855905` |
+| `permission-request.title` | `{text.primary}` | `#2a2926` |
+| `permission-request.scope-bg` | `{surface.subtle}` | `#f6f6f4` |
 
 **Do:** State the exact action + scope; Default to least privilege; allow scoping down; Log the decision.
 **Don't:** Request broad access by default; Bundle unrelated permissions.

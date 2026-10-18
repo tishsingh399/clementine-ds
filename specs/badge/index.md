@@ -71,14 +71,14 @@ None — Badge is presentational. If it conveys status critical to the surroundi
 
 | Intent | Token | Resolves (light) |
 |---|---|---|
-| neutral | `surface.subtle` | `#f3f3f0` |
-| success | `feedback.success-subtle` | `#f0fdf4` |
-| error | `feedback.error-subtle` | `#fef2f2` |
-| warning | `feedback.warning-subtle` | `#fff7ed` |
-| risk critical | `risk.critical-subtle` | `#fef2f2` |
-| risk high | `risk.high-subtle` | `#fff7ed` |
-| risk medium | `risk.medium-subtle` | `#ffedd5` |
-| risk low | `risk.low-subtle` | `#f0fdf4` |
+| neutral | `surface.subtle` | `#f6f6f4` |
+| success | `feedback.success-subtle` | `#ddf5e2` |
+| error | `feedback.error-subtle` | `#fee8e5` |
+| warning | `feedback.warning-subtle` | `#ffebcf` |
+| risk critical | `risk.critical-subtle` | `#fee8e5` |
+| risk high | `risk.high-subtle` | `#ffe9de` |
+| risk medium | `risk.medium-subtle` | `#ffebcf` |
+| risk low | `risk.low-subtle` | `#ddf5e2` |
 
 ## 3. Open Questions
 

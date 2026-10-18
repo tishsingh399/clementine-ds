@@ -52,9 +52,9 @@ A centered spinner with a label for a loading region.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `loading-state.spinner` | `{action.primary}` | `#2563eb` |
-| `loading-state.label` | `{text.secondary}` | `#6b6b66` |
-| `loading-state.bg` | `{surface.default}` | `#fafaf8` |
+| `loading-state.spinner` | `{action.primary}` | `#305eb7` |
+| `loading-state.label` | `{text.secondary}` | `#65635e` |
+| `loading-state.bg` | `{surface.default}` | `#fbfbfa` |
 
 **Do:** Give the spinner a text label; Keep it centered in the region it replaces.
 **Don’t:** Block the whole screen for small loads; Use color as the only cue.

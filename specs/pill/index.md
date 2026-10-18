@@ -53,9 +53,9 @@ A compact, often-removable token representing a selected value or applied filter
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `pill.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `pill.fg` | `{text.primary}` | `#1a1a18` |
-| `pill.remove` | `{text.secondary}` | `#6b6b66` |
+| `pill.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `pill.fg` | `{text.primary}` | `#2a2926` |
+| `pill.remove` | `{text.secondary}` | `#65635e` |
 | `pill.radius` | `{radius.xl}` | `99px` |
 
 **Do:** Make remove keyboard-reachable + labelled; Truncate long values.

@@ -56,11 +56,11 @@ Communicates how confident the model is in an answer, with filled bars AND a tex
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `confidence-meter.track` | `{surface.subtle}` | `#f3f3f0` |
-| `confidence-meter.high` | `{feedback.success}` | `#16a34a` |
-| `confidence-meter.medium` | `{feedback.warning}` | `#ea580c` |
-| `confidence-meter.low` | `{feedback.error}` | `#dc2626` |
-| `confidence-meter.label` | `{text.secondary}` | `#6b6b66` |
+| `confidence-meter.track` | `{surface.subtle}` | `#f6f6f4` |
+| `confidence-meter.high` | `{feedback.success}` | `#198044` |
+| `confidence-meter.medium` | `{feedback.warning}` | `#855905` |
+| `confidence-meter.low` | `{feedback.error}` | `#c1332f` |
+| `confidence-meter.label` | `{text.secondary}` | `#65635e` |
 
 **Do:** Pair the bars with a text label (never color alone); Map to a real confidence signal, not decoration; Prompt verification on low confidence.
 **Don't:** Show confidence the model cannot actually measure; Use color as the only cue.

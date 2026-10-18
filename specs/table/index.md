@@ -57,13 +57,13 @@ Display structured records in rows and columns; the workhorse of an enterprise c
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `table.header-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `table.header-fg` | `{text.secondary}` | `#6b6b66` |
+| `table.header-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `table.header-fg` | `{text.secondary}` | `#65635e` |
 | `table.row-bg` | `{surface.elevated}` | `#ffffff` |
-| `table.row-bg-striped` | `{surface.default}` | `#fafaf8` |
-| `table.row-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `table.border` | `{border.default}` | `#e5e5e0` |
-| `table.fg` | `{text.primary}` | `#1a1a18` |
+| `table.row-bg-striped` | `{surface.default}` | `#fbfbfa` |
+| `table.row-bg-hover` | `{surface.subtle}` | `#f6f6f4` |
+| `table.border` | `{border.default}` | `#d5d3d0` |
+| `table.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Use th with scope for headers; caption the table; Right-align numerals; keep row height stable; Pair with Pagination + a results count.
 **Don't:** Use tables for page layout; Pack 12 columns into a phone width; Lose the header on scroll for long tables.

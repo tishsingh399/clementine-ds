@@ -58,13 +58,13 @@ Ordered progress through a multi-step flow (wizard, onboarding, guided setup).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `stepper.bg-completed` | `{action.primary}` | `#2563eb` |
-| `stepper.bg-active` | `{action.primary}` | `#2563eb` |
-| `stepper.bg-pending` | `{surface.subtle}` | `#f3f3f0` |
+| `stepper.bg-completed` | `{action.primary}` | `#305eb7` |
+| `stepper.bg-active` | `{action.primary}` | `#305eb7` |
+| `stepper.bg-pending` | `{surface.subtle}` | `#f6f6f4` |
 | `stepper.fg-active` | `{text.on-action}` | `#ffffff` |
-| `stepper.fg-pending` | `{text.tertiary}` | `#737370` |
-| `stepper.separator` | `{border.default}` | `#e5e5e0` |
-| `stepper.border-focus` | `{focus.ring}` | `#f5631a` |
+| `stepper.fg-pending` | `{text.tertiary}` | `#6e6b65` |
+| `stepper.separator` | `{border.default}` | `#d5d3d0` |
+| `stepper.border-focus` | `{focus.ring}` | `#e86800` |
 
 **Do:** Show total + current position; mark active with aria-current="step"; Validate per step; preserve data on Back; Gate the final commit behind a Review step.
 **Don't:** Hide the finish line; Lose entered data when going Back; Signal the active step by color alone.

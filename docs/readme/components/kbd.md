@@ -48,9 +48,9 @@ Status: `AI-Ready`. Token contract closed at 4 component-tier tokens.
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `kbd.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `kbd.fg` | `{text.primary}` | `#1a1a18` |
-| `kbd.border` | `{border.strong}` | `#737370` |
+| `kbd.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `kbd.fg` | `{text.primary}` | `#2a2926` |
+| `kbd.border` | `{border.strong}` | `#93908b` |
 | `kbd.radius` | `{radius.sm}` | `4px` |
 
 ## Library notes

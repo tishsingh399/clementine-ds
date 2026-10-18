@@ -14,13 +14,13 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `message.user.bg` | `{action.primary}` | `#2563eb` |
+| `message.user.bg` | `{action.primary}` | `#305eb7` |
 | `message.user.fg` | `{text.on-action}` | `#ffffff` |
-| `message.assistant.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `message.assistant.fg` | `{text.primary}` | `#1a1a18` |
-| `message.system.bg` | `{surface.default}` | `#fafaf8` |
-| `message.system.fg` | `{text.secondary}` | `#6b6b66` |
-| `message.meta` | `{text.tertiary}` | `#737370` |
+| `message.assistant.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `message.assistant.fg` | `{text.primary}` | `#2a2926` |
+| `message.system.bg` | `{surface.default}` | `#fbfbfa` |
+| `message.system.fg` | `{text.secondary}` | `#65635e` |
+| `message.meta` | `{text.tertiary}` | `#6e6b65` |
 | `message.radius` | `{radius.lg}` | `8px` |
 
 ## Library notes

@@ -66,12 +66,12 @@ Page navigation for long, chunked result sets. Pair with a results count ("Showi
 
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
-| page | default | `pagination.item.fg` → `{text.primary}` | `#1a1a18` |
-| page | active fill | `pagination.item.bg-active` → `{action.primary}` | `#2563eb` |
+| page | default | `pagination.item.fg` → `{text.primary}` | `#2a2926` |
+| page | active fill | `pagination.item.bg-active` → `{action.primary}` | `#305eb7` |
 | page | active text | `pagination.item.fg-active` → `{text.on-action}` | `#ffffff` |
-| page | hover | `pagination.item.bg-hover` → `{surface.subtle}` | `#f3f3f0` |
-| item | border | `pagination.border` → `{border.default}` | `#e5e5e0` |
-| item | focus | `pagination.border-focus` → `{focus.ring}` | `#f5631a` |
+| page | hover | `pagination.item.bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| item | border | `pagination.border` → `{border.default}` | `#d5d3d0` |
+| item | focus | `pagination.border-focus` → `{focus.ring}` | `#e86800` |
 | corners | — | `pagination.radius` → `{radius.md}` | `6px` |
 
 ## 3. States

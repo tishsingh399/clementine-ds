@@ -49,9 +49,9 @@ Status: `AI-Ready`. Token contract closed at 3 component-tier tokens.
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `progress-circle.track` | `{surface.subtle}` | `#f3f3f0` |
-| `progress-circle.indicator` | `{action.primary}` | `#2563eb` |
-| `progress-circle.label` | `{text.primary}` | `#1a1a18` |
+| `progress-circle.track` | `{surface.subtle}` | `#f6f6f4` |
+| `progress-circle.indicator` | `{action.primary}` | `#305eb7` |
+| `progress-circle.label` | `{text.primary}` | `#2a2926` |
 
 ## Library notes
 

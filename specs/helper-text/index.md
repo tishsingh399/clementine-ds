@@ -48,7 +48,7 @@ Supporting hint text shown beneath a form control.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `helper-text.fg` | `{text.secondary}` | `#6b6b66` |
+| `helper-text.fg` | `{text.secondary}` | `#65635e` |
 
 **Do:** Keep it short and persistent; Wire id to the control’s aria-describedby.
 **Don’t:** Use for validation errors; Repeat the label verbatim.

@@ -58,10 +58,10 @@ A self-contained status card for transient feedback — the visual a toast syste
 | Token | Resolves through | Light |
 |---|---|---|
 | `notification.bg` | `{surface.elevated}` | `#ffffff` |
-| `notification.border` | `{border.default}` | `#e5e5e0` |
-| `notification.fg-title` | `{text.primary}` | `#1a1a18` |
-| `notification.fg-body` | `{text.secondary}` | `#6b6b66` |
-| `notification.accent` | `{action.primary}` | `#2563eb` |
+| `notification.border` | `{border.default}` | `#d5d3d0` |
+| `notification.fg-title` | `{text.primary}` | `#2a2926` |
+| `notification.fg-body` | `{text.secondary}` | `#65635e` |
+| `notification.accent` | `{action.primary}` | `#305eb7` |
 | `notification.radius` | `{radius.md}` | `6px` |
 
 **Do:** Announce via aria-live (polite for info, assertive for errors); Auto-dismiss info; let errors persist; Pair color with an icon + text.

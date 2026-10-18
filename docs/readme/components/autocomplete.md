@@ -15,12 +15,12 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 | Token | Resolves through | Light value |
 |---|---|---|
 | `autocomplete.bg` | `{surface.elevated}` | `#ffffff` |
-| `autocomplete.border` | `{border.default}` | `#e5e5e0` |
-| `autocomplete.border-focus` | `{focus.ring}` | `#f5631a` |
-| `autocomplete.fg` | `{text.primary}` | `#1a1a18` |
-| `autocomplete.placeholder` | `{text.tertiary}` | `#737370` |
+| `autocomplete.border` | `{border.default}` | `#d5d3d0` |
+| `autocomplete.border-focus` | `{focus.ring}` | `#e86800` |
+| `autocomplete.fg` | `{text.primary}` | `#2a2926` |
+| `autocomplete.placeholder` | `{text.tertiary}` | `#6e6b65` |
 | `autocomplete.popover-bg` | `{surface.elevated}` | `#ffffff` |
-| `autocomplete.option-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
+| `autocomplete.option-bg-hover` | `{surface.subtle}` | `#f6f6f4` |
 | `autocomplete.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

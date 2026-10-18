@@ -55,9 +55,9 @@ Choose or route between agents. Distinct from ModelSelector (which picks a model
 | Token | Resolves through | Light |
 |---|---|---|
 | `agent-picker.bg` | `{surface.elevated}` | `#ffffff` |
-| `agent-picker.border` | `{border.default}` | `#e5e5e0` |
-| `agent-picker.fg` | `{text.primary}` | `#1a1a18` |
-| `agent-picker.icon` | `{text.secondary}` | `#6b6b66` |
+| `agent-picker.border` | `{border.default}` | `#d5d3d0` |
+| `agent-picker.fg` | `{text.primary}` | `#2a2926` |
+| `agent-picker.icon` | `{text.secondary}` | `#65635e` |
 
 **Do:** Show the active agent clearly; Pair with AgentCard detail on selection.
 **Don't:** Offer agents the user can't use; Switch agents silently mid-task.

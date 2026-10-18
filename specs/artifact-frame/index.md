@@ -59,8 +59,8 @@ A titled container for a substantial generated output (document, code file, rend
 | Part | Token | Light |
 |---|---|---|
 | body fill | `artifact.bg` → `{surface.elevated}` | `#ffffff` |
-| header fill | `artifact.header-bg` → `{surface.subtle}` | `#f3f3f0` |
-| border | `artifact.border` → `{border.default}` | `#e5e5e0` |
-| title | `artifact.title` → `{text.primary}` | `#1a1a18` |
+| header fill | `artifact.header-bg` → `{surface.subtle}` | `#f6f6f4` |
+| border | `artifact.border` → `{border.default}` | `#d5d3d0` |
+| title | `artifact.title` → `{text.primary}` | `#2a2926` |
 
 **Do** lift large/reusable outputs into a frame with clear actions. **Don't** bury a 200-line code block inline in a chat bubble.

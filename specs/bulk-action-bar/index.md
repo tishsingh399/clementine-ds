@@ -52,9 +52,9 @@ Appears when table rows are selected: shows the count and the bulk actions avail
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `bulk-action-bar.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `bulk-action-bar.border` | `{border.default}` | `#e5e5e0` |
-| `bulk-action-bar.fg` | `{text.primary}` | `#1a1a18` |
+| `bulk-action-bar.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `bulk-action-bar.border` | `{border.default}` | `#d5d3d0` |
+| `bulk-action-bar.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Show the count; offer Clear; Gate destructive bulk actions behind a confirm; Pair with undo.
 **Don't:** Hide what is selected; Run destructive bulk actions with no confirm.

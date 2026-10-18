@@ -50,8 +50,8 @@ A thin rule that separates content groups, optionally with a centered or aligned
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `divider.line` | `{border.default}` | `#e5e5e0` |
-| `divider.label` | `{text.tertiary}` | `#737370` |
+| `divider.line` | `{border.default}` | `#d5d3d0` |
+| `divider.label` | `{text.tertiary}` | `#6e6b65` |
 
 **Do:** Use spacing first; reach for a line only when grouping is ambiguous; Label it when the split has meaning ("or").
 **Don't:** Stack multiple dividers; Use as a decorative flourish.

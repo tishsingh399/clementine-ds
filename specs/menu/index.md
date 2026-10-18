@@ -99,14 +99,14 @@ A dropdown list of **actions** triggered by a control — row actions, an overfl
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
 | dropdown fill | default | `menu.bg` → `{surface.elevated}` | `#ffffff` |
-| dropdown border | default | `menu.border` → `{border.default}` | `#e5e5e0` |
+| dropdown border | default | `menu.border` → `{border.default}` | `#d5d3d0` |
 | dropdown elevation | default | `menu.shadow` → `{shadow.lg}` | `0 8px 24px rgba(0,0,0,0.16)` |
 | corners | — | `menu.radius` → `{radius.md}` | `6px` |
-| item text | default | `menu.item.fg` → `{text.primary}` | `#1a1a18` |
-| destructive item | default | `menu.item.fg-danger` → `{feedback.error}` | `#dc2626` |
-| item | hover/focus | `menu.item.bg-hover` → `{surface.subtle}` | `#f3f3f0` |
-| group heading | default | `menu.label` → `{text.secondary}` | `#6b6b66` |
-| separator | default | `menu.divider` → `{border.default}` | `#e5e5e0` |
+| item text | default | `menu.item.fg` → `{text.primary}` | `#2a2926` |
+| destructive item | default | `menu.item.fg-danger` → `{feedback.error}` | `#c1332f` |
+| item | hover/focus | `menu.item.bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| group heading | default | `menu.label` → `{text.secondary}` | `#65635e` |
+| separator | default | `menu.divider` → `{border.default}` | `#d5d3d0` |
 
 ## 3. Interaction States
 

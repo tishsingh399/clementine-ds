@@ -55,9 +55,9 @@ Pick a color via a swatch preview plus an editable hex field.
 | Token | Resolves through | Light |
 |---|---|---|
 | `color-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `color-input.border` | `{border.strong}` | `#737370` |
-| `color-input.border-focus` | `{focus.ring}` | `#f5631a` |
-| `color-input.fg` | `{text.primary}` | `#1a1a18` |
+| `color-input.border` | `{border.strong}` | `#93908b` |
+| `color-input.border-focus` | `{focus.ring}` | `#e86800` |
+| `color-input.fg` | `{text.primary}` | `#2a2926` |
 | `color-input.radius` | `{radius.md}` | `6px` |
 
 **Do:** Show the hex value as text; Offer a defined swatch palette; Validate hex input.

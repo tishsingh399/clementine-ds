@@ -47,8 +47,8 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 2 component-
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `thread.bg` | `{surface.default}` | `#fafaf8` |
-| `thread.divider` | `{border.default}` | `#e5e5e0` |
+| `thread.bg` | `{surface.default}` | `#fbfbfa` |
+| `thread.divider` | `{border.default}` | `#d5d3d0` |
 
 ## Library notes
 

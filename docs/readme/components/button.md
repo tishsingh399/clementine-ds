@@ -113,21 +113,21 @@ For destructive actions, name the consequence: "Delete project" not "Delete," "R
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `button.bg.default` | `action.primary` | `#2563eb` |
-| `button.bg.hover` | `action.primary-hover` | `#1d4ed8` |
-| `button.bg.active` | `action.primary-active` | `#1e40af` |
-| `button.bg.disabled` | `surface.subtle` | `#f3f3f0` |
-| `button.bg-destructive.default` | `action.destructive` | `#dc2626` |
-| `button.bg-destructive.hover` | `action.destructive-hover` | `#b91c1c` |
+| `button.bg.default` | `action.primary` | `#305eb7` |
+| `button.bg.hover` | `action.primary-hover` | `#224fa7` |
+| `button.bg.active` | `action.primary-active` | `#16284a` |
+| `button.bg.disabled` | `surface.subtle` | `#f6f6f4` |
+| `button.bg-destructive.default` | `action.destructive` | `#c1332f` |
+| `button.bg-destructive.hover` | `action.destructive-hover` | `#b01f1f` |
 | `button.bg-outline.default` | `surface.elevated` | `#ffffff` |
-| `button.bg-outline.hover` | `surface.subtle` | `#f3f3f0` |
+| `button.bg-outline.hover` | `surface.subtle` | `#f6f6f4` |
 | `button.fg.on-filled` | `text.on-action` | `#ffffff` |
-| `button.fg.on-outline` | `text.primary` | `#1a1a18` |
-| `button.fg.on-subtle` | `text.primary` | `#1a1a18` |
-| `button.fg.disabled` | `text.tertiary` | `#737370` |
-| `button.border.default` | `border.strong` | `#737370` |
-| `button.border.hover` | `action.primary` | `#2563eb` |
-| `button.border.focus` | `focus.ring` | `#f5631a` |
+| `button.fg.on-outline` | `text.primary` | `#2a2926` |
+| `button.fg.on-subtle` | `text.primary` | `#2a2926` |
+| `button.fg.disabled` | `text.tertiary` | `#6e6b65` |
+| `button.border.default` | `border.strong` | `#93908b` |
+| `button.border.hover` | `action.primary` | `#305eb7` |
+| `button.border.focus` | `focus.ring` | `#e86800` |
 | `button.radius` | `radius.md` | `6px` |
 | `button.height.sm` | — | `32px` |
 | `button.height.md` | — | `40px` |

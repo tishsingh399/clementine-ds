@@ -93,10 +93,10 @@ A static Card needs **no** ARIA. A Card that is *entirely* clickable must expose
 | Part | Token | Resolves (light) |
 |---|---|---|
 | root fill | `card.bg` → `{surface.elevated}` | `#ffffff` |
-| nested/inset fill | `card.bg-subtle` → `{surface.subtle}` | `#f3f3f0` |
-| border | `card.border` → `{border.default}` | `#e5e5e0` |
-| title | `card.fg.title` → `{text.primary}` | `#1a1a18` |
-| body | `card.fg.body` → `{text.secondary}` | `#6b6b66` |
+| nested/inset fill | `card.bg-subtle` → `{surface.subtle}` | `#f6f6f4` |
+| border | `card.border` → `{border.default}` | `#d5d3d0` |
+| title | `card.fg.title` → `{text.primary}` | `#2a2926` |
+| body | `card.fg.body` → `{text.secondary}` | `#65635e` |
 | corners | `card.radius` → `{radius.lg}` | `8px` |
 | elevation | `card.shadow` → `{shadow.sm}` | `0 1px 3px rgba(0,0,0,0.08)` |
 

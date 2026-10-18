@@ -50,8 +50,8 @@ A live character count for text inputs, with an over-limit state.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `character-counter.fg` | `{text.secondary}` | `#6b6b66` |
-| `character-counter.over` | `{feedback.error}` | `#dc2626` |
+| `character-counter.fg` | `{text.secondary}` | `#65635e` |
+| `character-counter.over` | `{feedback.error}` | `#c1332f` |
 
 **Do:** Show current and max ("12 / 280"); Bold near the limit; turn red when over.
 **Don’t:** Signal over-limit by color alone (bold + value also change); Hide the limit until exceeded.

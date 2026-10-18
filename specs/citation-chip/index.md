@@ -55,8 +55,8 @@ Inline provenance for an AI claim — a small superscript `[n]` that links to it
 
 | Part | Token | Light |
 |---|---|---|
-| chip fill | `citation.bg` → `{surface.subtle}` | `#f3f3f0` |
-| chip text | `citation.fg` → `{text.secondary}` | `#6b6b66` |
-| chip border | `citation.border` → `{border.default}` | `#e5e5e0` |
+| chip fill | `citation.bg` → `{surface.subtle}` | `#f6f6f4` |
+| chip text | `citation.fg` → `{text.secondary}` | `#65635e` |
+| chip border | `citation.border` → `{border.default}` | `#d5d3d0` |
 
 **Do** attach a real source to every factual claim that has one. **Don't** fabricate citations or link to a source that doesn't support the claim.

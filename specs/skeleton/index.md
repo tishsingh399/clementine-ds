@@ -58,8 +58,8 @@ A placeholder that mimics the shape of content while it loads — reduces layout
 
 | Part | Token | Resolves (light) |
 |---|---|---|
-| base fill | `skeleton.base` → `{surface.subtle}` | `#f3f3f0` |
-| shimmer highlight | `skeleton.highlight` → `{surface.default}` | `#fafaf8` |
+| base fill | `skeleton.base` → `{surface.subtle}` | `#f6f6f4` |
+| shimmer highlight | `skeleton.highlight` → `{surface.default}` | `#fbfbfa` |
 | shimmer cycle | `skeleton.duration` → `{motion.duration-stream}` | `1200ms` |
 | corners | `skeleton.radius` → `{radius.md}` | `6px` |
 

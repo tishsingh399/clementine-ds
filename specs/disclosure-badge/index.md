@@ -52,8 +52,8 @@ A small, consistent marker that content was produced or assisted by AI. Disclosu
 
 | Part | Token | Light |
 |---|---|---|
-| fill | `disclosure.bg` → `{surface.subtle}` | `#f3f3f0` |
-| text | `disclosure.fg` → `{text.secondary}` | `#6b6b66` |
-| border | `disclosure.border` → `{border.default}` | `#e5e5e0` |
+| fill | `disclosure.bg` → `{surface.subtle}` | `#f6f6f4` |
+| text | `disclosure.fg` → `{text.secondary}` | `#65635e` |
+| border | `disclosure.border` → `{border.default}` | `#d5d3d0` |
 
 **Do** keep disclosure visible, not hidden in a tooltip. **Don't** vary the wording per surface — use the canonical strings.

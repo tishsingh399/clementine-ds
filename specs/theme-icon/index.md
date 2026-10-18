@@ -51,7 +51,7 @@ A filled container that gives an icon a consistent shape and background — for 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `theme-icon.bg` | `{action.primary}` | `#2563eb` |
+| `theme-icon.bg` | `{action.primary}` | `#305eb7` |
 | `theme-icon.fg` | `{text.on-action}` | `#ffffff` |
 | `theme-icon.radius` | `{radius.md}` | `6px` |
 

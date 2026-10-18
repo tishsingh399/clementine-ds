@@ -53,13 +53,13 @@ Status: `AI-Ready`. Token contract closed at 9 component-tier tokens.
 | Token | Resolves through | Light value |
 |---|---|---|
 | `multi-select.bg` | `{surface.elevated}` | `#ffffff` |
-| `multi-select.border` | `{border.strong}` | `#737370` |
-| `multi-select.border-focus` | `{focus.ring}` | `#f5631a` |
-| `multi-select.fg` | `{text.primary}` | `#1a1a18` |
-| `multi-select.placeholder` | `{text.tertiary}` | `#737370` |
-| `multi-select.pill-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `multi-select.pill-fg` | `{text.primary}` | `#1a1a18` |
-| `multi-select.option-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
+| `multi-select.border` | `{border.strong}` | `#93908b` |
+| `multi-select.border-focus` | `{focus.ring}` | `#e86800` |
+| `multi-select.fg` | `{text.primary}` | `#2a2926` |
+| `multi-select.placeholder` | `{text.tertiary}` | `#6e6b65` |
+| `multi-select.pill-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `multi-select.pill-fg` | `{text.primary}` | `#2a2926` |
+| `multi-select.option-bg-hover` | `{surface.subtle}` | `#f6f6f4` |
 | `multi-select.radius` | `{radius.md}` | `6px` |
 
 ## Library notes
