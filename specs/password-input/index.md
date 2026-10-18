@@ -56,7 +56,7 @@ A masked text input with a visibility toggle, for passwords and secrets.
 | Token | Resolves through | Light |
 |---|---|---|
 | `password-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `password-input.border` | `{border.strong}` | `#93908b` |
+| `password-input.border` | `{border.strong}` | `#83807a` |
 | `password-input.border-focus` | `{focus.ring}` | `#e86800` |
 | `password-input.fg` | `{text.primary}` | `#2a2926` |
 | `password-input.placeholder` | `{text.tertiary}` | `#6e6b65` |

@@ -56,7 +56,7 @@ Status: `AI-Ready`. Token contract closed at 7 component-tier tokens.
 |---|---|---|
 | `stepper.bg-completed` | `{action.primary}` | `#305eb7` |
 | `stepper.bg-active` | `{action.primary}` | `#305eb7` |
-| `stepper.bg-pending` | `{surface.subtle}` | `#f6f6f4` |
+| `stepper.bg-pending` | `{surface.subtle}` | `#efeeec` |
 | `stepper.fg-active` | `{text.primary}` | `#1a1a18` |
 | `stepper.fg-pending` | `{text.tertiary}` | `#6e6b65` |
 | `stepper.separator` | `{border.default}` | `#d5d3d0` |

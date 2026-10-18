@@ -127,11 +127,11 @@
       "$type": "color"
     },
     "input": {
-      "$value": "{palette-dark.neutral.8}",
+      "$value": "{palette-dark.neutral.9}",
       "$type": "color"
     },
     "input-hover": {
-      "$value": "{palette-dark.neutral.9}",
+      "$value": "{palette-dark.neutral.10}",
       "$type": "color"
     },
     "focus": {

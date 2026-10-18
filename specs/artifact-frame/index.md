@@ -59,7 +59,7 @@ A titled container for a substantial generated output (document, code file, rend
 | Part | Token | Light |
 |---|---|---|
 | body fill | `artifact.bg` → `{surface.elevated}` | `#ffffff` |
-| header fill | `artifact.header-bg` → `{surface.subtle}` | `#f6f6f4` |
+| header fill | `artifact.header-bg` → `{surface.subtle}` | `#efeeec` |
 | border | `artifact.border` → `{border.default}` | `#d5d3d0` |
 | title | `artifact.title` → `{text.primary}` | `#2a2926` |
 

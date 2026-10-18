@@ -50,7 +50,7 @@ Monospace formatting for code, commands, and literal values — inline or as a b
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `code.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `code.bg` | `{surface.subtle}` | `#efeeec` |
 | `code.fg` | `{text.primary}` | `#2a2926` |
 | `code.radius` | `{radius.sm}` | `4px` |
 

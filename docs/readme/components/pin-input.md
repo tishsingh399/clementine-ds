@@ -51,7 +51,7 @@ Status: `AI-Ready`. Token contract closed at 5 component-tier tokens.
 | Token | Resolves through | Light value |
 |---|---|---|
 | `pin-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `pin-input.border` | `{border.strong}` | `#93908b` |
+| `pin-input.border` | `{border.strong}` | `#83807a` |
 | `pin-input.border-focus` | `{focus.ring}` | `#e86800` |
 | `pin-input.fg` | `{text.primary}` | `#2a2926` |
 | `pin-input.radius` | `{radius.md}` | `6px` |

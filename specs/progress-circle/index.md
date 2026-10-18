@@ -53,7 +53,7 @@ A circular determinate progress indicator with a center label.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `progress-circle.track` | `{surface.subtle}` | `#f6f6f4` |
+| `progress-circle.track` | `{surface.subtle}` | `#efeeec` |
 | `progress-circle.indicator` | `{action.primary}` | `#305eb7` |
 | `progress-circle.label` | `{text.primary}` | `#2a2926` |
 

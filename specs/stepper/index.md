@@ -60,7 +60,7 @@ Ordered progress through a multi-step flow (wizard, onboarding, guided setup).
 |---|---|---|
 | `stepper.bg-completed` | `{action.primary}` | `#305eb7` |
 | `stepper.bg-active` | `{action.primary}` | `#305eb7` |
-| `stepper.bg-pending` | `{surface.subtle}` | `#f6f6f4` |
+| `stepper.bg-pending` | `{surface.subtle}` | `#efeeec` |
 | `stepper.fg-active` | `{text.on-action}` | `#ffffff` |
 | `stepper.fg-pending` | `{text.tertiary}` | `#6e6b65` |
 | `stepper.separator` | `{border.default}` | `#d5d3d0` |

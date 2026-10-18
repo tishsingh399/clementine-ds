@@ -104,7 +104,7 @@ A dropdown list of **actions** triggered by a control — row actions, an overfl
 | corners | — | `menu.radius` → `{radius.md}` | `6px` |
 | item text | default | `menu.item.fg` → `{text.primary}` | `#2a2926` |
 | destructive item | default | `menu.item.fg-danger` → `{feedback.error}` | `#c1332f` |
-| item | hover/focus | `menu.item.bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| item | hover/focus | `menu.item.bg-hover` → `{surface.subtle}` | `#efeeec` |
 | group heading | default | `menu.label` → `{text.secondary}` | `#65635e` |
 | separator | default | `menu.divider` → `{border.default}` | `#d5d3d0` |
 

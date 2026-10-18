@@ -56,7 +56,7 @@ A compact, toggleable selection — filter chips and multi-choice pickers. Disti
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `chip.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `chip.bg` | `{surface.subtle}` | `#efeeec` |
 | `chip.bg-checked` | `{action.primary}` | `#305eb7` |
 | `chip.fg` | `{text.primary}` | `#2a2926` |
 | `chip.fg-checked` | `{text.on-action}` | `#ffffff` |

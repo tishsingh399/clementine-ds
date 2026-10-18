@@ -57,7 +57,7 @@ A collapsible, de-emphasized view of the model's intermediate thinking. Collapse
 
 | Part | Token | Light |
 |---|---|---|
-| container | `reasoning.bg` → `{surface.subtle}` | `#f6f6f4` |
+| container | `reasoning.bg` → `{surface.subtle}` | `#efeeec` |
 | body text | `reasoning.fg` → `{text.secondary}` | `#65635e` |
 | heading | `reasoning.label` → `{text.tertiary}` | `#6e6b65` |
 | left rule | `reasoning.rule` → `{border.default}` | `#d5d3d0` |

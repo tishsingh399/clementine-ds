@@ -50,7 +50,7 @@ Capture or display a star rating (feedback score, quality).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `rating.symbol-empty` | `{border.strong}` | `#93908b` |
+| `rating.symbol-empty` | `{border.strong}` | `#83807a` |
 | `rating.symbol-filled` | `{feedback.warning}` | `#855905` |
 
 **Do:** Label what is being rated; support fractions for display; Allow keyboard selection; Use readOnly for display-only.

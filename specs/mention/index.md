@@ -49,7 +49,7 @@ An inline @reference to a user or entity within text.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `mention.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `mention.bg` | `{surface.subtle}` | `#efeeec` |
 | `mention.fg` | `{text.link}` | `#3960ab` |
 
 **Do:** Make it visually distinct + linkable; Resolve to a real profile when possible.

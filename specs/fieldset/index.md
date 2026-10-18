@@ -53,7 +53,7 @@ Visually and semantically group related form controls under a legend.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `fieldset.bg` | `{surface.default}` | `#fbfbfa` |
+| `fieldset.bg` | `{surface.default}` | `#f6f6f4` |
 | `fieldset.border` | `{border.default}` | `#d5d3d0` |
 | `fieldset.legend` | `{text.primary}` | `#2a2926` |
 | `fieldset.radius` | `{radius.md}` | `6px` |

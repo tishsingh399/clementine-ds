@@ -52,7 +52,7 @@ Appears when table rows are selected: shows the count and the bulk actions avail
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `bulk-action-bar.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `bulk-action-bar.bg` | `{surface.subtle}` | `#efeeec` |
 | `bulk-action-bar.border` | `{border.default}` | `#d5d3d0` |
 | `bulk-action-bar.fg` | `{text.primary}` | `#2a2926` |
 

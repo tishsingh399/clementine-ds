@@ -61,13 +61,13 @@ Pick several values from a list; selections show as removable pills.
 | Token | Resolves through | Light |
 |---|---|---|
 | `multi-select.bg` | `{surface.elevated}` | `#ffffff` |
-| `multi-select.border` | `{border.strong}` | `#93908b` |
+| `multi-select.border` | `{border.strong}` | `#83807a` |
 | `multi-select.border-focus` | `{focus.ring}` | `#e86800` |
 | `multi-select.fg` | `{text.primary}` | `#2a2926` |
 | `multi-select.placeholder` | `{text.tertiary}` | `#6e6b65` |
-| `multi-select.pill-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `multi-select.pill-bg` | `{surface.subtle}` | `#efeeec` |
 | `multi-select.pill-fg` | `{text.primary}` | `#2a2926` |
-| `multi-select.option-bg-hover` | `{surface.subtle}` | `#f6f6f4` |
+| `multi-select.option-bg-hover` | `{surface.subtle}` | `#efeeec` |
 | `multi-select.radius` | `{radius.md}` | `6px` |
 
 **Do:** Make pills removable; support search for long lists; Show a clear empty/no-results state; Cap or scroll very long lists.

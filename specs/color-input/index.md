@@ -55,7 +55,7 @@ Pick a color via a swatch preview plus an editable hex field.
 | Token | Resolves through | Light |
 |---|---|---|
 | `color-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `color-input.border` | `{border.strong}` | `#93908b` |
+| `color-input.border` | `{border.strong}` | `#83807a` |
 | `color-input.border-focus` | `{focus.ring}` | `#e86800` |
 | `color-input.fg` | `{text.primary}` | `#2a2926` |
 | `color-input.radius` | `{radius.md}` | `6px` |

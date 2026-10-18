@@ -50,7 +50,7 @@ Assign one or more roles to a user or group (a MultiSelect preset for RBAC).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `role-picker.pill-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `role-picker.pill-bg` | `{surface.subtle}` | `#efeeec` |
 | `role-picker.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Offer search for long role lists; Show assigned roles as removable pills; Respect least-privilege defaults.

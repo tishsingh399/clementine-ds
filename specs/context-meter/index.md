@@ -55,7 +55,7 @@ Shows how much of the context window is consumed (used / total), warning as it n
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `context-meter.track` | `{surface.subtle}` | `#f6f6f4` |
+| `context-meter.track` | `{surface.subtle}` | `#efeeec` |
 | `context-meter.fill` | `{action.primary}` | `#305eb7` |
 | `context-meter.fill-warning` | `{feedback.warning}` | `#855905` |
 | `context-meter.label` | `{text.tertiary}` | `#6e6b65` |

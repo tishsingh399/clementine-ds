@@ -57,11 +57,11 @@ Display structured records in rows and columns; the workhorse of an enterprise c
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `table.header-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `table.header-bg` | `{surface.subtle}` | `#efeeec` |
 | `table.header-fg` | `{text.secondary}` | `#65635e` |
 | `table.row-bg` | `{surface.elevated}` | `#ffffff` |
-| `table.row-bg-striped` | `{surface.default}` | `#fbfbfa` |
-| `table.row-bg-hover` | `{surface.subtle}` | `#f6f6f4` |
+| `table.row-bg-striped` | `{surface.default}` | `#f6f6f4` |
+| `table.row-bg-hover` | `{surface.subtle}` | `#efeeec` |
 | `table.border` | `{border.default}` | `#d5d3d0` |
 | `table.fg` | `{text.primary}` | `#2a2926` |
 

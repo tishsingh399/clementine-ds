@@ -55,7 +55,7 @@ Inline provenance for an AI claim — a small superscript `[n]` that links to it
 
 | Part | Token | Light |
 |---|---|---|
-| chip fill | `citation.bg` → `{surface.subtle}` | `#f6f6f4` |
+| chip fill | `citation.bg` → `{surface.subtle}` | `#efeeec` |
 | chip text | `citation.fg` → `{text.secondary}` | `#65635e` |
 | chip border | `citation.border` → `{border.default}` | `#d5d3d0` |
 

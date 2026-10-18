@@ -15,7 +15,7 @@ Status: `AI-Ready`. Token contract closed at 7 component-tier tokens. Full contr
 | Token | Resolves through | Light value |
 |---|---|---|
 | `card.bg` | `{surface.elevated}` | `#ffffff` |
-| `card.bg-subtle` | `{surface.subtle}` | `#f6f6f4` |
+| `card.bg-subtle` | `{surface.subtle}` | `#efeeec` |
 | `card.border` | `{border.default}` | `#d5d3d0` |
 | `card.fg.title` | `{text.primary}` | `#2a2926` |
 | `card.fg.body` | `{text.secondary}` | `#65635e` |

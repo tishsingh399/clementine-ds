@@ -29,7 +29,7 @@ Status: `AI-Ready`. Token contract closed at 11 component-tier tokens. Dependenc
 | Token | Resolves through | Light |
 |---|---|---|
 | `date-picker.day-selected-bg` | `action.primary` | `#305eb7` |
-| `date-picker.day-in-range-bg` | `surface.subtle` | `#f6f6f4` |
+| `date-picker.day-in-range-bg` | `surface.subtle` | `#efeeec` |
 | `date-picker.day-today-border` | `action.primary` | `#305eb7` |
 | `date-picker.ring` | `focus.ring` | `#e86800` |
 

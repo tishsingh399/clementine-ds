@@ -55,7 +55,7 @@ A hierarchical, expandable node list — file trees, org/permission hierarchies,
 | Token | Resolves through | Light |
 |---|---|---|
 | `tree.fg` | `{text.primary}` | `#2a2926` |
-| `tree.bg-selected` | `{surface.subtle}` | `#f6f6f4` |
+| `tree.bg-selected` | `{surface.subtle}` | `#efeeec` |
 | `tree.guide` | `{border.default}` | `#d5d3d0` |
 | `tree.chevron` | `{text.secondary}` | `#65635e` |
 

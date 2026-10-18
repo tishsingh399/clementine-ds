@@ -56,7 +56,7 @@ A control to pick one or more files, showing the chosen file name(s).
 | Token | Resolves through | Light |
 |---|---|---|
 | `file-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `file-input.border` | `{border.strong}` | `#93908b` |
+| `file-input.border` | `{border.strong}` | `#83807a` |
 | `file-input.border-focus` | `{focus.ring}` | `#e86800` |
 | `file-input.fg` | `{text.primary}` | `#2a2926` |
 | `file-input.placeholder` | `{text.tertiary}` | `#6e6b65` |

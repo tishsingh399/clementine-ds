@@ -52,7 +52,7 @@ A small, consistent marker that content was produced or assisted by AI. Disclosu
 
 | Part | Token | Light |
 |---|---|---|
-| fill | `disclosure.bg` → `{surface.subtle}` | `#f6f6f4` |
+| fill | `disclosure.bg` → `{surface.subtle}` | `#efeeec` |
 | text | `disclosure.fg` → `{text.secondary}` | `#65635e` |
 | border | `disclosure.border` → `{border.default}` | `#d5d3d0` |
 

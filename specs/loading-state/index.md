@@ -54,7 +54,7 @@ A centered spinner with a label for a loading region.
 |---|---|---|
 | `loading-state.spinner` | `{action.primary}` | `#305eb7` |
 | `loading-state.label` | `{text.secondary}` | `#65635e` |
-| `loading-state.bg` | `{surface.default}` | `#fbfbfa` |
+| `loading-state.bg` | `{surface.default}` | `#f6f6f4` |
 
 **Do:** Give the spinner a text label; Keep it centered in the region it replaces.
 **Don’t:** Block the whole screen for small loads; Use color as the only cue.

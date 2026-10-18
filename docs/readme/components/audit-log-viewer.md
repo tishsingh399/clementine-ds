@@ -49,8 +49,8 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 5 component-tie
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `audit-log.header-bg` | `{surface.subtle}` | `#f6f6f4` |
-| `audit-log.row-striped` | `{surface.default}` | `#fbfbfa` |
+| `audit-log.header-bg` | `{surface.subtle}` | `#efeeec` |
+| `audit-log.row-striped` | `{surface.default}` | `#f6f6f4` |
 | `audit-log.fg` | `{text.primary}` | `#2a2926` |
 | `audit-log.meta` | `{text.tertiary}` | `#6e6b65` |
 | `audit-log.border` | `{border.default}` | `#d5d3d0` |

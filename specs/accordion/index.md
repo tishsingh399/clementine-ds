@@ -100,8 +100,8 @@ Progressive disclosure for a stack of independent sections — FAQs, grouped set
 
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
-| item fill | default | `accordion.bg` → `{surface.default}` | `#fbfbfa` |
-| control fill | hover | `accordion.bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| item fill | default | `accordion.bg` → `{surface.default}` | `#f6f6f4` |
+| control fill | hover | `accordion.bg-hover` → `{surface.subtle}` | `#efeeec` |
 | item border | default | `accordion.border` → `{border.default}` | `#d5d3d0` |
 | label | default | `accordion.fg.label` → `{text.primary}` | `#2a2926` |
 | panel text | default | `accordion.fg.content` → `{text.secondary}` | `#65635e` |

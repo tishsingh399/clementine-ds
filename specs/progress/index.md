@@ -62,7 +62,7 @@ A determinate bar showing how far a known task has progressed (upload, import, q
 
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
-| track | — | `progress.track` → `{surface.subtle}` | `#f6f6f4` |
+| track | — | `progress.track` → `{surface.subtle}` | `#efeeec` |
 | bar | default | `progress.bar` → `{action.primary}` | `#305eb7` |
 | bar | success | `progress.bar-success` → `{feedback.success}` | `#198044` |
 | bar | warning | `progress.bar-warning` → `{feedback.warning}` | `#855905` |

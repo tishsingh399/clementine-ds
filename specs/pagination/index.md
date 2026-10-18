@@ -69,7 +69,7 @@ Page navigation for long, chunked result sets. Pair with a results count ("Showi
 | page | default | `pagination.item.fg` → `{text.primary}` | `#2a2926` |
 | page | active fill | `pagination.item.bg-active` → `{action.primary}` | `#305eb7` |
 | page | active text | `pagination.item.fg-active` → `{text.on-action}` | `#ffffff` |
-| page | hover | `pagination.item.bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| page | hover | `pagination.item.bg-hover` → `{surface.subtle}` | `#efeeec` |
 | item | border | `pagination.border` → `{border.default}` | `#d5d3d0` |
 | item | focus | `pagination.border-focus` → `{focus.ring}` | `#e86800` |
 | corners | — | `pagination.radius` → `{radius.md}` | `6px` |

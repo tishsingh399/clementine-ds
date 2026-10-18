@@ -47,7 +47,7 @@ Status: `AI-Ready`. Token contract closed at 4 component-tier tokens.
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `pill.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `pill.bg` | `{surface.subtle}` | `#efeeec` |
 | `pill.fg` | `{text.primary}` | `#2a2926` |
 | `pill.remove` | `{text.secondary}` | `#65635e` |
 | `pill.radius` | `{radius.xl}` | `99px` |

@@ -55,8 +55,8 @@ A chronological, attributable record of actions — who did what to what, when.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `audit-log-viewer.header-bg` | `{surface.subtle}` | `#f6f6f4` |
-| `audit-log-viewer.row-striped` | `{surface.default}` | `#fbfbfa` |
+| `audit-log-viewer.header-bg` | `{surface.subtle}` | `#efeeec` |
+| `audit-log-viewer.row-striped` | `{surface.default}` | `#f6f6f4` |
 | `audit-log-viewer.fg` | `{text.primary}` | `#2a2926` |
 | `audit-log-viewer.meta` | `{text.tertiary}` | `#6e6b65` |
 | `audit-log-viewer.border` | `{border.default}` | `#d5d3d0` |

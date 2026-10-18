@@ -28,10 +28,10 @@ Single-line free-text input. For multi-line use Textarea. For closed lists use S
 | Token | Resolves through | Light |
 |---|---|---|
 | `text-input.bg.default` | `surface.elevated` | `#ffffff` |
-| `text-input.bg.disabled` | `surface.subtle` | `#f6f6f4` |
+| `text-input.bg.disabled` | `surface.subtle` | `#efeeec` |
 | `text-input.fg.value` | `text.primary` | `#2a2926` |
 | `text-input.fg.placeholder` | `text.secondary` | `#65635e` |
-| `text-input.border.default` | `border.strong` | `#93908b` |
+| `text-input.border.default` | `border.strong` | `#83807a` |
 | `text-input.border.focus` | `border.focus` | `#305eb7` |
 | `text-input.border.error` | `feedback.error` | `#c1332f` |
 | `text-input.ring` | `focus.ring` | `#e86800` |

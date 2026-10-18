@@ -58,7 +58,7 @@ A least-privilege access request — "Agent wants to do X (scope Y)" → Allow /
 | `permission-request.bg` | `{feedback.warning-subtle}` | `#ffebcf` |
 | `permission-request.border` | `{feedback.warning}` | `#855905` |
 | `permission-request.title` | `{text.primary}` | `#2a2926` |
-| `permission-request.scope-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `permission-request.scope-bg` | `{surface.subtle}` | `#efeeec` |
 
 **Do:** State the exact action + scope; Default to least privilege; allow scoping down; Log the decision.
 **Don't:** Request broad access by default; Bundle unrelated permissions.

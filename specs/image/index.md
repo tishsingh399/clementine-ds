@@ -50,7 +50,7 @@ A responsive image with a fallback for load errors.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `image.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `image.bg` | `{surface.subtle}` | `#efeeec` |
 | `image.radius` | `{radius.md}` | `6px` |
 
 **Do:** Always set alt (empty alt="" only when decorative); Provide a fallback; Set width/height to avoid layout shift.

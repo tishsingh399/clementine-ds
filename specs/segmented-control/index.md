@@ -55,7 +55,7 @@ Pick one of a small set of mutually-exclusive options — a compact, styled radi
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `segmented-control.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `segmented-control.bg` | `{surface.subtle}` | `#efeeec` |
 | `segmented-control.bg-active` | `{surface.elevated}` | `#ffffff` |
 | `segmented-control.fg` | `{text.secondary}` | `#65635e` |
 | `segmented-control.fg-active` | `{text.primary}` | `#2a2926` |

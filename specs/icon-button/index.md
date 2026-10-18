@@ -52,7 +52,7 @@ An icon-only action for toolbars and row actions; always needs an aria-label and
 | Token | Resolves through | Light |
 |---|---|---|
 | `icon-button.fg` | `{text.primary}` | `#2a2926` |
-| `icon-button.bg-hover` | `{surface.subtle}` | `#f6f6f4` |
+| `icon-button.bg-hover` | `{surface.subtle}` | `#efeeec` |
 | `icon-button.border-focus` | `{focus.ring}` | `#e86800` |
 
 **Do:** Always set aria-label; Pair with a Tooltip; Keep a 44x44 hit area.

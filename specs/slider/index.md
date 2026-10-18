@@ -57,7 +57,7 @@ Select a value from a continuous range by dragging (thresholds, volume, sensitiv
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `slider.track` | `{surface.subtle}` | `#f6f6f4` |
+| `slider.track` | `{surface.subtle}` | `#efeeec` |
 | `slider.track-filled` | `{action.primary}` | `#305eb7` |
 | `slider.thumb` | `{surface.elevated}` | `#ffffff` |
 | `slider.thumb-border` | `{action.primary}` | `#305eb7` |

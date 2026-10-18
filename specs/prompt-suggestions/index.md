@@ -54,7 +54,7 @@ Clickable starter prompts shown above an empty Composer, tied to real capabiliti
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `prompt-suggestions.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `prompt-suggestions.bg` | `{surface.subtle}` | `#efeeec` |
 | `prompt-suggestions.border` | `{border.default}` | `#d5d3d0` |
 | `prompt-suggestions.fg` | `{text.primary}` | `#2a2926` |
 | `prompt-suggestions.radius` | `{radius.xl}` | `99px` |

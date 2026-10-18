@@ -55,7 +55,7 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 7 component-
 | `sources.title` | `{text.tertiary}` | `#6e6b65` |
 | `sources.item-fg` | `{text.link}` | `#3960ab` |
 | `sources.item-meta` | `{text.secondary}` | `#65635e` |
-| `sources.index-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `sources.index-bg` | `{surface.subtle}` | `#efeeec` |
 | `sources.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

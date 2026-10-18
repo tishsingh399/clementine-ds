@@ -37,7 +37,7 @@
   },
   "surface": {
     "default": {
-      "$value": "{palette.neutral.1}",
+      "$value": "{palette.neutral.2}",
       "$type": "color"
     },
     "elevated": {
@@ -45,11 +45,11 @@
       "$type": "color"
     },
     "subtle": {
-      "$value": "{palette.neutral.2}",
+      "$value": "{palette.neutral.3}",
       "$type": "color"
     },
     "subtle-hover": {
-      "$value": "{palette.neutral.3}",
+      "$value": "{palette.neutral.4}",
       "$type": "color"
     },
     "inverse": {
@@ -123,15 +123,15 @@
       "$type": "color"
     },
     "strong": {
-      "$value": "{palette.neutral.8}",
+      "$value": "{palette.neutral.9}",
       "$type": "color"
     },
     "input": {
-      "$value": "{palette.neutral.8}",
+      "$value": "{palette.neutral.9}",
       "$type": "color"
     },
     "input-hover": {
-      "$value": "{palette.neutral.9}",
+      "$value": "{palette.neutral.10}",
       "$type": "color"
     },
     "focus": {

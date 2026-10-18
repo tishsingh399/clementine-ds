@@ -53,7 +53,7 @@ A role x permission grid of checkboxes for least-privilege access management.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `rbac-matrix.header-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `rbac-matrix.header-bg` | `{surface.subtle}` | `#efeeec` |
 | `rbac-matrix.border` | `{border.default}` | `#d5d3d0` |
 | `rbac-matrix.granted` | `{action.primary}` | `#305eb7` |
 | `rbac-matrix.fg` | `{text.primary}` | `#2a2926` |

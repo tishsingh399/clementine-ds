@@ -56,7 +56,7 @@ A panel of system/activity notifications, unread first, each markable.
 | Token | Resolves through | Light |
 |---|---|---|
 | `notification-center.bg` | `{surface.elevated}` | `#ffffff` |
-| `notification-center.unread-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `notification-center.unread-bg` | `{surface.subtle}` | `#efeeec` |
 | `notification-center.title` | `{text.primary}` | `#2a2926` |
 | `notification-center.body` | `{text.secondary}` | `#65635e` |
 | `notification-center.dot` | `{action.primary}` | `#305eb7` |

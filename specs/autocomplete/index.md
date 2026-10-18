@@ -73,7 +73,7 @@ A text input that suggests matching options as you type but still allows free te
 | value text | default | `autocomplete.fg` → `{text.primary}` | `#2a2926` |
 | placeholder | default | `autocomplete.placeholder` → `{text.tertiary}` | `#6e6b65` |
 | listbox fill | open | `autocomplete.popover-bg` → `{surface.elevated}` | `#ffffff` |
-| option | hover/active | `autocomplete.option-bg-hover` → `{surface.subtle}` | `#f6f6f4` |
+| option | hover/active | `autocomplete.option-bg-hover` → `{surface.subtle}` | `#efeeec` |
 | corners | — | `autocomplete.radius` → `{radius.md}` | `6px` |
 
 ## 3. States

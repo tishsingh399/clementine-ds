@@ -71,7 +71,7 @@ None — Badge is presentational. If it conveys status critical to the surroundi
 
 | Intent | Token | Resolves (light) |
 |---|---|---|
-| neutral | `surface.subtle` | `#f6f6f4` |
+| neutral | `surface.subtle` | `#efeeec` |
 | success | `feedback.success-subtle` | `#ddf5e2` |
 | error | `feedback.error-subtle` | `#fee8e5` |
 | warning | `feedback.warning-subtle` | `#ffebcf` |

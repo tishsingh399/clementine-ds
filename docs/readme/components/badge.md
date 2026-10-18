@@ -33,7 +33,7 @@ Status: `Draft`. Component tokens exist. Spec needs ARIA verification and a full
 
 | Intent | Token | Resolves through | Light |
 |---|---|---|---|
-| Neutral | `badge.bg.neutral` | `surface.subtle` | `#f6f6f4` |
+| Neutral | `badge.bg.neutral` | `surface.subtle` | `#efeeec` |
 | Success | `badge.bg.success` | `feedback.success-subtle` | `#ddf5e2` |
 | Error | `badge.bg.error` | `feedback.error-subtle` | `#fee8e5` |
 | Warning | `badge.bg.warning` | `feedback.warning-subtle` | `#ffebcf` |

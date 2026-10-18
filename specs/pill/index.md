@@ -53,7 +53,7 @@ A compact, often-removable token representing a selected value or applied filter
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `pill.bg` | `{surface.subtle}` | `#f6f6f4` |
+| `pill.bg` | `{surface.subtle}` | `#efeeec` |
 | `pill.fg` | `{text.primary}` | `#2a2926` |
 | `pill.remove` | `{text.secondary}` | `#65635e` |
 | `pill.radius` | `{radius.xl}` | `99px` |

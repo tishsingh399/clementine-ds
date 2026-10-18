@@ -50,7 +50,7 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 5 component-tie
 | `presence.away` | `{feedback.warning}` | `#855905` |
 | `presence.busy` | `{feedback.error}` | `#c1332f` |
 | `presence.offline` | `{text.tertiary}` | `#6e6b65` |
-| `presence.ring` | `{surface.default}` | `#fbfbfa` |
+| `presence.ring` | `{surface.default}` | `#f6f6f4` |
 
 ## Library notes
 

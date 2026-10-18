@@ -88,7 +88,7 @@ A compact, recognizable stand-in for a person or entity — a photo, initials, o
 
 | Part | Token | Resolves (light) |
 |---|---|---|
-| placeholder fill | `avatar.bg` → `{surface.subtle}` | `#f6f6f4` |
+| placeholder fill | `avatar.bg` → `{surface.subtle}` | `#efeeec` |
 | initials / icon | `avatar.fg` → `{text.secondary}` | `#65635e` |
 | ring between stacked members | `avatar.border` → `{border.default}` | `#d5d3d0` |
 | focus ring (interactive) | `avatar.ring` → `{focus.ring}` | `#e86800` |

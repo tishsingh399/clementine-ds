@@ -57,7 +57,7 @@ Who is here, as a stack of avatars each with a presence dot.
 | `presence-indicator.away` | `{feedback.warning}` | `#855905` |
 | `presence-indicator.busy` | `{feedback.error}` | `#c1332f` |
 | `presence-indicator.offline` | `{text.tertiary}` | `#6e6b65` |
-| `presence-indicator.ring` | `{surface.default}` | `#fbfbfa` |
+| `presence-indicator.ring` | `{surface.default}` | `#f6f6f4` |
 
 **Do:** Pair dot with the person name (tooltip); Cap the stack with a +N.
 **Don't:** Convey presence by color alone; Show stale presence as live.

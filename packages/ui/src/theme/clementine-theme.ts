@@ -96,7 +96,7 @@ export const cssVariablesResolver: CSSVariablesResolver = () => ({
 
 // Palette steps (1-12) for each Mantine shade index 0-9.
 const SOLID = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // index 6 = step 9, the solid fill
-const GRAY = [1, 2, 3, 4, 6, 10, 11, 12, 12, 12]; // 4 border.default · 5 placeholder · 6 dimmed
+const GRAY = [2, 3, 4, 5, 6, 10, 11, 12, 12, 12]; // 0 canvas · 4 border.default · 5 placeholder · 6 dimmed
 const DARK = [12, 11, 11, 10, 8, 9, 3, 1, 1, 1];
 const pal = p as unknown as Record<string, string>;
 const steps = (hue: string, idx: number[], prefix = 'palette') =>

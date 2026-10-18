@@ -48,7 +48,7 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 4 component-tie
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `maintenance-banner.info-bg` | `{surface.subtle}` | `#f6f6f4` |
+| `maintenance-banner.info-bg` | `{surface.subtle}` | `#efeeec` |
 | `maintenance-banner.degraded-bg` | `{feedback.warning-subtle}` | `#ffebcf` |
 | `maintenance-banner.down-bg` | `{feedback.error-subtle}` | `#fee8e5` |
 | `maintenance-banner.fg` | `{text.primary}` | `#2a2926` |

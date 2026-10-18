@@ -57,7 +57,7 @@ A TextInput preset for search: type=search, a leading search affordance, and a c
 | Token | Resolves through | Light |
 |---|---|---|
 | `search-field.bg` | `{surface.elevated}` | `#ffffff` |
-| `search-field.border` | `{border.strong}` | `#93908b` |
+| `search-field.border` | `{border.strong}` | `#83807a` |
 | `search-field.border-focus` | `{focus.ring}` | `#e86800` |
 | `search-field.fg` | `{text.primary}` | `#2a2926` |
 | `search-field.placeholder` | `{text.tertiary}` | `#6e6b65` |
