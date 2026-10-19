@@ -16,8 +16,8 @@ Tier 1 of the cascade. Raw scales with no intent. Every value here is a literal 
 | `color.green` | 0 through 9 | Success |
 | `color.orange` | 0 through 9 | Warning, the Clementine accent |
 | `color.white`, `color.black` | n/a | Literal |
-| `radius` | xs, sm, md, lg, xl | 2px, 4px, 8px, 12px, 16px |
-| `spacing` | xs, sm, md, lg, xl | 4px, 8px, 16px, 24px, 32px |
+| `radius` | xs, sm, md, lg, lg-xl, xl | 2px, 4px, 6px, 8px, 12px, 99px (full) |
+| `spacing` | 2xs, xs, xs-sm, sm, sm-md, md, md-lg, lg, xl, 2xl–5xl | 2, 4, 6, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128px. Hyphenated steps sit between their neighbours. CSS: `var(--mantine-spacing-<key>)` |
 | `shadow` | xs, sm, md, lg, xl | Elevation scale |
 | `typography.font-family` | sans, mono | System stack |
 | `typography.font-size` | xs through xl | Type scale |
