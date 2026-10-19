@@ -81,17 +81,26 @@
     }
   },
   "spacing": {
+    "2xs": { "$value": "2px", "$type": "dimension" },
     "xs": { "$value": "4px", "$type": "dimension" },
+    "xs-sm": { "$value": "6px", "$type": "dimension" },
     "sm": { "$value": "8px", "$type": "dimension" },
+    "sm-md": { "$value": "12px", "$type": "dimension" },
     "md": { "$value": "16px", "$type": "dimension" },
+    "md-lg": { "$value": "20px", "$type": "dimension" },
     "lg": { "$value": "24px", "$type": "dimension" },
-    "xl": { "$value": "32px", "$type": "dimension" }
+    "xl": { "$value": "32px", "$type": "dimension" },
+    "2xl": { "$value": "48px", "$type": "dimension" },
+    "3xl": { "$value": "64px", "$type": "dimension" },
+    "4xl": { "$value": "96px", "$type": "dimension" },
+    "5xl": { "$value": "128px", "$type": "dimension" }
   },
   "radius": {
     "xs": { "$value": "2px", "$type": "dimension" },
     "sm": { "$value": "4px", "$type": "dimension" },
     "md": { "$value": "6px", "$type": "dimension" },
     "lg": { "$value": "8px", "$type": "dimension" },
+    "lg-xl": { "$value": "12px", "$type": "dimension" },
     "xl": { "$value": "99px", "$type": "dimension" }
   },
   "shadow": {
