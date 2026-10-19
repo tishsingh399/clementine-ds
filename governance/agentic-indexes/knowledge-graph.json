@@ -1,5 +1,5 @@
 {
-  "generated_from_last_verified": "2026-10-06T00:00:00.000Z",
+  "generated_from_last_verified": "2026-10-18T00:00:00.000Z",
   "source": "specs/**/index.md",
   "purpose": "Impact graph for agent planning. Generated from Clementine spec frontmatter.",
   "totals": {
@@ -480,12 +480,15 @@
         "badge.bg.success",
         "badge.bg.error",
         "badge.bg.warning",
+        "badge.bg.info",
         "badge.bg.risk-critical",
         "badge.bg.risk-high",
         "badge.bg.risk-medium",
         "badge.bg.risk-low",
         "badge.fg.default",
-        "badge.radius"
+        "badge.radius",
+        "badge.height.sm",
+        "badge.height.md"
       ],
       "parts": [
         "root",
@@ -4452,6 +4455,9 @@
       "badge.bg.warning": [
         "badge"
       ],
+      "badge.bg.info": [
+        "badge"
+      ],
       "badge.bg.risk-critical": [
         "badge"
       ],
@@ -4468,6 +4474,12 @@
         "badge"
       ],
       "badge.radius": [
+        "badge"
+      ],
+      "badge.height.sm": [
+        "badge"
+      ],
+      "badge.height.md": [
         "badge"
       ],
       "breadcrumbs.fg": [

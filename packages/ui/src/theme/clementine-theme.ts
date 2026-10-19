@@ -208,14 +208,25 @@ export const clementineTheme = createTheme({
     // are inline: they cannot hold selectors, so state rules never go there.
     Button: {
       // md is the spec's default size (40px); Mantine's own default is sm.
-      defaultProps: { radius: 'md', size: 'md' },
-      vars: (_theme: unknown, props: { variant?: string; color?: string; size?: string }) => {
-        // Height comes from button.height.{sm,md,lg} for every variant. Sizes the
-        // spec doesn't define (xs, xl, compact-*) keep Mantine's own height.
-        const height =
-          props.size === 'sm' || props.size === 'md' || props.size === 'lg'
-            ? { '--button-height': `var(--cds-button-height-${props.size})` }
-            : {};
+      defaultProps: { size: 'md' },
+      vars: (_theme: unknown, props: { variant?: string; color?: string; size?: string; radius?: unknown }) => {
+        // Height, padding and type size follow the Figma Button set for sm/md/lg:
+        // padding is bound to spacing/{sm-md,md,md-lg}, text is Label/Default
+        // (sm, md) and Body/Strong (lg). Sizes the spec doesn't define (xs, xl,
+        // compact-*) keep Mantine's own.
+        const s = props.size;
+        const sized = s === 'sm' || s === 'md' || s === 'lg';
+        const height = {
+          ...(sized
+            ? {
+                '--button-height': `var(--cds-button-height-${s})`,
+                '--button-padding-x': `var(--mantine-spacing-${{ sm: 'sm-md', md: 'md', lg: 'md-lg' }[s]})`,
+                '--button-fz': s === 'lg' ? 'var(--mantine-font-size-md)' : 'var(--mantine-font-size-sm)',
+              }
+            : {}),
+          // An explicit radius prop still wins.
+          ...(props.radius === undefined ? { '--button-radius': 'var(--cds-button-radius)' } : {}),
+        };
         const isOutline = props.variant === 'outline' || props.variant === 'default';
         const isSubtle =
           props.variant === 'subtle' || props.variant === 'light' || props.variant === 'transparent';
@@ -226,6 +237,8 @@ export const clementineTheme = createTheme({
               ...height,
               '--button-bg': 'var(--cds-button-bg-outline-default)',
               '--button-hover': 'var(--cds-button-bg-outline-hover)',
+              // Pressed: the filled active colour under dark outline text failed contrast.
+              '--button-active': 'var(--cds-button-bg-outline-hover)',
               '--button-color': 'var(--cds-button-fg-on-outline)',
               // Mantine reads --button-bd as a whole border, not a colour: a bare
               // colour is invalid and the outline variant rendered no border.
@@ -234,7 +247,14 @@ export const clementineTheme = createTheme({
           };
         }
         if (isSubtle) {
-          return { root: { ...height, '--button-color': 'var(--cds-button-fg-on-subtle)' } };
+          return {
+            root: {
+              ...height,
+              '--button-color': 'var(--cds-button-fg-on-subtle)',
+              '--button-hover': 'var(--cds-button-bg-outline-hover)',
+              '--button-active': 'var(--cds-button-bg-outline-hover)',
+            },
+          };
         }
         // filled (default) — primary or destructive
         return {
@@ -246,11 +266,21 @@ export const clementineTheme = createTheme({
             '--button-hover': destructive
               ? 'var(--cds-button-bg-destructive-hover)'
               : 'var(--cds-button-bg-hover)',
+            '--button-active': destructive
+              ? 'var(--cds-button-bg-destructive-hover)'
+              : 'var(--cds-button-bg-active)',
             '--button-color': 'var(--cds-button-fg-on-filled)',
-            '--button-bd': 'var(--cds-button-border-default)',
           },
         };
       },
+      // Weight and line height of the Figma text styles; Mantine's are 600 and 1.
+      styles: (_theme: unknown, props: { size?: string }) =>
+        props.size === 'sm' || props.size === 'md' || props.size === 'lg'
+          ? {
+              root: { fontWeight: props.size === 'lg' ? 600 : 500 },
+              label: { lineHeight: props.size === 'lg' ? '24px' : '20px' },
+            }
+          : {},
     },
     TextInput: {
       // md (40px) matches Button's md, so a field and a button line up in a row.
@@ -267,6 +297,9 @@ export const clementineTheme = createTheme({
         return {
           wrapper: {
             ...height,
+            // Figma: 12px side padding and Body/Small (14px) text at every size.
+            '--input-padding': 'var(--mantine-spacing-sm-md)',
+            '--input-fz': 'var(--mantine-font-size-sm)',
             '--input-bg': 'var(--cds-text-input-bg-default)',
             '--input-color': 'var(--cds-text-input-fg-value)',
             '--input-bd': hasError
@@ -676,12 +709,29 @@ export const clementineTheme = createTheme({
       },
     },
     Badge: {
-      defaultProps: { radius: 'sm', variant: 'light' },
+      defaultProps: { radius: 'sm', variant: 'light', size: 'md' },
+      // Figma Badge sizes SM/MD: height from badge.height, padding bound to
+      // spacing/{xs-sm,sm}, text Label/Small (12/16 Medium). Other sizes keep Mantine's.
+      vars: (_theme: unknown, props: { size?: string }) =>
+        props.size === 'sm' || props.size === 'md'
+          ? {
+              root: {
+                '--badge-height': `var(--cds-badge-height-${props.size})`,
+                '--badge-padding-x': `var(--mantine-spacing-${props.size === 'sm' ? 'xs-sm' : 'sm'})`,
+                '--badge-fz': 'var(--mantine-font-size-xs)',
+                '--badge-lh': '16px',
+              },
+            }
+          : { root: {} },
       styles: {
         root: {
           backgroundColor: 'var(--cds-badge-bg-neutral)',
           color: 'var(--cds-badge-fg-default)',
           borderRadius: 'var(--cds-badge-radius)',
+          // Mantine badges are bold uppercase; the Figma Badge is sentence case.
+          textTransform: 'none',
+          fontWeight: 500,
+          letterSpacing: '0.1px',
         },
         section: { color: 'var(--cds-badge-fg-default)' },
       },

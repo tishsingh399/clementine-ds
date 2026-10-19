@@ -331,6 +331,10 @@
         "$value": "{feedback.warning-subtle}",
         "$type": "color"
       },
+      "info": {
+        "$value": "{feedback.info-subtle}",
+        "$type": "color"
+      },
       "risk-critical": {
         "$value": "{risk.critical-subtle}",
         "$type": "color"
@@ -357,6 +361,16 @@
     "radius": {
       "$value": "{radius.sm}",
       "$type": "dimension"
+    },
+    "height": {
+      "sm": {
+        "$value": "18px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "22px",
+        "$type": "dimension"
+      }
     }
   },
   "breadcrumbs": {
