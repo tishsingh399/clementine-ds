@@ -2,6 +2,7 @@
 
 export type BadgeToken =
   | "badge.bg.error"
+  | "badge.bg.info"
   | "badge.bg.neutral"
   | "badge.bg.risk-critical"
   | "badge.bg.risk-high"
@@ -10,10 +11,13 @@ export type BadgeToken =
   | "badge.bg.success"
   | "badge.bg.warning"
   | "badge.fg.default"
+  | "badge.height.md"
+  | "badge.height.sm"
   | "badge.radius";
 
 export const badgeTokens = {
   bgError: "badge.bg.error",
+  bgInfo: "badge.bg.info",
   bgNeutral: "badge.bg.neutral",
   bgRiskCritical: "badge.bg.risk-critical",
   bgRiskHigh: "badge.bg.risk-high",
@@ -22,6 +26,8 @@ export const badgeTokens = {
   bgSuccess: "badge.bg.success",
   bgWarning: "badge.bg.warning",
   fgDefault: "badge.fg.default",
+  heightMd: "badge.height.md",
+  heightSm: "badge.height.sm",
   radius: "badge.radius",
 } as const satisfies Record<string, BadgeToken>;
 
