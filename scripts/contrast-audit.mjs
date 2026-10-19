@@ -94,6 +94,22 @@ const PAIRS = [
   ['risk.high', 'surface.elevated', 'ui'],
   ['risk.medium', 'surface.elevated', 'ui'],
   ['risk.low', 'surface.elevated', 'ui'],
+  // solid status fills (filled badges, toasts) carry on-colour text and icons
+  ['text.on-action', 'feedback.error-solid', 'text'],
+  ['text.on-action', 'feedback.success-solid', 'text'],
+  ['text.contrast.on-bright', 'feedback.warning-solid', 'text'],
+  ['text.on-action', 'feedback.info-solid', 'text'],
+  ['text.on-action', 'feedback.info-solid-hover', 'text'],
+  // hover text and icons
+  ['text.link-hover', 'surface.elevated', 'text'],
+  ['icon.secondary-hover', 'surface.subtle-hover', 'ui'],  // hovered icon button
+  ['icon.action-hover', 'surface.elevated', 'ui'],
+  // on-colour icons (icon in a filled button, icon on the clementine accent)
+  ['icon.on-action', 'action.primary', 'ui'],
+  ['icon.on-action', 'action.destructive', 'ui'],
+  ['icon.on-action', 'feedback.info-solid', 'ui'],
+  ['icon.contrast.on-bright', 'accent.brand', 'ui'],
+  ['text.contrast.on-bright', 'accent.brand', 'text'],
   // borders & focus (1.4.11 UI components — 3:1 against adjacent surface)
   ['border.strong', 'surface.elevated', 'ui'],   // input borders
   ['border.default', 'surface.elevated', 'ui'],   // dividers (decorative — informational only)
