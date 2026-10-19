@@ -149,15 +149,26 @@ export const clementineTheme = createTheme({
     sm: p.radiusSm,
     md: p.radiusMd,
     lg: p.radiusLg,
+    'lg-xl': p.radiusLgXl,
     xl: p.radiusXl,
   },
 
+  // Keys match the Figma spacing/* names; each emits --mantine-spacing-<key>,
+  // which is the WEB code syntax on the Figma variables.
   spacing: {
+    '2xs': p.spacing2xs,
     xs: p.spacingXs,
+    'xs-sm': p.spacingXsSm,
     sm: p.spacingSm,
+    'sm-md': p.spacingSmMd,
     md: p.spacingMd,
+    'md-lg': p.spacingMdLg,
     lg: p.spacingLg,
     xl: p.spacingXl,
+    '2xl': p.spacing2xl,
+    '3xl': p.spacing3xl,
+    '4xl': p.spacing4xl,
+    '5xl': p.spacing5xl,
   },
 
   shadows: {

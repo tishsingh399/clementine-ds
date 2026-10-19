@@ -115,3 +115,44 @@ components. Componentizing them would be wrong.
 > write script begins with a page-count guard (`if (figma.root.children.length < 9)
 > return 'ABORT'`) so a stray plugin connection to the 1-page draft can't take the
 > writes. Keep the Desktop Bridge open only in the 14-page canonical file.
+
+## Spacing, gap and radius bindings (2026-10-18)
+
+Colour fills were bound in June; layout values were not. Across the 16 component
+pages, 0 of 1,808 paddings and 0 of 528 gaps were bound, and 728 of 3,140 radius
+corners were. The scale had no 6, 12 or 20, which are three of the most common
+values, so there was nothing to bind them to.
+
+**Scale.** Added `spacing/xs-sm` 6, `spacing/sm-md` 12, `spacing/md-lg` 20 and
+`radius/lg-xl` 12 to *Clementine · Primitives*, and mirrored them (plus
+`spacing/2xs` and `2xl` to `5xl`, which were Figma-only) in
+`packages/tokens/src/primitives.json` and the Mantine theme. Every spacing
+primitive is now scoped to `GAP`, which covers padding and gap. Radius
+primitives stay unscoped, like before, because the component `*/radius`
+variables are what designers pick. WEB code syntax is
+`var(--mantine-spacing-<key>)` / `var(--mantine-radius-<key>)`, the variables
+the theme really emits.
+
+**Script.** [`bind-spacing.js`](bind-spacing.js): exact match first, then these snaps:
+
+| Raw | Bound to | Where |
+|---|---|---|
+| 10 | 8 | Chip, Pill, Tooltip, Badge, AttachmentPill, DisclosureBadge, MessageReaction, CitationChip, Kbd, Code, Mention, StatusDot |
+| 10 | 12 | everything else (inputs, rows, cards) |
+| 14 | 12 (gap) / 16 (padding) | all, including the 20/14/12 specimen card used by ~50 single components |
+| 5→4, 3→4, 9→8, 7→8, 22→24, 18→16 | | spacing |
+| 999 → 99, any radius ≥ half the node's short side → `radius/xl` | | circles and pills |
+| 3/5→4, 10→8, 14→12, 1→2 | | other radii |
+
+Alert grew 4px per variant from the 14→16 padding snap, so its variants were
+restacked with a 16px gap. No other component set overlaps.
+
+**Result.** Padding 1,777 / 1,808 bound, gap 516 / 528, radius 3,136 / 3,140.
+
+**Exceptions, left raw on purpose:**
+
+- 1px insets (24): CommandPalette and TraceTree hairlines.
+- Negative gaps (11): Avatar, AvatarGroup, DataGrid avatar overlap (−8, −10).
+- 40px (3 padding, 1 gap): Navbar, Sidebar + AppShell Layout, TraceTree indent.
+- Carousel slide padding 28 / 36 (4): centres the slide label in a fixed frame.
+- CommandPalette radius 24 (4 corners).
