@@ -55,11 +55,11 @@ The agent's current state — idle / thinking / calling tool / waiting on you / 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `agent-status.idle` | `{text.tertiary}` | `#737370` |
-| `agent-status.busy` | `{action.primary}` | `#2563eb` |
-| `agent-status.waiting` | `{feedback.warning}` | `#ea580c` |
-| `agent-status.done` | `{feedback.success}` | `#16a34a` |
-| `agent-status.error` | `{feedback.error}` | `#dc2626` |
+| `agent-status.idle` | `{text.tertiary}` | `#6e6b65` |
+| `agent-status.busy` | `{action.primary}` | `#305eb7` |
+| `agent-status.waiting` | `{feedback.warning}` | `#855905` |
+| `agent-status.done` | `{feedback.success}` | `#198044` |
+| `agent-status.error` | `{feedback.error}` | `#c1332f` |
 
 **Do:** Pair the indicator with text; Announce changes politely; Distinguish waiting-on-you clearly.
 **Don't:** Use a bare color/spinner with no label; Conflate error with refusal.

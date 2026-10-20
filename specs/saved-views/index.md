@@ -1,8 +1,8 @@
 ---
 component: saved-views
-ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-19 verified)
 status: AI-Ready
-last_verified: 2026-10-17
+last_verified: 2026-10-19
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -51,8 +51,8 @@ Switch between saved filter/column configurations, and save the current one.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `saved-views.active-fg` | `{text.link}` | `#2563eb` |
-| `saved-views.fg` | `{text.secondary}` | `#6b6b66` |
+| `saved-views.active-fg` | `{text.link}` | `#3960ab` |
+| `saved-views.fg` | `{text.secondary}` | `#65635e` |
 
 **Do:** Mark the active view (aria-current); Let users save the current config.
 **Don't:** Lose the active indicator; Overwrite a shared view without confirm.

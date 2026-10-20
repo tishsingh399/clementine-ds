@@ -61,8 +61,8 @@ The prompt input. Autosizing textarea + a Send affordance that becomes **Stop** 
 | Part | State | Token | Light |
 |---|---|---|---|
 | container | idle | `composer.bg` / `composer.border` | `#ffffff` / `#e5e5e0` |
-| container | focus | `composer.border-focus` | `#f5631a` |
-| send | idle | `composer.send-bg` → `{action.primary}` | `#2563eb` |
-| stop | busy | `composer.stop-bg` → `{action.destructive}` | `#dc2626` |
+| container | focus | `composer.border-focus` | `#e86800` |
+| send | idle | `composer.send-bg` → `{action.primary}` | `#305eb7` |
+| stop | busy | `composer.stop-bg` → `{action.destructive}` | `#c1332f` |
 
 **Do** disable Send on empty input; show "AI can make mistakes" disclosure below ([content](../../content/disclosure-copy.md)). **Don't** submit on Enter while busy.

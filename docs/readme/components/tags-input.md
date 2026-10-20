@@ -53,12 +53,12 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens.
 | Token | Resolves through | Light value |
 |---|---|---|
 | `tags-input.bg` | `{surface.elevated}` | `#ffffff` |
-| `tags-input.border` | `{border.strong}` | `#737370` |
-| `tags-input.border-focus` | `{focus.ring}` | `#f5631a` |
-| `tags-input.fg` | `{text.primary}` | `#1a1a18` |
-| `tags-input.placeholder` | `{text.tertiary}` | `#737370` |
-| `tags-input.pill-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `tags-input.pill-fg` | `{text.primary}` | `#1a1a18` |
+| `tags-input.border` | `{border.strong}` | `#83807a` |
+| `tags-input.border-focus` | `{focus.ring}` | `#e86800` |
+| `tags-input.fg` | `{text.primary}` | `#2a2926` |
+| `tags-input.placeholder` | `{text.tertiary}` | `#6e6b65` |
+| `tags-input.pill-bg` | `{surface.subtle}` | `#efeeec` |
+| `tags-input.pill-fg` | `{text.primary}` | `#2a2926` |
 | `tags-input.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

@@ -46,7 +46,7 @@ export function deriveExpected({ primitives, semantic, components }) {
     const m = /^\{(.+)\}$/.exec(value);
     if (!m || depth > 20) return value;
     const node = lookup(sem, m[1]) ?? lookup(primitives, m[1]);
-    return node && typeof node.$value === 'string' ? resolve(node.$value, sem, depth + 1) : value;
+    return node && typeof node.$value === 'string' ? resolve(node.$value, {}, depth + 1) : value;
   };
   const expected = [];
   const walk = (tree, path = []) => {

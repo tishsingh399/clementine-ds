@@ -52,8 +52,8 @@ The action row on a Message — copy, edit, regenerate, branch. Only handlers yo
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `message-actions.fg` | `{text.secondary}` | `#6b6b66` |
-| `message-actions.fg-hover` | `{text.primary}` | `#1a1a18` |
+| `message-actions.fg` | `{text.secondary}` | `#65635e` |
+| `message-actions.fg-hover` | `{text.primary}` | `#2a2926` |
 
 **Do:** Label every icon; pair with Tooltip; Show on hover/focus, keep keyboard-reachable.
 **Don't:** Hide critical actions behind hover only; Ship unlabeled icons.

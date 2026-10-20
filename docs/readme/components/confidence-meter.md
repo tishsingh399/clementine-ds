@@ -49,11 +49,11 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 5 component-
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `confidence.track` | `{surface.subtle}` | `#f3f3f0` |
-| `confidence.high` | `{feedback.success}` | `#16a34a` |
-| `confidence.medium` | `{feedback.warning}` | `#ea580c` |
-| `confidence.low` | `{feedback.error}` | `#dc2626` |
-| `confidence.label` | `{text.secondary}` | `#6b6b66` |
+| `confidence.track` | `{surface.subtle}` | `#efeeec` |
+| `confidence.high` | `{feedback.success}` | `#198044` |
+| `confidence.medium` | `{feedback.warning}` | `#855905` |
+| `confidence.low` | `{feedback.error}` | `#c1332f` |
+| `confidence.label` | `{text.secondary}` | `#65635e` |
 
 ## Library notes
 

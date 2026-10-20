@@ -54,10 +54,10 @@ A hierarchical, expandable node list — file trees, org/permission hierarchies,
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `tree.fg` | `{text.primary}` | `#1a1a18` |
-| `tree.bg-selected` | `{surface.subtle}` | `#f3f3f0` |
-| `tree.guide` | `{border.default}` | `#e5e5e0` |
-| `tree.chevron` | `{text.secondary}` | `#6b6b66` |
+| `tree.fg` | `{text.primary}` | `#2a2926` |
+| `tree.bg-selected` | `{surface.subtle}` | `#efeeec` |
+| `tree.guide` | `{border.default}` | `#d5d3d0` |
+| `tree.chevron` | `{text.secondary}` | `#65635e` |
 
 **Do:** Support keyboard nav (arrows expand/collapse/move); Show selection + expansion clearly.
 **Don't:** Hide deep nodes with no affordance; Rely on indentation alone.

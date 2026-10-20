@@ -54,10 +54,10 @@ A proposed change shown as added/removed lines with accept/reject — pairs with
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `diff-view.added-bg` | `{feedback.success-subtle}` | `#f0fdf4` |
-| `diff-view.removed-bg` | `{feedback.error-subtle}` | `#fef2f2` |
-| `diff-view.fg` | `{text.primary}` | `#1a1a18` |
-| `diff-view.gutter` | `{border.default}` | `#e5e5e0` |
+| `diff-view.added-bg` | `{feedback.success-subtle}` | `#ddf5e2` |
+| `diff-view.removed-bg` | `{feedback.error-subtle}` | `#fee8e5` |
+| `diff-view.fg` | `{text.primary}` | `#2a2926` |
+| `diff-view.gutter` | `{border.default}` | `#d5d3d0` |
 
 **Do:** Mark add/remove with sign + color (not color alone); Offer per-change accept/reject.
 **Don't:** Apply changes silently; Use color as the only signal.

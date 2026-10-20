@@ -1,8 +1,8 @@
 ---
 component: presence-indicator
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -53,11 +53,11 @@ Who is here, as a stack of avatars each with a presence dot.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `presence-indicator.online` | `{feedback.success}` | `#16a34a` |
-| `presence-indicator.away` | `{feedback.warning}` | `#ea580c` |
-| `presence-indicator.busy` | `{feedback.error}` | `#dc2626` |
-| `presence-indicator.offline` | `{text.tertiary}` | `#737370` |
-| `presence-indicator.ring` | `{surface.default}` | `#fafaf8` |
+| `presence-indicator.online` | `{feedback.success}` | `#198044` |
+| `presence-indicator.away` | `{feedback.warning}` | `#855905` |
+| `presence-indicator.busy` | `{feedback.error}` | `#c1332f` |
+| `presence-indicator.offline` | `{text.tertiary}` | `#6e6b65` |
+| `presence-indicator.ring` | `{surface.default}` | `#f6f6f4` |
 
 **Do:** Pair dot with the person name (tooltip); Cap the stack with a +N.
 **Don't:** Convey presence by color alone; Show stale presence as live.

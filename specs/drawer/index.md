@@ -75,9 +75,9 @@ A panel that slides in from a screen edge for a secondary task — filters, reco
 |---|---|---|
 | panel fill | `drawer.bg` → `{surface.elevated}` | `#ffffff` |
 | scrim | `drawer.overlay` → `{surface.overlay}` | `rgba(0,0,0,0.4)` |
-| border | `drawer.border` → `{border.default}` | `#e5e5e0` |
-| title | `drawer.fg.title` → `{text.primary}` | `#1a1a18` |
-| body | `drawer.fg.body` → `{text.secondary}` | `#6b6b66` |
+| border | `drawer.border` → `{border.default}` | `#d5d3d0` |
+| title | `drawer.fg.title` → `{text.primary}` | `#2a2926` |
+| body | `drawer.fg.body` → `{text.secondary}` | `#65635e` |
 | corners | `drawer.radius` → `{radius.lg}` | `8px` |
 
 ## 4. States

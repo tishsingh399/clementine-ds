@@ -1,8 +1,8 @@
 ---
 component: activity-feed
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -53,9 +53,9 @@ A chronological stream of who-did-what-when (audit-adjacent, human-readable).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `activity-feed.actor` | `{text.primary}` | `#1a1a18` |
-| `activity-feed.action` | `{text.primary}` | `#1a1a18` |
-| `activity-feed.meta` | `{text.tertiary}` | `#737370` |
+| `activity-feed.actor` | `{text.primary}` | `#2a2926` |
+| `activity-feed.action` | `{text.primary}` | `#2a2926` |
+| `activity-feed.meta` | `{text.tertiary}` | `#6e6b65` |
 
 **Do:** Attribute each item to an actor + time; Order consistently (newest first).
 **Don't:** Drop attribution; Mix orderings.

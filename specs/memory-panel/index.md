@@ -56,9 +56,9 @@ The persistent facts an agent holds about the user/context — viewable and dele
 | Token | Resolves through | Light |
 |---|---|---|
 | `memory-panel.bg` | `{surface.elevated}` | `#ffffff` |
-| `memory-panel.border` | `{border.default}` | `#e5e5e0` |
-| `memory-panel.fg` | `{text.primary}` | `#1a1a18` |
-| `memory-panel.remove` | `{text.secondary}` | `#6b6b66` |
+| `memory-panel.border` | `{border.default}` | `#d5d3d0` |
+| `memory-panel.fg` | `{text.primary}` | `#2a2926` |
+| `memory-panel.remove` | `{text.secondary}` | `#65635e` |
 
 **Do:** Make every fact deletable; Show what is remembered plainly; Confirm destructive clears.
 **Don't:** Hide what the agent remembers; Make memory un-editable.

@@ -49,9 +49,9 @@ Status: `AI-Ready` · Tray 4 (AI surface). Token contract closed at 4 component-
 | Token | Resolves through | Light value |
 |---|---|---|
 | `agent-card.bg` | `{surface.elevated}` | `#ffffff` |
-| `agent-card.border` | `{border.default}` | `#e5e5e0` |
-| `agent-card.name` | `{text.primary}` | `#1a1a18` |
-| `agent-card.meta` | `{text.secondary}` | `#6b6b66` |
+| `agent-card.border` | `{border.default}` | `#d5d3d0` |
+| `agent-card.name` | `{text.primary}` | `#2a2926` |
+| `agent-card.meta` | `{text.secondary}` | `#65635e` |
 
 ## Library notes
 

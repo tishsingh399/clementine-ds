@@ -47,8 +47,8 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 2 component-tie
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `saved-views.active-fg` | `{action.primary}` | `#2563eb` |
-| `saved-views.fg` | `{text.secondary}` | `#6b6b66` |
+| `saved-views.active-fg` | `{action.primary}` | `#305eb7` |
+| `saved-views.fg` | `{text.secondary}` | `#65635e` |
 
 ## Library notes
 

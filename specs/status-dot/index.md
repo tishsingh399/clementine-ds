@@ -53,11 +53,11 @@ A small colored dot plus a text label for presence or health state.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `status-dot.online` | `{feedback.success}` | `#16a34a` |
-| `status-dot.offline` | `{text.tertiary}` | `#737370` |
-| `status-dot.busy` | `{feedback.error}` | `#dc2626` |
-| `status-dot.away` | `{feedback.warning}` | `#ea580c` |
-| `status-dot.label` | `{text.primary}` | `#1a1a18` |
+| `status-dot.online` | `{feedback.success}` | `#198044` |
+| `status-dot.offline` | `{text.tertiary}` | `#6e6b65` |
+| `status-dot.busy` | `{feedback.error}` | `#c1332f` |
+| `status-dot.away` | `{feedback.warning}` | `#855905` |
+| `status-dot.label` | `{text.primary}` | `#2a2926` |
 
 **Do:** Always pair the dot with a text label; Keep the color set consistent across the app.
 **Don't:** Use the dot color as the only signal (WCAG 1.4.1); Invent new status colors.

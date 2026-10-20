@@ -1,8 +1,8 @@
 ---
 component: avatar
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -88,10 +88,10 @@ A compact, recognizable stand-in for a person or entity — a photo, initials, o
 
 | Part | Token | Resolves (light) |
 |---|---|---|
-| placeholder fill | `avatar.bg` → `{surface.subtle}` | `#f3f3f0` |
-| initials / icon | `avatar.fg` → `{text.secondary}` | `#6b6b66` |
-| ring between stacked members | `avatar.border` → `{border.default}` | `#e5e5e0` |
-| focus ring (interactive) | `avatar.ring` → `{focus.ring}` | `#f5631a` |
+| placeholder fill | `avatar.bg` → `{surface.subtle}` | `#efeeec` |
+| initials / icon | `avatar.fg` → `{text.secondary}` | `#65635e` |
+| ring between stacked members | `avatar.border` → `{border.default}` | `#d5d3d0` |
+| focus ring (interactive) | `avatar.ring` → `{focus.ring}` | `#e86800` |
 | corners | `avatar.radius` → `{radius.xl}` | `99px` (full) |
 
 ## 3. Interaction States

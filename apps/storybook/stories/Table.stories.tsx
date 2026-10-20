@@ -4,7 +4,7 @@ const meta: Meta<typeof Table> = { title:'Components/Table', component: Table, a
   <Table {...args} w={520}>
     <TableThead><TableTr><TableTh>User</TableTh><TableTh>Access</TableTh><TableTh>Status</TableTh></TableTr></TableThead>
     <TableTbody>
-      <TableTr><TableTd>Tina Singh</TableTd><TableTd>Standing</TableTd><TableTd><Badge>Active</Badge></TableTd></TableTr>
+      <TableTr><TableTd>Ana Lee</TableTd><TableTd>Standing</TableTd><TableTd><Badge>Active</Badge></TableTd></TableTr>
       <TableTr><TableTd>Jordan Lee</TableTd><TableTd>Just-in-time</TableTd><TableTd><Badge color="gray">Expired</Badge></TableTd></TableTr>
       <TableTr><TableTd>Sam Park</TableTd><TableTd>Standing</TableTd><TableTd><Badge>Active</Badge></TableTd></TableTr>
     </TableTbody>

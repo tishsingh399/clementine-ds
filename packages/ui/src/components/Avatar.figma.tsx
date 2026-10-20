@@ -12,5 +12,5 @@ figma.connect(Avatar, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Cleme
   props: {
     size: figma.enum('Size', { XS: 'xs', SM: 'sm', MD: 'md', LG: 'lg', XL: 'xl', '2XL': 'xl' }),
   },
-  example: ({ size }) => <Avatar name="Tina Singh" size={size} />,
+  example: ({ size }) => <Avatar name="Ana Lee" size={size} />,
 });

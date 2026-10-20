@@ -1,0 +1,28 @@
+{
+  "kanban-board": {
+    "column-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "column-border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "header-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "count": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "over-limit": {
+      "$value": "{text.warning}",
+      "$type": "color"
+    },
+    "empty": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}

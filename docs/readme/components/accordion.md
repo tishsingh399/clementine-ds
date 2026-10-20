@@ -14,13 +14,13 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `accordion.bg` | `{surface.default}` | `#fafaf8` |
-| `accordion.bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `accordion.border` | `{border.default}` | `#e5e5e0` |
-| `accordion.fg.label` | `{text.primary}` | `#1a1a18` |
-| `accordion.fg.content` | `{text.secondary}` | `#6b6b66` |
-| `accordion.fg.chevron` | `{text.secondary}` | `#6b6b66` |
-| `accordion.border-focus` | `{focus.ring}` | `#f5631a` |
+| `accordion.bg` | `{surface.default}` | `#f6f6f4` |
+| `accordion.bg-hover` | `{surface.subtle}` | `#efeeec` |
+| `accordion.border` | `{border.default}` | `#d5d3d0` |
+| `accordion.fg.label` | `{text.primary}` | `#2a2926` |
+| `accordion.fg.content` | `{text.secondary}` | `#65635e` |
+| `accordion.fg.chevron` | `{text.secondary}` | `#65635e` |
+| `accordion.border-focus` | `{focus.ring}` | `#e86800` |
 | `accordion.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

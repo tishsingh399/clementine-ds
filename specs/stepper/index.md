@@ -1,8 +1,8 @@
 ---
 component: stepper
-ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-19 verified)
 status: AI-Ready
-last_verified: 2026-10-17
+last_verified: 2026-10-19
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 verified_gaps: 2
@@ -58,13 +58,13 @@ Ordered progress through a multi-step flow (wizard, onboarding, guided setup).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `stepper.bg-completed` | `{action.primary}` | `#2563eb` |
-| `stepper.bg-active` | `{action.primary}` | `#2563eb` |
-| `stepper.bg-pending` | `{surface.subtle}` | `#f3f3f0` |
+| `stepper.bg-completed` | `{action.primary}` | `#305eb7` |
+| `stepper.bg-active` | `{action.primary}` | `#305eb7` |
+| `stepper.bg-pending` | `{surface.subtle}` | `#efeeec` |
 | `stepper.fg-active` | `{text.on-action}` | `#ffffff` |
-| `stepper.fg-pending` | `{text.secondary}` | `#6b6b66` |
-| `stepper.separator` | `{border.default}` | `#e5e5e0` |
-| `stepper.border-focus` | `{focus.ring}` | `#f5631a` |
+| `stepper.fg-pending` | `{text.secondary}` | `#65635e` |
+| `stepper.separator` | `{border.default}` | `#d5d3d0` |
+| `stepper.border-focus` | `{focus.ring}` | `#e86800` |
 
 **Do:** Show total + current position; mark active with aria-current="step"; Validate per step; preserve data on Back; Gate the final commit behind a Review step.
 **Don't:** Hide the finish line; Lose entered data when going Back; Signal the active step by color alone.

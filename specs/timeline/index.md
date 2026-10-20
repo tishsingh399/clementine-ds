@@ -1,8 +1,8 @@
 ---
 component: timeline
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 verified_gaps: 2
@@ -56,11 +56,11 @@ Show a sequence of events over time — an access request lifecycle, an activity
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `timeline.line` | `{border.default}` | `#e5e5e0` |
-| `timeline.bullet` | `{surface.subtle}` | `#f3f3f0` |
-| `timeline.bullet-active` | `{action.primary}` | `#2563eb` |
-| `timeline.fg-title` | `{text.primary}` | `#1a1a18` |
-| `timeline.fg-body` | `{text.secondary}` | `#6b6b66` |
+| `timeline.line` | `{border.default}` | `#d5d3d0` |
+| `timeline.bullet` | `{surface.subtle}` | `#efeeec` |
+| `timeline.bullet-active` | `{action.primary}` | `#305eb7` |
+| `timeline.fg-title` | `{text.primary}` | `#2a2926` |
+| `timeline.fg-body` | `{text.secondary}` | `#65635e` |
 
 **Do:** Order newest- or oldest-first consistently; Mark completed vs upcoming with bullet AND label; Keep each item title scannable.
 **Don't:** Mix orderings; Encode state by bullet color alone.

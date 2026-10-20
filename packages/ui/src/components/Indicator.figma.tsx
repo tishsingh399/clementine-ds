@@ -5,6 +5,6 @@ import { Indicator, Avatar } from './Indicator';
 // Publish with: npx figma connect publish  (requires FIGMA_ACCESS_TOKEN)
 figma.connect(Indicator, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS?node-id=16-1043', {
   example: () => (
-    <Indicator label="3"><Avatar name="Tina Singh" /></Indicator>
+    <Indicator label="3"><Avatar name="Ana Lee" /></Indicator>
   ),
 });

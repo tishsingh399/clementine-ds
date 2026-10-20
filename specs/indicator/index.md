@@ -1,8 +1,8 @@
 ---
 component: indicator
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -50,7 +50,7 @@ A small dot or count overlaid on another element (avatar, icon, tab) to flag new
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `indicator.bg` | `{feedback.error}` | `#dc2626` |
+| `indicator.bg` | `{feedback.error}` | `#c1332f` |
 | `indicator.fg` | `{text.on-action}` | `#ffffff` |
 
 **Do:** Give counts an accessible label ("3 unread"); Cap large counts ("9+"); Keep the dot from covering meaningful content.

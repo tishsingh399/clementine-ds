@@ -1,8 +1,8 @@
 ---
 component: description-list
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-17
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -51,8 +51,8 @@ Term/detail pairs for record metadata and key-value summaries; renders semantic 
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `description-list.term` | `{text.secondary}` | `#6b6b66` |
-| `description-list.detail` | `{text.primary}` | `#1a1a18` |
+| `description-list.term` | `{text.secondary}` | `#65635e` |
+| `description-list.detail` | `{text.primary}` | `#2a2926` |
 
 **Do:** Use real dl/dt/dd; Keep terms short + consistent.
 **Don't:** Fake it with a two-column table when it is metadata; Mix unrelated pairs.

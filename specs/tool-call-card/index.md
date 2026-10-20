@@ -62,9 +62,9 @@ A transparent record of a tool/function the agent invoked: name + status badge i
 
 | Status | Token | Light |
 |---|---|---|
-| pending | `tool-call.status.pending` → `{text.tertiary}` | `#737370` |
-| running | `tool-call.status.running` → `{action.primary}` | `#2563eb` |
-| success | `tool-call.status.success` → `{feedback.success}` | `#16a34a` |
-| error | `tool-call.status.error` → `{feedback.error}` | `#dc2626` |
+| pending | `tool-call.status.pending` → `{text.tertiary}` | `#6e6b65` |
+| running | `tool-call.status.running` → `{action.primary}` | `#305eb7` |
+| success | `tool-call.status.success` → `{feedback.success}` | `#198044` |
+| error | `tool-call.status.error` → `{feedback.error}` | `#c1332f` |
 
 **Do** show the tool name so the user knows *what* is happening. **Don't** hide a destructive tool call — pair it with a [HITLGate](../hitl-gate/index.md).
