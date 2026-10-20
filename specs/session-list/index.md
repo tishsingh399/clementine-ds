@@ -54,9 +54,9 @@ Past conversations — searchable and resumable, with the active one marked.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `session-list.item-bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `session-list.fg` | `{text.primary}` | `#1a1a18` |
-| `session-list.meta` | `{text.tertiary}` | `#737370` |
+| `session-list.item-bg-hover` | `{surface.subtle}` | `#efeeec` |
+| `session-list.fg` | `{text.primary}` | `#2a2926` |
+| `session-list.meta` | `{text.tertiary}` | `#6e6b65` |
 
 **Do:** Mark the active session (aria-current); Truncate long titles; show recency; Make rows keyboard-activatable.
 **Don't:** Lose the active indicator; Hide timestamps for long histories.

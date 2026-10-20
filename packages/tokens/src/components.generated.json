@@ -2981,11 +2981,11 @@
   },
   "undo-bar": {
     "bg": {
-      "$value": "{text.primary}",
+      "$value": "{surface.inverse}",
       "$type": "color"
     },
     "fg": {
-      "$value": "{text.on-action}",
+      "$value": "{text.on-inverse-strong}",
       "$type": "color"
     }
   },

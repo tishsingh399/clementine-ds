@@ -61,9 +61,9 @@ A human-in-the-loop checkpoint that pauses an agent before a consequential actio
 
 | Part | Token | Light |
 |---|---|---|
-| container | `hitl.bg` → `{feedback.warning-subtle}` | `#fff7ed` |
-| border | `hitl.border` → `{feedback.warning}` | `#ea580c` |
-| approve | `hitl.approve-bg` → `{action.primary}` | `#2563eb` |
-| approve (destructive) | `hitl.approve-destructive-bg` → `{action.destructive}` | `#dc2626` |
+| container | `hitl.bg` → `{feedback.warning-subtle}` | `#ffebcf` |
+| border | `hitl.border` → `{feedback.warning}` | `#855905` |
+| approve | `hitl.approve-bg` → `{action.primary}` | `#305eb7` |
+| approve (destructive) | `hitl.approve-destructive-bg` → `{action.destructive}` | `#c1332f` |
 
 **Do** require a gate for destructive/irreversible actions; show what will happen. **Don't** rely on color alone for "destructive" — set `destructive` AND use the verb ("Revoke").

@@ -49,7 +49,7 @@ Truncate long content to a max height with a show-more/less toggle.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `spoiler.control` | `{text.link}` | `#2563eb` |
+| `spoiler.control` | `{text.link}` | `#3960ab` |
 
 **Do:** Set a sensible max height; label the toggle clearly; Keep the toggle keyboard-operable.
 **Don't:** Hide essential content behind it; Use for navigation.

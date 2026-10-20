@@ -75,13 +75,13 @@ WAI-ARIA tree with one tab stop (roving tabindex). `↑`/`↓` move, `→` expan
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `trace-tree.fg` | `{text.primary}` | `#1a1a18` |
-| `trace-tree.row-bg-selected` | `{action.selected-subtle}` | `#eff4ff` |
-| `trace-tree.track` | `{surface.subtle}` | `#f3f3f0` |
-| `trace-tree.bar` | `{action.primary}` | `#2563eb` |
-| `trace-tree.bar-error` | `{feedback.error}` | `#dc2626` |
-| `trace-tree.duration` | `{text.secondary}` | `#6b6b66` |
-| `trace-tree.guide` | `{border.default}` | `#e5e5e0` |
+| `trace-tree.fg` | `{text.primary}` | `#2a2926` |
+| `trace-tree.row-bg-selected` | `{action.selected-subtle}` | `#e5eeff` |
+| `trace-tree.track` | `{surface.subtle}` | `#efeeec` |
+| `trace-tree.bar` | `{action.primary}` | `#305eb7` |
+| `trace-tree.bar-error` | `{feedback.error}` | `#c1332f` |
+| `trace-tree.duration` | `{text.secondary}` | `#65635e` |
+| `trace-tree.guide` | `{border.default}` | `#d5d3d0` |
 
 **Do:** Keep `type` to a small fixed vocabulary; show cost and token counts in the detail pane, not the row.
 **Don't:** Use it for flat lists of runs (use `Table`); encode status only in bar colour.

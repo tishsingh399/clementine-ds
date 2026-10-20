@@ -53,9 +53,9 @@ A primary action joined to a dropdown of related actions (Save / Save as…).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `split-button.bg` | `{action.primary}` | `#2563eb` |
+| `split-button.bg` | `{action.primary}` | `#305eb7` |
 | `split-button.fg` | `{text.on-action}` | `#ffffff` |
-| `split-button.divider` | `{border.default}` | `#e5e5e0` |
+| `split-button.divider` | `{border.default}` | `#d5d3d0` |
 | `split-button.radius` | `{radius.md}` | `6px` |
 
 **Do:** Make the primary action the most common one; Label the dropdown trigger.

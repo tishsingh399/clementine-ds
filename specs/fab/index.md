@@ -52,7 +52,7 @@ A floating action button for the single primary action on a surface (e.g. New).
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `fab.bg` | `{action.primary}` | `#2563eb` |
+| `fab.bg` | `{action.primary}` | `#305eb7` |
 | `fab.fg` | `{text.on-action}` | `#ffffff` |
 | `fab.shadow` | `{shadow.lg}` | `0 8px 24px rgba(0,0,0,0.16)` |
 | `fab.radius` | `{radius.xl}` | `99px` |

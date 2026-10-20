@@ -1,4 +1,4 @@
-import { createTheme, type CSSVariablesResolver } from '@mantine/core';
+import { createTheme, type CSSVariablesResolver, type MantineColorsTuple } from '@mantine/core';
 import * as p from '@clementine-ds/tokens';
 import lightTokens from '@clementine-ds/tokens/semantic-light';
 import darkTokens from '@clementine-ds/tokens/semantic-dark';
@@ -37,16 +37,25 @@ function resolveValue(value: string, semantic: AnyTree): string {
   if (!match) return value; // literal (hex, rgba, ms, dimension)
   const node = lookup(semantic, match[1]) ?? lookup(primitivesTree, match[1]);
   if (!node || typeof node.$value !== 'string') return value; // unresolved — keep the ref
-  return resolveValue(node.$value, semantic);
+  // After one hop the value has left the semantic layer; resolve further hops
+  // against primitives only (Figma reuses names like category/clementine in both).
+  return resolveValue(node.$value, {});
 }
 
-/** Flatten the semantic layer into `--<prefix>-<group>-<key>` vars (one per prefix). */
-function flattenSemanticTokens(semantic: AnyTree, prefixes: string[]): Record<string, string> {
+/** Flatten the semantic layer into `--<prefix>-<path>` vars (one per prefix), e.g. --cds-text-contrast-default. */
+function flattenSemanticTokens(
+  tree: AnyTree,
+  semantic: AnyTree,
+  prefixes: string[],
+  path: string[] = [],
+): Record<string, string> {
   const result: Record<string, string> = {};
-  for (const [group, entries] of Object.entries(semantic)) {
-    for (const [key, token] of Object.entries(entries as AnyTree)) {
-      const value = resolveValue((token as TokenObj).$value, semantic);
-      for (const prefix of prefixes) result[`${prefix}-${group}-${key}`] = value;
+  for (const [key, node] of Object.entries(tree)) {
+    if (node && typeof node === 'object' && '$value' in node) {
+      const value = resolveValue((node as TokenObj).$value, semantic);
+      for (const prefix of prefixes) result[`${prefix}-${[...path, key].join('-')}`] = value;
+    } else if (node && typeof node === 'object') {
+      Object.assign(result, flattenSemanticTokens(node as AnyTree, semantic, prefixes, [...path, key]));
     }
   }
   return result;
@@ -78,53 +87,61 @@ function flattenComponentTokens(
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
   variables: {},
   light: {
-    ...flattenSemanticTokens(lightTokens as AnyTree, ['--cds', '--tds']),
+    // Mantine's error colour is a red tuple index, which can't follow our per-mode text/error step.
+    '--mantine-color-error': resolveValue('{text.error}', lightTokens as AnyTree),
+    ...flattenSemanticTokens(lightTokens as AnyTree, lightTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, lightTokens as AnyTree),
   },
   dark: {
-    ...flattenSemanticTokens(darkTokens as AnyTree, ['--cds', '--tds']),
+    '--mantine-color-error': resolveValue('{text.error}', darkTokens as AnyTree),
+    ...flattenSemanticTokens(darkTokens as AnyTree, darkTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, darkTokens as AnyTree),
   },
 });
 
+// Palette steps (1-12) for each Mantine shade index 0-9.
+const SOLID = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // index 6 = step 9, the solid fill
+const GRAY = [2, 3, 4, 5, 6, 10, 11, 12, 12, 12]; // 0 canvas · 4 border.default · 5 placeholder · 6 dimmed
+const DARK = [12, 11, 11, 11, 7, 6, 3, 1, 1, 1]; // 3 placeholder = text.tertiary · 4 border · 5 control/hover surface (Chip, hover) · 6 Paper
+const pal = p as unknown as Record<string, string>;
+const steps = (hue: string, idx: number[], prefix = 'palette') =>
+  idx.map((n) => {
+    const v = pal[`${prefix}${hue}${n}`];
+    if (!v) throw new Error(`clementine-theme: missing primitive ${prefix}${hue}${n}`);
+    return v;
+  }) as unknown as MantineColorsTuple;
+
+const PAGINATION_LABELS: Record<string, string> = {
+  first: 'First page',
+  previous: 'Previous page',
+  next: 'Next page',
+  last: 'Last page',
+};
+
 export const clementineTheme = createTheme({
   primaryColor: 'blue',
+  // Index 6 is the solid step (palette step 9) in both schemes, so filled
+  // Mantine primaries match action.primary in light and dark.
+  primaryShade: { light: 6, dark: 6 },
   fontFamily: p.typographyFontFamilySans,
   fontFamilyMonospace: p.typographyFontFamilyMono,
   defaultRadius: 'md',
 
+  // Mantine needs 10-shade tuples; Palette v2 has 12 steps. The key names stay
+  // (callers pass color="blue" / "orange") but the values are Palette v2:
+  // blue → ink, orange → amber (warning), gray → neutral.
   colors: {
-    blue: [
-      p.colorBlue0, p.colorBlue1, p.colorBlue2, p.colorBlue3, p.colorBlue4,
-      p.colorBlue5, p.colorBlue6, p.colorBlue7, p.colorBlue8, p.colorBlue9,
-    ],
-    red: [
-      p.colorRed0, p.colorRed1, p.colorRed2, p.colorRed3, p.colorRed4,
-      p.colorRed5, p.colorRed6, p.colorRed7, p.colorRed8, p.colorRed9,
-    ],
-    gray: [
-      p.colorGray0, p.colorGray1, p.colorGray2, p.colorGray3, p.colorGray4,
-      p.colorGray5, p.colorGray6, p.colorGray7, p.colorGray8, p.colorGray9,
-    ],
-    green: [
-      p.colorGreen0, p.colorGreen1, p.colorGreen2, p.colorGreen3, p.colorGreen4,
-      p.colorGreen5, p.colorGreen6, p.colorGreen7, p.colorGreen8, p.colorGreen9,
-    ],
-    orange: [
-      p.colorOrange0, p.colorOrange1, p.colorOrange2, p.colorOrange3, p.colorOrange4,
-      p.colorOrange5, p.colorOrange6, p.colorOrange7, p.colorOrange8, p.colorOrange9,
-    ],
-    // Clementine's dark theme. Mantine drives ALL dark-scheme surfaces, text, and
-    // borders from `colors.dark` — without this it silently falls back to its
-    // generic grey dark mode (#242424) and the navy `surface.*` tokens go unused.
-    // Index map (Mantine v7): 0-1 brightest text · 2 text.dimmed · 3 placeholder ·
-    // 4 border.input · 5 border.input-hover/control line · 6 default surface
-    // (Paper/default button) · 7 body · 8-9 deepest. Tuned so dimmed text and
-    // input borders clear WCAG AA on navy.
-    dark: [
-      p.colorNavy0, p.colorNavy1, p.colorNavy2, p.colorNavy3, p.colorNavy4,
-      p.colorNavy5, p.colorNavy6, p.colorNavy7, p.colorNavy8, p.colorNavy9,
-    ],
+    blue: steps('Ink', SOLID),
+    red: steps('Red', SOLID),
+    green: steps('Green', SOLID),
+    orange: steps('Amber', SOLID),
+    gray: steps('Neutral', GRAY),
+    // Mantine drives ALL dark-scheme surfaces, text and borders from
+    // `colors.dark`; without it, it falls back to its generic grey (#242424).
+    // Index map (Mantine v7): 0-1 text · 2 dimmed · 3 placeholder · 4 border ·
+    // 5 control/hover surface · 6 default surface (Paper) · 7 body · 8-9
+    // deepest. Each index points at the step the matching semantic token uses.
+    dark: steps('Neutral', DARK, 'paletteDark'),
   },
 
   radius: {
@@ -272,7 +289,7 @@ export const clementineTheme = createTheme({
       },
     },
     ColorInput: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', eyeDropperButtonProps: { 'aria-label': 'Pick a colour from the screen' } },
       vars: () => ({
         wrapper: {
           '--input-bg': 'var(--cds-color-input-bg)',
@@ -384,7 +401,7 @@ export const clementineTheme = createTheme({
       },
     },
     Alert: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', closeButtonLabel: 'Dismiss' },
       // Per-intent, mirroring the Alert wrapper's intent→color map
       // (info=gray, success=green, warning=orange, error=red). bg + border come
       // from the matching alert.bg/border.<intent> tokens; body/title text from
@@ -404,7 +421,7 @@ export const clementineTheme = createTheme({
       },
     },
     Notification: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', closeButtonProps: { 'aria-label': 'Dismiss notification' } },
       styles: {
         root: {
           backgroundColor: 'var(--cds-notification-bg)',
@@ -502,7 +519,7 @@ export const clementineTheme = createTheme({
       }),
     },
     Pagination: {
-      defaultProps: { radius: 'md' },
+      defaultProps: { radius: 'md', getControlProps: (control: string) => ({ 'aria-label': PAGINATION_LABELS[control] }) },
       vars: () => ({
         root: {
           '--pagination-active-bg': 'var(--cds-pagination-item-bg-active)',
@@ -620,7 +637,11 @@ export const clementineTheme = createTheme({
       },
     },
     Carousel: {
-      defaultProps: { withIndicators: true },
+      defaultProps: {
+        withIndicators: true,
+        previousControlProps: { 'aria-label': 'Previous slide' },
+        nextControlProps: { 'aria-label': 'Next slide' },
+      },
       styles: {
         control: {
           backgroundColor: 'var(--cds-carousel-control-bg)',
@@ -666,6 +687,13 @@ export const clementineTheme = createTheme({
     Divider: {
       vars: () => ({ root: { '--divider-color': 'var(--cds-divider-line)' } }),
     },
+    // Calendar header previous/next are icon-only buttons with no default name.
+    ...Object.fromEntries(
+      ['Calendar', 'DatePicker', 'DatePickerInput', 'DateInput', 'MonthPicker', 'YearPicker'].map((c) => [
+        c,
+        { defaultProps: { previousLabel: 'Previous', nextLabel: 'Next' } },
+      ]),
+    ),
     Fieldset: {
       styles: {
         root: {

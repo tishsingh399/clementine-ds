@@ -51,9 +51,9 @@ A list of comments plus a composer for adding more.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `comment-thread.author` | `{text.primary}` | `#1a1a18` |
-| `comment-thread.body` | `{text.primary}` | `#1a1a18` |
-| `comment-thread.meta` | `{text.tertiary}` | `#737370` |
+| `comment-thread.author` | `{text.primary}` | `#2a2926` |
+| `comment-thread.body` | `{text.primary}` | `#2a2926` |
+| `comment-thread.meta` | `{text.tertiary}` | `#6e6b65` |
 
 **Do:** Attribute + timestamp each comment; Support @mentions; Disable submit on empty.
 **Don't:** Lose draft text; Allow empty comments.

@@ -53,8 +53,8 @@ Usage transparency for a run — tokens, estimated cost, and elapsed latency. En
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `cost-meter.label` | `{text.tertiary}` | `#737370` |
-| `cost-meter.value` | `{text.secondary}` | `#6b6b66` |
+| `cost-meter.label` | `{text.tertiary}` | `#6e6b65` |
+| `cost-meter.value` | `{text.secondary}` | `#65635e` |
 
 **Do:** Show tokens + cost + latency plainly; Keep estimates honest/labeled.
 **Don't:** Hide cost where it is billed; Imply false precision.

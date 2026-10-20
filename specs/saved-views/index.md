@@ -51,8 +51,8 @@ Switch between saved filter/column configurations, and save the current one.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `saved-views.active-fg` | `{action.primary}` | `#2563eb` |
-| `saved-views.fg` | `{text.secondary}` | `#6b6b66` |
+| `saved-views.active-fg` | `{action.primary}` | `#305eb7` |
+| `saved-views.fg` | `{text.secondary}` | `#65635e` |
 
 **Do:** Mark the active view (aria-current); Let users save the current config.
 **Don't:** Lose the active indicator; Overwrite a shared view without confirm.

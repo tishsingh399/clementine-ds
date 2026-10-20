@@ -54,9 +54,9 @@ Clickable starter prompts shown above an empty Composer, tied to real capabiliti
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `prompt-suggestions.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `prompt-suggestions.border` | `{border.default}` | `#e5e5e0` |
-| `prompt-suggestions.fg` | `{text.primary}` | `#1a1a18` |
+| `prompt-suggestions.bg` | `{surface.subtle}` | `#efeeec` |
+| `prompt-suggestions.border` | `{border.default}` | `#d5d3d0` |
+| `prompt-suggestions.fg` | `{text.primary}` | `#2a2926` |
 | `prompt-suggestions.radius` | `{radius.xl}` | `99px` |
 
 **Do:** Offer 3-4 concrete, verb-first prompts; Tie each to a real, supported capability; Get out of the way once a conversation starts.

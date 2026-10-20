@@ -5,7 +5,7 @@ const meta: Meta<typeof Progress> = {
   title: 'Components/Progress',
   component: Progress,
   argTypes: { color: { control: 'select', options: ['blue', 'green', 'orange', 'red'] } },
-  args: { value: 60 },
+  args: { value: 60, 'aria-label': 'Upload progress' },
 };
 
 export default meta;

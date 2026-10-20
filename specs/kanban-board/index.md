@@ -85,12 +85,12 @@ Each column is a `section` labelled by its title, and its cards are a `ul`. A sc
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `kanban-board.column-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `kanban-board.column-border` | `{border.default}` | `#e5e5e0` |
-| `kanban-board.header-fg` | `{text.primary}` | `#1a1a18` |
-| `kanban-board.count` | `{text.secondary}` | `#6b6b66` |
-| `kanban-board.over-limit` | `{text.warning}` | `#c2410c` |
-| `kanban-board.empty` | `{text.secondary}` | `#6b6b66` |
+| `kanban-board.column-bg` | `{surface.subtle}` | `#efeeec` |
+| `kanban-board.column-border` | `{border.default}` | `#d5d3d0` |
+| `kanban-board.header-fg` | `{text.primary}` | `#2a2926` |
+| `kanban-board.count` | `{text.secondary}` | `#65635e` |
+| `kanban-board.over-limit` | `{text.warning}` | `#855905` |
+| `kanban-board.empty` | `{text.secondary}` | `#65635e` |
 
 **Do:** Keep card content to ID, title, 1–2 badges and an avatar; put full detail in a `Drawer`.
 **Don't:** Use a board for more than ~7 columns (use a `Table` grouped by status); show a WIP limit in colour alone.

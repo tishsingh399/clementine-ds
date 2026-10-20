@@ -72,7 +72,7 @@ function resolve(value, sem) {
   const m = /^\{(.+)\}$/.exec(value);
   if (!m) return value;
   const node = lookup(sem, m[1]) ?? lookup(primitives, m[1]);
-  return node && typeof node.$value === 'string' ? resolve(node.$value, sem) : value;
+  return node && typeof node.$value === 'string' ? resolve(node.$value, {}) : value; // later hops: primitives only
 }
 
 // canonical "r,g,b" for any hex/rgb(a) colour; fully-transparent → "transparent"

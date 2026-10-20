@@ -74,12 +74,12 @@ Every object or array is a native `<details>`/`<summary>`, so it's keyboard-oper
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `json-viewer.key` | `{text.primary}` | `#1a1a18` |
-| `json-viewer.string` | `{text.success}` | `#15803d` |
-| `json-viewer.number` | `{text.link}` | `#2563eb` |
-| `json-viewer.literal` | `{text.warning}` | `#c2410c` |
-| `json-viewer.punctuation` | `{text.secondary}` | `#6b6b66` |
-| `json-viewer.guide` | `{border.default}` | `#e5e5e0` |
+| `json-viewer.key` | `{text.primary}` | `#2a2926` |
+| `json-viewer.string` | `{text.success}` | `#267542` |
+| `json-viewer.number` | `{text.link}` | `#3960ab` |
+| `json-viewer.literal` | `{text.warning}` | `#855905` |
+| `json-viewer.punctuation` | `{text.secondary}` | `#65635e` |
+| `json-viewer.guide` | `{border.default}` | `#d5d3d0` |
 
 **Do:** Label it (`aria-label="Tool input"`); pair Input and Output viewers under clear headings.
 **Don't:** Use it for editable JSON; render megabyte payloads without truncating upstream.

@@ -60,11 +60,11 @@ The provenance list behind a cited answer; pairs with inline CitationChip [n] ma
 | Token | Resolves through | Light |
 |---|---|---|
 | `sources-panel.bg` | `{surface.elevated}` | `#ffffff` |
-| `sources-panel.border` | `{border.default}` | `#e5e5e0` |
-| `sources-panel.title` | `{text.tertiary}` | `#737370` |
-| `sources-panel.item-fg` | `{text.link}` | `#2563eb` |
-| `sources-panel.item-meta` | `{text.secondary}` | `#6b6b66` |
-| `sources-panel.index-bg` | `{surface.subtle}` | `#f3f3f0` |
+| `sources-panel.border` | `{border.default}` | `#d5d3d0` |
+| `sources-panel.title` | `{text.tertiary}` | `#6e6b65` |
+| `sources-panel.item-fg` | `{text.link}` | `#3960ab` |
+| `sources-panel.item-meta` | `{text.secondary}` | `#65635e` |
+| `sources-panel.index-bg` | `{surface.subtle}` | `#efeeec` |
 | `sources-panel.radius` | `{radius.md}` | `6px` |
 
 **Do:** Number sources to match inline [n] chips; Link to the real source; show a snippet; Keep it collapsible for long lists.

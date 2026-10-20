@@ -14,8 +14,8 @@ Status: `AI-Ready`. Token contract closed at 3 component-tier tokens. Full contr
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `streaming.fg` | `{text.primary}` | `#1a1a18` |
-| `streaming.caret` | `{action.primary}` | `#2563eb` |
+| `streaming.fg` | `{text.primary}` | `#2a2926` |
+| `streaming.caret` | `{action.primary}` | `#305eb7` |
 | `streaming.duration` | `{motion.duration-stream}` | `1200ms` |
 
 ## Library notes

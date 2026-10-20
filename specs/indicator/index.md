@@ -50,7 +50,7 @@ A small dot or count overlaid on another element (avatar, icon, tab) to flag new
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `indicator.bg` | `{feedback.error}` | `#dc2626` |
+| `indicator.bg` | `{feedback.error}` | `#c1332f` |
 | `indicator.fg` | `{text.on-action}` | `#ffffff` |
 
 **Do:** Give counts an accessible label ("3 unread"); Cap large counts ("9+"); Keep the dot from covering meaningful content.

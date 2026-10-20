@@ -70,11 +70,11 @@ The trigger's name includes the current range ("Time range: Last 6 hours"). Quic
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `time-range-picker.trigger-fg` | `{text.primary}` | `#1a1a18` |
-| `time-range-picker.label` | `{text.secondary}` | `#6b6b66` |
-| `time-range-picker.option-fg` | `{text.primary}` | `#1a1a18` |
-| `time-range-picker.option-bg-active` | `{action.selected-subtle}` | `#eff4ff` |
-| `time-range-picker.divider` | `{border.default}` | `#e5e5e0` |
+| `time-range-picker.trigger-fg` | `{text.primary}` | `#2a2926` |
+| `time-range-picker.label` | `{text.secondary}` | `#65635e` |
+| `time-range-picker.option-fg` | `{text.primary}` | `#2a2926` |
+| `time-range-picker.option-bg-active` | `{action.selected-subtle}` | `#e5eeff` |
+| `time-range-picker.divider` | `{border.default}` | `#d5d3d0` |
 
 **Do:** Put one picker per page, top right, and drive every panel from it; keep 5–8 quick ranges.
 **Don't:** Give each panel its own picker; offer ranges your backend can't serve.

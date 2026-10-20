@@ -211,7 +211,7 @@ function HealthPanel() {
       <header style={{ marginBottom: 28 }}>
         <div
           style={{
-            color: tone.accent,
+            color: 'var(--cds-text-secondary)', // accent.brand is a fill, not text (2.6:1 on white)
             fontSize: 12,
             fontWeight: 760,
             letterSpacing: 0,

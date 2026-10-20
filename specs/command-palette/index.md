@@ -81,12 +81,12 @@ The input is a `combobox` with `aria-activedescendant`, so focus never leaves it
 | Token | Resolves through | Light |
 |---|---|---|
 | `command-palette.bg` | `{surface.elevated}` | `#ffffff` |
-| `command-palette.border` | `{border.default}` | `#e5e5e0` |
-| `command-palette.item-fg` | `{text.primary}` | `#1a1a18` |
-| `command-palette.item-bg-active` | `{action.selected-subtle}` | `#eff4ff` |
-| `command-palette.group-label` | `{text.tertiary}` | `#737370` |
-| `command-palette.shortcut` | `{text.secondary}` | `#6b6b66` |
-| `command-palette.empty` | `{text.secondary}` | `#6b6b66` |
+| `command-palette.border` | `{border.default}` | `#d5d3d0` |
+| `command-palette.item-fg` | `{text.primary}` | `#2a2926` |
+| `command-palette.item-bg-active` | `{action.selected-subtle}` | `#e5eeff` |
+| `command-palette.group-label` | `{text.tertiary}` | `#6e6b65` |
+| `command-palette.shortcut` | `{text.secondary}` | `#65635e` |
+| `command-palette.empty` | `{text.secondary}` | `#65635e` |
 
 **Do:** Write labels as verb + object ("Assign to me"); add `keywords` for synonyms; group by intent (Actions, Navigation, Settings).
 **Don't:** Put destructive commands in without a confirm step in `onSelect`; show a shortcut the app doesn't handle.

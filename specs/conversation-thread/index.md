@@ -52,8 +52,8 @@ The scrollable container for a conversation — holds Message turns with consist
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `conversation-thread.bg` | `{surface.default}` | `#fafaf8` |
-| `conversation-thread.divider` | `{border.default}` | `#e5e5e0` |
+| `conversation-thread.bg` | `{surface.default}` | `#f6f6f4` |
+| `conversation-thread.divider` | `{border.default}` | `#d5d3d0` |
 
 **Do:** Announce new turns politely (aria-live); Group with day dividers for long histories; Keep newest in view.
 **Don't:** Steal focus on each new message; Reflow the whole thread on append.

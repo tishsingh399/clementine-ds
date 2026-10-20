@@ -54,11 +54,11 @@ A compact inline status line (icon + text) for info, success, warning, or error.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `inline-message.fg` | `{text.primary}` | `#1a1a18` |
-| `inline-message.info` | `{text.secondary}` | `#6b6b66` |
-| `inline-message.success` | `{feedback.success}` | `#16a34a` |
-| `inline-message.warning` | `{feedback.warning}` | `#ea580c` |
-| `inline-message.error` | `{feedback.error}` | `#dc2626` |
+| `inline-message.fg` | `{text.primary}` | `#2a2926` |
+| `inline-message.info` | `{text.secondary}` | `#65635e` |
+| `inline-message.success` | `{feedback.success}` | `#198044` |
+| `inline-message.warning` | `{feedback.warning}` | `#855905` |
+| `inline-message.error` | `{feedback.error}` | `#c1332f` |
 
 **Do:** Keep messages to one line where possible; Let the glyph shape and wording carry the status.
 **Don’t:** Rely on the icon color alone (WCAG 1.4.1); Use for long-form content.
