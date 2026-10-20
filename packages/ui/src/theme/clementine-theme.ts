@@ -89,11 +89,17 @@ export const cssVariablesResolver: CSSVariablesResolver = () => ({
   light: {
     // Mantine's error colour is a red tuple index, which can't follow our per-mode text/error step.
     '--mantine-color-error': resolveValue('{text.error}', lightTokens as AnyTree),
+    // Mantine paints Anchor (and Breadcrumbs/Spoiler links) with --mantine-color-anchor, a
+    // primary-tuple step; links must follow text.link in each mode instead.
+    '--mantine-color-anchor': 'var(--cds-text-link)',
     ...flattenSemanticTokens(lightTokens as AnyTree, lightTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, lightTokens as AnyTree),
   },
   dark: {
     '--mantine-color-error': resolveValue('{text.error}', darkTokens as AnyTree),
+    // Mantine paints Anchor (and Breadcrumbs/Spoiler links) with --mantine-color-anchor, a
+    // primary-tuple step; links must follow text.link in each mode instead.
+    '--mantine-color-anchor': 'var(--cds-text-link)',
     ...flattenSemanticTokens(darkTokens as AnyTree, darkTokens as AnyTree, ['--cds', '--tds']),
     ...flattenComponentTokens(componentTokens as AnyTree, darkTokens as AnyTree),
   },
