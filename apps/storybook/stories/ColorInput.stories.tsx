@@ -4,7 +4,7 @@ import { ColorInput } from '@clementine-ds/ui';
 const meta: Meta<typeof ColorInput> = {
   title: 'Components/ColorInput',
   component: ColorInput,
-  args: { label: 'Token color', defaultValue: '#1a1a18' },
+  args: { label: 'Token color', defaultValue: '#fd7920' },
 };
 
 export default meta;
