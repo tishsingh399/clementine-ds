@@ -4,7 +4,8 @@
 
 .github/
 .git/
-examples/
+# root examples/ only: apps/storybook/stories/examples/ must deploy
+/examples/
 
 # These are generated locally and re-generated at build
 **/dist/
