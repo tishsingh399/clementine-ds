@@ -2,7 +2,7 @@
 component: stat
 ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-19
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -55,8 +55,10 @@ A KPI/metric tile: a label, a large value, and an optional trend delta.
 |---|---|---|
 | `stat.value` | `{text.primary}` | `#2a2926` |
 | `stat.label` | `{text.tertiary}` | `#6e6b65` |
-| `stat.delta-up` | `{feedback.success}` | `#198044` |
+| `stat.delta-up` | `{text.success}` | `#267542` |
 | `stat.delta-down` | `{feedback.error}` | `#c1332f` |
+
+> 2026-10-17: `stat.delta-up` moved from `feedback.success` to `text.success`. Small text needs a text token; `feedback.*` is for fills and icons, and failed AA as text. Stat.tsx reads its own `--cds-stat-*` vars.
 
 **Do:** Pair the trend arrow with text + color; Keep labels short; Right-size the value type.
 **Don't:** Show a delta with color/arrow but no number; Cram units ambiguously.

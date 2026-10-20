@@ -15,11 +15,11 @@ Cursor) can execute this directly — commands are copy-pasteable and ordered.
 
 | Layer | State |
 |---|---|
-| Components | **<!-- COUNTS:components -->121<!-- /COUNTS -->**, each shipping token + spec + Storybook story + guidance doc + implementation |
+| Components | **<!-- COUNTS:components -->126<!-- /COUNTS -->**, each shipping token + spec + Storybook story + guidance doc + implementation |
 | Patterns | **22** composed flows in [`patterns/`](./patterns) |
-| Tokens | <!-- COUNTS:primitives -->361<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->96<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->634<!-- /COUNTS -->** component tokens |
-| Figma variables | **<!-- COUNTS:component-tokens -->634<!-- /COUNTS -->** code-derived component variables, cascade-aliased, all verified present in Figma (0 missing — `scripts/figma-parity.mjs`); shell variables documented separately |
-| Figma render | All **<!-- COUNTS:components -->121<!-- /COUNTS -->** drawn as real, token-bound nodes — across 6 category pages plus the core on the Cover page |
+| Tokens | <!-- COUNTS:primitives -->361<!-- /COUNTS --> primitives · <!-- COUNTS:semantic -->96<!-- /COUNTS --> semantic (light + dark) · **<!-- COUNTS:component-tokens -->665<!-- /COUNTS -->** component tokens |
+| Figma variables | **<!-- COUNTS:component-tokens -->665<!-- /COUNTS -->** code-derived component variables, cascade-aliased, all verified present in Figma (0 missing — `scripts/figma-parity.mjs`); shell variables documented separately |
+| Figma render | All **<!-- COUNTS:components -->126<!-- /COUNTS -->** drawn as real, token-bound nodes — across 6 category pages plus the core on the Cover page |
 | Typecheck | `@clementine-ds/ui` and `observatory` both pass `tsc --noEmit` (verified) |
 
 **Not yet verified on the origin machine** (toolchain quirk there — re-confirm here):

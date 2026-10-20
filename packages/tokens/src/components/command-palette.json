@@ -1,0 +1,32 @@
+{
+  "command-palette": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "item-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "item-bg-active": {
+      "$value": "{action.selected-subtle}",
+      "$type": "color"
+    },
+    "group-label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "shortcut": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "empty": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  }
+}
