@@ -35,6 +35,7 @@
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
     "parity:dom": "node scripts/parity-dom.mjs",
     "parity:dom:states": "node scripts/parity-dom.mjs --state-strict",
+    "parity:swap": "node scripts/token-swap.mjs",
     "test": "pnpm validate"
   },
   "size-limit": [
