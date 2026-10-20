@@ -6,7 +6,7 @@ const meta: Meta<typeof Indicator> = {
   component: Indicator,
   render: (args) => (
     <Indicator {...args}>
-      <Avatar name="Tina Singh" color="blue" radius="xl" />
+      <Avatar name="Ana Lee" color="blue" radius="xl" />
     </Indicator>
   ),
   args: { label: '3', size: 18 },

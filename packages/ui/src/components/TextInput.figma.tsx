@@ -11,7 +11,7 @@ figma.connect(TextInput, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Cl
   props: {
     size: figma.enum('Size', { SM: 'sm', MD: 'md', LG: 'lg' }),
     error: figma.enum('State', { Error: 'Enter a valid email address' }),
-    defaultValue: figma.enum('State', { Filled: 'tina@example.com' }),
+    defaultValue: figma.enum('State', { Filled: 'ana@example.com' }),
     disabled: figma.enum('State', { Disabled: true }),
   },
   example: ({ size, error, defaultValue, disabled }) => (

@@ -5,6 +5,6 @@ import { HoverCard, HoverCardTarget, HoverCardDropdown } from './HoverCard';
 // Publish with: npx figma connect publish  (requires FIGMA_ACCESS_TOKEN)
 figma.connect(HoverCard, 'https://www.figma.com/design/w4JB0MOEIzOtSKx5Y3YSQR/Clementine-DS?node-id=16-1056', {
   example: () => (
-    <HoverCard><HoverCardTarget><button>Tina</button></HoverCardTarget><HoverCardDropdown>Senior UX Designer</HoverCardDropdown></HoverCard>
+    <HoverCard><HoverCardTarget><button>Ana</button></HoverCardTarget><HoverCardDropdown>Senior UX Designer</HoverCardDropdown></HoverCard>
   ),
 });

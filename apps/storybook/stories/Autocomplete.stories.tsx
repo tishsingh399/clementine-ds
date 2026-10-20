@@ -7,7 +7,7 @@ const meta: Meta<typeof Autocomplete> = {
   args: {
     label: 'Assignee',
     placeholder: 'Type a name',
-    data: ['Tina Singh', 'Jordan Lee', 'Sam Park', 'Alex Kim'],
+    data: ['Ana Lee', 'Jordan Lee', 'Sam Park', 'Alex Kim'],
   },
 };
 

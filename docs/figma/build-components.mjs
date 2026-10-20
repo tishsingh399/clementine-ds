@@ -235,7 +235,7 @@ const script = `(async () => {
     return wrap;
   }
   inputGrid.appendChild(makeInput('Email', 'you@example.com', 'default'));
-  inputGrid.appendChild(makeInput('Name (focused)', 'Tina', 'focus'));
+  inputGrid.appendChild(makeInput('Name (focused)', 'Ana', 'focus'));
   inputGrid.appendChild(makeInput('Email (error)', '', 'error'));
 
   // Select trigger
