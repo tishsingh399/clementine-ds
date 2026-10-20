@@ -13,7 +13,7 @@
       "$type": "color"
     },
     "delta-down": {
-      "$value": "{feedback.error}",
+      "$value": "{text.error}",
       "$type": "color"
     }
   }

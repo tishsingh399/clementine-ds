@@ -98,6 +98,10 @@
       "$value": "{palette-dark.amber.11}",
       "$type": "color"
     },
+    "error": {
+      "$value": "{color.red.4}",
+      "$type": "color"
+    },
     "on-inverse": {
       "$value": "{palette-dark.neutral.7}",
       "$type": "color"

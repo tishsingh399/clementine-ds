@@ -183,7 +183,7 @@
       "$type": "color"
     },
     "fg-hover": {
-      "$value": "{action.primary}",
+      "$value": "{text.link}",
       "$type": "color"
     }
   },
@@ -581,7 +581,7 @@
       "$type": "color"
     },
     "over": {
-      "$value": "{feedback.error}",
+      "$value": "{text.error}",
       "$type": "color"
     }
   },
@@ -674,7 +674,7 @@
         "$type": "color"
       },
       "error": {
-        "$value": "{feedback.error}",
+        "$value": "{text.error}",
         "$type": "color"
       }
     },
@@ -1205,7 +1205,7 @@
       "$type": "color"
     },
     "required": {
-      "$value": "{feedback.error}",
+      "$value": "{text.error}",
       "$type": "color"
     },
     "optional": {
@@ -1540,7 +1540,7 @@
         "$type": "color"
       },
       "fg-danger": {
-        "$value": "{feedback.error}",
+        "$value": "{text.error}",
         "$type": "color"
       },
       "bg-hover": {
@@ -2095,7 +2095,7 @@
       "$type": "color"
     },
     "label": {
-      "$value": "{text.tertiary}",
+      "$value": "{text.secondary}",
       "$type": "color"
     },
     "rule": {
@@ -2137,7 +2137,7 @@
   },
   "saved-views": {
     "active-fg": {
-      "$value": "{action.primary}",
+      "$value": "{text.link}",
       "$type": "color"
     },
     "fg": {
@@ -2433,7 +2433,7 @@
       "$type": "color"
     },
     "delta-down": {
-      "$value": "{feedback.error}",
+      "$value": "{text.error}",
       "$type": "color"
     }
   },
@@ -2477,7 +2477,7 @@
       "$type": "color"
     },
     "fg-pending": {
-      "$value": "{text.tertiary}",
+      "$value": "{text.secondary}",
       "$type": "color"
     },
     "separator": {

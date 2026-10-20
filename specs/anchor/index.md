@@ -1,8 +1,8 @@
 ---
 component: anchor
-ds_version: clementine-ds@0.1.0 (2026-10-06 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-19 verified)
 status: AI-Ready
-last_verified: 2026-10-06
+last_verified: 2026-10-19
 verified_commit: 015819c0
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 verified_gaps: 2
@@ -52,7 +52,7 @@ A text link for navigation. Distinct from Button (which performs an action).
 | Token | Resolves through | Light |
 |---|---|---|
 | `anchor.fg` | `{text.link}` | `#3960ab` |
-| `anchor.fg-hover` | `{action.primary}` | `#305eb7` |
+| `anchor.fg-hover` | `{text.link}` | `#3960ab` |
 
 **Do:** Underline on hover/focus — never color alone (WCAG 1.4.1); Use descriptive link text ("access policy", not "click here"); Add rel="noopener" on target="_blank".
 **Don't:** Style a Button as a link or vice versa; Use "here"/"link" as the text; Convey state with color only.

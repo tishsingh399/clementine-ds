@@ -15,7 +15,7 @@
     "fg": {
       "label":       { "$value": "{text.primary}",     "$type": "color" },
       "description": { "$value": "{text.secondary}",   "$type": "color" },
-      "error":       { "$value": "{feedback.error}",   "$type": "color" }
+      "error":       { "$value": "{text.error}",        "$type": "color" }
     },
     "radius":        { "$value": "{radius.sm}", "$type": "dimension" }
   }
