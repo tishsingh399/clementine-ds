@@ -1,9 +1,10 @@
 ---
 component: command-palette
-ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
+ds_version: clementine-ds@0.1.0 (2026-10-20 verified)
 status: AI-Ready
-last_verified: 2026-10-17
-verified_by: [contract, slots, freshness, token-lint, storybook-browser]
+last_verified: 2026-10-20
+verified_commit: a12ce8a6
+verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
 category: Component
 required_aria: [role=combobox, aria-controls, aria-activedescendant, role=listbox, role=option, aria-selected]
