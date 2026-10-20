@@ -53,10 +53,10 @@ A role x permission grid of checkboxes for least-privilege access management.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `rbac-matrix.header-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `rbac-matrix.border` | `{border.default}` | `#e5e5e0` |
-| `rbac-matrix.granted` | `{action.primary}` | `#2563eb` |
-| `rbac-matrix.fg` | `{text.primary}` | `#1a1a18` |
+| `rbac-matrix.header-bg` | `{surface.subtle}` | `#efeeec` |
+| `rbac-matrix.border` | `{border.default}` | `#d5d3d0` |
+| `rbac-matrix.granted` | `{action.primary}` | `#305eb7` |
+| `rbac-matrix.fg` | `{text.primary}` | `#2a2926` |
 
 **Do:** Label each cell (role can permission); Make least-privilege the default; Log grant changes.
 **Don't:** Default to broad grants; Leave cells unlabelled for AT.

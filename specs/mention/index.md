@@ -49,8 +49,8 @@ An inline @reference to a user or entity within text.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `mention.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `mention.fg` | `{text.link}` | `#2563eb` |
+| `mention.bg` | `{surface.subtle}` | `#efeeec` |
+| `mention.fg` | `{text.link}` | `#3960ab` |
 
 **Do:** Make it visually distinct + linkable; Resolve to a real profile when possible.
 **Don't:** Style like plain text; Mention unresolved/unknown users silently.

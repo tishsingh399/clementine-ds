@@ -155,3 +155,10 @@ export { toast, type ToastOptions } from './components/Toast';
 export { AreaChart, LineChart, BarChart, type AreaChartProps, type LineChartProps, type BarChartProps } from './components/Chart';
 export { Sparkline, type SparklineProps } from './components/Sparkline';
 export { Carousel, type CarouselProps } from './components/Carousel';
+
+// App studies (docs/worked-examples) — patterns common to trackers, dashboards, tracing tools, wikis and chat apps
+export { CommandPalette, filterCommands, type CommandPaletteProps, type CommandItem } from './components/CommandPalette';
+export { KanbanBoard, KanbanColumn, type KanbanBoardProps, type KanbanColumnProps } from './components/KanbanBoard';
+export { TimeRangePicker, DEFAULT_QUICK_RANGES, type TimeRangePickerProps, type TimeRange, type QuickRange } from './components/TimeRangePicker';
+export { TraceTree, visibleSpanRows, formatDuration, type TraceTreeProps, type TraceSpan } from './components/TraceTree';
+export { JsonViewer, type JsonViewerProps } from './components/JsonViewer';

@@ -53,9 +53,9 @@ A circular determinate progress indicator with a center label.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `progress-circle.track` | `{surface.subtle}` | `#f3f3f0` |
-| `progress-circle.indicator` | `{action.primary}` | `#2563eb` |
-| `progress-circle.label` | `{text.primary}` | `#1a1a18` |
+| `progress-circle.track` | `{surface.subtle}` | `#efeeec` |
+| `progress-circle.indicator` | `{action.primary}` | `#305eb7` |
+| `progress-circle.label` | `{text.primary}` | `#2a2926` |
 
 **Do:** Show the numeric value in the center; Set aria-valuenow for assistive tech.
 **Don’t:** Use for indeterminate states; Convey the value by color alone.

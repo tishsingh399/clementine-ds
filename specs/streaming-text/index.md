@@ -54,8 +54,8 @@ Progressively-revealed model output with a blinking caret while streaming. `aria
 
 | Part | Token | Light |
 |---|---|---|
-| text | `streaming.fg` → `{text.primary}` | `#1a1a18` |
-| caret | `streaming.caret` → `{action.primary}` | `#2563eb` |
+| text | `streaming.fg` → `{text.primary}` | `#2a2926` |
+| caret | `streaming.caret` → `{action.primary}` | `#305eb7` |
 | caret cycle | `streaming.duration` → `{motion.duration-stream}` | `1200ms` |
 
 **Do** announce politely and stop the caret when done. **Don't** animate the caret when the user prefers reduced motion (built-in guard).

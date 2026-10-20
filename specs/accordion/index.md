@@ -100,13 +100,13 @@ Progressive disclosure for a stack of independent sections — FAQs, grouped set
 
 | Part | State | Token | Resolves (light) |
 |---|---|---|---|
-| item fill | default | `accordion.bg` → `{surface.default}` | `#fafaf8` |
-| control fill | hover | `accordion.bg-hover` → `{surface.subtle}` | `#f3f3f0` |
-| item border | default | `accordion.border` → `{border.default}` | `#e5e5e0` |
-| label | default | `accordion.fg.label` → `{text.primary}` | `#1a1a18` |
-| panel text | default | `accordion.fg.content` → `{text.secondary}` | `#6b6b66` |
-| chevron | default | `accordion.fg.chevron` → `{text.secondary}` | `#6b6b66` |
-| control | focus | `accordion.border-focus` → `{focus.ring}` | `#f5631a` |
+| item fill | default | `accordion.bg` → `{surface.default}` | `#f6f6f4` |
+| control fill | hover | `accordion.bg-hover` → `{surface.subtle}` | `#efeeec` |
+| item border | default | `accordion.border` → `{border.default}` | `#d5d3d0` |
+| label | default | `accordion.fg.label` → `{text.primary}` | `#2a2926` |
+| panel text | default | `accordion.fg.content` → `{text.secondary}` | `#65635e` |
+| chevron | default | `accordion.fg.chevron` → `{text.secondary}` | `#65635e` |
+| control | focus | `accordion.border-focus` → `{focus.ring}` | `#e86800` |
 | corners | — | `accordion.radius` → `{radius.md}` | `6px` |
 
 ## 3. Interaction States

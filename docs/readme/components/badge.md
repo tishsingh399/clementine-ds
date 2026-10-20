@@ -33,14 +33,14 @@ Status: `Draft`. Component tokens exist. Spec needs ARIA verification and a full
 
 | Intent | Token | Resolves through | Light |
 |---|---|---|---|
-| Neutral | `badge.bg.neutral` | `surface.subtle` | `#f3f3f0` |
-| Success | `badge.bg.success` | `feedback.success-subtle` | `#f0fdf4` |
-| Error | `badge.bg.error` | `feedback.error-subtle` | `#fef2f2` |
-| Warning | `badge.bg.warning` | `feedback.warning-subtle` | `#fff7ed` |
-| Risk critical | `badge.bg.risk-critical` | `risk.critical-subtle` | `#fef2f2` |
-| Risk high | `badge.bg.risk-high` | `risk.high-subtle` | `#fff7ed` |
-| Risk medium | `badge.bg.risk-medium` | `risk.medium-subtle` | `#ffedd5` |
-| Risk low | `badge.bg.risk-low` | `risk.low-subtle` | `#f0fdf4` |
+| Neutral | `badge.bg.neutral` | `surface.subtle` | `#efeeec` |
+| Success | `badge.bg.success` | `feedback.success-subtle` | `#ddf5e2` |
+| Error | `badge.bg.error` | `feedback.error-subtle` | `#fee8e5` |
+| Warning | `badge.bg.warning` | `feedback.warning-subtle` | `#ffebcf` |
+| Risk critical | `badge.bg.risk-critical` | `risk.critical-subtle` | `#fee8e5` |
+| Risk high | `badge.bg.risk-high` | `risk.high-subtle` | `#ffe9de` |
+| Risk medium | `badge.bg.risk-medium` | `risk.medium-subtle` | `#ffebcf` |
+| Risk low | `badge.bg.risk-low` | `risk.low-subtle` | `#ddf5e2` |
 
 ## Accessibility
 

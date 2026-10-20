@@ -54,10 +54,10 @@ Status: `AI-Ready`. Token contract closed at 5 component-tier tokens.
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `segmented-control.bg` | `{surface.subtle}` | `#f3f3f0` |
+| `segmented-control.bg` | `{surface.subtle}` | `#efeeec` |
 | `segmented-control.bg-active` | `{surface.elevated}` | `#ffffff` |
-| `segmented-control.fg` | `{text.secondary}` | `#6b6b66` |
-| `segmented-control.fg-active` | `{text.primary}` | `#1a1a18` |
+| `segmented-control.fg` | `{text.secondary}` | `#65635e` |
+| `segmented-control.fg-active` | `{text.primary}` | `#2a2926` |
 | `segmented-control.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

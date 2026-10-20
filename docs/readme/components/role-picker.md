@@ -47,8 +47,8 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 2 component-tie
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `role-picker.pill-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `role-picker.fg` | `{text.primary}` | `#1a1a18` |
+| `role-picker.pill-bg` | `{surface.subtle}` | `#efeeec` |
+| `role-picker.fg` | `{text.primary}` | `#2a2926` |
 
 ## Library notes
 

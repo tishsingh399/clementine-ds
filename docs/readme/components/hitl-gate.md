@@ -14,13 +14,13 @@ Status: `AI-Ready`. Token contract closed at 8 component-tier tokens. Full contr
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `hitl.bg` | `{feedback.warning-subtle}` | `#fff7ed` |
-| `hitl.border` | `{feedback.warning}` | `#ea580c` |
-| `hitl.title` | `{text.primary}` | `#1a1a18` |
-| `hitl.body` | `{text.secondary}` | `#6b6b66` |
-| `hitl.approve-bg` | `{action.primary}` | `#2563eb` |
-| `hitl.approve-destructive-bg` | `{action.destructive}` | `#dc2626` |
-| `hitl.deny-bg` | `{surface.subtle}` | `#f3f3f0` |
+| `hitl.bg` | `{feedback.warning-subtle}` | `#ffebcf` |
+| `hitl.border` | `{feedback.warning}` | `#855905` |
+| `hitl.title` | `{text.primary}` | `#2a2926` |
+| `hitl.body` | `{text.secondary}` | `#65635e` |
+| `hitl.approve-bg` | `{action.primary}` | `#305eb7` |
+| `hitl.approve-destructive-bg` | `{action.destructive}` | `#c1332f` |
+| `hitl.deny-bg` | `{surface.subtle}` | `#efeeec` |
 | `hitl.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

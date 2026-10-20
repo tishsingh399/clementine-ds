@@ -46,8 +46,8 @@ Status: `AI-Ready` · Enterprise layer. Token contract closed at 2 component-tie
 
 | Token | Resolves through | Light value |
 |---|---|---|
-| `export-menu.trigger-fg` | `{text.primary}` | `#1a1a18` |
-| `export-menu.item-fg` | `{text.primary}` | `#1a1a18` |
+| `export-menu.trigger-fg` | `{text.primary}` | `#2a2926` |
+| `export-menu.item-fg` | `{text.primary}` | `#2a2926` |
 
 ## Library notes
 

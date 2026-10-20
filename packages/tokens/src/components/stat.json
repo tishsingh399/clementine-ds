@@ -9,7 +9,7 @@
       "$type": "color"
     },
     "delta-up": {
-      "$value": "{feedback.success}",
+      "$value": "{text.success}",
       "$type": "color"
     },
     "delta-down": {

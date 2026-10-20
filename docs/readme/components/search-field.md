@@ -50,11 +50,11 @@ Status: `AI-Ready`. Token contract closed at 7 component-tier tokens.
 | Token | Resolves through | Light value |
 |---|---|---|
 | `search-field.bg` | `{surface.elevated}` | `#ffffff` |
-| `search-field.border` | `{border.strong}` | `#737370` |
-| `search-field.border-focus` | `{focus.ring}` | `#f5631a` |
-| `search-field.fg` | `{text.primary}` | `#1a1a18` |
-| `search-field.placeholder` | `{text.tertiary}` | `#737370` |
-| `search-field.icon` | `{text.secondary}` | `#6b6b66` |
+| `search-field.border` | `{border.strong}` | `#83807a` |
+| `search-field.border-focus` | `{focus.ring}` | `#e86800` |
+| `search-field.fg` | `{text.primary}` | `#2a2926` |
+| `search-field.placeholder` | `{text.tertiary}` | `#6e6b65` |
+| `search-field.icon` | `{text.secondary}` | `#65635e` |
 | `search-field.radius` | `{radius.md}` | `6px` |
 
 ## Library notes

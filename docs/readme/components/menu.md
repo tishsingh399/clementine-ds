@@ -15,14 +15,14 @@ Status: `AI-Ready`. Token contract closed at 9 component-tier tokens. Full contr
 | Token | Resolves through | Light value |
 |---|---|---|
 | `menu.bg` | `{surface.elevated}` | `#ffffff` |
-| `menu.border` | `{border.default}` | `#e5e5e0` |
+| `menu.border` | `{border.default}` | `#d5d3d0` |
 | `menu.shadow` | `{shadow.lg}` | `0 8px 24px rgba(0,0,0,0.16)` |
 | `menu.radius` | `{radius.md}` | `6px` |
-| `menu.item.fg` | `{text.primary}` | `#1a1a18` |
-| `menu.item.fg-danger` | `{feedback.error}` | `#dc2626` |
-| `menu.item.bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `menu.label` | `{text.secondary}` | `#6b6b66` |
-| `menu.divider` | `{border.default}` | `#e5e5e0` |
+| `menu.item.fg` | `{text.primary}` | `#2a2926` |
+| `menu.item.fg-danger` | `{feedback.error}` | `#c1332f` |
+| `menu.item.bg-hover` | `{surface.subtle}` | `#efeeec` |
+| `menu.label` | `{text.secondary}` | `#65635e` |
+| `menu.divider` | `{border.default}` | `#d5d3d0` |
 
 ## Library notes
 

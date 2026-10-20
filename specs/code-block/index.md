@@ -59,10 +59,10 @@ A copyable code block for model-generated code, with a filename/language header.
 | Token | Resolves through | Light |
 |---|---|---|
 | `code-block.bg` | `{surface.elevated}` | `#ffffff` |
-| `code-block.header-bg` | `{surface.subtle}` | `#f3f3f0` |
-| `code-block.border` | `{border.default}` | `#e5e5e0` |
-| `code-block.fg` | `{text.primary}` | `#1a1a18` |
-| `code-block.filename` | `{text.tertiary}` | `#737370` |
+| `code-block.header-bg` | `{surface.subtle}` | `#efeeec` |
+| `code-block.border` | `{border.default}` | `#d5d3d0` |
+| `code-block.fg` | `{text.primary}` | `#2a2926` |
+| `code-block.filename` | `{text.tertiary}` | `#6e6b65` |
 | `code-block.radius` | `{radius.md}` | `6px` |
 
 **Do:** Always offer copy with clear feedback; Label the language/filename; Wrap big output in an ArtifactFrame.

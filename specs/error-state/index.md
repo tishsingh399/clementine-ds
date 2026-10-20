@@ -56,10 +56,10 @@ A centered failure state with a cause and an optional retry.
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `error-state.bg` | `{feedback.error-subtle}` | `#fef2f2` |
-| `error-state.icon` | `{feedback.error}` | `#dc2626` |
-| `error-state.title` | `{text.primary}` | `#1a1a18` |
-| `error-state.description` | `{text.secondary}` | `#6b6b66` |
+| `error-state.bg` | `{feedback.error-subtle}` | `#fee8e5` |
+| `error-state.icon` | `{feedback.error}` | `#c1332f` |
+| `error-state.title` | `{text.primary}` | `#2a2926` |
+| `error-state.description` | `{text.secondary}` | `#65635e` |
 | `error-state.radius` | `{radius.lg}` | `8px` |
 
 **Do:** Say what failed in plain language; Offer a retry or next step.

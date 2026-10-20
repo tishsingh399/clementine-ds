@@ -5,6 +5,8 @@ export interface ProgressCircleProps {
   value: number;
   size?: number;
   label?: React.ReactNode;
+  /** Accessible name, e.g. "Upload progress". Defaults to the label when it is a string. */
+  'aria-label'?: string;
 }
 
 /**
@@ -12,10 +14,11 @@ export interface ProgressCircleProps {
  * Tokens: progress-circle.* . Spec: specs/progress-circle/index.md
  */
 export const ProgressCircle = forwardRef<HTMLDivElement, ProgressCircleProps>(
-  ({ value, size = 84, label }, ref) => {
+  ({ value, size = 84, label, 'aria-label': ariaLabel }, ref) => {
     const pct = Math.min(100, Math.max(0, value));
     return (
-      <div ref={ref} role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
+      <div ref={ref} role="progressbar"
+        aria-label={ariaLabel ?? (typeof label === 'string' ? label : 'Progress')} aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
         <RingProgress size={size} thickness={Math.max(6, Math.round(size / 12))} roundCaps
           rootColor="var(--cds-surface-subtle)"
           sections={[{ value: pct, color: 'var(--cds-action-primary)' }]}

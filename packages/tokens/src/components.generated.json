@@ -793,6 +793,36 @@
       "$type": "dimension"
     }
   },
+  "command-palette": {
+    "bg": {
+      "$value": "{surface.elevated}",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "item-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "item-bg-active": {
+      "$value": "{action.selected-subtle}",
+      "$type": "color"
+    },
+    "group-label": {
+      "$value": "{text.tertiary}",
+      "$type": "color"
+    },
+    "shortcut": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "empty": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    }
+  },
   "comment-thread": {
     "author": {
       "$value": "{text.primary}",
@@ -1338,6 +1368,58 @@
     },
     "error": {
       "$value": "{feedback.error}",
+      "$type": "color"
+    }
+  },
+  "json-viewer": {
+    "key": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "string": {
+      "$value": "{text.success}",
+      "$type": "color"
+    },
+    "number": {
+      "$value": "{text.link}",
+      "$type": "color"
+    },
+    "literal": {
+      "$value": "{text.warning}",
+      "$type": "color"
+    },
+    "punctuation": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "guide": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  },
+  "kanban-board": {
+    "column-bg": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "column-border": {
+      "$value": "{border.default}",
+      "$type": "color"
+    },
+    "header-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "count": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "over-limit": {
+      "$value": "{text.warning}",
+      "$type": "color"
+    },
+    "empty": {
+      "$value": "{text.secondary}",
       "$type": "color"
     }
   },
@@ -2347,7 +2429,7 @@
       "$type": "color"
     },
     "delta-up": {
-      "$value": "{feedback.success}",
+      "$value": "{text.success}",
       "$type": "color"
     },
     "delta-down": {
@@ -2705,6 +2787,28 @@
       "$type": "dimension"
     }
   },
+  "time-range-picker": {
+    "trigger-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "label": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "option-fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "option-bg-active": {
+      "$value": "{action.selected-subtle}",
+      "$type": "color"
+    },
+    "divider": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  },
   "timeline": {
     "line": {
       "$value": "{border.default}",
@@ -2827,6 +2931,36 @@
       "$type": "shadow"
     }
   },
+  "trace-tree": {
+    "fg": {
+      "$value": "{text.primary}",
+      "$type": "color"
+    },
+    "row-bg-selected": {
+      "$value": "{action.selected-subtle}",
+      "$type": "color"
+    },
+    "track": {
+      "$value": "{surface.subtle}",
+      "$type": "color"
+    },
+    "bar": {
+      "$value": "{action.primary}",
+      "$type": "color"
+    },
+    "bar-error": {
+      "$value": "{feedback.error}",
+      "$type": "color"
+    },
+    "duration": {
+      "$value": "{text.secondary}",
+      "$type": "color"
+    },
+    "guide": {
+      "$value": "{border.default}",
+      "$type": "color"
+    }
+  },
   "tree": {
     "fg": {
       "$value": "{text.primary}",
@@ -2847,11 +2981,11 @@
   },
   "undo-bar": {
     "bg": {
-      "$value": "{text.primary}",
+      "$value": "{surface.inverse}",
       "$type": "color"
     },
     "fg": {
-      "$value": "{text.on-action}",
+      "$value": "{text.on-inverse-strong}",
       "$type": "color"
     }
   },

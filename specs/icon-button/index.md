@@ -51,9 +51,9 @@ An icon-only action for toolbars and row actions; always needs an aria-label and
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `icon-button.fg` | `{text.primary}` | `#1a1a18` |
-| `icon-button.bg-hover` | `{surface.subtle}` | `#f3f3f0` |
-| `icon-button.border-focus` | `{focus.ring}` | `#f5631a` |
+| `icon-button.fg` | `{text.primary}` | `#2a2926` |
+| `icon-button.bg-hover` | `{surface.subtle}` | `#efeeec` |
+| `icon-button.border-focus` | `{focus.ring}` | `#e86800` |
 
 **Do:** Always set aria-label; Pair with a Tooltip; Keep a 44x44 hit area.
 **Don't:** Ship without an accessible name; Use an ambiguous icon alone.

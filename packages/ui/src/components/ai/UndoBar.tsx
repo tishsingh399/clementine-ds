@@ -13,8 +13,8 @@ export interface UndoBarProps {
  */
 export const UndoBar = forwardRef<HTMLDivElement, UndoBarProps>(({ message, onUndo }, ref) => (
   <Group ref={ref} justify="space-between" align="center" px="md" py="xs" role="status" aria-live="polite"
-    style={{ background: 'var(--cds-text-primary)', borderRadius: 8 }}>
-    <Text size="sm" style={{ color: 'var(--cds-text-on-action)' }}>{message}</Text>
+    style={{ background: 'var(--cds-undo-bar-bg)', borderRadius: 8 }}>
+    <Text size="sm" style={{ color: 'var(--cds-undo-bar-fg)' }}>{message}</Text>
     {onUndo && <Button size="xs" variant="white" onClick={onUndo}>Undo</Button>}
   </Group>
 ));

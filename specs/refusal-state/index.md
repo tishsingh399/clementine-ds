@@ -55,10 +55,10 @@ A clear, non-dead-end refusal — "I can't do X; here's why, try Y." Styled NEUT
 
 | Token | Resolves through | Light |
 |---|---|---|
-| `refusal-state.bg` | `{surface.subtle}` | `#f3f3f0` |
-| `refusal-state.border` | `{border.default}` | `#e5e5e0` |
-| `refusal-state.fg` | `{text.primary}` | `#1a1a18` |
-| `refusal-state.suggestion` | `{text.link}` | `#2563eb` |
+| `refusal-state.bg` | `{surface.subtle}` | `#efeeec` |
+| `refusal-state.border` | `{border.default}` | `#d5d3d0` |
+| `refusal-state.fg` | `{text.primary}` | `#2a2926` |
+| `refusal-state.suggestion` | `{text.link}` | `#3960ab` |
 
 **Do:** Give a clear reason + a forward path; Style neutrally (not alarming red); Keep it short and honest.
 **Don't:** Dead-end the user; Style a refusal as an error; Be preachy.
