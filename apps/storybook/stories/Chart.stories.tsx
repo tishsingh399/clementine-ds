@@ -22,5 +22,6 @@ const meta: Meta<typeof AreaChart> = {
 export default meta; type Story = StoryObj<typeof AreaChart>;
 
 export const Area: Story = {};
-export const Line: Story = { render: (args) => <LineChart {...args} /> };
-export const Bar: Story = { render: (args) => <BarChart {...args} /> };
+// Each geometry types its own props; the shared args come from meta at runtime.
+export const Line: StoryObj<typeof LineChart> = { render: (args) => <LineChart {...args} /> };
+export const Bar: StoryObj<typeof BarChart> = { render: (args) => <BarChart {...args} /> };
