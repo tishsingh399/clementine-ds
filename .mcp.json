@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "clementine": {
+      "command": "npx",
+      "args": ["agentic-spec-mcp", "specs"]
+    }
+  }
+}
