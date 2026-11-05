@@ -1,0 +1,11 @@
+{
+  "$comment": "Components known to paint a library default instead of their action.primary token (scripts/token-swap.mjs). Each entry is a bug to fix, not an exemption: remove it with the fix. A listed component that starts following the swap fails the check until its entry is removed.",
+  "notFollowing": [
+    { "component": "chart", "reason": "series colour is a Mantine palette name (story passes color: 'blue.6'), not chart.series-1" },
+    { "component": "fab", "reason": "bare Mantine ActionIcon, no theme entry; paints Mantine's filled primary" },
+    { "component": "progress", "reason": "section paints --mantine-color-blue-filled; the theme vars for --progress-section-color do not win" },
+    { "component": "sparkline", "reason": "stroke is a Mantine palette name (story passes color: 'blue.6'), not sparkline.stroke" },
+    { "component": "split-button", "reason": "paints Mantine's filled primary instead of split-button.bg" },
+    { "component": "tabs", "reason": "active indicator paints Mantine's primary instead of tabs.indicator.active" }
+  ]
+}

@@ -41,6 +41,15 @@ jobs:
           pnpm --filter storybook exec wait-on -t 60000 http://localhost:6006/index.json
           STORYBOOK_URL=http://localhost:6006 node scripts/parity-dom.mjs --strict --states-strict
 
+      # parity-dom passes a library default that happens to equal the token's value.
+      # This swaps action.primary to a sentinel and fails any component that doesn't follow.
+      - name: Serve Storybook + run token swap
+        if: success() || failure()
+        run: |
+          pnpm --filter storybook exec http-server storybook-static -p 6007 --silent &
+          pnpm --filter storybook exec wait-on -t 60000 http://localhost:6007/index.json
+          STORYBOOK_URL=http://localhost:6007 node scripts/token-swap.mjs
+
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v7
