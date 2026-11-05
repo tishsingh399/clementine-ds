@@ -609,6 +609,19 @@ export const clementineTheme = createTheme({
         },
       },
     },
+    // Without this entry Slider painted Mantine's primary blue, which only matched slider.track-filled
+    // while action.primary happened to be blue.6. Track bg is set on the track element, so it goes in styles.
+    Slider: {
+      vars: () => ({
+        root: { '--slider-color': 'var(--cds-slider-track-filled)' },
+      }),
+      styles: {
+        track: { '--slider-track-bg': 'var(--cds-slider-track)' },
+        thumb: { backgroundColor: 'var(--cds-slider-thumb)', borderColor: 'var(--cds-slider-thumb-border)' },
+        mark: { borderColor: 'var(--cds-slider-mark)' },
+        label: { color: 'var(--cds-slider-label)' },
+      },
+    },
     SegmentedControl: {
       defaultProps: { radius: 'md' },
       vars: () => ({
