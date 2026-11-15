@@ -1,0 +1,42 @@
+name: Figma parity (nightly)
+
+# Checks the live Clementine Figma library against code (scripts/figma-parity.mjs):
+# every component token exists as a Figma variable with the same value, and every
+# Code Connect link points at a real Figma component. Needs the network and a
+# Figma token, so it runs nightly + on demand rather than per-PR.
+#
+# Setup: repo secret FIGMA_ACCESS_TOKEN (Figma personal access token with
+# file_variables:read and file_content:read). FIGMA_FILE_KEY defaults to the
+# Clementine DS library; override with a repo variable if the library moves.
+on:
+  schedule:
+    - cron: '15 7 * * *' # 07:15 UTC daily, after DOM parity
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  figma-parity:
+    name: Figma ↔ code parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check live Figma library
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          FIGMA_FILE_KEY: ${{ vars.FIGMA_FILE_KEY || 'w4JB0MOEIzOtSKx5Y3YSQR' }}
+        run: node scripts/figma-parity.mjs --remote
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: figma-parity-report
+          path: apps/observatory/figma-parity-report.json
+          if-no-files-found: ignore

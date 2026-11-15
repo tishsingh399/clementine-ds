@@ -31,6 +31,8 @@
     "validate": "pnpm tokens:index && pnpm tokens:types:check && pnpm agentic:indexes && pnpm validate:contract && pnpm validate:cascade && pnpm spec-token-metadata:check && pnpm validate:honesty && pnpm validate:links && pnpm validate:behaviors && pnpm validate:state-coverage && pnpm validate:token-intent && pnpm counts:check",
     "contract": "pnpm validate && node scripts/parity-report.mjs --strict",
     "parity:dom": "node scripts/parity-dom.mjs",
+    "figma:parity": "node scripts/figma-parity.mjs --remote",
+    "figma:parity:test": "node scripts/lib/figma-diff.test.mjs",
     "test": "pnpm validate"
   },
   "size-limit": [

@@ -17,4 +17,5 @@ storybook-static/
 # Generated reports — produced by scripts/, regenerated in CI (don't commit stale snapshots)
 apps/observatory/parity-report.json
 apps/observatory/figma-expected-variables.json
+apps/observatory/figma-parity-report.json
 apps/observatory/parity-dom-report.json

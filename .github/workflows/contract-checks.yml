@@ -54,6 +54,9 @@ jobs:
       - name: Contract parity — strict (F16)
         run: node scripts/parity-report.mjs --strict
 
+      - name: Figma parity logic + Code Connect files parse (F17)
+        run: pnpm figma:parity:test
+
       - name: Doc counts in sync (F9/F10)
         run: node scripts/inject-counts.mjs --check
 
