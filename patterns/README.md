@@ -24,6 +24,7 @@ Patterns are **compositions of components** that solve recurring UX problems. Th
 
 | Pattern | What it composes | Why useful |
 |---|---|---|
+| [settings-save](./settings-save/index.md) (Draft) | FormField + ActionBar + Toast + InlineMessage + ConfirmDialog | One way to save settings, warn about unsaved changes, and separate destructive actions |
 | `data-table-row` | Badge + Button + Menu | Standard list-item row |
 | `empty-state` | Heading + Body + ActionBar | What to show when a list is empty |
 | `page-header` | Heading + Badge + ActionBar + Breadcrumb | Top-of-page layout |

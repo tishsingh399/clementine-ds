@@ -42,6 +42,7 @@ export default [
     linterOptions: { reportUnusedDisableDirectives: 'off' },
     settings: { clementine: { root: import.meta.dirname } },
     rules: {
+      'clementine/no-button-paint-override': 'error',
       'clementine/no-unknown-component-token': 'error',
       'clementine/no-raw-style-values': 'error',
     },

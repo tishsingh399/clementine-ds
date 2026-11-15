@@ -77,4 +77,38 @@ assert.equal(flags('"tokens.ts"'), false);
 assert.equal(flags('console.log'), false);
 assert.equal(flags('props.value'), false);
 
+// --- no-button-paint-override ----------------------------------------------
+// The SaveBar demo: an agent "followed the system" by painting Button inline.
+// The token rules catch invented or raw values; this rule also catches paint
+// that uses perfectly real tokens, because Button owns its own paint.
+{
+  const { Linter } = await import('eslint');
+  const tseslint = (await import('typescript-eslint')).default;
+  const linter = new Linter({ configType: 'flat' });
+  const lint = (code) =>
+    linter
+      .verify(code, [{
+        files: ['**/*.tsx'],
+        languageOptions: { parser: tseslint.parser, parserOptions: { ecmaFeatures: { jsx: true } } },
+        plugins: { clementine: plugin },
+        rules: { 'clementine/no-button-paint-override': 'error' },
+      }], 'SaveBar.tsx')
+      .map((m) => m.message);
+
+  const broken = lint(`<>
+    <Button style={{ background: 'var(--cds-button-bg-primary-hover)' }}>Save</Button>
+    <Button variant="outline" style={{ borderColor: 'var(--cds-action-primary)' }}>Cancel</Button>
+  </>`);
+  assert.equal(broken.length, 2, broken.join('\n'));
+  assert.match(broken[0], /"background"/);
+  assert.match(broken[1], /"borderColor"/);
+
+  // Fixed SaveBar: paint lives on the wrapper, Button only gets intent/variant.
+  assert.deepEqual(lint(`<div style={{ background: 'var(--cds-surface-subtle)' }}>
+    <Button>Save</Button><Button variant="outline">Cancel</Button></div>`), []);
+  // Layout on Button is allowed (SplitButton joins two buttons this way).
+  assert.deepEqual(lint(`<Button style={{ borderTopRightRadius: 0 }}>Go</Button>`), []);
+  assert.equal(lint(`<Button style={{ 'box-shadow': 'none', color: 'red' }}>Go</Button>`).length, 2);
+}
+
 console.log('✔︎ Clementine ESLint plugin checks passed');

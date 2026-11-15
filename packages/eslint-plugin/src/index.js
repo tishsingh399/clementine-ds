@@ -1,7 +1,9 @@
+import { noButtonPaintOverride } from './rules/no-button-paint-override.js';
 import { noRawStyleValues } from './rules/no-raw-style-values.js';
 import { noUnknownComponentToken } from './rules/no-unknown-component-token.js';
 
 const rules = {
+  'no-button-paint-override': noButtonPaintOverride,
   'no-raw-style-values': noRawStyleValues,
   'no-unknown-component-token': noUnknownComponentToken,
 };
@@ -21,6 +23,7 @@ plugin.configs.recommended = [
       clementine: plugin,
     },
     rules: {
+      'clementine/no-button-paint-override': 'error',
       'clementine/no-raw-style-values': 'error',
       'clementine/no-unknown-component-token': 'error',
     },

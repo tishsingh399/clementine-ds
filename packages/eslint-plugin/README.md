@@ -13,6 +13,12 @@ and in the editor via the root `eslint.config.mjs`:
   semantic, and primitive. A lookup either hits an exact token or it fails;
   there is no nearest match. This is the rule that stops "use the primary
   colour" from becoming `color.primary`, a name the contract does not define.
+- `clementine/no-button-paint-override` flags paint keys (color, background,
+  border color, shadow, outline, opacity, filter) in an inline `style` object
+  on `<Button>`, even when the values are real tokens. Button owns its paint
+  for every state; use `intent` and `variant`. Layout keys such as border
+  radius stay allowed. Comes from the SaveBar demo and the
+  [settings-save pattern](../../patterns/settings-save/index.md).
 
 The plugin imports Clementine's generated token types from
 `packages/tokens/dist/tokens.d.ts` for its public TypeScript surface, and reads

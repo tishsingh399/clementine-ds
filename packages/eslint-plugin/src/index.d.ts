@@ -13,6 +13,7 @@ declare const plugin: {
     version: string;
   };
   rules: {
+    'no-button-paint-override': ClementineRuleModule;
     'no-raw-style-values': ClementineRuleModule;
     'no-unknown-component-token': ClementineRuleModule;
   };
