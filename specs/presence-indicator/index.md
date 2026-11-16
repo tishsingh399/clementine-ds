@@ -1,9 +1,9 @@
 ---
 component: presence-indicator
-ds_version: clementine-ds@0.1.0 (2026-10-17 verified)
+ds_version: clementine-ds@0.1.0 (2026-11-16 verified)
 status: AI-Ready
-last_verified: 2026-10-17
-verified_commit: 015819c0
+last_verified: 2026-11-16
+verified_commit: cb299743
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
 category: Enterprise
