@@ -2,7 +2,7 @@
 component: badge
 ds_version: clementine-ds@0.1.0 (2026-11-05 verified)
 status: AI-Ready
-last_verified: 2026-11-05
+last_verified: 2026-11-17
 verified_commit: 6685592e
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
