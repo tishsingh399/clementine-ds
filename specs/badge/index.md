@@ -2,7 +2,7 @@
 component: badge
 ds_version: clementine-ds@0.1.0 (2026-11-05 verified)
 status: AI-Ready
-last_verified: 2026-11-05
+last_verified: 2026-11-17
 verified_commit: 6685592e
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
@@ -18,12 +18,15 @@ token_contract:
   - badge.bg.success
   - badge.bg.error
   - badge.bg.warning
+  - badge.bg.info
   - badge.bg.risk-critical
   - badge.bg.risk-high
   - badge.bg.risk-medium
   - badge.bg.risk-low
   - badge.fg.default
   - badge.radius
+  - badge.height.sm
+  - badge.height.md
 
 interaction_states: [default]
 
@@ -75,6 +78,7 @@ None — Badge is presentational. If it conveys status critical to the surroundi
 | success | `feedback.success-subtle` | `#ddf5e2` |
 | error | `feedback.error-subtle` | `#fee8e5` |
 | warning | `feedback.warning-subtle` | `#ffebcf` |
+| info (`color="blue"`) | `feedback.info-subtle` | `#e5eeff` |
 | risk critical | `risk.critical-subtle` | `#fee8e5` |
 | risk high | `risk.high-subtle` | `#ffe9de` |
 | risk medium | `risk.medium-subtle` | `#ffebcf` |

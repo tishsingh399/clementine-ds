@@ -20,7 +20,8 @@
 
 /* ── Button ─────────────────────────────────────────────────────────── */
 .mantine-Button-root:active:not(:disabled, [data-disabled], [data-loading]) {
-  background-color: var(--cds-button-bg-active);
+  /* --button-active is set per variant in the theme (filled, destructive, outline/subtle). */
+  background-color: var(--button-active, var(--cds-button-bg-active));
 }
 .mantine-Button-root[data-variant='outline']:hover:not(:disabled, [data-disabled]),
 .mantine-Button-root[data-variant='default']:hover:not(:disabled, [data-disabled]) {

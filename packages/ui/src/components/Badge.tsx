@@ -26,6 +26,7 @@ const colorIntentMap: Record<string, string> = {
   green: 'success',
   red: 'error',
   orange: 'warning',
+  blue: 'info',
 };
 
 const tokenBgByIntent: Record<string, string> = {
@@ -33,6 +34,7 @@ const tokenBgByIntent: Record<string, string> = {
   success: 'var(--cds-badge-bg-success)',
   error: 'var(--cds-badge-bg-error)',
   warning: 'var(--cds-badge-bg-warning)',
+  info: 'var(--cds-badge-bg-info)',
 };
 
 const tokenBgByRisk: Record<RiskLevel, string> = {
