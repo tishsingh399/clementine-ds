@@ -15,6 +15,12 @@ semantic_parts:
   row: a data row
   cell: a data cell
 
+nesting:
+  Table:      [TableThead, TableTbody]
+  TableThead: [TableTr]
+  TableTbody: [TableTr]
+  TableTr:    [TableTh, TableTd]
+
 token_contract:
   - table.header-bg
   - table.header-fg
