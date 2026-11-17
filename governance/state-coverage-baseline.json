@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T03:53:53.219Z",
+  "generatedAt": "2026-11-17T20:35:17.770Z",
   "gaps": [
     {
       "component": "accordion",
@@ -643,13 +643,6 @@
       "state": "on",
       "status": "gap",
       "story": "apps/storybook/stories/Switch.stories.tsx",
-      "reason": "no explicit Storybook evidence for declared state"
-    },
-    {
-      "component": "tabs",
-      "state": "selected",
-      "status": "gap",
-      "story": "apps/storybook/stories/Tabs.stories.tsx",
       "reason": "no explicit Storybook evidence for declared state"
     },
     {

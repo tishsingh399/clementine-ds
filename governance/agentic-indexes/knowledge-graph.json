@@ -3929,7 +3929,8 @@
         "list",
         "tab",
         "indicator",
-        "panel"
+        "panel",
+        "scroll-control"
       ],
       "states": [
         "default",

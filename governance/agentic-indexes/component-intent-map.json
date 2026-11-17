@@ -5902,7 +5902,8 @@
         "list",
         "tab",
         "indicator",
-        "panel"
+        "panel",
+        "scroll-control"
       ],
       "required_aria": [
         "role",
@@ -5937,7 +5938,10 @@
           "path": "packages/ui/src/components/Tabs.tsx",
           "underlying_library": "mantine",
           "exports": [
-            "Tabs"
+            "Tabs",
+            "TabsList",
+            "TabsTab",
+            "TabsPanel"
           ]
         },
         "storybook": {
