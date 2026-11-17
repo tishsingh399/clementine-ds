@@ -212,3 +212,57 @@
 :is(.mantine-Calendar-day, .mantine-DatePicker-day, .mantine-DatePickerInput-day, .mantine-DateInput-day)[data-weekend]:not([data-selected], [data-outside]) {
   color: var(--cds-text-error);
 }
+
+/* ── Tabs: horizontal overflow (specs/tabs/index.md §2) ──────────────── */
+/* Mantine's list wraps; Clementine keeps one row and scrolls. Chevrons sit
+   outside the scroll area so they never cover a focused tab. */
+.cds-tabs-overflow {
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+}
+.cds-tabs-overflow[data-vertical] {
+  display: contents;
+}
+.cds-tabs-overflow:not([data-vertical]) > .cds-tabs-scroller {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+/* Scroll styles only while overflowing, so lists that fit render exactly as Mantine's. */
+.cds-tabs-overflow[data-overflowing] > .cds-tabs-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  /* room for the 2px focus outline + offset; the block margin gives the height back */
+  padding: var(--mantine-spacing-xs) calc(var(--mantine-spacing-xs) / 2);
+  margin-block: calc(var(--mantine-spacing-xs) * -1);
+}
+.cds-tabs-overflow[data-overflowing] > .cds-tabs-scroller::-webkit-scrollbar {
+  display: none;
+}
+.cds-tabs-overflow[data-vertical] > .cds-tabs-scroller {
+  display: contents;
+}
+.cds-tabs-overflow:not([data-vertical]) .mantine-Tabs-list {
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  min-width: 100%;
+}
+.cds-tabs-scroll {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--mantine-spacing-xs);
+  border: 0;
+  background: transparent;
+  color: var(--cds-tabs-fg-inactive);
+  cursor: pointer;
+}
+.cds-tabs-scroll:hover {
+  color: var(--cds-tabs-fg-hover);
+}
+.cds-tabs-scroll[data-hidden] {
+  visibility: hidden;
+}
