@@ -1,9 +1,9 @@
 ---
 component: color-input
-ds_version: clementine-ds@0.1.0 (2026-10-19 verified)
+ds_version: clementine-ds@0.1.0 (2026-11-18 verified)
 status: AI-Ready
-last_verified: 2026-10-19
-verified_commit: 015819c0
+last_verified: 2026-11-18
+verified_commit: 50c62062
 verified_by: [contract, honesty, token-parity, runtime-tokens, painted-dom]
 
 category: Component
