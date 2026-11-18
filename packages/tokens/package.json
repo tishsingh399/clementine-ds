@@ -13,7 +13,8 @@
     "./semantic-light": "./src/semantic-light.json",
     "./semantic-dark": "./src/semantic-dark.json",
     "./primitives-source": "./src/primitives.json",
-    "./components": "./src/components.generated.json"
+    "./components": "./src/components.generated.json",
+    "./contrast-pairs": "./contrast-pairs.json"
   },
   "scripts": {
     "prebuild": "node ../../scripts/build-component-index.mjs",

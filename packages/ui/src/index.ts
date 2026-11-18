@@ -2,7 +2,8 @@
 export { ClementineDSProvider, type ClementineDSProviderProps } from './ClementineDSProvider';
 
 // Theme
-export { clementineTheme, cssVariablesResolver } from './theme/clementine-theme';
+export { clementineTheme, cssVariablesResolver, tokenVariables } from './theme/clementine-theme';
+export { brandScales, brandVariables, contrastReport, contrastRatio, hexToOklch, oklchToHex, type ContrastRow } from './theme/brand';
 
 // Components
 export { Button, type ButtonProps } from './components/Button';

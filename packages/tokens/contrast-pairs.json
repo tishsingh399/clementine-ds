@@ -1,0 +1,280 @@
+{
+  "$description": "The foreground/background token pairs Clementine renders, with WCAG 2.1 AA thresholds. Read by scripts/contrast-audit.mjs and the Observatory brand remix.",
+  "thresholds": {
+    "text": 4.5,
+    "large": 3,
+    "ui": 3
+  },
+  "pairs": [
+    {
+      "fg": "text.primary",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.default",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.secondary",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.secondary",
+      "bg": "surface.default",
+      "kind": "text"
+    },
+    {
+      "fg": "text.secondary",
+      "bg": "surface.subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.tertiary",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.tertiary",
+      "bg": "surface.subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.link",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.error",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.error",
+      "bg": "surface.subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.success",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.warning",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "action.primary",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "action.primary-hover",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "action.primary-active",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "action.destructive",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "action.destructive-hover",
+      "kind": "text"
+    },
+    {
+      "fg": "feedback.error",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "feedback.success",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "feedback.warning",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "feedback.error",
+      "bg": "feedback.error-subtle",
+      "kind": "ui"
+    },
+    {
+      "fg": "feedback.success",
+      "bg": "feedback.success-subtle",
+      "kind": "ui"
+    },
+    {
+      "fg": "feedback.warning",
+      "bg": "feedback.warning-subtle",
+      "kind": "ui"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "feedback.error-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "feedback.success-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "feedback.warning-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "risk.critical-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "risk.high-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "risk.medium-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "risk.low-subtle",
+      "kind": "text"
+    },
+    {
+      "fg": "risk.critical",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "risk.high",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "risk.medium",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "risk.low",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "feedback.error-solid",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "feedback.success-solid",
+      "kind": "text"
+    },
+    {
+      "fg": "text.contrast.on-bright",
+      "bg": "feedback.warning-solid",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "feedback.info-solid",
+      "kind": "text"
+    },
+    {
+      "fg": "text.on-action",
+      "bg": "feedback.info-solid-hover",
+      "kind": "text"
+    },
+    {
+      "fg": "text.link-hover",
+      "bg": "surface.elevated",
+      "kind": "text"
+    },
+    {
+      "fg": "icon.secondary-hover",
+      "bg": "surface.subtle-hover",
+      "kind": "ui"
+    },
+    {
+      "fg": "icon.action-hover",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "icon.on-action",
+      "bg": "action.primary",
+      "kind": "ui"
+    },
+    {
+      "fg": "icon.on-action",
+      "bg": "action.destructive",
+      "kind": "ui"
+    },
+    {
+      "fg": "icon.on-action",
+      "bg": "feedback.info-solid",
+      "kind": "ui"
+    },
+    {
+      "fg": "icon.contrast.on-bright",
+      "bg": "accent.brand",
+      "kind": "ui"
+    },
+    {
+      "fg": "text.contrast.on-bright",
+      "bg": "accent.brand",
+      "kind": "text"
+    },
+    {
+      "fg": "border.strong",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "border.default",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "border.focus",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "focus.ring",
+      "bg": "surface.elevated",
+      "kind": "ui"
+    },
+    {
+      "fg": "focus.ring",
+      "bg": "action.primary",
+      "kind": "ui"
+    }
+  ],
+  "exempt": {
+    "border.default|surface.elevated": "decorative divider — WCAG 1.4.11 exempts purely decorative borders (state is carried by border.strong / focus.ring)",
+    "focus.ring|action.primary": "offset-mitigated — the focus spec uses a 2px ring with a 2px surface gap, so the ring contrasts against the page (focus.ring|surface.elevated), never directly on the fill",
+    "text.tertiary|surface.subtle": "uncommon pairing + large-AA — muted text renders on white inputs (4.76:1 ✓); tertiary is supplementary/placeholder, and disabled text is WCAG-exempt"
+  }
+}

@@ -1599,3 +1599,195 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ── Brand remix ───────────────────────────────────────────────────────── */
+.remix-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.remix-controls,
+.remix-stage {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(234, 88, 12, 0.18);
+  border-radius: 18px;
+  background: rgba(32, 25, 20, 0.8);
+  box-shadow: var(--site-shadow);
+}
+
+.remix-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.remix-picker input[type='color'] {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid var(--site-line-strong);
+  border-radius: 12px;
+  background: transparent;
+}
+
+.remix-hex {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid var(--site-line-strong);
+  border-radius: 12px;
+  background: #171714;
+  color: var(--site-ink);
+  font: 700 1.1rem var(--font-mono);
+  text-transform: lowercase;
+}
+
+.remix-hex:focus-visible,
+.remix-picker input[type='color']:focus-visible {
+  outline: 2px solid var(--site-accent-2);
+  outline-offset: 3px;
+}
+
+.remix-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.remix-presets button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 12px 0 8px;
+  cursor: pointer;
+  border: 1px solid rgba(234, 88, 12, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--site-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.remix-presets button.is-active {
+  border-color: var(--site-ink);
+  color: var(--site-ink);
+}
+
+.remix-presets span,
+.remix-fix span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.remix-scale > div {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.remix-scale span {
+  height: 28px;
+  border-radius: 5px;
+}
+
+.remix-scale span.is-brand {
+  outline: 2px solid var(--site-ink);
+  outline-offset: 1px;
+}
+
+.remix-meter {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.remix-meter.has-fail {
+  background: rgba(239, 68, 68, 0.14);
+}
+
+.remix-meter strong {
+  font: 900 1.9rem var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.remix-meter span {
+  color: var(--site-muted);
+  font-weight: 700;
+}
+
+.remix-failures {
+  display: grid;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--site-muted);
+}
+
+.remix-failures ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.remix-failures p {
+  margin: 0;
+}
+
+.remix-failures code {
+  color: var(--site-ink);
+  font-size: 12px;
+}
+
+.remix-fix,
+.remix-share {
+  justify-content: center;
+  cursor: pointer;
+}
+
+.remix-fix {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remix-stage .variant-control {
+  justify-content: flex-start;
+}
+
+.remix-preview {
+  display: grid;
+  gap: 18px;
+  padding: clamp(18px, 3vw, 32px);
+  border-radius: 14px;
+  background: var(--cds-surface-default);
+  color: var(--cds-text-primary);
+  transition: background 200ms ease;
+}
+
+.remix-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .remix-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
