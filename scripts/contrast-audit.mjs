@@ -55,83 +55,13 @@ function ratio(fg, bg) {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-// The pairs the system actually renders. kind: 'text' (4.5), 'large' (3.0), 'ui' (3.0)
-const PAIRS = [
-  // body text on every surface
-  ['text.primary', 'surface.elevated', 'text'],
-  ['text.primary', 'surface.default', 'text'],
-  ['text.primary', 'surface.subtle', 'text'],
-  ['text.secondary', 'surface.elevated', 'text'],
-  ['text.secondary', 'surface.default', 'text'],
-  ['text.secondary', 'surface.subtle', 'text'],
-  ['text.tertiary', 'surface.elevated', 'text'],     // placeholder/muted — often the offender
-  ['text.tertiary', 'surface.subtle', 'text'],
-  ['text.link', 'surface.elevated', 'text'],
-  // status text (component text tokens must use these, not feedback.* — see lint-cascade-direction)
-  ['text.error', 'surface.elevated', 'text'],
-  ['text.error', 'surface.subtle', 'text'],
-  ['text.success', 'surface.elevated', 'text'],
-  ['text.warning', 'surface.elevated', 'text'],
-  // text on filled actions (button labels)
-  ['text.on-action', 'action.primary', 'text'],
-  ['text.on-action', 'action.primary-hover', 'text'],
-  ['text.on-action', 'action.primary-active', 'text'],
-  ['text.on-action', 'action.destructive', 'text'],
-  ['text.on-action', 'action.destructive-hover', 'text'],
-  // feedback text on its subtle bg (alert/inline-message bodies use text.primary/secondary,
-  // but the icon + accent border carry the intent — check the strong colors as UI 3:1)
-  ['feedback.error', 'surface.elevated', 'ui'],
-  ['feedback.success', 'surface.elevated', 'ui'],
-  ['feedback.warning', 'surface.elevated', 'ui'],
-  ['feedback.error', 'feedback.error-subtle', 'ui'],
-  ['feedback.success', 'feedback.success-subtle', 'ui'],
-  ['feedback.warning', 'feedback.warning-subtle', 'ui'],
-  // text.primary on feedback subtle (alert body text)
-  ['text.primary', 'feedback.error-subtle', 'text'],
-  ['text.primary', 'feedback.success-subtle', 'text'],
-  ['text.primary', 'feedback.warning-subtle', 'text'],
-  // risk tiers (badge text uses text.primary on risk-subtle; strong tier as UI)
-  ['text.primary', 'risk.critical-subtle', 'text'],
-  ['text.primary', 'risk.high-subtle', 'text'],
-  ['text.primary', 'risk.medium-subtle', 'text'],
-  ['text.primary', 'risk.low-subtle', 'text'],
-  ['risk.critical', 'surface.elevated', 'ui'],
-  ['risk.high', 'surface.elevated', 'ui'],
-  ['risk.medium', 'surface.elevated', 'ui'],
-  ['risk.low', 'surface.elevated', 'ui'],
-  // solid status fills (filled badges, toasts) carry on-colour text and icons
-  ['text.on-action', 'feedback.error-solid', 'text'],
-  ['text.on-action', 'feedback.success-solid', 'text'],
-  ['text.contrast.on-bright', 'feedback.warning-solid', 'text'],
-  ['text.on-action', 'feedback.info-solid', 'text'],
-  ['text.on-action', 'feedback.info-solid-hover', 'text'],
-  // hover text and icons
-  ['text.link-hover', 'surface.elevated', 'text'],
-  ['icon.secondary-hover', 'surface.subtle-hover', 'ui'],  // hovered icon button
-  ['icon.action-hover', 'surface.elevated', 'ui'],
-  // on-colour icons (icon in a filled button, icon on the clementine accent)
-  ['icon.on-action', 'action.primary', 'ui'],
-  ['icon.on-action', 'action.destructive', 'ui'],
-  ['icon.on-action', 'feedback.info-solid', 'ui'],
-  ['icon.contrast.on-bright', 'accent.brand', 'ui'],
-  ['text.contrast.on-bright', 'accent.brand', 'text'],
-  // borders & focus (1.4.11 UI components — 3:1 against adjacent surface)
-  ['border.strong', 'surface.elevated', 'ui'],   // input borders
-  ['border.default', 'surface.elevated', 'ui'],   // dividers (decorative — informational only)
-  ['border.focus', 'surface.elevated', 'ui'],
-  ['focus.ring', 'surface.elevated', 'ui'],
-  ['focus.ring', 'action.primary', 'ui'],         // focus ring on a filled primary button
-];
-
-const THRESH = { text: 4.5, large: 3.0, ui: 3.0 };
-
-// Pairs that are reported but exempt from the must-pass gate, with the reason.
-// key = `${fg}|${bg}`
-const EXEMPT = {
-  'border.default|surface.elevated': 'decorative divider — WCAG 1.4.11 exempts purely decorative borders (state is carried by border.strong / focus.ring)',
-  'focus.ring|action.primary': 'offset-mitigated — the focus spec uses a 2px ring with a 2px surface gap, so the ring contrasts against the page (focus.ring|surface.elevated), never directly on the fill',
-  'text.tertiary|surface.subtle': 'uncommon pairing + large-AA — muted text renders on white inputs (4.76:1 ✓); tertiary is supplementary/placeholder, and disabled text is WCAG-exempt',
-};
+// The pairs the system actually renders live in packages/tokens/contrast-pairs.json,
+// shared with the Observatory brand remix. kind: 'text' (4.5), 'large' (3.0), 'ui' (3.0).
+// `exempt` pairs are reported but excluded from the must-pass gate, with the reason.
+const contrast = JSON.parse(readFileSync(join(SRC, '..', 'contrast-pairs.json'), 'utf8'));
+const PAIRS = contrast.pairs.map(({ fg, bg, kind }) => [fg, bg, kind]);
+const THRESH = contrast.thresholds;
+const EXEMPT = contrast.exempt;
 
 function run(sem, label) {
   const rows = [];

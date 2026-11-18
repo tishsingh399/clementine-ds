@@ -14,6 +14,7 @@ import {
   ToolCallCard,
 } from '@clementine-ds/ui';
 import snapshot from './data/snapshot.json';
+import { BrandRemix } from './BrandRemix';
 import diagramTokenPath from '../../../docs/article/diagram-1-token-path.png';
 import diagramMirrorVsTest from '../../../docs/article/diagram-2-mirror-vs-test.png';
 import diagramPitfalls from '../../../docs/article/diagram-3-pitfalls.png';
@@ -435,6 +436,7 @@ export function App() {
           <a href="#proof">Proof</a>
           <a href="#story">Story</a>
           <a href="#playground">Playground</a>
+          <a href="#remix">Remix</a>
           <a href="#governance">Governance</a>
           <a href="#architecture">Architecture</a>
           <a href={data.surfaces.storybook}>Storybook</a>
@@ -617,6 +619,8 @@ export function App() {
           </aside>
         </div>
       </section>
+
+      <BrandRemix />
 
       <section id="governance" className="governance-section">
         <div className="section-heading narrow">

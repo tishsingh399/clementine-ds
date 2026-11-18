@@ -32,14 +32,14 @@ function lookup(tree: AnyTree, path: string): TokenObj | undefined {
 }
 
 /** Resolve a DTCG value/reference to a concrete value through the given semantic layer. */
-function resolveValue(value: string, semantic: AnyTree): string {
+function resolveValue(value: string, semantic: AnyTree, prims: AnyTree = primitivesTree): string {
   const match = /^\{(.+)\}$/.exec(value);
   if (!match) return value; // literal (hex, rgba, ms, dimension)
-  const node = lookup(semantic, match[1]) ?? lookup(primitivesTree, match[1]);
+  const node = lookup(semantic, match[1]) ?? lookup(prims, match[1]);
   if (!node || typeof node.$value !== 'string') return value; // unresolved — keep the ref
   // After one hop the value has left the semantic layer; resolve further hops
   // against primitives only (Figma reuses names like category/clementine in both).
-  return resolveValue(node.$value, {});
+  return resolveValue(node.$value, {}, prims);
 }
 
 /** Flatten the semantic layer into `--<prefix>-<path>` vars (one per prefix), e.g. --cds-text-contrast-default. */
@@ -48,14 +48,15 @@ function flattenSemanticTokens(
   semantic: AnyTree,
   prefixes: string[],
   path: string[] = [],
+  prims: AnyTree = primitivesTree,
 ): Record<string, string> {
   const result: Record<string, string> = {};
   for (const [key, node] of Object.entries(tree)) {
     if (node && typeof node === 'object' && '$value' in node) {
-      const value = resolveValue((node as TokenObj).$value, semantic);
+      const value = resolveValue((node as TokenObj).$value, semantic, prims);
       for (const prefix of prefixes) result[`${prefix}-${[...path, key].join('-')}`] = value;
     } else if (node && typeof node === 'object') {
-      Object.assign(result, flattenSemanticTokens(node as AnyTree, semantic, prefixes, [...path, key]));
+      Object.assign(result, flattenSemanticTokens(node as AnyTree, semantic, prefixes, [...path, key], prims));
     }
   }
   return result;
@@ -66,6 +67,7 @@ function flattenComponentTokens(
   tree: AnyTree,
   semantic: AnyTree,
   path: string[] = [],
+  prims: AnyTree = primitivesTree,
 ): Record<string, string> {
   const result: Record<string, string> = {};
   for (const [key, value] of Object.entries(tree)) {
@@ -73,12 +75,30 @@ function flattenComponentTokens(
       result[`--cds-${[...path, key].join('-')}`] = resolveValue(
         (value as TokenObj).$value,
         semantic,
+        prims,
       );
     } else if (value && typeof value === 'object') {
-      Object.assign(result, flattenComponentTokens(value as AnyTree, semantic, [...path, key]));
+      Object.assign(result, flattenComponentTokens(value as AnyTree, semantic, [...path, key], prims));
     }
   }
   return result;
+}
+
+/**
+ * Every `--cds-*` (and `--tds-*`) variable for one colour scheme. `prims` swaps the
+ * primitive layer, which is how a brand remix re-themes the system (theme/brand.ts).
+ */
+export function tokenVariables(mode: 'light' | 'dark', prims: AnyTree = primitivesTree): Record<string, string> {
+  const semantic = (mode === 'light' ? lightTokens : darkTokens) as AnyTree;
+  return {
+    // Mantine's error colour is a red tuple index, which can't follow our per-mode text/error step.
+    '--mantine-color-error': resolveValue('{text.error}', semantic, prims),
+    // Mantine paints Anchor (and Breadcrumbs/Spoiler links) with --mantine-color-anchor, a
+    // primary-tuple step; links must follow text.link in each mode instead.
+    '--mantine-color-anchor': 'var(--cds-text-link)',
+    ...flattenSemanticTokens(semantic, semantic, ['--cds', '--tds'], [], prims),
+    ...flattenComponentTokens(componentTokens as AnyTree, semantic, [], prims),
+  };
 }
 
 // `--cds-*` is the canonical prefix (matches the package name). `--tds-*` is
@@ -86,27 +106,12 @@ function flattenComponentTokens(
 // remaining `var(--tds-*)` references keep resolving after the migration.
 export const cssVariablesResolver: CSSVariablesResolver = () => ({
   variables: {},
-  light: {
-    // Mantine's error colour is a red tuple index, which can't follow our per-mode text/error step.
-    '--mantine-color-error': resolveValue('{text.error}', lightTokens as AnyTree),
-    // Mantine paints Anchor (and Breadcrumbs/Spoiler links) with --mantine-color-anchor, a
-    // primary-tuple step; links must follow text.link in each mode instead.
-    '--mantine-color-anchor': 'var(--cds-text-link)',
-    ...flattenSemanticTokens(lightTokens as AnyTree, lightTokens as AnyTree, ['--cds', '--tds']),
-    ...flattenComponentTokens(componentTokens as AnyTree, lightTokens as AnyTree),
-  },
-  dark: {
-    '--mantine-color-error': resolveValue('{text.error}', darkTokens as AnyTree),
-    // Mantine paints Anchor (and Breadcrumbs/Spoiler links) with --mantine-color-anchor, a
-    // primary-tuple step; links must follow text.link in each mode instead.
-    '--mantine-color-anchor': 'var(--cds-text-link)',
-    ...flattenSemanticTokens(darkTokens as AnyTree, darkTokens as AnyTree, ['--cds', '--tds']),
-    ...flattenComponentTokens(componentTokens as AnyTree, darkTokens as AnyTree),
-  },
+  light: tokenVariables('light'),
+  dark: tokenVariables('dark'),
 });
 
 // Palette steps (1-12) for each Mantine shade index 0-9.
-const SOLID = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // index 6 = step 9, the solid fill
+export const SOLID = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // index 6 = step 9, the solid fill
 const GRAY = [2, 3, 4, 5, 6, 10, 11, 12, 12, 12]; // 0 canvas · 4 border.default · 5 placeholder · 6 dimmed
 const DARK = [12, 11, 11, 11, 7, 6, 3, 1, 1, 1]; // 3 placeholder = text.tertiary · 4 border · 5 control/hover surface (Chip, hover) · 6 Paper
 const pal = p as unknown as Record<string, string>;
