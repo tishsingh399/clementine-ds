@@ -34,7 +34,7 @@ Show five quiet failure modes that can pass shallow automation: invented tokens,
 
 ### Governance Loop
 
-Show a continuous governance loop around a design system: watch signals, diagnose real issue vs. noise, fix through PR, and learn a new rule so the same issue happens less next time. Center the context layer: token architecture, governance rules, learning history, and knowledge graph.
+Show Clementine's own self-healing loop as two lanes and a ledger: the nightly painted-DOM check measures, drift is flagged as mechanical (fixed by a deterministic script as a PR that must pass the contract gates) or judgment (filed as an issue for a person), and a loop PR a person rejects must become a rule in `governance/loop-rules.md`, which the next run reads first. Use the real ledger entries and counts, on Clementine's light palette. Avoid the generic watch/diagnose/fix/learn ring.
 
 ## Stable GitHub URLs
 

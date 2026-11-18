@@ -177,9 +177,9 @@ const STORY_PANELS: StoryPanel[] = [
   {
     id: 'governance',
     label: 'Governance loop',
-    headline: 'The system watches, diagnoses, fixes, and learns.',
+    headline: 'A rejected fix can\'t evaporate. It becomes a rule.',
     image: diagramGovernanceLoop,
-    caption: 'Signals feed a governance loop around the design system: watch drift, diagnose noise, fix through PR, and learn a new rule.',
+    caption: 'Measure, flag, fix, gate, encode. Scripts fix only derivable drift as gated PRs; judgment calls go to a person; a rejected loop PR must be written into governance/loop-rules.md, which the next run reads first.',
     placement: 'Use as the closing update: this is what changed after Clementine matured.',
     proof: 'The nightly painted-DOM check now verifies the contract automatically, so the public claim has a running proof behind it.',
   },
