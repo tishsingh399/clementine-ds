@@ -521,6 +521,15 @@ export const clementineTheme = createTheme({
         divider: { borderColor: 'var(--cds-menu-divider)' },
       },
     },
+    Tabs: {
+      // An explicit `color` prop still wins; otherwise the indicator and list line follow tabs.* tokens.
+      vars: (_theme: unknown, props: { color?: string }) => ({
+        root: {
+          ...(props.color ? {} : { '--tabs-color': 'var(--cds-tabs-indicator-active)' }),
+          '--tab-border-color': 'var(--cds-tabs-border-list)',
+        },
+      }),
+    },
     Accordion: {
       defaultProps: { radius: 'md', variant: 'separated' },
       vars: () => ({

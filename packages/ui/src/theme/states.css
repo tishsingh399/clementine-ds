@@ -213,6 +213,29 @@
   color: var(--cds-text-error);
 }
 
+/* ── Tabs: label colours (specs/tabs/index.md, tabs.* tokens) ─────────── */
+/* Pills paint the active tab with the indicator fill, so they keep Mantine's on-fill text colour. */
+.mantine-Tabs-tab {
+  color: var(--cds-tabs-fg-inactive);
+}
+.mantine-Tabs-tab:hover:not([data-active], :disabled, [data-disabled]) {
+  color: var(--cds-tabs-fg-hover);
+}
+.mantine-Tabs-tab[data-active]:not([data-variant='pills']) {
+  color: var(--cds-tabs-fg-active);
+}
+.mantine-Tabs-tab[data-active][data-variant='pills'] {
+  color: var(--tab-color);
+}
+/* Keeps Mantine's 50% fade: text.tertiary alone is too close to fg.inactive to read as disabled. */
+.mantine-Tabs-tab:is(:disabled, [data-disabled]) {
+  color: var(--cds-tabs-fg-disabled);
+}
+.mantine-Tabs-tab:focus-visible {
+  outline: 2px solid var(--cds-tabs-border-focus);
+  outline-offset: 2px;
+}
+
 /* ── Tabs: horizontal overflow (specs/tabs/index.md §2) ──────────────── */
 /* Mantine's list wraps; Clementine keeps one row and scrolls. Chevrons sit
    outside the scroll area so they never cover a focused tab. */

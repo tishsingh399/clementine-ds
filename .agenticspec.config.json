@@ -5,5 +5,11 @@
   },
   "honesty": {
     "mode": "strict"
+  },
+  "codeTokenUsage": {
+    "searchPaths": [
+      "packages/ui/src/theme/clementine-theme.ts",
+      "packages/ui/src/theme/states.css"
+    ]
   }
 }
