@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd ../.. && pnpm --filter observatory build:full",
+  "buildCommand": "cd ../.. && pnpm --filter \"observatory^...\" build && pnpm --filter observatory build:full",
   "outputDirectory": "dist",
   "installCommand": "cd ../.. && pnpm install --no-frozen-lockfile",
   "framework": "vite"
