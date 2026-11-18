@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import {
   Alert,
   Badge,
@@ -107,43 +107,28 @@ const COMPONENT_PROOF = [
 
 const TOKEN_SWATCHES = {
   primitives: [
-    ['ORANGE-400', 'color.orange.4', '#FB923C'],
-    ['ORANGE-500', 'color.orange.5', '#F97316'],
-    ['ORANGE-600', 'color.orange.6', '#EA580C'],
-    ['ORANGE-700', 'color.orange.7', '#C2410C'],
-    ['ORANGE-800', 'color.orange.8', '#9A3412'],
+    ['Ink 3', 'palette.ink.3', '#E5EEFF'],
+    ['Ink 6', 'palette.ink.6', '#BDD5FF'],
+    ['Ink 8', 'palette.ink.8', '#83ACF6'],
+    ['Ink 9', 'palette.ink.9', '#305EB7'],
+    ['Ink 12', 'palette.ink.12', '#16284A'],
   ],
   atmosphere: [
-    ['BLUE-500', 'color.blue.5', '#3B82F6'],
-    ['BLUE-700', 'color.blue.7', '#1D4ED8'],
+    ['Neutral 2', 'palette.neutral.2', '#F6F6F4'],
+    ['Neutral 12', 'palette.neutral.12', '#2A2926'],
   ],
   accent: [
-    ['RED-500', 'color.red.5', '#EF4444'],
-    ['RED-600', 'color.red.6', '#DC2626'],
+    ['Green 9', 'palette.green.9', '#198044'],
+    ['Red 9', 'palette.red.9', '#C1332F'],
   ],
 };
 
 const GOVERNANCE_SIGNALS = [
-  {
-    label: 'Watch',
-    value: 'drift + a11y + stale specs',
-    detail: 'CI reads the same contracts the playground shows, so drift becomes a visible event instead of folklore.',
-  },
-  {
-    label: 'Diagnose',
-    value: 'real issue or noise',
-    detail: 'Rules warn first when confidence is lower, which keeps the system strict without teaching teams to ignore it.',
-  },
-  {
-    label: 'Fix',
-    value: 'back as a PR',
-    detail: 'The repair path is explicit: update component token, spec contract, runtime theme, and Storybook together.',
-  },
-  {
-    label: 'Learn',
-    value: 'new rule, less next time',
-    detail: 'Repeated misses graduate into validator rules, so the design system gets harder to break over time.',
-  },
+  { label: 'Measure', value: 'Nightly painted-DOM check of every component in a real browser.' },
+  { label: 'Flag', value: 'Drift is sorted: derivable from source, or a judgment call.' },
+  { label: 'Fix', value: 'A deterministic script opens a PR. Judgment calls go to a person.' },
+  { label: 'Gate', value: 'Contract gates must pass on that exact commit before it merges.' },
+  { label: 'Encode', value: 'A rejected loop PR becomes a rule the next run reads first.' },
 ];
 
 const STORY_PANELS: StoryPanel[] = [
@@ -177,9 +162,9 @@ const STORY_PANELS: StoryPanel[] = [
   {
     id: 'governance',
     label: 'Governance loop',
-    headline: 'The system watches, diagnoses, fixes, and learns.',
+    headline: 'A rejected fix can\'t evaporate. It becomes a rule.',
     image: diagramGovernanceLoop,
-    caption: 'Signals feed a governance loop around the design system: watch drift, diagnose noise, fix through PR, and learn a new rule.',
+    caption: 'Measure, flag, fix, gate, encode. Scripts fix only derivable drift as gated PRs; judgment calls go to a person; a rejected loop PR must be written into governance/loop-rules.md, which the next run reads first.',
     placement: 'Use as the closing update: this is what changed after Clementine matured.',
     proof: 'The nightly painted-DOM check now verifies the contract automatically, so the public claim has a running proof behind it.',
   },
@@ -330,11 +315,64 @@ function compactDate(value: string) {
   return String(value).slice(0, 10);
 }
 
+const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/** Counts up to a number the first time it scrolls into view. Non-numeric values render as-is. */
+function CountUp({ value }: { value: string | number }) {
+  const match = String(value).match(/^(\d+)(.*)$/);
+  const target = match ? Number(match[1]) : 0;
+  const [shown, setShown] = useState(match ? 0 : null);
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!match || !ref.current) return;
+    if (reduceMotion()) return setShown(target);
+    const io = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      io.disconnect();
+      const start = performance.now();
+      const tick = (now: number) => {
+        const t = Math.min(1, (now - start) / 1100);
+        setShown(Math.round(target * (1 - (1 - t) ** 4))); // ease-out quart
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.4 });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [target]); // eslint-disable-line react-hooks/exhaustive-deps
+  return <strong ref={ref}>{match ? `${shown}${match[2]}` : value}</strong>;
+}
+
+/** Fades sections and tile rows up once as they enter the viewport. Content stays visible without JS. */
+function useReveal() {
+  useEffect(() => {
+    if (reduceMotion()) return;
+    const targets = document.querySelectorAll<HTMLElement>(
+      '.section-heading, .proof-step, .story-board, .metric-tile, .playground-shell, .remix-shell, .loop-steps li, .governance-copy article, .architecture-grid article',
+    );
+    targets.forEach((el) => {
+      el.classList.add('reveal');
+      const siblings = el.parentElement ? [...el.parentElement.children].filter((c) => c.matches('.proof-step, .metric-tile, .loop-steps li, .governance-copy article, .architecture-grid article')) : [];
+      el.style.setProperty('--i', String(Math.max(0, siblings.indexOf(el))));
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    targets.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+}
+
 function AppMetric({ label, value, detail }: { label: string; value: string | number; detail: string }) {
   return (
     <article className="metric-tile">
       <span>{label}</span>
-      <strong>{value}</strong>
+      <CountUp value={value} />
       <small>{detail}</small>
     </article>
   );
@@ -384,7 +422,7 @@ function StoryMode() {
           aria-labelledby={`story-tab-${active.id}`}
         >
           <div className="story-preview__media">
-            <img src={active.image} alt={active.caption} />
+            <img key={active.id} src={active.image} alt={active.caption} />
           </div>
           <div className="story-preview__copy">
             <p className="eyebrow">Selected diagram</p>
@@ -415,6 +453,7 @@ export function App() {
   );
   const variant = variantById[selected.id] ?? selected.variants[0];
   const spec = findSpec(selected.id);
+  useReveal();
 
   const componentTokens = useMemo(
     () => Object.values(data.totals.tokens.components).reduce((sum, count) => sum + count, 0),
@@ -449,23 +488,20 @@ export function App() {
             Clementine
             <span className="clementine-dot" aria-hidden="true" />
           </h1>
-          <div className="hero-rule">
-            <p className="eyebrow">Design system</p>
-            <span />
-          </div>
+          <p className="hero-tagline">Contracts your agents can read.</p>
           <p className="hero-lede">
             A modern component library for enterprise products. Designed for speed, accessibility,
             and agent-readable contracts.
           </p>
           <div className="hero-actions">
             <a className="action primary" href="#playground">Try the contract playground</a>
-            <a className="action secondary" href={data.surfaces.mintlify}>Read the docs</a>
+            <a className="action link" href={data.surfaces.mintlify}>Read the docs</a>
           </div>
         </div>
 
-        <div className="token-board" aria-label="Clementine design tokens">
+        <div className="token-board" aria-label="Clementine primitive colours">
           <div className="token-group primitives">
-            <p className="board-label">Core primitives</p>
+            <p className="board-label">Ink, the primary</p>
             <div className="swatch-row wide">
               {TOKEN_SWATCHES.primitives.map(([name, path, value]) => (
                 <article key={name} className="swatch-card">
@@ -479,7 +515,7 @@ export function App() {
           </div>
 
           <div className="token-group atmosphere">
-            <p className="board-label">Atmosphere</p>
+            <p className="board-label">Neutral</p>
             <div className="swatch-row">
               {TOKEN_SWATCHES.atmosphere.map(([name, path, value]) => (
                 <article key={name} className="swatch-card">
@@ -493,7 +529,7 @@ export function App() {
           </div>
 
           <div className="token-group accent">
-            <p className="board-label">Accent</p>
+            <p className="board-label">Status</p>
             <div className="swatch-row">
               {TOKEN_SWATCHES.accent.map(([name, path, value]) => (
                 <article key={name} className="swatch-card">
@@ -506,10 +542,6 @@ export function App() {
             </div>
           </div>
 
-          <div className="live-component-ghost">
-            <p className="board-label">Live component</p>
-            <div className="ghost-mark" />
-          </div>
         </div>
       </section>
 
@@ -633,20 +665,14 @@ export function App() {
         </div>
 
         <div className="governance-board">
-          <div className="learning-loop" aria-label="Watch, diagnose, fix, learn loop">
-            <div className="loop-track" />
-            <div className="loop-core">
-              <span>Context</span>
-              <strong>{data.totals.specs} specs</strong>
-              <small>Token architecture · governance rules · learning history</small>
-            </div>
-            {GOVERNANCE_SIGNALS.map((signal, index) => (
-              <article key={signal.label} className={`loop-card loop-card-${index + 1}`}>
-                <span>{signal.label}</span>
-                <strong>{signal.value}</strong>
-              </article>
+          <ol className="loop-steps" aria-label="The self-healing loop">
+            {GOVERNANCE_SIGNALS.map((signal) => (
+              <li key={signal.label}>
+                <strong>{signal.label}</strong>
+                <span>{signal.value}</span>
+              </li>
             ))}
-          </div>
+          </ol>
 
           <div className="governance-copy">
             <article>
@@ -661,8 +687,8 @@ export function App() {
             </article>
             <article>
               <span>Agent loop</span>
-              <strong>watch → fix → learn</strong>
-              <p>When drift repeats, the answer is not another reminder. It becomes a rule.</p>
+              <strong>measure → encode</strong>
+              <p>A fix a person rejects can't evaporate. It is written into the loop's rules ledger.</p>
             </article>
           </div>
         </div>

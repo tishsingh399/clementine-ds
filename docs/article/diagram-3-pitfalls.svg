@@ -1,47 +1,33 @@
-<svg viewBox="0 0 760 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3 d3" font-family="ui-sans-serif, system-ui, sans-serif">
+<svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3 d3" font-family="-apple-system, 'SF Pro Display', Inter, 'Segoe UI', Roboto, sans-serif">
   <title id="t3">What quietly breaks when a machine builds your design system</title>
   <desc id="d3">Five failure modes that pass automated checks: a check that grades itself, tokens nobody uses, hardcoded values, numbers that drift, and labels that rot.</desc>
-  <style>
-    svg{ --ink:#1a1a18; --muted:#6b6b66; --panel:#fafaf8; --panelb:#e5e5e0; --brand:#f5631a; }
-    .h{ fill:#1a1a18; font-size:18px; font-weight:700; }
-    .nm{ fill:#1a1a18; font-size:15px; font-weight:600; }
-    .sub{ fill:#6b6b66; font-size:13px; }
-    .card{ fill:#fafaf8; stroke:#e5e5e0; stroke-width:1.5; }
-    .num{ fill:#f5631a; font-size:14px; font-weight:700; }
-  </style>
-  <rect width="760" height="488" fill="#ffffff"/>
-  <text class="h" x="40" y="44">what quietly breaks when a machine builds your design system</text>
-  <text class="sub" x="40" y="68">none of these look broken. all of them pass a naive check.</text>
-
-  <g>
-    <rect class="card" x="40" y="88" width="680" height="62" rx="12"/>
-    <circle cx="72" cy="119" r="15" fill="#fef0e8"/><text class="num" x="67" y="124">1</text>
-    <text class="nm" x="104" y="114">the check that grades itself</text>
-    <text class="sub" x="104" y="134">the spec passes; nobody opened the code to see if it obeys</text>
-  </g>
-  <g>
-    <rect class="card" x="40" y="160" width="680" height="62" rx="12"/>
-    <circle cx="72" cy="191" r="15" fill="#fef0e8"/><text class="num" x="67" y="196">2</text>
-    <text class="nm" x="104" y="186">tokens nobody uses</text>
-    <text class="sub" x="104" y="206">named colors that live in a file, not in the component</text>
-  </g>
-  <g>
-    <rect class="card" x="40" y="232" width="680" height="62" rx="12"/>
-    <circle cx="72" cy="263" r="15" fill="#fef0e8"/><text class="num" x="67" y="268">3</text>
-    <text class="nm" x="104" y="258">hardcoded values</text>
-    <text class="sub" x="104" y="278">a raw color or a fixed timing slips in where a token belonged</text>
-  </g>
-  <g>
-    <rect class="card" x="40" y="304" width="680" height="62" rx="12"/>
-    <circle cx="72" cy="335" r="15" fill="#fef0e8"/><text class="num" x="67" y="340">4</text>
-    <text class="nm" x="104" y="330">numbers that drift</text>
-    <text class="sub" x="104" y="350">your own docs disagree on how big the system even is</text>
-  </g>
-  <g>
-    <rect class="card" x="40" y="376" width="680" height="62" rx="12"/>
-    <circle cx="72" cy="407" r="15" fill="#fef0e8"/><text class="num" x="67" y="412">5</text>
-    <text class="nm" x="104" y="402">labels that rot</text>
-    <text class="sub" x="104" y="422">"verified" and "AI-ready" that nobody re-checked in months</text>
-  </g>
-  <text class="sub" x="40" y="464" font-style="italic">Multiply any one of these across a few hundred screens an agent generated. That is the actual risk.</text>
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+  <text x="80" y="96" font-size="15" font-weight="600" fill="#6E6B65">Failure modes</text>
+  <text x="80" y="140" font-size="38" font-weight="700" fill="#1D1C1A" letter-spacing="-0.8">None of these look broken. All of them pass a naive check.</text>
+  <rect x="80" y="184" width="1040" height="84" rx="20" fill="#F6F6F4"/>
+  <circle cx="128" cy="226" r="20" fill="#FFFFFF"/>
+  <text x="128" y="232" text-anchor="middle" font-size="17" font-weight="600" fill="#1D1C1A">1</text>
+  <text x="172" y="220" font-size="20" font-weight="600" fill="#1D1C1A">The check that grades itself</text>
+  <text x="172" y="246" font-size="16" fill="#6E6B65">The spec passes; nobody opened the code to see if it obeys.</text>
+  <rect x="80" y="284" width="1040" height="84" rx="20" fill="#F6F6F4"/>
+  <circle cx="128" cy="326" r="20" fill="#FFFFFF"/>
+  <text x="128" y="332" text-anchor="middle" font-size="17" font-weight="600" fill="#1D1C1A">2</text>
+  <text x="172" y="320" font-size="20" font-weight="600" fill="#1D1C1A">Tokens nobody uses</text>
+  <text x="172" y="346" font-size="16" fill="#6E6B65">Named colours that live in a file, not in the component.</text>
+  <rect x="80" y="384" width="1040" height="84" rx="20" fill="#F6F6F4"/>
+  <circle cx="128" cy="426" r="20" fill="#FFFFFF"/>
+  <text x="128" y="432" text-anchor="middle" font-size="17" font-weight="600" fill="#1D1C1A">3</text>
+  <text x="172" y="420" font-size="20" font-weight="600" fill="#1D1C1A">Hardcoded values</text>
+  <text x="172" y="446" font-size="16" fill="#6E6B65">A raw colour or a fixed timing slips in where a token belonged.</text>
+  <rect x="80" y="484" width="1040" height="84" rx="20" fill="#F6F6F4"/>
+  <circle cx="128" cy="526" r="20" fill="#FFFFFF"/>
+  <text x="128" y="532" text-anchor="middle" font-size="17" font-weight="600" fill="#1D1C1A">4</text>
+  <text x="172" y="520" font-size="20" font-weight="600" fill="#1D1C1A">Numbers that drift</text>
+  <text x="172" y="546" font-size="16" fill="#6E6B65">Your own docs disagree on how big the system even is.</text>
+  <rect x="80" y="584" width="1040" height="84" rx="20" fill="#F6F6F4"/>
+  <circle cx="128" cy="626" r="20" fill="#FFFFFF"/>
+  <text x="128" y="632" text-anchor="middle" font-size="17" font-weight="600" fill="#1D1C1A">5</text>
+  <text x="172" y="620" font-size="20" font-weight="600" fill="#1D1C1A">Labels that rot</text>
+  <text x="172" y="646" font-size="16" fill="#6E6B65">“Verified” and “AI-ready” that nobody re-checked in months.</text>
+  <text x="80" y="720" font-size="17" fill="#6E6B65">Multiply any one of these across a few hundred screens an agent generated. That is the actual risk.</text>
 </svg>
