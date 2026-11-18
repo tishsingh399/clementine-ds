@@ -1,35 +1,40 @@
-<svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 d1" font-family="ui-sans-serif, system-ui, sans-serif">
+<svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 d1" font-family="-apple-system, 'SF Pro Display', Inter, 'Segoe UI', Roboto, sans-serif">
   <title id="t1">Where the component token arrived and where it did not</title>
-  <desc id="d1">A component token reaches Figma and the spec, but a dashed broken line shows it never reaches the running component that paints the button.</desc>
-  <style>
-    svg { --ink:#1a1a18; --muted:#6b6b66; --line:#d4d4cf; --panel:#fafaf8; --panelb:#e5e5e0; --ok:#16a34a; --brand:#f5631a; }
-    .lbl{ fill:var(--ink); font-size:15px; font-weight:600; }
-    .sub{ fill:var(--muted); font-size:12.5px; }
-    .cap{ fill:var(--muted); font-size:13px; }
-    .box{ fill:var(--panel); stroke:var(--panelb); stroke-width:1.5; }
-  </style>
-  <rect width="760" height="430" fill="#ffffff"/>
-  <rect class="box" x="40" y="170" width="190" height="86" rx="12"/>
-  <text class="lbl" x="60" y="205">component token</text>
-  <text class="sub" x="60" y="227">button.bg.default</text>
-  <text class="sub" x="60" y="244">a JSON entry</text>
-  <path d="M230 196 C 320 196, 360 96, 470 96" fill="none" stroke="#16a34a" stroke-width="2.5"/>
-  <polygon points="470,96 460,91 460,101" fill="#16a34a"/>
-  <path d="M230 213 C 330 213, 370 213, 470 213" fill="none" stroke="#16a34a" stroke-width="2.5"/>
-  <polygon points="470,213 460,208 460,218" fill="#16a34a"/>
-  <path d="M230 232 C 320 232, 360 332, 470 332" fill="none" stroke="#f5631a" stroke-width="2.5" stroke-dasharray="7 7"/>
-  <text x="300" y="312" class="cap" fill="#f5631a" font-weight="600">never read</text>
-  <rect class="box" x="470" y="64" width="240" height="64" rx="12"/>
-  <text class="lbl" x="490" y="92">Figma variable</text>
-  <text class="sub" x="490" y="112">drawn, bound, visible</text>
-  <circle cx="690" cy="96" r="9" fill="#16a34a"/><path d="M685 96 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
-  <rect class="box" x="470" y="181" width="240" height="64" rx="12"/>
-  <text class="lbl" x="490" y="209">spec contract</text>
-  <text class="sub" x="490" y="229">listed, validated, green</text>
-  <circle cx="690" cy="213" r="9" fill="#16a34a"/><path d="M685 213 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
-  <rect x="470" y="300" width="240" height="64" rx="12" fill="#fff" stroke="#f5631a" stroke-width="1.8"/>
-  <text class="lbl" x="490" y="328">running component</text>
-  <text class="sub" x="490" y="348">the pixel a user sees</text>
-  <circle cx="690" cy="332" r="9" fill="#f5631a"/><path d="M686 328 l8 8 M694 328 l-8 8" stroke="#fff" stroke-width="2"/>
-  <text class="cap" x="40" y="404">The token existed in every place I looked. It was missing from the only place that paints the button.</text>
+  <desc id="d1">A component token reaches the Figma variable and the spec contract, but a dashed line shows it never reaches the running component that paints the button.</desc>
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1D1C1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="80" y="96" font-size="15" font-weight="600" fill="#6E6B65">The token path</text>
+  <text x="80" y="140" font-size="38" font-weight="700" fill="#1D1C1A" letter-spacing="-0.8">It existed everywhere except where it mattered.</text>
+
+  <g transform="translate(0 40)">
+  <rect x="80" y="292" width="290" height="120" rx="22" fill="#F6F6F4"/>
+  <text x="108" y="338" font-size="21" font-weight="600" fill="#1D1C1A">Component token</text>
+  <text x="108" y="368" font-size="16" fill="#6E6B65" font-family="'SF Mono', ui-monospace, Menlo, monospace">button.bg.default</text>
+  <text x="108" y="392" font-size="15" fill="#93908B">a JSON entry</text>
+
+  <path d="M370 322 C 480 322, 520 214, 680 214" fill="none" stroke="#1D1C1A" stroke-width="2.5" marker-end="url(#ok)"/>
+  <path d="M370 352 H 680" fill="none" stroke="#1D1C1A" stroke-width="2.5" marker-end="url(#ok)"/>
+  <path d="M370 382 C 480 382, 520 490, 680 490" fill="none" stroke="#C1332F" stroke-width="2.5" stroke-dasharray="8 8"/>
+  <rect x="452" y="470" width="112" height="30" rx="15" fill="#FFFFFF"/>
+  <text x="508" y="491" text-anchor="middle" font-size="15" font-weight="600" fill="#C1332F">never read</text>
+
+  <rect x="680" y="160" width="400" height="108" rx="22" fill="#F6F6F4"/>
+  <text x="708" y="206" font-size="21" font-weight="600" fill="#1D1C1A">Figma variable</text>
+  <text x="708" y="236" font-size="16" fill="#6E6B65">drawn, bound, visible</text>
+  <circle cx="1040" cy="214" r="15" fill="#198044"/><path d="M1032.5 214 l5 5 l9.5 -10" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="680" y="298" width="400" height="108" rx="22" fill="#F6F6F4"/>
+  <text x="708" y="344" font-size="21" font-weight="600" fill="#1D1C1A">Spec contract</text>
+  <text x="708" y="374" font-size="16" fill="#6E6B65">listed, validated, green</text>
+  <circle cx="1040" cy="352" r="15" fill="#198044"/><path d="M1032.5 352 l5 5 l9.5 -10" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="681" y="437" width="398" height="106" rx="21" fill="#FFFFFF" stroke="#C1332F" stroke-width="2"/>
+  <text x="708" y="482" font-size="21" font-weight="600" fill="#1D1C1A">Running component</text>
+  <text x="708" y="512" font-size="16" fill="#6E6B65">the pixel a user sees</text>
+  <circle cx="1040" cy="490" r="15" fill="#C1332F"/><path d="M1034 484 l12 12 M1046 484 l-12 12" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+
+  </g>
+  <text x="80" y="664" font-size="17" fill="#6E6B65">The token was in every place I looked. It was missing from the only place that paints the button.</text>
 </svg>

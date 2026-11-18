@@ -1,49 +1,47 @@
-<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2" font-family="ui-sans-serif, system-ui, sans-serif">
+<svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2" font-family="-apple-system, 'SF Pro Display', Inter, 'Segoe UI', Roboto, sans-serif">
   <title id="t2">A check that reads the spec versus a check that reads the screen</title>
   <desc id="d2">On the left, the spec is validated against itself in a loop and stays green. On the right, the rendered component's painted pixel is compared against the contract and returns a real percentage.</desc>
-  <style>
-    svg{ --ink:#1a1a18; --muted:#6b6b66; --panel:#fafaf8; --panelb:#e5e5e0; --ok:#16a34a; --brand:#f5631a; }
-    .h{ fill:var(--ink); font-size:15px; font-weight:700; }
-    .lbl{ fill:var(--ink); font-size:13.5px; font-weight:600; }
-    .sub{ fill:var(--muted); font-size:12px; }
-    .box{ fill:var(--panel); stroke:var(--panelb); stroke-width:1.5; }
-  </style>
-  <rect width="760" height="400" fill="#ffffff"/>
-  <line x1="380" y1="40" x2="380" y2="372" stroke="#e5e5e0" stroke-width="1.5" stroke-dasharray="4 6"/>
-  <text class="h" x="40" y="58">reads the paperwork</text>
-  <rect class="box" x="40" y="86" width="135" height="58" rx="10"/>
-  <text class="lbl" x="58" y="111">spec</text>
-  <text class="sub" x="58" y="129">what I wrote</text>
-  <rect class="box" x="205" y="86" width="135" height="58" rx="10"/>
-  <text class="lbl" x="223" y="111">validator</text>
-  <text class="sub" x="223" y="129">is it consistent?</text>
-  <path d="M175 102 H 205" fill="none" stroke="#6b6b66" stroke-width="2.5"/>
-  <polygon points="205,102 196,97 196,107" fill="#6b6b66"/>
-  <path d="M272 144 C 272 188, 108 188, 108 144" fill="none" stroke="#6b6b66" stroke-width="2.5"/>
-  <polygon points="108,144 103,153 113,153" fill="#6b6b66"/>
-  <text class="sub" x="150" y="178">checks the spec against the spec</text>
-  <rect x="120" y="222" width="140" height="40" rx="20" fill="#eaf7ee" stroke="#16a34a" stroke-width="1.5"/>
-  <circle cx="148" cy="242" r="8" fill="#16a34a"/><path d="M144 242 l3 3 l6 -7" stroke="#fff" stroke-width="2" fill="none"/>
-  <text class="lbl" x="164" y="247" fill="#16a34a">always green</text>
-  <text class="sub" x="40" y="300">It never opened the component file.</text>
-  <text class="sub" x="40" y="320">Green meant well-formed, not wired.</text>
-  <text class="h" x="408" y="58">reads the screen</text>
-  <rect class="box" x="408" y="86" width="150" height="58" rx="10"/>
-  <text class="lbl" x="426" y="111">rendered button</text>
-  <text class="sub" x="426" y="129">in a real browser</text>
-  <rect class="box" x="408" y="170" width="150" height="58" rx="10"/>
-  <text class="lbl" x="426" y="195">painted pixel</text>
-  <text class="sub" x="426" y="213">getComputedStyle</text>
-  <rect class="box" x="588" y="128" width="140" height="58" rx="10"/>
-  <text class="lbl" x="606" y="153">the contract</text>
-  <text class="sub" x="606" y="171">resolved value</text>
-  <path d="M483 144 V 170" fill="none" stroke="#f5631a" stroke-width="2.5"/>
-  <polygon points="483,170 478,161 488,161" fill="#f5631a"/>
-  <path d="M558 199 C 600 199, 600 165, 588 159" fill="none" stroke="#f5631a" stroke-width="2.5"/>
-  <polygon points="588,159 596,162 592,153" fill="#f5631a"/>
-  <text class="sub" x="500" y="246">compares the pixel to the contract</text>
-  <rect x="488" y="276" width="170" height="40" rx="20" fill="#fef0e8" stroke="#f5631a" stroke-width="1.5"/>
-  <text class="lbl" x="508" y="301" fill="#f5631a">89%, with a list</text>
-  <text class="sub" x="408" y="348">The first number it gave me was how</text>
-  <text class="sub" x="408" y="368">much I had not finished.</text>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#93908B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#305EB7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="80" y="96" font-size="15" font-weight="600" fill="#6E6B65">The honesty check</text>
+  <text x="80" y="140" font-size="38" font-weight="700" fill="#1D1C1A" letter-spacing="-0.8">A check that grades itself is a mirror.</text>
+  <line x1="600" y1="186" x2="600" y2="620" stroke="#E7E6E3" stroke-width="1.5"/>
+
+  <!-- left: reads the paperwork -->
+  <text x="80" y="210" font-size="17" font-weight="600" fill="#93908B">Reads the paperwork</text>
+  <rect x="80" y="236" width="200" height="92" rx="20" fill="#F6F6F4"/>
+  <text x="104" y="276" font-size="20" font-weight="600" fill="#1D1C1A">Spec</text>
+  <text x="104" y="304" font-size="15" fill="#6E6B65">what I wrote</text>
+  <rect x="340" y="236" width="200" height="92" rx="20" fill="#F6F6F4"/>
+  <text x="364" y="276" font-size="20" font-weight="600" fill="#1D1C1A">Validator</text>
+  <text x="364" y="304" font-size="15" fill="#6E6B65">is it consistent?</text>
+  <path d="M280 282 H 334" stroke="#93908B" stroke-width="2.5" marker-end="url(#g)"/>
+  <path d="M440 328 V 360 Q 440 380 420 380 H 200 Q 180 380 180 360 V 334" fill="none" stroke="#93908B" stroke-width="2.5" marker-end="url(#g)"/>
+  <text x="310" y="410" text-anchor="middle" font-size="15" fill="#6E6B65">checks the spec against the spec</text>
+  <rect x="210" y="446" width="200" height="48" rx="24" fill="#EAF6EE"/>
+  <circle cx="240" cy="470" r="12" fill="#198044"/><path d="M234.5 470 l3.8 3.8 l7 -7.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="262" y="476" font-size="17" font-weight="600" fill="#198044">Always green</text>
+  <text x="80" y="562" font-size="16" fill="#6E6B65">It never opened the component file.</text>
+  <text x="80" y="588" font-size="16" fill="#6E6B65">Green meant well-formed, not wired.</text>
+
+  <!-- right: reads the screen -->
+  <text x="660" y="210" font-size="17" font-weight="600" fill="#305EB7">Reads the screen</text>
+  <rect x="660" y="236" width="220" height="92" rx="20" fill="#F6F6F4"/>
+  <text x="684" y="276" font-size="20" font-weight="600" fill="#1D1C1A">Rendered button</text>
+  <text x="684" y="304" font-size="15" fill="#6E6B65">in a real browser</text>
+  <rect x="660" y="368" width="220" height="92" rx="20" fill="#F6F6F4"/>
+  <text x="684" y="408" font-size="20" font-weight="600" fill="#1D1C1A">Painted pixel</text>
+  <text x="684" y="436" font-size="15" fill="#6E6B65" font-family="'SF Mono', ui-monospace, Menlo, monospace">getComputedStyle</text>
+  <rect x="940" y="368" width="180" height="92" rx="20" fill="#F1F6FF"/>
+  <text x="964" y="408" font-size="20" font-weight="600" fill="#1D1C1A">The contract</text>
+  <text x="964" y="436" font-size="15" fill="#6E6B65">resolved value</text>
+  <path d="M770 328 V 362" stroke="#305EB7" stroke-width="2.5" marker-end="url(#b)"/>
+  <path d="M880 414 H 934" stroke="#305EB7" stroke-width="2.5" marker-end="url(#b)"/>
+  <text x="907" y="396" text-anchor="middle" font-size="13" fill="#305EB7">vs</text>
+  <rect x="660" y="490" width="220" height="48" rx="24" fill="#F1F6FF"/>
+  <text x="770" y="521" text-anchor="middle" font-size="17" font-weight="600" fill="#305EB7">89%, with a list</text>
+  <text x="660" y="588" font-size="16" fill="#6E6B65">The first number it gave me was how much I had not finished.</text>
 </svg>
