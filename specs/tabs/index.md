@@ -54,7 +54,7 @@ pages_used_in: []
 
 # AGENTIC DOCUMENTATION: TABS
 
-> **Status:** AI-Ready. Mantine owns the tablist/tab/tabpanel semantics and arrow-key behavior; Storybook covers default, outline, pills, vertical, disabled-tab and overflow states. Clementine's `TabsList` adds one-row horizontal overflow with scroll chevrons (section 2).
+> **Status:** AI-Ready. Mantine owns the tablist/tab/tabpanel semantics and arrow-key behavior; Storybook covers default, outline, pills, vertical, disabled-tab and overflow states. Clementine's `TabsList` adds one-row horizontal overflow with scroll chevrons (section 2). Theme wiring: `--tabs-color` and `--tab-border-color` come from `tabs.indicator.active` and `tabs.border.list` (an explicit `color` prop still wins); label colours, disabled colour and the focus ring come from `tabs.fg.*` and `tabs.border.focus` in `states.css`. Disabled tabs keep Mantine's 50% fade, because `text.tertiary` alone sits too close to `fg.inactive`. Pills keep Mantine's on-fill text colour for the active tab.
 
 ## 1. Purpose & Intent
 
